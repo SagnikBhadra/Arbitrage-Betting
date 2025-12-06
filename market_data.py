@@ -5,7 +5,7 @@ from datetime import datetime
 
 # TODO: 
 # Create subclasses for Polymarket and Kalshi
-class MarketData():
+class MarketData:
     def __init__(self):
         pass
     

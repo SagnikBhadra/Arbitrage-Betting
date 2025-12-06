@@ -1,6 +1,6 @@
 from collections import defaultdict
 
-class OrderBooks():
+class OrderBooks:
     def __init__(self):
         # Orderbook = Asset ID -> Bids, Asks
         # Bids = Price -> Quantity
