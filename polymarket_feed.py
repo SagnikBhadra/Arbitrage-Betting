@@ -37,7 +37,7 @@ class PolymarketWebSocket:
         self.orderbooks = OrderBooks()
         
         # Initialize Market Data
-        self.market_data = MarketData()
+        self.market_data = MarketData(market="Polymarket")
 
     def on_open(self, ws):
         print(f"Connected to {self.url}")
