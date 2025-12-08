@@ -64,7 +64,7 @@ class KalshiWebSocket:
             )
 
         # Create WebSocket headers
-        ws_headers = self.create_headers(self, private_key, "GET", "/trade-api/ws/v2")
+        ws_headers = self.create_headers(private_key, "GET", "/trade-api/ws/v2")
 
         async with websockets.connect(self.ws_url, additional_headers=ws_headers) as websocket:
             print(f"Connected! Subscribing to orderbook for {self.market_ticker}")
@@ -89,15 +89,16 @@ class KalshiWebSocket:
                     print(f"Subscribed: {data}")
 
                 elif msg_type == "orderbook_snapshot":
-                    print(f"Orderbook snapshot: {data}")
+                    #print(f"Orderbook snapshot: {data}")
                     self.market_data.persist_orderbook_snapshot_event_kalshi(data["msg"])
 
                 elif msg_type == "orderbook_delta":
                     # The client_order_id field is optional - only present when you caused the change
                     if 'client_order_id' in data.get('data', {}):
-                        print(f"Orderbook update (your order {data['data']['client_order_id']}): {data}")
+                        #print(f"Orderbook update (your order {data['data']['client_order_id']}): {data}")
+                        pass
                     else:
-                        print(f"Orderbook update: {data}")
+                        #print(f"Orderbook update: {data}")
                         self.market_data.persist_orderbook_update_event_kalshi(data["msg"])
                         
 

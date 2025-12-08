@@ -1,0 +1,10 @@
+timestamp,event_type,price,side,size,best_bid,best_ask
+,book,,BUY,,,
+2025-12-08T03:04:39.831231Z,price_change,0.1200,BUY,-3,,
+2025-12-08T03:04:47.037888Z,price_change,0.1200,BUY,2,,
+,book,,BUY,,,
+2025-12-08T03:41:27.395844Z,price_change,0.0200,BUY,-601,,
+2025-12-08T03:41:27.569095Z,price_change,0.0200,BUY,616,,
+,book,0.1600,BUY,2117,0.1600,0.8000
+2025-12-08T03:51:26.817274Z,price_change,0.1200,BUY,-2,,
+2025-12-08T03:51:28.760394Z,price_change,0.1200,BUY,2,,

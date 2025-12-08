@@ -1,0 +1,14 @@
+timestamp,event_type,price,side,size,best_bid,best_ask
+,book,,BUY,,,
+2025-12-08T03:04:39.832657Z,price_change,0.7900,BUY,-417,,
+2025-12-08T03:04:47.040485Z,price_change,0.7900,BUY,417,,
+2025-12-08T03:09:29.321742Z,price_change,0.7900,BUY,-417,,
+2025-12-08T03:09:29.527028Z,price_change,0.7900,BUY,412,,
+,book,,BUY,,,
+2025-12-08T03:38:52.218043Z,price_change,0.7900,BUY,-412,,
+2025-12-08T03:38:52.220395Z,price_change,0.7900,BUY,406,,
+2025-12-08T03:41:27.339068Z,price_change,0.4500,BUY,-622,,
+2025-12-08T03:41:27.627701Z,price_change,0.4500,BUY,621,,
+,book,0.8000,BUY,1513,0.1600,0.8000
+2025-12-08T03:51:26.819312Z,price_change,0.7900,BUY,-406,,
+2025-12-08T03:51:28.762559Z,price_change,0.7900,BUY,406,,

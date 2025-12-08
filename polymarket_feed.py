@@ -51,6 +51,8 @@ class PolymarketWebSocket:
         threading.Thread(target=self.ping, args=(ws,), daemon=True).start()
 
     def on_message(self, ws, message):
+        if message == "PONG":
+            return
         msgs = json.loads(message)
 
         # Ensure msgs is always a list

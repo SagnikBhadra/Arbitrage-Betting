@@ -1,7 +1,7 @@
 import csv
 import json
 import os
-from datetime import datetime
+from datetime import datetime, timezone
 
 # TODO: 
 # Create subclasses for Polymarket and Kalshi
@@ -12,8 +12,8 @@ class MarketData:
     #Polymarket
     
     def get_csv_filename(self, asset_id):
-        with open("statics/statics.json", "r") as json_data:
-            data = json_data.load()
+        with open("statics/statics.json", "r") as json_file:
+            data = json.load(json_file)
         mapped = data["ASSET_ID_MAPPING"][self.market].get(asset_id, asset_id[:8])
         return f"{self.market}_{mapped}.csv"
     
@@ -38,10 +38,15 @@ class MarketData:
             writer = csv.writer(f)
             writer.writerow([timestamp, event_type, price, side, size, best_bid, best_ask])
             
+    def reformat_timestamp(self, timestamp):
+        dt = datetime.fromtimestamp(int(timestamp) / 1000, tz=timezone.utc)
+        timestamp_iso = dt.isoformat()
+        return timestamp_iso
+            
     # Write Book Message to CSV
     def persist_book_event(self, message):
         asset_id = message["asset_id"]
-        timestamp = message["timestamp"]
+        timestamp = self.reformat_timestamp(message["timestamp"])
         bids = message.get("bids", [])
         asks = message.get("asks", [])
 
@@ -64,7 +69,7 @@ class MarketData:
         
     # Write Price Change to CSV
     def persist_price_change_event(self, message):
-        timestamp = message["timestamp"]
+        timestamp = self.reformat_timestamp(message["timestamp"])
         
         for pc in message["price_changes"]:
             self.write_row(
@@ -81,14 +86,14 @@ class MarketData:
     # Write tick size change event to CSV
     def persist_tick_change_event(self, message):
         asset_id = message["asset_id"]
-        timestamp = message["timestamp"]
+        timestamp = self.reformat_timestamp(message["timestamp"])
         # No price/side/size/best bid/ask for this event
         self.write_row(asset_id, timestamp, "tick_size_change")
         
     # Write last trade event to CSV
     def persist_trade_event(self, message):
         asset_id = message["asset_id"]
-        timestamp = message["timestamp"]
+        timestamp = self.reformat_timestamp(message["timestamp"])
 
         self.write_row(
             asset_id=asset_id,
@@ -105,10 +110,10 @@ class MarketData:
     
     # Write orderbook snapshot event 
     def persist_orderbook_snapshot_event_kalshi(self, message):
-        timestamp = message[""]
+        timestamp = ""
         asset_id = message["market_ticker"]
-        bids = message.get("yes_dollar", [])
-        asks = message.get("no_dollar", [])
+        bids = message.get("yes_dollars", [])
+        asks = message.get("no_dollars", [])
 
         # Best bid = highest price
         best_bid_price = bids[-1][0] if bids else ""
