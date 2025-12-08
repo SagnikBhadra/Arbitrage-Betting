@@ -8,18 +8,18 @@ This project provides a unified, extensible system for streaming real-time marke
 
 Live WebSocket Streams
 
-Kalshi.py — Streams order book and trade events from Kalshi.
+- Kalshi.py — Streams order book and trade events from Kalshi.
 
-polymarket_feed.py — Streams market data from Polymarket.
+- polymarket_feed.py — Streams market data from Polymarket.
 
 Order Book Tracking
 
-orderbook.py — Maintains bid/ask levels, timestamps, and sequencing for each instrument.
+- orderbook.py — Maintains bid/ask levels, timestamps, and sequencing for each instrument.
 
 Historical Data Recording
 
-market_data.py — Normalizes and stores events in a CSV per instrument (database support planned).
+- market_data.py — Normalizes and stores events in a CSV per instrument (database support planned).
 
 Strategy-Ready Architecture
 
-Clean separation between data ingestion, state tracking, storage, and strategy logic.
+- Clean separation between data ingestion, state tracking, storage, and strategy logic.
