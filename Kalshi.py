@@ -49,7 +49,7 @@ class KalshiWebSocket:
 
         return {
             "Content-Type": "application/json",
-            "KALSHI-ACCESS-KEY": self.KEY_ID,
+            "KALSHI-ACCESS-KEY": self.key_id,
             "KALSHI-ACCESS-SIGNATURE": signature,
             "KALSHI-ACCESS-TIMESTAMP": timestamp,
         }
@@ -57,7 +57,7 @@ class KalshiWebSocket:
     async def orderbook_websocket(self):
         """Connect to WebSocket and subscribe to orderbook"""
         # Load private key
-        with open(self.PRIVATE_KEY_PATH, 'rb') as f:
+        with open(self.private_key_path, 'rb') as f:
             private_key = serialization.load_pem_private_key(
                 f.read(),
                 password=None
@@ -66,8 +66,8 @@ class KalshiWebSocket:
         # Create WebSocket headers
         ws_headers = self.create_headers(self, private_key, "GET", "/trade-api/ws/v2")
 
-        async with websockets.connect(self.WS_URL, additional_headers=ws_headers) as websocket:
-            print(f"Connected! Subscribing to orderbook for {self.MARKET_TICKER}")
+        async with websockets.connect(self.ws_url, additional_headers=ws_headers) as websocket:
+            print(f"Connected! Subscribing to orderbook for {self.market_ticker}")
 
             # Subscribe to orderbook
             subscribe_msg = {
@@ -75,7 +75,7 @@ class KalshiWebSocket:
                 "cmd": "subscribe",
                 "params": {
                     "channels": ["orderbook_delta"],
-                    "market_ticker": self.MARKET_TICKER
+                    "market_ticker": self.market_ticker
                 }
             }
             await websocket.send(json.dumps(subscribe_msg))
@@ -90,6 +90,7 @@ class KalshiWebSocket:
 
                 elif msg_type == "orderbook_snapshot":
                     print(f"Orderbook snapshot: {data}")
+                    self.market_data.persist_orderbook_snapshot_event_kalshi(data["msg"])
 
                 elif msg_type == "orderbook_delta":
                     # The client_order_id field is optional - only present when you caused the change
@@ -97,6 +98,8 @@ class KalshiWebSocket:
                         print(f"Orderbook update (your order {data['data']['client_order_id']}): {data}")
                     else:
                         print(f"Orderbook update: {data}")
+                        self.market_data.persist_orderbook_update_event_kalshi(data["msg"])
+                        
 
                 elif msg_type == "error":
                     print(f"Error: {data}")

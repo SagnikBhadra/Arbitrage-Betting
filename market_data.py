@@ -104,22 +104,41 @@ class MarketData:
     # Kalshi
     
     # Write orderbook snapshot event 
-    def persist_orderbook_event_kalshi(self, message):
+    def persist_orderbook_snapshot_event_kalshi(self, message):
         timestamp = message[""]
-        for msg in message:
-            asset_id = message["market_ticker"]
-            bids = message.get("yes_dollar", [])
-            asks = message.get("no_dollar", [])
+        asset_id = message["market_ticker"]
+        bids = message.get("yes_dollar", [])
+        asks = message.get("no_dollar", [])
 
-            # Best bid = highest price
-            best_bid_price = bids[-1][0] if bids else ""
-            best_bid_size = bids[-1][1] if bids else ""
-            # Best ask = lowest price
-            best_ask_price = asks[-1][0] if asks else ""
-            best_ask_size = asks[-1][1] if asks else ""
-            
-            # Write YES sides
-            self.write_row(asset_id, timestamp, "book",
-                price=best_bid_price, side="BOTH", size=best_bid_size,
-                best_bid=best_bid_price, best_ask= best_ask_price)
+        # Best bid = highest price
+        best_bid_price = bids[-1][0] if bids else ""
+        best_bid_size = bids[-1][1] if bids else ""
+        # Best ask = lowest price
+        best_ask_price = asks[-1][0] if asks else ""
+        best_ask_size = asks[-1][1] if asks else ""
         
+        # Write YES side
+        self.write_row(asset_id + "_YES", timestamp, "book",
+            price=best_bid_price, side="BUY", size=best_bid_size,
+            best_bid=best_bid_price, best_ask= best_ask_price)
+        
+        # Write NO side
+        self.write_row(asset_id + "_NO", timestamp, "book",
+            price=best_ask_price, side="BUY", size=best_ask_size,
+            best_bid=best_bid_price, best_ask=best_ask_price)
+            
+    # Write orderbook update event
+    def persist_orderbook_update_event_kalshi(self, message):
+        timestamp = message["ts"]
+        asset_id = message["market_ticker"] + "_YES" if message["side"] == "yes" else message["market_ticker"] + "_NO"
+        
+        self.write_row(
+            asset_id=asset_id,
+            timestamp=timestamp,
+            event_type="price_change",
+            price=message.get("price_dollars", ""),
+            side="BUY",
+            size=message.get("delta", ""),
+            best_bid=message.get("best_bid", ""),
+            best_ask=message.get("best_ask", "")
+        )
