@@ -72,10 +72,10 @@ class PolymarketWebSocket:
 
             if event_type == "book":
                 self.market_data.persist_book_event(msg)
-                #self.handle_book(msg)
+                self.handle_book(msg)
             elif event_type == "price_change":
                 self.market_data.persist_price_change_event(msg)
-                #self.handle_price_change(msg)
+                self.handle_price_change(msg)
             elif event_type == "last_trade_price":
                 self.market_data.persist_trade_event(msg)
                 #self.handle_last_trade(msg)
@@ -123,17 +123,18 @@ class PolymarketWebSocket:
 
     def handle_price_change(self, msg):
         #print("Price change update:", msg.get("changes"))
-        asset_id = msg["asset_id"]
         # UPDATE ORDER BOOK
-        for change in msg["changes"]:
+        for change in msg["price_changes"]:
+            asset_id = change["asset_id"]
             price = float(change["price"])
             size = float(change["size"])
-            side = change["side"].lower()
+            side = 0 if change["side"] == "BUY" else 1
             orderbook = self.orderbooks.get(asset_id, None)
             if not orderbook:
                 print(f"Order Book with asset ID {asset_id} not found on price change")
                 continue
             orderbook.update_order_book(side, price, size)
+            print(orderbook)
             
         #print(f"[PRICE UPDATE] {ASSET_ID_MAPPING[asset_id]}")
         #print_top_of_book_single_assest(order_books[asset_id])

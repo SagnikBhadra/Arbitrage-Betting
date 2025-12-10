@@ -24,7 +24,7 @@ class OrderBook:
             return None, None
         
         price = self.bids.peekitem(-1)[0]
-        size = self.bids.peekitem(0)[1]
+        size = self.bids.peekitem(-1)[1]
         
         return price, size
     
@@ -45,23 +45,23 @@ class OrderBook:
         
         # Update bids
         for level in snapshot["bids"]:
-            price = level["price"]
-            size = level["size"]
+            price = float(level["price"])
+            size = float(level["size"])
             self.update_order_book(side=0, price=price, size=size)
             
         # Update asks
         for level in snapshot["asks"]:
-            price = level["price"]
-            size = level["size"]
-            self.update_order_book(side=0, price=price, size=size)
+            price = float(level["price"])
+            size = float(level["size"])
+            self.update_order_book(side=1, price=price, size=size)
             
     def load_kalshi_snapshot(self, snapshot):
         asset_id = snapshot["market_ticker"]
         
         # Update bids
         for price, size in snapshot.get("bids", []):
-            self.update_order_book(side=0, price=price, size=size)
+            self.update_order_book(side=0, price=float(price), size=float(size))
             
         # Update asks
         for price, size in snapshot.get("asks", []):
-            self.update_order_book(side=0, price=price, size=size)
+            self.update_order_book(side=1, price=float(price), size=float(size))
