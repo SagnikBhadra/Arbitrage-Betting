@@ -123,26 +123,26 @@ class MarketData:
         best_ask_size = asks[-1][1] if asks else ""
         
         # Write YES side
-        self.write_row(asset_id + "_YES", timestamp, "book",
+        self.write_row(asset_id, timestamp, "book",
             price=best_bid_price, side="BUY", size=best_bid_size,
             best_bid=best_bid_price, best_ask= best_ask_price)
         
         # Write NO side
-        self.write_row(asset_id + "_NO", timestamp, "book",
-            price=best_ask_price, side="BUY", size=best_ask_size,
+        self.write_row(asset_id, timestamp, "book",
+            price=best_ask_price, side="SELL", size=best_ask_size,
             best_bid=best_bid_price, best_ask=best_ask_price)
             
     # Write orderbook update event
     def persist_orderbook_update_event_kalshi(self, message):
         timestamp = message["ts"]
-        asset_id = message["market_ticker"] + "_YES" if message["side"] == "yes" else message["market_ticker"] + "_NO"
+        asset_id = message["market_ticker"]
         
         self.write_row(
             asset_id=asset_id,
             timestamp=timestamp,
             event_type="price_change",
             price=message.get("price_dollars", ""),
-            side="BUY",
+            side="BUY" if message["side"] == "yes" else "SELL",
             size=message.get("delta", ""),
             best_bid=message.get("best_bid", ""),
             best_ask=message.get("best_ask", "")
