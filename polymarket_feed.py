@@ -1,8 +1,9 @@
-from orderbook import OrderBooks
+from orderbook import OrderBook
 from market_data import MarketData
 
 import json
 import threading
+from collections import defaultdict
 from websocket import WebSocketApp
 
 # WebSocket endpoint for Polymarket CLOB service
@@ -34,7 +35,9 @@ class PolymarketWebSocket:
         )
         
         # Initialize OrderBooks
-        self.orderbooks = OrderBooks()
+        self.orderbooks = defaultdict(OrderBook)
+        for asset_id in self.asset_ids:
+            self.orderbooks[asset_id] = OrderBook(asset_id)
         
         # Initialize Market Data
         self.market_data = MarketData(market="Polymarket")
@@ -103,12 +106,20 @@ class PolymarketWebSocket:
     def handle_book(self, msg):
         asset_id = msg["asset_id"]
         # UPDATE ORDER BOOK
-        bids = {float(entry["price"]): float(entry["size"]) for entry in msg["bids"]}
-        asks = {float(entry["price"]): float(entry["size"]) for entry in msg["asks"]}
-        self.orderbooks.orderbooks[asset_id]["bids"] = bids
-        self.orderbooks.orderbooks[asset_id]["asks"] = asks
+        #bids = {float(entry["price"]): float(entry["size"]) for entry in msg["bids"]}
+        #asks = {float(entry["price"]): float(entry["size"]) for entry in msg["asks"]}
+        #self.orderbooks.orderbooks[asset_id]["bids"] = bids
+        #self.orderbooks.orderbooks[asset_id]["asks"] = asks
         #print(f"[BOOK SNAPSHOT] {ASSET_ID_MAPPING[asset_id]}")
         #print_top_of_book_single_assest(order_books[asset_id])
+        
+        orderbook = self.orderbooks.get(asset_id, None)
+        if not orderbook:
+            print(f"Order Book with asset ID {asset_id} not found on snapshot")
+            return
+        
+        orderbook.load_polymarket_snapshot(msg)
+            
 
     def handle_price_change(self, msg):
         #print("Price change update:", msg.get("changes"))
@@ -118,7 +129,11 @@ class PolymarketWebSocket:
             price = float(change["price"])
             size = float(change["size"])
             side = change["side"].lower()
-            self.orderbooks.update_order_book(asset_id, side, price, size)
+            orderbook = self.orderbooks.get(asset_id, None)
+            if not orderbook:
+                print(f"Order Book with asset ID {asset_id} not found on price change")
+                continue
+            orderbook.update_order_book(side, price, size)
             
         #print(f"[PRICE UPDATE] {ASSET_ID_MAPPING[asset_id]}")
         #print_top_of_book_single_assest(order_books[asset_id])

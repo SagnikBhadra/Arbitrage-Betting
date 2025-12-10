@@ -112,3 +112,4 @@ timestamp,event_type,price,side,size,best_bid,best_ask
 2025-12-10T01:52:51.768318Z,price_change,0.0200,BUY,-613,,
 2025-12-10T01:52:51.946765Z,price_change,0.0200,BUY,618,,
 2025-12-10T01:52:52.003137Z,price_change,0.4500,SELL,629,,
+2025-12-10T02:09:01.929012Z,price_change,0.1600,BUY,-1,,

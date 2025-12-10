@@ -3,10 +3,11 @@ import base64
 import json
 import time
 import websockets
+from collections import defaultdict
 from cryptography.hazmat.primitives import serialization, hashes
 from cryptography.hazmat.primitives.asymmetric import padding
 
-from orderbook import OrderBooks
+from orderbook import OrderBook
 from market_data import MarketData
 
 # Configuration
@@ -23,7 +24,9 @@ class KalshiWebSocket:
         self.ws_url = ws_url
         
         # Initialize OrderBooks
-        self.orderbooks = OrderBooks()
+        self.orderbooks = defaultdict(OrderBook)
+        for asset_id in self.asset_ids:
+            self.orderbooks[asset_id] = OrderBook(asset_id)
         
         # Initialize Market Data
         self.market_data = MarketData(market="Kalshi")
