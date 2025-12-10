@@ -14,10 +14,14 @@ class OrderBook:
         
     def update_order_book(self, side, price, size):
         book_side = self.bids if side == 0 else self.asks
-        if size == 0 and price in book_side:
+        if size <= 0 and price in book_side:
             del book_side[price]
         else:
             book_side[price] = size
+            
+    def get_size_at_price(self, side, price):
+        book = self.bids if side == 0 else self.asks
+        return book[price] if price in book else 0
             
     def get_best_bid(self):
         if not self.bids:

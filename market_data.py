@@ -133,7 +133,7 @@ class MarketData:
             best_bid=best_bid_price, best_ask=best_ask_price)
             
     # Write orderbook update event
-    def persist_orderbook_update_event_kalshi(self, message):
+    def persist_orderbook_update_event_kalshi(self, message, best_bid, best_ask):
         timestamp = message["ts"]
         asset_id = message["market_ticker"]
         
@@ -144,6 +144,6 @@ class MarketData:
             price=message.get("price_dollars", ""),
             side="BUY" if message["side"] == "yes" else "SELL",
             size=message.get("delta", ""),
-            best_bid=message.get("best_bid", ""),
-            best_ask=message.get("best_ask", "")
+            best_bid=best_bid,
+            best_ask=best_ask
         )

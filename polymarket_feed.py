@@ -72,7 +72,7 @@ class PolymarketWebSocket:
 
             if event_type == "book":
                 self.market_data.persist_book_event(msg)
-                self.handle_book(msg)
+                self.handle_snapshot(msg)
             elif event_type == "price_change":
                 self.market_data.persist_price_change_event(msg)
                 self.handle_price_change(msg)
@@ -103,7 +103,7 @@ class PolymarketWebSocket:
         self.ws.run_forever()
 
     # Handler stubs — customize as needed
-    def handle_book(self, msg):
+    def handle_snapshot(self, msg):
         asset_id = msg["asset_id"]
         # UPDATE ORDER BOOK
         #bids = {float(entry["price"]): float(entry["size"]) for entry in msg["bids"]}

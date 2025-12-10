@@ -25,8 +25,8 @@ class KalshiWebSocket:
         
         # Initialize OrderBooks
         self.orderbooks = defaultdict(OrderBook)
-        for asset_id in self.asset_ids:
-            self.orderbooks[asset_id] = OrderBook(asset_id)
+        #for asset_id in self.asset_ids:
+        self.orderbooks[self.market_ticker] = OrderBook(self.market_ticker)
         
         # Initialize Market Data
         self.market_data = MarketData(market="Kalshi")
@@ -56,6 +56,30 @@ class KalshiWebSocket:
             "KALSHI-ACCESS-SIGNATURE": signature,
             "KALSHI-ACCESS-TIMESTAMP": timestamp,
         }
+        
+    def handle_snapshot(self, msg):
+        asset_id = msg["market_ticker"]
+        
+        orderbook = self.orderbooks.get(asset_id, None)
+        if not orderbook:
+            print(f"Order Book with asset ID {asset_id} not found on snapshot")
+            return
+        
+        orderbook.load_kalshi_snapshot(msg)
+        
+    def handle_price_change(self, msg):
+        asset_id = msg["market_ticker"]
+        price = float(msg["price_dollars"])
+        delta = float(msg["delta"])
+        side = 0 if msg["side"] == "yes" else 1
+        orderbook = self.orderbooks.get(asset_id, None)
+        if not orderbook:
+            print(f"Order Book with asset ID {asset_id} not found on price change")
+            return
+        size = orderbook.get_size_at_price(side, price) + delta
+        orderbook.update_order_book(side, price, size)
+        print(orderbook)
+        return orderbook.get_best_bid()[0], orderbook.get_best_ask()[0]
 
     async def orderbook_websocket(self):
         """Connect to WebSocket and subscribe to orderbook"""
@@ -87,13 +111,15 @@ class KalshiWebSocket:
             async for message in websocket:
                 data = json.loads(message)
                 msg_type = data.get("type")
+                msg_content = data["msg"]
 
                 if msg_type == "subscribed":
                     print(f"Subscribed: {data}")
 
                 elif msg_type == "orderbook_snapshot":
                     #print(f"Orderbook snapshot: {data}")
-                    self.market_data.persist_orderbook_snapshot_event_kalshi(data["msg"])
+                    self.market_data.persist_orderbook_snapshot_event_kalshi(msg_content)
+                    self.handle_snapshot(msg_content)
 
                 elif msg_type == "orderbook_delta":
                     # The client_order_id field is optional - only present when you caused the change
@@ -102,7 +128,12 @@ class KalshiWebSocket:
                         pass
                     else:
                         #print(f"Orderbook update: {data}")
-                        self.market_data.persist_orderbook_update_event_kalshi(data["msg"])
+                        best_bid, best_ask = self.handle_price_change(msg_content)
+                        self.market_data.persist_orderbook_update_event_kalshi(
+                            msg_content,
+                            best_bid=best_bid,
+                            best_ask=best_ask
+                        )
                         
 
                 elif msg_type == "error":
