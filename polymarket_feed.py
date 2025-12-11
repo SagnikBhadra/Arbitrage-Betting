@@ -1,8 +1,10 @@
 from orderbook import OrderBook
 from market_data import MarketData
 
+import asyncio
 import json
 import threading
+import websockets
 from collections import defaultdict
 from websocket import WebSocketApp
 
@@ -21,6 +23,140 @@ ASSET_IDS = [
 
 CHANNEL_TYPE = "market"  # use market for public price/book updates
 
+class PolymarketWebSocket:
+    def __init__(self, url_base, channel_type, asset_ids):
+        self.url = f"{url_base}/ws/{channel_type}"
+        self.channel_type = channel_type
+        self.asset_ids = asset_ids
+        
+        # Initialize OrderBooks
+        self.orderbooks = defaultdict(OrderBook)
+        for asset_id in self.asset_ids:
+            self.orderbooks[asset_id] = OrderBook(asset_id)
+        
+        # Initialize Market Data
+        self.market_data = MarketData(market="Polymarket")
+        
+        # Initialize Websocket
+        self.ws = None
+        self.connected = asyncio.Event()
+        
+    async def connect(self):
+        """Connect and subscribe"""
+        while True:
+            try:
+                print(f"Connecting to {self.url}")
+                self.ws = await websockets.connect(self.url, ping_interval=None)
+                await self.send_subscribe()
+                self.connected.set()
+                print("Connected to {self.url}")
+                return
+            except Exception as e:
+                print(f"Connection failed: {e}")
+                asyncio.sleep(2)
+                
+    async def send_subscribe(self):
+        # Subscribe to assets
+        subscribe_payload = {
+            "assets_ids": self.asset_ids,
+            "type": self.channel_type
+        }
+        await self.ws.send(json.dumps(subscribe_payload))
+
+    async def recv_loop(self):
+        """Listen for messages"""
+        while True:
+            try:
+                msg = await self.ws.recv()
+                
+                if msg == "PONG":
+                    continue
+                
+                msgs = json.loads(msg)
+
+                # Ensure msgs is always a list
+                if isinstance(msgs, dict):
+                    msgs = [msgs]
+                    
+                #print(msgs)
+                #print(len(msgs))
+                
+                for m in msgs:
+                    await self.handle_message(m)
+
+            except websockets.ConnectionClosed:
+                print("Connection closed, reconnecting...")
+                self.connected.clear()
+                await self.connect()
+
+            except Exception as e:
+                print("Error in recv_loop:", e)
+
+    async def ping_loop(self):
+        """Send periodic pings."""
+        while True:
+            await self.connected.wait()
+            try:
+                await self.ws.send("PING")
+            except Exception:
+                pass
+            await asyncio.sleep(10)
+
+    #
+    # Message handlers (same logic as before)
+    #
+
+    async def handle_message(self, msg):
+        event_type = msg.get("event_type")
+
+        if event_type == "book":
+            self.market_data.persist_book_event(msg)
+            self.handle_snapshot(msg)
+
+        elif event_type == "price_change":
+            self.market_data.persist_price_change_event(msg)
+            self.handle_price_change(msg)
+
+        elif event_type == "last_trade_price":
+            self.market_data.persist_trade_event(msg)
+
+        elif event_type == "tick_size_change":
+            self.market_data.persist_tick_change_event(msg)
+
+    def handle_snapshot(self, msg):
+        asset_id = msg["asset_id"]
+        orderbook = self.orderbooks.get(asset_id)
+        if orderbook is None:
+            print(f"Orderbook not found for {asset_id}")
+            return
+        orderbook.load_polymarket_snapshot(msg)
+
+    def handle_price_change(self, msg):
+        for change in msg["price_changes"]:
+            asset_id = change["asset_id"]
+            price = float(change["price"])
+            size = float(change["size"])
+            side = 0 if change["side"] == "BUY" else 1
+
+            orderbook = self.orderbooks.get(asset_id)
+            if orderbook:
+                orderbook.update_order_book(side, price, size)
+
+    #
+    # Public API
+    #
+
+    async def run(self):
+        """Start the websocket and all loops."""
+        await self.connect()
+
+        await asyncio.gather(
+            self.recv_loop(),
+            self.ping_loop(),
+        )
+
+
+"""
 class PolymarketWebSocket:
     def __init__(self, url_base, channel_type, asset_ids):
         self.url = f"{url_base}/ws/{channel_type}"
@@ -134,7 +270,7 @@ class PolymarketWebSocket:
                 print(f"Order Book with asset ID {asset_id} not found on price change")
                 continue
             orderbook.update_order_book(side, price, size)
-            print(orderbook)
+            #print(orderbook)
             
         #print(f"[PRICE UPDATE] {ASSET_ID_MAPPING[asset_id]}")
         #print_top_of_book_single_assest(order_books[asset_id])
@@ -153,3 +289,4 @@ if __name__ == "__main__":
     client = PolymarketWebSocket(WS_URL_BASE, CHANNEL_TYPE, ASSET_IDS)
     client.run()
 
+"""

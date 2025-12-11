@@ -78,7 +78,7 @@ class KalshiWebSocket:
             return
         size = orderbook.get_size_at_price(side, price) + delta
         orderbook.update_order_book(side, price, size)
-        print(orderbook)
+        #print(orderbook)
         return orderbook.get_best_bid()[0], orderbook.get_best_ask()[0]
 
     async def orderbook_websocket(self):
