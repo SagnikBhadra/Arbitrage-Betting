@@ -154,6 +154,10 @@ class PolymarketWebSocket:
             self.recv_loop(),
             self.ping_loop(),
         )
+        
+if __name__ == "__main__":
+    polymarket_client = PolymarketWebSocket(WS_URL_BASE, ASSET_IDS, CHANNEL_TYPE)
+    polymarket_client.run()
 
 
 """

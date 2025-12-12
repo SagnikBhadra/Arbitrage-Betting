@@ -25,7 +25,14 @@ PRIVATE_KEY_PATH = "Kalshi.key"
 MARKET_TICKER = "KXNBAMVP-26-LDON"  # Replace with any open market
 WS_URL = "wss://api.elections.kalshi.com/trade-api/ws/v2"
 
+def crossed_markets():
+    pass
 
+def wide_spreads():
+    pass
+
+async def scan_inefficiencies(polymarket_client, kalshi_client):
+    pass
 
 async def main():
     # TODO: Add deque to best bid/ask and only compare if timestamp is within delta
