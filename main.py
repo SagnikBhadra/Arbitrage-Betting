@@ -1,4 +1,5 @@
 import asyncio
+import json
 import websocket
 
 from polymarket_feed import PolymarketWebSocket
@@ -25,23 +26,46 @@ PRIVATE_KEY_PATH = "Kalshi.key"
 MARKET_TICKER = "KXNBAMVP-26-LDON"  # Replace with any open market
 WS_URL = "wss://api.elections.kalshi.com/trade-api/ws/v2"
 
-def crossed_markets():
-    pass
+def get_polymarket_kalshi_mapping():
+    with open('statics/statics.json', 'r') as f:
+        statics = json.load(f)
+    return statics["POLYMARKET_KALSHI_MAPPING"]
+
+def crossed_markets(polymarket_client, kalshi_client, polymarket_kalshi_mapping):
+    for poly_asset_id, kalshi_ticker in polymarket_kalshi_mapping.items():
+        if polymarket_client.orderbooks.get(poly_asset_id) and kalshi_client.orderbooks.get(kalshi_ticker):
+            poly_orderbook = polymarket_client.orderbooks[poly_asset_id]
+            kalshi_orderbook = kalshi_client.orderbooks[kalshi_ticker]
+            
+            poly_best_bid, poly_best_bid_size = poly_orderbook.get_best_bid()
+            poly_best_ask, poly_best_ask_size = poly_orderbook.get_best_ask()
+            kalshi_best_bid, kalshi_best_bid_size = kalshi_orderbook.get_best_bid()
+            kalshi_best_ask, kalshi_best_ask_size = kalshi_orderbook.get_best_ask()
+            
+            if poly_best_bid and kalshi_best_ask and poly_best_bid > kalshi_best_ask:
+                print(f"Arbitrage Opportunity: Buy on Kalshi at {kalshi_best_ask}, Sell on Polymarket at {poly_best_bid} of size {min(poly_best_bid_size, kalshi_best_ask_size)}")
+            if kalshi_best_bid and poly_best_ask and kalshi_best_bid > poly_best_ask:
+                print(f"Arbitrage Opportunity: Buy on Polymarket at {poly_best_ask}, Sell on Kalshi at {kalshi_best_bid} of size {min(kalshi_best_bid_size, poly_best_ask_size)}")
 
 def wide_spreads():
     pass
 
-async def scan_inefficiencies(polymarket_client, kalshi_client):
-    pass
+async def scan_inefficiencies(polymarket_client, kalshi_client, polymarket_kalshi_mapping):
+    while True:
+        crossed_markets(polymarket_client, kalshi_client, polymarket_kalshi_mapping)
+        await asyncio.sleep(1)
 
 async def main():
     # TODO: Add deque to best bid/ask and only compare if timestamp is within delta
+    
+    polymarket_kalshi_mapping = get_polymarket_kalshi_mapping()
     
     polymarket_client = PolymarketWebSocket(WS_URL_BASE, ASSET_IDS, CHANNEL_TYPE)
     kalshi_client = KalshiWebSocket(KEY_ID, PRIVATE_KEY_PATH, MARKET_TICKER, WS_URL)
     await asyncio.gather(
         polymarket_client.run(),
-        kalshi_client.orderbook_websocket()
+        kalshi_client.orderbook_websocket(),
+        scan_inefficiencies(polymarket_client, kalshi_client, polymarket_kalshi_mapping)
     )
 
 if __name__ == "__main__":

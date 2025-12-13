@@ -36,8 +36,8 @@ class OrderBook:
         if not self.asks:
             return None, None
         
-        price = self.asks.peekitem(-1)[0]
-        size = self.asks.peekitem(-1)[1]
+        price = self.asks.peekitem(0)[0]
+        size = self.asks.peekitem(0)[1]
         
         return price, size
     
@@ -66,6 +66,6 @@ class OrderBook:
         for price, size in snapshot.get("yes_dollars", []):
             self.update_order_book(side=0, price=float(price), size=float(size))
             
-        # Update asks
+        # Update asks (Use 1 - price to convert from "no" to "ask" price)
         for price, size in snapshot.get("no_dollars", []):
-            self.update_order_book(side=1, price=float(price), size=float(size))
+            self.update_order_book(side=1, price=round(1.0 - float(price), 4), size=float(size))

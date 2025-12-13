@@ -13,20 +13,24 @@ from market_data import MarketData
 # Configuration
 KEY_ID = "7edd1c5d-6c0c-4458-bb77-04854221689b"
 PRIVATE_KEY_PATH = "Kalshi.key"
-MARKET_TICKER = "KXNBAMVP-26-LDON"  # Replace with any open market
+#MARKET_TICKER = ["KXNBAMVP-26-LDON",
+#                "KXNBAMVP-26-SGIL",
+#                 "KXNBAMVP-26-NJOK"]  # Replace with any open market
+MARKET_TICKER = ["KXNBAMVP-26-LDON"]
 WS_URL = "wss://api.elections.kalshi.com/trade-api/ws/v2"
 
 class KalshiWebSocket:
-    def __init__(self, key_id, private_key_path, market_ticker, ws_url):
+    def __init__(self, key_id, private_key_path, market_tickers, ws_url):
         self.key_id = key_id
         self.private_key_path = private_key_path
-        self.market_ticker = market_ticker
+        self.market_tickers = market_tickers
         self.ws_url = ws_url
         
         # Initialize OrderBooks
         self.orderbooks = defaultdict(OrderBook)
         #for asset_id in self.asset_ids:
-        self.orderbooks[self.market_ticker] = OrderBook(self.market_ticker)
+        for market_ticker in self.market_tickers:
+            self.orderbooks[market_ticker] = OrderBook(market_ticker)
         
         # Initialize Market Data
         self.market_data = MarketData(market="Kalshi")
@@ -69,7 +73,7 @@ class KalshiWebSocket:
         
     def handle_price_change(self, msg):
         asset_id = msg["market_ticker"]
-        price = float(msg["price_dollars"])
+        price = float(msg["price_dollars"]) if msg["side"] == "yes" else 1 - float(msg["price_dollars"])
         delta = float(msg["delta"])
         side = 0 if msg["side"] == "yes" else 1
         orderbook = self.orderbooks.get(asset_id, None)
@@ -78,8 +82,8 @@ class KalshiWebSocket:
             return
         size = orderbook.get_size_at_price(side, price) + delta
         orderbook.update_order_book(side, price, size)
-        #print(orderbook)
-        return orderbook.get_best_bid()[0], orderbook.get_best_ask()[0]
+        print(orderbook)
+        return str(price), orderbook.get_best_bid()[0], orderbook.get_best_ask()[0]
 
     async def orderbook_websocket(self):
         """Connect to WebSocket and subscribe to orderbook"""
@@ -94,17 +98,19 @@ class KalshiWebSocket:
         ws_headers = self.create_headers(private_key, "GET", "/trade-api/ws/v2")
 
         async with websockets.connect(self.ws_url, additional_headers=ws_headers) as websocket:
-            print(f"Connected! Subscribing to orderbook for {self.market_ticker}")
+            print(f"Connected! Subscribing to orderbook for {', '.join(self.market_tickers)}")
 
             # Subscribe to orderbook
+            
             subscribe_msg = {
                 "id": 1,
                 "cmd": "subscribe",
                 "params": {
-                    "channels": ["orderbook_delta"],
-                    "market_ticker": self.market_ticker
+                    "channels": ["orderbook_delta", "trade"],
+                    "market_tickers": self.market_tickers
                 }
             }
+            
             await websocket.send(json.dumps(subscribe_msg))
 
             # Process messages
@@ -117,7 +123,7 @@ class KalshiWebSocket:
                     print(f"Subscribed: {data}")
 
                 elif msg_type == "orderbook_snapshot":
-                    #print(f"Orderbook snapshot: {data}")
+                    print(f"Orderbook snapshot: {data}")
                     self.market_data.persist_orderbook_snapshot_event_kalshi(msg_content)
                     self.handle_snapshot(msg_content)
 
@@ -127,17 +133,36 @@ class KalshiWebSocket:
                         #print(f"Orderbook update (your order {data['data']['client_order_id']}): {data}")
                         pass
                     else:
-                        #print(f"Orderbook update: {data}")
-                        best_bid, best_ask = self.handle_price_change(msg_content)
+                        print(f"Orderbook update: {data}")
+                        price, best_bid, best_ask = self.handle_price_change(msg_content)
                         self.market_data.persist_orderbook_update_event_kalshi(
                             msg_content,
+                            price=price,
                             best_bid=best_bid,
                             best_ask=best_ask
                         )
-                        
-
+                elif msg_type == "trade":
+                    print(msg_content)
+                elif msg_type == "ticker":
+                    pass
+                elif msg_type == "market_state":
+                    pass
                 elif msg_type == "error":
                     print(f"Error: {data}")
+                    
+    def get_best_bid(self, market_ticker):
+        orderbook = self.orderbooks.get(market_ticker, None)
+        if not orderbook:
+            print(f"Order Book with market ticker {market_ticker} not found on get_best_bid")
+            return None, None
+        return orderbook.get_best_bid()
+    
+    def get_best_ask(self, market_ticker):
+        orderbook = self.orderbooks.get(market_ticker, None)
+        if not orderbook:
+            print(f"Order Book with market ticker {market_ticker} not found on get_best_ask")
+            return None, None
+        return orderbook.get_best_ask()
 
 # Run the example
 if __name__ == "__main__":

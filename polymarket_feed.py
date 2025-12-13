@@ -42,14 +42,14 @@ class PolymarketWebSocket:
         self.connected = asyncio.Event()
         
     async def connect(self):
-        """Connect and subscribe"""
+        #Connect and subscribe
         while True:
             try:
                 print(f"Connecting to {self.url}")
                 self.ws = await websockets.connect(self.url, ping_interval=None)
                 await self.send_subscribe()
                 self.connected.set()
-                print("Connected to {self.url}")
+                print(f"Connected to {self.url}")
                 return
             except Exception as e:
                 print(f"Connection failed: {e}")
@@ -64,7 +64,7 @@ class PolymarketWebSocket:
         await self.ws.send(json.dumps(subscribe_payload))
 
     async def recv_loop(self):
-        """Listen for messages"""
+        #Listen for messages
         while True:
             try:
                 msg = await self.ws.recv()
@@ -93,7 +93,7 @@ class PolymarketWebSocket:
                 print("Error in recv_loop:", e)
 
     async def ping_loop(self):
-        """Send periodic pings."""
+        #Send periodic pings.
         while True:
             await self.connected.wait()
             try:
@@ -147,7 +147,7 @@ class PolymarketWebSocket:
     #
 
     async def run(self):
-        """Start the websocket and all loops."""
+        #Start the websocket and all loops.
         await self.connect()
 
         await asyncio.gather(
@@ -155,12 +155,24 @@ class PolymarketWebSocket:
             self.ping_loop(),
         )
         
+    def get_best_bid(self, asset_id):
+        orderbook = self.orderbooks.get(asset_id)
+        if orderbook:
+            return orderbook.get_best_bid()
+        return None, None
+    
+    def get_best_ask(self, asset_id):
+        orderbook = self.orderbooks.get(asset_id)
+        if orderbook:
+            return orderbook.get_best_ask()
+        return None, None
+        
 if __name__ == "__main__":
-    polymarket_client = PolymarketWebSocket(WS_URL_BASE, ASSET_IDS, CHANNEL_TYPE)
-    polymarket_client.run()
-
-
+    polymarket_client = PolymarketWebSocket(WS_URL_BASE, CHANNEL_TYPE, ASSET_IDS)
+    asyncio.run(polymarket_client.run())
 """
+
+
 class PolymarketWebSocket:
     def __init__(self, url_base, channel_type, asset_ids):
         self.url = f"{url_base}/ws/{channel_type}"

@@ -119,7 +119,7 @@ class MarketData:
         best_bid_price = bids[-1][0] if bids else ""
         best_bid_size = bids[-1][1] if bids else ""
         # Best ask = lowest price
-        best_ask_price = asks[-1][0] if asks else ""
+        best_ask_price = round(1.0 - float(asks[-1][0]), 4) if asks else ""
         best_ask_size = asks[-1][1] if asks else ""
         
         # Write YES side
@@ -133,7 +133,7 @@ class MarketData:
             best_bid=best_bid_price, best_ask=best_ask_price)
             
     # Write orderbook update event
-    def persist_orderbook_update_event_kalshi(self, message, best_bid, best_ask):
+    def persist_orderbook_update_event_kalshi(self, message, price, best_bid, best_ask):
         timestamp = message["ts"]
         asset_id = message["market_ticker"]
         
@@ -141,7 +141,7 @@ class MarketData:
             asset_id=asset_id,
             timestamp=timestamp,
             event_type="price_change",
-            price=message.get("price_dollars", ""),
+            price=price,
             side="BUY" if message["side"] == "yes" else "SELL",
             size=message.get("delta", ""),
             best_bid=best_bid,
