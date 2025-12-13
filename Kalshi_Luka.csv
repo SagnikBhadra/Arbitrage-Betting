@@ -716,3 +716,8 @@ timestamp,event_type,price,side,size,best_bid,best_ask
 2025-12-13T19:32:52.848266Z,price_change,0.16,BUY,10,0.17,0.22
 2025-12-13T19:32:52.872532Z,price_change,0.16,BUY,10,0.17,0.22
 2025-12-13T19:32:52.873222Z,price_change,0.16,BUY,10,0.17,0.22
+,book,0.1700,BUY,3277,0.1700,0.22
+,book,0.22,SELL,50,0.1700,0.22
+,book,0.1700,BUY,3277,0.1700,0.22
+,book,0.22,SELL,50,0.1700,0.22
+2025-12-13T20:12:27.373128Z,price_change,0.24,SELL,-100,0.17,0.22

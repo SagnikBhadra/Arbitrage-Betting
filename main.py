@@ -23,7 +23,9 @@ CHANNEL_TYPE = "market"  # use market for public price/book updates
 # Kalshi Configuration
 KEY_ID = "7edd1c5d-6c0c-4458-bb77-04854221689b"
 PRIVATE_KEY_PATH = "Kalshi.key"
-MARKET_TICKER = "KXNBAMVP-26-LDON"  # Replace with any open market
+MARKET_TICKER = ["KXNBAMVP-26-LDON",
+                "KXNBAMVP-26-SGIL",
+                 "KXNBAMVP-26-NJOK"]  # Replace with any open market
 WS_URL = "wss://api.elections.kalshi.com/trade-api/ws/v2"
 
 def get_polymarket_kalshi_mapping():
@@ -57,10 +59,11 @@ async def scan_inefficiencies(polymarket_client, kalshi_client, polymarket_kalsh
 
 async def main():
     # TODO: Add deque to best bid/ask and only compare if timestamp is within delta
+    # TODO: Track time span between market opportunity and when it's resolved
     
     polymarket_kalshi_mapping = get_polymarket_kalshi_mapping()
     
-    polymarket_client = PolymarketWebSocket(WS_URL_BASE, ASSET_IDS, CHANNEL_TYPE)
+    polymarket_client = PolymarketWebSocket(WS_URL_BASE, CHANNEL_TYPE, ASSET_IDS)
     kalshi_client = KalshiWebSocket(KEY_ID, PRIVATE_KEY_PATH, MARKET_TICKER, WS_URL)
     await asyncio.gather(
         polymarket_client.run(),

@@ -13,10 +13,10 @@ from market_data import MarketData
 # Configuration
 KEY_ID = "7edd1c5d-6c0c-4458-bb77-04854221689b"
 PRIVATE_KEY_PATH = "Kalshi.key"
-#MARKET_TICKER = ["KXNBAMVP-26-LDON",
-#                "KXNBAMVP-26-SGIL",
-#                 "KXNBAMVP-26-NJOK"]  # Replace with any open market
-MARKET_TICKER = ["KXNBAMVP-26-LDON"]
+MARKET_TICKER = ["KXNBAMVP-26-LDON",
+                "KXNBAMVP-26-SGIL",
+                 "KXNBAMVP-26-NJOK"]  # Replace with any open market
+#MARKET_TICKER = ["KXNBAMVP-26-LDON"]
 WS_URL = "wss://api.elections.kalshi.com/trade-api/ws/v2"
 
 class KalshiWebSocket:
