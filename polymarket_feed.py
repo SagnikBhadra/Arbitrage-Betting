@@ -1,5 +1,6 @@
 from orderbook import OrderBook
 from market_data import MarketData
+from utils import get_asset_ids
 
 import asyncio
 import json
@@ -166,5 +167,5 @@ class PolymarketWebSocket:
         return None, None
         
 if __name__ == "__main__":
-    polymarket_client = PolymarketWebSocket(WS_URL_BASE, CHANNEL_TYPE, ASSET_IDS)
+    polymarket_client = PolymarketWebSocket(WS_URL_BASE, CHANNEL_TYPE, get_asset_ids("Polymarket"))
     asyncio.run(polymarket_client.run())

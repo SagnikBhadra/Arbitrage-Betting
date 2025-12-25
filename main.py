@@ -4,6 +4,7 @@ import websocket
 
 from polymarket_feed import PolymarketWebSocket
 from kalshi_feed import KalshiWebSocket
+from utils import get_asset_ids
 
 # WebSocket endpoint for Polymarket CLOB service
 WS_URL_BASE = "wss://ws-subscriptions-clob.polymarket.com"
@@ -63,8 +64,8 @@ async def main():
     
     polymarket_kalshi_mapping = get_polymarket_kalshi_mapping()
     
-    polymarket_client = PolymarketWebSocket(WS_URL_BASE, CHANNEL_TYPE, ASSET_IDS)
-    kalshi_client = KalshiWebSocket(KEY_ID, PRIVATE_KEY_PATH, MARKET_TICKER, WS_URL)
+    polymarket_client = PolymarketWebSocket(WS_URL_BASE, CHANNEL_TYPE, get_asset_ids("Polymarket"))
+    kalshi_client = KalshiWebSocket(KEY_ID, PRIVATE_KEY_PATH, get_asset_ids("Kalshi"), WS_URL)
     await asyncio.gather(
         polymarket_client.run(),
         kalshi_client.orderbook_websocket(),

@@ -9,6 +9,7 @@ from cryptography.hazmat.primitives.asymmetric import padding
 
 from orderbook import OrderBook
 from market_data import MarketData
+from utils import get_asset_ids
 
 # Configuration
 KEY_ID = "7edd1c5d-6c0c-4458-bb77-04854221689b"
@@ -166,5 +167,5 @@ class KalshiWebSocket:
 
 # Run the example
 if __name__ == "__main__":
-    client = KalshiWebSocket(KEY_ID, PRIVATE_KEY_PATH, MARKET_TICKER, WS_URL)
+    client = KalshiWebSocket(KEY_ID, PRIVATE_KEY_PATH, get_asset_ids("Kalshi"), WS_URL)
     asyncio.run(client.orderbook_websocket())
