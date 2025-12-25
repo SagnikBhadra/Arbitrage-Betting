@@ -3,7 +3,7 @@ import json
 import websocket
 
 from polymarket_feed import PolymarketWebSocket
-from Kalshi import KalshiWebSocket
+from kalshi_feed import KalshiWebSocket
 
 # WebSocket endpoint for Polymarket CLOB service
 WS_URL_BASE = "wss://ws-subscriptions-clob.polymarket.com"
