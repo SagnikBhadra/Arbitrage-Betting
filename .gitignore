@@ -1,0 +1,17 @@
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+# Uncomment if you want to ignore all notebooks
+# *.ipynb
+
+# Kalshi Private Files
+Kalshi.key
+Kalshi.txt
