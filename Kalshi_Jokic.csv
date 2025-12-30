@@ -50,3 +50,5 @@ timestamp,event_type,price,side,size,best_bid,best_ask
 ,book,0.34,SELL,2657,0.3300,0.34
 ,book,0.3300,BUY,160,0.3300,0.34
 ,book,0.34,SELL,2657,0.3300,0.34
+,book,0.3300,BUY,254,0.3300,0.34
+,book,0.34,SELL,2413,0.3300,0.34
