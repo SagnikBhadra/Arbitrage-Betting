@@ -83,7 +83,7 @@ class KalshiWebSocket:
             return
         size = orderbook.get_size_at_price(side, price) + delta
         orderbook.update_order_book(side, price, size)
-        print(orderbook)
+        #print(orderbook)
         return str(price), orderbook.get_best_bid()[0], orderbook.get_best_ask()[0]
 
     async def orderbook_websocket(self):
@@ -134,7 +134,7 @@ class KalshiWebSocket:
                         #print(f"Orderbook update (your order {data['data']['client_order_id']}): {data}")
                         pass
                     else:
-                        print(f"Orderbook update: {data}")
+                        #print(f"Orderbook update: {data}")
                         price, best_bid, best_ask = self.handle_price_change(msg_content)
                         self.market_data.persist_orderbook_update_event_kalshi(
                             msg_content,

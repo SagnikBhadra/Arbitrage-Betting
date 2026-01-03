@@ -29,10 +29,58 @@ MARKET_TICKER = ["KXNBAMVP-26-LDON",
                  "KXNBAMVP-26-NJOK"]  # Replace with any open market
 WS_URL = "wss://api.elections.kalshi.com/trade-api/ws/v2"
 
-def get_polymarket_kalshi_mapping():
+def get_static_mapping(static_name: str):
     with open('statics/statics.json', 'r') as f:
         statics = json.load(f)
-    return statics["POLYMARKET_KALSHI_MAPPING"]
+    return statics[static_name]
+
+def intra_kalshi_arbitrage(kalshi_client, correlated_market_mapping, profit_threshold=0.00):
+    """Identify intra-market arbitrage opportunities within Kalshi markets.
+
+    Args:
+        kalshi_client (KalshiWebSocket): The Kalshi WebSocket client instance which contains orderbooks.
+    """
+    # Create a dict where Team A markets map to Team B markets
+    # E.g. {Team A : {Team B}, Team B : {Team A}}
+    # Pull ticker, orderbook from kalshi_client.orderbooks
+    
+    for ticker, orderbook in kalshi_client.orderbooks.items():
+        # Get correlated markets
+        correlated_tickers = correlated_market_mapping.get(ticker, [])
+        best_bid, best_bid_size = orderbook.get_best_bid()
+        best_ask, best_ask_size = orderbook.get_best_ask()
+        
+        # Does not work for more than 2 correlated markets yet
+        if correlated_tickers:
+            for correlated_ticker in correlated_tickers:
+                correlated_orderbook = kalshi_client.orderbooks.get(correlated_ticker)
+                if correlated_orderbook:
+                    correlated_best_bid, correlated_best_bid_size = correlated_orderbook.get_best_bid()
+                    correlated_best_ask, correlated_best_ask_size = correlated_orderbook.get_best_ask()
+                    
+                    # Buy Team A yes & Buy Team B yes
+                    if best_bid and correlated_best_bid:
+                        combined_price = best_bid + correlated_best_bid
+                        if combined_price < 1 - profit_threshold:
+                            print(f"Intra-Kalshi Arbitrage Opportunity: Buy on {ticker} at {best_bid} and Buy on {correlated_ticker} at {correlated_best_bid} of size {min(best_bid_size, correlated_best_bid_size)} | Combined Price: {combined_price}")
+
+                    # Buy Team A no & Buy Team B no
+                    if best_ask and correlated_best_ask:
+                        combined_price = best_ask + correlated_best_ask
+                        if combined_price < 1 - profit_threshold:
+                            print(f"Intra-Kalshi Arbitrage Opportunity: Buy on {ticker} at {best_ask} and Buy on {correlated_ticker} at {correlated_best_ask} of size {min(best_ask_size, correlated_best_ask_size)} | Combined Price: {combined_price}")
+
+                    # Buy Team A yes & Buy Team A no
+                    if best_bid and best_ask:
+                        combined_price = best_bid + best_ask
+                        if combined_price < 1 - profit_threshold:
+                            print(f"Intra-Kalshi Arbitrage Opportunity: Buy on {ticker} at {best_bid} and Sell on {ticker} at {best_ask} of size {min(best_bid_size, best_ask_size)} | Combined Price: {combined_price}")
+
+                    # Buy Team B yes & Buy Team B no
+                    if correlated_best_bid and correlated_best_ask:
+                        combined_price = correlated_best_bid + correlated_best_ask
+                        if combined_price < 1 - profit_threshold:
+                            print(f"Intra-Kalshi Arbitrage Opportunity: Buy on {correlated_ticker} at {correlated_best_bid} and Buy on {correlated_ticker} at {correlated_best_ask} of size {min(correlated_best_bid_size, correlated_best_ask_size)} | Combined Price: {combined_price}")
 
 def crossed_markets(polymarket_client, kalshi_client, polymarket_kalshi_mapping):
     for poly_asset_id, kalshi_ticker in polymarket_kalshi_mapping.items():
@@ -53,23 +101,25 @@ def crossed_markets(polymarket_client, kalshi_client, polymarket_kalshi_mapping)
 def wide_spreads():
     pass
 
-async def scan_inefficiencies(polymarket_client, kalshi_client, polymarket_kalshi_mapping):
+async def scan_inefficiencies(polymarket_client, kalshi_client):
+    polymarket_kalshi_mapping = get_static_mapping("POLYMARKET_KALSHI_MAPPING")
+    correlated_market_mapping = get_static_mapping("CORRELATED_MARKET_MAPPING")
     while True:
-        crossed_markets(polymarket_client, kalshi_client, polymarket_kalshi_mapping)
+        #crossed_markets(polymarket_client, kalshi_client, polymarket_kalshi_mapping)
+        intra_kalshi_arbitrage(kalshi_client, correlated_market_mapping)
         await asyncio.sleep(1)
 
 async def main():
     # TODO: Add deque to best bid/ask and only compare if timestamp is within delta
     # TODO: Track time span between market opportunity and when it's resolved
     
-    polymarket_kalshi_mapping = get_polymarket_kalshi_mapping()
-    
+
     polymarket_client = PolymarketWebSocket(WS_URL_BASE, CHANNEL_TYPE, get_asset_ids("Polymarket"))
     kalshi_client = KalshiWebSocket(KEY_ID, PRIVATE_KEY_PATH, get_asset_ids("Kalshi"), WS_URL)
     await asyncio.gather(
         polymarket_client.run(),
         kalshi_client.orderbook_websocket(),
-        scan_inefficiencies(polymarket_client, kalshi_client, polymarket_kalshi_mapping)
+        scan_inefficiencies(polymarket_client, kalshi_client)
     )
 
 if __name__ == "__main__":

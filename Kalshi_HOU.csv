@@ -1,0 +1,9 @@
+timestamp,event_type,price,side,size,best_bid,best_ask
+,book,0.7000,BUY,125,0.7000,0.75
+,book,0.75,SELL,1852,0.7000,0.75
+,book,0.7000,BUY,125,0.7000,0.75
+,book,0.75,SELL,1852,0.7000,0.75
+,book,0.7000,BUY,125,0.7000,0.75
+,book,0.75,SELL,1852,0.7000,0.75
+,book,0.7000,BUY,125,0.7000,0.75
+,book,0.75,SELL,1852,0.7000,0.75

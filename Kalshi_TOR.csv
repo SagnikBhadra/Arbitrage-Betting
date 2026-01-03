@@ -1,0 +1,6 @@
+timestamp,event_type,price,side,size,best_bid,best_ask
+,book,0.6300,BUY,38028,0.6300,0.64
+,book,0.64,SELL,173987,0.6300,0.64
+2026-01-03T20:41:51.796946Z,price_change,0.64,SELL,66,0.63,0.64
+2026-01-03T20:42:03.840477Z,price_change,0.65,SELL,5,0.63,0.64
+2026-01-03T20:42:12.123796Z,price_change,0.64,SELL,-66,0.63,0.64

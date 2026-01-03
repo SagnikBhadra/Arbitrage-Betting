@@ -24,7 +24,7 @@ class MarketData:
                 writer = csv.writer(f)
                 writer.writerow(["timestamp", "event_type","price","side","size","best_bid","best_ask"])
     
-    def write_row(self, asset_id, timestamp, event_type, price="", side="",
+    def write_row(self, asset_id, timestamp="", event_type="", price="", side="",
               size="", best_bid="", best_ask=""):
         filename = self.get_csv_filename(asset_id)
         self.init_csv_if_needed(filename)

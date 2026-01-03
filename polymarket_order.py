@@ -91,7 +91,16 @@ class PolymarketFIXGateway:
                 self.logger.error(f"Error sending heartbeat: {e}")
                 break
 
-    async def send_order(self, order: FIXMessage):
+    async def send_order(self, cl_ord_id, symbol, side, qty, price):
+        """
+        Sends a NewOrderSingle (35=D).
+        """
+        order = FIXMessage(self.session.codec.protocol.msgtype.NEWORDERSINGLE)
+        order.setField(11, cl_ord_id)  # ClOrdID
+        order.setField(55, symbol)      # Symbol
+        order.setField(54, side)        # Side
+        order.setField(38, qty)         # OrderQty
+        order.setField(44, price)      # Price
         await self.session.sendMsg(self.session.codec.pack(order, self.session))
 
     async def on_message(self, msg: FIXMessage):
