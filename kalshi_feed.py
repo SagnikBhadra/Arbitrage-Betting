@@ -143,7 +143,8 @@ class KalshiWebSocket:
                             best_ask=best_ask
                         )
                 elif msg_type == "trade":
-                    print(msg_content)
+                    #print(msg_content)
+                    pass
                 elif msg_type == "ticker":
                     pass
                 elif msg_type == "market_state":

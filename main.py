@@ -59,16 +59,16 @@ def intra_kalshi_arbitrage(kalshi_client, correlated_market_mapping, profit_thre
                     correlated_best_ask, correlated_best_ask_size = correlated_orderbook.get_best_ask()
                     
                     # Buy Team A yes & Buy Team B yes
-                    if best_bid and correlated_best_bid:
-                        combined_price = best_bid + correlated_best_bid
-                        if combined_price < 1 - profit_threshold:
-                            print(f"Intra-Kalshi Arbitrage Opportunity: Buy on {ticker} at {best_bid} and Buy on {correlated_ticker} at {correlated_best_bid} of size {min(best_bid_size, correlated_best_bid_size)} | Combined Price: {combined_price}")
-
-                    # Buy Team A no & Buy Team B no
                     if best_ask and correlated_best_ask:
                         combined_price = best_ask + correlated_best_ask
                         if combined_price < 1 - profit_threshold:
                             print(f"Intra-Kalshi Arbitrage Opportunity: Buy on {ticker} at {best_ask} and Buy on {correlated_ticker} at {correlated_best_ask} of size {min(best_ask_size, correlated_best_ask_size)} | Combined Price: {combined_price}")
+
+                    # Buy Team A no & Buy Team B no
+                    if best_bid and correlated_best_bid:
+                        combined_price = best_bid + correlated_best_bid
+                        if combined_price < 1 - profit_threshold:
+                            print(f"Intra-Kalshi Arbitrage Opportunity: Buy on {ticker} at {best_bid} and Buy on {correlated_ticker} at {correlated_best_bid} of size {min(best_bid_size, correlated_best_bid_size)} | Combined Price: {combined_price}")
 
                     # Buy Team A yes & Buy Team A no
                     if best_bid and best_ask:
