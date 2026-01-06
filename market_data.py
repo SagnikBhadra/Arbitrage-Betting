@@ -147,3 +147,21 @@ class MarketData:
             best_bid=best_bid,
             best_ask=best_ask
         )
+        
+    def persist_trade_event_kalshi(self, message, best_bid, best_ask): 
+        asset_id = message["market_ticker"]
+        timestamp = message["ts"]
+        yes_price = float(message["yes_price_dollars"])
+        no_price = float(message["no_price_dollars"])
+        taker_side = "BUY" if message["taker_side"] == "yes" else "SELL"
+        
+        self.write_row(
+            asset_id=asset_id,
+            timestamp=timestamp,
+            event_type="last_trade_price",
+            price=yes_price if taker_side == "BUY" else no_price,
+            side=taker_side,
+            size=message.get("count", ""),
+            best_bid=best_bid,
+            best_ask=best_ask
+        )

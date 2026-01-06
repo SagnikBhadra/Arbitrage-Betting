@@ -71,7 +71,7 @@ def intra_kalshi_arbitrage(kalshi_client, correlated_market_mapping, profit_thre
                         combined_price = best_no_ask + best_correlated_no_ask
                         if combined_price < 1 - profit_threshold:
                             print(f"Intra-Kalshi Arbitrage Opportunity: Buy NO on {ticker} at {best_no_ask} and Buy NO on {correlated_ticker} at {best_correlated_no_ask} of size {min(best_bid_size, correlated_best_bid_size)} | Combined Price: {combined_price}")
-
+                    """
                     # Buy Team A yes & Buy Team A no
                     if best_bid and best_ask:
                         best_no_ask = round(1.0 - float(best_bid), 4)
@@ -85,6 +85,7 @@ def intra_kalshi_arbitrage(kalshi_client, correlated_market_mapping, profit_thre
                         combined_price = correlated_best_ask + best_correlated_no_ask
                         if combined_price < 1 - profit_threshold:
                             print(f"Intra-Kalshi Arbitrage Opportunity: Buy YES on {correlated_ticker} at {correlated_best_ask} and Buy NO on {correlated_ticker} at {best_correlated_no_ask} of size {min(correlated_best_bid_size, correlated_best_ask_size)} | Combined Price: {combined_price}")
+                    """
 
 def crossed_markets(polymarket_client, kalshi_client, polymarket_kalshi_mapping):
     for poly_asset_id, kalshi_ticker in polymarket_kalshi_mapping.items():
