@@ -1,4 +1,5 @@
 from collections import defaultdict
+from decimal import Decimal
 from sortedcontainers import SortedDict
 
 class OrderBook:
@@ -68,4 +69,5 @@ class OrderBook:
             
         # Update asks (Use 1 - price to convert from "no" to "ask" price)
         for price, size in snapshot.get("no_dollars", []):
-            self.update_order_book(side=1, price=round(1.0 - float(price), 4), size=float(size))
+            print(f"Price: {Decimal('1.0') - Decimal(price)}, Size: {size}")
+            self.update_order_book(side=1, price=Decimal('1.0') - Decimal(price), size=float(size))

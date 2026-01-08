@@ -6,6 +6,7 @@ import websockets
 from collections import defaultdict
 from cryptography.hazmat.primitives import serialization, hashes
 from cryptography.hazmat.primitives.asymmetric import padding
+from decimal import Decimal
 
 from orderbook import OrderBook
 from market_data import MarketData
@@ -83,7 +84,7 @@ class KalshiWebSocket:
         
     def handle_price_change(self, msg):
         asset_id = msg["market_ticker"]
-        price = float(msg["price_dollars"]) if msg["side"] == "yes" else 1 - float(msg["price_dollars"])
+        price = float(msg["price_dollars"]) if msg["side"] == "yes" else Decimal('1.0') - Decimal(msg["price_dollars"])
         delta = float(msg["delta"])
         side = 0 if msg["side"] == "yes" else 1
         orderbook = self.orderbooks.get(asset_id, None)
@@ -98,7 +99,7 @@ class KalshiWebSocket:
     def handle_trade(self, msg):
         asset_id = msg["market_ticker"]
         yes_price = float(msg["yes_price_dollars"])
-        no_price = round(1.0 - yes_price, 4)
+        no_price = Decimal("1.0") - Decimal(msg["no_price_dollars"])
         shares_executed = float(msg["count"])
         taker_side = 0 if msg["taker_side"] == "yes" else 1
         
@@ -107,24 +108,24 @@ class KalshiWebSocket:
             print(f"Order Book with asset ID {asset_id} not found on trade")
             return
         
-        if taker_side == 0:
-            # BUY YES
+        if taker_side == 1:
+            # Taker BUY NO | Remove from Bid side
             best_bid_price, best_bid_size = orderbook.get_best_bid()
             yes_size = orderbook.get_size_at_price(0, yes_price)
             if best_bid_price != yes_price:
                 print(f"Discrepancy in YES trade price: Trade Price {yes_price} vs Best Bid {best_bid_price}")
             if yes_size:
                 new_size = max(0, yes_size - shares_executed)
-                orderbook.update_order_book(0, best_bid_price, new_size)
+                #orderbook.update_order_book(0, best_bid_price, new_size)
         else:
-            # BUY NO
+            # Taker BUY YES | Remove from Ask side
             best_ask_price, best_ask_size = orderbook.get_best_ask()
             no_size = orderbook.get_size_at_price(1, no_price)
             if best_ask_price != no_price:
                 print(f"Discrepancy in NO trade price: Trade Price {no_price} vs Best Ask {best_ask_price}")
             if no_size:
                 new_size = max(0, no_size - shares_executed)
-                orderbook.update_order_book(1, best_ask_price, new_size)
+                #orderbook.update_order_book(1, best_ask_price, new_size)
 
     async def orderbook_websocket(self):
         """Connect to WebSocket and subscribe to orderbook"""
@@ -171,10 +172,9 @@ class KalshiWebSocket:
                 elif msg_type == "orderbook_delta":
                     # The client_order_id field is optional - only present when you caused the change
                     if 'client_order_id' in data.get('data', {}):
-                        #print(f"Orderbook update (your order {data['data']['client_order_id']}): {data}")
-                        pass
+                        print(f"Orderbook update (your order {data['data']['client_order_id']}): {data}")
                     else:
-                        #print(f"Orderbook update: {data}")
+                        print(f"Orderbook update: {data}")
                         price, best_bid, best_ask = self.handle_price_change(msg_content)
                         self.market_data.persist_orderbook_update_event_kalshi(
                             msg_content,
