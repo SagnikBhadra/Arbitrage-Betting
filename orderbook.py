@@ -16,8 +16,10 @@ class OrderBook:
     def update_order_book(self, side, price, size):
         book_side = self.bids if side == 0 else self.asks
         if size <= 0 and price in book_side:
+            #print(f"Removing price level {price} from {'bids' if side == 0 else 'asks'}")
             del book_side[price]
         else:
+            #print(f"Updating price level {price} in {'bids' if side == 0 else 'asks'} from size {book_side.get(price, 0)} to size {size}")
             book_side[price] = size
             
     def get_size_at_price(self, side, price):

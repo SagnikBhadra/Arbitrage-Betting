@@ -21,6 +21,13 @@ MARKET_TICKER = ["KXNBAMVP-26-LDON",
 #MARKET_TICKER = ["KXNBAMVP-26-LDON"]
 WS_URL = "wss://api.elections.kalshi.com/trade-api/ws/v2"
 
+"""
+
+            "KXNBAMVP-26-SGIL": "Shai",
+            "KXNBAMVP-26-NJOK": "Jokic",
+            "KXNBAMVP-26-LDON": "Luka",
+"""
+
 class KalshiWebSocket:
     def __init__(self, key_id, private_key_path, market_tickers, ws_url):
         self.key_id = key_id
@@ -112,8 +119,8 @@ class KalshiWebSocket:
             # Taker BUY NO | Remove from Bid side
             best_bid_price, best_bid_size = orderbook.get_best_bid()
             yes_size = orderbook.get_size_at_price(0, yes_price)
-            if best_bid_price != yes_price:
-                print(f"Discrepancy in YES trade price: Trade Price {yes_price} vs Best Bid {best_bid_price}")
+            #if best_bid_price != yes_price:
+                #print(f"Discrepancy in YES trade price: Trade Price {yes_price} vs Best Bid {best_bid_price}")
             if yes_size:
                 new_size = max(0, yes_size - shares_executed)
                 #orderbook.update_order_book(0, best_bid_price, new_size)
@@ -121,8 +128,8 @@ class KalshiWebSocket:
             # Taker BUY YES | Remove from Ask side
             best_ask_price, best_ask_size = orderbook.get_best_ask()
             no_size = orderbook.get_size_at_price(1, no_price)
-            if best_ask_price != no_price:
-                print(f"Discrepancy in NO trade price: Trade Price {no_price} vs Best Ask {best_ask_price}")
+            #if best_ask_price != no_price:
+                #print(f"Discrepancy in NO trade price: Trade Price {no_price} vs Best Ask {best_ask_price}")
             if no_size:
                 new_size = max(0, no_size - shares_executed)
                 #orderbook.update_order_book(1, best_ask_price, new_size)
@@ -165,16 +172,17 @@ class KalshiWebSocket:
                     print(f"Subscribed: {data}")
 
                 elif msg_type == "orderbook_snapshot":
-                    print(f"Orderbook snapshot: {data}")
+                    #print(f"Orderbook snapshot: {data}")
                     self.market_data.persist_orderbook_snapshot_event_kalshi(msg_content)
                     self.handle_snapshot(msg_content)
 
                 elif msg_type == "orderbook_delta":
                     # The client_order_id field is optional - only present when you caused the change
                     if 'client_order_id' in data.get('data', {}):
-                        print(f"Orderbook update (your order {data['data']['client_order_id']}): {data}")
+                        #print(f"Orderbook update (your order {data['data']['client_order_id']}): {data}")
+                        pass
                     else:
-                        print(f"Orderbook update: {data}")
+                        #print(f"Orderbook update: {data}")
                         price, best_bid, best_ask = self.handle_price_change(msg_content)
                         self.market_data.persist_orderbook_update_event_kalshi(
                             msg_content,
@@ -184,7 +192,7 @@ class KalshiWebSocket:
                         )
                 elif msg_type == "trade":
                     #{'trade_id': 'f3604e94-e840-6af3-bf21-d6e1ddd88229', 'market_ticker': 'KXNBAMVP-26-SGIL', 'yes_price': 76, 'no_price': 24, 'yes_price_dollars': '0.7600', 'no_price_dollars': '0.2400', 'count': 54, 'taker_side': 'no', 'ts': 1767668947}
-                    print(msg_content)
+                    #print(msg_content)
                     # Update orderbook on both BUY and SELL sides
                     self.handle_trade(msg_content)
                     
@@ -197,10 +205,10 @@ class KalshiWebSocket:
                     )
                     
                 elif msg_type == "ticker":
-                    print(msg_content)
+                    #print(msg_content)
                     pass
                 elif msg_type == "market_state":
-                    print(msg_content)
+                    #print(msg_content)
                     pass
                 elif msg_type == "error":
                     print(f"Error: {data}")

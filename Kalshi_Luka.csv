@@ -1458,3 +1458,7 @@ timestamp,event_type,price,side,size,best_bid,best_ask
 2026-01-08T01:00:41.531155Z,price_change,0.1,BUY,32,0.1,0.1200
 2026-01-08T01:01:24.850377Z,price_change,0.1,BUY,-32,0.09,0.1200
 2026-01-08T01:01:25.121344Z,price_change,0.1,BUY,32,0.1,0.1200
+2026-01-08T01:02:08.218113Z,price_change,0.1,BUY,-32,0.09,0.1200
+2026-01-08T01:02:08.488237Z,price_change,0.1,BUY,32,0.1,0.1200
+2026-01-08T01:02:51.617183Z,price_change,0.1,BUY,-32,0.09,0.1200
+2026-01-08T01:02:51.884478Z,price_change,0.1,BUY,32,0.1,0.1200
