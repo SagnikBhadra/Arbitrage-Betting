@@ -19,10 +19,13 @@ class MarketData:
     
     # Create new CSV file if one doesn't exist for Asset ID
     def init_csv_if_needed(self, filename):
+        """
         if not os.path.exists(filename):
             with open(filename, "w", newline="") as f:
                 writer = csv.writer(f)
                 writer.writerow(["timestamp", "event_type","price","side","size","best_bid","best_ask"])
+        """
+        pass
     
     def write_row(self, asset_id, timestamp="", event_type="", price="", side="",
               size="", best_bid="", best_ask=""):
@@ -33,10 +36,11 @@ class MarketData:
         # Order data types from largest to smallest
         # Multiply floats by 1000 and store as shorts
         # Convert side to byte data type
-        
+        """
         with open(filename, "a", newline="") as f:
             writer = csv.writer(f)
             writer.writerow([timestamp, event_type, price, side, size, best_bid, best_ask])
+        """
             
     def reformat_timestamp(self, timestamp):
         dt = datetime.fromtimestamp(int(timestamp) / 1000, tz=timezone.utc)
