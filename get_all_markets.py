@@ -1,3 +1,4 @@
+import json
 import time
 import requests
 from requests.exceptions import ConnectionError, Timeout, HTTPError
@@ -7,7 +8,7 @@ PAGE_LIMIT = 500  # Lower page size can reduce server load
 MAX_RETRIES = 5
 INITIAL_BACKOFF = 1  # seconds
 
-def fetch_all_market_tickers():
+def fetch_all_market_tickers(series_ticker=""):
     ticker_map = {}
     cursor = None
     counter = 0
@@ -47,7 +48,7 @@ def fetch_all_market_tickers():
         markets = data.get("markets", [])
         for m in markets:
             ticker = m.get("ticker")
-            if ticker and ticker.startswith("KXNBAGAME") and ticker not in ticker_map:
+            if ticker and ticker.startswith(series_ticker) and ticker not in ticker_map:
                 ticker_map[ticker] = ticker.split("-")[-1] + "_" + ticker.split("-")[1][:7] + "_WIN"
                 counter += 1
 
@@ -60,9 +61,23 @@ def fetch_all_market_tickers():
 
 
 if __name__ == "__main__":
-    tickers = fetch_all_market_tickers()
-    print("{")
-    for t, i in tickers.items():
-        print(f'  "{t}": {i},')
-    print("}")
+    json_path = 'statics/statics.json'
+    with open(json_path, 'r') as f:
+        data = json.load(f)
+    
+    correlated_market_mapping = {}
+    kalshi_tickers = fetch_all_market_tickers()
+    tickers = list(kalshi_tickers.keys())
+    for i in range(0, len(tickers), 2):
+        if i + 1 < len(tickers):
+            k1 = tickers[i]
+            k2 = tickers[i + 1]
+            correlated_market_mapping[k1] = k2
+            correlated_market_mapping[k2] = k1
+    
+    data["Kalshi"] = kalshi_tickers
+    data["KALSHI_CORRELATED_MARKETS"] = correlated_market_mapping
+    
+    print(data["KALSHI_CORRELATED_MARKETS"])
+
     print(f"\nTotal fetched: {len(tickers)}")
