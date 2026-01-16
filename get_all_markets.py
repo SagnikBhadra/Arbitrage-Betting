@@ -66,7 +66,7 @@ if __name__ == "__main__":
         data = json.load(f)
     
     correlated_market_mapping = {}
-    kalshi_tickers = fetch_all_market_tickers()
+    kalshi_tickers = fetch_all_market_tickers("KXNBAGAME")
     tickers = list(kalshi_tickers.keys())
     for i in range(0, len(tickers), 2):
         if i + 1 < len(tickers):
@@ -75,9 +75,12 @@ if __name__ == "__main__":
             correlated_market_mapping[k1] = k2
             correlated_market_mapping[k2] = k1
     
-    data["Kalshi"] = kalshi_tickers
-    data["KALSHI_CORRELATED_MARKETS"] = correlated_market_mapping
+    data["ASSET_ID_MAPPING"]["Kalshi"] = kalshi_tickers
+    data["ASSET_ID_MAPPING"]["CORRELATED_MARKET_MAPPING"] = correlated_market_mapping
     
-    print(data["KALSHI_CORRELATED_MARKETS"])
+    with open(json_path, 'w') as f:
+        json.dump(data, f, indent=4)
+
+    print(data["ASSET_ID_MAPPING"]["CORRELATED_MARKET_MAPPING"])
 
     print(f"\nTotal fetched: {len(tickers)}")
