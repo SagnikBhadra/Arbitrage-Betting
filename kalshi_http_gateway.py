@@ -4,6 +4,7 @@ import base64
 import json
 import uuid
 import requests
+import uuid
 
 from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.asymmetric import padding
@@ -176,17 +177,25 @@ if __name__ == "__main__":
     try:
         balance = gateway.get_balance()
         print(f"✓ Connected! Balance: {json.dumps(balance, indent=2)}")
+        
+        # Example: place a market buy order for 10 YES contracts on a market
+        
+        order_data = {
+            "ticker": "KXT20WORLDCUP-26-IND",
+            "action": "buy",
+            "side": "yes",
+            "count": 1,
+            "client_order_id": str(uuid.uuid4()),
+            "yes_price": 1,
+            "time_in_force": "fill_or_kill",
+            "type": "limit",
+        }
+
+        response = gateway.create_order(order_data)
+        print("Order placed:", response)
+        
     except Exception as e:
         print(f"✗ Connection failed: {e}")
         exit(1)
 
-    # Example order (commented out for safety)
-    # order = {
-    #     "ticker": "KXBTC-25JAN31-T100000",
-    #     "action": "buy",
-    #     "side": "yes",
-    #     "count": 1,
-    #     "type": "market",
-    # }
-    # result = gateway.create_order(order)
-    # print(json.dumps(result, indent=2))
+    
