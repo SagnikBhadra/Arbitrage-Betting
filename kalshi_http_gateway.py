@@ -147,6 +147,8 @@ class KalshiHTTPGateway:
         # Auto-generate client_order_id if not provided
         if "client_order_id" not in order_data:
             order_data["client_order_id"] = str(uuid.uuid4())
+            
+        print(order_data)
 
         return self._request("POST", "/portfolio/orders", json_body=order_data)
 
@@ -187,7 +189,6 @@ if __name__ == "__main__":
             "count": 1,
             "client_order_id": str(uuid.uuid4()),
             "yes_price": 1,
-            "time_in_force": "fill_or_kill",
             "type": "limit",
         }
 
