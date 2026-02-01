@@ -14,8 +14,13 @@ def fetch_all_market_tickers(series_ticker=""):
     counter = 0
 
     while True:
-        params = {"limit": PAGE_LIMIT,
-                 "status": "open",}
+        params = {
+            "limit": PAGE_LIMIT,
+            "status": "open",
+        }
+        # Add series_ticker filter to API request
+        if series_ticker:
+            params["series_ticker"] = series_ticker
         if cursor:
             params["cursor"] = cursor
 
@@ -44,11 +49,11 @@ def fetch_all_market_tickers(series_ticker=""):
             print("Max retries exceeded. Stopping.")
             return ticker_map
 
-        # Process markets
+        # Process markets - no client-side filtering needed
         markets = data.get("markets", [])
         for m in markets:
             ticker = m.get("ticker")
-            if ticker and ticker.startswith(series_ticker) and ticker not in ticker_map:
+            if ticker and ticker not in ticker_map:
                 ticker_map[ticker] = ticker.split("-")[-1] + "_" + ticker.split("-")[1][:7] + "_WIN"
                 counter += 1
 
@@ -72,8 +77,8 @@ if __name__ == "__main__":
         if i + 1 < len(tickers):
             k1 = tickers[i]
             k2 = tickers[i + 1]
-            correlated_market_mapping[k1] = k2
-            correlated_market_mapping[k2] = k1
+            correlated_market_mapping[k1] = [k2]
+            correlated_market_mapping[k2] = [k1]
     
     data["ASSET_ID_MAPPING"]["Kalshi"] = kalshi_tickers
     data["ASSET_ID_MAPPING"]["CORRELATED_MARKET_MAPPING"] = correlated_market_mapping
