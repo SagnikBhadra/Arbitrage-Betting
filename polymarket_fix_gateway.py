@@ -40,7 +40,7 @@ class PolymarketFIXGateway:
         self.logger.setLevel(level=logging.INFO,
                              format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                              datefmt='%m/%d/%Y %H:%M:%S',
-                             filename='app.log',
+                             filename='polymarket_gateway_app.log',
                              filemode='a')
 
     async def connect(self):
