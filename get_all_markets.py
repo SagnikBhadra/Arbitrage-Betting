@@ -81,11 +81,11 @@ if __name__ == "__main__":
             correlated_market_mapping[k2] = [k1]
     
     data["ASSET_ID_MAPPING"]["Kalshi"] = kalshi_tickers
-    data["ASSET_ID_MAPPING"]["CORRELATED_MARKET_MAPPING"] = correlated_market_mapping
+    data["CORRELATED_MARKET_MAPPING"] = correlated_market_mapping
     
     with open(json_path, 'w') as f:
         json.dump(data, f, indent=4)
 
-    print(data["ASSET_ID_MAPPING"]["CORRELATED_MARKET_MAPPING"])
+    print(data["CORRELATED_MARKET_MAPPING"])
 
     print(f"\nTotal fetched: {len(tickers)}")

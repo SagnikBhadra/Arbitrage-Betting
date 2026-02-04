@@ -150,7 +150,8 @@ class KalshiHTTPGateway:
             
         print(order_data)
 
-        return self._request("POST", "/portfolio/orders", json_body=order_data)
+        #return self._request("POST", "/portfolio/orders", json_body=order_data)
+        return 
 
     def cancel_order(self, order_id: str) -> dict:
         """Cancel an open order by order_id."""
@@ -181,7 +182,7 @@ if __name__ == "__main__":
         print(f"✓ Connected! Balance: {json.dumps(balance, indent=2)}")
         
         # Example: place a market buy order for 10 YES contracts on a market
-        
+        """
         order_data = {
             "ticker": "KXT20WORLDCUP-26-IND",
             "action": "buy",
@@ -191,9 +192,10 @@ if __name__ == "__main__":
             "yes_price": 1,
             "type": "limit",
         }
-
+        
         response = gateway.create_order(order_data)
         print("Order placed:", response)
+        """
         
     except Exception as e:
         print(f"✗ Connection failed: {e}")

@@ -64,7 +64,8 @@ def intra_kalshi_arbitrage(kalshi_client, kalshi_gateway, correlated_market_mapp
                     # Buy Team A yes & Buy Team B yes
                     if best_ask and correlated_best_ask:
                         combined_price = best_ask + correlated_best_ask
-                        if combined_price < 1 - profit_threshold:
+                        #print(f"Ask: {combined_price, 1.0 - profit_threshold}")
+                        if combined_price <= 1.0 - profit_threshold:
                             print(f"Intra-Kalshi Arbitrage Opportunity: Buy YES on {ticker} at {best_ask} and Buy YES on {correlated_ticker} at {correlated_best_ask} of size {min(best_ask_size, correlated_best_ask_size)} | Combined Price: {combined_price}")
                             
                             order_size = min(best_ask_size, correlated_best_ask_size)
@@ -98,7 +99,8 @@ def intra_kalshi_arbitrage(kalshi_client, kalshi_gateway, correlated_market_mapp
                         best_no_ask = round(1.0 - float(best_bid), 4)
                         best_correlated_no_ask = round(1.0 - float(correlated_best_bid), 4)
                         combined_price = best_no_ask + best_correlated_no_ask
-                        if combined_price < 1 - profit_threshold:
+                        #print(f"Bid: {combined_price, 1.0 - profit_threshold}")
+                        if combined_price <= 1.0 - profit_threshold:
                             print(f"Intra-Kalshi Arbitrage Opportunity: Buy NO on {ticker} at {best_no_ask} and Buy NO on {correlated_ticker} at {best_correlated_no_ask} of size {min(best_bid_size, correlated_best_bid_size)} | Combined Price: {combined_price}")
                             
                             order_size = min(best_bid_size, correlated_best_bid_size)
@@ -166,7 +168,7 @@ async def scan_inefficiencies(polymarket_client, kalshi_client, kalshi_gateway):
     correlated_market_mapping = get_static_mapping("CORRELATED_MARKET_MAPPING")
     while True:
         #crossed_markets(polymarket_client, kalshi_client, polymarket_kalshi_mapping)
-        intra_kalshi_arbitrage(kalshi_client, kalshi_gateway, correlated_market_mapping)
+        intra_kalshi_arbitrage(kalshi_client, kalshi_gateway, correlated_market_mapping, profit_threshold=0.01)
         await asyncio.sleep(1)
 
 async def main():
@@ -180,7 +182,7 @@ async def main():
     polymarket_client = PolymarketWebSocket(WS_URL_BASE, CHANNEL_TYPE, get_asset_ids("Polymarket"))
     kalshi_client = KalshiWebSocket(KEY_ID, PRIVATE_KEY_PATH, get_asset_ids("Kalshi"), WS_URL)
     await asyncio.gather(
-        polymarket_client.run(),
+        #polymarket_client.run(),
         kalshi_client.orderbook_websocket(),
         scan_inefficiencies(polymarket_client, kalshi_client, kalshi_gateway)
     )

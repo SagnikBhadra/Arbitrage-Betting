@@ -192,7 +192,7 @@ class KalshiWebSocket:
                         )
                 elif msg_type == "trade":
                     #{'trade_id': 'f3604e94-e840-6af3-bf21-d6e1ddd88229', 'market_ticker': 'KXNBAMVP-26-SGIL', 'yes_price': 76, 'no_price': 24, 'yes_price_dollars': '0.7600', 'no_price_dollars': '0.2400', 'count': 54, 'taker_side': 'no', 'ts': 1767668947}
-                    #print(msg_content)
+                    #print(f"Trade: {data}")
                     # Update orderbook on both BUY and SELL sides
                     self.handle_trade(msg_content)
                     
