@@ -91,6 +91,8 @@ class KalshiHTTPGateway:
         """
         headers = self._get_headers(method, path)
         url = f"{self.base_url}{path}"
+        print(f"headers: {headers}")
+        print(f"URL: {url}")
 
         response = requests.request(method, url, headers=headers, json=json_body)
 
@@ -148,10 +150,11 @@ class KalshiHTTPGateway:
         if "client_order_id" not in order_data:
             order_data["client_order_id"] = str(uuid.uuid4())
             
+        print()
         print(order_data)
 
-        #return self._request("POST", "/portfolio/orders", json_body=order_data)
-        return 
+        return self._request("POST", "/portfolio/orders", json_body=order_data)
+        #return 
 
     def cancel_order(self, order_id: str) -> dict:
         """Cancel an open order by order_id."""

@@ -15,7 +15,7 @@ def read_and_display_markets(file_path="statics/two_market_events.json"):
     total_markets = 0
     complimentary_markets = defaultdict(list)   
     namr_market = defaultdict(str)
-    for event_data in events[:50]:
+    for event_data in events[::-1][:20]:
         event = event_data.get("event", {})
         event_ticker = event.get("event_ticker", "N/A")
         title = event.get("title", "N/A")
