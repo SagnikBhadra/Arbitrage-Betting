@@ -7,7 +7,7 @@ from decimal import Decimal
 from polymarket_feed import PolymarketWebSocket
 from kalshi_feed import KalshiWebSocket
 from kalshi_http_gateway import KalshiHTTPGateway, load_private_key
-from utils import get_asset_ids
+from utils import get_asset_ids, get_maker_fees_kalshi, get_taker_fees_kalshi
 from collections import defaultdict
 
 # WebSocket endpoint for Polymarket CLOB service
@@ -109,7 +109,10 @@ def intra_kalshi_arbitrage(kalshi_client, kalshi_gateway, correlated_market_mapp
                             pass
                         else:
                             continue
-                        combined_price = float(best_ask) + float(correlated_best_ask)
+                        
+                        # Calculate cost of trade (including fees) and potential profit
+                        fees = get_taker_fees_kalshi(float(best_ask), float(best_ask_size)) + get_taker_fees_kalshi(float(correlated_best_ask), float(correlated_best_ask_size))
+                        combined_price = float(best_ask) + float(correlated_best_ask) + float(fees)
                         if combined_price <= 1.0 - profit_threshold:
                             order_size = int(min(float(best_ask_size), float(correlated_best_ask_size)))
                             
@@ -173,7 +176,8 @@ def intra_kalshi_arbitrage(kalshi_client, kalshi_gateway, correlated_market_mapp
                         
                         best_no_ask = 1.0 - float(best_bid)
                         best_correlated_no_ask = 1.0 - float(correlated_best_bid)
-                        combined_price = best_no_ask + best_correlated_no_ask
+                        fees = get_taker_fees_kalshi(float(best_bid), float(best_bid_size)) + get_taker_fees_kalshi(float(correlated_best_bid), float(correlated_best_bid_size))
+                        combined_price = best_no_ask + best_correlated_no_ask + float(fees)
                         if combined_price <= 1.0 - profit_threshold:
                             order_size = int(min(float(best_bid_size), float(correlated_best_bid_size)))
                             
@@ -181,7 +185,7 @@ def intra_kalshi_arbitrage(kalshi_client, kalshi_gateway, correlated_market_mapp
                             required_balance = (best_no_ask + best_correlated_no_ask) * order_size
                             overall_order_count += order_size
                             overall_profit += (1.0 - combined_price) * order_size / 100.0
-                                                        # Check balance before placing orders
+                            # Check balance before placing orders
                             if not check_and_update_balance(kalshi_gateway, required_balance):
                                 print(f"Insufficient balance. Required: ${required_balance:.2f}, Available: ${cached_balance:.2f}")
                                 continue
