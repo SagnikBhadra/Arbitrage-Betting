@@ -40,6 +40,7 @@ def get_taker_fees_kalshi(price, size):
     taker_fee_rate = Decimal("0.07")
     price = Decimal(str(price))
     size = Decimal(str(size))
+    #print(f"Calculating taker fees for price: {price}, size: {size}")
     fee = taker_fee_rate * size * price * (Decimal("1.0") - price)
     # Round up to 2 decimal places
     fee_ceiling = fee.quantize(Decimal("0.01"), rounding=ROUND_CEILING)

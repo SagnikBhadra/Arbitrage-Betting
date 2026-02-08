@@ -67,10 +67,11 @@ def intra_kalshi_arbitrage(kalshi_client, kalshi_gateway, correlated_market_mapp
                         order_size = min(best_ask_size, correlated_best_ask_size)
                         team_a_fee = get_taker_fees_kalshi(best_ask, order_size)
                         team_b_fee = get_taker_fees_kalshi(correlated_best_ask, order_size)
-                        combined_price = best_ask + correlated_best_ask + team_a_fee + team_b_fee
+                        fees = team_a_fee + team_b_fee
+                        combined_price = best_ask + correlated_best_ask 
                         #print(f"Ask: {combined_price, 1.0 - profit_threshold}")
                         if combined_price <= 1.0 - profit_threshold:
-                            print(f"Intra-Kalshi Arbitrage Opportunity: Buy YES on {ticker} at {best_ask} and Buy YES on {correlated_ticker} at {correlated_best_ask} of size {order_size} | Combined Price: {combined_price}")
+                            print(f"Intra-Kalshi Arbitrage Opportunity: Buy YES on {ticker} at {best_ask} and Buy YES on {correlated_ticker} at {correlated_best_ask} of size {order_size} | Combined Price: {combined_price} | Fees: {fees}")
 
                             # Buy YES on ticker
                             order_a = {
@@ -105,10 +106,11 @@ def intra_kalshi_arbitrage(kalshi_client, kalshi_gateway, correlated_market_mapp
                         
                         team_a_fee = get_taker_fees_kalshi(best_no_ask, order_size)
                         team_b_fee = get_taker_fees_kalshi(best_correlated_no_ask, order_size)
-                        combined_price = best_no_ask + best_correlated_no_ask + team_a_fee + team_b_fee
+                        fees = team_a_fee + team_b_fee
+                        combined_price = best_no_ask + best_correlated_no_ask 
                         #print(f"Bid: {combined_price, 1.0 - profit_threshold}")
                         if combined_price <= 1.0 - profit_threshold:
-                            print(f"Intra-Kalshi Arbitrage Opportunity: Buy NO on {ticker} at {best_no_ask} and Buy NO on {correlated_ticker} at {best_correlated_no_ask} of size {order_size} | Combined Price: {combined_price}")
+                            print(f"Intra-Kalshi Arbitrage Opportunity: Buy NO on {ticker} at {best_no_ask} and Buy NO on {correlated_ticker} at {best_correlated_no_ask} of size {order_size} | Combined Price: {combined_price} | Fees: {fees}")
 
                             # Buy NO on ticker
                             order_a = {
@@ -173,7 +175,7 @@ async def scan_inefficiencies(polymarket_client, kalshi_client, kalshi_gateway):
     correlated_market_mapping = get_static_mapping("CORRELATED_MARKET_MAPPING")
     while True:
         #crossed_markets(polymarket_client, kalshi_client, polymarket_kalshi_mapping)
-        intra_kalshi_arbitrage(kalshi_client, kalshi_gateway, correlated_market_mapping, profit_threshold=0.01)
+        intra_kalshi_arbitrage(kalshi_client, kalshi_gateway, correlated_market_mapping, profit_threshold=0.02)
         await asyncio.sleep(1)
 
 async def main():
