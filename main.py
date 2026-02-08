@@ -34,7 +34,12 @@ ASSET_IDS = [
 CHANNEL_TYPE = "market"  # use market for public price/book updates
 
 # Kalshi Configuration
-KEY_ID = "7edd1c5d-6c0c-4458-bb77-04854221689b"
+def load_kalshi_key_id(secrets_path: str = "kalshi_secrets.json") -> str:
+    with open(secrets_path, "r") as f:
+        data = json.load(f)
+    return data["KEY_ID"]
+
+KEY_ID = load_kalshi_key_id()
 PRIVATE_KEY_PATH = "Kalshi.key"
 MARKET_TICKER = ["KXNBAMVP-26-LDON",
                 "KXNBAMVP-26-SGIL",
