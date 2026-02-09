@@ -135,83 +135,94 @@ class KalshiWebSocket:
                 #orderbook.update_order_book(1, best_ask_price, new_size)
 
     async def orderbook_websocket(self):
-        """Connect to WebSocket and subscribe to orderbook"""
-        # Load private key
-        with open(self.private_key_path, 'rb') as f:
-            private_key = serialization.load_pem_private_key(
-                f.read(),
-                password=None
-            )
-
-        # Create WebSocket headers
-        ws_headers = self.create_headers(private_key, "GET", "/trade-api/ws/v2")
-
-        async with websockets.connect(self.ws_url, additional_headers=ws_headers) as websocket:
-            print(f"Connected! Subscribing to orderbook for {', '.join(self.market_tickers)}")
-
-            # Subscribe to orderbook
-            
-            subscribe_msg = {
-                "id": 1,
-                "cmd": "subscribe",
-                "params": {
-                    "channels": ["orderbook_delta", "trade"],
-                    "market_tickers": self.market_tickers
-                }
-            }
-            
-            await websocket.send(json.dumps(subscribe_msg))
-
-            # Process messages
-            async for message in websocket:
-                data = json.loads(message)
-                msg_type = data.get("type")
-                msg_content = data["msg"]
-
-                if msg_type == "subscribed":
-                    print(f"Subscribed: {data}")
-
-                elif msg_type == "orderbook_snapshot":
-                    #print(f"Orderbook snapshot: {data}")
-                    self.market_data.persist_orderbook_snapshot_event_kalshi(msg_content)
-                    self.handle_snapshot(msg_content)
-
-                elif msg_type == "orderbook_delta":
-                    # The client_order_id field is optional - only present when you caused the change
-                    if 'client_order_id' in data.get('data', {}):
-                        #print(f"Orderbook update (your order {data['data']['client_order_id']}): {data}")
-                        pass
-                    else:
-                        #print(f"Orderbook update: {data}")
-                        price, best_bid, best_ask = self.handle_price_change(msg_content)
-                        self.market_data.persist_orderbook_update_event_kalshi(
-                            msg_content,
-                            price=price,
-                            best_bid=best_bid,
-                            best_ask=best_ask
-                        )
-                elif msg_type == "trade":
-                    #{'trade_id': 'f3604e94-e840-6af3-bf21-d6e1ddd88229', 'market_ticker': 'KXNBAMVP-26-SGIL', 'yes_price': 76, 'no_price': 24, 'yes_price_dollars': '0.7600', 'no_price_dollars': '0.2400', 'count': 54, 'taker_side': 'no', 'ts': 1767668947}
-                    #print(f"Trade: {data}")
-                    # Update orderbook on both BUY and SELL sides
-                    self.handle_trade(msg_content)
-                    
-                    # Write trade event to file
-                    best_bid, best_ask = self.get_top_of_book(msg_content["market_ticker"])
-                    self.market_data.persist_trade_event_kalshi(
-                        msg_content,
-                        best_bid=best_bid,
-                        best_ask=best_ask
+        """Connect to WebSocket and subscribe to orderbook with auto-reconnect."""
+        while True:
+            try:
+                # Load private key
+                with open(self.private_key_path, 'rb') as f:
+                    private_key = serialization.load_pem_private_key(
+                        f.read(),
+                        password=None
                     )
+
+                # Create WebSocket headers
+                ws_headers = self.create_headers(private_key, "GET", "/trade-api/ws/v2")
+
+                async with websockets.connect(
+                    self.ws_url,
+                    additional_headers=ws_headers,
+                    ping_interval=20,
+                    ping_timeout=10,
+                    close_timeout=5,
+                ) as websocket:
+                    print(f"Connected! Subscribing to orderbook for {', '.join(self.market_tickers)}")
+
+                    # Subscribe to orderbook
+                    subscribe_msg = {
+                        "id": 1,
+                        "cmd": "subscribe",
+                        "params": {
+                            "channels": ["orderbook_delta", "trade"],
+                            "market_tickers": self.market_tickers
+                        }
+                    }
                     
-                elif msg_type == "ticker":
-                    #print(msg_content)
-                    pass
-                elif msg_type == "market_state":
-                    #print(msg_content)
-                    pass
-                elif msg_type == "error":
-                    print(f"Error: {data}")
+                    await websocket.send(json.dumps(subscribe_msg))
+
+                    # Process messages
+                    async for message in websocket:
+                        data = json.loads(message)
+                        msg_type = data.get("type")
+                        msg_content = data["msg"]
+
+                        if msg_type == "subscribed":
+                            print(f"Subscribed: {data}")
+
+                        elif msg_type == "orderbook_snapshot":
+                            self.market_data.persist_orderbook_snapshot_event_kalshi(msg_content)
+                            self.handle_snapshot(msg_content)
+
+                        elif msg_type == "orderbook_delta":
+                            if 'client_order_id' in data.get('data', {}):
+                                pass
+                            else:
+                                price, best_bid, best_ask = self.handle_price_change(msg_content)
+                                self.market_data.persist_orderbook_update_event_kalshi(
+                                    msg_content,
+                                    price=price,
+                                    best_bid=best_bid,
+                                    best_ask=best_ask
+                                )
+
+                        elif msg_type == "trade":
+                            self.handle_trade(msg_content)
+                            best_bid, best_ask = self.get_top_of_book(msg_content["market_ticker"])
+                            self.market_data.persist_trade_event_kalshi(
+                                msg_content,
+                                best_bid=best_bid,
+                                best_ask=best_ask
+                            )
+
+                        elif msg_type == "ticker":
+                            pass
+
+                        elif msg_type == "market_state":
+                            pass
+
+                        elif msg_type == "error":
+                            print(f"Error: {data}")
+
+            except websockets.exceptions.ConnectionClosedError as e:
+                print(f"WebSocket connection closed: {e}")
+                print("Reconnecting in 5 seconds...")
+                await asyncio.sleep(5)
+            except websockets.exceptions.ConnectionClosedOK:
+                print("WebSocket connection closed normally")
+                break
+            except Exception as e:
+                print(f"WebSocket error: {e}")
+                print("Reconnecting in 5 seconds...")
+                await asyncio.sleep(5)
                     
     def get_best_bid(self, market_ticker):
         orderbook = self.orderbooks.get(market_ticker, None)
