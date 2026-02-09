@@ -152,7 +152,7 @@ class KalshiHTTPGateway:
             
 
 
-        #return self._request("POST", "/portfolio/orders", json_body=order_data)
+        return self._request("POST", "/portfolio/orders", json_body=order_data)
         #return 
 
     def cancel_order(self, order_id: str) -> dict:

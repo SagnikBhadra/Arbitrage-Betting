@@ -276,29 +276,53 @@ class OrderbookSnapshotCollector:
             self.save_snapshot_to_csv(snapshot)
     
     async def websocket_loop(self):
-        """Connect to WebSocket and process messages."""
-        private_key = load_private_key(self.private_key_path)
-        headers = self.create_headers(private_key, "GET", "/trade-api/ws/v2")
-        
-        async with websockets.connect(WS_URL, additional_headers=headers) as websocket:
-            print(f"Connected to Kalshi WebSocket")
-            print(f"Subscribing to orderbooks for: {', '.join(self.tickers)}")
-            
-            # Subscribe to orderbook
-            subscribe_msg = {
-                "id": 1,
-                "cmd": "subscribe",
-                "params": {
-                    "channels": ["orderbook_delta"],
-                    "market_tickers": self.tickers,
-                },
-            }
-            await websocket.send(json.dumps(subscribe_msg))
-            
-            # Process messages
-            async for message in websocket:
-                data = json.loads(message)
-                self.handle_message(data)
+        """Connect to WebSocket and process messages with auto-reconnect."""
+        while self.running:
+            try:
+                private_key = load_private_key(self.private_key_path)
+                headers = self.create_headers(private_key, "GET", "/trade-api/ws/v2")
+                
+                async with websockets.connect(
+                    WS_URL,
+                    additional_headers=headers,
+                    ping_interval=20,  # Send ping every 20 seconds
+                    ping_timeout=10,   # Wait 10 seconds for pong
+                    close_timeout=5,
+                ) as websocket:
+                    print(f"Connected to Kalshi WebSocket")
+                    print(f"Subscribing to orderbooks for: {', '.join(self.tickers)}")
+                    
+                    # Subscribe to orderbook
+                    subscribe_msg = {
+                        "id": 1,
+                        "cmd": "subscribe",
+                        "params": {
+                            "channels": ["orderbook_delta"],
+                            "market_tickers": self.tickers,
+                        },
+                    }
+                    await websocket.send(json.dumps(subscribe_msg))
+                    
+                    # Process messages
+                    async for message in websocket:
+                        if not self.running:
+                            break
+                        data = json.loads(message)
+                        self.handle_message(data)
+                        
+            except websockets.exceptions.ConnectionClosedError as e:
+                print(f"WebSocket connection closed: {e}")
+                if self.running:
+                    print("Reconnecting in 5 seconds...")
+                    await asyncio.sleep(5)
+            except websockets.exceptions.ConnectionClosedOK:
+                print("WebSocket connection closed normally")
+                break
+            except Exception as e:
+                print(f"WebSocket error: {e}")
+                if self.running:
+                    print("Reconnecting in 5 seconds...")
+                    await asyncio.sleep(5)
     
     async def run(self):
         """Run the snapshot collector."""
@@ -316,6 +340,9 @@ class OrderbookSnapshotCollector:
             )
         except KeyboardInterrupt:
             print("\nShutting down...")
+            self.running = False
+        except asyncio.CancelledError:
+            print("\nTask cancelled, shutting down...")
             self.running = False
         except Exception as e:
             print(f"Error: {e}")
