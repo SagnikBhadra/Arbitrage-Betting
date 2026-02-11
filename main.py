@@ -113,6 +113,7 @@ def intra_kalshi_arbitrage(kalshi_client, kalshi_gateway, correlated_market_mapp
                         # Calculate cost of trade (including fees) and potential profit
                         fees = get_taker_fees_kalshi(float(best_ask), float(best_ask_size)) + get_taker_fees_kalshi(float(correlated_best_ask), float(correlated_best_ask_size))
                         combined_price = float(best_ask) + float(correlated_best_ask) + float(fees)
+                        profit_threshold = float(-fees)
                         if combined_price <= 1.0 - profit_threshold:
                             order_size = int(min(float(best_ask_size), float(correlated_best_ask_size)))
                             
@@ -178,6 +179,7 @@ def intra_kalshi_arbitrage(kalshi_client, kalshi_gateway, correlated_market_mapp
                         best_correlated_no_ask = 1.0 - float(correlated_best_bid)
                         fees = get_taker_fees_kalshi(float(best_bid), float(best_bid_size)) + get_taker_fees_kalshi(float(correlated_best_bid), float(correlated_best_bid_size))
                         combined_price = best_no_ask + best_correlated_no_ask + float(fees)
+                        profit_threshold = float(-fees)
                         if combined_price <= 1.0 - profit_threshold:
                             order_size = int(min(float(best_bid_size), float(correlated_best_bid_size)))
                             

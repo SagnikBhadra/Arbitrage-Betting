@@ -16,3 +16,6 @@ __pycache__/
 Kalshi.key
 Kalshi.txt
 kalshi_secrets.json
+
+#snapshots
+snapshots/
