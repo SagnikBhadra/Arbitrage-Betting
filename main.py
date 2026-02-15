@@ -113,14 +113,14 @@ def intra_kalshi_arbitrage(kalshi_client, kalshi_gateway, correlated_market_mapp
                         # Calculate cost of trade (including fees) and potential profit
                         fees = get_taker_fees_kalshi(float(best_ask), float(best_ask_size)) + get_taker_fees_kalshi(float(correlated_best_ask), float(correlated_best_ask_size))
                         combined_price = float(best_ask) + float(correlated_best_ask) + float(fees)
-                        profit_threshold = float(-fees)
+
                         if combined_price <= 1.0 - profit_threshold:
                             order_size = int(min(float(best_ask_size), float(correlated_best_ask_size)))
                             
                             # Calculate required balance (cost of both orders)
                             required_balance = (float(best_ask) + float(correlated_best_ask)) * order_size
                             overall_order_count += order_size
-                            overall_profit += (1.0 - combined_price) * order_size / 100.0
+                            overall_profit += max((1.0 - combined_price) * order_size / 100.0 , 0)
                             
                             # Check balance before placing orders
                             if not check_and_update_balance(kalshi_gateway, required_balance):
@@ -179,14 +179,13 @@ def intra_kalshi_arbitrage(kalshi_client, kalshi_gateway, correlated_market_mapp
                         best_correlated_no_ask = 1.0 - float(correlated_best_bid)
                         fees = get_taker_fees_kalshi(float(best_bid), float(best_bid_size)) + get_taker_fees_kalshi(float(correlated_best_bid), float(correlated_best_bid_size))
                         combined_price = best_no_ask + best_correlated_no_ask + float(fees)
-                        profit_threshold = float(-fees)
                         if combined_price <= 1.0 - profit_threshold:
                             order_size = int(min(float(best_bid_size), float(correlated_best_bid_size)))
                             
                             # Calculate required balance (cost of both orders)
                             required_balance = (best_no_ask + best_correlated_no_ask) * order_size
                             overall_order_count += order_size
-                            overall_profit += (1.0 - combined_price) * order_size / 100.0
+                            overall_profit += max((1.0 - combined_price) * order_size / 100.0   , 0)
                             # Check balance before placing orders
                             if not check_and_update_balance(kalshi_gateway, required_balance):
                                 print(f"Insufficient balance. Required: ${required_balance:.2f}, Available: ${cached_balance:.2f}")
