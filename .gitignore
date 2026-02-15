@@ -17,5 +17,8 @@ Kalshi.key
 Kalshi.txt
 kalshi_secrets.json
 
+# Polymarket Private Files
+Polymarket.key
+
 #snapshots
 snapshots/

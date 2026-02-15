@@ -62,9 +62,29 @@ class OrderBook:
             size = float(level["size"])
             self.update_order_book(side=1, price=price, size=size)
             
+    def load_polymarket_us_snapshot(self, asset_id, snapshot):
+        self.bids.clear()
+        self.asks.clear()
+        
+        # BIDS
+        for level in snapshot.get("bids", []):
+            price = Decimal(1.0) - Decimal(level["px"]["value"]) if asset_id.endswith("-inverse") else Decimal(level["px"]["value"])
+            size = Decimal(level["qty"])
+            side = 1 if asset_id.endswith("-inverse") else 0
+            #print(f"Price: {price}, Size: {size}, Side: {'ASK' if side == 1 else 'BID'}")
+            self.update_order_book(side=side, price=price, size=size)
+
+        # ASKS (called "offers" in Polymarket)
+        for level in snapshot.get("offers", []):
+            price = Decimal(1.0) - Decimal(level["px"]["value"]) if asset_id.endswith("-inverse") else Decimal(level["px"]["value"])
+            size = Decimal(level["qty"])
+            side = 0 if asset_id.endswith("-inverse") else 1
+            #print(f"Price: {price}, Size: {size}, Side: {'BID' if side == 0 else 'ASK'}")
+            self.update_order_book(side=side, price=price, size=size)
+
     def load_kalshi_snapshot(self, snapshot):
         asset_id = snapshot["market_ticker"]
-        
+
         # Update bids
         for price, size in snapshot.get("yes_dollars", []):
             self.update_order_book(side=0, price=float(price), size=float(size))
