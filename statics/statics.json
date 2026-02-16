@@ -8,9 +8,53 @@
             "89110596788673536475065853727140488937259064164063660201050220270400840228269": "Luka_YES",
             "101506943049053276934626391886226570064171431948041761918666910024462041911155": "Luka_NO"
         },
-        "Kalshi": {"KXT20MATCH-26FEB15PAKIND-IND": "KXT20MATCH-26FEB15PAKIND-IND", "KXT20MATCH-26FEB15PAKIND-PAK": "KXT20MATCH-26FEB15PAKIND-PAK"}
+        "Kalshi": {
+            "KXT20MATCH-26FEB15PAKIND-IND": "KXT20MATCH-26FEB15PAKIND-IND",
+            "KXT20MATCH-26FEB15PAKIND-PAK": "KXT20MATCH-26FEB15PAKIND-PAK"
+        },
+        "Polymarket_US": {
+            "aec-cbb-utsa-charlt-2026-02-15": "aec-cbb-utsa-charlt-2026-02-15",
+            "aec-cbb-utah-cin-2026-02-15": "aec-cbb-utah-cin-2026-02-15",
+            "aec-cbb-mary-rutger-2026-02-15": "aec-cbb-mary-rutger-2026-02-15",
+            "aec-cbb-manh-cans-2026-02-15": "aec-cbb-manh-cans-2026-02-15",
+            "aec-cbb-yngst-det-2026-02-15": "aec-cbb-yngst-det-2026-02-15",
+            "aec-cbb-ind-ill-2026-02-15": "aec-cbb-ind-ill-2026-02-15",
+            "aec-cbb-holy-loymd-2026-02-15": "aec-cbb-holy-loymd-2026-02-15",
+            "aec-cbb-den-neom-2026-02-15": "aec-cbb-den-neom-2026-02-15",
+            "aec-cbb-wrght-clvst-2026-02-15": "aec-cbb-wrght-clvst-2026-02-15",
+            "aec-cbb-sfl-flatl-2026-02-15": "aec-cbb-sfl-flatl-2026-02-15",
+            "aec-cbb-iupui-ipfw-2026-02-15": "aec-cbb-iupui-ipfw-2026-02-15",
+            "aec-cbb-siena-marist-2026-02-15": "aec-cbb-siena-marist-2026-02-15",
+            "aec-cbb-iona-niagra-2026-02-15": "aec-cbb-iona-niagra-2026-02-15",
+            "aec-cbb-merri-quin-2026-02-15": "aec-cbb-merri-quin-2026-02-15",
+            "aec-cbb-oak-robms-2026-02-15": "aec-cbb-oak-robms-2026-02-15",
+            "aec-cbb-rider-sacred-2026-02-15": "aec-cbb-rider-sacred-2026-02-15",
+            "aec-cbb-bradly-sill-2026-02-15": "aec-cbb-bradly-sill-2026-02-15",
+            "aec-cbb-fair-stpete-2026-02-15": "aec-cbb-fair-stpete-2026-02-15",
+            "aec-cbb-ntx-templ-2026-02-15": "aec-cbb-ntx-templ-2026-02-15",
+            "aec-cbb-tulane-uab-2026-02-15": "aec-cbb-tulane-uab-2026-02-15",
+            "aec-cbb-indst-valp-2026-02-15": "aec-cbb-indst-valp-2026-02-15",
+            "aec-cbb-illst-illchi-2026-02-15": "aec-cbb-illst-illchi-2026-02-15",
+            "aec-cbb-drake-niowa-2026-02-15": "aec-cbb-drake-niowa-2026-02-15",
+            "aec-cbb-gb-wbd-2026-02-15": "aec-cbb-gb-wbd-2026-02-15",
+            "aec-cbb-david-day-2026-02-15": "aec-cbb-david-day-2026-02-15",
+            "aec-cbb-ekent-nal-2026-02-15": "aec-cbb-ekent-nal-2026-02-15",
+            "aec-cbb-char-camp-2026-02-15": "aec-cbb-char-camp-2026-02-15",
+            "aec-cbb-seton-butl-2026-02-15": "aec-cbb-seton-butl-2026-02-15",
+            "aec-cbb-belm-murst-2026-02-15": "aec-cbb-belm-murst-2026-02-15",
+            "aec-cbb-sf-sd-2026-02-15": "aec-cbb-sf-sd-2026-02-15",
+            "aec-cbb-tows-monm-2026-02-15": "aec-cbb-tows-monm-2026-02-15",
+            "aec-cbb-oregst-sea-2026-02-15": "aec-cbb-oregst-sea-2026-02-15"
+        }
     },
-    "CORRELATED_MARKET_MAPPING": {"KXT20MATCH-26FEB15PAKIND-IND": ["KXT20MATCH-26FEB15PAKIND-PAK"], "KXT20MATCH-26FEB15PAKIND-PAK": ["KXT20MATCH-26FEB15PAKIND-IND"]},
+    "CORRELATED_MARKET_MAPPING": {
+        "KXT20MATCH-26FEB15PAKIND-IND": [
+            "KXT20MATCH-26FEB15PAKIND-PAK"
+        ],
+        "KXT20MATCH-26FEB15PAKIND-PAK": [
+            "KXT20MATCH-26FEB15PAKIND-IND"
+        ]
+    },
     "POLYMARKET_KALSHI_MAPPING": {},
     "SIDE_MAPPING": {
         "BUY": 0,

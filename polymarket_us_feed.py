@@ -40,7 +40,7 @@ class PolymarketUSWebSocket:
         self.ws = None
         self.connected = asyncio.Event()
         
-        #
+    #
     # Authentication
     #
 
@@ -215,7 +215,7 @@ if __name__ == "__main__":
     polymarket_client = PolymarketUSWebSocket(
         WS_URL_BASE,
         CHANNEL_TYPE,
-        ["aec-cbb-ohiost-vir-2026-02-14", "aec-cbb-tx-missr-2026-02-14"],
+        ["aec-cbb-oregst-sea-2026-02-15"],
         api_key_id,
         key_file_path
     )
