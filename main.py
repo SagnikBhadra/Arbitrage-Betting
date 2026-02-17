@@ -4,7 +4,8 @@ import websocket
 import uuid
 from decimal import Decimal
 
-from polymarket_feed import PolymarketWebSocket
+from polymarket_us_feed import PolymarketUSWebSocket
+from polymarket_us_http_gateway import PolymarketUSHTTPGateway
 from kalshi_feed import KalshiWebSocket
 from kalshi_http_gateway import KalshiHTTPGateway, load_private_key
 from utils import get_asset_ids, get_maker_fees_kalshi, get_taker_fees_kalshi
@@ -248,7 +249,9 @@ def wide_spreads():
     pass
 
 async def scan_inefficiencies(polymarket_client, kalshi_client, kalshi_gateway):
+    # Cross exchange mapping between Polymarket and Kalshi markets
     polymarket_kalshi_mapping = get_static_mapping("POLYMARKET_KALSHI_MAPPING")
+    # Intra Kalshi correlated markets mapping
     correlated_market_mapping = get_static_mapping("CORRELATED_MARKET_MAPPING")
     while True:
         #crossed_markets(polymarket_client, kalshi_client, polymarket_kalshi_mapping)
@@ -263,12 +266,12 @@ async def main():
     private_key_pem = load_private_key(PRIVATE_KEY_PATH)
     kalshi_gateway = KalshiHTTPGateway(KEY_ID, private_key_pem)
 
-    polymarket_client = PolymarketWebSocket(WS_URL_BASE, CHANNEL_TYPE, get_asset_ids("Polymarket"))
+    polymarket_us_client = PolymarketUSWebSocket(WS_URL_BASE, CHANNEL_TYPE, get_asset_ids("Polymarket_US"))
     kalshi_client = KalshiWebSocket(KEY_ID, PRIVATE_KEY_PATH, get_asset_ids("Kalshi"), WS_URL)
     await asyncio.gather(
         #polymarket_client.run(),
         kalshi_client.orderbook_websocket(),
-        scan_inefficiencies(polymarket_client, kalshi_client, kalshi_gateway)
+        scan_inefficiencies(polymarket_us_client, kalshi_client, kalshi_gateway)
     )
 
 if __name__ == "__main__":

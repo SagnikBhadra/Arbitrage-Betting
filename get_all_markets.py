@@ -71,7 +71,7 @@ if __name__ == "__main__":
         data = json.load(f)
     
     correlated_market_mapping = {}
-    kalshi_tickers = fetch_all_market_tickers("KXNBAGAME")
+    kalshi_tickers = fetch_all_market_tickers("KXNCAAMBGAME")
     tickers = list(kalshi_tickers.keys())
     for i in range(0, len(tickers), 2):
         if i + 1 < len(tickers):
