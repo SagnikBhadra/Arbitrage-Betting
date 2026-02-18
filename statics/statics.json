@@ -9,35 +9,617 @@
             "101506943049053276934626391886226570064171431948041761918666910024462041911155": "Luka_NO"
         },
         "Kalshi": {
+            "KXNCAAMBGAME-26FEB20INDPUR-PUR": "PUR_26FEB20_WIN",
+            "KXNCAAMBGAME-26FEB20INDPUR-IND": "IND_26FEB20_WIN",
+            "KXNCAAMBGAME-26FEB20BGSUMOH-MOH": "MOH_26FEB20_WIN",
+            "KXNCAAMBGAME-26FEB20BGSUMOH-BGSU": "BGSU_26FEB20_WIN",
+            "KXNCAAMBGAME-26FEB20SIEMRMK-SIE": "SIE_26FEB20_WIN",
+            "KXNCAAMBGAME-26FEB20SIEMRMK-MRMK": "MRMK_26FEB20_WIN",
+            "KXNCAAMBGAME-26FEB20SPCIONA-SPC": "SPC_26FEB20_WIN",
+            "KXNCAAMBGAME-26FEB20SPCIONA-IONA": "IONA_26FEB20_WIN",
+            "KXNCAAMBGAME-26FEB20SHUFAIR-SHU": "SHU_26FEB20_WIN",
+            "KXNCAAMBGAME-26FEB20SHUFAIR-FAIR": "FAIR_26FEB20_WIN",
+            "KXNCAAMBGAME-26FEB20GBOAK-OAK": "OAK_26FEB20_WIN",
+            "KXNCAAMBGAME-26FEB20GBOAK-GB": "GB_26FEB20_WIN",
+            "KXNCAAMBGAME-26FEB20VCUSLU-VCU": "VCU_26FEB20_WIN",
+            "KXNCAAMBGAME-26FEB20VCUSLU-SLU": "SLU_26FEB20_WIN",
+            "KXNCAAMBGAME-26FEB20CANRID-RID": "RID_26FEB20_WIN",
+            "KXNCAAMBGAME-26FEB20CANRID-CAN": "CAN_26FEB20_WIN",
+            "KXNCAAMBGAME-26FEB20NIAGMSM-NIAG": "NIAG_26FEB20_WIN",
+            "KXNCAAMBGAME-26FEB20NIAGMSM-MSM": "MSM_26FEB20_WIN",
+            "KXNCAAMBGAME-26FEB20MRSTMAN-MRST": "MRST_26FEB20_WIN",
+            "KXNCAAMBGAME-26FEB20MRSTMAN-MAN": "MAN_26FEB20_WIN",
+            "KXNCAAMBGAME-26FEB20MILWDET-MILW": "MILW_26FEB20_WIN",
+            "KXNCAAMBGAME-26FEB20MILWDET-DET": "DET_26FEB20_WIN",
+            "KXNCAAMBGAME-26FEB20PRINBRWN-PRIN": "PRIN_26FEB20_WIN",
+            "KXNCAAMBGAME-26FEB20PRINBRWN-BRWN": "BRWN_26FEB20_WIN",
+            "KXNCAAMBGAME-26FEB20AKRBALL-BALL": "BALL_26FEB20_WIN",
+            "KXNCAAMBGAME-26FEB20AKRBALL-AKR": "AKR_26FEB20_WIN",
+            "KXNCAAMBGAME-26FEB20CPHAW-HAW": "HAW_26FEB20_WIN",
+            "KXNCAAMBGAME-26FEB20CPHAW-CP": "CP_26FEB20_WIN",
+            "KXNCAAMBGAME-26FEB19UCILBSU-UCI": "UCI_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19UCILBSU-LBSU": "LBSU_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19CSBUCRV-UCRV": "UCRV_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19CSBUCRV-CSB": "CSB_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19EWUSAC-SAC": "SAC_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19EWUSAC-EWU": "EWU_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19UCDCSF-UCD": "UCD_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19UCDCSF-CSF": "CSF_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19MONTIDST-MONT": "MONT_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19MONTIDST-IDST": "IDST_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19CSNUCSB-UCSB": "UCSB_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19CSNUCSB-CSN": "CSN_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19IDHOPRST-PRST": "PRST_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19IDHOPRST-IDHO": "IDHO_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19TULNUNT-UNT": "UNT_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19TULNUNT-TULN": "TULN_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19SDAKDEN-SDAK": "SDAK_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19SDAKDEN-DEN": "DEN_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19MTSTWEB-WEB": "WEB_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19MTSTWEB-MTST": "MTST_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19USIWIU-WIU": "WIU_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19USIWIU-USI": "USI_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19LINWTNST-TNST": "TNST_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19LINWTNST-LINW": "LINW_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19PVMVSU-PV": "PV_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19PVMVSU-MVSU": "MVSU_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19TXSOARPB-TXSO": "TXSO_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19TXSOARPB-ARPB": "ARPB_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19MOREEIU-MORE": "MORE_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19MOREEIU-EIU": "EIU_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19SIUETNTC-TNTC": "TNTC_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19SIUETNTC-SIUE": "SIUE_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19AAMUFAMU-FAMU": "FAMU_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19AAMUFAMU-AAMU": "AAMU_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19UMKCUND-UND": "UND_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19UMKCUND-UMKC": "UMKC_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19SUUTARL-TARL": "TARL_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19SUUTARL-SUU": "SUU_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19HAMPHOF-HOF": "HOF_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19HAMPHOF-HAMP": "HAMP_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19ARSTULL-ULL": "ULL_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19ARSTULL-ARST": "ARST_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19UTMUALR-UTM": "UTM_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19UTMUALR-UALR": "UALR_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19TXSTUSA-USA": "USA_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19TXSTUSA-TXST": "TXST_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19GASOGAST-GAST": "GAST_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19GASOGAST-GASO": "GASO_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19CBUUVU-UVU": "UVU_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19CBUUVU-CBU": "CBU_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19CARKSTET-STET": "STET_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19CARKSTET-CARK": "CARK_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19UTUUTA-UTU": "UTU_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19UTUUTA-UTA": "UTA_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19DREXNE-NE": "NE_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19DREXNE-DREX": "DREX_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19SAMCIT-SAM": "SAM_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19SAMCIT-CIT": "CIT_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19MONMUNCW-UNCW": "UNCW_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19MONMUNCW-MONM": "MONM_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19ALBYNJIT-NJIT": "NJIT_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19ALBYNJIT-ALBY": "ALBY_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19UNCAHP-UNCA": "UNCA_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19UNCAHP-HP": "HP_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19LMCCCSU-LMC": "LMC_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19LMCCCSU-CCSU": "CCSU_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19CHATMER-MER": "MER_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19CHATMER-CHAT": "CHAT_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19WMCAMP-WM": "WM_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19WMCAMP-CAMP": "CAMP_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19PEAYUNF-UNF": "UNF_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19PEAYUNF-PEAY": "PEAY_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19LIUSFPA-SFPA": "SFPA_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19LIUSFPA-LIU": "LIU_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19MEMUSF-USF": "USF_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19MEMUSF-MEM": "MEM_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19WEBBRAD-WEBB": "WEBB_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19WEBBRAD-RAD": "RAD_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19ALSTCOOK-COOK": "COOK_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19ALSTCOOK-ALST": "ALST_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19FDUCHS-FDU": "FDU_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19FDUCHS-CHS": "CHS_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19WAGMHU-WAG": "WAG_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19WAGMHU-MHU": "MHU_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19STNHNHC-STNH": "STNH_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19STNHNHC-NHC": "NHC_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19COFCNCAT-NCAT": "NCAT_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19COFCNCAT-COFC": "COFC_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19LONGPRE-PRE": "PRE_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19LONGPRE-LONG": "LONG_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19IUINWRST-WRST": "WRST_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19IUINWRST-IUIN": "IUIN_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19SCUSWIN-WIN": "WIN_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19SCUSWIN-SCUS": "SCUS_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19MRSHAPP-MRSH": "MRSH_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19MRSHAPP-APP": "APP_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19UNHMASSL-UNH": "UNH_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19UNHMASSL-MASSL": "MASSL_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19UVMUMBC-UVM": "UVM_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19UVMUMBC-UMBC": "UMBC_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19FIULIB-LIB": "LIB_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19FIULIB-FIU": "FIU_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19BINGBRY-BRY": "BRY_26FEB19_WIN",
+            "KXNCAAMBGAME-26FEB19BINGBRY-BING": "BING_26FEB19_WIN",
             "KXNCAAMBGAME-26FEB18GONZSF-SF": "SF_26FEB18_WIN",
             "KXNCAAMBGAME-26FEB18GONZSF-GONZ": "GONZ_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18CSUUNLV-UNLV": "UNLV_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18CSUUNLV-CSU": "CSU_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18BSUUSU-USU": "USU_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18BSUUSU-BSU": "BSU_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18ILLUSC-USC": "USC_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18ILLUSC-ILL": "ILL_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18PEPPPORT-PORT": "PORT_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18PEPPPORT-PEPP": "PEPP_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18PACWSU-WSU": "WSU_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18PACWSU-PAC": "PAC_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18SJUMARQ-SJU": "SJU_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18SJUMARQ-MARQ": "MARQ_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18VANMIZZ-VAN": "VAN_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18VANMIZZ-MIZZ": "MIZZ_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18AUBMSST-MSST": "MSST_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18AUBMSST-AUB": "AUB_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18SMCSEA-SMC": "SMC_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18SMCSEA-SEA": "SEA_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18BYUARIZ-BYU": "BYU_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18BYUARIZ-ARIZ": "ARIZ_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18UVAGT-UVA": "UVA_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18UVAGT-GT": "GT_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18KUOKST-OKST": "OKST_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18KUOKST-KU": "KU_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18MURRILST-MURR": "MURR_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18MURRILST-ILST": "ILST_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18UTAHWVU-WVU": "WVU_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18UTAHWVU-UTAH": "UTAH_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18CHARTLSA-TLSA": "TLSA_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18CHARTLSA-CHAR": "CHAR_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18KENNMOSU-MOSU": "MOSU_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18KENNMOSU-KENN": "KENN_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18NDSUSDST-SDST": "SDST_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18NDSUSDST-NDSU": "NDSU_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18ORUNEOM-ORU": "ORU_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18ORUNEOM-NEOM": "NEOM_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18UICEVAN-UIC": "UIC_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18UICEVAN-EVAN": "EVAN_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18DEPHALL-HALL": "HALL_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18DEPHALL-DEP": "DEP_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18FAUUTSA-UTSA": "UTSA_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18FAUUTSA-FAU": "FAU_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18NCCUSCST-SCST": "SCST_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18NCCUSCST-NCCU": "NCCU_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18MDNW-NW": "NW_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18MDNW-MD": "MD_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18LIPBELL-LIP": "LIP_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18LIPBELL-BELL": "BELL_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18JVSTLT-LT": "LT_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18JVSTLT-JVST": "JVST_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18SIUDRKE-SIU": "SIU_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18SIUDRKE-DRKE": "DRKE_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18TROYULM-ULM": "ULM_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18TROYULM-TROY": "TROY_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18MTUSHSU-SHSU": "SHSU_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18MTUSHSU-MTU": "MTU_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18LEHNAVY-NAVY": "NAVY_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18LEHNAVY-LEH": "LEH_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18BRADVALP-VALP": "VALP_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18BRADVALP-BRAD": "BRAD_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18UNCGWCU-WCU": "WCU_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18UNCGWCU-UNCG": "UNCG_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18CLEMWAKE-WAKE": "WAKE_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18CLEMWAKE-CLEM": "CLEM_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18ARKALA-ARK": "ARK_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18ARKALA-ALA": "ALA_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18UABTEM-UAB": "UAB_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18UABTEM-TEM": "TEM_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18QUCUNA-UNA": "UNA_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18QUCUNA-QUC": "QUC_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18CREICONN-CREI": "CREI_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18CREICONN-CONN": "CONN_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18JACFGCU-JAC": "JAC_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18JACFGCU-FGCU": "FGCU_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18JMUCCAR-JMU": "JMU_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18JMUCCAR-CCAR": "CCAR_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18JOESSBON-SBON": "SBON_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18JOESSBON-JOES": "JOES_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18DAYGMU-GMU": "GMU_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18DAYGMU-DAY": "DAY_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18UWGAEKY-UWGA": "UWGA_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18UWGAEKY-EKY": "EKY_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18WKUDEL-WKU": "WKU_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18WKUDEL-DEL": "DEL_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18OKLATENN-TENN": "TENN_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18OKLATENN-OKLA": "OKLA_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18ARMYLMD-LMD": "LMD_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18ARMYLMD-ARMY": "ARMY_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18UNIINST-UNI": "UNI_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18UNIINST-INST": "INST_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18MISSTXAM-TXAM": "TXAM_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18MISSTXAM-MISS": "MISS_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18AMERBUCK-BUCK": "BUCK_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18AMERBUCK-AMER": "AMER_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18WICHECU-WICH": "WICH_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18WICHECU-ECU": "ECU_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18LCHIFOR-LCHI": "LCHI_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18LCHIFOR-FOR": "FOR_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18PFWNKU-PFW": "PFW_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18PFWNKU-NKU": "NKU_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18LASDUQ-LAS": "LAS_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18LASDUQ-DUQ": "DUQ_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18RICHDAV-RICH": "RICH_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18RICHDAV-DAV": "DAV_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18CLEVYSU-YSU": "YSU_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18CLEVYSU-CLEV": "CLEV_26FEB18_WIN",
             "KXNCAAMBGAME-26FEB18BUTGTWN-GTWN": "GTWN_26FEB18_WIN",
             "KXNCAAMBGAME-26FEB18BUTGTWN-BUT": "BUT_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18ETSUFUR-FUR": "FUR_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18ETSUFUR-ETSU": "ETSU_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18RUTGPSU-RUTG": "RUTG_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18RUTGPSU-PSU": "PSU_26FEB18_WIN",
             "KXNCAAMBGAME-26FEB18LAFHC-LAF": "LAF_26FEB18_WIN",
-            "KXNCAAMBGAME-26FEB18LAFHC-HC": "HC_26FEB18_WIN"
+            "KXNCAAMBGAME-26FEB18LAFHC-HC": "HC_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18VMIWOF-WOF": "WOF_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB18VMIWOF-VMI": "VMI_26FEB18_WIN",
+            "KXNCAAMBGAME-26FEB14MORGSCST-SCST": "SCST_26FEB14_WIN",
+            "KXNCAAMBGAME-26FEB14MORGSCST-MORG": "MORG_26FEB14_WIN"
         },
         "Polymarket_US": {
             "aec-cbb-lafay-holy-2026-02-18": "aec-cbb-lafay-holy-2026-02-18",
+            "aec-cbb-rutger-pennst-2026-02-18": "aec-cbb-rutger-pennst-2026-02-18",
+            "aec-cbb-vamil-woff-2026-02-18": "aec-cbb-vamil-woff-2026-02-18",
+            "aec-cbb-etnst-furman-2026-02-18": "aec-cbb-etnst-furman-2026-02-18",
             "aec-cbb-butl-george-2026-02-18": "aec-cbb-butl-george-2026-02-18",
-            "aec-cbb-gnzg-sf-2026-02-18": "aec-cbb-gnzg-sf-2026-02-18"
+            "aec-cbb-ark-ala-2026-02-18": "aec-cbb-ark-ala-2026-02-18",
+            "aec-cbb-wkent-del-2026-02-18": "aec-cbb-wkent-del-2026-02-18",
+            "aec-cbb-lasal-duq-2026-02-18": "aec-cbb-lasal-duq-2026-02-18",
+            "aec-cbb-clvst-yngst-2026-02-18": "aec-cbb-clvst-yngst-2026-02-18",
+            "aec-cbb-jmad-coast-2026-02-18": "aec-cbb-jmad-coast-2026-02-18",
+            "aec-cbb-uwg-ekent-2026-02-18": "aec-cbb-uwg-ekent-2026-02-18",
+            "aec-cbb-loych-fordm-2026-02-18": "aec-cbb-loych-fordm-2026-02-18",
+            "aec-cbb-amercn-buck-2026-02-18": "aec-cbb-amercn-buck-2026-02-18",
+            "aec-cbb-day-gmsn-2026-02-18": "aec-cbb-day-gmsn-2026-02-18",
+            "aec-cbb-queen-nal-2026-02-18": "aec-cbb-queen-nal-2026-02-18",
+            "aec-cbb-rich-david-2026-02-18": "aec-cbb-rich-david-2026-02-18",
+            "aec-cbb-wichst-ecar-2026-02-18": "aec-cbb-wichst-ecar-2026-02-18",
+            "aec-cbb-miss-txam-2026-02-18": "aec-cbb-miss-txam-2026-02-18",
+            "aec-cbb-stjoe-stbon-2026-02-18": "aec-cbb-stjoe-stbon-2026-02-18",
+            "aec-cbb-jax-flgc-2026-02-18": "aec-cbb-jax-flgc-2026-02-18",
+            "aec-cbb-niowa-indst-2026-02-18": "aec-cbb-niowa-indst-2026-02-18",
+            "aec-cbb-clmsn-wake-2026-02-18": "aec-cbb-clmsn-wake-2026-02-18",
+            "aec-cbb-lehi-navy-2026-02-18": "aec-cbb-lehi-navy-2026-02-18",
+            "aec-cbb-ncg-wcar-2026-02-18": "aec-cbb-ncg-wcar-2026-02-18",
+            "aec-cbb-army-loymd-2026-02-18": "aec-cbb-army-loymd-2026-02-18",
+            "aec-cbb-okl-tenn-2026-02-18": "aec-cbb-okl-tenn-2026-02-18",
+            "aec-cbb-creigh-uconn-2026-02-18": "aec-cbb-creigh-uconn-2026-02-18",
+            "aec-cbb-bradly-valp-2026-02-18": "aec-cbb-bradly-valp-2026-02-18",
+            "aec-cbb-ipfw-nkent-2026-02-18": "aec-cbb-ipfw-nkent-2026-02-18",
+            "aec-cbb-uab-templ-2026-02-18": "aec-cbb-uab-templ-2026-02-18",
+            "aec-cbb-sill-drake-2026-02-18": "aec-cbb-sill-drake-2026-02-18",
+            "aec-cbb-mtnst-smho-2026-02-18": "aec-cbb-mtnst-smho-2026-02-18",
+            "aec-cbb-jaxst-loutch-2026-02-18": "aec-cbb-jaxst-loutch-2026-02-18",
+            "aec-cbb-illchi-evans-2026-02-18": "aec-cbb-illchi-evans-2026-02-18",
+            "aec-cbb-oral-neom-2026-02-18": "aec-cbb-oral-neom-2026-02-18",
+            "aec-cbb-charlt-tulsa-2026-02-18": "aec-cbb-charlt-tulsa-2026-02-18",
+            "aec-cbb-ncc-scarst-2026-02-18": "aec-cbb-ncc-scarst-2026-02-18",
+            "aec-cbb-flatl-utsa-2026-02-18": "aec-cbb-flatl-utsa-2026-02-18",
+            "aec-cbb-mary-nw-2026-02-18": "aec-cbb-mary-nw-2026-02-18",
+            "aec-cbb-depaul-seton-2026-02-18": "aec-cbb-depaul-seton-2026-02-18",
+            "aec-cbb-troy-lamon-2026-02-18": "aec-cbb-troy-lamon-2026-02-18",
+            "aec-cbb-kenest-msrst-2026-02-18": "aec-cbb-kenest-msrst-2026-02-18",
+            "aec-cbb-lipsc-bella-2026-02-18": "aec-cbb-lipsc-bella-2026-02-18",
+            "aec-cbb-ndkst-sdkst-2026-02-18": "aec-cbb-ndkst-sdkst-2026-02-18",
+            "aec-cbb-stjohn-marq-2026-02-18": "aec-cbb-stjohn-marq-2026-02-18",
+            "aec-cbb-byu-arz-2026-02-18": "aec-cbb-byu-arz-2026-02-18",
+            "aec-cbb-vir-gtech-2026-02-18": "aec-cbb-vir-gtech-2026-02-18",
+            "aec-cbb-aubrn-mspst-2026-02-18": "aec-cbb-aubrn-mspst-2026-02-18",
+            "aec-cbb-stmry-sea-2026-02-18": "aec-cbb-stmry-sea-2026-02-18",
+            "aec-cbb-utah-wvir-2026-02-18": "aec-cbb-utah-wvir-2026-02-18",
+            "aec-cbb-murst-illst-2026-02-18": "aec-cbb-murst-illst-2026-02-18",
+            "aec-cbb-kan-okst-2026-02-18": "aec-cbb-kan-okst-2026-02-18",
+            "aec-cbb-vand-missr-2026-02-18": "aec-cbb-vand-missr-2026-02-18",
+            "aec-cbb-pacfc-washst-2026-02-18": "aec-cbb-pacfc-washst-2026-02-18",
+            "aec-cbb-pepp-port-2026-02-18": "aec-cbb-pepp-port-2026-02-18",
+            "aec-cbb-ill-usc-2026-02-18": "aec-cbb-ill-usc-2026-02-18",
+            "aec-cbb-boise-utahst-2026-02-18": "aec-cbb-boise-utahst-2026-02-18",
+            "aec-cbb-gnzg-sf-2026-02-18": "aec-cbb-gnzg-sf-2026-02-18",
+            "aec-cbb-colst-unlv-2026-02-18": "aec-cbb-colst-unlv-2026-02-18"
         }
     },
     "CORRELATED_MARKET_MAPPING": {},
     "POLYMARKET_KALSHI_MAPPING": {
-        "aec-cbb-gnzg-sf-2026-02-18": {
-            "kalshi_ticker": "KXNCAAMBGAME-26FEB18GONZSF-GONZ",
-            "other_poly_id": "aec-cbb-gnzg-sf-2026-02-18-inverse",
-            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18GONZSF-SF"
-        },
         "aec-cbb-lafay-holy-2026-02-18": {
-            "kalshi_ticker": "KXNCAAMBGAME-26FEB18LAFHC-LAF",
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18LEHNAVY-NAVY",
             "other_poly_id": "aec-cbb-lafay-holy-2026-02-18-inverse",
-            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18LAFHC-HC"
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18LEHNAVY-LEH"
+        },
+        "aec-cbb-rutger-pennst-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18RUTGPSU-RUTG",
+            "other_poly_id": "aec-cbb-rutger-pennst-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18RUTGPSU-PSU"
+        },
+        "aec-cbb-vamil-woff-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18VMIWOF-VMI",
+            "other_poly_id": "aec-cbb-vamil-woff-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18VMIWOF-WOF"
+        },
+        "aec-cbb-etnst-furman-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18ETSUFUR-ETSU",
+            "other_poly_id": "aec-cbb-etnst-furman-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18ETSUFUR-FUR"
         },
         "aec-cbb-butl-george-2026-02-18": {
             "kalshi_ticker": "KXNCAAMBGAME-26FEB18BUTGTWN-BUT",
             "other_poly_id": "aec-cbb-butl-george-2026-02-18-inverse",
             "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18BUTGTWN-GTWN"
+        },
+        "aec-cbb-ark-ala-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18ARKALA-ARK",
+            "other_poly_id": "aec-cbb-ark-ala-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18ARKALA-ALA"
+        },
+        "aec-cbb-wkent-del-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18WKUDEL-WKU",
+            "other_poly_id": "aec-cbb-wkent-del-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18WKUDEL-DEL"
+        },
+        "aec-cbb-lasal-duq-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18LASDUQ-LAS",
+            "other_poly_id": "aec-cbb-lasal-duq-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18LASDUQ-DUQ"
+        },
+        "aec-cbb-clvst-yngst-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18CLEVYSU-CLEV",
+            "other_poly_id": "aec-cbb-clvst-yngst-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18CLEVYSU-YSU"
+        },
+        "aec-cbb-jmad-coast-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18JMUCCAR-JMU",
+            "other_poly_id": "aec-cbb-jmad-coast-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18JMUCCAR-CCAR"
+        },
+        "aec-cbb-uwg-ekent-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18UWGAEKY-UWGA",
+            "other_poly_id": "aec-cbb-uwg-ekent-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18UWGAEKY-EKY"
+        },
+        "aec-cbb-loych-fordm-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18LCHIFOR-LCHI",
+            "other_poly_id": "aec-cbb-loych-fordm-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18LCHIFOR-FOR"
+        },
+        "aec-cbb-amercn-buck-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18AMERBUCK-AMER",
+            "other_poly_id": "aec-cbb-amercn-buck-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18AMERBUCK-BUCK"
+        },
+        "aec-cbb-day-gmsn-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18DAYGMU-DAY",
+            "other_poly_id": "aec-cbb-day-gmsn-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18DAYGMU-GMU"
+        },
+        "aec-cbb-queen-nal-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18QUCUNA-UNA",
+            "other_poly_id": "aec-cbb-queen-nal-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18QUCUNA-QUC"
+        },
+        "aec-cbb-rich-david-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18RICHDAV-RICH",
+            "other_poly_id": "aec-cbb-rich-david-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18RICHDAV-DAV"
+        },
+        "aec-cbb-wichst-ecar-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18WICHECU-WICH",
+            "other_poly_id": "aec-cbb-wichst-ecar-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18WICHECU-ECU"
+        },
+        "aec-cbb-miss-txam-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18MISSTXAM-MISS",
+            "other_poly_id": "aec-cbb-miss-txam-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18MISSTXAM-TXAM"
+        },
+        "aec-cbb-stjoe-stbon-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18JOESSBON-JOES",
+            "other_poly_id": "aec-cbb-stjoe-stbon-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18JOESSBON-SBON"
+        },
+        "aec-cbb-jax-flgc-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18JACFGCU-JAC",
+            "other_poly_id": "aec-cbb-jax-flgc-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18JACFGCU-FGCU"
+        },
+        "aec-cbb-niowa-indst-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18UNIINST-UNI",
+            "other_poly_id": "aec-cbb-niowa-indst-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18UNIINST-INST"
+        },
+        "aec-cbb-clmsn-wake-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18CLEMWAKE-CLEM",
+            "other_poly_id": "aec-cbb-clmsn-wake-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18CLEMWAKE-WAKE"
+        },
+        "aec-cbb-lehi-navy-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18LEHNAVY-LEH",
+            "other_poly_id": "aec-cbb-lehi-navy-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18LEHNAVY-NAVY"
+        },
+        "aec-cbb-ncg-wcar-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18UNCGWCU-UNCG",
+            "other_poly_id": "aec-cbb-ncg-wcar-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18UNCGWCU-WCU"
+        },
+        "aec-cbb-army-loymd-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18ARMYLMD-ARMY",
+            "other_poly_id": "aec-cbb-army-loymd-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18ARMYLMD-LMD"
+        },
+        "aec-cbb-okl-tenn-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18OKLATENN-OKLA",
+            "other_poly_id": "aec-cbb-okl-tenn-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18OKLATENN-TENN"
+        },
+        "aec-cbb-creigh-uconn-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18CREICONN-CREI",
+            "other_poly_id": "aec-cbb-creigh-uconn-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18CREICONN-CONN"
+        },
+        "aec-cbb-bradly-valp-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18BRADVALP-BRAD",
+            "other_poly_id": "aec-cbb-bradly-valp-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18BRADVALP-VALP"
+        },
+        "aec-cbb-ipfw-nkent-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18PFWNKU-PFW",
+            "other_poly_id": "aec-cbb-ipfw-nkent-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18PFWNKU-NKU"
+        },
+        "aec-cbb-uab-templ-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18UABTEM-UAB",
+            "other_poly_id": "aec-cbb-uab-templ-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18UABTEM-TEM"
+        },
+        "aec-cbb-sill-drake-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18SIUDRKE-SIU",
+            "other_poly_id": "aec-cbb-sill-drake-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18SIUDRKE-DRKE"
+        },
+        "aec-cbb-mtnst-smho-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18MTUSHSU-MTU",
+            "other_poly_id": "aec-cbb-mtnst-smho-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18MTUSHSU-SHSU"
+        },
+        "aec-cbb-jaxst-loutch-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18JVSTLT-JVST",
+            "other_poly_id": "aec-cbb-jaxst-loutch-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18JVSTLT-LT"
+        },
+        "aec-cbb-illchi-evans-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18UICEVAN-UIC",
+            "other_poly_id": "aec-cbb-illchi-evans-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18UICEVAN-EVAN"
+        },
+        "aec-cbb-oral-neom-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18ORUNEOM-ORU",
+            "other_poly_id": "aec-cbb-oral-neom-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18ORUNEOM-NEOM"
+        },
+        "aec-cbb-charlt-tulsa-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18CHARTLSA-CHAR",
+            "other_poly_id": "aec-cbb-charlt-tulsa-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18CHARTLSA-TLSA"
+        },
+        "aec-cbb-ncc-scarst-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18NCCUSCST-NCCU",
+            "other_poly_id": "aec-cbb-ncc-scarst-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18NCCUSCST-SCST"
+        },
+        "aec-cbb-flatl-utsa-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18FAUUTSA-FAU",
+            "other_poly_id": "aec-cbb-flatl-utsa-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18FAUUTSA-UTSA"
+        },
+        "aec-cbb-mary-nw-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18MDNW-MD",
+            "other_poly_id": "aec-cbb-mary-nw-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18MDNW-NW"
+        },
+        "aec-cbb-depaul-seton-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18DEPHALL-DEP",
+            "other_poly_id": "aec-cbb-depaul-seton-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18DEPHALL-HALL"
+        },
+        "aec-cbb-troy-lamon-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18TROYULM-TROY",
+            "other_poly_id": "aec-cbb-troy-lamon-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18TROYULM-ULM"
+        },
+        "aec-cbb-kenest-msrst-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18KENNMOSU-KENN",
+            "other_poly_id": "aec-cbb-kenest-msrst-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18KENNMOSU-MOSU"
+        },
+        "aec-cbb-lipsc-bella-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18LIPBELL-LIP",
+            "other_poly_id": "aec-cbb-lipsc-bella-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18LIPBELL-BELL"
+        },
+        "aec-cbb-ndkst-sdkst-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18NDSUSDST-NDSU",
+            "other_poly_id": "aec-cbb-ndkst-sdkst-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18NDSUSDST-SDST"
+        },
+        "aec-cbb-stjohn-marq-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18SJUMARQ-SJU",
+            "other_poly_id": "aec-cbb-stjohn-marq-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18SJUMARQ-MARQ"
+        },
+        "aec-cbb-byu-arz-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18BYUARIZ-BYU",
+            "other_poly_id": "aec-cbb-byu-arz-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18BYUARIZ-ARIZ"
+        },
+        "aec-cbb-vir-gtech-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18UVAGT-UVA",
+            "other_poly_id": "aec-cbb-vir-gtech-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18UVAGT-GT"
+        },
+        "aec-cbb-aubrn-mspst-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18AUBMSST-AUB",
+            "other_poly_id": "aec-cbb-aubrn-mspst-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18AUBMSST-MSST"
+        },
+        "aec-cbb-stmry-sea-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18SMCSEA-SMC",
+            "other_poly_id": "aec-cbb-stmry-sea-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18SMCSEA-SEA"
+        },
+        "aec-cbb-utah-wvir-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18UTAHWVU-UTAH",
+            "other_poly_id": "aec-cbb-utah-wvir-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18UTAHWVU-WVU"
+        },
+        "aec-cbb-murst-illst-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18MURRILST-MURR",
+            "other_poly_id": "aec-cbb-murst-illst-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18MURRILST-ILST"
+        },
+        "aec-cbb-kan-okst-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18KUOKST-KU",
+            "other_poly_id": "aec-cbb-kan-okst-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18KUOKST-OKST"
+        },
+        "aec-cbb-vand-missr-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18VANMIZZ-VAN",
+            "other_poly_id": "aec-cbb-vand-missr-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18VANMIZZ-MIZZ"
+        },
+        "aec-cbb-pacfc-washst-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18PACWSU-PAC",
+            "other_poly_id": "aec-cbb-pacfc-washst-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18PACWSU-WSU"
+        },
+        "aec-cbb-pepp-port-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18PEPPPORT-PEPP",
+            "other_poly_id": "aec-cbb-pepp-port-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18PEPPPORT-PORT"
+        },
+        "aec-cbb-ill-usc-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18ILLUSC-ILL",
+            "other_poly_id": "aec-cbb-ill-usc-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18ILLUSC-USC"
+        },
+        "aec-cbb-boise-utahst-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18BSUUSU-BSU",
+            "other_poly_id": "aec-cbb-boise-utahst-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18BSUUSU-USU"
+        },
+        "aec-cbb-gnzg-sf-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18GONZSF-GONZ",
+            "other_poly_id": "aec-cbb-gnzg-sf-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18GONZSF-SF"
+        },
+        "aec-cbb-colst-unlv-2026-02-18": {
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18CSUUNLV-CSU",
+            "other_poly_id": "aec-cbb-colst-unlv-2026-02-18-inverse",
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18CSUUNLV-UNLV"
         }
     },
     "SIDE_MAPPING": {

@@ -265,7 +265,7 @@ def crossed_markets(polymarket_client, kalshi_client, polymarket_kalshi_mapping)
         polymarket_client,
         kalshi_client,
         polymarket_kalshi_mapping,
-        min_edge=0.002
+        min_edge=0.01
     )
 
     opps = arb_engine.find_opportunities()
