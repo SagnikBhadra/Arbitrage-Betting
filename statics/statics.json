@@ -327,9 +327,9 @@
     "CORRELATED_MARKET_MAPPING": {},
     "POLYMARKET_KALSHI_MAPPING": {
         "aec-cbb-lafay-holy-2026-02-18": {
-            "kalshi_ticker": "KXNCAAMBGAME-26FEB18LEHNAVY-NAVY",
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18LAFHC-LAF",
             "other_poly_id": "aec-cbb-lafay-holy-2026-02-18-inverse",
-            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18LEHNAVY-LEH"
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18LAFHC-HC"
         },
         "aec-cbb-rutger-pennst-2026-02-18": {
             "kalshi_ticker": "KXNCAAMBGAME-26FEB18RUTGPSU-RUTG",
@@ -397,9 +397,9 @@
             "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18DAYGMU-GMU"
         },
         "aec-cbb-queen-nal-2026-02-18": {
-            "kalshi_ticker": "KXNCAAMBGAME-26FEB18QUCUNA-UNA",
+            "kalshi_ticker": "KXNCAAMBGAME-26FEB18QUCUNA-QUC",
             "other_poly_id": "aec-cbb-queen-nal-2026-02-18-inverse",
-            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18QUCUNA-QUC"
+            "other_kalshi_ticker": "KXNCAAMBGAME-26FEB18QUCUNA-UNA"
         },
         "aec-cbb-rich-david-2026-02-18": {
             "kalshi_ticker": "KXNCAAMBGAME-26FEB18RICHDAV-RICH",
