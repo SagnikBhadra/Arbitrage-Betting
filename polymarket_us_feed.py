@@ -166,7 +166,9 @@ class PolymarketUSWebSocket:
             return
 
         #print(f"Loading snapshot for {asset_id}")
+        #print(f"Market Data: {marketData}")
         orderbook.load_polymarket_us_snapshot(asset_id, marketData)
+        #print(orderbook)
 
         # Short Side
         orderbook = self.orderbooks.get(asset_id + "-inverse")
@@ -176,6 +178,7 @@ class PolymarketUSWebSocket:
 
         #print(f"Loading snapshot for {asset_id + '-inverse'}")
         orderbook.load_polymarket_us_snapshot(asset_id + "-inverse", marketData)
+        #print(orderbook)
 
     #
     # Public API

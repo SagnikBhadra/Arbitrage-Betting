@@ -36,12 +36,13 @@ class CrossExchangeArbitrage:
         ask, ask_size = orderbook.get_best_ask()
         return bid, bid_size, ask, ask_size
 
-    def _same_side_arb(self, poly_id, kalshi_ticker, poly_bid, poly_bid_size, poly_ask, poly_ask_size,
-                       kalshi_bid, kalshi_bid_size, kalshi_ask, kalshi_ask_size):
+    def _same_side_arb(self, poly_id, kalshi_ticker, poly_bid: Decimal, poly_bid_size, poly_ask: Decimal, poly_ask_size,
+                       kalshi_bid: Decimal, kalshi_bid_size, kalshi_ask: Decimal, kalshi_ask_size):
         opportunities = []
 
         # Ask on Kalshi < Bid on Polymarket (1, 2, 3, 4)
         # Buy Kalshi, Sell Polymarket
+
         if poly_bid and kalshi_ask and (poly_bid - kalshi_ask) > self.min_edge:
             size = min(poly_bid_size, kalshi_ask_size)
             opportunities.append({
@@ -72,8 +73,8 @@ class CrossExchangeArbitrage:
 
         return opportunities
 
-    def _double_buy_arb(self, ask_A, ask_B):
-        # Synthetic arbitrage 
+    def _double_buy_arb(self, ask_A: Decimal, ask_B: Decimal):
+        # Synthetic arbitrage
         # If asks for Team 1 + Team 2 < $1
         # Stategies 5, 6, 9, 10
         if ask_A and ask_B:
@@ -86,8 +87,8 @@ class CrossExchangeArbitrage:
                 }
         return None
 
-    def _double_sell_arb(self, bid_A, bid_B):
-        # Short sell 
+    def _double_sell_arb(self, bid_A: Decimal, bid_B: Decimal):
+        # Short sell
         # If we have positions, we can use arbritage to sell out of the position
         # Strategies 7, 8
         
@@ -118,9 +119,11 @@ class CrossExchangeArbitrage:
 
             poly_bid_A, poly_bid_A_size, poly_ask_A, poly_ask_A_size = self._best_prices(poly_A)
             kalshi_bid_A, kalshi_bid_A_size, kalshi_ask_A, kalshi_ask_A_size = self._best_prices(kalshi_A)
-
+            
             poly_bid_B, poly_bid_B_size, poly_ask_B, poly_ask_B_size = self._best_prices(poly_B)
             kalshi_bid_B, kalshi_bid_B_size, kalshi_ask_B, kalshi_ask_B_size = self._best_prices(kalshi_B)
+            
+            poly_ask_A, poly_bid_A, poly_ask_B, poly_bid_B, kalshi_ask_A, kalshi_bid_A, kalshi_ask_B, kalshi_bid_B = map(lambda x: Decimal(x) if x else None, [poly_ask_A, poly_bid_A, poly_ask_B, poly_bid_B, kalshi_ask_A, kalshi_bid_A, kalshi_ask_B, kalshi_bid_B])
 
             # ---- SAME SIDE ARBS (A + B independently) ----
             # Stragies 1, 2, 3, 4
@@ -138,8 +141,16 @@ class CrossExchangeArbitrage:
 
             # ---- DOUBLE BUY (synthetic long event) ----
             # Strategies 5, 6, 9, 10
-            best_ask_A = min(x for x in [poly_ask_A, kalshi_ask_A] if x)
-            best_ask_B = min(x for x in [poly_ask_B, kalshi_ask_B] if x)
+            if poly_ask_A and kalshi_ask_A:
+                best_ask_A = min(x for x in [poly_ask_A, kalshi_ask_A] if x)
+            else:
+                print(f"Missing ask price for {poly_id} or {kalshi_ticker}. Skipping double buy arb.")
+                continue
+            if poly_ask_B and kalshi_ask_B:
+                best_ask_B = min(x for x in [poly_ask_B, kalshi_ask_B] if x)
+            else:
+                print(f"Missing ask price for {other_poly_id} or {other_kalshi_ticker}. Skipping double buy arb.")
+                continue
 
             arb = self._double_buy_arb(best_ask_A, best_ask_B)
             if arb:
@@ -147,8 +158,16 @@ class CrossExchangeArbitrage:
                 results.append(arb)
 
             # ---- DOUBLE SELL (synthetic short event) ----
-            best_bid_A = max(x for x in [poly_bid_A, kalshi_bid_A] if x)
-            best_bid_B = max(x for x in [poly_bid_B, kalshi_bid_B] if x)
+            if poly_bid_A and kalshi_bid_A:
+                best_bid_A = max(x for x in [poly_bid_A, kalshi_bid_A] if x)
+            else:
+                print(f"Missing bid price for {poly_id} or {kalshi_ticker}. Skipping double sell arb.")
+                continue
+            if poly_bid_B and kalshi_bid_B:
+                best_bid_B = max(x for x in [poly_bid_B, kalshi_bid_B] if x)
+            else:
+                print(f"Missing bid price for {other_poly_id} or {other_kalshi_ticker}. Skipping double sell arb.")
+                continue
 
             arb = self._double_sell_arb(best_bid_A, best_bid_B)
             if arb:

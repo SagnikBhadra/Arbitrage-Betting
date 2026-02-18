@@ -4,10 +4,17 @@ import websocket
 import uuid
 from decimal import Decimal
 
+# Strategy modules
+from cross_exchange_arbitrage import CrossExchangeArbitrage
+
+# Market data modules
 from polymarket_us_feed import PolymarketUSWebSocket
-from polymarket_us_http_gateway import PolymarketUSHTTPGateway
 from kalshi_feed import KalshiWebSocket
+
+# Gateway modules
+from polymarket_us_http_gateway import PolymarketUSHTTPGateway
 from kalshi_http_gateway import KalshiHTTPGateway, load_private_key
+
 from utils import get_asset_ids, get_maker_fees_kalshi, get_taker_fees_kalshi
 from collections import defaultdict
 
@@ -46,6 +53,14 @@ MARKET_TICKER = ["KXNBAMVP-26-LDON",
                 "KXNBAMVP-26-SGIL",
                  "KXNBAMVP-26-NJOK"]  # Replace with any open market
 WS_URL = "wss://api.elections.kalshi.com/trade-api/ws/v2"
+
+# Polymarket US Configuration
+POLYMARKET_US_CHANNEL_TYPE = "markets"  # use market for public price/book updates
+POLYMARKET_US_API_KEY = "8f004f3b-4858-4401-a979-ca189946cde1"
+POLYMARKET_US_PRIVATE_KEY_FILE_PATH = "polymarket.key"
+POLYMARKET_US_BASE_URL = "https://api.polymarket.us"
+POLYMARKET_US_WS_URL_BASE = "wss://api.polymarket.us"
+
 
 def get_static_mapping(static_name: str):
     with open('statics/statics.json', 'r') as f:
@@ -230,6 +245,7 @@ def intra_kalshi_arbitrage(kalshi_client, kalshi_gateway, correlated_market_mapp
                 print(f"Overall Orders Placed: {overall_order_count}, Overall Potential Profit: ${overall_profit:.2f}, Balance: ${cached_balance:.2f}")
 
 def crossed_markets(polymarket_client, kalshi_client, polymarket_kalshi_mapping):
+    """
     for poly_asset_id, kalshi_ticker in polymarket_kalshi_mapping.items():
         if polymarket_client.orderbooks.get(poly_asset_id) and kalshi_client.orderbooks.get(kalshi_ticker):
             poly_orderbook = polymarket_client.orderbooks[poly_asset_id]
@@ -244,6 +260,19 @@ def crossed_markets(polymarket_client, kalshi_client, polymarket_kalshi_mapping)
                 print(f"Arbitrage Opportunity: Buy on Kalshi at {kalshi_best_ask}, Sell on Polymarket at {poly_best_bid} of size {min(poly_best_bid_size, kalshi_best_ask_size)}")
             if kalshi_best_bid and poly_best_ask and kalshi_best_bid > poly_best_ask:
                 print(f"Arbitrage Opportunity: Buy on Polymarket at {poly_best_ask}, Sell on Kalshi at {kalshi_best_bid} of size {min(kalshi_best_bid_size, poly_best_ask_size)}")
+    """
+    arb_engine = CrossExchangeArbitrage(
+        polymarket_client,
+        kalshi_client,
+        polymarket_kalshi_mapping,
+        min_edge=0.002
+    )
+
+    opps = arb_engine.find_opportunities()
+
+    for o in opps:
+        print(o)
+
 
 def wide_spreads():
     pass
@@ -254,8 +283,8 @@ async def scan_inefficiencies(polymarket_client, kalshi_client, kalshi_gateway):
     # Intra Kalshi correlated markets mapping
     correlated_market_mapping = get_static_mapping("CORRELATED_MARKET_MAPPING")
     while True:
-        #crossed_markets(polymarket_client, kalshi_client, polymarket_kalshi_mapping)
-        intra_kalshi_arbitrage(kalshi_client, kalshi_gateway, correlated_market_mapping, profit_threshold=0.02)
+        crossed_markets(polymarket_client, kalshi_client, polymarket_kalshi_mapping)
+        #intra_kalshi_arbitrage(kalshi_client, kalshi_gateway, correlated_market_mapping, profit_threshold=0.02)
         await asyncio.sleep(1)
 
 async def main():
@@ -266,10 +295,10 @@ async def main():
     private_key_pem = load_private_key(PRIVATE_KEY_PATH)
     kalshi_gateway = KalshiHTTPGateway(KEY_ID, private_key_pem)
 
-    polymarket_us_client = PolymarketUSWebSocket(WS_URL_BASE, CHANNEL_TYPE, get_asset_ids("Polymarket_US"))
+    polymarket_us_client = PolymarketUSWebSocket(POLYMARKET_US_WS_URL_BASE, POLYMARKET_US_CHANNEL_TYPE, get_asset_ids("Polymarket_US"), POLYMARKET_US_API_KEY, POLYMARKET_US_PRIVATE_KEY_FILE_PATH)
     kalshi_client = KalshiWebSocket(KEY_ID, PRIVATE_KEY_PATH, get_asset_ids("Kalshi"), WS_URL)
     await asyncio.gather(
-        #polymarket_client.run(),
+        polymarket_us_client.run(),
         kalshi_client.orderbook_websocket(),
         scan_inefficiencies(polymarket_us_client, kalshi_client, kalshi_gateway)
     )
