@@ -8,6 +8,7 @@ import uuid
 from decimal import Decimal
 
 # Strategy modules
+from intra_kalshi_arbitrage import IntraKalshiArbitrage
 from cross_exchange_arbitrage import CrossExchangeArbitrage
 
 # Market data modules
@@ -23,14 +24,6 @@ from collections import defaultdict
 
 # WebSocket endpoint for Polymarket CLOB service
 WS_URL_BASE = "wss://ws-subscriptions-clob.polymarket.com"
-overall_order_count = 0
-overall_profit = 0.0
-
-last_best_ask_price_by_ticker = defaultdict()
-last_best_bid_price_by_ticker = defaultdict()
-
-# Cached balance to avoid API calls on every order
-cached_balance = 0.0
 
 # Your target tokens (clobTokenIds)
 ASSET_IDS = [
@@ -64,233 +57,61 @@ POLYMARKET_US_PRIVATE_KEY_FILE_PATH = "polymarket.key"
 POLYMARKET_US_BASE_URL = "https://api.polymarket.us"
 POLYMARKET_US_WS_URL_BASE = "wss://api.polymarket.us"
 
-# ----------------------------
-# Create dated log filename
-# ----------------------------
-today_str = datetime.now().strftime("%Y-%m-%d")
-cross_arb_log_filename = f"logging/cross_exchange_arb_{today_str}.log"
 
-# ----------------------------
-# Configure logger
-# ----------------------------
-cross_arb_logger = logging.getLogger("CrossExchangeArb")
-cross_arb_logger.setLevel(logging.INFO)
+def define_logger(filename_prefix: str, logger_name: str):
+    # ----------------------------
+    # Create dated log filename
+    # ----------------------------
+    today_str = datetime.now().strftime("%Y-%m-%d")
+    log_filename = f"logging/{filename_prefix}_{today_str}.log"
 
-handler = RotatingFileHandler(
-    cross_arb_log_filename,
-    maxBytes=10_000_000,  # 10MB
-    backupCount=5
-)
+    # ----------------------------
+    # Configure logger
+    # ----------------------------
+    logger = logging.getLogger(logger_name)
+    logger.setLevel(logging.INFO)
 
-formatter = logging.Formatter(
-    "%(asctime)s | %(levelname)s | %(message)s"
-)
+    handler = RotatingFileHandler(
+        log_filename,
+        maxBytes=10_000_000,  # 10MB
+        backupCount=5
+    )
 
-handler.setFormatter(formatter)
-cross_arb_logger.addHandler(handler)
+    formatter = logging.Formatter(
+        "%(asctime)s | %(levelname)s | %(message)s"
+    )
 
-cross_arb_logger.propagate = False  # prevents duplicate logs
+    handler.setFormatter(formatter)
+    logger.addHandler(handler)
+
+    logger.propagate = False  # prevents duplicate logs
+    
+    return logger
 
 def get_static_mapping(static_name: str):
     with open('statics/statics.json', 'r') as f:
         statics = json.load(f)
     return statics[static_name]
 
-def check_and_update_balance(kalshi_gateway, required_amount):
-    """Check if we have sufficient balance for the trade.
-    
-    Args:
-        kalshi_gateway: The Kalshi HTTP gateway
-        required_amount: Amount needed in dollars
-    
-    Returns:
-        bool: True if sufficient balance, False otherwise
-    """
-    global cached_balance
-    try:
-        balance_response = kalshi_gateway.get_balance()
-        cached_balance = balance_response.get("balance", 0) / 100.0  # Convert cents to dollars
-        return cached_balance >= required_amount
-    except Exception as e:
-        print(f"Error fetching balance: {e}")
-        return False
+def intra_kalshi_arbitrage(kalshi_client, kalshi_gateway, correlated_market_mapping, profit_threshold=0.02):
+    # Create logger
+    intra_kalshi_logger = define_logger("intra_kalshi_arb", "IntraKalshiArb")
 
-def intra_kalshi_arbitrage(kalshi_client, kalshi_gateway, correlated_market_mapping, profit_threshold=0.00):
-    """Identify intra-market arbitrage opportunities within Kalshi markets.
+    # Create object
+    intra_kalshi_arb_strategy = IntraKalshiArbitrage(
+        kalshi_client,
+        kalshi_gateway,
+        correlated_market_mapping,
+        logger=intra_kalshi_logger
+    )
 
-    Args:
-        kalshi_client (KalshiWebSocket): The Kalshi WebSocket client instance which contains orderbooks.
-        kalshi_gateway (KalshiHTTPGateway): The Kalshi HTTP gateway for placing orders.
-    """
-    global overall_order_count, overall_profit, cached_balance
-    
-    for ticker, orderbook in kalshi_client.orderbooks.items():
-        # Get correlated markets
-        correlated_tickers = correlated_market_mapping.get(ticker, [])
-        best_bid, best_bid_size = orderbook.get_best_bid()
-        best_ask, best_ask_size = orderbook.get_best_ask()
-        last_best_bid = -1
-        last_correlated_best_bid = -1
-        last_best_ask = -1
-        last_correlated_best_ask = -1
-
-        # Does not work for more than 2 correlated markets yet
-        if correlated_tickers:
-            for correlated_ticker in correlated_tickers:
-                correlated_orderbook = kalshi_client.orderbooks.get(correlated_ticker)
-                if correlated_orderbook:
-                    correlated_best_bid, correlated_best_bid_size = correlated_orderbook.get_best_bid()
-                    correlated_best_ask, correlated_best_ask_size = correlated_orderbook.get_best_ask()
-                    
-                    # Buy Team A yes & Buy Team B yes
-                    if best_ask and correlated_best_ask:
-                        if ticker in last_best_ask_price_by_ticker:
-                            last_best_ask = last_best_ask_price_by_ticker[ticker]
-                        last_best_ask_price_by_ticker[ticker] = best_ask
-                        if correlated_ticker in last_best_ask_price_by_ticker:
-                            last_correlated_best_ask = last_best_ask_price_by_ticker[correlated_ticker]
-                        last_best_ask_price_by_ticker[correlated_ticker] = correlated_best_ask
-                        if (last_best_ask != -1 and best_ask != last_best_ask) or (last_correlated_best_ask != -1 and correlated_best_ask != last_correlated_best_ask):
-                            pass
-                        else:
-                            continue
-                        
-                        # Calculate cost of trade (including fees) and potential profit
-                        fees = get_taker_fees_kalshi(float(best_ask), float(best_ask_size)) + get_taker_fees_kalshi(float(correlated_best_ask), float(correlated_best_ask_size))
-                        combined_price = float(best_ask) + float(correlated_best_ask) + float(fees)
-
-                        if combined_price <= 1.0 - profit_threshold:
-                            order_size = int(min(float(best_ask_size), float(correlated_best_ask_size)))
-                            
-                            # Calculate required balance (cost of both orders)
-                            required_balance = (float(best_ask) + float(correlated_best_ask)) * order_size
-                            overall_order_count += order_size
-                            overall_profit += max((1.0 - combined_price) * order_size / 100.0 , 0)
-                            
-                            # Check balance before placing orders
-                            if not check_and_update_balance(kalshi_gateway, required_balance):
-                                print(f"Insufficient balance. Required: ${required_balance:.2f}, Available: ${cached_balance:.2f}")
-                                continue
-                            
-                            print(f"Intra-Kalshi Arbitrage Opportunity: Buy YES on {ticker} at {best_ask} and Buy YES on {correlated_ticker} at {correlated_best_ask} of size {order_size} | Combined Price: {combined_price}")
-                            
-
-                            # Buy YES on ticker
-                            order_a = {
-                                "ticker": ticker,
-                                "action": "buy",
-                                "side": "yes",
-                                "count": order_size,
-                                "client_order_id": str(uuid.uuid4()),
-                                "yes_price": int(float(best_ask) * 100),
-                                "type": "limit",
-                            }
-                            try:
-                                kalshi_gateway.create_order(order_a)
-                            except Exception as e:
-                                print(f"Failed to place order A: {e}")
-                                continue
-                            
-                            # Buy YES on correlated ticker
-                            order_b = {
-                                "ticker": correlated_ticker,
-                                "action": "buy",
-                                "side": "yes",
-                                "count": order_size,
-                                "client_order_id": str(uuid.uuid4()),
-                                "yes_price": int(float(correlated_best_ask) * 100),
-                                "type": "limit",
-                            }
-                            try:
-                                kalshi_gateway.create_order(order_b)
-                            except Exception as e:
-                                print(f"Failed to place order B: {e}")
-                                continue
-
-                    # Buy Team A no & Buy Team B no
-                    if best_bid and correlated_best_bid:
-                        if ticker in last_best_bid_price_by_ticker:
-                            last_best_bid = last_best_bid_price_by_ticker[ticker]
-                        last_best_bid_price_by_ticker[ticker] = best_bid
-                        if correlated_ticker in last_best_bid_price_by_ticker:
-                            last_correlated_best_bid = last_best_bid_price_by_ticker[correlated_ticker]
-                        last_best_bid_price_by_ticker[correlated_ticker] = correlated_best_bid
-                        if (last_best_bid != -1 and best_bid != last_best_bid) or (last_correlated_best_bid != -1 and correlated_best_bid != last_correlated_best_bid):
-                            pass
-                        else:
-                            continue
-                        
-                        best_no_ask = 1.0 - float(best_bid)
-                        best_correlated_no_ask = 1.0 - float(correlated_best_bid)
-                        fees = get_taker_fees_kalshi(float(best_bid), float(best_bid_size)) + get_taker_fees_kalshi(float(correlated_best_bid), float(correlated_best_bid_size))
-                        combined_price = best_no_ask + best_correlated_no_ask + float(fees)
-                        if combined_price <= 1.0 - profit_threshold:
-                            order_size = int(min(float(best_bid_size), float(correlated_best_bid_size)))
-                            
-                            # Calculate required balance (cost of both orders)
-                            required_balance = (best_no_ask + best_correlated_no_ask) * order_size
-                            overall_order_count += order_size
-                            overall_profit += max((1.0 - combined_price) * order_size / 100.0   , 0)
-                            # Check balance before placing orders
-                            if not check_and_update_balance(kalshi_gateway, required_balance):
-                                print(f"Insufficient balance. Required: ${required_balance:.2f}, Available: ${cached_balance:.2f}")
-                                continue
-                            
-                            print(f"Intra-Kalshi Arbitrage Opportunity: Buy NO on {ticker} at {best_no_ask} and Buy NO on {correlated_ticker} at {best_correlated_no_ask} of size {order_size} | Combined Price: {combined_price}")
-                            
-
-                            # Buy NO on ticker
-                            order_a = {
-                                "ticker": ticker,
-                                "action": "buy",
-                                "side": "no",
-                                "count": order_size,
-                                "client_order_id": str(uuid.uuid4()),
-                                "no_price": int(best_no_ask * 100),
-                                "type": "limit",
-                            }
-                            try:
-                                kalshi_gateway.create_order(order_a)
-                            except Exception as e:
-                                print(f"Failed to place order A: {e}")
-                                continue
-                            
-                            # Buy NO on correlated ticker
-                            order_b = {
-                                "ticker": correlated_ticker,
-                                "action": "buy",
-                                "side": "no",
-                                "count": order_size,
-                                "client_order_id": str(uuid.uuid4()),
-                                "no_price": int(best_correlated_no_ask * 100),
-                                "type": "limit",
-                            }
-                            try:
-                                kalshi_gateway.create_order(order_b)
-                            except Exception as e:
-                                print(f"Failed to place order B: {e}")
-                                continue
-                                
-                print(f"Overall Orders Placed: {overall_order_count}, Overall Potential Profit: ${overall_profit:.2f}, Balance: ${cached_balance:.2f}")
+    # Call find_opportunities() every second and log any opportunities above profit_threshold
+    intra_kalshi_arb_strategy.find_opportunities(profit_threshold=profit_threshold)
 
 def crossed_markets(polymarket_client, kalshi_client, polymarket_kalshi_mapping):
-    """
-    for poly_asset_id, kalshi_ticker in polymarket_kalshi_mapping.items():
-        if polymarket_client.orderbooks.get(poly_asset_id) and kalshi_client.orderbooks.get(kalshi_ticker):
-            poly_orderbook = polymarket_client.orderbooks[poly_asset_id]
-            kalshi_orderbook = kalshi_client.orderbooks[kalshi_ticker]
-            
-            poly_best_bid, poly_best_bid_size = poly_orderbook.get_best_bid()
-            poly_best_ask, poly_best_ask_size = poly_orderbook.get_best_ask()
-            kalshi_best_bid, kalshi_best_bid_size = kalshi_orderbook.get_best_bid()
-            kalshi_best_ask, kalshi_best_ask_size = kalshi_orderbook.get_best_ask()
-            
-            if poly_best_bid and kalshi_best_ask and poly_best_bid > kalshi_best_ask:
-                print(f"Arbitrage Opportunity: Buy on Kalshi at {kalshi_best_ask}, Sell on Polymarket at {poly_best_bid} of size {min(poly_best_bid_size, kalshi_best_ask_size)}")
-            if kalshi_best_bid and poly_best_ask and kalshi_best_bid > poly_best_ask:
-                print(f"Arbitrage Opportunity: Buy on Polymarket at {poly_best_ask}, Sell on Kalshi at {kalshi_best_bid} of size {min(kalshi_best_bid_size, poly_best_ask_size)}")
-    """
-    arb_engine = CrossExchangeArbitrage(
+    cross_arb_logger = define_logger("cross_exchange_arb", "CrossExchangeArb")
+
+    cross_exchange_arb_strategy = CrossExchangeArbitrage(
         polymarket_client,
         kalshi_client,
         polymarket_kalshi_mapping,
@@ -298,7 +119,7 @@ def crossed_markets(polymarket_client, kalshi_client, polymarket_kalshi_mapping)
         min_edge=0.02
     )
 
-    opps = arb_engine.find_opportunities()
+    opps = cross_exchange_arb_strategy.find_opportunities()
 
     for o in opps:
         cross_arb_logger.info(o)
@@ -314,7 +135,7 @@ async def scan_inefficiencies(polymarket_client, kalshi_client, kalshi_gateway):
     correlated_market_mapping = get_static_mapping("CORRELATED_MARKET_MAPPING")
     while True:
         crossed_markets(polymarket_client, kalshi_client, polymarket_kalshi_mapping)
-        #intra_kalshi_arbitrage(kalshi_client, kalshi_gateway, correlated_market_mapping, profit_threshold=0.02)
+        intra_kalshi_arbitrage(kalshi_client, kalshi_gateway, correlated_market_mapping, profit_threshold=0.02)
         await asyncio.sleep(1)
 
 async def main():

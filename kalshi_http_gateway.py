@@ -151,9 +151,9 @@ class KalshiHTTPGateway:
             order_data["client_order_id"] = str(uuid.uuid4())
             
 
-
-        return self._request("POST", "/portfolio/orders", json_body=order_data)
-        #return 
+        print(f"Placing order with data: {order_data}")
+        #return self._request("POST", "/portfolio/orders", json_body=order_data)
+        return 
 
     def cancel_order(self, order_id: str) -> dict:
         """Cancel an open order by order_id."""
