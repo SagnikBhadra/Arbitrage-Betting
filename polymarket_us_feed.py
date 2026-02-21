@@ -5,6 +5,7 @@ from utils import get_asset_ids
 import asyncio
 import base64
 import json
+import logging
 import time
 import websockets
 from collections import defaultdict
@@ -12,13 +13,14 @@ from cryptography.hazmat.primitives.asymmetric import ed25519
 
 
 class PolymarketUSWebSocket:
-    def __init__(self, url_base, channel_type, slugs, api_key_id, key_file_path):
+    def __init__(self, url_base, channel_type, slugs, api_key_id, key_file_path, logger=logging.getLogger(__name__)):
         self.url = f"{url_base}/v1/ws/{channel_type}"
         self.channel_type = channel_type
         self.slugs = slugs
         self.api_key_id = api_key_id
         self.key_file_path = key_file_path
-        
+        self.logger = logger
+
         # Load private key from file
         with open(self.key_file_path, "r") as f:
             private_key_base64 = f.read().strip()
@@ -68,8 +70,8 @@ class PolymarketUSWebSocket:
     async def connect(self):
         while True:
             try:
-                print(f"Connecting to {self.url}")
-                
+                self.logger.info(f"Connecting to {self.url}")
+
                 headers = self._build_auth_headers()
                 
                 
@@ -83,11 +85,11 @@ class PolymarketUSWebSocket:
                 await self.send_subscribe()
                 self.connected.set()
 
-                print(f"Connected to {self.url}")
+                self.logger.info(f"Connected to {self.url}")
                 return
 
             except Exception as e:
-                print(f"Connection failed: {e}")
+                self.logger.error(f"Connection failed: {e}")
                 await asyncio.sleep(2)
 
     async def send_subscribe(self):
@@ -123,12 +125,12 @@ class PolymarketUSWebSocket:
                     await self.handle_message(m)
 
             except websockets.ConnectionClosed:
-                print("Connection closed, reconnecting...")
+                self.logger.warning("Connection closed, reconnecting...")
                 self.connected.clear()
                 await self.connect()
 
             except Exception as e:
-                print("Error in recv_loop:", e)
+                self.logger.error(f"Error in recv_loop: {e}")
 
     async def ping_loop(self):
         while True:
@@ -144,7 +146,7 @@ class PolymarketUSWebSocket:
     #
 
     async def handle_message(self, msg):
-        #print("Received message:", msg)
+        #self.logger.info(f"Received message: {msg}")
         subscription_type = msg.get("subscriptionType")
 
         if subscription_type == "SUBSCRIPTION_TYPE_MARKET_DATA":
@@ -162,23 +164,24 @@ class PolymarketUSWebSocket:
 
         orderbook = self.orderbooks.get(asset_id)
         if not orderbook:
-            print(f"Orderbook not found for {asset_id}")
+            self.logger.warning(f"Orderbook not found for {asset_id}")
             return
 
-        #print(f"Loading snapshot for {asset_id}")
-        #print(f"Market Data: {marketData}")
+        #self.logger.info(f"Loading snapshot for {asset_id}")
+        #self.logger.info(f"Market Data: {marketData}")
         orderbook.load_polymarket_us_snapshot(asset_id, marketData)
-        #print(orderbook)
+        self.logger.info(f"Loaded snapshot for {orderbook}")
 
         # Short Side
         orderbook = self.orderbooks.get(asset_id + "-inverse")
         if not orderbook:
-            print(f"Orderbook not found for {asset_id + '-inverse'}")
+            self.logger.warning(f"Orderbook not found for {asset_id + '-inverse'}")
             return
 
-        #print(f"Loading snapshot for {asset_id + '-inverse'}")
+        #self.logger.info(f"Loading snapshot for {asset_id + '-inverse'}")
         orderbook.load_polymarket_us_snapshot(asset_id + "-inverse", marketData)
-        #print(orderbook)
+        #self.logger.info(f"Market Data: {marketData}")
+        self.logger.info(f"Loaded snapshot for {orderbook}")
 
     #
     # Public API

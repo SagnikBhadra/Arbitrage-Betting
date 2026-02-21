@@ -1,6 +1,7 @@
 import asyncio
 import base64
 import json
+import logging
 import time
 import websockets
 from collections import defaultdict
@@ -29,17 +30,18 @@ WS_URL = "wss://api.elections.kalshi.com/trade-api/ws/v2"
 """
 
 class KalshiWebSocket:
-    def __init__(self, key_id, private_key_path, market_tickers, ws_url):
+    def __init__(self, key_id, private_key_path, market_tickers, ws_url, logger=logging.getLogger(__name__)):
         self.key_id = key_id
         self.private_key_path = private_key_path
         self.market_tickers = market_tickers
         self.ws_url = ws_url
+        self.logger = logger
         
         # Initialize OrderBooks
         self.orderbooks = defaultdict(OrderBook)
         #for asset_id in self.asset_ids:
         for market_ticker in self.market_tickers:
-            self.orderbooks[market_ticker] = OrderBook(market_ticker)
+            self.orderbooks[market_ticker] = OrderBook(market_ticker, logger=self.logger)
         
         # Initialize Market Data
         self.market_data = MarketData(market="Kalshi")
@@ -73,7 +75,7 @@ class KalshiWebSocket:
     def get_top_of_book(self, market_ticker):
         orderbook = self.orderbooks.get(market_ticker, None)
         if not orderbook:
-            print(f"Order Book with market ticker {market_ticker} not found on get_top_of_book")
+            self.logger.warning(f"Order Book with market ticker {market_ticker} not found on get_top_of_book")
             return None, None
         best_bid_price, best_bid_size = orderbook.get_best_bid()
         best_ask_price, best_ask_size = orderbook.get_best_ask()
@@ -84,10 +86,11 @@ class KalshiWebSocket:
         
         orderbook = self.orderbooks.get(asset_id, None)
         if not orderbook:
-            print(f"Order Book with asset ID {asset_id} not found on snapshot")
+            self.logger.warning(f"Order Book with asset ID {asset_id} not found on snapshot")
             return
         
         orderbook.load_kalshi_snapshot(msg)
+        self.logger.info(f"Loaded snapshot for {orderbook}")
         
     def handle_price_change(self, msg):
         asset_id = msg["market_ticker"]
@@ -96,11 +99,11 @@ class KalshiWebSocket:
         side = 0 if msg["side"] == "yes" else 1
         orderbook = self.orderbooks.get(asset_id, None)
         if not orderbook:
-            print(f"Order Book with asset ID {asset_id} not found on price change")
+            self.logger.warning(f"Order Book with asset ID {asset_id} not found on price change")
             return
         size = orderbook.get_size_at_price(side, price) + delta
         orderbook.update_order_book(side, price, size)
-        #print(orderbook)
+        self.logger.info(f"Updated order book for {orderbook}")
         return str(price), orderbook.get_best_bid()[0], orderbook.get_best_ask()[0]
     
     def handle_trade(self, msg):
@@ -112,8 +115,11 @@ class KalshiWebSocket:
         
         orderbook = self.orderbooks.get(asset_id, None)
         if not orderbook:
-            print(f"Order Book with asset ID {asset_id} not found on trade")
+            self.logger.warning(f"Order Book with asset ID {asset_id} not found on trade")
             return
+        
+        # Potentially NOT NEEDED
+        # Handled in handle_price_change
         
         if taker_side == 1:
             # Taker BUY NO | Remove from Bid side
@@ -155,7 +161,7 @@ class KalshiWebSocket:
                     ping_timeout=10,
                     close_timeout=5,
                 ) as websocket:
-                    print(f"Connected! Subscribing to orderbook for {', '.join(self.market_tickers)}")
+                    self.logger.info(f"Connected! Subscribing to orderbook for {', '.join(self.market_tickers)}")
 
                     # Subscribe to orderbook
                     subscribe_msg = {
@@ -176,7 +182,7 @@ class KalshiWebSocket:
                         msg_content = data["msg"]
 
                         if msg_type == "subscribed":
-                            print(f"Subscribed: {data}")
+                            self.logger.info(f"Subscribed: {data}")
 
                         elif msg_type == "orderbook_snapshot":
                             self.market_data.persist_orderbook_snapshot_event_kalshi(msg_content)
@@ -210,31 +216,31 @@ class KalshiWebSocket:
                             pass
 
                         elif msg_type == "error":
-                            print(f"Error: {data}")
+                            self.logger.error(f"Error: {data}")
 
             except websockets.exceptions.ConnectionClosedError as e:
-                print(f"WebSocket connection closed: {e}")
-                print("Reconnecting in 5 seconds...")
+                self.logger.error(f"WebSocket connection closed: {e}")
+                self.logger.info("Reconnecting in 5 seconds...")
                 await asyncio.sleep(5)
             except websockets.exceptions.ConnectionClosedOK:
-                print("WebSocket connection closed normally")
+                self.logger.info("WebSocket connection closed normally")
                 break
             except Exception as e:
-                print(f"WebSocket error: {e}")
-                print("Reconnecting in 5 seconds...")
+                self.logger.error(f"WebSocket error: {e}")
+                self.logger.info("Reconnecting in 5 seconds...")
                 await asyncio.sleep(5)
-                    
+
     def get_best_bid(self, market_ticker):
         orderbook = self.orderbooks.get(market_ticker, None)
         if not orderbook:
-            print(f"Order Book with market ticker {market_ticker} not found on get_best_bid")
+            self.logger.warning(f"Order Book with market ticker {market_ticker} not found on get_best_bid")
             return None, None
         return orderbook.get_best_bid()
     
     def get_best_ask(self, market_ticker):
         orderbook = self.orderbooks.get(market_ticker, None)
         if not orderbook:
-            print(f"Order Book with market ticker {market_ticker} not found on get_best_ask")
+            self.logger.warning(f"Order Book with market ticker {market_ticker} not found on get_best_ask")
             return None, None
         return orderbook.get_best_ask()
 

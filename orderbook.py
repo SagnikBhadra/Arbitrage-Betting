@@ -1,14 +1,16 @@
 from collections import defaultdict
 from decimal import Decimal
+import logging
 from sortedcontainers import SortedDict
 
 class OrderBook:
-    def __init__(self, asset_id):
+    def __init__(self, asset_id, logger=logging.getLogger(__name__)):
         # Orderbook = Asset ID -> Bids, Asks
         # Bids = Price -> Quantity
         #self.orderbook = defaultdict(lambda: {"bids": {}, "asks": {}})
         
         self.asset_id = asset_id
+        self.logger = logger
         # SortedDict in ascending order
         self.bids = SortedDict()
         self.asks = SortedDict()
@@ -16,10 +18,10 @@ class OrderBook:
     def update_order_book(self, side, price, size):
         book_side = self.bids if side == 0 else self.asks
         if size <= 0 and price in book_side:
-            #print(f"Removing price level {price} from {'bids' if side == 0 else 'asks'}")
+            self.logger.info(f"Removing price level {price} from {'bids' if side == 0 else 'asks'}")
             del book_side[price]
         else:
-            #print(f"Updating price level {price} in {'bids' if side == 0 else 'asks'} from size {book_side.get(price, 0)} to size {size}")
+            self.logger.info(f"Updating price level {price} in {'bids' if side == 0 else 'asks'} from size {book_side.get(price, 0)} to size {size}")
             book_side[price] = size
             
     def get_size_at_price(self, side, price):
@@ -71,7 +73,7 @@ class OrderBook:
             price = Decimal(1.0) - Decimal(level["px"]["value"]) if asset_id.endswith("-inverse") else Decimal(level["px"]["value"])
             size = Decimal(level["qty"])
             side = 1 if asset_id.endswith("-inverse") else 0
-            #print(f"Price: {price}, Size: {size}, Side: {'ASK' if side == 1 else 'BID'}")
+            #self.logger.info(f"Price: {price}, Size: {size}, Side: {'ASK' if side == 1 else 'BID'}")
             self.update_order_book(side=side, price=price, size=size)
 
         # ASKS (called "offers" in Polymarket)
@@ -79,7 +81,7 @@ class OrderBook:
             price = Decimal(1.0) - Decimal(level["px"]["value"]) if asset_id.endswith("-inverse") else Decimal(level["px"]["value"])
             size = Decimal(level["qty"])
             side = 0 if asset_id.endswith("-inverse") else 1
-            #print(f"Price: {price}, Size: {size}, Side: {'BID' if side == 0 else 'ASK'}")
+            #self.logger.info(f"Price: {price}, Size: {size}, Side: {'BID' if side == 0 else 'ASK'}")
             self.update_order_book(side=side, price=price, size=size)
 
     def load_kalshi_snapshot(self, snapshot):
@@ -91,5 +93,5 @@ class OrderBook:
             
         # Update asks (Use 1 - price to convert from "no" to "ask" price)
         for price, size in snapshot.get("no_dollars", []):
-            print(f"Price: {Decimal('1.0') - Decimal(price)}, Size: {size}")
+            #self.logger.info(f"Price: {Decimal('1.0') - Decimal(price)}, Size: {size}")
             self.update_order_book(side=1, price=Decimal('1.0') - Decimal(price), size=float(size))

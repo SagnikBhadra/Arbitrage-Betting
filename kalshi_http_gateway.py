@@ -2,6 +2,7 @@ import os
 import time
 import base64
 import json
+import logging
 import uuid
 import requests
 import uuid
@@ -33,6 +34,7 @@ class KalshiHTTPGateway:
         api_key_id: str,
         private_key_pem: str,
         base_url: str = "https://api.elections.kalshi.com/trade-api/v2",
+        logger=logging.getLogger(__name__),
     ):
         """
         api_key_id: your Kalshi API Key ID
@@ -41,6 +43,7 @@ class KalshiHTTPGateway:
         """
         self.api_key_id = api_key_id
         self.base_url = base_url.rstrip("/")
+        self.logger = logger
 
         # Extract API path prefix for signing (e.g. "/trade-api/v2")
         # Kalshi requires signing over the full path from root
@@ -91,8 +94,8 @@ class KalshiHTTPGateway:
         """
         headers = self._get_headers(method, path)
         url = f"{self.base_url}{path}"
-        print(f"headers: {headers}")
-        print(f"URL: {url}")
+        #self.logger.info(f"headers: {headers}")
+        #self.logger.info(f"URL: {url}")
 
         response = requests.request(method, url, headers=headers, json=json_body)
 
@@ -151,12 +154,13 @@ class KalshiHTTPGateway:
             order_data["client_order_id"] = str(uuid.uuid4())
             
 
-        print(f"Placing order with data: {order_data}")
+        self.logger.info(f"Placing order with data: {order_data}")
         #return self._request("POST", "/portfolio/orders", json_body=order_data)
         return 
 
     def cancel_order(self, order_id: str) -> dict:
         """Cancel an open order by order_id."""
+        self.logger.info(f"Cancelling order {order_id}")
         return self._request("DELETE", f"/portfolio/orders/{order_id}")
 
     def get_market(self, ticker: str) -> dict:

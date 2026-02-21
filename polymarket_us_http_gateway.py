@@ -2,6 +2,7 @@ import os
 import time
 import json
 import base64
+import logging
 import uuid
 import requests
 
@@ -31,11 +32,13 @@ class PolymarketUSHTTPGateway:
         api_key_id: str,
         key_file_path: str,
         base_url: str = "https://api.polymarket.us",
+        logger=logging.getLogger(__name__),
     ):
         self.base_url = base_url.rstrip("/")
         self.api_key_id = api_key_id
         self.key_file_path = key_file_path
-        
+        self.logger = logger
+
         # Load private key from file
         with open(self.key_file_path, "r") as f:
             private_key_base64 = f.read().strip()
@@ -126,8 +129,8 @@ class PolymarketUSHTTPGateway:
             "intent": f"ORDER_INTENT_{side}",
             "clientOrderId": str(uuid.uuid4()),
         }
-        
-        print(f"Placing order: {order}")
+
+        self.logger.info(f"Placing order: {order}")
 
         #return self._request("POST", "/v1/orders", order)
 
@@ -135,16 +138,20 @@ class PolymarketUSHTTPGateway:
         body = {
             "marketSlug": market_slug,
         }
+        self.logger.info(f"Cancelling order {order_id} with body: {body}")
         return self._request("POST", f"/v1/order/{order_id}/cancel", body)
 
     def get_orders(self):
+        self.logger.info(f"Getting open orders")
         return self._request("GET", "/v1/orders/open")
 
     def get_order(self, order_id: str):
+        self.logger.info(f"Getting order {order_id}")
         return self._request("GET", f"/v1/orders/{order_id}")
     
     def get_positions(self) -> dict:
         """GET /v1/portfolio/positions"""
+        self.logger.info(f"Getting portfolio positions")
         return self._request("GET", "/v1/portfolio/positions")
 
 
