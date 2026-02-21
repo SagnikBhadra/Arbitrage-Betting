@@ -1,0 +1,6 @@
+2026-02-21 13:27:15,771 | WARNING | Missing ask price for aec-nba-orl-pho-2026-02-21 or KXNBAGAME-26FEB21ORLPHX-ORL. Skipping double buy arb.
+2026-02-21 13:27:15,771 | WARNING | Missing ask price for aec-nba-phi-no-2026-02-21 or KXNBAGAME-26FEB21PHINOP-PHI. Skipping double buy arb.
+2026-02-21 13:27:15,771 | WARNING | Missing ask price for aec-nba-sac-sa-2026-02-21 or KXNBAGAME-26FEB21SACSAS-SAC. Skipping double buy arb.
+2026-02-21 13:27:15,771 | WARNING | Missing ask price for aec-nba-det-chi-2026-02-21 or KXNBAGAME-26FEB21DETCHI-DET. Skipping double buy arb.
+2026-02-21 13:27:15,779 | WARNING | Missing ask price for aec-nba-mem-mia-2026-02-21 or KXNBAGAME-26FEB21MEMMIA-MEM. Skipping double buy arb.
+2026-02-21 13:27:15,779 | WARNING | Missing ask price for aec-nba-hou-ny-2026-02-21 or KXNBAGAME-26FEB21HOUNYK-HOU. Skipping double buy arb.

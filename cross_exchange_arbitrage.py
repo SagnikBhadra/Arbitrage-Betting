@@ -1,4 +1,5 @@
 import json
+import logging
 from decimal import Decimal
 
 from polymarket_us_feed import PolymarketUSWebSocket
@@ -7,6 +8,17 @@ from kalshi_feed import KalshiWebSocket
 from kalshi_http_gateway import KalshiHTTPGateway, load_private_key
 from utils import get_maker_fees_kalshi, get_taker_fees_kalshi
 from collections import defaultdict
+
+# ----------------------------
+# Logging Configuration
+# ----------------------------
+logging.basicConfig(
+    filename="logging/cross_exchange_arb.log",
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(name)s - %(message)s",
+)
+
+cross_arb_logger = logging.getLogger(__name__)
 
 class CrossExchangeArbitrage:
     """
@@ -18,11 +30,12 @@ class CrossExchangeArbitrage:
         orderbook.get_best_ask() -> (price, size) or (None, None)
     """
 
-    def __init__(self, polymarket_client: PolymarketUSWebSocket, kalshi_client: KalshiWebSocket, mapping: dict, min_edge=0.0):
+    def __init__(self, polymarket_client: PolymarketUSWebSocket, kalshi_client: KalshiWebSocket, mapping: dict, logger=cross_arb_logger, min_edge=0.0):
         self.polymarket_client = polymarket_client
         self.kalshi_client = kalshi_client
         self.mapping = mapping
         self.min_edge = Decimal(min_edge)  # buffer for fees/slippage
+        self.logger = logger
 
     def _get_books(self, poly_id, kalshi_ticker):
         poly_ob = self.polymarket_client.orderbooks.get(poly_id)
@@ -114,7 +127,10 @@ class CrossExchangeArbitrage:
             poly_B, kalshi_B = self._get_books(other_poly_id, other_kalshi_ticker)
 
             if not (poly_A and kalshi_A and poly_B and kalshi_B):
-                print(f"Orderbook missing for {poly_id} or {kalshi_ticker} or {other_poly_id} or {other_kalshi_ticker}. Skipping.")
+                self.logger.warning(
+                    f"Orderbook missing for {poly_id} or {kalshi_ticker} "
+                    f"or {other_poly_id} or {other_kalshi_ticker}. Skipping."
+                )
                 continue
 
             poly_bid_A, poly_bid_A_size, poly_ask_A, poly_ask_A_size = self._best_prices(poly_A)
@@ -144,12 +160,12 @@ class CrossExchangeArbitrage:
             if poly_ask_A and kalshi_ask_A:
                 best_ask_A = min(x for x in [poly_ask_A, kalshi_ask_A] if x)
             else:
-                print(f"Missing ask price for {poly_id} or {kalshi_ticker}. Skipping double buy arb.")
+                self.logger.warning(f"Missing ask price for {poly_id} or {kalshi_ticker}. Skipping double buy arb.")
                 continue
             if poly_ask_B and kalshi_ask_B:
                 best_ask_B = min(x for x in [poly_ask_B, kalshi_ask_B] if x)
             else:
-                print(f"Missing ask price for {other_poly_id} or {other_kalshi_ticker}. Skipping double buy arb.")
+                self.logger.warning(f"Missing ask price for {other_poly_id} or {other_kalshi_ticker}. Skipping double buy arb.")
                 continue
 
             arb = self._double_buy_arb(best_ask_A, best_ask_B)
@@ -161,12 +177,12 @@ class CrossExchangeArbitrage:
             if poly_bid_A and kalshi_bid_A:
                 best_bid_A = max(x for x in [poly_bid_A, kalshi_bid_A] if x)
             else:
-                print(f"Missing bid price for {poly_id} or {kalshi_ticker}. Skipping double sell arb.")
+                self.logger.warning(f"Missing bid price for {poly_id} or {kalshi_ticker}. Skipping double sell arb.")
                 continue
             if poly_bid_B and kalshi_bid_B:
                 best_bid_B = max(x for x in [poly_bid_B, kalshi_bid_B] if x)
             else:
-                print(f"Missing bid price for {other_poly_id} or {other_kalshi_ticker}. Skipping double sell arb.")
+                self.logger.warning(f"Missing bid price for {other_poly_id} or {other_kalshi_ticker}. Skipping double sell arb.")
                 continue
 
             arb = self._double_sell_arb(best_bid_A, best_bid_B)

@@ -1,5 +1,8 @@
 import asyncio
+from datetime import datetime
 import json
+import logging
+from logging.handlers import RotatingFileHandler
 import websocket
 import uuid
 from decimal import Decimal
@@ -61,6 +64,32 @@ POLYMARKET_US_PRIVATE_KEY_FILE_PATH = "polymarket.key"
 POLYMARKET_US_BASE_URL = "https://api.polymarket.us"
 POLYMARKET_US_WS_URL_BASE = "wss://api.polymarket.us"
 
+# ----------------------------
+# Create dated log filename
+# ----------------------------
+today_str = datetime.now().strftime("%Y-%m-%d")
+cross_arb_log_filename = f"logging/cross_exchange_arb_{today_str}.log"
+
+# ----------------------------
+# Configure logger
+# ----------------------------
+cross_arb_logger = logging.getLogger("CrossExchangeArb")
+cross_arb_logger.setLevel(logging.INFO)
+
+handler = RotatingFileHandler(
+    cross_arb_log_filename,
+    maxBytes=10_000_000,  # 10MB
+    backupCount=5
+)
+
+formatter = logging.Formatter(
+    "%(asctime)s | %(levelname)s | %(message)s"
+)
+
+handler.setFormatter(formatter)
+cross_arb_logger.addHandler(handler)
+
+cross_arb_logger.propagate = False  # prevents duplicate logs
 
 def get_static_mapping(static_name: str):
     with open('statics/statics.json', 'r') as f:
@@ -265,13 +294,14 @@ def crossed_markets(polymarket_client, kalshi_client, polymarket_kalshi_mapping)
         polymarket_client,
         kalshi_client,
         polymarket_kalshi_mapping,
+        logger=cross_arb_logger,
         min_edge=0.02
     )
 
     opps = arb_engine.find_opportunities()
 
     for o in opps:
-        print(o)
+        cross_arb_logger.info(o)
 
 
 def wide_spreads():
