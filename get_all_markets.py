@@ -8,6 +8,9 @@ PAGE_LIMIT = 500  # Lower page size can reduce server load
 MAX_RETRIES = 5
 INITIAL_BACKOFF = 1  # seconds
 
+# NBA Basketball series ticker: KXNBAGAME
+# NCAA Basketball series ticker: KXNCAAMBGAME
+
 def fetch_all_market_tickers(series_ticker=""):
     ticker_map = {}
     cursor = None
@@ -71,7 +74,7 @@ if __name__ == "__main__":
         data = json.load(f)
     
     correlated_market_mapping = {}
-    kalshi_tickers = fetch_all_market_tickers("KXNCAAMBGAME")
+    kalshi_tickers = fetch_all_market_tickers("KXNBAGAME")
     tickers = list(kalshi_tickers.keys())
     for i in range(0, len(tickers), 2):
         if i + 1 < len(tickers):

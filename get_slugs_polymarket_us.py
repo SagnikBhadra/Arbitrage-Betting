@@ -61,18 +61,20 @@ path = "/v1/markets"
 # GET /v1/events?active=true&categories=sports&eventDate=2026-02-13&ended=false&live=false
 start_of_day, end_of_day = get_start_end_of_day_timestamps()
 # Only getting 200 markets for testing purposes, need to implement pagination to get all markets
-payload = {'categories': 'sports', 'endDateMin': start_of_day, 'endDateMax': end_of_day, 'limit': 200}
+# Should add the following filter on paylod:  'endDateMax': end_of_day,
+payload = {'categories': 'sports', 'endDateMin': start_of_day, 'limit': 200}
 #payload = {'active': True, 'closed': False, 'archived': False}
 headers = sign_request("GET", path)
 response = requests.get(f"https://api.polymarket.us{path}", headers=headers, params=payload).json()
-#print(response)
+print(response)
 
 #response = dict(response)
 # Markets
 slugs = []
 
 for market in response["markets"]:
-    print(f"Market ID: {market['id']}, Name: {market['question']}, Slug: {market['slug']}")
-    slugs.append(market['slug'])
+    if "nba" in market["slug"]:
+        print(f"Market ID: {market['id']}, Name: {market['question']}, Slug: {market['slug']}")
+        slugs.append(market['slug'])
 
 load_slugs_to_static_file(slugs)
