@@ -4,13 +4,13 @@ import logging
 from sortedcontainers import SortedDict
 
 class OrderBook:
-    def __init__(self, asset_id, logger=logging.getLogger(__name__)):
+    def __init__(self, asset_id):
         # Orderbook = Asset ID -> Bids, Asks
         # Bids = Price -> Quantity
         #self.orderbook = defaultdict(lambda: {"bids": {}, "asks": {}})
         
         self.asset_id = asset_id
-        self.logger = logger
+        self.logger = logging.getLogger("orderbook")
         # SortedDict in ascending order
         self.bids = SortedDict()
         self.asks = SortedDict()
@@ -18,10 +18,10 @@ class OrderBook:
     def update_order_book(self, side, price, size):
         book_side = self.bids if side == 0 else self.asks
         if size <= 0 and price in book_side:
-            self.logger.info(f"Removing price level {price} from {'bids' if side == 0 else 'asks'}")
+            #self.logger.info(f"Removing price level {price} from {'bids' if side == 0 else 'asks'}")
             del book_side[price]
         else:
-            self.logger.info(f"Updating price level {price} in {'bids' if side == 0 else 'asks'} from size {book_side.get(price, 0)} to size {size}")
+            #self.logger.info(f"Updating price level {price} in {'bids' if side == 0 else 'asks'} from size {book_side.get(price, 0)} to size {size}")
             book_side[price] = size
             
     def get_size_at_price(self, side, price):

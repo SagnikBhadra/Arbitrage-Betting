@@ -19,6 +19,7 @@ from kalshi_feed import KalshiWebSocket
 from polymarket_us_http_gateway import PolymarketUSHTTPGateway
 from kalshi_http_gateway import KalshiHTTPGateway, load_private_key
 
+from setup_loggers import setup_logging
 from utils import get_asset_ids, get_maker_fees_kalshi, get_taker_fees_kalshi
 from collections import defaultdict
 
@@ -57,65 +58,30 @@ POLYMARKET_US_PRIVATE_KEY_FILE_PATH = "polymarket.key"
 POLYMARKET_US_BASE_URL = "https://api.polymarket.us"
 POLYMARKET_US_WS_URL_BASE = "wss://api.polymarket.us"
 
-
-def define_logger(filename_prefix: str, logger_name: str):
-    # ----------------------------
-    # Create dated log filename
-    # ----------------------------
-    today_str = datetime.now().strftime("%Y-%m-%d")
-    log_filename = f"logging/{filename_prefix}_{today_str}.log"
-
-    # ----------------------------
-    # Configure logger
-    # ----------------------------
-    logger = logging.getLogger(logger_name)
-    logger.setLevel(logging.INFO)
-
-    handler = RotatingFileHandler(
-        log_filename,
-        maxBytes=10_000_000,  # 10MB
-        backupCount=5
-    )
-
-    formatter = logging.Formatter(
-        "%(asctime)s | %(levelname)s | %(message)s"
-    )
-
-    handler.setFormatter(formatter)
-    logger.addHandler(handler)
-
-    logger.propagate = False  # prevents duplicate logs
-    
-    return logger
-
 def get_static_mapping(static_name: str):
     with open('statics/statics.json', 'r') as f:
         statics = json.load(f)
     return statics[static_name]
 
 def intra_kalshi_arbitrage(kalshi_client, kalshi_gateway, correlated_market_mapping, profit_threshold=0.02):
-    # Create logger
-    intra_kalshi_logger = define_logger("intra_kalshi_arb", "IntraKalshiArb")
 
     # Create object
     intra_kalshi_arb_strategy = IntraKalshiArbitrage(
         kalshi_client,
         kalshi_gateway,
-        correlated_market_mapping,
-        logger=intra_kalshi_logger
+        correlated_market_mapping
     )
 
     # Call find_opportunities() every second and log any opportunities above profit_threshold
     intra_kalshi_arb_strategy.find_opportunities(profit_threshold=profit_threshold)
 
 def crossed_markets(polymarket_client, kalshi_client, polymarket_kalshi_mapping):
-    cross_arb_logger = define_logger("cross_exchange_arb", "CrossExchangeArb")
+    cross_arb_logger = logging.getLogger("cross_exchange_strategy")
 
     cross_exchange_arb_strategy = CrossExchangeArbitrage(
         polymarket_client,
         kalshi_client,
         polymarket_kalshi_mapping,
-        logger=cross_arb_logger,
         min_edge=0.02
     )
 
@@ -142,21 +108,13 @@ async def main():
     # TODO: Add deque to best bid/ask and only compare if timestamp is within delta
     # TODO: Track time span between market opportunity and when it's resolved
     
-    # Define Loggers for each Gateway
-    polymarket_us_gateway_logger = define_logger("polymarket_us_gateway", "PolymarketUSGateway")
-    kalshi_gateway_logger = define_logger("kalshi_gateway", "KalshiGateway")
-    
     # Initialize HTTP gateway for order execution
     private_key_pem = load_private_key(PRIVATE_KEY_PATH)
-    kalshi_gateway = KalshiHTTPGateway(KEY_ID, private_key_pem, logger=kalshi_gateway_logger)
-    polymarket_us_gateway = PolymarketUSHTTPGateway(POLYMARKET_US_API_KEY, POLYMARKET_US_PRIVATE_KEY_FILE_PATH, POLYMARKET_US_BASE_URL, logger=polymarket_us_gateway_logger)
+    kalshi_gateway = KalshiHTTPGateway(KEY_ID, private_key_pem)
+    polymarket_us_gateway = PolymarketUSHTTPGateway(POLYMARKET_US_API_KEY, POLYMARKET_US_PRIVATE_KEY_FILE_PATH, POLYMARKET_US_BASE_URL)
     
-    # Define Loggers for each exchange
-    polymarket_us_feed_logger = define_logger("polymarket_us_feed", "PolymarketUSFeed")
-    kalshi_feed_logger = define_logger("kalshi_feed", "KalshiFeed")
-
-    polymarket_us_client = PolymarketUSWebSocket(POLYMARKET_US_WS_URL_BASE, POLYMARKET_US_CHANNEL_TYPE, get_asset_ids("Polymarket_US"), POLYMARKET_US_API_KEY, POLYMARKET_US_PRIVATE_KEY_FILE_PATH, logger=polymarket_us_feed_logger)
-    kalshi_client = KalshiWebSocket(KEY_ID, PRIVATE_KEY_PATH, get_asset_ids("Kalshi"), WS_URL, logger=kalshi_feed_logger)
+    polymarket_us_client = PolymarketUSWebSocket(POLYMARKET_US_WS_URL_BASE, POLYMARKET_US_CHANNEL_TYPE, get_asset_ids("Polymarket_US"), POLYMARKET_US_API_KEY, POLYMARKET_US_PRIVATE_KEY_FILE_PATH)
+    kalshi_client = KalshiWebSocket(KEY_ID, PRIVATE_KEY_PATH, get_asset_ids("Kalshi"), WS_URL)
     await asyncio.gather(
         polymarket_us_client.run(),
         kalshi_client.orderbook_websocket(),
@@ -164,5 +122,5 @@ async def main():
     )
 
 if __name__ == "__main__":
-    
+    setup_logging()
     asyncio.run(main())

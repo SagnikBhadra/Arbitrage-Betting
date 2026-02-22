@@ -34,7 +34,6 @@ class KalshiHTTPGateway:
         api_key_id: str,
         private_key_pem: str,
         base_url: str = "https://api.elections.kalshi.com/trade-api/v2",
-        logger=logging.getLogger(__name__),
     ):
         """
         api_key_id: your Kalshi API Key ID
@@ -43,7 +42,7 @@ class KalshiHTTPGateway:
         """
         self.api_key_id = api_key_id
         self.base_url = base_url.rstrip("/")
-        self.logger = logger
+        self.logger = logging.getLogger("kalshi_http_gateway")
 
         # Extract API path prefix for signing (e.g. "/trade-api/v2")
         # Kalshi requires signing over the full path from root

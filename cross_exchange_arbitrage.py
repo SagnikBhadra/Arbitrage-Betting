@@ -8,18 +8,6 @@ from kalshi_feed import KalshiWebSocket
 from kalshi_http_gateway import KalshiHTTPGateway, load_private_key
 from utils import get_maker_fees_kalshi, get_taker_fees_kalshi
 from collections import defaultdict
-
-# ----------------------------
-# Logging Configuration
-# ----------------------------
-logging.basicConfig(
-    filename="logging/cross_exchange_arb.log",
-    level=logging.INFO,
-    format="%(asctime)s [%(levelname)s] %(name)s - %(message)s",
-)
-
-cross_arb_logger = logging.getLogger(__name__)
-
 class CrossExchangeArbitrage:
     """
     Detects arbitrage opportunities between Polymarket US and Kalshi
@@ -30,12 +18,12 @@ class CrossExchangeArbitrage:
         orderbook.get_best_ask() -> (price, size) or (None, None)
     """
 
-    def __init__(self, polymarket_client: PolymarketUSWebSocket, kalshi_client: KalshiWebSocket, mapping: dict, logger=cross_arb_logger, min_edge=0.0):
+    def __init__(self, polymarket_client: PolymarketUSWebSocket, kalshi_client: KalshiWebSocket, mapping: dict, min_edge=0.0):
         self.polymarket_client = polymarket_client
         self.kalshi_client = kalshi_client
         self.mapping = mapping
         self.min_edge = Decimal(min_edge)  # buffer for fees/slippage
-        self.logger = logger
+        self.logger = logging.getLogger("cross_exchange_strategy")
 
     def _get_books(self, poly_id, kalshi_ticker):
         poly_ob = self.polymarket_client.orderbooks.get(poly_id)

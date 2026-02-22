@@ -11,14 +11,14 @@ from utils import get_asset_ids, get_maker_fees_kalshi, get_taker_fees_kalshi
 from collections import defaultdict
 
 class IntraKalshiArbitrage:
-    def __init__(self, kalshi_client: KalshiWebSocket, kalshi_gateway: KalshiHTTPGateway, correlated_market_mapping: dict, logger=logging.getLogger(__name__)):
+    def __init__(self, kalshi_client: KalshiWebSocket, kalshi_gateway: KalshiHTTPGateway, correlated_market_mapping: dict):
         """
         Detects arbitrage opportunities within Kalshi for 2-outcome moneyline markets.
         """
         self.kalshi_client = kalshi_client
         self.kalshi_gateway = kalshi_gateway
         self.correlated_market_mapping = correlated_market_mapping
-        self.logger = logger
+        self.logger = logging.getLogger("intra_kalshi_strategy")
 
         self.overall_order_count = 0
         self.overall_profit = 0.0

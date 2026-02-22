@@ -10,7 +10,7 @@ api_key_id = "8f004f3b-4858-4401-a979-ca189946cde1"
 
 def get_start_end_of_day_timestamps():
     # Get today's date
-    today = datetime.today() + timedelta(days=1)  # UTC time
+    today = datetime.today() + timedelta(days=0)  # UTC time
 
     # Start of day (00:00:00 UTC)
     start_of_day = today.replace(hour=0, minute=0, second=0, microsecond=0).strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -62,7 +62,7 @@ path = "/v1/markets"
 start_of_day, end_of_day = get_start_end_of_day_timestamps()
 # Only getting 200 markets for testing purposes, need to implement pagination to get all markets
 # Should add the following filter on paylod:  'endDateMax': end_of_day,
-payload = {'categories': 'sports', 'endDateMin': start_of_day, 'limit': 200}
+payload = {'categories': 'sports', 'endDateMin': start_of_day, 'limit': 400}
 #payload = {'active': True, 'closed': False, 'archived': False}
 headers = sign_request("GET", path)
 response = requests.get(f"https://api.polymarket.us{path}", headers=headers, params=payload).json()

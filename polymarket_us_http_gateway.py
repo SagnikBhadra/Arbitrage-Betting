@@ -32,12 +32,11 @@ class PolymarketUSHTTPGateway:
         api_key_id: str,
         key_file_path: str,
         base_url: str = "https://api.polymarket.us",
-        logger=logging.getLogger(__name__),
     ):
         self.base_url = base_url.rstrip("/")
         self.api_key_id = api_key_id
         self.key_file_path = key_file_path
-        self.logger = logger
+        self.logger = logging.getLogger("polymarket_us_http_gateway")
 
         # Load private key from file
         with open(self.key_file_path, "r") as f:

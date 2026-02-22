@@ -30,18 +30,18 @@ WS_URL = "wss://api.elections.kalshi.com/trade-api/ws/v2"
 """
 
 class KalshiWebSocket:
-    def __init__(self, key_id, private_key_path, market_tickers, ws_url, logger=logging.getLogger(__name__)):
+    def __init__(self, key_id, private_key_path, market_tickers, ws_url):
         self.key_id = key_id
         self.private_key_path = private_key_path
         self.market_tickers = market_tickers
         self.ws_url = ws_url
-        self.logger = logger
+        self.logger = logging.getLogger("kalshi_feed")
         
         # Initialize OrderBooks
         self.orderbooks = defaultdict(OrderBook)
         #for asset_id in self.asset_ids:
         for market_ticker in self.market_tickers:
-            self.orderbooks[market_ticker] = OrderBook(market_ticker, logger=self.logger)
+            self.orderbooks[market_ticker] = OrderBook(market_ticker)
         
         # Initialize Market Data
         self.market_data = MarketData(market="Kalshi")

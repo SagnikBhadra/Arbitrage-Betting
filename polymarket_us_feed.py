@@ -13,13 +13,13 @@ from cryptography.hazmat.primitives.asymmetric import ed25519
 
 
 class PolymarketUSWebSocket:
-    def __init__(self, url_base, channel_type, slugs, api_key_id, key_file_path, logger=logging.getLogger(__name__)):
+    def __init__(self, url_base, channel_type, slugs, api_key_id, key_file_path):
         self.url = f"{url_base}/v1/ws/{channel_type}"
         self.channel_type = channel_type
         self.slugs = slugs
         self.api_key_id = api_key_id
         self.key_file_path = key_file_path
-        self.logger = logger
+        self.logger = logging.getLogger("polymarket_us_feed")
 
         # Load private key from file
         with open(self.key_file_path, "r") as f:
