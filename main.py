@@ -76,19 +76,15 @@ def intra_kalshi_arbitrage(kalshi_client, kalshi_gateway, correlated_market_mapp
     intra_kalshi_arb_strategy.find_opportunities(profit_threshold=profit_threshold)
 
 def crossed_markets(polymarket_client, kalshi_client, polymarket_kalshi_mapping):
-    cross_arb_logger = logging.getLogger("cross_exchange_strategy")
 
     cross_exchange_arb_strategy = CrossExchangeArbitrage(
         polymarket_client,
         kalshi_client,
         polymarket_kalshi_mapping,
-        min_edge=0.02
+        min_edge=0.01
     )
 
-    opps = cross_exchange_arb_strategy.find_opportunities()
-
-    for o in opps:
-        cross_arb_logger.info(o)
+    cross_exchange_arb_strategy.find_opportunities()
 
 
 def wide_spreads():

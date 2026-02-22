@@ -52,7 +52,6 @@ class IntraKalshiArbitrage:
         Args:
             profit_threshold (float): The minimum profit threshold for considering an arbitrage opportunity.
         """
-        global overall_order_count, overall_profit, cached_balance
 
         for ticker, orderbook in self.kalshi_client.orderbooks.items():
             # Get correlated markets
@@ -94,9 +93,9 @@ class IntraKalshiArbitrage:
                                 
                                 # Calculate required balance (cost of both orders)
                                 required_balance = (float(best_ask) + float(correlated_best_ask)) * order_size
-                                overall_order_count += order_size
-                                overall_profit += max((1.0 - combined_price) * order_size / 100.0 , 0)
-                                
+                                self.overall_order_count += order_size
+                                self.overall_profit += max((1.0 - combined_price) * order_size / 100.0 , 0)
+
                                 # Check balance before placing orders
                                 if not self.check_and_update_balance(required_balance):
                                     self.logger.warning(f"Insufficient balance. Required: ${required_balance:.2f}, Available: ${self.cached_balance:.2f}")
