@@ -1,6 +1,6 @@
 import time, base64, requests
 import json
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, date
 from cryptography.hazmat.primitives.asymmetric import ed25519
 
 # Your credentials
@@ -10,7 +10,7 @@ api_key_id = "8f004f3b-4858-4401-a979-ca189946cde1"
 
 def get_start_end_of_day_timestamps():
     # Get today's date
-    today = datetime.today() + timedelta(days=0)  # UTC time
+    today = datetime.today() + timedelta(days=1)  # UTC time
 
     # Start of day (00:00:00 UTC)
     start_of_day = today.replace(hour=0, minute=0, second=0, microsecond=0).strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -61,20 +61,22 @@ path = "/v1/markets"
 # GET /v1/events?active=true&categories=sports&eventDate=2026-02-13&ended=false&live=false
 start_of_day, end_of_day = get_start_end_of_day_timestamps()
 # Only getting 200 markets for testing purposes, need to implement pagination to get all markets
-# Should add the following filter on paylod:  'endDateMax': end_of_day,
-payload = {'categories': 'sports', 'endDateMin': start_of_day, 'limit': 400}
+# Should add the following filter on paylod:  'endDateMin': start_of_day, 'endDateMax': end_of_day,
+payload = {'categories': 'sports', 'limit': 1000,'active': True, 'closed': False, 'archived': False}
 #payload = {'active': True, 'closed': False, 'archived': False}
 headers = sign_request("GET", path)
 response = requests.get(f"https://api.polymarket.us{path}", headers=headers, params=payload).json()
-print(response)
+#print(response)
 
 #response = dict(response)
 # Markets
 slugs = []
+today = date.today()
+formatted_date = today.isoformat()
 
 for market in response["markets"]:
-    if "nba" in market["slug"]:
-        print(f"Market ID: {market['id']}, Name: {market['question']}, Slug: {market['slug']}")
+    if "aec-nba" in market["slug"] and formatted_date in market["slug"]:
+        print(f"Market ID: {market['id']}, Name: {market['question']}, Slug: {market['slug']}, End Date: {market['endDate']}")
         slugs.append(market['slug'])
 
 load_slugs_to_static_file(slugs)

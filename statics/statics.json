@@ -9,166 +9,152 @@
             "101506943049053276934626391886226570064171431948041761918666910024462041911155": "Luka_NO"
         },
         "Kalshi": {
-            "KXNBAGAME-26FEB22PORPHX-POR": "POR_26FEB22_WIN",
-            "KXNBAGAME-26FEB22PORPHX-PHX": "PHX_26FEB22_WIN",
-            "KXNBAGAME-26FEB22ORLLAC-ORL": "ORL_26FEB22_WIN",
-            "KXNBAGAME-26FEB22ORLLAC-LAC": "LAC_26FEB22_WIN",
-            "KXNBAGAME-26FEB22NYKCHI-NYK": "NYK_26FEB22_WIN",
-            "KXNBAGAME-26FEB22NYKCHI-CHI": "CHI_26FEB22_WIN",
-            "KXNBAGAME-26FEB22CHAWAS-WAS": "WAS_26FEB22_WIN",
-            "KXNBAGAME-26FEB22CHAWAS-CHA": "CHA_26FEB22_WIN",
-            "KXNBAGAME-26FEB22PHIMIN-PHI": "PHI_26FEB22_WIN",
-            "KXNBAGAME-26FEB22PHIMIN-MIN": "MIN_26FEB22_WIN",
-            "KXNBAGAME-26FEB22BOSLAL-LAL": "LAL_26FEB22_WIN",
-            "KXNBAGAME-26FEB22BOSLAL-BOS": "BOS_26FEB22_WIN",
-            "KXNBAGAME-26FEB22DALIND-IND": "IND_26FEB22_WIN",
-            "KXNBAGAME-26FEB22DALIND-DAL": "DAL_26FEB22_WIN",
-            "KXNBAGAME-26FEB22DENGSW-GSW": "GSW_26FEB22_WIN",
-            "KXNBAGAME-26FEB22DENGSW-DEN": "DEN_26FEB22_WIN",
-            "KXNBAGAME-26FEB22BKNATL-BKN": "BKN_26FEB22_WIN",
-            "KXNBAGAME-26FEB22BKNATL-ATL": "ATL_26FEB22_WIN",
-            "KXNBAGAME-26FEB22TORMIL-TOR": "TOR_26FEB22_WIN",
-            "KXNBAGAME-26FEB22TORMIL-MIL": "MIL_26FEB22_WIN",
-            "KXNBAGAME-26FEB22CLEOKC-OKC": "OKC_26FEB22_WIN",
-            "KXNBAGAME-26FEB22CLEOKC-CLE": "CLE_26FEB22_WIN"
+            "KXNBAGAME-26FEB26NOPUTA-UTA": "UTA_26FEB26_WIN",
+            "KXNBAGAME-26FEB26NOPUTA-NOP": "NOP_26FEB26_WIN",
+            "KXNBAGAME-26FEB26MINLAC-MIN": "MIN_26FEB26_WIN",
+            "KXNBAGAME-26FEB26MINLAC-LAC": "LAC_26FEB26_WIN",
+            "KXNBAGAME-26FEB26LALPHX-PHX": "PHX_26FEB26_WIN",
+            "KXNBAGAME-26FEB26LALPHX-LAL": "LAL_26FEB26_WIN",
+            "KXNBAGAME-26FEB26SACDAL-SAC": "SAC_26FEB26_WIN",
+            "KXNBAGAME-26FEB26SACDAL-DAL": "DAL_26FEB26_WIN",
+            "KXNBAGAME-26FEB26PORCHI-POR": "POR_26FEB26_WIN",
+            "KXNBAGAME-26FEB26PORCHI-CHI": "CHI_26FEB26_WIN",
+            "KXNBAGAME-26FEB26WASATL-WAS": "WAS_26FEB26_WIN",
+            "KXNBAGAME-26FEB26WASATL-ATL": "ATL_26FEB26_WIN",
+            "KXNBAGAME-26FEB26SASBKN-SAS": "SAS_26FEB26_WIN",
+            "KXNBAGAME-26FEB26SASBKN-BKN": "BKN_26FEB26_WIN",
+            "KXNBAGAME-26FEB26HOUORL-ORL": "ORL_26FEB26_WIN",
+            "KXNBAGAME-26FEB26HOUORL-HOU": "HOU_26FEB26_WIN",
+            "KXNBAGAME-26FEB26CHAIND-IND": "IND_26FEB26_WIN",
+            "KXNBAGAME-26FEB26CHAIND-CHA": "CHA_26FEB26_WIN",
+            "KXNBAGAME-26FEB26MIAPHI-PHI": "PHI_26FEB26_WIN",
+            "KXNBAGAME-26FEB26MIAPHI-MIA": "MIA_26FEB26_WIN"
         },
         "Polymarket_US": {
-            "aec-nba-cle-okc-2026-02-22": "aec-nba-cle-okc-2026-02-22",
-            "aec-nba-bkn-atl-2026-02-22": "aec-nba-bkn-atl-2026-02-22",
-            "aec-nba-den-gs-2026-02-22": "aec-nba-den-gs-2026-02-22",
-            "aec-nba-tor-mil-2026-02-22": "aec-nba-tor-mil-2026-02-22",
-            "aec-nba-dal-ind-2026-02-22": "aec-nba-dal-ind-2026-02-22",
-            "aec-nba-cha-was-2026-02-22": "aec-nba-cha-was-2026-02-22",
-            "aec-nba-bos-lal-2026-02-22": "aec-nba-bos-lal-2026-02-22",
-            "aec-nba-phi-min-2026-02-22": "aec-nba-phi-min-2026-02-22",
-            "aec-nba-ny-chi-2026-02-22": "aec-nba-ny-chi-2026-02-22",
-            "aec-nba-por-pho-2026-02-22": "aec-nba-por-pho-2026-02-22",
-            "aec-nba-orl-lac-2026-02-22": "aec-nba-orl-lac-2026-02-22"
+            "aec-nba-cha-ind-2026-02-26": "aec-nba-cha-ind-2026-02-26",
+            "aec-nba-mia-phi-2026-02-26": "aec-nba-mia-phi-2026-02-26",
+            "aec-nba-sa-bkn-2026-02-26": "aec-nba-sa-bkn-2026-02-26",
+            "aec-nba-por-chi-2026-02-26": "aec-nba-por-chi-2026-02-26",
+            "aec-nba-was-atl-2026-02-26": "aec-nba-was-atl-2026-02-26",
+            "aec-nba-hou-orl-2026-02-26": "aec-nba-hou-orl-2026-02-26",
+            "aec-nba-sac-dal-2026-02-26": "aec-nba-sac-dal-2026-02-26",
+            "aec-nba-lal-pho-2026-02-26": "aec-nba-lal-pho-2026-02-26",
+            "aec-nba-no-uta-2026-02-26": "aec-nba-no-uta-2026-02-26",
+            "aec-nba-min-lac-2026-02-26": "aec-nba-min-lac-2026-02-26"
         }
     },
     "CORRELATED_MARKET_MAPPING": {
-        "KXNBAGAME-26FEB22PORPHX-POR": [
-            "KXNBAGAME-26FEB22PORPHX-PHX"
+        "KXNBAGAME-26FEB26NOPUTA-UTA": [
+            "KXNBAGAME-26FEB26NOPUTA-NOP"
         ],
-        "KXNBAGAME-26FEB22PORPHX-PHX": [
-            "KXNBAGAME-26FEB22PORPHX-POR"
+        "KXNBAGAME-26FEB26NOPUTA-NOP": [
+            "KXNBAGAME-26FEB26NOPUTA-UTA"
         ],
-        "KXNBAGAME-26FEB22ORLLAC-ORL": [
-            "KXNBAGAME-26FEB22ORLLAC-LAC"
+        "KXNBAGAME-26FEB26MINLAC-MIN": [
+            "KXNBAGAME-26FEB26MINLAC-LAC"
         ],
-        "KXNBAGAME-26FEB22ORLLAC-LAC": [
-            "KXNBAGAME-26FEB22ORLLAC-ORL"
+        "KXNBAGAME-26FEB26MINLAC-LAC": [
+            "KXNBAGAME-26FEB26MINLAC-MIN"
         ],
-        "KXNBAGAME-26FEB22NYKCHI-NYK": [
-            "KXNBAGAME-26FEB22NYKCHI-CHI"
+        "KXNBAGAME-26FEB26LALPHX-PHX": [
+            "KXNBAGAME-26FEB26LALPHX-LAL"
         ],
-        "KXNBAGAME-26FEB22NYKCHI-CHI": [
-            "KXNBAGAME-26FEB22NYKCHI-NYK"
+        "KXNBAGAME-26FEB26LALPHX-LAL": [
+            "KXNBAGAME-26FEB26LALPHX-PHX"
         ],
-        "KXNBAGAME-26FEB22CHAWAS-WAS": [
-            "KXNBAGAME-26FEB22CHAWAS-CHA"
+        "KXNBAGAME-26FEB26SACDAL-SAC": [
+            "KXNBAGAME-26FEB26SACDAL-DAL"
         ],
-        "KXNBAGAME-26FEB22CHAWAS-CHA": [
-            "KXNBAGAME-26FEB22CHAWAS-WAS"
+        "KXNBAGAME-26FEB26SACDAL-DAL": [
+            "KXNBAGAME-26FEB26SACDAL-SAC"
         ],
-        "KXNBAGAME-26FEB22PHIMIN-PHI": [
-            "KXNBAGAME-26FEB22PHIMIN-MIN"
+        "KXNBAGAME-26FEB26PORCHI-POR": [
+            "KXNBAGAME-26FEB26PORCHI-CHI"
         ],
-        "KXNBAGAME-26FEB22PHIMIN-MIN": [
-            "KXNBAGAME-26FEB22PHIMIN-PHI"
+        "KXNBAGAME-26FEB26PORCHI-CHI": [
+            "KXNBAGAME-26FEB26PORCHI-POR"
         ],
-        "KXNBAGAME-26FEB22BOSLAL-LAL": [
-            "KXNBAGAME-26FEB22BOSLAL-BOS"
+        "KXNBAGAME-26FEB26WASATL-WAS": [
+            "KXNBAGAME-26FEB26WASATL-ATL"
         ],
-        "KXNBAGAME-26FEB22BOSLAL-BOS": [
-            "KXNBAGAME-26FEB22BOSLAL-LAL"
+        "KXNBAGAME-26FEB26WASATL-ATL": [
+            "KXNBAGAME-26FEB26WASATL-WAS"
         ],
-        "KXNBAGAME-26FEB22DALIND-IND": [
-            "KXNBAGAME-26FEB22DALIND-DAL"
+        "KXNBAGAME-26FEB26SASBKN-SAS": [
+            "KXNBAGAME-26FEB26SASBKN-BKN"
         ],
-        "KXNBAGAME-26FEB22DALIND-DAL": [
-            "KXNBAGAME-26FEB22DALIND-IND"
+        "KXNBAGAME-26FEB26SASBKN-BKN": [
+            "KXNBAGAME-26FEB26SASBKN-SAS"
         ],
-        "KXNBAGAME-26FEB22DENGSW-GSW": [
-            "KXNBAGAME-26FEB22DENGSW-DEN"
+        "KXNBAGAME-26FEB26HOUORL-ORL": [
+            "KXNBAGAME-26FEB26HOUORL-HOU"
         ],
-        "KXNBAGAME-26FEB22DENGSW-DEN": [
-            "KXNBAGAME-26FEB22DENGSW-GSW"
+        "KXNBAGAME-26FEB26HOUORL-HOU": [
+            "KXNBAGAME-26FEB26HOUORL-ORL"
         ],
-        "KXNBAGAME-26FEB22BKNATL-BKN": [
-            "KXNBAGAME-26FEB22BKNATL-ATL"
+        "KXNBAGAME-26FEB26CHAIND-IND": [
+            "KXNBAGAME-26FEB26CHAIND-CHA"
         ],
-        "KXNBAGAME-26FEB22BKNATL-ATL": [
-            "KXNBAGAME-26FEB22BKNATL-BKN"
+        "KXNBAGAME-26FEB26CHAIND-CHA": [
+            "KXNBAGAME-26FEB26CHAIND-IND"
         ],
-        "KXNBAGAME-26FEB22TORMIL-TOR": [
-            "KXNBAGAME-26FEB22TORMIL-MIL"
+        "KXNBAGAME-26FEB26MIAPHI-PHI": [
+            "KXNBAGAME-26FEB26MIAPHI-MIA"
         ],
-        "KXNBAGAME-26FEB22TORMIL-MIL": [
-            "KXNBAGAME-26FEB22TORMIL-TOR"
-        ],
-        "KXNBAGAME-26FEB22CLEOKC-OKC": [
-            "KXNBAGAME-26FEB22CLEOKC-CLE"
-        ],
-        "KXNBAGAME-26FEB22CLEOKC-CLE": [
-            "KXNBAGAME-26FEB22CLEOKC-OKC"
+        "KXNBAGAME-26FEB26MIAPHI-MIA": [
+            "KXNBAGAME-26FEB26MIAPHI-PHI"
         ]
     },
     "POLYMARKET_KALSHI_MAPPING": {
-        "aec-nba-cle-okc-2026-02-22": {
-            "kalshi_ticker": "KXNBAGAME-26FEB22CLEOKC-CLE",
-            "other_poly_id": "aec-nba-cle-okc-2026-02-22-inverse",
-            "other_kalshi_ticker": "KXNBAGAME-26FEB22CLEOKC-OKC"
+        "aec-nba-cha-ind-2026-02-26": {
+            "kalshi_ticker": "KXNBAGAME-26FEB26CHAIND-CHA",
+            "other_poly_id": "aec-nba-cha-ind-2026-02-26-inverse",
+            "other_kalshi_ticker": "KXNBAGAME-26FEB26CHAIND-IND"
         },
-        "aec-nba-bkn-atl-2026-02-22": {
-            "kalshi_ticker": "KXNBAGAME-26FEB22BKNATL-BKN",
-            "other_poly_id": "aec-nba-bkn-atl-2026-02-22-inverse",
-            "other_kalshi_ticker": "KXNBAGAME-26FEB22BKNATL-ATL"
+        "aec-nba-mia-phi-2026-02-26": {
+            "kalshi_ticker": "KXNBAGAME-26FEB26MIAPHI-MIA",
+            "other_poly_id": "aec-nba-mia-phi-2026-02-26-inverse",
+            "other_kalshi_ticker": "KXNBAGAME-26FEB26MIAPHI-PHI"
         },
-        "aec-nba-den-gs-2026-02-22": {
-            "kalshi_ticker": "KXNBAGAME-26FEB22DENGSW-DEN",
-            "other_poly_id": "aec-nba-den-gs-2026-02-22-inverse",
-            "other_kalshi_ticker": "KXNBAGAME-26FEB22DENGSW-GSW"
+        "aec-nba-sa-bkn-2026-02-26": {
+            "kalshi_ticker": "KXNBAGAME-26FEB26SASBKN-SAS",
+            "other_poly_id": "aec-nba-sa-bkn-2026-02-26-inverse",
+            "other_kalshi_ticker": "KXNBAGAME-26FEB26SASBKN-BKN"
         },
-        "aec-nba-tor-mil-2026-02-22": {
-            "kalshi_ticker": "KXNBAGAME-26FEB22TORMIL-TOR",
-            "other_poly_id": "aec-nba-tor-mil-2026-02-22-inverse",
-            "other_kalshi_ticker": "KXNBAGAME-26FEB22TORMIL-MIL"
+        "aec-nba-por-chi-2026-02-26": {
+            "kalshi_ticker": "KXNBAGAME-26FEB26PORCHI-POR",
+            "other_poly_id": "aec-nba-por-chi-2026-02-26-inverse",
+            "other_kalshi_ticker": "KXNBAGAME-26FEB26PORCHI-CHI"
         },
-        "aec-nba-dal-ind-2026-02-22": {
-            "kalshi_ticker": "KXNBAGAME-26FEB22DALIND-DAL",
-            "other_poly_id": "aec-nba-dal-ind-2026-02-22-inverse",
-            "other_kalshi_ticker": "KXNBAGAME-26FEB22DALIND-IND"
+        "aec-nba-was-atl-2026-02-26": {
+            "kalshi_ticker": "KXNBAGAME-26FEB26WASATL-WAS",
+            "other_poly_id": "aec-nba-was-atl-2026-02-26-inverse",
+            "other_kalshi_ticker": "KXNBAGAME-26FEB26WASATL-ATL"
         },
-        "aec-nba-cha-was-2026-02-22": {
-            "kalshi_ticker": "KXNBAGAME-26FEB22CHAWAS-CHA",
-            "other_poly_id": "aec-nba-cha-was-2026-02-22-inverse",
-            "other_kalshi_ticker": "KXNBAGAME-26FEB22CHAWAS-WAS"
+        "aec-nba-hou-orl-2026-02-26": {
+            "kalshi_ticker": "KXNBAGAME-26FEB26HOUORL-HOU",
+            "other_poly_id": "aec-nba-hou-orl-2026-02-26-inverse",
+            "other_kalshi_ticker": "KXNBAGAME-26FEB26HOUORL-ORL"
         },
-        "aec-nba-bos-lal-2026-02-22": {
-            "kalshi_ticker": "KXNBAGAME-26FEB22BOSLAL-BOS",
-            "other_poly_id": "aec-nba-bos-lal-2026-02-22-inverse",
-            "other_kalshi_ticker": "KXNBAGAME-26FEB22BOSLAL-LAL"
+        "aec-nba-sac-dal-2026-02-26": {
+            "kalshi_ticker": "KXNBAGAME-26FEB26SACDAL-SAC",
+            "other_poly_id": "aec-nba-sac-dal-2026-02-26-inverse",
+            "other_kalshi_ticker": "KXNBAGAME-26FEB26SACDAL-DAL"
         },
-        "aec-nba-phi-min-2026-02-22": {
-            "kalshi_ticker": "KXNBAGAME-26FEB22PHIMIN-PHI",
-            "other_poly_id": "aec-nba-phi-min-2026-02-22-inverse",
-            "other_kalshi_ticker": "KXNBAGAME-26FEB22PHIMIN-MIN"
+        "aec-nba-lal-pho-2026-02-26": {
+            "kalshi_ticker": "KXNBAGAME-26FEB26LALPHX-LAL",
+            "other_poly_id": "aec-nba-lal-pho-2026-02-26-inverse",
+            "other_kalshi_ticker": "KXNBAGAME-26FEB26LALPHX-PHX"
         },
-        "aec-nba-ny-chi-2026-02-22": {
-            "kalshi_ticker": "KXNBAGAME-26FEB22NYKCHI-NYK",
-            "other_poly_id": "aec-nba-ny-chi-2026-02-22-inverse",
-            "other_kalshi_ticker": "KXNBAGAME-26FEB22NYKCHI-CHI"
+        "aec-nba-no-uta-2026-02-26": {
+            "kalshi_ticker": "KXNBAGAME-26FEB26NOPUTA-NOP",
+            "other_poly_id": "aec-nba-no-uta-2026-02-26-inverse",
+            "other_kalshi_ticker": "KXNBAGAME-26FEB26NOPUTA-UTA"
         },
-        "aec-nba-por-pho-2026-02-22": {
-            "kalshi_ticker": "KXNBAGAME-26FEB22PORPHX-POR",
-            "other_poly_id": "aec-nba-por-pho-2026-02-22-inverse",
-            "other_kalshi_ticker": "KXNBAGAME-26FEB22PORPHX-PHX"
-        },
-        "aec-nba-orl-lac-2026-02-22": {
-            "kalshi_ticker": "KXNBAGAME-26FEB22ORLLAC-ORL",
-            "other_poly_id": "aec-nba-orl-lac-2026-02-22-inverse",
-            "other_kalshi_ticker": "KXNBAGAME-26FEB22ORLLAC-LAC"
+        "aec-nba-min-lac-2026-02-26": {
+            "kalshi_ticker": "KXNBAGAME-26FEB26MINLAC-MIN",
+            "other_poly_id": "aec-nba-min-lac-2026-02-26-inverse",
+            "other_kalshi_ticker": "KXNBAGAME-26FEB26MINLAC-LAC"
         }
     },
     "SIDE_MAPPING": {

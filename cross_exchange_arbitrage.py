@@ -157,11 +157,11 @@ class CrossExchangeArbitrage:
                 if poly_ask_A <= kalshi_ask_A:
                     best_ask_A = poly_ask_A
                     best_ask_A_size = poly_ask_A_size
-                    best_ask_A_market = "Polymarket"
+                    best_ask_A_market = f"Polymarket: {poly_id}"
                 else:
                     best_ask_A = kalshi_ask_A
                     best_ask_A_size = kalshi_ask_A_size
-                    best_ask_A_market = "Kalshi"
+                    best_ask_A_market = f"Kalshi: {kalshi_ticker}"
             else:
                 self.logger.warning(f"Missing ask price for {poly_id} or {kalshi_ticker}. Skipping double buy arb.")
                 continue
@@ -169,13 +169,13 @@ class CrossExchangeArbitrage:
                 if poly_ask_B <= kalshi_ask_B:
                     best_ask_B = poly_ask_B
                     best_ask_B_size = poly_ask_B_size
-                    best_ask_B_market = "Polymarket"
+                    best_ask_B_market = f"Polymarket: {other_poly_id}"
                 else:
                     best_ask_B = kalshi_ask_B
                     best_ask_B_size = kalshi_ask_B_size
-                    best_ask_B_market = "Kalshi"
+                    best_ask_B_market = f"Kalshi: {other_kalshi_ticker}"
             else:
-                self.logger.warning(f"Missing ask price for {other_poly_id} or {other_kalshi_ticker}. Skipping double buy arb.")
+            #    self.logger.warning(f"Missing ask price for {other_poly_id} or {other_kalshi_ticker}. Skipping double buy arb.")
                 continue
 
             self._double_buy_arb(best_ask_A, best_ask_A_size, best_ask_A_market, best_ask_B, best_ask_B_size, best_ask_B_market)
