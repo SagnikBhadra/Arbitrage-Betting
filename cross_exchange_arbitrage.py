@@ -1,5 +1,6 @@
 import json
 import logging
+import uuid
 from decimal import Decimal
 
 from polymarket_us_feed import PolymarketUSWebSocket
@@ -18,9 +19,15 @@ class CrossExchangeArbitrage:
         orderbook.get_best_ask() -> (price, size) or (None, None)
     """
 
-    def __init__(self, polymarket_client: PolymarketUSWebSocket, kalshi_client: KalshiWebSocket, mapping: dict, min_edge=0.0):
+    def __init__(self, polymarket_client: PolymarketUSWebSocket, kalshi_client: KalshiWebSocket, polymarket_us_gateway: PolymarketUSHTTPGateway, kalshi_gateway: KalshiHTTPGateway, mapping: dict, min_edge=0.0):
+        # Market data clients
         self.polymarket_client = polymarket_client
         self.kalshi_client = kalshi_client
+
+        # Gateways for order execution
+        self.polymarket_gateway = polymarket_us_gateway
+        self.kalshi_gateway = kalshi_gateway
+
         self.mapping = mapping
         self.min_edge = Decimal(min_edge)  # buffer for fees/slippage
         self.logger = logging.getLogger("cross_exchange_strategy")
@@ -42,9 +49,9 @@ class CrossExchangeArbitrage:
 
         # Ask on Kalshi < Bid on Polymarket (1, 2, 3, 4)
         # Buy Kalshi, Sell Polymarket
-
+        # TODO: Add maker/taker fee adjustments to edge calculation
         if poly_bid and kalshi_ask and (poly_bid - kalshi_ask) > self.min_edge:
-            size = min(poly_bid_size, kalshi_ask_size)
+            size = int(min(poly_bid_size, kalshi_ask_size))  # TODO: Add balance checks to size calculation
             self.logger.info({
                 "type": "same_side",
                 "direction": "buy_kalshi_sell_poly",
@@ -53,8 +60,40 @@ class CrossExchangeArbitrage:
                 "buy_price": kalshi_ask,
                 "sell_price": poly_bid,
                 "edge": poly_bid - kalshi_ask,
-                "size": size
+                "size": int(size)
             })
+            # Send orders to gateway for execution
+            # Kalshi
+            order_a = {
+                "ticker": kalshi_ticker,
+                "action": "buy",
+                "side": "yes",
+                "count": int(size),
+                "client_order_id": str(uuid.uuid4()),
+                "yes_price": int(float(kalshi_ask) * 100),
+                "type": "limit",
+                "time_in_force": "fill_or_kill"
+            }
+            try:
+                self.kalshi_gateway.create_order(order_a)
+            except Exception as e:
+                self.logger.error(f"Failed to place order A: {e}")
+            # Polymarket - Need BUY_SHORT at 1 - bid price to sell at bid price
+            try:
+                if poly_id.endswith("-inverse"):
+                    side = "BUY_SHORT"
+                else:
+                    side = "BUY_LONG"
+                self.polymarket_gateway.create_order(
+                    market_slug=poly_id,
+                    price=float(Decimal(1.0) - poly_bid),
+                    quantity=int(size),
+                    side=side,
+                    tif="FILL_OR_KILL",
+                    order_type="LIMIT",
+                )
+            except Exception as e:
+                self.logger.error(f"Failed to place order B: {e}")
 
         # Ask on Polymarket < Bid on Kalshi
         # Buy Polymarket, Sell Kalshi
@@ -68,48 +107,104 @@ class CrossExchangeArbitrage:
                 "buy_price": poly_ask,
                 "sell_price": kalshi_bid,
                 "edge": kalshi_bid - poly_ask,
-                "size": size
+                "size": int(size)
             })
+            # Send orders to gateway for execution
+            # Polymarket - Need BUY_LONG at ask price to buy at ask price
+            try:
+                side = "BUY_SHORT" if poly_id.endswith("-inverse") else "BUY_LONG"
+                self.polymarket_gateway.create_order(
+                    market_slug=poly_id,
+                    price=float(poly_ask),
+                    quantity=int(size),
+                    side=side,
+                    tif="FILL_OR_KILL",
+                    order_type="LIMIT",
+                )  
+            except Exception as e:
+                self.logger.error(f"Failed to place order A: {e}")
+            # Kalshi - Buy NO ASK at 1 - bid price 
+            order_b = {
+                "ticker": kalshi_ticker,
+                "action": "buy",
+                "side": "no",
+                "count": int(size),
+                "client_order_id": str(uuid.uuid4()),
+                "no_price": int(float(Decimal(1.0) - kalshi_bid) * 100),
+                "type": "limit",
+                "time_in_force": "fill_or_kill"
+            }
+            try:
+                self.kalshi_gateway.create_order(order_b)
+            except Exception as e:
+                self.logger.error(f"Failed to place order B: {e}")
 
-    def _double_buy_arb(self, ask_A_price: Decimal, ask_A_size: Decimal, ask_A_market: str, ask_B_price: Decimal, ask_B_size: Decimal, ask_B_market: str):
+    def _double_buy_arb(self, order_A: dict, order_B: dict):
         # Synthetic arbitrage
         # If asks for Team 1 + Team 2 < $1
         # Stategies 5, 6, 9, 10
-        if ask_A_price and ask_B_price:
-            total_cost = ask_A_price + ask_B_price
-            profit = Decimal(1) - total_cost
+        if order_A["ask_price"] and order_B["ask_price"]:
+            total_cost = Decimal(order_A["ask_price"]) + Decimal(order_B["ask_price"])
+            profit = Decimal(Decimal(1) - total_cost)
             if profit > self.min_edge:
                 self.logger.info({
                     "type": "double_buy",
                     "total_cost": total_cost,
                     "profit": profit,
-                    "market_A": ask_A_market,
-                    "ask_A_price": ask_A_price,
-                    "ask_A_size": ask_A_size,
-                    "market_B": ask_B_market,
-                    "ask_B_price": ask_B_price,
-                    "ask_B_size": ask_B_size
+                    "market_A": order_A["ask_market"],
+                    "ask_price": order_A["ask_price"],
+                    "ask_size": order_A["ask_size"],
+                    "market_B": order_B["ask_market"],
+                    "ask_B_price": order_B["ask_price"],
+                    "ask_B_size": order_B["ask_size"]
                 })
+                # Need to update order if Polymarket inverse
+                for order in [order_A, order_B]:
+                    try:
+                        if "Polymarket" in order["ask_market"]:
+                            side = "BUY_SHORT" if order["ask_market"].endswith("-inverse") else "BUY_LONG"
+                            self.polymarket_gateway.create_order(
+                                market_slug=order["ask_market"].split(": ")[1],
+                                price=float(order["ask_price"]),
+                                quantity=int(order["ask_size"]),
+                                side=side,
+                                tif="FILL_OR_KILL",
+                                order_type="LIMIT",
+                            )
+                        elif "Kalshi" in order["ask_market"]:
+                            self.kalshi_gateway.create_order({
+                                "ticker": order["ask_market"].split(": ")[1],
+                                "action": "buy",
+                                "side": "yes",
+                                "count": int(order["ask_size"]),
+                                "client_order_id": str(uuid.uuid4()),
+                                "yes_price": int(float(order["ask_price"]) * 100),
+                                "type": "limit",
+                                "time_in_force": "fill_or_kill"
+                            })
+                    except Exception as e:
+                        self.logger.error(f"Failed to place order: {e}")
 
-    def _double_sell_arb(self, bid_A_price: Decimal, bid_A_size: Decimal, bid_A_market: str, bid_B_price: Decimal, bid_B_size: Decimal, bid_B_market: str):
+
+    def _double_sell_arb(self, order_A: dict, order_B: dict):
         # Short sell
         # If we have positions, we can use arbritage to sell out of the position
         # Strategies 7, 8
 
-        if bid_A_price and bid_B_price:
-            total_sale = bid_A_price + bid_B_price
-            profit = total_sale - Decimal(1)
+        if order_A["bid_price"] and order_B["bid_price"]:
+            total_sale = Decimal(order_A["bid_price"]) + Decimal(order_B["bid_price"])
+            profit = Decimal(total_sale - Decimal(1))
             if profit > self.min_edge:
                 self.logger.info({
                     "type": "double_sell",
                     "total_sale": total_sale,
                     "profit": profit,
-                    "market_A": bid_A_market,
-                    "bid_A_price": bid_A_price,
-                    "bid_A_size": bid_A_size,
-                    "market_B": bid_B_market,
-                    "bid_B_price": bid_B_price,
-                    "bid_B_size": bid_B_size
+                    "market_A": order_A["bid_market"],
+                    "bid_A_price": order_A["bid_price"],
+                    "bid_A_size": order_A["bid_size"],
+                    "market_B": order_B["bid_market"],
+                    "bid_B_price": order_B["bid_price"],
+                    "bid_B_size": order_B["bid_size"]
                 })
 
     def find_opportunities(self):
@@ -155,30 +250,38 @@ class CrossExchangeArbitrage:
             # Strategies 5, 6, 9, 10
             if poly_ask_A and kalshi_ask_A:
                 if poly_ask_A <= kalshi_ask_A:
-                    best_ask_A = poly_ask_A
-                    best_ask_A_size = poly_ask_A_size
-                    best_ask_A_market = f"Polymarket: {poly_id}"
+                    order_A = {
+                        "ask_price": poly_ask_A,
+                        "ask_size": poly_ask_A_size,
+                        "ask_market": f"Polymarket: {poly_id}"
+                    }
                 else:
-                    best_ask_A = kalshi_ask_A
-                    best_ask_A_size = kalshi_ask_A_size
-                    best_ask_A_market = f"Kalshi: {kalshi_ticker}"
+                    order_A = {
+                        "ask_price": kalshi_ask_A,
+                        "ask_size": kalshi_ask_A_size,
+                        "ask_market": f"Kalshi: {kalshi_ticker}"
+                    }
             else:
-                self.logger.warning(f"Missing ask price for {poly_id} or {kalshi_ticker}. Skipping double buy arb.")
+                # self.logger.warning(f"Missing ask price for {poly_id} or {kalshi_ticker}. Skipping double buy arb.")
                 continue
             if poly_ask_B and kalshi_ask_B:
                 if poly_ask_B <= kalshi_ask_B:
-                    best_ask_B = poly_ask_B
-                    best_ask_B_size = poly_ask_B_size
-                    best_ask_B_market = f"Polymarket: {other_poly_id}"
+                    order_B = {
+                        "ask_price": poly_ask_B,
+                        "ask_size": poly_ask_B_size,
+                        "ask_market": f"Polymarket: {other_poly_id}"
+                    }
                 else:
-                    best_ask_B = kalshi_ask_B
-                    best_ask_B_size = kalshi_ask_B_size
-                    best_ask_B_market = f"Kalshi: {other_kalshi_ticker}"
+                    order_B = {
+                        "ask_price": kalshi_ask_B,
+                        "ask_size": kalshi_ask_B_size,
+                        "ask_market": f"Kalshi: {other_kalshi_ticker}"
+                    }
             else:
-            #    self.logger.warning(f"Missing ask price for {other_poly_id} or {other_kalshi_ticker}. Skipping double buy arb.")
+                # self.logger.warning(f"Missing ask price for {other_poly_id} or {other_kalshi_ticker}. Skipping double buy arb.")
                 continue
 
-            self._double_buy_arb(best_ask_A, best_ask_A_size, best_ask_A_market, best_ask_B, best_ask_B_size, best_ask_B_market)
+            self._double_buy_arb(order_A, order_B)
 
             # ---- DOUBLE SELL (synthetic short event) ----
             """

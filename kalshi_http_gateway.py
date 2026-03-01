@@ -145,13 +145,14 @@ class KalshiHTTPGateway:
 
         For limit orders also include:
             - yes_price or no_price (in cents, 1-99)
+            - time_in_force: fill_or_kill, good_till_canceled, immediate_or_cancel
 
         Returns the order confirmation from Kalshi.
         """
         # Auto-generate client_order_id if not provided
         if "client_order_id" not in order_data:
             order_data["client_order_id"] = str(uuid.uuid4())
-            
+
 
         self.logger.info(f"Placing order with data: {order_data}")
         #return self._request("POST", "/portfolio/orders", json_body=order_data)

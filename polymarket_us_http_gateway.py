@@ -110,7 +110,7 @@ class PolymarketUSHTTPGateway:
             BUY_SHORT | BUY_LONG | SELL_SHORT | SELL_LONG
 
         tif:
-            GOOD_TILL_CANCEL | IOC | FOK
+            GOOD_TILL_CANCEL, GOOD_TILL_DATE, IMMEDIATE_OR_CANCEL, FILL_OR_KILL
 
         order_type:
             LIMIT | MARKET

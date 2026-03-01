@@ -75,11 +75,13 @@ def intra_kalshi_arbitrage(kalshi_client, kalshi_gateway, correlated_market_mapp
     # Call find_opportunities() every second and log any opportunities above profit_threshold
     intra_kalshi_arb_strategy.find_opportunities(profit_threshold=profit_threshold)
 
-def crossed_markets(polymarket_client, kalshi_client, polymarket_kalshi_mapping):
+def crossed_markets(polymarket_client, kalshi_client, kalshi_gateway, polymarket_us_gateway, polymarket_kalshi_mapping):
 
     cross_exchange_arb_strategy = CrossExchangeArbitrage(
         polymarket_client,
         kalshi_client,
+        polymarket_us_gateway,
+        kalshi_gateway,
         polymarket_kalshi_mapping,
         min_edge=0.01
     )
@@ -96,7 +98,7 @@ async def scan_inefficiencies(polymarket_client, kalshi_client, kalshi_gateway, 
     # Intra Kalshi correlated markets mapping
     correlated_market_mapping = get_static_mapping("CORRELATED_MARKET_MAPPING")
     while True:
-        crossed_markets(polymarket_client, kalshi_client, polymarket_kalshi_mapping)
+        crossed_markets(polymarket_client, kalshi_client, kalshi_gateway, polymarket_us_gateway, polymarket_kalshi_mapping)
         intra_kalshi_arbitrage(kalshi_client, kalshi_gateway, correlated_market_mapping, profit_threshold=0.02)
         await asyncio.sleep(1)
 
