@@ -45,3 +45,38 @@ def get_taker_fees_kalshi(price, size):
     # Round up to 2 decimal places
     fee_ceiling = fee.quantize(Decimal("0.01"), rounding=ROUND_CEILING)
     return fee_ceiling
+
+def get_taker_fees_polymarket_us(price, size):
+    """
+    Calculate taker fees for Polymarket US based on price and size.
+
+    Args:
+        price: Price of the asset (float)
+        size: Size of the order (float)
+
+    Returns:
+        Taker fees (float)
+    """
+    taker_fee_rate = Decimal("0.001")
+    price = Decimal(str(price))
+    size = Decimal(str(size))
+    fee = taker_fee_rate * size * price
+    # Round up to 3 decimal places
+    fee_ceiling = fee.quantize(Decimal("0.001"), rounding=ROUND_CEILING)
+    return fee_ceiling
+
+def get_maker_rebate_polymarket_us(price, size):
+    """
+    Calculate maker rebates for Polymarket US based on price and size.
+
+    Args:
+        price: Price of the asset (float)
+        size: Size of the order (float)
+    """
+    maker_fee_rate = Decimal("0.001")
+    price = Decimal(str(price))
+    size = Decimal(str(size))
+    fee = maker_fee_rate * size * price
+    # Round up to 3 decimal places
+    fee_ceiling = fee.quantize(Decimal("0.001"), rounding=ROUND_CEILING)
+    return fee_ceiling

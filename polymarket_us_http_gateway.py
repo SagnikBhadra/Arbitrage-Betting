@@ -92,7 +92,9 @@ class PolymarketUSHTTPGateway:
     # ─────────────────────────────────────────────────────────
     def get_balance(self) -> dict:
         """GET /v1/account/balances — current available cash balance."""
-        return self._request("GET", "/v1/account/balances")
+        balance_response= self._request("GET", "/v1/account/balances")
+        self.logger.info(f"Current balance: {balance_response["balances"][0]["currentBalance"]} USD, Buying power: {balance_response["balances"][0]["buyingPower"]} USD")
+        return balance_response["balances"][0]["buyingPower"]
 
     def create_order(
         self,
@@ -168,6 +170,7 @@ if __name__ == "__main__":
     balance = gateway.get_balance()
     print(json.dumps(balance, indent=2))
     
+    """
     print("\nGet orders:")
     orders = gateway.get_orders()
     print(json.dumps(orders, indent=2))
@@ -180,7 +183,6 @@ if __name__ == "__main__":
     orders = gateway.get_orders()
     print(json.dumps(orders, indent=2))
 
-    """
     print("Placing test order...")
 
     response = gateway.create_order(

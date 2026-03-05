@@ -9,166 +9,194 @@
             "101506943049053276934626391886226570064171431948041761918666910024462041911155": "Luka_NO"
         },
         "Kalshi": {
-            "KXNBAGAME-26MAR01SACLAL-SAC": "SAC_26MAR01_WIN",
-            "KXNBAGAME-26MAR01SACLAL-LAL": "LAL_26MAR01_WIN",
-            "KXNBAGAME-26MAR01PHIBOS-PHI": "PHI_26MAR01_WIN",
-            "KXNBAGAME-26MAR01PHIBOS-BOS": "BOS_26MAR01_WIN",
-            "KXNBAGAME-26MAR01OKCDAL-OKC": "OKC_26MAR01_WIN",
-            "KXNBAGAME-26MAR01OKCDAL-DAL": "DAL_26MAR01_WIN",
-            "KXNBAGAME-26MAR01NOPLAC-NOP": "NOP_26MAR01_WIN",
-            "KXNBAGAME-26MAR01NOPLAC-LAC": "LAC_26MAR01_WIN",
-            "KXNBAGAME-26MAR01DETORL-ORL": "ORL_26MAR01_WIN",
-            "KXNBAGAME-26MAR01DETORL-DET": "DET_26MAR01_WIN",
-            "KXNBAGAME-26MAR01PORATL-POR": "POR_26MAR01_WIN",
-            "KXNBAGAME-26MAR01PORATL-ATL": "ATL_26MAR01_WIN",
-            "KXNBAGAME-26MAR01MEMIND-MEM": "MEM_26MAR01_WIN",
-            "KXNBAGAME-26MAR01MEMIND-IND": "IND_26MAR01_WIN",
-            "KXNBAGAME-26MAR01MILCHI-MIL": "MIL_26MAR01_WIN",
-            "KXNBAGAME-26MAR01MILCHI-CHI": "CHI_26MAR01_WIN",
-            "KXNBAGAME-26MAR01MINDEN-MIN": "MIN_26MAR01_WIN",
-            "KXNBAGAME-26MAR01MINDEN-DEN": "DEN_26MAR01_WIN",
-            "KXNBAGAME-26MAR01CLEBKN-CLE": "CLE_26MAR01_WIN",
-            "KXNBAGAME-26MAR01CLEBKN-BKN": "BKN_26MAR01_WIN",
-            "KXNBAGAME-26MAR01SASNYK-SAS": "SAS_26MAR01_WIN",
-            "KXNBAGAME-26MAR01SASNYK-NYK": "NYK_26MAR01_WIN"
+            "KXUFCFIGHT-26MAR07DURTUM-TUM": "TUM_26MAR07_WIN",
+            "KXUFCFIGHT-26MAR07DURTUM-DUR": "DUR_26MAR07_WIN",
+            "KXUFCFIGHT-26MAR07TOBNUR-TOB": "TOB_26MAR07_WIN",
+            "KXUFCFIGHT-26MAR07TOBNUR-NUR": "NUR_26MAR07_WIN",
+            "KXUFCFIGHT-26MAR07BOLLEE-LEE": "LEE_26MAR07_WIN",
+            "KXUFCFIGHT-26MAR07BOLLEE-BOL": "BOL_26MAR07_WIN",
+            "KXUFCFIGHT-26MAR07DOBJOH-JOH": "JOH_26MAR07_WIN",
+            "KXUFCFIGHT-26MAR07DOBJOH-DOB": "DOB_26MAR07_WIN",
+            "KXUFCFIGHT-26MAR07FERBEL-FER": "FER_26MAR07_WIN",
+            "KXUFCFIGHT-26MAR07FERBEL-BEL": "BEL_26MAR07_WIN",
+            "KXUFCFIGHT-26MAR07FONROS-ROS": "ROS_26MAR07_WIN",
+            "KXUFCFIGHT-26MAR07FONROS-FON": "FON_26MAR07_WIN",
+            "KXUFCFIGHT-26MAR07GARLON-LON": "LON_26MAR07_WIN",
+            "KXUFCFIGHT-26MAR07GARLON-GAR": "GAR_26MAR07_WIN",
+            "KXUFCFIGHT-26MAR07JOHBRU-JOH": "JOH_26MAR07_WIN",
+            "KXUFCFIGHT-26MAR07JOHBRU-BRU": "BRU_26MAR07_WIN",
+            "KXUFCFIGHT-26MAR07RODFER-ROD": "ROD_26MAR07_WIN",
+            "KXUFCFIGHT-26MAR07RODFER-FER": "FER_26MAR07_WIN",
+            "KXUFCFIGHT-26MAR07TURMON-TUR": "TUR_26MAR07_WIN",
+            "KXUFCFIGHT-26MAR07TURMON-MON": "MON_26MAR07_WIN",
+            "KXUFCFIGHT-26MAR07MUDSAN-SAN": "SAN_26MAR07_WIN",
+            "KXUFCFIGHT-26MAR07MUDSAN-MUD": "MUD_26MAR07_WIN",
+            "KXUFCFIGHT-26MAR07HOLOLI-OLI": "OLI_26MAR07_WIN",
+            "KXUFCFIGHT-26MAR07HOLOLI-HOL": "HOL_26MAR07_WIN",
+            "KXUFCFIGHT-26MAR07BORDER-DER": "DER_26MAR07_WIN",
+            "KXUFCFIGHT-26MAR07BORDER-BOR": "BOR_26MAR07_WIN"
         },
         "Polymarket_US": {
-            "aec-nba-sa-ny-2026-03-01": "aec-nba-sa-ny-2026-03-01",
-            "aec-nba-cle-bkn-2026-03-01": "aec-nba-cle-bkn-2026-03-01",
-            "aec-nba-mil-chi-2026-03-01": "aec-nba-mil-chi-2026-03-01",
-            "aec-nba-min-den-2026-03-01": "aec-nba-min-den-2026-03-01",
-            "aec-nba-mem-ind-2026-03-01": "aec-nba-mem-ind-2026-03-01",
-            "aec-nba-por-atl-2026-03-01": "aec-nba-por-atl-2026-03-01",
-            "aec-nba-det-orl-2026-03-01": "aec-nba-det-orl-2026-03-01",
-            "aec-nba-phi-bos-2026-03-01": "aec-nba-phi-bos-2026-03-01",
-            "aec-nba-okc-dal-2026-03-01": "aec-nba-okc-dal-2026-03-01",
-            "aec-nba-no-lac-2026-03-01": "aec-nba-no-lac-2026-03-01",
-            "aec-nba-sac-lal-2026-03-01": "aec-nba-sac-lal-2026-03-01"
+            "aec-ufc-chaoli-maxhol-2026-03-07": "aec-ufc-chaoli-maxhol-2026-03-07",
+            "aec-ufc-reider-caibor-2026-03-07": "aec-ufc-reider-caibor-2026-03-07",
+            "aec-ufc-micjoh-dredob-2026-03-07": "aec-ufc-micjoh-dredob-2026-03-07",
+            "aec-ufc-robfon-rauros-2026-03-07": "aec-ufc-robfon-rauros-2026-03-07",
+            "aec-ufc-grerod-brufer-2026-03-07": "aec-ufc-grerod-brufer-2026-03-07",
+            "aec-ufc-codgar-xialon-2026-03-07": "aec-ufc-codgar-xialon-2026-03-07",
+            "aec-ufc-rictur-albmon-2026-03-07": "aec-ufc-rictur-albmon-2026-03-07",
+            "aec-ufc-coddur-nyatum-2026-03-07": "aec-ufc-coddur-nyatum-2026-03-07",
+            "aec-ufc-rodbel-lukfer-2026-03-07": "aec-ufc-rodbel-lukfer-2026-03-07",
+            "aec-ufc-sumuda-jesagu-2026-03-07": "aec-ufc-sumuda-jesagu-2026-03-07",
+            "aec-ufc-codbru-donjoh-2026-03-07": "aec-ufc-codbru-donjoh-2026-03-07",
+            "aec-ufc-diynur-raftob-2026-03-07": "aec-ufc-diynur-raftob-2026-03-07",
+            "aec-ufc-gasbol-jeolee-2026-03-07": "aec-ufc-gasbol-jeolee-2026-03-07"
         }
     },
     "CORRELATED_MARKET_MAPPING": {
-        "KXNBAGAME-26MAR01SACLAL-SAC": [
-            "KXNBAGAME-26MAR01SACLAL-LAL"
+        "KXUFCFIGHT-26MAR07DURTUM-TUM": [
+            "KXUFCFIGHT-26MAR07DURTUM-DUR"
         ],
-        "KXNBAGAME-26MAR01SACLAL-LAL": [
-            "KXNBAGAME-26MAR01SACLAL-SAC"
+        "KXUFCFIGHT-26MAR07DURTUM-DUR": [
+            "KXUFCFIGHT-26MAR07DURTUM-TUM"
         ],
-        "KXNBAGAME-26MAR01PHIBOS-PHI": [
-            "KXNBAGAME-26MAR01PHIBOS-BOS"
+        "KXUFCFIGHT-26MAR07TOBNUR-TOB": [
+            "KXUFCFIGHT-26MAR07TOBNUR-NUR"
         ],
-        "KXNBAGAME-26MAR01PHIBOS-BOS": [
-            "KXNBAGAME-26MAR01PHIBOS-PHI"
+        "KXUFCFIGHT-26MAR07TOBNUR-NUR": [
+            "KXUFCFIGHT-26MAR07TOBNUR-TOB"
         ],
-        "KXNBAGAME-26MAR01OKCDAL-OKC": [
-            "KXNBAGAME-26MAR01OKCDAL-DAL"
+        "KXUFCFIGHT-26MAR07BOLLEE-LEE": [
+            "KXUFCFIGHT-26MAR07BOLLEE-BOL"
         ],
-        "KXNBAGAME-26MAR01OKCDAL-DAL": [
-            "KXNBAGAME-26MAR01OKCDAL-OKC"
+        "KXUFCFIGHT-26MAR07BOLLEE-BOL": [
+            "KXUFCFIGHT-26MAR07BOLLEE-LEE"
         ],
-        "KXNBAGAME-26MAR01NOPLAC-NOP": [
-            "KXNBAGAME-26MAR01NOPLAC-LAC"
+        "KXUFCFIGHT-26MAR07DOBJOH-JOH": [
+            "KXUFCFIGHT-26MAR07DOBJOH-DOB"
         ],
-        "KXNBAGAME-26MAR01NOPLAC-LAC": [
-            "KXNBAGAME-26MAR01NOPLAC-NOP"
+        "KXUFCFIGHT-26MAR07DOBJOH-DOB": [
+            "KXUFCFIGHT-26MAR07DOBJOH-JOH"
         ],
-        "KXNBAGAME-26MAR01DETORL-ORL": [
-            "KXNBAGAME-26MAR01DETORL-DET"
+        "KXUFCFIGHT-26MAR07FERBEL-FER": [
+            "KXUFCFIGHT-26MAR07FERBEL-BEL"
         ],
-        "KXNBAGAME-26MAR01DETORL-DET": [
-            "KXNBAGAME-26MAR01DETORL-ORL"
+        "KXUFCFIGHT-26MAR07FERBEL-BEL": [
+            "KXUFCFIGHT-26MAR07FERBEL-FER"
         ],
-        "KXNBAGAME-26MAR01PORATL-POR": [
-            "KXNBAGAME-26MAR01PORATL-ATL"
+        "KXUFCFIGHT-26MAR07FONROS-ROS": [
+            "KXUFCFIGHT-26MAR07FONROS-FON"
         ],
-        "KXNBAGAME-26MAR01PORATL-ATL": [
-            "KXNBAGAME-26MAR01PORATL-POR"
+        "KXUFCFIGHT-26MAR07FONROS-FON": [
+            "KXUFCFIGHT-26MAR07FONROS-ROS"
         ],
-        "KXNBAGAME-26MAR01MEMIND-MEM": [
-            "KXNBAGAME-26MAR01MEMIND-IND"
+        "KXUFCFIGHT-26MAR07GARLON-LON": [
+            "KXUFCFIGHT-26MAR07GARLON-GAR"
         ],
-        "KXNBAGAME-26MAR01MEMIND-IND": [
-            "KXNBAGAME-26MAR01MEMIND-MEM"
+        "KXUFCFIGHT-26MAR07GARLON-GAR": [
+            "KXUFCFIGHT-26MAR07GARLON-LON"
         ],
-        "KXNBAGAME-26MAR01MILCHI-MIL": [
-            "KXNBAGAME-26MAR01MILCHI-CHI"
+        "KXUFCFIGHT-26MAR07JOHBRU-JOH": [
+            "KXUFCFIGHT-26MAR07JOHBRU-BRU"
         ],
-        "KXNBAGAME-26MAR01MILCHI-CHI": [
-            "KXNBAGAME-26MAR01MILCHI-MIL"
+        "KXUFCFIGHT-26MAR07JOHBRU-BRU": [
+            "KXUFCFIGHT-26MAR07JOHBRU-JOH"
         ],
-        "KXNBAGAME-26MAR01MINDEN-MIN": [
-            "KXNBAGAME-26MAR01MINDEN-DEN"
+        "KXUFCFIGHT-26MAR07RODFER-ROD": [
+            "KXUFCFIGHT-26MAR07RODFER-FER"
         ],
-        "KXNBAGAME-26MAR01MINDEN-DEN": [
-            "KXNBAGAME-26MAR01MINDEN-MIN"
+        "KXUFCFIGHT-26MAR07RODFER-FER": [
+            "KXUFCFIGHT-26MAR07RODFER-ROD"
         ],
-        "KXNBAGAME-26MAR01CLEBKN-CLE": [
-            "KXNBAGAME-26MAR01CLEBKN-BKN"
+        "KXUFCFIGHT-26MAR07TURMON-TUR": [
+            "KXUFCFIGHT-26MAR07TURMON-MON"
         ],
-        "KXNBAGAME-26MAR01CLEBKN-BKN": [
-            "KXNBAGAME-26MAR01CLEBKN-CLE"
+        "KXUFCFIGHT-26MAR07TURMON-MON": [
+            "KXUFCFIGHT-26MAR07TURMON-TUR"
         ],
-        "KXNBAGAME-26MAR01SASNYK-SAS": [
-            "KXNBAGAME-26MAR01SASNYK-NYK"
+        "KXUFCFIGHT-26MAR07MUDSAN-SAN": [
+            "KXUFCFIGHT-26MAR07MUDSAN-MUD"
         ],
-        "KXNBAGAME-26MAR01SASNYK-NYK": [
-            "KXNBAGAME-26MAR01SASNYK-SAS"
+        "KXUFCFIGHT-26MAR07MUDSAN-MUD": [
+            "KXUFCFIGHT-26MAR07MUDSAN-SAN"
+        ],
+        "KXUFCFIGHT-26MAR07HOLOLI-OLI": [
+            "KXUFCFIGHT-26MAR07HOLOLI-HOL"
+        ],
+        "KXUFCFIGHT-26MAR07HOLOLI-HOL": [
+            "KXUFCFIGHT-26MAR07HOLOLI-OLI"
+        ],
+        "KXUFCFIGHT-26MAR07BORDER-DER": [
+            "KXUFCFIGHT-26MAR07BORDER-BOR"
+        ],
+        "KXUFCFIGHT-26MAR07BORDER-BOR": [
+            "KXUFCFIGHT-26MAR07BORDER-DER"
         ]
     },
     "POLYMARKET_KALSHI_MAPPING": {
-        "aec-nba-sa-ny-2026-03-01": {
-            "kalshi_ticker": "KXNBAGAME-26MAR01SASNYK-SAS",
-            "other_poly_id": "aec-nba-sa-ny-2026-03-01-inverse",
-            "other_kalshi_ticker": "KXNBAGAME-26MAR01SASNYK-NYK"
+        "aec-ufc-chaoli-maxhol-2026-03-07": {
+            "kalshi_ticker": "KXUFCFIGHT-26MAR07HOLOLI-OLI",
+            "other_poly_id": "aec-ufc-chaoli-maxhol-2026-03-07-inverse",
+            "other_kalshi_ticker": "KXUFCFIGHT-26MAR07HOLOLI-HOL"
         },
-        "aec-nba-cle-bkn-2026-03-01": {
-            "kalshi_ticker": "KXNBAGAME-26MAR01CLEBKN-CLE",
-            "other_poly_id": "aec-nba-cle-bkn-2026-03-01-inverse",
-            "other_kalshi_ticker": "KXNBAGAME-26MAR01CLEBKN-BKN"
+        "aec-ufc-reider-caibor-2026-03-07": {
+            "kalshi_ticker": "KXUFCFIGHT-26MAR07BORDER-DER",
+            "other_poly_id": "aec-ufc-reider-caibor-2026-03-07-inverse",
+            "other_kalshi_ticker": "KXUFCFIGHT-26MAR07BORDER-BOR"
         },
-        "aec-nba-mil-chi-2026-03-01": {
-            "kalshi_ticker": "KXNBAGAME-26MAR01MILCHI-MIL",
-            "other_poly_id": "aec-nba-mil-chi-2026-03-01-inverse",
-            "other_kalshi_ticker": "KXNBAGAME-26MAR01MILCHI-CHI"
+        "aec-ufc-micjoh-dredob-2026-03-07": {
+            "kalshi_ticker": "KXUFCFIGHT-26MAR07DOBJOH-JOH",
+            "other_poly_id": "aec-ufc-micjoh-dredob-2026-03-07-inverse",
+            "other_kalshi_ticker": "KXUFCFIGHT-26MAR07DOBJOH-DOB"
         },
-        "aec-nba-min-den-2026-03-01": {
-            "kalshi_ticker": "KXNBAGAME-26MAR01MINDEN-MIN",
-            "other_poly_id": "aec-nba-min-den-2026-03-01-inverse",
-            "other_kalshi_ticker": "KXNBAGAME-26MAR01MINDEN-DEN"
+        "aec-ufc-robfon-rauros-2026-03-07": {
+            "kalshi_ticker": "KXUFCFIGHT-26MAR07FONROS-FON",
+            "other_poly_id": "aec-ufc-robfon-rauros-2026-03-07-inverse",
+            "other_kalshi_ticker": "KXUFCFIGHT-26MAR07FONROS-ROS"
         },
-        "aec-nba-mem-ind-2026-03-01": {
-            "kalshi_ticker": "KXNBAGAME-26MAR01MEMIND-MEM",
-            "other_poly_id": "aec-nba-mem-ind-2026-03-01-inverse",
-            "other_kalshi_ticker": "KXNBAGAME-26MAR01MEMIND-IND"
+        "aec-ufc-grerod-brufer-2026-03-07": {
+            "kalshi_ticker": "KXUFCFIGHT-26MAR07RODFER-ROD",
+            "other_poly_id": "aec-ufc-grerod-brufer-2026-03-07-inverse",
+            "other_kalshi_ticker": "KXUFCFIGHT-26MAR07RODFER-FER"
         },
-        "aec-nba-por-atl-2026-03-01": {
-            "kalshi_ticker": "KXNBAGAME-26MAR01PORATL-POR",
-            "other_poly_id": "aec-nba-por-atl-2026-03-01-inverse",
-            "other_kalshi_ticker": "KXNBAGAME-26MAR01PORATL-ATL"
+        "aec-ufc-codgar-xialon-2026-03-07": {
+            "kalshi_ticker": "KXUFCFIGHT-26MAR07GARLON-GAR",
+            "other_poly_id": "aec-ufc-codgar-xialon-2026-03-07-inverse",
+            "other_kalshi_ticker": "KXUFCFIGHT-26MAR07GARLON-LON"
         },
-        "aec-nba-det-orl-2026-03-01": {
-            "kalshi_ticker": "KXNBAGAME-26MAR01DETORL-DET",
-            "other_poly_id": "aec-nba-det-orl-2026-03-01-inverse",
-            "other_kalshi_ticker": "KXNBAGAME-26MAR01DETORL-ORL"
+        "aec-ufc-rictur-albmon-2026-03-07": {
+            "kalshi_ticker": "KXUFCFIGHT-26MAR07TURMON-TUR",
+            "other_poly_id": "aec-ufc-rictur-albmon-2026-03-07-inverse",
+            "other_kalshi_ticker": "KXUFCFIGHT-26MAR07TURMON-MON"
         },
-        "aec-nba-phi-bos-2026-03-01": {
-            "kalshi_ticker": "KXNBAGAME-26MAR01PHIBOS-PHI",
-            "other_poly_id": "aec-nba-phi-bos-2026-03-01-inverse",
-            "other_kalshi_ticker": "KXNBAGAME-26MAR01PHIBOS-BOS"
+        "aec-ufc-coddur-nyatum-2026-03-07": {
+            "kalshi_ticker": "KXUFCFIGHT-26MAR07DURTUM-DUR",
+            "other_poly_id": "aec-ufc-coddur-nyatum-2026-03-07-inverse",
+            "other_kalshi_ticker": "KXUFCFIGHT-26MAR07DURTUM-TUM"
         },
-        "aec-nba-okc-dal-2026-03-01": {
-            "kalshi_ticker": "KXNBAGAME-26MAR01OKCDAL-OKC",
-            "other_poly_id": "aec-nba-okc-dal-2026-03-01-inverse",
-            "other_kalshi_ticker": "KXNBAGAME-26MAR01OKCDAL-DAL"
+        "aec-ufc-rodbel-lukfer-2026-03-07": {
+            "kalshi_ticker": "KXUFCFIGHT-26MAR07FERBEL-BEL",
+            "other_poly_id": "aec-ufc-rodbel-lukfer-2026-03-07-inverse",
+            "other_kalshi_ticker": "KXUFCFIGHT-26MAR07FERBEL-FER"
         },
-        "aec-nba-no-lac-2026-03-01": {
-            "kalshi_ticker": "KXNBAGAME-26MAR01NOPLAC-NOP",
-            "other_poly_id": "aec-nba-no-lac-2026-03-01-inverse",
-            "other_kalshi_ticker": "KXNBAGAME-26MAR01NOPLAC-LAC"
+        "aec-ufc-sumuda-jesagu-2026-03-07": {
+            "kalshi_ticker": "KXUFCFIGHT-26MAR07MUDSAN-MUD",
+            "other_poly_id": "aec-ufc-sumuda-jesagu-2026-03-07-inverse",
+            "other_kalshi_ticker": "KXUFCFIGHT-26MAR07MUDSAN-SAN"
         },
-        "aec-nba-sac-lal-2026-03-01": {
-            "kalshi_ticker": "KXNBAGAME-26MAR01SACLAL-SAC",
-            "other_poly_id": "aec-nba-sac-lal-2026-03-01-inverse",
-            "other_kalshi_ticker": "KXNBAGAME-26MAR01SACLAL-LAL"
+        "aec-ufc-codbru-donjoh-2026-03-07": {
+            "kalshi_ticker": "KXUFCFIGHT-26MAR07JOHBRU-BRU",
+            "other_poly_id": "aec-ufc-codbru-donjoh-2026-03-07-inverse",
+            "other_kalshi_ticker": "KXUFCFIGHT-26MAR07JOHBRU-JOH"
+        },
+        "aec-ufc-diynur-raftob-2026-03-07": {
+            "kalshi_ticker": "KXUFCFIGHT-26MAR07TOBNUR-NUR",
+            "other_poly_id": "aec-ufc-diynur-raftob-2026-03-07-inverse",
+            "other_kalshi_ticker": "KXUFCFIGHT-26MAR07TOBNUR-TOB"
+        },
+        "aec-ufc-gasbol-jeolee-2026-03-07": {
+            "kalshi_ticker": "KXUFCFIGHT-26MAR07BOLLEE-BOL",
+            "other_poly_id": "aec-ufc-gasbol-jeolee-2026-03-07-inverse",
+            "other_kalshi_ticker": "KXUFCFIGHT-26MAR07BOLLEE-LEE"
         }
     },
     "SIDE_MAPPING": {

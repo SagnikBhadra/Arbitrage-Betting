@@ -99,7 +99,7 @@ async def scan_inefficiencies(polymarket_client, kalshi_client, kalshi_gateway, 
     correlated_market_mapping = get_static_mapping("CORRELATED_MARKET_MAPPING")
     while True:
         crossed_markets(polymarket_client, kalshi_client, kalshi_gateway, polymarket_us_gateway, polymarket_kalshi_mapping)
-        intra_kalshi_arbitrage(kalshi_client, kalshi_gateway, correlated_market_mapping, profit_threshold=0.02)
+        #intra_kalshi_arbitrage(kalshi_client, kalshi_gateway, correlated_market_mapping, profit_threshold=0.02)
         await asyncio.sleep(1)
 
 async def main():

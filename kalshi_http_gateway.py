@@ -112,7 +112,9 @@ class KalshiHTTPGateway:
     # ────────────────────────────────────────────────────────────────────────
     def get_balance(self) -> dict:
         """Get your current account balance."""
-        return self._request("GET", "/portfolio/balance")
+        balance_response = self._request("GET", "/portfolio/balance")
+        self.logger.info(f"Current balance: {balance_response['balance']} USD")
+        return balance_response["balance"]
 
     def get_positions(self) -> dict:
         """Get your current positions."""

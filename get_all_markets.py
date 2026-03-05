@@ -10,6 +10,7 @@ INITIAL_BACKOFF = 1  # seconds
 
 # NBA Basketball series ticker: KXNBAGAME
 # NCAA Basketball series ticker: KXNCAAMBGAME
+# UFC series ticker: KXUFCFIGHT
 
 def fetch_all_market_tickers(series_ticker=""):
     ticker_map = {}
@@ -74,7 +75,7 @@ if __name__ == "__main__":
         data = json.load(f)
     
     correlated_market_mapping = {}
-    kalshi_tickers = fetch_all_market_tickers("KXNBAGAME")
+    kalshi_tickers = fetch_all_market_tickers("KXUFCFIGHT")
     tickers = list(kalshi_tickers.keys())
     for i in range(0, len(tickers), 2):
         if i + 1 < len(tickers):

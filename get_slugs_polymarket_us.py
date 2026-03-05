@@ -3,6 +3,12 @@ import json
 from datetime import datetime, timedelta, date
 from cryptography.hazmat.primitives.asymmetric import ed25519
 
+# NBA slug: aec-nba
+# College Basketball slug: aec-cbb
+# UFC slug: aec-ufc
+# NHL slug: aec-nhl
+# MLS slug: atc-mls
+
 # Your credentials
 with open("polymarket.key", "r") as f:
     private_key_base64 = f.read().strip()
@@ -72,10 +78,11 @@ response = requests.get(f"https://api.polymarket.us{path}", headers=headers, par
 # Markets
 slugs = []
 today = date.today()
-formatted_date = today.isoformat()
+required_date = today + timedelta(days=3)
+formatted_date = required_date.isoformat()
 
 for market in response["markets"]:
-    if "aec-nba" in market["slug"] and formatted_date in market["slug"]:
+    if "aec-ufc" in market["slug"] and formatted_date in market["slug"]:
         print(f"Market ID: {market['id']}, Name: {market['question']}, Slug: {market['slug']}, End Date: {market['endDate']}")
         slugs.append(market['slug'])
 

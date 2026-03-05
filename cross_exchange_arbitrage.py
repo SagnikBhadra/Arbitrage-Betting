@@ -7,7 +7,7 @@ from polymarket_us_feed import PolymarketUSWebSocket
 from polymarket_us_http_gateway import PolymarketUSHTTPGateway
 from kalshi_feed import KalshiWebSocket
 from kalshi_http_gateway import KalshiHTTPGateway, load_private_key
-from utils import get_maker_fees_kalshi, get_taker_fees_kalshi
+from utils import get_maker_fees_kalshi, get_taker_fees_kalshi, get_taker_fees_polymarket_us, get_maker_rebate_polymarket_us
 from collections import defaultdict
 class CrossExchangeArbitrage:
     """
@@ -27,6 +27,10 @@ class CrossExchangeArbitrage:
         # Gateways for order execution
         self.polymarket_gateway = polymarket_us_gateway
         self.kalshi_gateway = kalshi_gateway
+        
+        #Temporary balance tracking
+        self.polymarket_us_balance = Decimal(self.polymarket_gateway.get_balance())
+        self.kalshi_balance = Decimal(self.kalshi_gateway.get_balance())
 
         self.mapping = mapping
         self.min_edge = Decimal(min_edge)  # buffer for fees/slippage
@@ -44,109 +48,145 @@ class CrossExchangeArbitrage:
         ask, ask_size = orderbook.get_best_ask()
         return bid, bid_size, ask, ask_size
 
+    def _get_max_size(self, balance:Decimal, price:Decimal):
+        if price == Decimal(0):
+            return Decimal(0)
+        return Decimal(balance / price)
+
     def _same_side_arb(self, poly_id, kalshi_ticker, poly_bid: Decimal, poly_bid_size, poly_ask: Decimal, poly_ask_size,
                        kalshi_bid: Decimal, kalshi_bid_size, kalshi_ask: Decimal, kalshi_ask_size):
-
         # Ask on Kalshi < Bid on Polymarket (1, 2, 3, 4)
         # Buy Kalshi, Sell Polymarket
-        # TODO: Add maker/taker fee adjustments to edge calculation
-        if poly_bid and kalshi_ask and (poly_bid - kalshi_ask) > self.min_edge:
-            size = int(min(poly_bid_size, kalshi_ask_size))  # TODO: Add balance checks to size calculation
-            self.logger.info({
-                "type": "same_side",
-                "direction": "buy_kalshi_sell_poly",
-                "poly_id": poly_id,
-                "kalshi_ticker": kalshi_ticker,
-                "buy_price": kalshi_ask,
-                "sell_price": poly_bid,
-                "edge": poly_bid - kalshi_ask,
-                "size": int(size)
-            })
-            # Send orders to gateway for execution
-            # Kalshi
-            order_a = {
-                "ticker": kalshi_ticker,
-                "action": "buy",
-                "side": "yes",
-                "count": int(size),
-                "client_order_id": str(uuid.uuid4()),
-                "yes_price": int(float(kalshi_ask) * 100),
-                "type": "limit",
-                "time_in_force": "fill_or_kill"
-            }
-            try:
-                self.kalshi_gateway.create_order(order_a)
-            except Exception as e:
-                self.logger.error(f"Failed to place order A: {e}")
-            # Polymarket - Need BUY_SHORT at 1 - bid price to sell at bid price
-            try:
-                if poly_id.endswith("-inverse"):
-                    side = "BUY_SHORT"
-                else:
-                    side = "BUY_LONG"
-                self.polymarket_gateway.create_order(
-                    market_slug=poly_id,
-                    price=float(Decimal(1.0) - poly_bid),
-                    quantity=int(size),
-                    side=side,
-                    tif="FILL_OR_KILL",
-                    order_type="LIMIT",
-                )
-            except Exception as e:
-                self.logger.error(f"Failed to place order B: {e}")
+        if poly_bid and kalshi_ask:
+            # Add maker/taker fee adjustments to edge calculation
+            kalshi_fee = get_taker_fees_kalshi(kalshi_ask, kalshi_ask_size)
+            polymarket_us_fee = get_taker_fees_polymarket_us(poly_bid, poly_bid_size)
+            fees = kalshi_fee + polymarket_us_fee
+            if (poly_bid - kalshi_ask - fees) > self.min_edge:
+                size = int(min(poly_bid_size, kalshi_ask_size, self._get_max_size(self.kalshi_balance, kalshi_ask), self._get_max_size(self.polymarket_us_balance, poly_bid)))  # TODO: Add balance checks to size calculation
+                self.logger.info({
+                    "type": "same_side",
+                    "direction": "buy_kalshi_sell_poly",
+                    "poly_id": poly_id,
+                    "kalshi_ticker": kalshi_ticker,
+                    "buy_price": kalshi_ask,
+                    "sell_price": poly_bid,
+                    "edge": poly_bid - kalshi_ask - fees,
+                    "size": int(size)
+                })
+                # Send orders to gateway for execution
+                # Kalshi
+                order_a = {
+                    "ticker": kalshi_ticker,
+                    "action": "buy",
+                    "side": "yes",
+                    "count": int(size),
+                    "client_order_id": str(uuid.uuid4()),
+                    "yes_price": int(float(kalshi_ask) * 100),
+                    "type": "limit",
+                    "time_in_force": "fill_or_kill"
+                }
+                try:
+                    response = self.kalshi_gateway.create_order(order_a)
+                    if response and getattr(response, "status_code", None) == 201:
+                        self.kalshi_balance -= Decimal(kalshi_ask) * Decimal(size)  # Update balance tracking
+                except Exception as e:
+                    self.logger.error(f"Failed to place order A: {e}")
+                # Polymarket - Need BUY_SHORT at 1 - bid price to sell at bid price
+                try:
+                    if poly_id.endswith("-inverse"):
+                        side = "BUY_SHORT"
+                    else:
+                        side = "BUY_LONG"
+                    response = self.polymarket_gateway.create_order(
+                        market_slug=poly_id,
+                        price=float(Decimal(1.0) - poly_bid),
+                        quantity=int(size),
+                        side=side,
+                        tif="FILL_OR_KILL",
+                        order_type="LIMIT",
+                    )
+                    if response and getattr(response, "status_code", None) == 201:
+                        self.polymarket_us_balance -= Decimal(Decimal(1.0) - poly_bid) * Decimal(size)  # Update balance tracking
+                except Exception as e:
+                    self.logger.error(f"Failed to place order B: {e}")
 
         # Ask on Polymarket < Bid on Kalshi
         # Buy Polymarket, Sell Kalshi
-        if kalshi_bid and poly_ask and (kalshi_bid - poly_ask) > self.min_edge:
-            size = min(kalshi_bid_size, poly_ask_size)
-            self.logger.info({
-                "type": "same_side",
-                "direction": "buy_poly_sell_kalshi",
-                "poly_id": poly_id,
-                "kalshi_ticker": kalshi_ticker,
-                "buy_price": poly_ask,
-                "sell_price": kalshi_bid,
-                "edge": kalshi_bid - poly_ask,
-                "size": int(size)
-            })
-            # Send orders to gateway for execution
-            # Polymarket - Need BUY_LONG at ask price to buy at ask price
-            try:
-                side = "BUY_SHORT" if poly_id.endswith("-inverse") else "BUY_LONG"
-                self.polymarket_gateway.create_order(
-                    market_slug=poly_id,
-                    price=float(poly_ask),
-                    quantity=int(size),
-                    side=side,
-                    tif="FILL_OR_KILL",
-                    order_type="LIMIT",
-                )  
-            except Exception as e:
-                self.logger.error(f"Failed to place order A: {e}")
-            # Kalshi - Buy NO ASK at 1 - bid price 
-            order_b = {
-                "ticker": kalshi_ticker,
-                "action": "buy",
-                "side": "no",
-                "count": int(size),
-                "client_order_id": str(uuid.uuid4()),
-                "no_price": int(float(Decimal(1.0) - kalshi_bid) * 100),
-                "type": "limit",
-                "time_in_force": "fill_or_kill"
-            }
-            try:
-                self.kalshi_gateway.create_order(order_b)
-            except Exception as e:
-                self.logger.error(f"Failed to place order B: {e}")
+        if kalshi_bid and poly_ask:
+            # Add maker/taker fee adjustments to edge calculation
+            kalshi_fee = get_taker_fees_kalshi(kalshi_bid, kalshi_bid_size)
+            polymarket_us_fee = get_taker_fees_polymarket_us(poly_ask, poly_ask_size)
+            fees = kalshi_fee + polymarket_us_fee
+            if (kalshi_bid - poly_ask - fees) > self.min_edge:
+                size = min(kalshi_bid_size, poly_ask_size, self._get_max_size(self.kalshi_balance, kalshi_bid), self._get_max_size(self.polymarket_us_balance, poly_ask))
+                self.logger.info({
+                    "type": "same_side",
+                    "direction": "buy_poly_sell_kalshi",
+                    "poly_id": poly_id,
+                    "kalshi_ticker": kalshi_ticker,
+                    "buy_price": poly_ask,
+                    "sell_price": kalshi_bid,
+                    "edge": kalshi_bid - poly_ask - fees,
+                    "size": int(size)
+                })
+                # Send orders to gateway for execution
+                # Polymarket - Need BUY_LONG at ask price to buy at ask price
+                try:
+                    side = "BUY_SHORT" if poly_id.endswith("-inverse") else "BUY_LONG"
+                    response = self.polymarket_gateway.create_order(
+                        market_slug=poly_id,
+                        price=float(poly_ask),
+                        quantity=int(size),
+                        side=side,
+                        tif="FILL_OR_KILL",
+                        order_type="LIMIT",
+                    )
+                    if response and getattr(response, "status_code", None) == 201:
+                        self.polymarket_us_balance -= Decimal(poly_ask) * Decimal(size)  # Update balance tracking  
+                except Exception as e:
+                    self.logger.error(f"Failed to place order A: {e}")
+                # Kalshi - Buy NO ASK at 1 - bid price 
+                order_b = {
+                    "ticker": kalshi_ticker,
+                    "action": "buy",
+                    "side": "no",
+                    "count": int(size),
+                    "client_order_id": str(uuid.uuid4()),
+                    "no_price": int(float(Decimal(1.0) - kalshi_bid) * 100),
+                    "type": "limit",
+                    "time_in_force": "fill_or_kill"
+                }
+                try:
+                    response = self.kalshi_gateway.create_order(order_b)
+                    if response and getattr(response, "status_code", None) == 201:
+                        self.kalshi_balance -= Decimal(Decimal(1.0) - kalshi_bid) * Decimal(size)  # Update balance tracking
+                except Exception as e:
+                    self.logger.error(f"Failed to place order B: {e}")
 
     def _double_buy_arb(self, order_A: dict, order_B: dict):
         # Synthetic arbitrage
         # If asks for Team 1 + Team 2 < $1
         # Stategies 5, 6, 9, 10
         if order_A["ask_price"] and order_B["ask_price"]:
-            total_cost = Decimal(order_A["ask_price"]) + Decimal(order_B["ask_price"])
+            # Calculate fees:
+            for order in [order_A, order_B]:
+                if "Polymarket" in order["ask_market"]:
+                    fee = get_taker_fees_polymarket_us(order["ask_price"], order["ask_size"])
+                    size = self._get_max_size(self.polymarket_us_balance, order["ask_price"])
+                elif "Kalshi" in order["ask_market"]:
+                    fee = get_taker_fees_kalshi(order["ask_price"], order["ask_size"])
+                    size = self._get_max_size(self.kalshi_balance, order["ask_price"])
+                else:
+                    print(f"Unknown market in order: {order['ask_market']}. Cannot calculate fees.")
+                    return
+                order["fee"] = fee
+                order["max_size"] = size
+            
+            total_cost = Decimal(order_A["ask_price"]) + Decimal(order_B["ask_price"]) + Decimal(order_A["fee"]) + Decimal(order_B["fee"])
             profit = Decimal(Decimal(1) - total_cost)
             if profit > self.min_edge:
+                size = min(order_A["ask_size"], order_B["ask_size"], order_A["max_size"], order_B["max_size"])
                 self.logger.info({
                     "type": "double_buy",
                     "total_cost": total_cost,
@@ -163,25 +203,29 @@ class CrossExchangeArbitrage:
                     try:
                         if "Polymarket" in order["ask_market"]:
                             side = "BUY_SHORT" if order["ask_market"].endswith("-inverse") else "BUY_LONG"
-                            self.polymarket_gateway.create_order(
+                            response =self.polymarket_gateway.create_order(
                                 market_slug=order["ask_market"].split(": ")[1],
                                 price=float(order["ask_price"]),
-                                quantity=int(order["ask_size"]),
+                                quantity=int(order["max_size"]),
                                 side=side,
                                 tif="FILL_OR_KILL",
                                 order_type="LIMIT",
                             )
+                            if response and getattr(response, "status_code", None) == 201:
+                                self.polymarket_us_balance -= Decimal(order["ask_price"]) * Decimal(order["max_size"])  # Update balance tracking
                         elif "Kalshi" in order["ask_market"]:
-                            self.kalshi_gateway.create_order({
+                            response = self.kalshi_gateway.create_order({
                                 "ticker": order["ask_market"].split(": ")[1],
                                 "action": "buy",
                                 "side": "yes",
-                                "count": int(order["ask_size"]),
+                                "count": int(order["max_size"]),
                                 "client_order_id": str(uuid.uuid4()),
                                 "yes_price": int(float(order["ask_price"]) * 100),
                                 "type": "limit",
                                 "time_in_force": "fill_or_kill"
                             })
+                            if response and getattr(response, "status_code", None) == 201:
+                                self.kalshi_balance -= Decimal(Decimal(1.0) - Decimal(order["ask_price"])) * Decimal(order["max_size"])  # Update balance tracking
                     except Exception as e:
                         self.logger.error(f"Failed to place order: {e}")
 
@@ -192,7 +236,17 @@ class CrossExchangeArbitrage:
         # Strategies 7, 8
 
         if order_A["bid_price"] and order_B["bid_price"]:
-            total_sale = Decimal(order_A["bid_price"]) + Decimal(order_B["bid_price"])
+            # Calculate fees:
+            for order in [order_A, order_B]:
+                if "Polymarket" in order["ask_market"]:
+                    fee = get_taker_fees_polymarket_us(order["ask_price"], order["ask_size"])
+                elif "Kalshi" in order["ask_market"]:
+                    fee = get_taker_fees_kalshi(order["ask_price"], order["ask_size"])
+                else:
+                    print(f"Unknown market in order: {order['ask_market']}. Cannot calculate fees.")
+                    return
+                order["fee"] = fee
+            total_sale = Decimal(order_A["bid_price"]) + Decimal(order_B["bid_price"]) - (order_A["fee"] + order_B["fee"])
             profit = Decimal(total_sale - Decimal(1))
             if profit > self.min_edge:
                 self.logger.info({

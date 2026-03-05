@@ -1,0 +1,1 @@
+2026-03-04 22:31:45,920 | ERROR | Failed to place order A: cannot access local variable 'size' where it is not associated with a value
