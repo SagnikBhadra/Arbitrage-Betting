@@ -7,6 +7,7 @@ import uuid
 import requests
 import uuid
 
+from collections import defaultdict
 from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.asymmetric import padding
 from cryptography.hazmat.primitives import serialization
@@ -118,7 +119,16 @@ class KalshiHTTPGateway:
 
     def get_positions(self) -> dict:
         """Get your current positions."""
-        return self._request("GET", "/portfolio/positions")
+        positions = defaultdict(int)
+        response = self._request("GET", "/portfolio/positions")
+
+        for market in response["market_positions"]:
+            ticker = market["ticker"]
+            position = market["position"]
+
+            positions[ticker] = position
+
+        return positions
 
     def get_orders(self, ticker: str = None, status: str = None) -> dict:
         """
@@ -188,6 +198,11 @@ if __name__ == "__main__":
     try:
         balance = gateway.get_balance()
         print(f"✓ Connected! Balance: {json.dumps(balance, indent=2)}")
+        
+        positions = gateway.get_positions()
+        print(f"Positions")
+        for ticker, position in positions.items():
+            print(f"{ticker}: {position}")
         
         # Example: place a market buy order for 10 YES contracts on a market
         """

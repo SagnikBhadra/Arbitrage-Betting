@@ -59,8 +59,8 @@ class CrossExchangeArbitrage:
         # Buy Kalshi, Sell Polymarket
         if poly_bid and kalshi_ask:
             # Add maker/taker fee adjustments to edge calculation
-            kalshi_fee = get_taker_fees_kalshi(kalshi_ask, kalshi_ask_size)
-            polymarket_us_fee = get_taker_fees_polymarket_us(poly_bid, poly_bid_size)
+            kalshi_fee = get_taker_fees_kalshi(kalshi_ask, Decimal(1))
+            polymarket_us_fee = get_taker_fees_polymarket_us(poly_bid, Decimal(1))
             fees = kalshi_fee + polymarket_us_fee
             if (poly_bid - kalshi_ask - fees) > self.min_edge:
                 size = int(min(poly_bid_size, kalshi_ask_size, self._get_max_size(self.kalshi_balance, kalshi_ask), self._get_max_size(self.polymarket_us_balance, poly_bid)))  # TODO: Add balance checks to size calculation
@@ -115,8 +115,8 @@ class CrossExchangeArbitrage:
         # Buy Polymarket, Sell Kalshi
         if kalshi_bid and poly_ask:
             # Add maker/taker fee adjustments to edge calculation
-            kalshi_fee = get_taker_fees_kalshi(kalshi_bid, kalshi_bid_size)
-            polymarket_us_fee = get_taker_fees_polymarket_us(poly_ask, poly_ask_size)
+            kalshi_fee = get_taker_fees_kalshi(kalshi_bid, Decimal(1))
+            polymarket_us_fee = get_taker_fees_polymarket_us(poly_ask, Decimal(1))
             fees = kalshi_fee + polymarket_us_fee
             if (kalshi_bid - poly_ask - fees) > self.min_edge:
                 size = min(kalshi_bid_size, poly_ask_size, self._get_max_size(self.kalshi_balance, kalshi_bid), self._get_max_size(self.polymarket_us_balance, poly_ask))
@@ -172,17 +172,16 @@ class CrossExchangeArbitrage:
             # Calculate fees:
             for order in [order_A, order_B]:
                 if "Polymarket" in order["ask_market"]:
-                    fee = get_taker_fees_polymarket_us(order["ask_price"], order["ask_size"])
+                    fee = get_taker_fees_polymarket_us(order["ask_price"], Decimal(1))
                     size = self._get_max_size(self.polymarket_us_balance, order["ask_price"])
                 elif "Kalshi" in order["ask_market"]:
-                    fee = get_taker_fees_kalshi(order["ask_price"], order["ask_size"])
+                    fee = get_taker_fees_kalshi(order["ask_price"], Decimal(1))
                     size = self._get_max_size(self.kalshi_balance, order["ask_price"])
                 else:
                     print(f"Unknown market in order: {order['ask_market']}. Cannot calculate fees.")
                     return
                 order["fee"] = fee
                 order["max_size"] = size
-            
             total_cost = Decimal(order_A["ask_price"]) + Decimal(order_B["ask_price"]) + Decimal(order_A["fee"]) + Decimal(order_B["fee"])
             profit = Decimal(Decimal(1) - total_cost)
             if profit > self.min_edge:
@@ -239,9 +238,9 @@ class CrossExchangeArbitrage:
             # Calculate fees:
             for order in [order_A, order_B]:
                 if "Polymarket" in order["ask_market"]:
-                    fee = get_taker_fees_polymarket_us(order["ask_price"], order["ask_size"])
+                    fee = get_taker_fees_polymarket_us(order["ask_price"], Decimal(1))
                 elif "Kalshi" in order["ask_market"]:
-                    fee = get_taker_fees_kalshi(order["ask_price"], order["ask_size"])
+                    fee = get_taker_fees_kalshi(order["ask_price"], Decimal(1))
                 else:
                     print(f"Unknown market in order: {order['ask_market']}. Cannot calculate fees.")
                     return
@@ -260,6 +259,9 @@ class CrossExchangeArbitrage:
                     "bid_B_price": order_B["bid_price"],
                     "bid_B_size": order_B["bid_size"]
                 })
+                
+    def _sell_out_of_position_arb(self):
+        pass
 
     def find_opportunities(self):
 

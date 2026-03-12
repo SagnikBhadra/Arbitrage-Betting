@@ -1,0 +1,84 @@
+2026-03-07 12:01:10,674 | INFO | Current balance: 10 USD
+2026-03-07 15:31:16,255 | INFO | Current balance: 1010 USD
+2026-03-07 16:40:23,345 | INFO | Current balance: 1010 USD
+2026-03-07 16:40:23,349 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071505SDCLE-SD', 'action': 'buy', 'side': 'yes', 'count': 5, 'client_order_id': '49be3f97-e58b-4e25-9937-73fb7a812bd1', 'yes_price': 14, 'type': 'limit'}
+2026-03-07 16:40:23,349 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071505SDCLE-CLE', 'action': 'buy', 'side': 'yes', 'count': 5, 'client_order_id': '14cebbc9-8e8c-456e-a009-8ea454e7ae27', 'yes_price': 43, 'type': 'limit'}
+2026-03-07 16:40:44,894 | INFO | Current balance: 1010 USD
+2026-03-07 16:40:44,894 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071505ATHCHC-ATH', 'action': 'buy', 'side': 'yes', 'count': 4, 'client_order_id': '3c0e7857-3556-4fa3-a8d1-b0edac629da5', 'yes_price': 21, 'type': 'limit'}
+2026-03-07 16:40:44,894 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071505ATHCHC-CHC', 'action': 'buy', 'side': 'yes', 'count': 4, 'client_order_id': 'f0ac910e-e234-4e4f-b174-7af0f8da5140', 'yes_price': 57, 'type': 'limit'}
+2026-03-07 16:40:50,790 | INFO | Current balance: 1010 USD
+2026-03-07 16:40:50,792 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071505SDCLE-SD', 'action': 'buy', 'side': 'no', 'count': 1, 'client_order_id': '4c34206c-6256-4a8a-ac44-1ac04d209aad', 'no_price': 43, 'type': 'limit'}
+2026-03-07 16:40:50,792 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071505SDCLE-CLE', 'action': 'buy', 'side': 'no', 'count': 1, 'client_order_id': 'f440048a-ef95-4de0-a180-b0b28e10ecb0', 'no_price': 13, 'type': 'limit'}
+2026-03-07 16:40:53,181 | INFO | Current balance: 1010 USD
+2026-03-07 16:40:53,183 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071505ATHCHC-ATH', 'action': 'buy', 'side': 'yes', 'count': 5, 'client_order_id': '518c8a06-eb38-41b0-92d0-76b25fc08822', 'yes_price': 21, 'type': 'limit'}
+2026-03-07 16:40:53,183 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071505ATHCHC-CHC', 'action': 'buy', 'side': 'yes', 'count': 5, 'client_order_id': 'd5da7af0-48e4-4bca-8b39-60c8af96b092', 'yes_price': 59, 'type': 'limit'}
+2026-03-07 16:41:00,042 | INFO | Current balance: 1010 USD
+2026-03-07 16:41:00,044 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071505ATHCHC-ATH', 'action': 'buy', 'side': 'yes', 'count': 5, 'client_order_id': '43c2f8aa-9c4c-40fa-aff6-b8c98532f99d', 'yes_price': 21, 'type': 'limit'}
+2026-03-07 16:41:00,044 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071505ATHCHC-CHC', 'action': 'buy', 'side': 'yes', 'count': 5, 'client_order_id': '8fc796b0-fadc-4e64-9a1f-f8eb3d5f31b2', 'yes_price': 59, 'type': 'limit'}
+2026-03-07 16:41:08,812 | INFO | Current balance: 1010 USD
+2026-03-07 16:41:08,812 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071505ATHCHC-ATH', 'action': 'buy', 'side': 'yes', 'count': 5, 'client_order_id': 'b6992917-b677-423f-929f-0d96190e598b', 'yes_price': 21, 'type': 'limit'}
+2026-03-07 16:41:08,812 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071505ATHCHC-CHC', 'action': 'buy', 'side': 'yes', 'count': 5, 'client_order_id': '6177281f-734f-49bb-8483-2400603d757b', 'yes_price': 59, 'type': 'limit'}
+2026-03-07 16:41:32,536 | INFO | Current balance: 1010 USD
+2026-03-07 16:41:32,536 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071505ATHCHC-ATH', 'action': 'buy', 'side': 'yes', 'count': 5, 'client_order_id': 'adfc7cee-1b6f-436a-b146-68ef755bfaf5', 'yes_price': 21, 'type': 'limit'}
+2026-03-07 16:41:32,536 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071505ATHCHC-CHC', 'action': 'buy', 'side': 'yes', 'count': 5, 'client_order_id': '085e4b11-4be6-40a3-9a70-9025013137e9', 'yes_price': 59, 'type': 'limit'}
+2026-03-07 16:41:39,996 | INFO | Current balance: 1010 USD
+2026-03-07 16:41:39,996 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071505ATHCHC-ATH', 'action': 'buy', 'side': 'yes', 'count': 2, 'client_order_id': 'd30fecf1-76c1-49b7-946e-059e80e1f185', 'yes_price': 21, 'type': 'limit'}
+2026-03-07 16:41:39,998 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071505ATHCHC-CHC', 'action': 'buy', 'side': 'yes', 'count': 2, 'client_order_id': '90fcea87-c249-4002-a77e-087b5ba1b686', 'yes_price': 59, 'type': 'limit'}
+2026-03-07 16:41:51,673 | INFO | Current balance: 1010 USD
+2026-03-07 16:41:51,673 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071505SDCLE-SD', 'action': 'buy', 'side': 'yes', 'count': 1, 'client_order_id': '1c833bc0-a2f8-4393-af34-efcc1e2a0623', 'yes_price': 13, 'type': 'limit'}
+2026-03-07 16:41:51,673 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071505SDCLE-CLE', 'action': 'buy', 'side': 'yes', 'count': 1, 'client_order_id': '3e200e17-bd45-4708-aeaa-296a47636e94', 'yes_price': 43, 'type': 'limit'}
+2026-03-07 16:42:21,445 | INFO | Current balance: 1010 USD
+2026-03-07 16:42:21,453 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071505SDCLE-SD', 'action': 'buy', 'side': 'yes', 'count': 2, 'client_order_id': '5e4c09e0-d380-4cdc-b641-615abaa2347a', 'yes_price': 12, 'type': 'limit'}
+2026-03-07 16:42:21,453 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071505SDCLE-CLE', 'action': 'buy', 'side': 'yes', 'count': 2, 'client_order_id': '9c18b453-5067-4797-a5a9-591dae19a08f', 'yes_price': 43, 'type': 'limit'}
+2026-03-07 16:43:28,930 | INFO | Current balance: 1010 USD
+2026-03-07 16:43:28,930 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071505SDCLE-SD', 'action': 'buy', 'side': 'yes', 'count': 1, 'client_order_id': '18e28f7b-82b6-4212-a9ec-6ff393a88103', 'yes_price': 9, 'type': 'limit'}
+2026-03-07 16:43:28,930 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071505SDCLE-CLE', 'action': 'buy', 'side': 'yes', 'count': 1, 'client_order_id': 'f6b9c263-f089-48cc-b532-d752cff221c8', 'yes_price': 43, 'type': 'limit'}
+2026-03-07 16:43:29,491 | INFO | Current balance: 1010 USD
+2026-03-07 16:43:29,491 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071505SDCLE-SD', 'action': 'buy', 'side': 'no', 'count': 1, 'client_order_id': '360392f0-4b4d-459c-a088-4d63137a9800', 'no_price': 43, 'type': 'limit'}
+2026-03-07 16:43:29,491 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071505SDCLE-CLE', 'action': 'buy', 'side': 'no', 'count': 1, 'client_order_id': 'c691fe95-3d92-4bcc-a776-1e37d3a6d250', 'no_price': 10, 'type': 'limit'}
+2026-03-07 16:43:40,153 | INFO | Current balance: 1010 USD
+2026-03-07 16:43:40,153 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071505SDCLE-SD', 'action': 'buy', 'side': 'yes', 'count': 5, 'client_order_id': 'b28d1ce8-1441-4b16-8f4f-7d582a17df0b', 'yes_price': 8, 'type': 'limit'}
+2026-03-07 16:43:40,153 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071505SDCLE-CLE', 'action': 'buy', 'side': 'yes', 'count': 5, 'client_order_id': 'c88a52a6-c563-475e-9331-61102f04cb53', 'yes_price': 43, 'type': 'limit'}
+2026-03-07 16:43:40,802 | INFO | Current balance: 1010 USD
+2026-03-07 16:43:40,802 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071505SDCLE-SD', 'action': 'buy', 'side': 'no', 'count': 1, 'client_order_id': 'cb5a7e2e-654a-4c06-a577-fc42849d7014', 'no_price': 43, 'type': 'limit'}
+2026-03-07 16:43:40,802 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071505SDCLE-CLE', 'action': 'buy', 'side': 'no', 'count': 1, 'client_order_id': '087b1ec7-5cf7-4a87-862c-a678a5144c0a', 'no_price': 8, 'type': 'limit'}
+2026-03-07 16:43:52,496 | INFO | Current balance: 1010 USD
+2026-03-07 16:43:52,496 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071505SDCLE-SD', 'action': 'buy', 'side': 'yes', 'count': 2, 'client_order_id': '6ad8bcc3-5846-4f13-b4da-8fb9dea6118e', 'yes_price': 7, 'type': 'limit'}
+2026-03-07 16:43:52,496 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071505SDCLE-CLE', 'action': 'buy', 'side': 'yes', 'count': 2, 'client_order_id': '53658821-b250-4eab-be40-1b5869bc032d', 'yes_price': 43, 'type': 'limit'}
+2026-03-07 16:43:53,122 | INFO | Current balance: 1010 USD
+2026-03-07 16:43:53,127 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071505SDCLE-SD', 'action': 'buy', 'side': 'no', 'count': 1, 'client_order_id': '13230b0b-cda7-4225-b86b-3959e016d106', 'no_price': 43, 'type': 'limit'}
+2026-03-07 16:43:53,127 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071505SDCLE-CLE', 'action': 'buy', 'side': 'no', 'count': 1, 'client_order_id': '22098fc8-1820-434a-adc7-5508a95ce262', 'no_price': 7, 'type': 'limit'}
+2026-03-07 17:47:59,112 | INFO | Current balance: 1010 USD
+2026-03-07 17:47:59,112 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071605LAAATH-LAA', 'action': 'buy', 'side': 'yes', 'count': 5, 'client_order_id': '18896b7d-500e-4b17-84c4-a3a808c66a27', 'yes_price': 37, 'type': 'limit'}
+2026-03-07 17:47:59,113 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071605LAAATH-ATH', 'action': 'buy', 'side': 'yes', 'count': 5, 'client_order_id': 'abdfb58c-d407-43df-b8a7-1dbd3c05901b', 'yes_price': 13, 'type': 'limit'}
+2026-03-07 17:48:41,807 | INFO | Current balance: 1010 USD
+2026-03-07 17:48:41,807 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071605LAAATH-LAA', 'action': 'buy', 'side': 'yes', 'count': 5, 'client_order_id': 'f0e019c1-22b2-48cc-89bc-78e0fef8392b', 'yes_price': 37, 'type': 'limit'}
+2026-03-07 17:48:41,807 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071605LAAATH-ATH', 'action': 'buy', 'side': 'yes', 'count': 5, 'client_order_id': '68a1cd28-7028-4f3d-9df3-3eae63ae1479', 'yes_price': 13, 'type': 'limit'}
+2026-03-07 17:48:53,508 | INFO | Current balance: 1010 USD
+2026-03-07 17:48:53,508 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071605LAAATH-LAA', 'action': 'buy', 'side': 'yes', 'count': 1, 'client_order_id': '9d0b759d-6806-4833-94c6-731ad78af3be', 'yes_price': 37, 'type': 'limit'}
+2026-03-07 17:48:53,508 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071605LAAATH-ATH', 'action': 'buy', 'side': 'yes', 'count': 1, 'client_order_id': '5a4aaf39-78c7-470f-b6f6-436739a0f295', 'yes_price': 9, 'type': 'limit'}
+2026-03-07 17:50:27,373 | INFO | Current balance: 1010 USD
+2026-03-07 17:50:27,373 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071605LAAATH-LAA', 'action': 'buy', 'side': 'yes', 'count': 1, 'client_order_id': '20a33ca8-38b5-4a79-9c37-7db9df125f7e', 'yes_price': 37, 'type': 'limit'}
+2026-03-07 17:50:27,373 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071605LAAATH-ATH', 'action': 'buy', 'side': 'yes', 'count': 1, 'client_order_id': '8a8af39a-308f-4815-9f25-61c31bc2f70a', 'yes_price': 7, 'type': 'limit'}
+2026-03-07 17:50:30,164 | INFO | Current balance: 1010 USD
+2026-03-07 17:50:30,164 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071510CWSSEA-CWS', 'action': 'buy', 'side': 'no', 'count': 1, 'client_order_id': 'febfabeb-135f-4052-ae93-1bc0a644c1de', 'no_price': 4, 'type': 'limit'}
+2026-03-07 17:50:30,166 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071510CWSSEA-SEA', 'action': 'buy', 'side': 'no', 'count': 1, 'client_order_id': '7aa23286-a2e6-43eb-8e40-4a758fde4c1c', 'no_price': 62, 'type': 'limit'}
+2026-03-07 17:51:13,806 | INFO | Current balance: 1010 USD
+2026-03-07 17:51:13,806 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071605LAAATH-LAA', 'action': 'buy', 'side': 'yes', 'count': 5, 'client_order_id': '00aa519d-cae2-4da5-bf1e-b0835f8edb1c', 'yes_price': 37, 'type': 'limit'}
+2026-03-07 17:51:13,806 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071605LAAATH-ATH', 'action': 'buy', 'side': 'yes', 'count': 5, 'client_order_id': '575c759f-1b6a-4915-96b4-a5e8a10cf343', 'yes_price': 14, 'type': 'limit'}
+2026-03-07 17:51:15,521 | INFO | Current balance: 1010 USD
+2026-03-07 17:51:15,521 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071605LAAATH-LAA', 'action': 'buy', 'side': 'yes', 'count': 5, 'client_order_id': '64775450-c5fc-4965-bd01-35fc42cfd5e3', 'yes_price': 37, 'type': 'limit'}
+2026-03-07 17:51:15,521 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071605LAAATH-ATH', 'action': 'buy', 'side': 'yes', 'count': 5, 'client_order_id': '2ec9e1af-38d0-4793-ab8f-10946f07f576', 'yes_price': 13, 'type': 'limit'}
+2026-03-07 17:51:21,410 | INFO | Current balance: 1010 USD
+2026-03-07 17:51:21,410 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071605LAAATH-LAA', 'action': 'buy', 'side': 'yes', 'count': 5, 'client_order_id': '9cb97c4b-2667-44ee-8c7f-062c0112670e', 'yes_price': 37, 'type': 'limit'}
+2026-03-07 17:51:21,410 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071605LAAATH-ATH', 'action': 'buy', 'side': 'yes', 'count': 5, 'client_order_id': 'b46ce9df-d2f3-4232-8f5f-999b6b29d662', 'yes_price': 13, 'type': 'limit'}
+2026-03-07 17:51:26,100 | INFO | Current balance: 1010 USD
+2026-03-07 17:51:26,100 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071605LAAATH-LAA', 'action': 'buy', 'side': 'yes', 'count': 5, 'client_order_id': '153225b5-b8f0-4b2b-9833-212ed1ab5794', 'yes_price': 37, 'type': 'limit'}
+2026-03-07 17:51:26,100 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071605LAAATH-ATH', 'action': 'buy', 'side': 'yes', 'count': 5, 'client_order_id': '9ae798ad-9cc1-42da-bd2e-dd8f3316efb9', 'yes_price': 12, 'type': 'limit'}
+2026-03-07 17:51:31,756 | INFO | Current balance: 1010 USD
+2026-03-07 17:51:31,756 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071605LAAATH-LAA', 'action': 'buy', 'side': 'yes', 'count': 5, 'client_order_id': 'a9f7cb1b-cfcd-4758-914b-46d1ee07a2b0', 'yes_price': 37, 'type': 'limit'}
+2026-03-07 17:51:31,756 | INFO | Placing order with data: {'ticker': 'KXMLBSTGAME-26MAR071605LAAATH-ATH', 'action': 'buy', 'side': 'yes', 'count': 5, 'client_order_id': '5d9604f3-2750-442f-91be-406c6c7dbf06', 'yes_price': 13, 'type': 'limit'}
+2026-03-07 23:00:36,631 | INFO | Current balance: 1010 USD
+2026-03-08 09:26:04,998 | INFO | Current balance: 1010 USD
+2026-03-08 09:26:05,013 | INFO | Placing order with data: {'ticker': 'KXWBCGAME-26MAR081900NICISR-NIC', 'action': 'buy', 'side': 'no', 'count': 3, 'client_order_id': '08e9dd53-0799-43e8-bb1c-d3f2ee4ae30b', 'no_price': 29, 'type': 'limit', 'time_in_force': 'fill_or_kill'}
+2026-03-08 09:26:05,016 | INFO | Placing order with data: {'ticker': 'KXWBCGAME-26MAR081900NICISR-ISR', 'action': 'buy', 'side': 'no', 'count': 3, 'client_order_id': '3d48c53f-103e-4db5-9a30-e72c98c82ce7', 'no_price': 62, 'type': 'limit', 'time_in_force': 'fill_or_kill'}

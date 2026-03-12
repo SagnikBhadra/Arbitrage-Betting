@@ -3,6 +3,7 @@ import time
 import asyncio
 import aiohttp
 import requests
+from datetime import datetime, timedelta, timezone
 from requests.exceptions import ConnectionError, Timeout, HTTPError
 
 BASE_URL = "https://api.elections.kalshi.com/trade-api/v2/events"
@@ -11,7 +12,15 @@ MAX_RETRIES = 5
 INITIAL_BACKOFF = 1  # seconds
 MAX_CONCURRENT_REQUESTS = 3  # Reduced to avoid rate limiting
 REQUEST_DELAY = 0.5  # Delay between batches of requests
+MIN_CLOSE_TS = 2 # Set to 0 for all events
+MAX_CLOSE_TS = 5 # Set to 0 for all events
 
+def get_min_max_close_time():
+    # Set market close times
+    now = datetime.now(timezone.utc)
+    min_close_ts = int((now + timedelta(days=MIN_CLOSE_TS)).timestamp())
+    max_close_ts = int((now + timedelta(days=MAX_CLOSE_TS)).timestamp())
+    return min_close_ts, max_close_ts
 
 def fetch_all_events(status="open"):
     """Fetch all events from Kalshi API with pagination support.
@@ -32,6 +41,10 @@ def fetch_all_events(status="open"):
         }
         if cursor:
             params["cursor"] = cursor
+        if MIN_CLOSE_TS != 0 or MAX_CLOSE_TS != 0:
+            min_close_ts, max_close_ts = get_min_max_close_time()
+            params["min_close_ts"] = min_close_ts
+            params["max_close_ts"] = max_close_ts
 
         retries = 0
         backoff = INITIAL_BACKOFF

@@ -7,6 +7,9 @@ import websocket
 import uuid
 from decimal import Decimal
 
+# Position Manager
+from position_manager import PositionManager
+
 # Strategy modules
 from intra_kalshi_arbitrage import IntraKalshiArbitrage
 from cross_exchange_arbitrage import CrossExchangeArbitrage
@@ -63,17 +66,18 @@ def get_static_mapping(static_name: str):
         statics = json.load(f)
     return statics[static_name]
 
-def intra_kalshi_arbitrage(kalshi_client, kalshi_gateway, correlated_market_mapping, profit_threshold=0.02):
+def intra_kalshi_arbitrage(kalshi_client, kalshi_gateway, position_manager, correlated_market_mapping, profit_threshold=0.01):
 
     # Create object
     intra_kalshi_arb_strategy = IntraKalshiArbitrage(
         kalshi_client,
         kalshi_gateway,
-        correlated_market_mapping
+        position_manager,
+        correlated_market_mapping,
+        profit_threshold
     )
-
-    # Call find_opportunities() every second and log any opportunities above profit_threshold
-    intra_kalshi_arb_strategy.find_opportunities(profit_threshold=profit_threshold)
+    
+    return intra_kalshi_arb_strategy
 
 def crossed_markets(polymarket_client, kalshi_client, kalshi_gateway, polymarket_us_gateway, polymarket_kalshi_mapping):
 
@@ -86,7 +90,7 @@ def crossed_markets(polymarket_client, kalshi_client, kalshi_gateway, polymarket
         min_edge=0.01
     )
 
-    cross_exchange_arb_strategy.find_opportunities()
+    return cross_exchange_arb_strategy
 
 
 def wide_spreads():
@@ -97,10 +101,23 @@ async def scan_inefficiencies(polymarket_client, kalshi_client, kalshi_gateway, 
     polymarket_kalshi_mapping = get_static_mapping("POLYMARKET_KALSHI_MAPPING")
     # Intra Kalshi correlated markets mapping
     correlated_market_mapping = get_static_mapping("CORRELATED_MARKET_MAPPING")
+    
+    # Load positions
+    positions = kalshi_gateway.get_positions()
+    position_manager = PositionManager(positions)
+    
+    # Create strategy objects
+    strategies = []
+    # Intra Kalshi
+    strategies.append(intra_kalshi_arbitrage(kalshi_client, kalshi_gateway, position_manager, correlated_market_mapping, profit_threshold=0.01))
+    # Cross exchange
+    #strategies.append(crossed_markets(polymarket_client, kalshi_client, kalshi_gateway, polymarket_us_gateway, polymarket_kalshi_mapping))
+
+    # Call find_opportunities() every second and log any opportunities above profit_threshold
     while True:
-        crossed_markets(polymarket_client, kalshi_client, kalshi_gateway, polymarket_us_gateway, polymarket_kalshi_mapping)
-        #intra_kalshi_arbitrage(kalshi_client, kalshi_gateway, correlated_market_mapping, profit_threshold=0.02)
-        await asyncio.sleep(1)
+        for strategy in strategies:
+            strategy.find_opportunities()
+        #await asyncio.sleep(1)
 
 async def main():
     # TODO: Add deque to best bid/ask and only compare if timestamp is within delta

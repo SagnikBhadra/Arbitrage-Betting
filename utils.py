@@ -26,16 +26,16 @@ def get_maker_fees_kalshi(price, size):
     fee_ceiling = fee.quantize(Decimal("0.01"), rounding=ROUND_CEILING)
     return fee_ceiling
 
-def get_taker_fees_kalshi(price, size):
+def get_taker_fees_kalshi(price: Decimal, size: Decimal):
     """
     Calculate taker fees for Kalshi based on price and size.
 
     Args:
-        price: Price of the asset (float)
-        size: Size of the order (float)
+        price: Price of the asset (Decimal)
+        size: Size of the order (Decimal)
 
     Returns:
-        Taker fees (float)
+        Taker fees (Decimal)
     """
     taker_fee_rate = Decimal("0.07")
     price = Decimal(str(price))

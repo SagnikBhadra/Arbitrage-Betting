@@ -1,3 +1,4 @@
+from datetime import datetime, timedelta, timezone
 import json
 import time
 import requests
@@ -12,7 +13,7 @@ INITIAL_BACKOFF = 1  # seconds
 # NCAA Basketball series ticker: KXNCAAMBGAME
 # UFC series ticker: KXUFCFIGHT
 
-def fetch_all_market_tickers(series_ticker=""):
+def fetch_all_market_tickers(series_ticker="",min_settle_ts=None,max_settle_ts=None):
     ticker_map = {}
     cursor = None
     counter = 0
@@ -27,6 +28,10 @@ def fetch_all_market_tickers(series_ticker=""):
             params["series_ticker"] = series_ticker
         if cursor:
             params["cursor"] = cursor
+        if min_settle_ts:
+            params["min_settle_ts"] = min_settle_ts
+        if max_settle_ts:
+            params["max_settle_ts"] = max_settle_ts
 
         retries = 0
         backoff = INITIAL_BACKOFF
@@ -58,7 +63,8 @@ def fetch_all_market_tickers(series_ticker=""):
         for m in markets:
             ticker = m.get("ticker")
             if ticker and ticker not in ticker_map:
-                ticker_map[ticker] = ticker.split("-")[-1] + "_" + ticker.split("-")[1][:7] + "_WIN"
+                #ticker_map[ticker] = ticker.split("-")[-1] + "_" + ticker.split("-")[1][:7] + "_WIN"
+                ticker_map[ticker] = ticker
                 counter += 1
 
         # Continue pagination
@@ -73,9 +79,14 @@ if __name__ == "__main__":
     json_path = 'statics/statics.json'
     with open(json_path, 'r') as f:
         data = json.load(f)
+        
+    # Set market settle times
+    now = datetime.now(timezone.utc)
+    min_settle_ts = int((now + timedelta(days=2)).timestamp())
+    max_settle_ts = int((now + timedelta(days=5)).timestamp())
     
     correlated_market_mapping = {}
-    kalshi_tickers = fetch_all_market_tickers("KXUFCFIGHT")
+    kalshi_tickers = fetch_all_market_tickers(series_ticker="")#, min_settle_ts=min_settle_ts, max_settle_ts=max_settle_ts)
     tickers = list(kalshi_tickers.keys())
     for i in range(0, len(tickers), 2):
         if i + 1 < len(tickers):
