@@ -124,7 +124,7 @@ class KalshiHTTPGateway:
 
         for market in response["market_positions"]:
             ticker = market["ticker"]
-            position = market["position"]
+            position = market["position_fp"]
 
             positions[ticker] = position
 

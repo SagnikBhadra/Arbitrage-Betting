@@ -127,9 +127,10 @@ async def main():
     private_key_pem = load_private_key(PRIVATE_KEY_PATH)
     kalshi_gateway = KalshiHTTPGateway(KEY_ID, private_key_pem)
     polymarket_us_gateway = PolymarketUSHTTPGateway(POLYMARKET_US_API_KEY, POLYMARKET_US_PRIVATE_KEY_FILE_PATH, POLYMARKET_US_BASE_URL)
-    
+
     polymarket_us_client = PolymarketUSWebSocket(POLYMARKET_US_WS_URL_BASE, POLYMARKET_US_CHANNEL_TYPE, get_asset_ids("Polymarket_US"), POLYMARKET_US_API_KEY, POLYMARKET_US_PRIVATE_KEY_FILE_PATH)
     kalshi_client = KalshiWebSocket(KEY_ID, PRIVATE_KEY_PATH, get_asset_ids("Kalshi"), WS_URL)
+    
     await asyncio.gather(
         polymarket_us_client.run(),
         kalshi_client.orderbook_websocket(),

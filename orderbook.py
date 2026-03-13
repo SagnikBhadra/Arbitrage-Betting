@@ -88,10 +88,10 @@ class OrderBook:
         asset_id = snapshot["market_ticker"]
 
         # Update bids
-        for price, size in snapshot.get("yes_dollars", []):
+        for price, size in snapshot.get("yes_dollars_fp", []):
             self.update_order_book(side=0, price=float(price), size=float(size))
             
         # Update asks (Use 1 - price to convert from "no" to "ask" price)
-        for price, size in snapshot.get("no_dollars", []):
+        for price, size in snapshot.get("no_dollars_fp", []):
             #self.logger.info(f"Price: {Decimal('1.0') - Decimal(price)}, Size: {size}")
             self.update_order_book(side=1, price=Decimal('1.0') - Decimal(price), size=float(size))

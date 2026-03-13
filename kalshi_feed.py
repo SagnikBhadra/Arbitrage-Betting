@@ -83,6 +83,7 @@ class KalshiWebSocket:
         
     def handle_snapshot(self, msg):
         asset_id = msg["market_ticker"]
+        print(msg)
         
         orderbook = self.orderbooks.get(asset_id, None)
         if not orderbook:
@@ -93,9 +94,10 @@ class KalshiWebSocket:
         self.logger.info(f"Loaded snapshot for {orderbook}")
         
     def handle_price_change(self, msg):
+        print(msg)
         asset_id = msg["market_ticker"]
         price = float(msg["price_dollars"]) if msg["side"] == "yes" else Decimal('1.0') - Decimal(msg["price_dollars"])
-        delta = float(msg["delta"])
+        delta = float(msg["delta_fp"])
         side = 0 if msg["side"] == "yes" else 1
         orderbook = self.orderbooks.get(asset_id, None)
         if not orderbook:
@@ -153,6 +155,7 @@ class KalshiWebSocket:
 
                 # Create WebSocket headers
                 ws_headers = self.create_headers(private_key, "GET", "/trade-api/ws/v2")
+                print(ws_headers)
 
                 async with websockets.connect(
                     self.ws_url,
