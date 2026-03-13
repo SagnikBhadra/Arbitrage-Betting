@@ -117,7 +117,7 @@ async def scan_inefficiencies(polymarket_client, kalshi_client, kalshi_gateway, 
     while True:
         for strategy in strategies:
             strategy.find_opportunities()
-        #await asyncio.sleep(1)
+        await asyncio.sleep(1)
 
 async def main():
     # TODO: Add deque to best bid/ask and only compare if timestamp is within delta

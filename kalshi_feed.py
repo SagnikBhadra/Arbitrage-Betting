@@ -14,7 +14,12 @@ from market_data import MarketData
 from utils import get_asset_ids
 
 # Configuration
-KEY_ID = "7edd1c5d-6c0c-4458-bb77-04854221689b"
+def load_kalshi_key_id(secrets_path: str = "kalshi_secrets.json") -> str:
+    with open(secrets_path, "r") as f:
+        data = json.load(f)
+    return data["KEY_ID"]
+
+KEY_ID = load_kalshi_key_id()
 PRIVATE_KEY_PATH = "Kalshi.key"
 MARKET_TICKER = ["KXNBAMVP-26-LDON",
                 "KXNBAMVP-26-SGIL",
@@ -144,6 +149,7 @@ class KalshiWebSocket:
 
     async def orderbook_websocket(self):
         """Connect to WebSocket and subscribe to orderbook with auto-reconnect."""
+        print("Function called: orderbook_websocket")
         while True:
             try:
                 # Load private key
@@ -163,6 +169,7 @@ class KalshiWebSocket:
                     ping_interval=20,
                     ping_timeout=10,
                     close_timeout=5,
+                    open_timeout=10,
                 ) as websocket:
                     self.logger.info(f"Connected! Subscribing to orderbook for {', '.join(self.market_tickers)}")
 
@@ -230,6 +237,7 @@ class KalshiWebSocket:
                 break
             except Exception as e:
                 self.logger.error(f"WebSocket error: {e}")
+                print(f"WebSocket error: {e}")
                 self.logger.info("Reconnecting in 5 seconds...")
                 await asyncio.sleep(5)
 
@@ -249,5 +257,9 @@ class KalshiWebSocket:
 
 # Run the example
 if __name__ == "__main__":
+    from setup_loggers import setup_logging
+    setup_logging()
+    # Also log to console when running standalone
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s | %(levelname)s | %(message)s")
     client = KalshiWebSocket(KEY_ID, PRIVATE_KEY_PATH, get_asset_ids("Kalshi"), WS_URL)
     asyncio.run(client.orderbook_websocket())
