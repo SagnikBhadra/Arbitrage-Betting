@@ -162,11 +162,11 @@ class IntraKalshiArbitrage:
                             # Check balance before placing orders
                             if not self.check_and_update_balance(required_balance):
                                 self.logger.warning(f"Insufficient balance. Required: ${required_balance:.2f}, Available: ${self.cached_balance:.2f}")
-                                order_size = math.floor(self.cached_balance / cost_of_single_share)
+                                order_size = math.floor(Decimal(str(self.cached_balance)) / cost_of_single_share)
                                 
                             # Track profit
                             self.overall_order_count += order_size
-                            self.overall_profit += max(Decimal(1.0 - cost_of_single_share) * order_size , 0)
+                            self.overall_profit += max((Decimal("1.0") - cost_of_single_share) * order_size , 0)
 
                             # Calculate cost of trade (including fees) and potential profit
                             fees = Decimal(get_taker_fees_kalshi(Decimal(best_ask), order_size) + get_taker_fees_kalshi(Decimal(correlated_best_ask), order_size))
@@ -226,8 +226,8 @@ class IntraKalshiArbitrage:
                                 continue
                             """
                             # Get NO Asks
-                            best_no_ask = Decimal(Decimal(1.0) - best_bid)
-                            best_correlated_no_ask = Decimal(Decimal(1.0) - correlated_best_bid)
+                            best_no_ask = Decimal("1.0") - Decimal(str(best_bid))
+                            best_correlated_no_ask = Decimal("1.0") - Decimal(str(correlated_best_bid))
                             
                             # Calculate order size
                             order_size = int(min(float(best_bid_size), float(correlated_best_bid_size)))
@@ -239,11 +239,11 @@ class IntraKalshiArbitrage:
                             # Check balance before placing orders
                             if not self.check_and_update_balance(required_balance):
                                 self.logger.warning(f"Insufficient balance. Required: ${required_balance:.2f}, Available: ${self.cached_balance:.2f}")
-                                order_size = math.floor(self.cached_balance / cost_of_single_share)
+                                order_size = math.floor(Decimal(str(self.cached_balance)) / cost_of_single_share)
                             
                             # Track profit
                             self.overall_order_count += order_size
-                            self.overall_profit += max(Decimal(1.0 - cost_of_single_share) * order_size , 0)
+                            self.overall_profit += max((Decimal("1.0") - cost_of_single_share) * order_size , 0)
 
                             # Calculate cost of trade (including fees) and potential profit
                             fees = Decimal(get_taker_fees_kalshi(Decimal(best_no_ask), order_size) + get_taker_fees_kalshi(Decimal(best_correlated_no_ask), order_size))
