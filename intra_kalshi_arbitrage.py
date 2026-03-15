@@ -2,6 +2,7 @@ import json
 import logging
 from decimal import Decimal
 import math
+import time
 import uuid
 
 # Position Manager
@@ -32,9 +33,9 @@ class IntraKalshiArbitrage:
         self.last_best_bid_price_by_ticker = defaultdict()
 
         # Cached balance to avoid API calls on every order
-        self.cached_balance = kalshi_gateway.get_balance()
+        self.cached_balance = Decimal(kalshi_gateway.get_balance())
 
-    def check_and_update_balance(self, required_amount):
+    def check_and_update_balance(self, required_amount: Decimal):
         """Check if we have sufficient balance for the trade.
 
         Args:
@@ -44,8 +45,8 @@ class IntraKalshiArbitrage:
             bool: True if sufficient balance, False otherwise
         """
         try:
-            balance_response = self.kalshi_gateway.get_balance()
-            self.cached_balance = balance_response / 100.0 if balance_response != 0 else 0  # Convert dollars to cents
+            #balance_response = self.kalshi_gateway.get_balance()
+            #self.cached_balance = balance_response / 100.0 if balance_response != 0 else 0  # Convert dollars to cents
             return self.cached_balance >= required_amount
         except Exception as e:
             self.logger.error(f"Error fetching balance: {e}")
@@ -53,8 +54,8 @@ class IntraKalshiArbitrage:
         
     def sell_out_of_position_arb(self, ticker, best_bid: Decimal, best_bid_size: Decimal, best_ask: Decimal, best_ask_size: Decimal,
                                  correlated_ticker, correlated_best_bid: Decimal, correlated_best_bid_size: Decimal, correlated_best_ask: Decimal, correlated_best_ask_size: Decimal):
-        ticker_position = self.position_manager.get_position(ticker)
-        correlated_ticker_position = self.position_manager.get_position(correlated_ticker)
+        ticker_position = int(float(self.position_manager.get_position(ticker)))
+        correlated_ticker_position = int(float(self.position_manager.get_position(correlated_ticker)))
         
         if ticker_position > 0 and correlated_ticker_position > 0:
             position_size = int(min(ticker_position, correlated_ticker_position))
@@ -76,6 +77,8 @@ class IntraKalshiArbitrage:
             if combined_price - (order_size + fees) > self.profit_threshold:
                 # Send order
                 self.logger.info(f"Intra-Kalshi Arbitrage Opportunity: Sell YES on {ticker} at {best_ask} and Sell YES on {correlated_ticker} at {correlated_best_ask} of size {order_size} | Combined Price: {combined_price} | Fees: {fees}")
+                self.cached_balance += combined_price
+                self.cached_balance -= fees
 
                 # Sell YES on ticker
                 order_a = {
@@ -120,6 +123,9 @@ class IntraKalshiArbitrage:
         """Identify intra-market arbitrage opportunities within Kalshi markets.
         """
 
+        start_time = time.time()
+        self.logger.info(f"Starting opportunity search at {start_time}")
+
         for ticker, orderbook in self.kalshi_client.orderbooks.items():
             
             # Get correlated markets
@@ -158,7 +164,7 @@ class IntraKalshiArbitrage:
                             
                             # Calculate required balance (cost of both orders)
                             cost_of_single_share = Decimal(best_ask + correlated_best_ask)
-                            required_balance = cost_of_single_share * order_size
+                            required_balance = Decimal(cost_of_single_share * order_size)
                             
                             # Check balance before placing orders
                             if not self.check_and_update_balance(required_balance):
@@ -175,6 +181,7 @@ class IntraKalshiArbitrage:
 
                             if combined_price <= (order_size - self.profit_threshold):
                                 self.logger.info(f"Intra-Kalshi Arbitrage Opportunity: Buy YES on {ticker} at {best_ask} and Buy YES on {correlated_ticker} at {correlated_best_ask} of size {order_size} | Combined Price: {combined_price}")
+                                self.cached_balance -= combined_price
 
                                 # Buy YES on ticker
                                 order_a = {
@@ -252,6 +259,7 @@ class IntraKalshiArbitrage:
                             
                             if combined_price <= order_size - self.profit_threshold:
                                 self.logger.info(f"Intra-Kalshi Arbitrage Opportunity: Buy NO on {ticker} at {best_no_ask} and Buy NO on {correlated_ticker} at {best_correlated_no_ask} of size {order_size} | Combined Price: {combined_price}")
+                                self.cached_balance -= combined_price
 
                                 # Buy NO on ticker
                                 order_a = {
@@ -293,5 +301,8 @@ class IntraKalshiArbitrage:
                                                         correlated_ticker, correlated_best_bid, correlated_best_bid_size, correlated_best_ask, correlated_best_ask_size)
 
                     #self.logger.info(f"Overall Orders Placed: {self.overall_order_count}, Overall Potential Profit: ${self.overall_profit:.2f}, Balance: ${self.cached_balance:.2f}")
-                    
+        end_time = time.time()
+        elapsed = end_time - start_time
+        self.logger.info(f"Finished opportunity search at {end_time}. Elapsed time: {elapsed:.4f} seconds")
+                        
                     

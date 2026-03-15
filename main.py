@@ -3,6 +3,7 @@ from datetime import datetime
 import json
 import logging
 from logging.handlers import RotatingFileHandler
+import time
 import websocket
 import uuid
 from decimal import Decimal
@@ -102,6 +103,10 @@ async def scan_inefficiencies(polymarket_client, kalshi_client, kalshi_gateway, 
     # Intra Kalshi correlated markets mapping
     correlated_market_mapping = get_static_mapping("CORRELATED_MARKET_MAPPING")
     
+    # Wait until feeds are subscribed
+    while not kalshi_client.subscribed:
+        await asyncio.sleep(2)
+    
     # Load positions
     positions = kalshi_gateway.get_positions()
     position_manager = PositionManager(positions)
@@ -116,7 +121,14 @@ async def scan_inefficiencies(polymarket_client, kalshi_client, kalshi_gateway, 
     # Call find_opportunities() every second and log any opportunities above profit_threshold
     while True:
         for strategy in strategies:
+            #start_time = time.time()
+            #print(f"Starting opportunity search at {start_time}")
+
             strategy.find_opportunities()
+            
+            #end_time = time.time()
+            #elapsed = end_time - start_time
+            #print(f"Finished opportunity search at {end_time}. Elapsed time: {elapsed:.4f} seconds")
         await asyncio.sleep(1)
 
 async def main():

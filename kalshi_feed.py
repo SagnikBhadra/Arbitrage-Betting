@@ -41,6 +41,7 @@ class KalshiWebSocket:
         self.market_tickers = market_tickers
         self.ws_url = ws_url
         self.logger = logging.getLogger("kalshi_feed")
+        self.subscribed = False
         
         # Initialize OrderBooks
         self.orderbooks = defaultdict(OrderBook)
@@ -174,7 +175,7 @@ class KalshiWebSocket:
                         "id": 1,
                         "cmd": "subscribe",
                         "params": {
-                            "channels": ["orderbook_delta", "trade"],
+                            "channels": ["orderbook_delta"],
                             "market_tickers": self.market_tickers
                         }
                     }
@@ -189,6 +190,7 @@ class KalshiWebSocket:
 
                         if msg_type == "subscribed":
                             self.logger.info(f"Subscribed: {data}")
+                            self.subscribed = True
 
                         elif msg_type == "orderbook_snapshot":
                             self.market_data.persist_orderbook_snapshot_event_kalshi(msg_content)

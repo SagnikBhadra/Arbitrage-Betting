@@ -30,3 +30,586 @@
 2026-03-15 17:06:23,677 | ERROR | Error fetching balance: HTTPSConnectionPool(host='api.elections.kalshi.com', port=443): Max retries exceeded with url: /trade-api/v2/portfolio/balance (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000016F2872D6D0>: Failed to resolve 'api.elections.kalshi.com' ([Errno 11001] getaddrinfo failed)"))
 2026-03-15 17:06:23,683 | ERROR | Error fetching balance: HTTPSConnectionPool(host='api.elections.kalshi.com', port=443): Max retries exceeded with url: /trade-api/v2/portfolio/balance (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000016F2872F8C0>: Failed to resolve 'api.elections.kalshi.com' ([Errno 11001] getaddrinfo failed)"))
 2026-03-15 17:06:23,794 | ERROR | Error fetching balance: HTTPSConnectionPool(host='api.elections.kalshi.com', port=443): Max retries exceeded with url: /trade-api/v2/portfolio/balance (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000016F28A54170>: Failed to resolve 'api.elections.kalshi.com' ([Errno 11001] getaddrinfo failed)"))
+2026-03-15 17:34:53,563 | INFO | Intra-Kalshi Arbitrage Opportunity: Buy YES on KXNCAAMLAXGAME-26MAR16SYRDEN-DEN at 0.2100 and Buy YES on KXNCAAMLAXGAME-26MAR16SYRDEN-SYR at 0.7600 of size 6 | Combined Price: 5.9700
+2026-03-15 17:34:59,976 | INFO | Intra-Kalshi Arbitrage Opportunity: Buy YES on KXNCAAMLAXGAME-26MAR16SYRDEN-SYR at 0.7600 and Buy YES on KXNCAAMLAXGAME-26MAR16SYRDEN-DEN at 0.2100 of size 4 | Combined Price: 3.9900
+2026-03-15 17:35:01,983 | ERROR | Failed to place order B: Kalshi API error — HTTP 409: {"error":{"code":"fill_or_kill_insufficient_resting_volume","message":"fill or kill insufficient resting volume"}}
+2026-03-15 18:28:55,625 | INFO | Starting opportunity search at 1773613735.6251602
+2026-03-15 18:58:11,873 | INFO | Starting opportunity search at 1773615491.8735445
+2026-03-15 19:01:36,943 | INFO | Starting opportunity search at 1773615696.943379
+2026-03-15 19:01:36,959 | INFO | Finished opportunity search at 1773615696.9599254. Elapsed time: 0.0165 seconds
+2026-03-15 19:01:37,933 | INFO | Starting opportunity search at 1773615697.9337652
+2026-03-15 19:01:37,933 | INFO | Finished opportunity search at 1773615697.9337652. Elapsed time: 0.0000 seconds
+2026-03-15 19:01:38,936 | INFO | Starting opportunity search at 1773615698.9366996
+2026-03-15 19:01:38,936 | INFO | Finished opportunity search at 1773615698.9366996. Elapsed time: 0.0000 seconds
+2026-03-15 19:01:39,939 | INFO | Starting opportunity search at 1773615699.9392748
+2026-03-15 19:01:39,942 | INFO | Finished opportunity search at 1773615699.942364. Elapsed time: 0.0031 seconds
+2026-03-15 19:01:40,935 | INFO | Starting opportunity search at 1773615700.935509
+2026-03-15 19:01:40,945 | INFO | Finished opportunity search at 1773615700.945072. Elapsed time: 0.0096 seconds
+2026-03-15 19:01:41,953 | INFO | Starting opportunity search at 1773615701.9533248
+2026-03-15 19:01:41,953 | INFO | Finished opportunity search at 1773615701.9533248. Elapsed time: 0.0000 seconds
+2026-03-15 19:01:42,940 | INFO | Starting opportunity search at 1773615702.9406555
+2026-03-15 19:01:42,950 | INFO | Finished opportunity search at 1773615702.9504392. Elapsed time: 0.0098 seconds
+2026-03-15 19:01:43,952 | INFO | Starting opportunity search at 1773615703.9529
+2026-03-15 19:01:43,958 | INFO | Finished opportunity search at 1773615703.9582605. Elapsed time: 0.0054 seconds
+2026-03-15 19:01:44,943 | INFO | Starting opportunity search at 1773615704.9432142
+2026-03-15 19:01:44,961 | INFO | Finished opportunity search at 1773615704.9617012. Elapsed time: 0.0185 seconds
+2026-03-15 19:01:45,963 | INFO | Starting opportunity search at 1773615705.9634874
+2026-03-15 19:01:45,982 | INFO | Finished opportunity search at 1773615705.982605. Elapsed time: 0.0191 seconds
+2026-03-15 19:01:46,981 | INFO | Starting opportunity search at 1773615706.98161
+2026-03-15 19:01:46,997 | INFO | Finished opportunity search at 1773615706.9974277. Elapsed time: 0.0158 seconds
+2026-03-15 19:01:47,983 | INFO | Starting opportunity search at 1773615707.9835098
+2026-03-15 19:01:48,005 | INFO | Finished opportunity search at 1773615708.0056088. Elapsed time: 0.0221 seconds
+2026-03-15 19:01:48,988 | INFO | Starting opportunity search at 1773615708.988062
+2026-03-15 19:01:48,988 | INFO | Finished opportunity search at 1773615708.988062. Elapsed time: 0.0000 seconds
+2026-03-15 19:01:49,988 | INFO | Starting opportunity search at 1773615709.988915
+2026-03-15 19:01:49,988 | INFO | Finished opportunity search at 1773615709.988915. Elapsed time: 0.0000 seconds
+2026-03-15 19:01:50,983 | INFO | Starting opportunity search at 1773615710.9837055
+2026-03-15 19:01:51,004 | INFO | Finished opportunity search at 1773615711.0040681. Elapsed time: 0.0204 seconds
+2026-03-15 19:01:52,004 | INFO | Starting opportunity search at 1773615712.0044634
+2026-03-15 19:01:52,004 | INFO | Finished opportunity search at 1773615712.0044634. Elapsed time: 0.0000 seconds
+2026-03-15 19:01:52,984 | INFO | Starting opportunity search at 1773615712.9849968
+2026-03-15 19:01:53,007 | INFO | Finished opportunity search at 1773615713.007857. Elapsed time: 0.0229 seconds
+2026-03-15 19:01:54,007 | INFO | Starting opportunity search at 1773615714.0078714
+2026-03-15 19:01:54,029 | INFO | Finished opportunity search at 1773615714.029349. Elapsed time: 0.0215 seconds
+2026-03-15 19:01:55,026 | INFO | Starting opportunity search at 1773615715.0265079
+2026-03-15 19:01:55,042 | INFO | Finished opportunity search at 1773615715.0423908. Elapsed time: 0.0159 seconds
+2026-03-15 19:01:56,028 | INFO | Starting opportunity search at 1773615716.0289042
+2026-03-15 19:01:56,049 | INFO | Finished opportunity search at 1773615716.0492923. Elapsed time: 0.0204 seconds
+2026-03-15 19:01:57,032 | INFO | Starting opportunity search at 1773615717.0324795
+2026-03-15 19:01:57,032 | INFO | Finished opportunity search at 1773615717.0324795. Elapsed time: 0.0000 seconds
+2026-03-15 19:01:58,034 | INFO | Starting opportunity search at 1773615718.0341234
+2026-03-15 19:01:58,050 | INFO | Finished opportunity search at 1773615718.0500183. Elapsed time: 0.0159 seconds
+2026-03-15 19:01:59,036 | INFO | Starting opportunity search at 1773615719.0364954
+2026-03-15 19:01:59,036 | INFO | Finished opportunity search at 1773615719.0364954. Elapsed time: 0.0000 seconds
+2026-03-15 19:02:00,026 | INFO | Starting opportunity search at 1773615720.026241
+2026-03-15 19:02:00,044 | INFO | Finished opportunity search at 1773615720.0446284. Elapsed time: 0.0184 seconds
+2026-03-15 19:02:01,026 | INFO | Starting opportunity search at 1773615721.0267067
+2026-03-15 19:02:01,044 | INFO | Finished opportunity search at 1773615721.0442188. Elapsed time: 0.0175 seconds
+2026-03-15 19:02:02,032 | INFO | Starting opportunity search at 1773615722.032496
+2026-03-15 19:02:02,048 | INFO | Finished opportunity search at 1773615722.0489852. Elapsed time: 0.0165 seconds
+2026-03-15 19:02:03,029 | INFO | Starting opportunity search at 1773615723.0292425
+2026-03-15 19:02:03,047 | INFO | Finished opportunity search at 1773615723.0474367. Elapsed time: 0.0182 seconds
+2026-03-15 19:02:04,043 | INFO | Starting opportunity search at 1773615724.0432484
+2026-03-15 19:02:04,051 | INFO | Finished opportunity search at 1773615724.05125. Elapsed time: 0.0080 seconds
+2026-03-15 19:02:05,054 | INFO | Starting opportunity search at 1773615725.0541668
+2026-03-15 19:02:05,075 | INFO | Finished opportunity search at 1773615725.0757425. Elapsed time: 0.0216 seconds
+2026-03-15 19:02:06,056 | INFO | Starting opportunity search at 1773615726.0565097
+2026-03-15 19:02:06,072 | INFO | Finished opportunity search at 1773615726.0725183. Elapsed time: 0.0160 seconds
+2026-03-15 19:02:07,056 | INFO | Starting opportunity search at 1773615727.0554163
+2026-03-15 19:02:07,076 | INFO | Finished opportunity search at 1773615727.0753646. Elapsed time: 0.0199 seconds
+2026-03-15 19:02:08,060 | INFO | Starting opportunity search at 1773615728.0602496
+2026-03-15 19:02:08,077 | INFO | Finished opportunity search at 1773615728.0772922. Elapsed time: 0.0170 seconds
+2026-03-15 19:02:09,056 | INFO | Starting opportunity search at 1773615729.056305
+2026-03-15 19:02:09,059 | INFO | Finished opportunity search at 1773615729.059003. Elapsed time: 0.0027 seconds
+2026-03-15 19:02:10,059 | INFO | Starting opportunity search at 1773615730.0594418
+2026-03-15 19:02:10,081 | INFO | Finished opportunity search at 1773615730.0817292. Elapsed time: 0.0223 seconds
+2026-03-15 19:02:11,055 | INFO | Starting opportunity search at 1773615731.0552814
+2026-03-15 19:02:11,082 | INFO | Finished opportunity search at 1773615731.0821197. Elapsed time: 0.0268 seconds
+2026-03-15 19:02:12,074 | INFO | Starting opportunity search at 1773615732.074823
+2026-03-15 19:02:12,085 | INFO | Finished opportunity search at 1773615732.0859215. Elapsed time: 0.0111 seconds
+2026-03-15 19:02:43,639 | INFO | Starting opportunity search at 1773615763.6391292
+2026-03-15 19:02:43,672 | INFO | Finished opportunity search at 1773615763.6726596. Elapsed time: 0.0335 seconds
+2026-03-15 19:02:45,220 | INFO | Starting opportunity search at 1773615765.220735
+2026-03-15 19:02:45,238 | INFO | Finished opportunity search at 1773615765.2386901. Elapsed time: 0.0180 seconds
+2026-03-15 19:02:46,405 | INFO | Starting opportunity search at 1773615766.4050572
+2026-03-15 19:02:46,405 | INFO | Finished opportunity search at 1773615766.405744. Elapsed time: 0.0007 seconds
+2026-03-15 19:02:47,406 | INFO | Starting opportunity search at 1773615767.406038
+2026-03-15 19:02:47,406 | INFO | Finished opportunity search at 1773615767.406038. Elapsed time: 0.0000 seconds
+2026-03-15 19:02:48,406 | INFO | Starting opportunity search at 1773615768.4062572
+2026-03-15 19:02:48,440 | INFO | Finished opportunity search at 1773615768.4406564. Elapsed time: 0.0344 seconds
+2026-03-15 19:02:49,639 | INFO | Starting opportunity search at 1773615769.639425
+2026-03-15 19:02:49,661 | INFO | Finished opportunity search at 1773615769.6615136. Elapsed time: 0.0221 seconds
+2026-03-15 19:02:50,977 | INFO | Starting opportunity search at 1773615770.9774005
+2026-03-15 19:02:50,992 | INFO | Finished opportunity search at 1773615770.9921813. Elapsed time: 0.0148 seconds
+2026-03-15 19:02:52,013 | INFO | Starting opportunity search at 1773615772.0138702
+2026-03-15 19:02:52,029 | INFO | Finished opportunity search at 1773615772.0298452. Elapsed time: 0.0160 seconds
+2026-03-15 19:02:53,158 | INFO | Starting opportunity search at 1773615773.1580737
+2026-03-15 19:02:53,183 | INFO | Finished opportunity search at 1773615773.1833687. Elapsed time: 0.0253 seconds
+2026-03-15 19:02:56,109 | INFO | Starting opportunity search at 1773615776.1095347
+2026-03-15 19:02:56,195 | INFO | Finished opportunity search at 1773615776.1942713. Elapsed time: 0.0847 seconds
+2026-03-15 19:02:58,231 | INFO | Starting opportunity search at 1773615778.2311347
+2026-03-15 19:02:58,259 | INFO | Finished opportunity search at 1773615778.2595189. Elapsed time: 0.0284 seconds
+2026-03-15 19:02:59,781 | INFO | Starting opportunity search at 1773615779.7816863
+2026-03-15 19:02:59,833 | INFO | Finished opportunity search at 1773615779.833152. Elapsed time: 0.0515 seconds
+2026-03-15 19:03:01,821 | INFO | Starting opportunity search at 1773615781.8210063
+2026-03-15 19:03:01,859 | INFO | Finished opportunity search at 1773615781.8594832. Elapsed time: 0.0385 seconds
+2026-03-15 19:03:04,920 | INFO | Starting opportunity search at 1773615784.920946
+2026-03-15 19:03:04,965 | INFO | Finished opportunity search at 1773615784.9656122. Elapsed time: 0.0447 seconds
+2026-03-15 19:03:07,553 | INFO | Starting opportunity search at 1773615787.5538914
+2026-03-15 19:03:07,570 | INFO | Finished opportunity search at 1773615787.5705032. Elapsed time: 0.0166 seconds
+2026-03-15 19:03:09,584 | INFO | Starting opportunity search at 1773615789.5844796
+2026-03-15 19:03:09,600 | INFO | Finished opportunity search at 1773615789.6002765. Elapsed time: 0.0158 seconds
+2026-03-15 19:03:11,153 | INFO | Starting opportunity search at 1773615791.1538308
+2026-03-15 19:03:11,173 | INFO | Finished opportunity search at 1773615791.17377. Elapsed time: 0.0199 seconds
+2026-03-15 19:03:12,738 | INFO | Starting opportunity search at 1773615792.7385652
+2026-03-15 19:03:12,754 | INFO | Finished opportunity search at 1773615792.7544906. Elapsed time: 0.0159 seconds
+2026-03-15 19:03:13,744 | INFO | Starting opportunity search at 1773615793.7445645
+2026-03-15 19:03:13,785 | INFO | Finished opportunity search at 1773615793.7850895. Elapsed time: 0.0405 seconds
+2026-03-15 19:03:14,784 | INFO | Starting opportunity search at 1773615794.7849994
+2026-03-15 19:03:14,826 | INFO | Finished opportunity search at 1773615794.8253374. Elapsed time: 0.0403 seconds
+2026-03-15 19:03:15,813 | INFO | Starting opportunity search at 1773615795.8132083
+2026-03-15 19:03:15,848 | INFO | Finished opportunity search at 1773615795.848814. Elapsed time: 0.0356 seconds
+2026-03-15 19:03:16,839 | INFO | Starting opportunity search at 1773615796.839601
+2026-03-15 19:03:16,871 | INFO | Finished opportunity search at 1773615796.8715596. Elapsed time: 0.0320 seconds
+2026-03-15 19:03:17,863 | INFO | Starting opportunity search at 1773615797.8635015
+2026-03-15 19:03:17,877 | INFO | Finished opportunity search at 1773615797.8774605. Elapsed time: 0.0140 seconds
+2026-03-15 19:03:18,877 | INFO | Starting opportunity search at 1773615798.8773975
+2026-03-15 19:03:18,891 | INFO | Finished opportunity search at 1773615798.8917813. Elapsed time: 0.0144 seconds
+2026-03-15 19:03:19,909 | INFO | Starting opportunity search at 1773615799.9096026
+2026-03-15 19:03:19,923 | INFO | Finished opportunity search at 1773615799.9235442. Elapsed time: 0.0139 seconds
+2026-03-15 19:03:20,916 | INFO | Starting opportunity search at 1773615800.9160306
+2026-03-15 19:03:20,941 | INFO | Finished opportunity search at 1773615800.941773. Elapsed time: 0.0257 seconds
+2026-03-15 19:03:21,950 | INFO | Starting opportunity search at 1773615801.9501133
+2026-03-15 19:03:21,964 | INFO | Finished opportunity search at 1773615801.9641123. Elapsed time: 0.0140 seconds
+2026-03-15 19:03:22,981 | INFO | Starting opportunity search at 1773615802.9818952
+2026-03-15 19:03:22,996 | INFO | Finished opportunity search at 1773615802.9966786. Elapsed time: 0.0148 seconds
+2026-03-15 19:03:23,980 | INFO | Starting opportunity search at 1773615803.9800687
+2026-03-15 19:03:23,994 | INFO | Finished opportunity search at 1773615803.9946418. Elapsed time: 0.0146 seconds
+2026-03-15 19:03:24,980 | INFO | Starting opportunity search at 1773615804.9803236
+2026-03-15 19:03:25,009 | INFO | Finished opportunity search at 1773615805.0091574. Elapsed time: 0.0288 seconds
+2026-03-15 19:03:26,058 | INFO | Starting opportunity search at 1773615806.0582738
+2026-03-15 19:03:26,073 | INFO | Finished opportunity search at 1773615806.0732603. Elapsed time: 0.0150 seconds
+2026-03-15 19:03:27,098 | INFO | Starting opportunity search at 1773615807.0983267
+2026-03-15 19:03:27,111 | INFO | Finished opportunity search at 1773615807.1119666. Elapsed time: 0.0136 seconds
+2026-03-15 19:03:28,152 | INFO | Starting opportunity search at 1773615808.152578
+2026-03-15 19:03:28,167 | INFO | Finished opportunity search at 1773615808.167568. Elapsed time: 0.0150 seconds
+2026-03-15 19:03:29,197 | INFO | Starting opportunity search at 1773615809.1973982
+2026-03-15 19:03:29,211 | INFO | Finished opportunity search at 1773615809.2119098. Elapsed time: 0.0145 seconds
+2026-03-15 19:03:30,216 | INFO | Starting opportunity search at 1773615810.2163992
+2026-03-15 19:03:30,236 | INFO | Finished opportunity search at 1773615810.236296. Elapsed time: 0.0199 seconds
+2026-03-15 19:03:31,230 | INFO | Starting opportunity search at 1773615811.2303183
+2026-03-15 19:03:31,248 | INFO | Finished opportunity search at 1773615811.2489445. Elapsed time: 0.0186 seconds
+2026-03-15 19:03:32,232 | INFO | Starting opportunity search at 1773615812.2311542
+2026-03-15 19:03:32,248 | INFO | Finished opportunity search at 1773615812.2483177. Elapsed time: 0.0172 seconds
+2026-03-15 19:03:33,240 | INFO | Starting opportunity search at 1773615813.2407877
+2026-03-15 19:03:33,256 | INFO | Finished opportunity search at 1773615813.2559412. Elapsed time: 0.0152 seconds
+2026-03-15 19:03:34,296 | INFO | Starting opportunity search at 1773615814.2960992
+2026-03-15 19:03:34,317 | INFO | Finished opportunity search at 1773615814.3172352. Elapsed time: 0.0211 seconds
+2026-03-15 19:03:35,306 | INFO | Starting opportunity search at 1773615815.3063848
+2026-03-15 19:03:35,314 | INFO | Finished opportunity search at 1773615815.3143826. Elapsed time: 0.0080 seconds
+2026-03-15 19:03:36,309 | INFO | Starting opportunity search at 1773615816.3098078
+2026-03-15 19:03:36,318 | INFO | Finished opportunity search at 1773615816.3187451. Elapsed time: 0.0089 seconds
+2026-03-15 19:03:37,307 | INFO | Starting opportunity search at 1773615817.3074973
+2026-03-15 19:03:37,319 | INFO | Finished opportunity search at 1773615817.319388. Elapsed time: 0.0119 seconds
+2026-03-15 19:03:38,305 | INFO | Starting opportunity search at 1773615818.3051033
+2026-03-15 19:03:38,313 | INFO | Finished opportunity search at 1773615818.3131073. Elapsed time: 0.0080 seconds
+2026-03-15 19:03:39,306 | INFO | Starting opportunity search at 1773615819.3062284
+2026-03-15 19:03:39,314 | INFO | Finished opportunity search at 1773615819.3142319. Elapsed time: 0.0080 seconds
+2026-03-15 19:03:40,313 | INFO | Starting opportunity search at 1773615820.313723
+2026-03-15 19:03:40,326 | INFO | Finished opportunity search at 1773615820.326106. Elapsed time: 0.0124 seconds
+2026-03-15 19:03:41,314 | INFO | Starting opportunity search at 1773615821.3145378
+2026-03-15 19:03:41,324 | INFO | Finished opportunity search at 1773615821.324386. Elapsed time: 0.0098 seconds
+2026-03-15 19:03:42,307 | INFO | Starting opportunity search at 1773615822.3075898
+2026-03-15 19:03:42,315 | INFO | Finished opportunity search at 1773615822.3155844. Elapsed time: 0.0080 seconds
+2026-03-15 19:03:43,307 | INFO | Starting opportunity search at 1773615823.3073828
+2026-03-15 19:03:43,318 | INFO | Finished opportunity search at 1773615823.3183525. Elapsed time: 0.0110 seconds
+2026-03-15 19:03:44,306 | INFO | Starting opportunity search at 1773615824.3067436
+2026-03-15 19:03:44,324 | INFO | Finished opportunity search at 1773615824.3249366. Elapsed time: 0.0182 seconds
+2026-03-15 19:03:45,305 | INFO | Starting opportunity search at 1773615825.305608
+2026-03-15 19:03:45,319 | INFO | Finished opportunity search at 1773615825.3195968. Elapsed time: 0.0140 seconds
+2026-03-15 19:03:46,312 | INFO | Starting opportunity search at 1773615826.3126051
+2026-03-15 19:03:46,319 | INFO | Finished opportunity search at 1773615826.3196251. Elapsed time: 0.0070 seconds
+2026-03-15 19:03:47,312 | INFO | Starting opportunity search at 1773615827.3128276
+2026-03-15 19:03:47,319 | INFO | Finished opportunity search at 1773615827.3198254. Elapsed time: 0.0070 seconds
+2026-03-15 19:03:48,319 | INFO | Starting opportunity search at 1773615828.319602
+2026-03-15 19:03:48,319 | INFO | Finished opportunity search at 1773615828.319602. Elapsed time: 0.0000 seconds
+2026-03-15 19:03:49,305 | INFO | Starting opportunity search at 1773615829.3058405
+2026-03-15 19:03:49,317 | INFO | Finished opportunity search at 1773615829.3179388. Elapsed time: 0.0121 seconds
+2026-03-15 19:03:50,310 | INFO | Starting opportunity search at 1773615830.3107107
+2026-03-15 19:03:50,328 | INFO | Finished opportunity search at 1773615830.3287592. Elapsed time: 0.0180 seconds
+2026-03-15 19:03:51,312 | INFO | Starting opportunity search at 1773615831.3126848
+2026-03-15 19:03:51,319 | INFO | Finished opportunity search at 1773615831.3196902. Elapsed time: 0.0070 seconds
+2026-03-15 19:03:52,304 | INFO | Starting opportunity search at 1773615832.3045433
+2026-03-15 19:03:52,322 | INFO | Finished opportunity search at 1773615832.3225162. Elapsed time: 0.0180 seconds
+2026-03-15 19:03:53,307 | INFO | Starting opportunity search at 1773615833.3074613
+2026-03-15 19:03:53,317 | INFO | Finished opportunity search at 1773615833.3174567. Elapsed time: 0.0100 seconds
+2026-03-15 19:03:54,313 | INFO | Starting opportunity search at 1773615834.3137941
+2026-03-15 19:03:54,318 | INFO | Finished opportunity search at 1773615834.3187928. Elapsed time: 0.0050 seconds
+2026-03-15 19:03:55,318 | INFO | Starting opportunity search at 1773615835.3189993
+2026-03-15 19:03:55,318 | INFO | Finished opportunity search at 1773615835.3189993. Elapsed time: 0.0000 seconds
+2026-03-15 19:03:56,318 | INFO | Starting opportunity search at 1773615836.3185372
+2026-03-15 19:03:56,335 | INFO | Finished opportunity search at 1773615836.3358104. Elapsed time: 0.0173 seconds
+2026-03-15 19:03:57,335 | INFO | Starting opportunity search at 1773615837.3358066
+2026-03-15 19:03:57,351 | INFO | Finished opportunity search at 1773615837.3517997. Elapsed time: 0.0160 seconds
+2026-03-15 19:03:58,352 | INFO | Starting opportunity search at 1773615838.3529246
+2026-03-15 19:03:58,368 | INFO | Finished opportunity search at 1773615838.3688836. Elapsed time: 0.0160 seconds
+2026-03-15 19:03:59,366 | INFO | Starting opportunity search at 1773615839.3667195
+2026-03-15 19:03:59,366 | INFO | Finished opportunity search at 1773615839.3667195. Elapsed time: 0.0000 seconds
+2026-03-15 19:04:00,351 | INFO | Starting opportunity search at 1773615840.3513389
+2026-03-15 19:04:00,351 | INFO | Finished opportunity search at 1773615840.3513389. Elapsed time: 0.0000 seconds
+2026-03-15 19:04:01,351 | INFO | Starting opportunity search at 1773615841.3518534
+2026-03-15 19:04:01,367 | INFO | Finished opportunity search at 1773615841.3676548. Elapsed time: 0.0158 seconds
+2026-03-15 19:04:02,352 | INFO | Starting opportunity search at 1773615842.3520901
+2026-03-15 19:04:02,369 | INFO | Finished opportunity search at 1773615842.3696704. Elapsed time: 0.0176 seconds
+2026-03-15 19:04:03,366 | INFO | Starting opportunity search at 1773615843.366715
+2026-03-15 19:04:03,382 | INFO | Finished opportunity search at 1773615843.3826292. Elapsed time: 0.0159 seconds
+2026-03-15 19:04:04,398 | INFO | Starting opportunity search at 1773615844.3981159
+2026-03-15 19:04:04,414 | INFO | Finished opportunity search at 1773615844.4140756. Elapsed time: 0.0160 seconds
+2026-03-15 19:04:05,413 | INFO | Starting opportunity search at 1773615845.4131644
+2026-03-15 19:04:05,431 | INFO | Finished opportunity search at 1773615845.431029. Elapsed time: 0.0179 seconds
+2026-03-15 19:04:06,432 | INFO | Starting opportunity search at 1773615846.4320748
+2026-03-15 19:04:06,447 | INFO | Finished opportunity search at 1773615846.4477534. Elapsed time: 0.0157 seconds
+2026-03-15 19:04:07,446 | INFO | Starting opportunity search at 1773615847.446188
+2026-03-15 19:04:07,458 | INFO | Finished opportunity search at 1773615847.4589999. Elapsed time: 0.0128 seconds
+2026-03-15 19:04:08,450 | INFO | Starting opportunity search at 1773615848.450583
+2026-03-15 19:04:08,452 | INFO | Finished opportunity search at 1773615848.4525137. Elapsed time: 0.0019 seconds
+2026-03-15 19:04:09,438 | INFO | Starting opportunity search at 1773615849.4381752
+2026-03-15 19:04:09,441 | INFO | Finished opportunity search at 1773615849.441257. Elapsed time: 0.0031 seconds
+2026-03-15 19:04:10,431 | INFO | Starting opportunity search at 1773615850.4314516
+2026-03-15 19:04:10,431 | INFO | Finished opportunity search at 1773615850.4314516. Elapsed time: 0.0000 seconds
+2026-03-15 19:04:11,435 | INFO | Starting opportunity search at 1773615851.435187
+2026-03-15 19:04:11,451 | INFO | Finished opportunity search at 1773615851.4513063. Elapsed time: 0.0161 seconds
+2026-03-15 19:04:12,431 | INFO | Starting opportunity search at 1773615852.4319465
+2026-03-15 19:04:12,445 | INFO | Finished opportunity search at 1773615852.4459789. Elapsed time: 0.0140 seconds
+2026-03-15 19:04:13,429 | INFO | Starting opportunity search at 1773615853.4294116
+2026-03-15 19:04:13,445 | INFO | Finished opportunity search at 1773615853.4451468. Elapsed time: 0.0157 seconds
+2026-03-15 19:04:14,438 | INFO | Starting opportunity search at 1773615854.438088
+2026-03-15 19:04:14,447 | INFO | Finished opportunity search at 1773615854.4471133. Elapsed time: 0.0090 seconds
+2026-03-15 19:04:15,431 | INFO | Starting opportunity search at 1773615855.431043
+2026-03-15 19:04:15,431 | INFO | Finished opportunity search at 1773615855.431043. Elapsed time: 0.0000 seconds
+2026-03-15 19:04:16,431 | INFO | Starting opportunity search at 1773615856.4319987
+2026-03-15 19:04:16,431 | INFO | Finished opportunity search at 1773615856.4319987. Elapsed time: 0.0000 seconds
+2026-03-15 19:04:17,429 | INFO | Starting opportunity search at 1773615857.4296858
+2026-03-15 19:04:17,429 | INFO | Finished opportunity search at 1773615857.4296858. Elapsed time: 0.0000 seconds
+2026-03-15 19:04:18,430 | INFO | Starting opportunity search at 1773615858.430308
+2026-03-15 19:04:18,446 | INFO | Finished opportunity search at 1773615858.4461372. Elapsed time: 0.0158 seconds
+2026-03-15 19:04:19,430 | INFO | Starting opportunity search at 1773615859.4309309
+2026-03-15 19:04:19,446 | INFO | Finished opportunity search at 1773615859.446997. Elapsed time: 0.0161 seconds
+2026-03-15 19:04:20,433 | INFO | Starting opportunity search at 1773615860.4335985
+2026-03-15 19:04:20,433 | INFO | Finished opportunity search at 1773615860.4335985. Elapsed time: 0.0000 seconds
+2026-03-15 19:04:21,435 | INFO | Starting opportunity search at 1773615861.4351878
+2026-03-15 19:04:21,443 | INFO | Finished opportunity search at 1773615861.4436636. Elapsed time: 0.0085 seconds
+2026-03-15 19:04:22,444 | INFO | Starting opportunity search at 1773615862.4445558
+2026-03-15 19:04:22,455 | INFO | Finished opportunity search at 1773615862.455601. Elapsed time: 0.0110 seconds
+2026-03-15 19:04:23,437 | INFO | Starting opportunity search at 1773615863.437992
+2026-03-15 19:04:23,446 | INFO | Finished opportunity search at 1773615863.4469934. Elapsed time: 0.0090 seconds
+2026-03-15 19:04:24,433 | INFO | Starting opportunity search at 1773615864.4334908
+2026-03-15 19:04:24,449 | INFO | Finished opportunity search at 1773615864.4492414. Elapsed time: 0.0158 seconds
+2026-03-15 19:04:25,440 | INFO | Starting opportunity search at 1773615865.4401188
+2026-03-15 19:04:25,451 | INFO | Finished opportunity search at 1773615865.451092. Elapsed time: 0.0110 seconds
+2026-03-15 19:04:26,445 | INFO | Starting opportunity search at 1773615866.4451747
+2026-03-15 19:04:26,453 | INFO | Finished opportunity search at 1773615866.45318. Elapsed time: 0.0080 seconds
+2026-03-15 19:04:27,432 | INFO | Starting opportunity search at 1773615867.4329567
+2026-03-15 19:04:27,449 | INFO | Finished opportunity search at 1773615867.4490526. Elapsed time: 0.0161 seconds
+2026-03-15 19:04:28,431 | INFO | Starting opportunity search at 1773615868.4312444
+2026-03-15 19:04:28,447 | INFO | Finished opportunity search at 1773615868.447067. Elapsed time: 0.0158 seconds
+2026-03-15 19:04:29,433 | INFO | Starting opportunity search at 1773615869.4333286
+2026-03-15 19:04:29,450 | INFO | Finished opportunity search at 1773615869.450123. Elapsed time: 0.0168 seconds
+2026-03-15 19:04:30,432 | INFO | Starting opportunity search at 1773615870.4321632
+2026-03-15 19:04:30,432 | INFO | Finished opportunity search at 1773615870.4321632. Elapsed time: 0.0000 seconds
+2026-03-15 19:04:31,431 | INFO | Starting opportunity search at 1773615871.4317138
+2026-03-15 19:04:31,439 | INFO | Finished opportunity search at 1773615871.4392064. Elapsed time: 0.0075 seconds
+2026-03-15 19:04:32,443 | INFO | Starting opportunity search at 1773615872.443525
+2026-03-15 19:04:32,459 | INFO | Finished opportunity search at 1773615872.45951. Elapsed time: 0.0160 seconds
+2026-03-15 19:04:33,429 | INFO | Starting opportunity search at 1773615873.429471
+2026-03-15 19:04:33,445 | INFO | Finished opportunity search at 1773615873.445216. Elapsed time: 0.0157 seconds
+2026-03-15 19:04:34,434 | INFO | Starting opportunity search at 1773615874.4342554
+2026-03-15 19:04:34,452 | INFO | Finished opportunity search at 1773615874.4521697. Elapsed time: 0.0179 seconds
+2026-03-15 19:04:35,430 | INFO | Starting opportunity search at 1773615875.430016
+2026-03-15 19:04:35,430 | INFO | Finished opportunity search at 1773615875.430016. Elapsed time: 0.0000 seconds
+2026-03-15 19:04:36,429 | INFO | Starting opportunity search at 1773615876.429592
+2026-03-15 19:04:36,445 | INFO | Finished opportunity search at 1773615876.4457564. Elapsed time: 0.0162 seconds
+2026-03-15 19:04:37,432 | INFO | Starting opportunity search at 1773615877.4325993
+2026-03-15 19:04:37,448 | INFO | Finished opportunity search at 1773615877.4486701. Elapsed time: 0.0161 seconds
+2026-03-15 19:04:38,437 | INFO | Starting opportunity search at 1773615878.4379358
+2026-03-15 19:04:38,446 | INFO | Finished opportunity search at 1773615878.4469297. Elapsed time: 0.0090 seconds
+2026-03-15 19:04:39,444 | INFO | Starting opportunity search at 1773615879.444734
+2026-03-15 19:04:39,472 | INFO | Finished opportunity search at 1773615879.4720414. Elapsed time: 0.0273 seconds
+2026-03-15 19:04:40,482 | INFO | Starting opportunity search at 1773615880.4828463
+2026-03-15 19:04:40,490 | INFO | Finished opportunity search at 1773615880.4909828. Elapsed time: 0.0081 seconds
+2026-03-15 19:04:41,509 | INFO | Starting opportunity search at 1773615881.5097678
+2026-03-15 19:04:41,509 | INFO | Finished opportunity search at 1773615881.5097678. Elapsed time: 0.0000 seconds
+2026-03-15 19:04:42,527 | INFO | Starting opportunity search at 1773615882.5273888
+2026-03-15 19:04:42,541 | INFO | Finished opportunity search at 1773615882.5414364. Elapsed time: 0.0140 seconds
+2026-03-15 19:04:43,524 | INFO | Starting opportunity search at 1773615883.524644
+2026-03-15 19:04:43,530 | INFO | Finished opportunity search at 1773615883.530374. Elapsed time: 0.0057 seconds
+2026-03-15 19:04:44,524 | INFO | Starting opportunity search at 1773615884.5244348
+2026-03-15 19:04:44,533 | INFO | Finished opportunity search at 1773615884.533298. Elapsed time: 0.0089 seconds
+2026-03-15 19:04:45,527 | INFO | Starting opportunity search at 1773615885.5273006
+2026-03-15 19:04:45,536 | INFO | Finished opportunity search at 1773615885.5367932. Elapsed time: 0.0095 seconds
+2026-03-15 19:04:46,528 | INFO | Starting opportunity search at 1773615886.5287795
+2026-03-15 19:04:46,528 | INFO | Finished opportunity search at 1773615886.5287795. Elapsed time: 0.0000 seconds
+2026-03-15 19:04:47,530 | INFO | Starting opportunity search at 1773615887.5309312
+2026-03-15 19:04:47,546 | INFO | Finished opportunity search at 1773615887.5469937. Elapsed time: 0.0161 seconds
+2026-03-15 19:04:48,529 | INFO | Starting opportunity search at 1773615888.5294204
+2026-03-15 19:04:48,550 | INFO | Finished opportunity search at 1773615888.5509667. Elapsed time: 0.0215 seconds
+2026-03-15 19:04:49,524 | INFO | Starting opportunity search at 1773615889.5244787
+2026-03-15 19:04:49,548 | INFO | Finished opportunity search at 1773615889.548238. Elapsed time: 0.0238 seconds
+2026-03-15 19:04:50,526 | INFO | Starting opportunity search at 1773615890.526113
+2026-03-15 19:04:50,541 | INFO | Finished opportunity search at 1773615890.5419338. Elapsed time: 0.0158 seconds
+2026-03-15 19:04:51,541 | INFO | Starting opportunity search at 1773615891.5415368
+2026-03-15 19:04:51,557 | INFO | Finished opportunity search at 1773615891.557284. Elapsed time: 0.0157 seconds
+2026-03-15 19:04:52,555 | INFO | Starting opportunity search at 1773615892.555275
+2026-03-15 19:04:52,567 | INFO | Finished opportunity search at 1773615892.567272. Elapsed time: 0.0120 seconds
+2026-03-15 19:04:53,557 | INFO | Starting opportunity search at 1773615893.5574522
+2026-03-15 19:04:53,560 | INFO | Finished opportunity search at 1773615893.5600278. Elapsed time: 0.0026 seconds
+2026-03-15 19:04:54,559 | INFO | Starting opportunity search at 1773615894.559085
+2026-03-15 19:04:54,584 | INFO | Finished opportunity search at 1773615894.5844283. Elapsed time: 0.0253 seconds
+2026-03-15 19:04:55,562 | INFO | Starting opportunity search at 1773615895.562463
+2026-03-15 19:04:55,576 | INFO | Finished opportunity search at 1773615895.576397. Elapsed time: 0.0139 seconds
+2026-03-15 19:04:56,627 | INFO | Starting opportunity search at 1773615896.6271546
+2026-03-15 19:04:56,671 | INFO | Finished opportunity search at 1773615896.6719918. Elapsed time: 0.0448 seconds
+2026-03-15 19:04:57,662 | INFO | Starting opportunity search at 1773615897.662942
+2026-03-15 19:04:57,689 | INFO | Finished opportunity search at 1773615897.6893578. Elapsed time: 0.0264 seconds
+2026-03-15 19:04:58,732 | INFO | Starting opportunity search at 1773615898.7329473
+2026-03-15 19:04:58,757 | INFO | Finished opportunity search at 1773615898.7576413. Elapsed time: 0.0247 seconds
+2026-03-15 19:04:59,759 | INFO | Starting opportunity search at 1773615899.7597148
+2026-03-15 19:04:59,777 | INFO | Finished opportunity search at 1773615899.776435. Elapsed time: 0.0167 seconds
+2026-03-15 19:05:00,784 | INFO | Starting opportunity search at 1773615900.7842352
+2026-03-15 19:05:00,806 | INFO | Finished opportunity search at 1773615900.8063214. Elapsed time: 0.0221 seconds
+2026-03-15 19:05:01,814 | INFO | Starting opportunity search at 1773615901.8145251
+2026-03-15 19:05:01,832 | INFO | Finished opportunity search at 1773615901.8322597. Elapsed time: 0.0177 seconds
+2026-03-15 19:05:02,811 | INFO | Starting opportunity search at 1773615902.8111053
+2026-03-15 19:05:02,842 | INFO | Finished opportunity search at 1773615902.842179. Elapsed time: 0.0311 seconds
+2026-03-15 19:05:03,846 | INFO | Starting opportunity search at 1773615903.8466792
+2026-03-15 19:05:03,862 | INFO | Finished opportunity search at 1773615903.8623354. Elapsed time: 0.0157 seconds
+2026-03-15 19:05:04,890 | INFO | Starting opportunity search at 1773615904.8903275
+2026-03-15 19:05:04,908 | INFO | Finished opportunity search at 1773615904.9081402. Elapsed time: 0.0178 seconds
+2026-03-15 19:05:05,898 | INFO | Starting opportunity search at 1773615905.8989544
+2026-03-15 19:05:05,916 | INFO | Finished opportunity search at 1773615905.9166186. Elapsed time: 0.0177 seconds
+2026-03-15 19:05:06,902 | INFO | Starting opportunity search at 1773615906.9026313
+2026-03-15 19:05:06,934 | INFO | Finished opportunity search at 1773615906.9344451. Elapsed time: 0.0318 seconds
+2026-03-15 19:05:07,936 | INFO | Starting opportunity search at 1773615907.936446
+2026-03-15 19:05:07,952 | INFO | Finished opportunity search at 1773615907.9523451. Elapsed time: 0.0159 seconds
+2026-03-15 19:05:08,941 | INFO | Starting opportunity search at 1773615908.9410746
+2026-03-15 19:05:08,972 | INFO | Finished opportunity search at 1773615908.9729433. Elapsed time: 0.0319 seconds
+2026-03-15 19:05:09,974 | INFO | Starting opportunity search at 1773615909.9745681
+2026-03-15 19:05:09,998 | INFO | Finished opportunity search at 1773615909.9982657. Elapsed time: 0.0237 seconds
+2026-03-15 19:05:10,978 | INFO | Starting opportunity search at 1773615910.97813
+2026-03-15 19:05:10,993 | INFO | Finished opportunity search at 1773615910.9939544. Elapsed time: 0.0158 seconds
+2026-03-15 19:05:11,980 | INFO | Starting opportunity search at 1773615911.980069
+2026-03-15 19:05:12,003 | INFO | Finished opportunity search at 1773615912.003038. Elapsed time: 0.0230 seconds
+2026-03-15 19:05:13,061 | INFO | Starting opportunity search at 1773615913.061099
+2026-03-15 19:05:13,086 | INFO | Finished opportunity search at 1773615913.0866039. Elapsed time: 0.0255 seconds
+2026-03-15 19:05:14,158 | INFO | Starting opportunity search at 1773615914.1580617
+2026-03-15 19:05:14,174 | INFO | Finished opportunity search at 1773615914.174214. Elapsed time: 0.0162 seconds
+2026-03-15 19:05:15,289 | INFO | Starting opportunity search at 1773615915.2896693
+2026-03-15 19:05:15,311 | INFO | Finished opportunity search at 1773615915.3058932. Elapsed time: 0.0162 seconds
+2026-03-15 19:05:16,317 | INFO | Starting opportunity search at 1773615916.3170145
+2026-03-15 19:05:16,328 | INFO | Finished opportunity search at 1773615916.3282554. Elapsed time: 0.0112 seconds
+2026-03-15 19:05:17,309 | INFO | Starting opportunity search at 1773615917.3093889
+2026-03-15 19:05:17,325 | INFO | Finished opportunity search at 1773615917.3253212. Elapsed time: 0.0159 seconds
+2026-03-15 19:05:18,322 | INFO | Starting opportunity search at 1773615918.3224356
+2026-03-15 19:05:18,329 | INFO | Finished opportunity search at 1773615918.3299754. Elapsed time: 0.0075 seconds
+2026-03-15 19:05:19,328 | INFO | Starting opportunity search at 1773615919.3287628
+2026-03-15 19:05:19,336 | INFO | Finished opportunity search at 1773615919.3367805. Elapsed time: 0.0080 seconds
+2026-03-15 19:05:20,360 | INFO | Starting opportunity search at 1773615920.3604803
+2026-03-15 19:05:20,380 | INFO | Finished opportunity search at 1773615920.380568. Elapsed time: 0.0201 seconds
+2026-03-15 19:05:21,362 | INFO | Starting opportunity search at 1773615921.3622015
+2026-03-15 19:05:21,382 | INFO | Finished opportunity search at 1773615921.3822417. Elapsed time: 0.0200 seconds
+2026-03-15 19:05:22,365 | INFO | Starting opportunity search at 1773615922.365439
+2026-03-15 19:05:22,381 | INFO | Finished opportunity search at 1773615922.3815742. Elapsed time: 0.0161 seconds
+2026-03-15 19:05:23,366 | INFO | Starting opportunity search at 1773615923.3661323
+2026-03-15 19:05:23,366 | INFO | Finished opportunity search at 1773615923.3661323. Elapsed time: 0.0000 seconds
+2026-03-15 19:05:24,353 | INFO | Starting opportunity search at 1773615924.3537314
+2026-03-15 19:05:24,353 | INFO | Finished opportunity search at 1773615924.3537314. Elapsed time: 0.0000 seconds
+2026-03-15 19:05:25,355 | INFO | Starting opportunity search at 1773615925.355117
+2026-03-15 19:05:25,355 | INFO | Finished opportunity search at 1773615925.355117. Elapsed time: 0.0000 seconds
+2026-03-15 19:05:26,358 | INFO | Starting opportunity search at 1773615926.3589146
+2026-03-15 19:05:26,374 | INFO | Finished opportunity search at 1773615926.3748024. Elapsed time: 0.0159 seconds
+2026-03-15 19:05:27,360 | INFO | Starting opportunity search at 1773615927.360789
+2026-03-15 19:05:27,376 | INFO | Finished opportunity search at 1773615927.3767254. Elapsed time: 0.0159 seconds
+2026-03-15 19:05:28,393 | INFO | Starting opportunity search at 1773615928.3937936
+2026-03-15 19:05:28,411 | INFO | Finished opportunity search at 1773615928.4116187. Elapsed time: 0.0178 seconds
+2026-03-15 19:05:29,451 | INFO | Starting opportunity search at 1773615929.451464
+2026-03-15 19:05:29,465 | INFO | Finished opportunity search at 1773615929.4655516. Elapsed time: 0.0141 seconds
+2026-03-15 19:05:30,464 | INFO | Starting opportunity search at 1773615930.464835
+2026-03-15 19:05:30,497 | INFO | Finished opportunity search at 1773615930.4970386. Elapsed time: 0.0322 seconds
+2026-03-15 19:05:31,488 | INFO | Starting opportunity search at 1773615931.488302
+2026-03-15 19:05:31,507 | INFO | Finished opportunity search at 1773615931.5075932. Elapsed time: 0.0193 seconds
+2026-03-15 19:05:32,523 | INFO | Starting opportunity search at 1773615932.523469
+2026-03-15 19:05:32,556 | INFO | Finished opportunity search at 1773615932.5565102. Elapsed time: 0.0330 seconds
+2026-03-15 19:05:33,560 | INFO | Starting opportunity search at 1773615933.560852
+2026-03-15 19:05:33,576 | INFO | Finished opportunity search at 1773615933.5765936. Elapsed time: 0.0157 seconds
+2026-03-15 19:05:34,570 | INFO | Starting opportunity search at 1773615934.5706456
+2026-03-15 19:05:34,581 | INFO | Finished opportunity search at 1773615934.5818083. Elapsed time: 0.0112 seconds
+2026-03-15 19:05:35,566 | INFO | Starting opportunity search at 1773615935.5666409
+2026-03-15 19:05:35,582 | INFO | Finished opportunity search at 1773615935.5826359. Elapsed time: 0.0160 seconds
+2026-03-15 19:05:36,585 | INFO | Starting opportunity search at 1773615936.5850441
+2026-03-15 19:05:36,616 | INFO | Finished opportunity search at 1773615936.6167238. Elapsed time: 0.0317 seconds
+2026-03-15 19:05:37,602 | INFO | Starting opportunity search at 1773615937.6026356
+2026-03-15 19:05:37,618 | INFO | Finished opportunity search at 1773615937.6187522. Elapsed time: 0.0161 seconds
+2026-03-15 19:05:38,606 | INFO | Starting opportunity search at 1773615938.6067965
+2026-03-15 19:05:38,622 | INFO | Finished opportunity search at 1773615938.6226752. Elapsed time: 0.0159 seconds
+2026-03-15 19:05:39,607 | INFO | Starting opportunity search at 1773615939.607588
+2026-03-15 19:05:39,623 | INFO | Finished opportunity search at 1773615939.6234052. Elapsed time: 0.0158 seconds
+2026-03-15 19:05:40,629 | INFO | Starting opportunity search at 1773615940.6291726
+2026-03-15 19:05:40,645 | INFO | Finished opportunity search at 1773615940.645343. Elapsed time: 0.0162 seconds
+2026-03-15 19:05:41,661 | INFO | Starting opportunity search at 1773615941.661369
+2026-03-15 19:05:41,677 | INFO | Finished opportunity search at 1773615941.6771111. Elapsed time: 0.0157 seconds
+2026-03-15 19:05:42,686 | INFO | Starting opportunity search at 1773615942.6867652
+2026-03-15 19:05:42,695 | INFO | Finished opportunity search at 1773615942.695531. Elapsed time: 0.0088 seconds
+2026-03-15 19:05:43,697 | INFO | Starting opportunity search at 1773615943.6978815
+2026-03-15 19:05:43,714 | INFO | Finished opportunity search at 1773615943.71408. Elapsed time: 0.0162 seconds
+2026-03-15 19:05:44,746 | INFO | Starting opportunity search at 1773615944.7467098
+2026-03-15 19:05:44,761 | INFO | Finished opportunity search at 1773615944.761597. Elapsed time: 0.0149 seconds
+2026-03-15 19:05:45,760 | INFO | Starting opportunity search at 1773615945.7603915
+2026-03-15 19:05:45,776 | INFO | Finished opportunity search at 1773615945.776204. Elapsed time: 0.0158 seconds
+2026-03-15 19:05:46,777 | INFO | Starting opportunity search at 1773615946.7773821
+2026-03-15 19:05:46,777 | INFO | Finished opportunity search at 1773615946.7773821. Elapsed time: 0.0000 seconds
+2026-03-15 19:05:47,780 | INFO | Starting opportunity search at 1773615947.7804265
+2026-03-15 19:05:47,795 | INFO | Finished opportunity search at 1773615947.7959995. Elapsed time: 0.0156 seconds
+2026-03-15 19:05:48,798 | INFO | Starting opportunity search at 1773615948.7980633
+2026-03-15 19:05:48,799 | INFO | Finished opportunity search at 1773615948.799904. Elapsed time: 0.0018 seconds
+2026-03-15 19:05:49,786 | INFO | Starting opportunity search at 1773615949.78656
+2026-03-15 19:05:49,802 | INFO | Finished opportunity search at 1773615949.8023028. Elapsed time: 0.0157 seconds
+2026-03-15 19:05:50,821 | INFO | Starting opportunity search at 1773615950.821763
+2026-03-15 19:05:50,837 | INFO | Finished opportunity search at 1773615950.8379233. Elapsed time: 0.0162 seconds
+2026-03-15 19:05:51,838 | INFO | Starting opportunity search at 1773615951.8385673
+2026-03-15 19:05:51,872 | INFO | Finished opportunity search at 1773615951.8725185. Elapsed time: 0.0340 seconds
+2026-03-15 19:05:52,855 | INFO | Starting opportunity search at 1773615952.8555708
+2026-03-15 19:05:52,871 | INFO | Finished opportunity search at 1773615952.871691. Elapsed time: 0.0161 seconds
+2026-03-15 19:05:53,861 | INFO | Starting opportunity search at 1773615953.8613613
+2026-03-15 19:05:53,861 | INFO | Finished opportunity search at 1773615953.8613613. Elapsed time: 0.0000 seconds
+2026-03-15 19:05:54,862 | INFO | Starting opportunity search at 1773615954.8626432
+2026-03-15 19:05:54,912 | INFO | Finished opportunity search at 1773615954.912442. Elapsed time: 0.0498 seconds
+2026-03-15 19:05:55,914 | INFO | Starting opportunity search at 1773615955.9148889
+2026-03-15 19:05:55,929 | INFO | Finished opportunity search at 1773615955.929537. Elapsed time: 0.0146 seconds
+2026-03-15 19:05:56,941 | INFO | Starting opportunity search at 1773615956.9414597
+2026-03-15 19:05:56,963 | INFO | Finished opportunity search at 1773615956.9631832. Elapsed time: 0.0217 seconds
+2026-03-15 19:05:57,997 | INFO | Starting opportunity search at 1773615957.9971118
+2026-03-15 19:05:58,012 | INFO | Finished opportunity search at 1773615958.0123127. Elapsed time: 0.0152 seconds
+2026-03-15 19:05:59,024 | INFO | Starting opportunity search at 1773615959.0249944
+2026-03-15 19:05:59,041 | INFO | Finished opportunity search at 1773615959.0415769. Elapsed time: 0.0166 seconds
+2026-03-15 19:06:00,028 | INFO | Starting opportunity search at 1773615960.02893
+2026-03-15 19:06:00,044 | INFO | Finished opportunity search at 1773615960.0448835. Elapsed time: 0.0160 seconds
+2026-03-15 19:06:01,047 | INFO | Starting opportunity search at 1773615961.0470042
+2026-03-15 19:06:01,063 | INFO | Finished opportunity search at 1773615961.0632477. Elapsed time: 0.0162 seconds
+2026-03-15 19:06:02,063 | INFO | Starting opportunity search at 1773615962.063748
+2026-03-15 19:06:02,079 | INFO | Finished opportunity search at 1773615962.0796273. Elapsed time: 0.0159 seconds
+2026-03-15 19:06:03,067 | INFO | Starting opportunity search at 1773615963.0675657
+2026-03-15 19:06:03,083 | INFO | Finished opportunity search at 1773615963.083345. Elapsed time: 0.0158 seconds
+2026-03-15 19:06:04,055 | INFO | Starting opportunity search at 1773615964.0550523
+2026-03-15 19:06:04,085 | INFO | Finished opportunity search at 1773615964.0854323. Elapsed time: 0.0304 seconds
+2026-03-15 19:06:05,057 | INFO | Starting opportunity search at 1773615965.057029
+2026-03-15 19:06:05,088 | INFO | Finished opportunity search at 1773615965.0887747. Elapsed time: 0.0317 seconds
+2026-03-15 19:06:06,092 | INFO | Starting opportunity search at 1773615966.0924146
+2026-03-15 19:06:06,124 | INFO | Finished opportunity search at 1773615966.1245213. Elapsed time: 0.0321 seconds
+2026-03-15 19:06:07,300 | INFO | Starting opportunity search at 1773615967.3009946
+2026-03-15 19:06:07,317 | INFO | Finished opportunity search at 1773615967.3170643. Elapsed time: 0.0161 seconds
+2026-03-15 19:06:08,335 | INFO | Starting opportunity search at 1773615968.3353145
+2026-03-15 19:06:08,351 | INFO | Finished opportunity search at 1773615968.351284. Elapsed time: 0.0160 seconds
+2026-03-15 19:06:09,353 | INFO | Starting opportunity search at 1773615969.3532038
+2026-03-15 19:06:09,369 | INFO | Finished opportunity search at 1773615969.3691065. Elapsed time: 0.0159 seconds
+2026-03-15 19:06:10,355 | INFO | Starting opportunity search at 1773615970.3555882
+2026-03-15 19:06:10,371 | INFO | Finished opportunity search at 1773615970.3715026. Elapsed time: 0.0159 seconds
+2026-03-15 19:06:11,359 | INFO | Starting opportunity search at 1773615971.3593953
+2026-03-15 19:06:11,359 | INFO | Finished opportunity search at 1773615971.3593953. Elapsed time: 0.0000 seconds
+2026-03-15 19:06:12,360 | INFO | Starting opportunity search at 1773615972.360039
+2026-03-15 19:06:12,367 | INFO | Finished opportunity search at 1773615972.3677998. Elapsed time: 0.0078 seconds
+2026-03-15 19:06:13,462 | INFO | Starting opportunity search at 1773615973.4621751
+2026-03-15 19:06:13,491 | INFO | Finished opportunity search at 1773615973.4915688. Elapsed time: 0.0294 seconds
+2026-03-15 19:06:14,494 | INFO | Starting opportunity search at 1773615974.4948287
+2026-03-15 19:06:14,512 | INFO | Finished opportunity search at 1773615974.5128968. Elapsed time: 0.0181 seconds
+2026-03-15 19:06:15,526 | INFO | Starting opportunity search at 1773615975.5263505
+2026-03-15 19:06:15,546 | INFO | Finished opportunity search at 1773615975.5462203. Elapsed time: 0.0199 seconds
+2026-03-15 19:06:16,524 | INFO | Starting opportunity search at 1773615976.5244162
+2026-03-15 19:06:16,554 | INFO | Finished opportunity search at 1773615976.5547533. Elapsed time: 0.0303 seconds
+2026-03-15 19:06:17,561 | INFO | Starting opportunity search at 1773615977.5611172
+2026-03-15 19:06:17,592 | INFO | Finished opportunity search at 1773615977.5929048. Elapsed time: 0.0318 seconds
+2026-03-15 19:06:18,595 | INFO | Starting opportunity search at 1773615978.595546
+2026-03-15 19:06:18,611 | INFO | Finished opportunity search at 1773615978.6115718. Elapsed time: 0.0160 seconds
+2026-03-15 19:06:19,643 | INFO | Starting opportunity search at 1773615979.643718
+2026-03-15 19:06:19,659 | INFO | Finished opportunity search at 1773615979.6595113. Elapsed time: 0.0158 seconds
+2026-03-15 19:06:20,664 | INFO | Starting opportunity search at 1773615980.664406
+2026-03-15 19:06:20,682 | INFO | Finished opportunity search at 1773615980.6829286. Elapsed time: 0.0185 seconds
+2026-03-15 19:06:21,687 | INFO | Starting opportunity search at 1773615981.6871867
+2026-03-15 19:06:21,695 | INFO | Finished opportunity search at 1773615981.6952436. Elapsed time: 0.0081 seconds
+2026-03-15 19:06:22,683 | INFO | Starting opportunity search at 1773615982.6836567
+2026-03-15 19:06:22,699 | INFO | Finished opportunity search at 1773615982.699443. Elapsed time: 0.0158 seconds
+2026-03-15 19:06:23,692 | INFO | Starting opportunity search at 1773615983.6924965
+2026-03-15 19:06:23,703 | INFO | Finished opportunity search at 1773615983.7036636. Elapsed time: 0.0112 seconds
+2026-03-15 19:06:24,682 | INFO | Starting opportunity search at 1773615984.6820598
+2026-03-15 19:06:24,712 | INFO | Finished opportunity search at 1773615984.7113156. Elapsed time: 0.0293 seconds
+2026-03-15 19:06:25,714 | INFO | Starting opportunity search at 1773615985.7143414
+2026-03-15 19:06:25,747 | INFO | Finished opportunity search at 1773615985.7478817. Elapsed time: 0.0335 seconds
+2026-03-15 19:06:26,741 | INFO | Starting opportunity search at 1773615986.7419195
+2026-03-15 19:06:26,790 | INFO | Finished opportunity search at 1773615986.7900147. Elapsed time: 0.0481 seconds
+2026-03-15 19:06:27,776 | INFO | Starting opportunity search at 1773615987.7764208
+2026-03-15 19:06:27,792 | INFO | Finished opportunity search at 1773615987.7921486. Elapsed time: 0.0157 seconds
+2026-03-15 19:06:28,776 | INFO | Starting opportunity search at 1773615988.7769835
+2026-03-15 19:06:28,792 | INFO | Finished opportunity search at 1773615988.7926955. Elapsed time: 0.0157 seconds
+2026-03-15 19:06:29,781 | INFO | Starting opportunity search at 1773615989.7811427
+2026-03-15 19:06:29,808 | INFO | Finished opportunity search at 1773615989.808985. Elapsed time: 0.0278 seconds
+2026-03-15 19:06:30,809 | INFO | Starting opportunity search at 1773615990.8094833
+2026-03-15 19:06:30,825 | INFO | Finished opportunity search at 1773615990.8252873. Elapsed time: 0.0158 seconds
+2026-03-15 19:06:31,825 | INFO | Starting opportunity search at 1773615991.8255763
+2026-03-15 19:06:31,825 | INFO | Finished opportunity search at 1773615991.8255763. Elapsed time: 0.0000 seconds
+2026-03-15 19:06:32,817 | INFO | Starting opportunity search at 1773615992.8171456
+2026-03-15 19:06:32,848 | INFO | Finished opportunity search at 1773615992.8484812. Elapsed time: 0.0313 seconds
+2026-03-15 19:06:33,850 | INFO | Starting opportunity search at 1773615993.8506525
+2026-03-15 19:06:33,866 | INFO | Finished opportunity search at 1773615993.866465. Elapsed time: 0.0158 seconds
+2026-03-15 19:06:34,866 | INFO | Starting opportunity search at 1773615994.866885
+2026-03-15 19:06:34,866 | INFO | Finished opportunity search at 1773615994.866885. Elapsed time: 0.0000 seconds
+2026-03-15 19:06:35,851 | INFO | Starting opportunity search at 1773615995.8513763
+2026-03-15 19:06:35,867 | INFO | Finished opportunity search at 1773615995.8675637. Elapsed time: 0.0162 seconds
+2026-03-15 19:06:36,855 | INFO | Starting opportunity search at 1773615996.8559897
+2026-03-15 19:06:36,887 | INFO | Finished opportunity search at 1773615996.887643. Elapsed time: 0.0317 seconds
+2026-03-15 19:06:37,889 | INFO | Starting opportunity search at 1773615997.889595
+2026-03-15 19:06:37,905 | INFO | Finished opportunity search at 1773615997.905803. Elapsed time: 0.0162 seconds
+2026-03-15 19:06:38,909 | INFO | Starting opportunity search at 1773615998.9095135
+2026-03-15 19:06:38,925 | INFO | Finished opportunity search at 1773615998.9257371. Elapsed time: 0.0162 seconds
+2026-03-15 19:06:39,911 | INFO | Starting opportunity search at 1773615999.9111402
+2026-03-15 19:06:39,927 | INFO | Finished opportunity search at 1773615999.9270146. Elapsed time: 0.0159 seconds
+2026-03-15 19:06:40,914 | INFO | Starting opportunity search at 1773616000.914093
+2026-03-15 19:06:40,934 | INFO | Finished opportunity search at 1773616000.9346929. Elapsed time: 0.0206 seconds
+2026-03-15 19:06:41,945 | INFO | Starting opportunity search at 1773616001.9455857
+2026-03-15 19:06:41,986 | INFO | Finished opportunity search at 1773616001.9861207. Elapsed time: 0.0405 seconds
+2026-03-15 19:06:42,989 | INFO | Starting opportunity search at 1773616002.989483
+2026-03-15 19:06:43,035 | INFO | Finished opportunity search at 1773616003.035021. Elapsed time: 0.0455 seconds
+2026-03-15 19:06:44,026 | INFO | Starting opportunity search at 1773616004.0269747
+2026-03-15 19:06:44,043 | INFO | Finished opportunity search at 1773616004.0431445. Elapsed time: 0.0162 seconds
+2026-03-15 19:06:45,030 | INFO | Starting opportunity search at 1773616005.030308
+2026-03-15 19:06:45,046 | INFO | Finished opportunity search at 1773616005.046386. Elapsed time: 0.0161 seconds
+2026-03-15 19:06:46,031 | INFO | Starting opportunity search at 1773616006.0310552
+2026-03-15 19:06:46,047 | INFO | Finished opportunity search at 1773616006.047058. Elapsed time: 0.0160 seconds
+2026-03-15 19:06:47,033 | INFO | Starting opportunity search at 1773616007.0339882
+2026-03-15 19:06:47,049 | INFO | Finished opportunity search at 1773616007.049891. Elapsed time: 0.0159 seconds
+2026-03-15 19:06:48,051 | INFO | Starting opportunity search at 1773616008.0510802
+2026-03-15 19:06:48,067 | INFO | Finished opportunity search at 1773616008.0676477. Elapsed time: 0.0166 seconds
+2026-03-15 19:06:49,055 | INFO | Starting opportunity search at 1773616009.0555866
+2026-03-15 19:06:49,071 | INFO | Finished opportunity search at 1773616009.0713222. Elapsed time: 0.0157 seconds
+2026-03-15 19:06:50,103 | INFO | Starting opportunity search at 1773616010.103405
+2026-03-15 19:06:50,119 | INFO | Finished opportunity search at 1773616010.119103. Elapsed time: 0.0157 seconds
+2026-03-15 19:06:51,107 | INFO | Starting opportunity search at 1773616011.1072507
+2026-03-15 19:06:51,107 | INFO | Finished opportunity search at 1773616011.1072507. Elapsed time: 0.0000 seconds
+2026-03-15 19:06:52,110 | INFO | Starting opportunity search at 1773616012.110939
+2026-03-15 19:06:52,118 | INFO | Finished opportunity search at 1773616012.1185796. Elapsed time: 0.0076 seconds
+2026-03-15 19:06:53,109 | INFO | Starting opportunity search at 1773616013.1090117
+2026-03-15 19:06:53,126 | INFO | Finished opportunity search at 1773616013.1266851. Elapsed time: 0.0177 seconds
+2026-03-15 19:06:54,107 | INFO | Starting opportunity search at 1773616014.107529
+2026-03-15 19:06:54,123 | INFO | Finished opportunity search at 1773616014.1234365. Elapsed time: 0.0159 seconds
+2026-03-15 19:06:55,112 | INFO | Starting opportunity search at 1773616015.112745
+2026-03-15 19:06:55,130 | INFO | Finished opportunity search at 1773616015.130769. Elapsed time: 0.0180 seconds
+2026-03-15 19:06:56,114 | INFO | Starting opportunity search at 1773616016.1143327
+2026-03-15 19:06:56,114 | INFO | Finished opportunity search at 1773616016.1143327. Elapsed time: 0.0000 seconds
+2026-03-15 19:06:57,113 | INFO | Starting opportunity search at 1773616017.1134877
+2026-03-15 19:06:57,113 | INFO | Finished opportunity search at 1773616017.1134877. Elapsed time: 0.0000 seconds
+2026-03-15 19:06:58,103 | INFO | Starting opportunity search at 1773616018.1037004
+2026-03-15 19:06:58,119 | INFO | Finished opportunity search at 1773616018.119454. Elapsed time: 0.0158 seconds
+2026-03-15 19:06:59,121 | INFO | Starting opportunity search at 1773616019.1216183
+2026-03-15 19:06:59,137 | INFO | Finished opportunity search at 1773616019.1375623. Elapsed time: 0.0159 seconds
+2026-03-15 19:07:00,149 | INFO | Starting opportunity search at 1773616020.1498656
+2026-03-15 19:07:00,179 | INFO | Finished opportunity search at 1773616020.1798148. Elapsed time: 0.0299 seconds
+2026-03-15 19:07:01,183 | INFO | Starting opportunity search at 1773616021.1833193
+2026-03-15 19:07:01,202 | INFO | Finished opportunity search at 1773616021.2025661. Elapsed time: 0.0192 seconds
+2026-03-15 19:07:02,187 | INFO | Starting opportunity search at 1773616022.1872225
+2026-03-15 19:07:02,205 | INFO | Finished opportunity search at 1773616022.2059824. Elapsed time: 0.0188 seconds
+2026-03-15 19:07:03,190 | INFO | Starting opportunity search at 1773616023.1905313
+2026-03-15 19:07:03,208 | INFO | Finished opportunity search at 1773616023.2086492. Elapsed time: 0.0181 seconds
+2026-03-15 19:07:04,210 | INFO | Starting opportunity search at 1773616024.2109194
+2026-03-15 19:07:04,233 | INFO | Finished opportunity search at 1773616024.231136. Elapsed time: 0.0202 seconds
+2026-03-15 19:07:05,249 | INFO | Starting opportunity search at 1773616025.249537
+2026-03-15 19:07:05,265 | INFO | Finished opportunity search at 1773616025.2653203. Elapsed time: 0.0158 seconds
+2026-03-15 19:07:06,262 | INFO | Starting opportunity search at 1773616026.26288
+2026-03-15 19:07:06,280 | INFO | Finished opportunity search at 1773616026.2808511. Elapsed time: 0.0180 seconds
+2026-03-15 19:07:07,302 | INFO | Starting opportunity search at 1773616027.302897
+2026-03-15 19:07:07,339 | INFO | Finished opportunity search at 1773616027.3392196. Elapsed time: 0.0363 seconds
+2026-03-15 19:07:08,343 | INFO | Starting opportunity search at 1773616028.3434496
+2026-03-15 19:07:08,370 | INFO | Finished opportunity search at 1773616028.3706756. Elapsed time: 0.0272 seconds
+2026-03-15 19:07:09,371 | INFO | Starting opportunity search at 1773616029.37164
+2026-03-15 19:07:09,379 | INFO | Finished opportunity search at 1773616029.3796651. Elapsed time: 0.0080 seconds
+2026-03-15 19:07:10,353 | INFO | Starting opportunity search at 1773616030.3533428
+2026-03-15 19:07:10,363 | INFO | Finished opportunity search at 1773616030.3634481. Elapsed time: 0.0101 seconds
+2026-03-15 19:07:11,358 | INFO | Starting opportunity search at 1773616031.358948
+2026-03-15 19:07:11,378 | INFO | Finished opportunity search at 1773616031.3782647. Elapsed time: 0.0193 seconds
