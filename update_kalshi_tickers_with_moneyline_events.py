@@ -2,7 +2,7 @@ from datetime import datetime, timedelta, timezone
 import json
 
 MIN_CLOSE_TS = 2 # Set to 0 for all events
-MAX_CLOSE_TS = 5 # Set to 0 for all events
+MAX_CLOSE_TS = 30 # Set to 0 for all events
 
 def get_min_max_close_time():
     # Set market close times

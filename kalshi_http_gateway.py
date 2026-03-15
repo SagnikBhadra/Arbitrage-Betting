@@ -114,7 +114,7 @@ class KalshiHTTPGateway:
     def get_balance(self) -> dict:
         """Get your current account balance."""
         balance_response = self._request("GET", "/portfolio/balance")
-        self.logger.info(f"Current balance: {balance_response['balance']} USD")
+        #self.logger.info(f"Current balance: {balance_response['balance']} USD")
         return balance_response["balance"]
 
     def get_positions(self) -> dict:
@@ -167,8 +167,8 @@ class KalshiHTTPGateway:
 
 
         self.logger.info(f"Placing order with data: {order_data}")
-        #return self._request("POST", "/portfolio/orders", json_body=order_data)
-        return 
+        return self._request("POST", "/portfolio/orders", json_body=order_data)
+        #return 
 
     def cancel_order(self, order_id: str) -> dict:
         """Cancel an open order by order_id."""

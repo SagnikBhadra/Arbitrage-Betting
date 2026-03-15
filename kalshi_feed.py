@@ -88,7 +88,6 @@ class KalshiWebSocket:
         
     def handle_snapshot(self, msg):
         asset_id = msg["market_ticker"]
-        print(msg)
         
         orderbook = self.orderbooks.get(asset_id, None)
         if not orderbook:
@@ -99,7 +98,6 @@ class KalshiWebSocket:
         self.logger.info(f"Loaded snapshot for {orderbook}")
         
     def handle_price_change(self, msg):
-        print(msg)
         asset_id = msg["market_ticker"]
         price = float(msg["price_dollars"]) if msg["side"] == "yes" else Decimal('1.0') - Decimal(msg["price_dollars"])
         delta = float(msg["delta_fp"])
@@ -110,14 +108,14 @@ class KalshiWebSocket:
             return
         size = orderbook.get_size_at_price(side, price) + delta
         orderbook.update_order_book(side, price, size)
-        self.logger.info(f"Updated order book for {orderbook}")
+        #self.logger.info(f"Updated order book for {orderbook}")
         return str(price), orderbook.get_best_bid()[0], orderbook.get_best_ask()[0]
     
     def handle_trade(self, msg):
         asset_id = msg["market_ticker"]
         yes_price = float(msg["yes_price_dollars"])
         no_price = Decimal("1.0") - Decimal(msg["no_price_dollars"])
-        shares_executed = float(msg["count"])
+        shares_executed = float(msg["count_fp"])
         taker_side = 0 if msg["taker_side"] == "yes" else 1
         
         orderbook = self.orderbooks.get(asset_id, None)
@@ -149,7 +147,6 @@ class KalshiWebSocket:
 
     async def orderbook_websocket(self):
         """Connect to WebSocket and subscribe to orderbook with auto-reconnect."""
-        print("Function called: orderbook_websocket")
         while True:
             try:
                 # Load private key
@@ -161,7 +158,6 @@ class KalshiWebSocket:
 
                 # Create WebSocket headers
                 ws_headers = self.create_headers(private_key, "GET", "/trade-api/ws/v2")
-                print(ws_headers)
 
                 async with websockets.connect(
                     self.ws_url,

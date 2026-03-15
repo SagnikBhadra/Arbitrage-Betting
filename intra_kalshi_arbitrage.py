@@ -25,8 +25,8 @@ class IntraKalshiArbitrage:
         self.profit_threshold = profit_threshold
         self.logger = logging.getLogger("intra_kalshi_strategy")
 
-        self.overall_order_count = 0
-        self.overall_profit = 0.0
+        self.overall_order_count = Decimal(0)
+        self.overall_profit = Decimal(0.0)
 
         self.last_best_ask_price_by_ticker = defaultdict()
         self.last_best_bid_price_by_ticker = defaultdict()
@@ -121,6 +121,7 @@ class IntraKalshiArbitrage:
         """
 
         for ticker, orderbook in self.kalshi_client.orderbooks.items():
+            
             # Get correlated markets
             correlated_tickers = self.correlated_market_mapping.get(ticker, [])
             best_bid, best_bid_size = orderbook.get_best_bid()
@@ -161,7 +162,7 @@ class IntraKalshiArbitrage:
                             
                             # Check balance before placing orders
                             if not self.check_and_update_balance(required_balance):
-                                self.logger.warning(f"Insufficient balance. Required: ${required_balance:.2f}, Available: ${self.cached_balance:.2f}")
+                                #self.logger.warning(f"Insufficient balance. Required: ${required_balance:.2f}, Available: ${self.cached_balance:.2f}")
                                 order_size = math.floor(Decimal(str(self.cached_balance)) / cost_of_single_share)
                                 
                             # Track profit
@@ -238,7 +239,7 @@ class IntraKalshiArbitrage:
                             
                             # Check balance before placing orders
                             if not self.check_and_update_balance(required_balance):
-                                self.logger.warning(f"Insufficient balance. Required: ${required_balance:.2f}, Available: ${self.cached_balance:.2f}")
+                                #self.logger.warning(f"Insufficient balance. Required: ${required_balance:.2f}, Available: ${self.cached_balance:.2f}")
                                 order_size = math.floor(Decimal(str(self.cached_balance)) / cost_of_single_share)
                             
                             # Track profit
