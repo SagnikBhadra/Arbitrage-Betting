@@ -32,8 +32,9 @@ class IntraKalshiArbitrage:
         self.last_best_ask_price_by_ticker = defaultdict()
         self.last_best_bid_price_by_ticker = defaultdict()
 
-        # Cached balance to avoid API calls on every order
-        self.cached_balance = Decimal(kalshi_gateway.get_balance())
+        # Cached balance to avoid API calls on every order (in dollars)
+        self.cached_balance = Decimal(Decimal(kalshi_gateway.get_balance()) / Decimal(100.0))
+        self.cached_balance = 5000
 
     def check_and_update_balance(self, required_amount: Decimal):
         """Check if we have sufficient balance for the trade.
@@ -64,7 +65,7 @@ class IntraKalshiArbitrage:
         else:
             return
         
-        if position_size > 0:
+        if position_size > 0 and best_ask_size and correlated_best_ask_size:
             # Sell Team A YES and Sell Team B YES
             # If Team A bid + Team B bid - fees > $1 + profit_threshold ==>
             # If (Team A bid + Team B bid) - (order_size + fees) > profit_threshold
@@ -123,9 +124,6 @@ class IntraKalshiArbitrage:
         """Identify intra-market arbitrage opportunities within Kalshi markets.
         """
 
-        start_time = time.time()
-        self.logger.info(f"Starting opportunity search at {start_time}")
-
         for ticker, orderbook in self.kalshi_client.orderbooks.items():
             
             # Get correlated markets
@@ -167,7 +165,7 @@ class IntraKalshiArbitrage:
                             required_balance = Decimal(cost_of_single_share * order_size)
                             
                             # Check balance before placing orders
-                            if not self.check_and_update_balance(required_balance):
+                            if not self.cached_balance > required_balance:
                                 #self.logger.warning(f"Insufficient balance. Required: ${required_balance:.2f}, Available: ${self.cached_balance:.2f}")
                                 order_size = math.floor(Decimal(str(self.cached_balance)) / cost_of_single_share)
                                 
@@ -245,7 +243,7 @@ class IntraKalshiArbitrage:
                             required_balance = Decimal(cost_of_single_share * order_size)
                             
                             # Check balance before placing orders
-                            if not self.check_and_update_balance(required_balance):
+                            if not self.cached_balance > required_balance:
                                 #self.logger.warning(f"Insufficient balance. Required: ${required_balance:.2f}, Available: ${self.cached_balance:.2f}")
                                 order_size = math.floor(Decimal(str(self.cached_balance)) / cost_of_single_share)
                             
@@ -301,8 +299,5 @@ class IntraKalshiArbitrage:
                                                         correlated_ticker, correlated_best_bid, correlated_best_bid_size, correlated_best_ask, correlated_best_ask_size)
 
                     #self.logger.info(f"Overall Orders Placed: {self.overall_order_count}, Overall Potential Profit: ${self.overall_profit:.2f}, Balance: ${self.cached_balance:.2f}")
-        end_time = time.time()
-        elapsed = end_time - start_time
-        self.logger.info(f"Finished opportunity search at {end_time}. Elapsed time: {elapsed:.4f} seconds")
                         
                     
