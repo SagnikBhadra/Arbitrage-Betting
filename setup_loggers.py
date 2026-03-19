@@ -1,7 +1,12 @@
 from datetime import datetime
 import logging
 import logging.handlers
+import queue
 from pathlib import Path
+
+# Track listeners so we can drain & stop them on shutdown
+_listeners: list[logging.handlers.QueueListener] = []
+
 
 def setup_logger(filename_prefix: str, logger_name: str):
     today_str = datetime.now().strftime("%Y-%m-%d")
@@ -13,19 +18,41 @@ def setup_logger(filename_prefix: str, logger_name: str):
         "%(asctime)s | %(levelname)s | %(message)s"
     )
     
-    handler = logging.handlers.RotatingFileHandler(
+    # File handler — runs only on the QueueListener's background thread
+    file_handler = logging.handlers.RotatingFileHandler(
         log_dir / f"{filename_prefix}_{today_str}.log",
         maxBytes=5_000_000,
         backupCount=5,
         encoding="utf-8",
         delay=True
     )
-    handler.setFormatter(formatter)
+    file_handler.setFormatter(formatter)
+
+    # Non-blocking queue: callers just enqueue and return immediately
+    log_queue: queue.Queue = queue.Queue(-1)          # unbounded
+    queue_handler = logging.handlers.QueueHandler(log_queue)
+
+    listener = logging.handlers.QueueListener(
+        log_queue, file_handler, respect_handler_level=True
+    )
+    listener.start()
+    _listeners.append(listener)
 
     logger = logging.getLogger(logger_name)
     logger.setLevel(logging.INFO)
-    logger.addHandler(handler)
+    logger.addHandler(queue_handler)
     logger.propagate = False  # Prevent duplicate logging
+
+
+def stop_logging():
+    """Drain every queue and stop background listener threads.
+
+    Call once at process shutdown (e.g. in a finally block).
+    """
+    for listener in _listeners:
+        listener.stop()
+    _listeners.clear()
+
 
 def setup_logging():
     # === 1️⃣ Strategy log files ===

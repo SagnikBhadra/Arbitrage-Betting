@@ -120,16 +120,26 @@ class IntraKalshiArbitrage:
         
         
 
-    def find_opportunities(self):
+    def find_opportunities(self, book_snapshots: dict | None = None):
         """Identify intra-market arbitrage opportunities within Kalshi markets.
+
+        Args:
+            book_snapshots: {ticker: (best_bid_price, best_bid_size, best_ask_price, best_ask_size)}
+                            Immutable snapshot taken on the event loop.  When *None*
+                            the method falls back to reading live orderbooks (legacy path).
         """
 
-        for ticker, orderbook in self.kalshi_client.orderbooks.items():
+        if book_snapshots is None:
+            # Legacy / fallback: read live (only safe when called on the event loop)
+            book_snapshots = {
+                t: ob.snapshot_top()
+                for t, ob in self.kalshi_client.orderbooks.items()
+            }
+
+        for ticker, (best_bid, best_bid_size, best_ask, best_ask_size) in book_snapshots.items():
             
             # Get correlated markets
             correlated_tickers = self.correlated_market_mapping.get(ticker, [])
-            best_bid, best_bid_size = orderbook.get_best_bid()
-            best_ask, best_ask_size = orderbook.get_best_ask()
             last_best_bid = -1
             last_correlated_best_bid = -1
             last_best_ask = -1
@@ -138,10 +148,9 @@ class IntraKalshiArbitrage:
             # Does not work for more than 2 correlated markets yet
             if correlated_tickers:
                 for correlated_ticker in correlated_tickers:
-                    correlated_orderbook = self.kalshi_client.orderbooks.get(correlated_ticker)
-                    if correlated_orderbook:
-                        correlated_best_bid, correlated_best_bid_size = correlated_orderbook.get_best_bid()
-                        correlated_best_ask, correlated_best_ask_size = correlated_orderbook.get_best_ask()
+                    correlated_snap = book_snapshots.get(correlated_ticker)
+                    if correlated_snap:
+                        correlated_best_bid, correlated_best_bid_size, correlated_best_ask, correlated_best_ask_size = correlated_snap
                         
                         # Buy Team A yes & Buy Team B yes
                         if best_ask and correlated_best_ask:

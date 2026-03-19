@@ -18,11 +18,21 @@ class OrderBook:
     def update_order_book(self, side, price, size):
         book_side = self.bids if side == 0 else self.asks
         if size <= 0 and price in book_side:
-            #self.logger.info(f"Removing price level {price} from {'bids' if side == 0 else 'asks'}")
             del book_side[price]
         else:
-            #self.logger.info(f"Updating price level {price} in {'bids' if side == 0 else 'asks'} from size {book_side.get(price, 0)} to size {size}")
             book_side[price] = size
+
+    def apply_delta(self, side, price, delta):
+        """Atomic read-modify-write: add *delta* to current size at *price*.
+
+        Safe without a lock because only the event-loop thread calls this.
+        """
+        book_side = self.bids if side == 0 else self.asks
+        new_size = book_side.get(price, 0) + delta
+        if new_size <= 0 and price in book_side:
+            del book_side[price]
+        else:
+            book_side[price] = new_size
             
     def get_size_at_price(self, side, price):
         book = self.bids if side == 0 else self.asks
@@ -45,6 +55,15 @@ class OrderBook:
         size = self.asks.peekitem(0)[1]
         
         return price, size
+
+    def snapshot_top(self):
+        """Return an immutable snapshot: (best_bid_price, best_bid_size, best_ask_price, best_ask_size).
+
+        Called on the event loop, consumed by the worker thread.
+        """
+        bb_price, bb_size = (self.bids.peekitem(-1) if self.bids else (None, None))
+        ba_price, ba_size = (self.asks.peekitem(0) if self.asks else (None, None))
+        return (bb_price, bb_size, ba_price, ba_size)
     
     def __repr__(self):
         return f"Asset ID: {self.asset_id} | Best Bid: {self.get_best_bid()} | Best Ask: {self.get_best_ask()}"

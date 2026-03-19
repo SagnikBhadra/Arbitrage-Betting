@@ -171,8 +171,8 @@ class KalshiWebSocket:
         if not orderbook:
             self.logger.warning(f"Order Book with asset ID {asset_id} not found on price change")
             return
-        size = orderbook.get_size_at_price(side, price) + delta
-        orderbook.update_order_book(side, price, size)
+        # Atomic read-modify-write (single call, no torn read)
+        orderbook.apply_delta(side, price, delta)
         #self.logger.info(f"Updated order book for {orderbook}")
         return str(price), orderbook.get_best_bid()[0], orderbook.get_best_ask()[0]
     
@@ -310,6 +310,14 @@ class KalshiWebSocket:
                 print(f"WebSocket error: {e}")
                 self.logger.info("Reconnecting in 5 seconds...")
                 await asyncio.sleep(5)
+
+    def snapshot_all_books(self):
+        """Return an immutable snapshot of top-of-book for every ticker.
+
+        Called on the event loop (single-threaded, no lock needed).
+        Returns {ticker: (best_bid_price, best_bid_size, best_ask_price, best_ask_size)}.
+        """
+        return {ticker: ob.snapshot_top() for ticker, ob in self.orderbooks.items()}
 
     def get_best_bid(self, market_ticker):
         orderbook = self.orderbooks.get(market_ticker, None)

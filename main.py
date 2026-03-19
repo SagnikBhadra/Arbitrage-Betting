@@ -23,7 +23,7 @@ from kalshi_feed import KalshiWebSocket
 from polymarket_us_http_gateway import PolymarketUSHTTPGateway
 from kalshi_http_gateway import KalshiHTTPGateway, load_private_key
 
-from setup_loggers import setup_logging
+from setup_loggers import setup_logging, stop_logging
 from utils import get_asset_ids, get_maker_fees_kalshi, get_taker_fees_kalshi
 from collections import defaultdict
 
@@ -120,15 +120,13 @@ async def scan_inefficiencies(polymarket_client, kalshi_client, kalshi_gateway, 
 
     # Call find_opportunities() every second and log any opportunities above profit_threshold
     while True:
-        for strategy in strategies:
-            #start_time = time.time()
-            #print(f"Starting opportunity search at {start_time}")
+        # Snapshot on the event loop (no contention, single-threaded)
+        book_snapshots = kalshi_client.snapshot_all_books()
 
-            strategy.find_opportunities()
-            
-            #end_time = time.time()
-            #elapsed = end_time - start_time
-            #print(f"Finished opportunity search at {end_time}. Elapsed time: {elapsed:.4f} seconds")
+        for strategy in strategies:
+            # Run strategy in a worker thread so the event loop stays
+            # free to process incoming WS messages (no sync-over-async)
+            await asyncio.to_thread(strategy.find_opportunities, book_snapshots)
         await asyncio.sleep(1)
 
 async def main():
@@ -151,4 +149,7 @@ async def main():
 
 if __name__ == "__main__":
     setup_logging()
-    asyncio.run(main())
+    try:
+        asyncio.run(main())
+    finally:
+        stop_logging()

@@ -1,10 +1,10 @@
-import asyncio
+import threading
 from collections import defaultdict
 
 class PositionManager:
     def __init__(self, positions:defaultdict):
         self.positions = positions
-        self.lock = asyncio.Lock()
+        self.lock = threading.Lock()
         
         # ---------------------------------------------------------
     # Local Update From Trade Fill
@@ -19,27 +19,28 @@ class PositionManager:
             "NO_BUY"
             "NO_SELL"
         """
+        with self.lock:
+            if side == "YES_BUY":
+                self.positions[ticker] += quantity
 
-        if side == "YES_BUY":
-            self.positions[ticker] += quantity
+            elif side == "YES_SELL":
+                self.positions[ticker] -= quantity
 
-        elif side == "YES_SELL":
-            self.positions[ticker] -= quantity
+            elif side == "NO_BUY":
+                self.positions[ticker] -= quantity
 
-        elif side == "NO_BUY":
-            self.positions[ticker] -= quantity
+            elif side == "NO_SELL":
+                self.positions[ticker] += quantity
 
-        elif side == "NO_SELL":
-            self.positions[ticker] += quantity
-
-        else:
-            raise ValueError(f"Unknown side {side}")
+            else:
+                raise ValueError(f"Unknown side {side}")
 
     # ---------------------------------------------------------
     # Get Position
     # ---------------------------------------------------------
     def get_position(self, ticker):
-        return self.positions.get(ticker, 0)
+        with self.lock:
+            return self.positions.get(ticker, 0)
 
     # ---------------------------------------------------------
     # Get All Positions
