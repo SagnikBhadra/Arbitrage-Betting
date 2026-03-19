@@ -21,18 +21,55 @@ def load_kalshi_key_id(secrets_path: str = "kalshi_secrets.json") -> str:
 
 KEY_ID = load_kalshi_key_id()
 PRIVATE_KEY_PATH = "Kalshi.key"
-MARKET_TICKER = ["KXNBAMVP-26-LDON",
-                "KXNBAMVP-26-SGIL",
-                 "KXNBAMVP-26-NJOK"]  # Replace with any open market
-#MARKET_TICKER = ["KXNBAMVP-26-LDON"]
 WS_URL = "wss://api.elections.kalshi.com/trade-api/ws/v2"
 
-"""
+class OrderbookDeltaLogger:
+    def __init__(self, logger):
+        self.logger = logger
+        self.queue = asyncio.Queue()
+        self.latest_delta = {}   # market_ticker -> latest message
+        self.running = True
 
-            "KXNBAMVP-26-SGIL": "Shai",
-            "KXNBAMVP-26-NJOK": "Jokic",
-            "KXNBAMVP-26-LDON": "Luka",
-"""
+    async def add_delta(self, market_ticker, delta):
+        # Called from websocket thread
+        await self.queue.put((market_ticker, delta))
+
+    async def _consume(self):
+        while self.running:
+            market, delta = await self.queue.get()
+            self.latest_delta[market] = delta   # overwrite previous
+
+    async def _flush_loop(self):
+        while self.running:
+            await asyncio.sleep(10)
+            self.flush()
+
+    def flush(self):
+        if not self.latest_delta:
+            return
+
+        self.logger.info("----- LATEST ORDERBOOK DELTAS (last 10s) -----")
+
+        for market, delta in self.latest_delta.items():
+            price = delta.get("price_dollars")
+            side = delta.get("side")
+            size = delta.get("delta_fp")
+            ts = delta.get("ts")
+
+            self.logger.info(
+                f"{market} | side={side} | price={price} | delta={size} | timestamp={ts}"
+            )
+
+        self.logger.info("------------------------------------------------")
+
+        # clear after logging
+        self.latest_delta.clear()
+
+    async def run(self):
+        await asyncio.gather(
+            self._consume(),
+            self._flush_loop()
+        )
 
 class KalshiWebSocket:
     def __init__(self, key_id, private_key_path, market_tickers, ws_url):
@@ -51,6 +88,13 @@ class KalshiWebSocket:
         
         # Initialize Market Data
         self.market_data = MarketData(market="Kalshi")
+        
+        # Delta logging
+        self.delta_logger = OrderbookDeltaLogger(self.logger)
+
+        # Snapshot tracking
+        self.snapshot_loaded = set()
+        self.delta_buffer = defaultdict(list)
 
     def sign_pss_text(self, private_key, text: str) -> str:
         """Sign message using RSA-PSS"""
@@ -86,6 +130,16 @@ class KalshiWebSocket:
         best_bid_price, best_bid_size = orderbook.get_best_bid()
         best_ask_price, best_ask_size = orderbook.get_best_ask()
         return best_bid_price, best_ask_price
+    
+    def _apply_delta(self, msg_content):
+        price, best_bid, best_ask = self.handle_price_change(msg_content)
+
+        self.market_data.persist_orderbook_update_event_kalshi(
+            msg_content,
+            price=price,
+            best_bid=best_bid,
+            best_ask=best_ask
+        )
         
     def handle_snapshot(self, msg):
         asset_id = msg["market_ticker"]
@@ -96,6 +150,16 @@ class KalshiWebSocket:
             return
         
         orderbook.load_kalshi_snapshot(msg)
+        
+        # mark snapshot ready
+        self.snapshot_loaded.add(asset_id)
+
+        # replay buffered deltas
+        if asset_id in self.delta_buffer:
+            for delta_msg in self.delta_buffer[asset_id]:
+                self._apply_delta(delta_msg)
+            del self.delta_buffer[asset_id]
+        
         self.logger.info(f"Loaded snapshot for {orderbook}")
         
     def handle_price_change(self, msg):
@@ -156,6 +220,9 @@ class KalshiWebSocket:
                         f.read(),
                         password=None
                     )
+                    
+                # Create logger background process
+                asyncio.create_task(self.delta_logger.run())
 
                 # Create WebSocket headers
                 ws_headers = self.create_headers(private_key, "GET", "/trade-api/ws/v2")
@@ -198,15 +265,20 @@ class KalshiWebSocket:
 
                         elif msg_type == "orderbook_delta":
                             if 'client_order_id' in data.get('data', {}):
-                                pass
-                            else:
-                                price, best_bid, best_ask = self.handle_price_change(msg_content)
-                                self.market_data.persist_orderbook_update_event_kalshi(
-                                    msg_content,
-                                    price=price,
-                                    best_bid=best_bid,
-                                    best_ask=best_ask
-                                )
+                                continue
+                            
+                            market = msg_content["market_ticker"]
+
+                            # send to async logger (non-blocking)
+                            asyncio.create_task(self.delta_logger.add_delta(market, msg_content))
+
+                            # buffer if snapshot not ready
+                            if market not in self.snapshot_loaded:
+                                self.delta_buffer[market].append(msg_content)
+                                continue
+
+                            # process normally
+                            self._apply_delta(msg_content)
 
                         elif msg_type == "trade":
                             self.handle_trade(msg_content)

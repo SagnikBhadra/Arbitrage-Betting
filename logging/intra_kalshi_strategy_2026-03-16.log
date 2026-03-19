@@ -1662,3 +1662,7 @@
 2026-03-16 19:19:09,269 | INFO | Intra-Kalshi Arbitrage Opportunity: Buy YES on KXNBAGAME-26MAR16ORLATL-ORL at 0.3000 and Buy YES on KXNBAGAME-26MAR16ORLATL-ATL at 0.6300 of size 1 | Combined Price: 0.9700
 2026-03-16 19:19:09,269 | INFO | Intra-Kalshi Arbitrage Opportunity: Sell YES on KXNBAGAME-26MAR16ORLATL-ORL at 0.3000 and Sell YES on KXNBAGAME-26MAR16ORLATL-ATL at 0.6300 of size 1 | Combined Price: 1.079999999999999960031971113 | Fees: 0.04
 2026-03-16 19:19:09,269 | INFO | Intra-Kalshi Arbitrage Opportunity: Buy YES on KXATPCHALLENGERMATCH-26MAR16GOMMAR-GOM at 0.8000 and Buy YES on KXATPCHALLENGERMATCH-26MAR16GOMMAR-MAR at 0.1200 of size 1 | Combined Price: 0.9500
+2026-03-16 20:37:48,114 | INFO | Intra-Kalshi Arbitrage Opportunity: Buy NO on KXWTAMATCH-26MAR15JUVSTO-JUV at 0.34 and Buy NO on KXWTAMATCH-26MAR15JUVSTO-STO at 0.6 of size 3037 | Combined Price: 2953.52
+2026-03-16 20:37:48,114 | INFO | Intra-Kalshi Arbitrage Opportunity: Buy NO on KXWTAMATCH-26MAR15JUVSTO-STO at 0.6 and Buy NO on KXWTAMATCH-26MAR15JUVSTO-JUV at 0.34 of size 2177 | Combined Price: 2117.16
+2026-03-16 20:37:48,116 | INFO | Intra-Kalshi Arbitrage Opportunity: Buy YES on KXWTAMATCH-26MAR15INGSTA-ING at 0.3500 and Buy YES on KXWTAMATCH-26MAR15INGSTA-STA at 0.6300 of size -73 | Combined Price: -73.8900
+2026-03-16 20:37:50,628 | INFO | Intra-Kalshi Arbitrage Opportunity: Buy NO on KXWTAMATCH-26MAR15JUVSTO-JUV at 0.34 and Buy NO on KXWTAMATCH-26MAR15JUVSTO-STO at 0.6 of size 3 | Combined Price: 2.93

@@ -35,8 +35,9 @@ def update_statics_with_kalshi_events(events_path, statics_path):
         for market in event["markets"]:
             tickers.append(market["ticker"])
             ct = datetime.fromisoformat(market["close_time"].replace("Z", "+00:00"))
-            print(f"Close time: {ct}")
+            print(f"Min time: {min_time} | Close time: {ct} | Max time: {max_time}")
             if min_time <= ct <= max_time:
+                print("Here")
                 close_times.append(ct) 
             
         if len(tickers) == 2 and len(close_times) == 2:
