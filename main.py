@@ -4,6 +4,7 @@ import json
 import logging
 from logging.handlers import RotatingFileHandler
 import time
+import sys
 import websocket
 import uuid
 from decimal import Decimal
@@ -142,12 +143,16 @@ async def main():
     kalshi_client = KalshiWebSocket(KEY_ID, PRIVATE_KEY_PATH, get_asset_ids("Kalshi"), WS_URL)
     
     await asyncio.gather(
-        polymarket_us_client.run(),
+        #polymarket_us_client.run(),
         kalshi_client.orderbook_websocket(),
         scan_inefficiencies(polymarket_us_client, kalshi_client, kalshi_gateway, polymarket_us_gateway)
     )
 
 if __name__ == "__main__":
+    # Only apply this fix on Windows
+    if sys.platform.startswith("win"):
+        asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+        
     setup_logging()
     try:
         asyncio.run(main())
