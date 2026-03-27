@@ -1,0 +1,2 @@
+2026-03-27 19:21:47,043 | INFO | Placing order with data: {'ticker': 'KXNCAABBGAME-26MAR271600ALCAGL-ALC', 'action': 'buy', 'side': 'yes', 'count': 200, 'client_order_id': 'c90786e7-7eed-49bb-843a-eef0d9764fe9', 'yes_price': 1, 'type': 'limit', 'time_in_force': 'fill_or_kill'}
+2026-03-27 19:21:47,043 | INFO | Placing order with data: {'ticker': 'KXNCAABBGAME-26MAR271600ALCAGL-AGL', 'action': 'buy', 'side': 'yes', 'count': 200, 'client_order_id': 'e512f0af-b4f2-4c7b-a8d7-a21d415d70d4', 'yes_price': 97, 'type': 'limit', 'time_in_force': 'fill_or_kill'}

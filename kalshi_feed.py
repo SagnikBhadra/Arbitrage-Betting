@@ -23,6 +23,8 @@ KEY_ID = load_kalshi_key_id()
 PRIVATE_KEY_PATH = "Kalshi.key"
 WS_URL = "wss://api.elections.kalshi.com/trade-api/ws/v2"
 
+NUM_CONSUMERS = 4
+
 class OrderbookDeltaLogger:
     def __init__(self, logger):
         self.logger = logger
@@ -92,6 +94,7 @@ class KalshiWebSocket:
         
         # Async queue to queue tasks
         self.message_queue = asyncio.Queue()
+        self.lock = asyncio.Lock()
 
     def sign_pss_text(self, private_key, text: str) -> str:
         """Sign message using RSA-PSS"""
@@ -210,59 +213,61 @@ class KalshiWebSocket:
     async def process_messages(self):
         while True:
             message = await self.message_queue.get()
-            data = json.loads(message)
-            msg_type = data.get("type")
-            msg_content = data["msg"]
+            async with self.lock:
+                data = json.loads(message)
+                msg_type = data.get("type")
+                msg_content = data["msg"]
 
-            if msg_type == "subscribed":
-                self.logger.info(f"Subscribed: {data}")
-                self.subscribed = True
+                if msg_type == "subscribed":
+                    self.logger.info(f"Subscribed: {data}")
+                    self.subscribed = True
 
-            elif msg_type == "orderbook_snapshot":
-                self.market_data.persist_orderbook_snapshot_event_kalshi(msg_content)
-                self.handle_snapshot(msg_content)
+                elif msg_type == "orderbook_snapshot":
+                    self.market_data.persist_orderbook_snapshot_event_kalshi(msg_content)
+                    self.handle_snapshot(msg_content)
 
-            elif msg_type == "orderbook_delta":
-                if 'client_order_id' in data.get('data', {}):
-                    continue
-                
-                market = msg_content["market_ticker"]
+                elif msg_type == "orderbook_delta":
+                    if 'client_order_id' in data.get('data', {}):
+                        continue
+                    
+                    market = msg_content["market_ticker"]
 
-                # send to async logger (non-blocking)
-                self.delta_logger.queue.put_nowait((market, msg_content))
+                    # send to async logger (non-blocking)
+                    self.delta_logger.queue.put_nowait((market, msg_content))
 
-                # buffer if snapshot not ready
-                if market not in self.snapshot_loaded:
-                    self.delta_buffer[market].append(msg_content)
-                    continue
+                    # buffer if snapshot not ready
+                    if market not in self.snapshot_loaded:
+                        self.delta_buffer[market].append(msg_content)
+                        continue
 
-                # process normally
-                self._apply_delta(msg_content)
+                    # process normally
+                    self._apply_delta(msg_content)
 
-            elif msg_type == "trade":
-                self.handle_trade(msg_content)
-                best_bid, best_ask = self.get_top_of_book(msg_content["market_ticker"])
-                self.market_data.persist_trade_event_kalshi(
-                    msg_content,
-                    best_bid=best_bid,
-                    best_ask=best_ask
-                )
+                elif msg_type == "trade":
+                    self.handle_trade(msg_content)
+                    best_bid, best_ask = self.get_top_of_book(msg_content["market_ticker"])
+                    self.market_data.persist_trade_event_kalshi(
+                        msg_content,
+                        best_bid=best_bid,
+                        best_ask=best_ask
+                    )
 
-            elif msg_type == "ticker":
-                pass
+                elif msg_type == "ticker":
+                    pass
 
-            elif msg_type == "market_state":
-                pass
+                elif msg_type == "market_state":
+                    pass
 
-            elif msg_type == "error":
-                self.logger.error(f"Error: {data}")
+                elif msg_type == "error":
+                    self.logger.error(f"Error: {data}")
 
     async def orderbook_websocket(self):
         """Connect to WebSocket and subscribe to orderbook with auto-reconnect."""
         # Create logger background process
         asyncio.create_task(self.delta_logger.run())
         # Create process manages task
-        asyncio.create_task(self.process_messages())
+        for _ in range(NUM_CONSUMERS):  # e.g., NUM_CONSUMERS = 4
+            asyncio.create_task(self.process_messages())
         while True:
             try:
                 # Load private key
