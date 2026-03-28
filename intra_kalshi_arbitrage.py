@@ -304,8 +304,8 @@ class IntraKalshiArbitrage:
                                     self.logger.error(f"Failed to place order B: {e}")
                                     continue
                                 
-                        self.sell_out_of_position_arb(ticker, best_bid, best_bid_size, best_ask, best_ask_size,
-                                                        correlated_ticker, correlated_best_bid, correlated_best_bid_size, correlated_best_ask, correlated_best_ask_size)
+                        #self.sell_out_of_position_arb(ticker, best_bid, best_bid_size, best_ask, best_ask_size,
+                        #                                correlated_ticker, correlated_best_bid, correlated_best_bid_size, correlated_best_ask, correlated_best_ask_size)
 
                     #self.logger.info(f"Overall Orders Placed: {self.overall_order_count}, Overall Potential Profit: ${self.overall_profit:.2f}, Balance: ${self.cached_balance:.2f}")
                         
