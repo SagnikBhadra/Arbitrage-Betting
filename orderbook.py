@@ -2,6 +2,7 @@ from collections import defaultdict
 from decimal import Decimal
 import logging
 from sortedcontainers import SortedDict
+from threading import Lock
 
 class OrderBook:
     def __init__(self, asset_id):
@@ -14,45 +15,51 @@ class OrderBook:
         # SortedDict in ascending order
         self.bids = SortedDict()
         self.asks = SortedDict()
+        self.lock = Lock()
         
     def update_order_book(self, side, price, size):
-        book_side = self.bids if side == 0 else self.asks
-        if size <= 0 and price in book_side:
-            del book_side[price]
-        else:
-            book_side[price] = size
+        with self.lock:
+            book_side = self.bids if side == 0 else self.asks
+            if size <= 0 and price in book_side:
+                del book_side[price]
+            else:
+                book_side[price] = size
 
     def apply_delta(self, side, price, delta):
         """Atomic read-modify-write: add *delta* to current size at *price*.
 
         Safe without a lock because only the event-loop thread calls this.
         """
-        book_side = self.bids if side == 0 else self.asks
-        new_size = book_side.get(price, 0) + delta
-        if new_size <= 0 and price in book_side:
-            del book_side[price]
-        else:
-            book_side[price] = new_size
+        with self.lock:
+            book_side = self.bids if side == 0 else self.asks
+            new_size = book_side.get(price, 0) + delta
+            if new_size <= 0 and price in book_side:
+                del book_side[price]
+            else:
+                book_side[price] = new_size
             
     def get_size_at_price(self, side, price):
-        book = self.bids if side == 0 else self.asks
-        return book[price] if price in book else 0
+        with self.lock:
+            book = self.bids if side == 0 else self.asks
+            return book[price] if price in book else 0
             
     def get_best_bid(self):
-        if not self.bids:
-            return None, None
-        
-        price = self.bids.peekitem(-1)[0]
-        size = self.bids.peekitem(-1)[1]
-        
+        with self.lock:
+            if not self.bids:
+                return None, None
+            
+            price = self.bids.peekitem(-1)[0]
+            size = self.bids.peekitem(-1)[1]
+            
         return price, size
     
     def get_best_ask(self):
-        if not self.asks:
-            return None, None
-        
-        price = self.asks.peekitem(0)[0]
-        size = self.asks.peekitem(0)[1]
+        with self.lock:
+            if not self.asks:
+                return None, None
+            
+            price = self.asks.peekitem(0)[0]
+            size = self.asks.peekitem(0)[1]
         
         return price, size
 
@@ -61,8 +68,9 @@ class OrderBook:
 
         Called on the event loop, consumed by the worker thread.
         """
-        bb_price, bb_size = (self.bids.peekitem(-1) if self.bids else (None, None))
-        ba_price, ba_size = (self.asks.peekitem(0) if self.asks else (None, None))
+        with self.lock:
+            bb_price, bb_size = (self.bids.peekitem(-1) if self.bids else (None, None))
+            ba_price, ba_size = (self.asks.peekitem(0) if self.asks else (None, None))
         return (bb_price, bb_size, ba_price, ba_size)
     
     def __repr__(self):
