@@ -167,6 +167,7 @@ class IntraKalshiArbitrage:
                                 continue
                             """
                             # Calculate order size
+                            #print(f"Best Ask: {best_ask_size}, Correlated Best Ask: {correlated_best_ask_size}")
                             order_size = int(min(float(best_ask_size), float(correlated_best_ask_size)))
                             
                             # Calculate required balance (cost of both orders)
@@ -174,6 +175,9 @@ class IntraKalshiArbitrage:
                             required_balance = Decimal(cost_of_single_share * order_size)
                             
                             # Check balance before placing orders
+                            if self.cached_balance < 0:
+                                self.logger.warning(f"Negative balance detected: ${self.cached_balance:.2f}. Skipping trade.")
+                                continue
                             if not self.cached_balance > required_balance:
                                 #self.logger.warning(f"Insufficient balance. Required: ${required_balance:.2f}, Available: ${self.cached_balance:.2f}")
                                 order_size = math.floor(Decimal(str(self.cached_balance)) / cost_of_single_share)
@@ -245,6 +249,7 @@ class IntraKalshiArbitrage:
                             best_correlated_no_ask = Decimal("1.0") - Decimal(str(correlated_best_bid))
                             
                             # Calculate order size
+                            #print(f"Best NO Ask: {best_bid_size}, Correlated Best NO Ask: {correlated_best_bid_size}")
                             order_size = int(min(float(best_bid_size), float(correlated_best_bid_size)))
                             
                             # Calculate required balance (cost of both orders)
@@ -252,6 +257,9 @@ class IntraKalshiArbitrage:
                             required_balance = Decimal(cost_of_single_share * order_size)
                             
                             # Check balance before placing orders
+                            if self.cached_balance < 0:
+                                self.logger.warning(f"Negative balance detected: ${self.cached_balance:.2f}. Skipping trade.")
+                                continue
                             if not self.cached_balance > required_balance:
                                 #self.logger.warning(f"Insufficient balance. Required: ${required_balance:.2f}, Available: ${self.cached_balance:.2f}")
                                 order_size = math.floor(Decimal(str(self.cached_balance)) / cost_of_single_share)
