@@ -1,6 +1,7 @@
 import json
 import time
 import base64
+from collections import defaultdict
 import requests
 from typing import Dict, List
 from cryptography.hazmat.primitives.asymmetric import ed25519
@@ -126,18 +127,21 @@ def save_all_events():
 
 def build_event_to_market_mapping():
     """
-    Reads all_polymarket_us_events.json and creates:
-
-    event.slug -> [market.slug, market.slug]
+    category -> series -> event -> metadata
     """
+    mapping = defaultdict(lambda: defaultdict(dict))
 
     with open(EVENTS_FILE, "r") as f:
         events = json.load(f)
 
-    mapping: Dict[str, List[str]] = {}
-
     for event in events:
+        category = event.get("category", {})
+        series = event.get("seriesSlug", {})
         event_slug = event.get("slug")
+        
+        
+        title = event.get("title", "").lower()
+        subtitle = event.get("subtitle", "").lower()
 
         if not event_slug:
             continue
@@ -150,7 +154,11 @@ def build_event_to_market_mapping():
                 market_slugs.append(slug)
 
         if market_slugs:
-            mapping[event_slug] = market_slugs
+            mapping[category][series][event_slug] = {
+                "title": title,
+                "subtitle": subtitle,
+                "market_slugs": market_slugs
+            }
 
     with open(EVENT_MARKET_MAPPING_FILE, "w") as f:
         json.dump(mapping, f, indent=4)

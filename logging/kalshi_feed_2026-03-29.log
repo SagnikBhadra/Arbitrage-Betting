@@ -9179,3 +9179,107 @@
 2026-04-03 14:23:03,262 | INFO | ----- LATEST ORDERBOOK DELTAS (last 30s) -----
 2026-04-03 14:23:03,262 | INFO | KXPGAH2H-MAST26SSCHRMCI-RMCI | side=yes | price=0.2700 | delta=6.00 | timestamp=2026-04-03T18:22:46.606248Z
 2026-04-03 14:23:03,262 | INFO | ------------------------------------------------
+2026-04-03 14:24:03,282 | INFO | ----- LATEST ORDERBOOK DELTAS (last 30s) -----
+2026-04-03 14:24:03,282 | INFO | KXPGAH2H-MAST26JRAHBDEC-JRAH | side=no | price=0.0600 | delta=3344.00 | timestamp=2026-04-03T18:23:58.523136Z
+2026-04-03 14:24:03,282 | INFO | KXPGAH2H-MAST26JRAHBDEC-BDEC | side=yes | price=0.4200 | delta=-12.00 | timestamp=2026-04-03T18:23:59.163078Z
+2026-04-03 14:24:03,282 | INFO | KXPGAH2H-MAST26SSCHRMCI-SSCH | side=no | price=0.0800 | delta=1253.00 | timestamp=2026-04-03T18:23:58.845859Z
+2026-04-03 14:24:03,282 | INFO | KXPGAH2H-MAST26SSCHRMCI-RMCI | side=no | price=0.0800 | delta=3750.00 | timestamp=2026-04-03T18:23:59.001928Z
+2026-04-03 14:24:03,282 | INFO | ------------------------------------------------
+2026-04-03 14:24:33,282 | INFO | ----- LATEST ORDERBOOK DELTAS (last 30s) -----
+2026-04-03 14:24:33,282 | INFO | KXPGAH2H-MAST26SSCHRMCI-RMCI | side=yes | price=0.2600 | delta=-21.00 | timestamp=2026-04-03T18:24:22.380096Z
+2026-04-03 14:24:33,282 | INFO | ------------------------------------------------
+2026-04-03 14:25:03,290 | INFO | ----- LATEST ORDERBOOK DELTAS (last 30s) -----
+2026-04-03 14:25:03,290 | INFO | KXBOXING-26APR11TFURAMAK-AMAK | side=yes | price=0.1900 | delta=23.00 | timestamp=2026-04-03T18:24:54.758456Z
+2026-04-03 14:25:03,290 | INFO | ------------------------------------------------
+2026-04-03 14:25:33,297 | INFO | ----- LATEST ORDERBOOK DELTAS (last 30s) -----
+2026-04-03 14:25:33,298 | INFO | KXPGAH2H-MAST26JRAHBDEC-BDEC | side=no | price=0.5600 | delta=19.00 | timestamp=2026-04-03T18:25:16.735912Z
+2026-04-03 14:25:33,298 | INFO | ------------------------------------------------
+2026-04-03 14:27:33,332 | INFO | ----- LATEST ORDERBOOK DELTAS (last 30s) -----
+2026-04-03 14:27:33,332 | INFO | KXPGAH2H-MAST26JRAHBDEC-BDEC | side=yes | price=0.4300 | delta=-34.00 | timestamp=2026-04-03T18:27:31.030512Z
+2026-04-03 14:27:33,332 | INFO | ------------------------------------------------
+2026-04-03 14:28:03,347 | INFO | ----- LATEST ORDERBOOK DELTAS (last 30s) -----
+2026-04-03 14:28:03,347 | INFO | KXBOXING-26APR11TFURAMAK-AMAK | side=yes | price=0.2000 | delta=23.00 | timestamp=2026-04-03T18:27:45.671274Z
+2026-04-03 14:28:03,347 | INFO | ------------------------------------------------
+2026-04-03 14:28:33,364 | INFO | ----- LATEST ORDERBOOK DELTAS (last 30s) -----
+2026-04-03 14:28:33,364 | INFO | KXPGAH2H-MAST26SSCHRMCI-RMCI | side=yes | price=0.2700 | delta=21.00 | timestamp=2026-04-03T18:28:19.063833Z
+2026-04-03 14:28:33,364 | INFO | ------------------------------------------------
+2026-04-03 14:29:03,373 | INFO | ----- LATEST ORDERBOOK DELTAS (last 30s) -----
+2026-04-03 14:29:03,373 | INFO | KXBOXING-26APR11TFURAMAK-AMAK | side=yes | price=0.1900 | delta=-199.00 | timestamp=2026-04-03T18:29:01.351678Z
+2026-04-03 14:29:03,373 | INFO | KXPGAH2H-MAST26SSCHRMCI-RMCI | side=no | price=0.6500 | delta=-6.00 | timestamp=2026-04-03T18:28:58.089358Z
+2026-04-03 14:29:03,373 | INFO | ------------------------------------------------
+2026-04-03 14:29:33,368 | INFO | ----- LATEST ORDERBOOK DELTAS (last 30s) -----
+2026-04-03 14:29:33,369 | INFO | KXBOXING-26APR11TFURAMAK-AMAK | side=yes | price=0.1000 | delta=9.00 | timestamp=2026-04-03T18:29:14.26646Z
+2026-04-03 14:29:33,369 | INFO | ------------------------------------------------
+2026-04-03 14:30:03,379 | INFO | ----- LATEST ORDERBOOK DELTAS (last 30s) -----
+2026-04-03 14:30:03,379 | INFO | KXBOXING-26APR11TFURAMAK-AMAK | side=no | price=0.0100 | delta=-5.00 | timestamp=2026-04-03T18:29:43.000057Z
+2026-04-03 14:30:03,379 | INFO | KXBOXING-26APR11TFURAMAK-TFUR | side=no | price=0.0100 | delta=5.00 | timestamp=2026-04-03T18:29:55.225119Z
+2026-04-03 14:30:03,379 | INFO | ------------------------------------------------
+2026-04-03 14:30:33,401 | INFO | ----- LATEST ORDERBOOK DELTAS (last 30s) -----
+2026-04-03 14:30:33,401 | INFO | KXBOXING-26APR11TFURAMAK-TFUR | side=no | price=0.0100 | delta=-5.00 | timestamp=2026-04-03T18:30:24.000199Z
+2026-04-03 14:30:33,401 | INFO | KXBOXING-26APR11TFURAMAK-AMAK | side=yes | price=0.1800 | delta=5.00 | timestamp=2026-04-03T18:30:25.10543Z
+2026-04-03 14:30:33,401 | INFO | ------------------------------------------------
+2026-04-03 14:31:03,400 | INFO | ----- LATEST ORDERBOOK DELTAS (last 30s) -----
+2026-04-03 14:31:03,400 | INFO | KXBOXING-26APR11TFURAMAK-AMAK | side=no | price=0.7800 | delta=-8.00 | timestamp=2026-04-03T18:30:34.762426Z
+2026-04-03 14:31:03,400 | INFO | ------------------------------------------------
+2026-04-03 14:32:33,411 | INFO | ----- LATEST ORDERBOOK DELTAS (last 30s) -----
+2026-04-03 14:32:33,411 | INFO | KXPGAH2H-MAST26SSCHRMCI-RMCI | side=yes | price=0.2700 | delta=-21.00 | timestamp=2026-04-03T18:32:17.549418Z
+2026-04-03 14:32:33,411 | INFO | ------------------------------------------------
+2026-04-03 14:33:33,428 | INFO | ----- LATEST ORDERBOOK DELTAS (last 30s) -----
+2026-04-03 14:33:33,428 | INFO | KXBOXING-26APR11TFURAMAK-AMAK | side=no | price=0.7900 | delta=6.00 | timestamp=2026-04-03T18:33:08.926553Z
+2026-04-03 14:33:33,428 | INFO | ------------------------------------------------
+2026-04-03 14:34:33,445 | INFO | ----- LATEST ORDERBOOK DELTAS (last 30s) -----
+2026-04-03 14:34:33,445 | INFO | KXBOXING-26APR11TFURAMAK-TFUR | side=no | price=0.0400 | delta=1254.00 | timestamp=2026-04-03T18:34:17.222191Z
+2026-04-03 14:34:33,445 | INFO | KXBOXING-26APR11TFURAMAK-AMAK | side=no | price=0.2100 | delta=1763.00 | timestamp=2026-04-03T18:34:17.378881Z
+2026-04-03 14:34:33,445 | INFO | ------------------------------------------------
+2026-04-03 14:36:03,455 | INFO | ----- LATEST ORDERBOOK DELTAS (last 30s) -----
+2026-04-03 14:36:03,456 | INFO | KXBOXING-26APR11TFURAMAK-AMAK | side=no | price=0.7800 | delta=6.00 | timestamp=2026-04-03T18:35:49.105802Z
+2026-04-03 14:36:03,456 | INFO | ------------------------------------------------
+2026-04-03 14:36:33,471 | INFO | ----- LATEST ORDERBOOK DELTAS (last 30s) -----
+2026-04-03 14:36:33,471 | INFO | KXPGAH2H-MAST26SSCHRMCI-RMCI | side=no | price=0.0900 | delta=73.00 | timestamp=2026-04-03T18:36:09.166585Z
+2026-04-03 14:36:33,471 | INFO | ------------------------------------------------
+2026-04-03 14:37:03,485 | INFO | ----- LATEST ORDERBOOK DELTAS (last 30s) -----
+2026-04-03 14:37:03,485 | INFO | KXBOXING-26APR11TFURAMAK-AMAK | side=yes | price=0.1900 | delta=22.00 | timestamp=2026-04-03T18:36:40.387755Z
+2026-04-03 14:37:03,485 | INFO | ------------------------------------------------
+2026-04-03 14:37:33,483 | INFO | ----- LATEST ORDERBOOK DELTAS (last 30s) -----
+2026-04-03 14:37:33,483 | INFO | KXPGAH2H-MAST26JRAHBDEC-JRAH | side=no | price=0.0700 | delta=156.00 | timestamp=2026-04-03T18:37:20.108654Z
+2026-04-03 14:37:33,483 | INFO | KXBOXING-26APR11TFURAMAK-AMAK | side=no | price=0.7800 | delta=-9.00 | timestamp=2026-04-03T18:37:23.677945Z
+2026-04-03 14:37:33,483 | INFO | ------------------------------------------------
+2026-04-03 14:38:33,489 | INFO | ----- LATEST ORDERBOOK DELTAS (last 30s) -----
+2026-04-03 14:38:33,489 | INFO | KXBOXING-26APR11TFURAMAK-AMAK | side=yes | price=0.1900 | delta=5.00 | timestamp=2026-04-03T18:38:32.524793Z
+2026-04-03 14:38:33,489 | INFO | ------------------------------------------------
+2026-04-03 14:39:03,510 | INFO | ----- LATEST ORDERBOOK DELTAS (last 30s) -----
+2026-04-03 14:39:03,510 | INFO | KXPGAH2H-MAST26SSCHRMCI-RMCI | side=yes | price=0.2700 | delta=6.00 | timestamp=2026-04-03T18:39:01.765328Z
+2026-04-03 14:39:03,510 | INFO | ------------------------------------------------
+2026-04-03 14:40:33,517 | INFO | ----- LATEST ORDERBOOK DELTAS (last 30s) -----
+2026-04-03 14:40:33,518 | INFO | KXPGAH2H-MAST26SSCHRMCI-RMCI | side=yes | price=0.2600 | delta=-21.00 | timestamp=2026-04-03T18:40:03.358214Z
+2026-04-03 14:40:33,518 | INFO | ------------------------------------------------
+2026-04-03 14:41:33,541 | INFO | ----- LATEST ORDERBOOK DELTAS (last 30s) -----
+2026-04-03 14:41:33,541 | INFO | KXBOXING-26APR11TFURAMAK-AMAK | side=no | price=0.7800 | delta=6.00 | timestamp=2026-04-03T18:41:19.321844Z
+2026-04-03 14:41:33,542 | INFO | ------------------------------------------------
+2026-04-03 14:42:03,549 | INFO | ----- LATEST ORDERBOOK DELTAS (last 30s) -----
+2026-04-03 14:42:03,549 | INFO | KXBOXING-26APR11TFURAMAK-TFUR | side=no | price=0.1900 | delta=7.00 | timestamp=2026-04-03T18:41:55.652952Z
+2026-04-03 14:42:03,549 | INFO | KXPGAH2H-MAST26JRAHBDEC-BDEC | side=yes | price=0.2100 | delta=173.00 | timestamp=2026-04-03T18:41:57.660584Z
+2026-04-03 14:42:03,549 | INFO | KXBOXING-26APR11TFURAMAK-AMAK | side=no | price=0.5200 | delta=326.00 | timestamp=2026-04-03T18:42:00.039959Z
+2026-04-03 14:42:03,549 | INFO | ------------------------------------------------
+2026-04-03 14:42:33,567 | INFO | ----- LATEST ORDERBOOK DELTAS (last 30s) -----
+2026-04-03 14:42:33,568 | INFO | KXBOXING-26APR11TFURAMAK-TFUR | side=no | price=0.0100 | delta=-5.00 | timestamp=2026-04-03T18:42:10.000766Z
+2026-04-03 14:42:33,568 | INFO | KXBOXING-26APR11TFURAMAK-AMAK | side=no | price=0.7800 | delta=9.00 | timestamp=2026-04-03T18:42:13.497696Z
+2026-04-03 14:42:33,568 | INFO | KXPGAH2H-MAST26SSCHRMCI-RMCI | side=no | price=0.0300 | delta=67.00 | timestamp=2026-04-03T18:42:22.394903Z
+2026-04-03 14:42:33,568 | INFO | KXPGAH2H-MAST26JRAHBDEC-JRAH | side=no | price=0.4400 | delta=-16.00 | timestamp=2026-04-03T18:42:24.306618Z
+2026-04-03 14:42:33,568 | INFO | ------------------------------------------------
+2026-04-03 14:43:03,573 | INFO | ----- LATEST ORDERBOOK DELTAS (last 30s) -----
+2026-04-03 14:43:03,573 | INFO | KXPGAH2H-MAST26SSCHRMCI-SSCH | side=yes | price=0.1300 | delta=44.00 | timestamp=2026-04-03T18:42:36.240181Z
+2026-04-03 14:43:03,573 | INFO | KXBOXING-26APR11TFURAMAK-TFUR | side=no | price=0.1900 | delta=-10.00 | timestamp=2026-04-03T18:43:01.741024Z
+2026-04-03 14:43:03,573 | INFO | KXPGAH2H-MAST26JRAHBDEC-JRAH | side=yes | price=0.5500 | delta=16.00 | timestamp=2026-04-03T18:43:00.742397Z
+2026-04-03 14:43:03,573 | INFO | ------------------------------------------------
+2026-04-03 14:43:33,579 | INFO | ----- LATEST ORDERBOOK DELTAS (last 30s) -----
+2026-04-03 14:43:33,579 | INFO | KXBOXING-26APR11TFURAMAK-TFUR | side=yes | price=0.7800 | delta=-22.00 | timestamp=2026-04-03T18:43:09.279471Z
+2026-04-03 14:43:33,580 | INFO | KXPGAH2H-MAST26JRAHBDEC-BDEC | side=no | price=0.5600 | delta=76.00 | timestamp=2026-04-03T18:43:31.368172Z
+2026-04-03 14:43:33,580 | INFO | ------------------------------------------------
+2026-04-03 14:44:03,585 | INFO | ----- LATEST ORDERBOOK DELTAS (last 30s) -----
+2026-04-03 14:44:03,585 | INFO | KXBOXING-26APR11TFURAMAK-AMAK | side=yes | price=0.1900 | delta=5.00 | timestamp=2026-04-03T18:44:02.20727Z
+2026-04-03 14:44:03,585 | INFO | KXPGAH2H-MAST26SSCHRMCI-RMCI | side=no | price=0.6400 | delta=146.00 | timestamp=2026-04-03T18:43:54.509901Z
+2026-04-03 14:44:03,585 | INFO | ------------------------------------------------
+2026-04-03 14:44:33,597 | INFO | ----- LATEST ORDERBOOK DELTAS (last 30s) -----
+2026-04-03 14:44:33,597 | INFO | KXBOXING-26APR11TFURAMAK-AMAK | side=yes | price=0.0100 | delta=-5.00 | timestamp=2026-04-03T18:44:12.002102Z
+2026-04-03 14:44:33,599 | INFO | ------------------------------------------------
