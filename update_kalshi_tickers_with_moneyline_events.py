@@ -1,3 +1,4 @@
+from collections import defaultdict
 from datetime import datetime, timedelta, timezone
 import json
 
@@ -11,7 +12,7 @@ def get_min_max_close_time():
     max_close_ts = now + timedelta(days=MAX_CLOSE_TS)
     return min_close_ts, max_close_ts
 
-def update_statics_with_kalshi_events(events_path, statics_path):
+def update_statics_with_kalshi_events(events_path, statics_path, event_to_market_mapping_path):
     # Load events
     with open(events_path, "r") as f:
         events = json.load(f)
@@ -23,6 +24,7 @@ def update_statics_with_kalshi_events(events_path, statics_path):
     # Prepare Kalshi mapping and correlated mapping
     kalshi_mapping = {}
     correlated_mapping = {}
+    mapping = defaultdict(lambda: defaultdict(dict))
     
     min_time, max_time = get_min_max_close_time()
     print(f"Min Close Time: {min_time}")
@@ -47,6 +49,30 @@ def update_statics_with_kalshi_events(events_path, statics_path):
             # Store correlated tickers
             correlated_mapping[tickers[0]] = [tickers[1]]
             correlated_mapping[tickers[1]] = [tickers[0]]
+            
+        # Load event -> market mapping
+        category = event["event"].get("category", {})
+        series = event["event"].get("series_ticker", {})
+        event_ticker = event["event"].get("event_ticker", "")
+        title = event["event"].get("title", "").lower()
+        subtitle = event["event"].get("sub_title", "").lower()
+
+        if not event_ticker:
+            continue
+
+        market_slugs = []
+
+        for market in event["markets"]:
+            slug = market.get("ticker")
+            if slug:
+                market_slugs.append(slug)
+
+        if market_slugs:
+            mapping[category][series][event_ticker] = {
+                "title": title,
+                "subtitle": subtitle,
+                "market_slugs": market_slugs
+            }
 
     # Update statics
     statics["ASSET_ID_MAPPING"]["Kalshi"] = kalshi_mapping
@@ -55,6 +81,11 @@ def update_statics_with_kalshi_events(events_path, statics_path):
     # Write back to statics.json
     with open(statics_path, "w") as f:
         json.dump(statics, f, indent=4)
+        
+    with open(event_to_market_mapping_path, "w") as f:
+        json.dump(mapping, f, indent=4)
+
+    print(f"Saved mapping to {event_to_market_mapping_path}")
 
 # Example usage:
-update_statics_with_kalshi_events("statics/two_market_events.json", "statics/statics.json")
+update_statics_with_kalshi_events("statics/two_market_events.json", "statics/statics.json", "statics/kalshi_event_to_market_mapping.json")
