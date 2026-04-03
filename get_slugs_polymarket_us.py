@@ -1,43 +1,38 @@
-import time, base64, requests
 import json
-from datetime import datetime, timedelta, date
+import time
+import base64
+import requests
+from typing import Dict, List
 from cryptography.hazmat.primitives.asymmetric import ed25519
 
-# NBA slug: aec-nba
-# College Basketball slug: aec-cbb
-# UFC slug: aec-ufc
-# NHL slug: aec-nhl
-# MLS slug: atc-mls
+# ================================
+# CONFIG
+# ================================
 
-# Your credentials
+BASE_URL = "https://gateway.polymarket.us"
+EVENTS_FILE = "statics/all_polymarket_us_events.json"
+EVENT_MARKET_MAPPING_FILE = "statics/polymarket_us_event_to_market_mapping.json"
+
+PAGE_LIMIT = 200
+MAX_RETRIES = 5
+INITIAL_BACKOFF = 1
+
+
+# ================================
+# AUTH
+# ================================
+
 with open("polymarket.key", "r") as f:
     private_key_base64 = f.read().strip()
+
 api_key_id = "8f004f3b-4858-4401-a979-ca189946cde1"
 
-def get_start_end_of_day_timestamps():
-    # Get today's date
-    today = datetime.today() + timedelta(days=1)  # UTC time
-
-    # Start of day (00:00:00 UTC)
-    start_of_day = today.replace(hour=0, minute=0, second=0, microsecond=0).strftime("%Y-%m-%dT%H:%M:%SZ")
-
-    # End of day (23:59:59 UTC)
-    end_of_day = today.replace(hour=23, minute=59, second=59, microsecond=0).strftime("%Y-%m-%dT%H:%M:%SZ")
-
-    print("Start of day:", start_of_day)
-    print("End of day:", end_of_day)
-    
-    return start_of_day, end_of_day
-
-# API documentation: https://docs.polymarket.com/#authentication
-
-# Load private key (first 32 bytes are the seed)
 private_key = ed25519.Ed25519PrivateKey.from_private_bytes(
     base64.b64decode(private_key_base64)[:32]
 )
 
-def sign_request(method, path):
-    "Generate authentication headers for api.polymarket.us"
+
+def sign_request(method: str, path: str):
     timestamp = str(int(time.time() * 1000))
     message = f"{timestamp}{method}{path}"
     signature = base64.b64encode(private_key.sign(message.encode())).decode()
@@ -46,44 +41,140 @@ def sign_request(method, path):
         "X-PM-Access-Key": api_key_id,
         "X-PM-Timestamp": timestamp,
         "X-PM-Signature": signature,
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
     }
 
-def load_slugs_to_static_file(slugs):
-    # Load statics.json
-    statics_path = "statics/statics.json"
-    with open(statics_path, "r") as f:
-        statics = json.load(f)
-        
-    # Update Polymarket_US mapping
-    polymarket_us_mapping = {slug: slug for slug in slugs}
-    statics["ASSET_ID_MAPPING"]["Polymarket_US"] = polymarket_us_mapping
-            
-    with open(statics_path, "w") as f:
-        json.dump(statics, f, indent=4)
 
-# Example GET request
-path = "/v1/markets"
-# GET /v1/events?active=true&categories=sports&eventDate=2026-02-13&ended=false&live=false
-start_of_day, end_of_day = get_start_end_of_day_timestamps()
-# Only getting 200 markets for testing purposes, need to implement pagination to get all markets
-# Should add the following filter on paylod:  'endDateMin': start_of_day, 'endDateMax': end_of_day,
-payload = {'categories': 'sports', 'limit': 1000,'active': True, 'closed': False, 'archived': False}
-#payload = {'active': True, 'closed': False, 'archived': False}
-headers = sign_request("GET", path)
-response = requests.get(f"https://api.polymarket.us{path}", headers=headers, params=payload).json()
-#print(response)
+# ================================
+# FETCH ALL EVENTS
+# ================================
 
-#response = dict(response)
-# Markets
-slugs = []
-today = date.today()
-required_date = today + timedelta(days=3)
-formatted_date = required_date.isoformat()
+def fetch_all_events() -> List[dict]:
+    """
+    Fetch all Polymarket US events with pagination + retry logic
+    """
+    all_events = []
+    cursor = None
 
-for market in response["markets"]:
-    if "aec-ufc" in market["slug"] and formatted_date in market["slug"]:
-        print(f"Market ID: {market['id']}, Name: {market['question']}, Slug: {market['slug']}, End Date: {market['endDate']}")
-        slugs.append(market['slug'])
+    while True:
+        path = "/v1/events"
+        params = {
+            "limit": PAGE_LIMIT,
+            "active": True,
+            "closed": False,
+            "archived": False,
+        }
 
-load_slugs_to_static_file(slugs)
+        if cursor:
+            params["cursor"] = cursor
+
+        retries = 0
+        backoff = INITIAL_BACKOFF
+
+        while retries < MAX_RETRIES:
+            try:
+                print(f"Fetching events... (cursor={cursor})")
+
+                response = requests.get(
+                    f"{BASE_URL}{path}",
+                    headers=sign_request("GET", path),
+                    params=params,
+                    timeout=10,
+                )
+
+                response.raise_for_status()
+                data = response.json()
+                break
+
+            except requests.exceptions.RequestException as e:
+                retries += 1
+                print(f"Error: {e} — retrying in {backoff}s ({retries}/{MAX_RETRIES})")
+                time.sleep(backoff)
+                backoff *= 2
+        else:
+            print("Max retries reached. Stopping.")
+            return all_events
+
+        events = data.get("events", [])
+        all_events.extend(events)
+
+        print(f"Fetched {len(events)} events. Total: {len(all_events)}")
+
+        cursor = data.get("cursor")
+        if not cursor:
+            break
+
+    return all_events
+
+
+# ================================
+# SAVE EVENTS
+# ================================
+
+def save_all_events():
+    events = fetch_all_events()
+
+    with open(EVENTS_FILE, "w") as f:
+        json.dump(events, f, indent=4)
+
+    print(f"\nSaved {len(events)} events to {EVENTS_FILE}")
+
+
+# ================================
+# BUILD EVENT -> MARKET MAPPING
+# ================================
+
+def build_event_to_market_mapping():
+    """
+    Reads all_polymarket_us_events.json and creates:
+
+    event.slug -> [market.slug, market.slug]
+    """
+
+    with open(EVENTS_FILE, "r") as f:
+        events = json.load(f)
+
+    mapping: Dict[str, List[str]] = {}
+
+    for event in events:
+        event_slug = event.get("slug")
+
+        if not event_slug:
+            continue
+
+        market_slugs = []
+
+        for market in event.get("markets", []):
+            slug = market.get("slug")
+            if slug:
+                market_slugs.append(slug)
+
+        if market_slugs:
+            mapping[event_slug] = market_slugs
+
+    with open(EVENT_MARKET_MAPPING_FILE, "w") as f:
+        json.dump(mapping, f, indent=4)
+
+    print(f"Saved mapping to {EVENT_MARKET_MAPPING_FILE}")
+
+
+# ================================
+# MAIN
+# ================================
+
+if __name__ == "__main__":
+    start = time.time()
+
+    print("\n==============================")
+    print("Fetching all Polymarket US events")
+    print("==============================\n")
+
+    save_all_events()
+
+    print("\n==============================")
+    print("Building event -> market mapping")
+    print("==============================\n")
+
+    build_event_to_market_mapping()
+
+    print(f"\nDone in {time.time() - start:.2f} seconds")
