@@ -74,7 +74,7 @@ def fetch_polymarket_politics():
 # ============================================================
 
 LLM_API_URL = "https://api.openai.com/v1/chat/completions"
-LLM_API_KEY = "YOUR_API_KEY_HERE"
+LLM_API_KEY = "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"
 
 def score_pair_llm(k_title: str, p_title: str) -> float:
     prompt = f"""
