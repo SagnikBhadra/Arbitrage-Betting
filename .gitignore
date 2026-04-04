@@ -20,5 +20,8 @@ kalshi_secrets.json
 # Polymarket Private Files
 Polymarket.key
 
+# OpenAI Private Files
+OpenAI.key
+
 #snapshots
 snapshots/
