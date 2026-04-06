@@ -1,0 +1,90 @@
+{
+  "POLYMARKET_KALSHI_MAPPING": {
+    "Moneyline_Events": [
+      {
+        "polymarket_event": "nba-lal-dal-2026-04-05",
+        "kalshi_event": "KXNBAGAME-26APR05LALDAL"
+      },
+      {
+        "polymarket_event": "nba-uta-okc-2026-04-05",
+        "kalshi_event": "KXNBAGAME-26APR05UTAOKC"
+      },
+      {
+        "polymarket_event": "nba-was-bkn-2026-04-05",
+        "kalshi_event": "KXNBAGAME-26APR05WASBKN"
+      },
+      {
+        "polymarket_event": "nba-sa-den-2026-04-04",
+        "kalshi_event": "KXNBAGAME-26APR04SASDEN"
+      },
+      {
+        "polymarket_event": "nba-no-sac-2026-04-03",
+        "kalshi_event": "KXNBAGAME-26APR03NOPSAC"
+      },
+      {
+        "polymarket_event": "nba-orl-dal-2026-04-03",
+        "kalshi_event": "KXNBAGAME-26APR03ORLDAL"
+      },
+      {
+        "polymarket_event": "nba-uta-hou-2026-04-03",
+        "kalshi_event": "KXNBAGAME-26APR03UTAHOU"
+      },
+      {
+        "polymarket_event": "nba-atl-bkn-2026-04-03",
+        "kalshi_event": "KXNBAGAME-26APR03ATLBKN"
+      },
+      {
+        "polymarket_event": "nba-orl-no-2026-04-05",
+        "kalshi_event": "KXNBAGAME-26APR05ORLNOP"
+      },
+      {
+        "polymarket_event": "nba-cha-min-2026-04-05",
+        "kalshi_event": "KXNBAGAME-26APR05CHAMIN"
+      },
+      {
+        "polymarket_event": "nba-ind-cle-2026-04-05",
+        "kalshi_event": "KXNBAGAME-26APR05INDCLE"
+      },
+      {
+        "polymarket_event": "nba-tor-bos-2026-04-05",
+        "kalshi_event": "KXNBAGAME-26APR05TORBOS"
+      },
+      {
+        "polymarket_event": "nba-pho-chi-2026-04-05",
+        "kalshi_event": "KXNBAGAME-26APR05PHXCHI"
+      },
+      {
+        "polymarket_event": "nba-mem-mil-2026-04-05",
+        "kalshi_event": "KXNBAGAME-26APR05MEMMIL"
+      },
+      {
+        "polymarket_event": "nba-det-phi-2026-04-04",
+        "kalshi_event": "KXNBAGAME-26APR04DETPHI"
+      },
+      {
+        "polymarket_event": "nba-was-mia-2026-04-04",
+        "kalshi_event": "KXNBAGAME-26APR04WASMIA"
+      },
+      {
+        "polymarket_event": "nba-tor-mem-2026-04-03",
+        "kalshi_event": "KXNBAGAME-26APR03TORMEM"
+      },
+      {
+        "polymarket_event": "nba-bos-mil-2026-04-03",
+        "kalshi_event": "KXNBAGAME-26APR03BOSMIL"
+      },
+      {
+        "polymarket_event": "nba-chi-ny-2026-04-03",
+        "kalshi_event": "KXNBAGAME-26APR03CHINYK"
+      },
+      {
+        "polymarket_event": "nba-min-phi-2026-04-03",
+        "kalshi_event": "KXNBAGAME-26APR03MINPHI"
+      },
+      {
+        "polymarket_event": "nba-ind-cha-2026-04-03",
+        "kalshi_event": "KXNBAGAME-26APR03INDCHA"
+      }
+    ]
+  }
+}

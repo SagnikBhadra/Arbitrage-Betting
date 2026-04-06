@@ -1,9 +1,11 @@
 import requests
 import difflib
+import os
 import re
 import json
 import time
 from collections import defaultdict
+from groq import Groq
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
@@ -16,11 +18,16 @@ def build_text(categories):
     for category in categories:
         for series_name, series in categories[category].items():
             for event_name, event in series.items():
-                #print(event_name)
+                print(event_name)
                 title = event.get("title", "")
                 subtitle = event.get("subtitle", "")
-                #texts.append(f"{title} {subtitle} {category} {series_name} {event}".lower())
-                texts.append(f"{title} {subtitle}".lower())
+                text_dict = {
+                    "title": f"{title} {subtitle} {category} {series_name} {event_name}".lower(),
+                    "category": category,
+                    "series_name": series_name,
+                    "event_name": event_name
+                }
+                texts.append(text_dict)
     return texts
 
 
@@ -81,12 +88,16 @@ def fetch_kalshi_politics():
 
     kalshi_titles = build_text(kalshi_events)
     subset = []
-    for title in kalshi_titles:
-        #title = m.get("title", "")
-        subset.append({
-            "title": title,
-            "norm": normalize(title),
-        })
+    for text_dict in kalshi_titles:
+        title = text_dict["title"]
+        if "sports" in title and "nba" in title:
+            subset.append({
+                "title": title,
+                "category": text_dict["category"],
+                "series_name": text_dict["series_name"],
+                "event_name": text_dict["event_name"],
+                "norm": normalize(title),
+            })
 
     return subset
 
@@ -101,38 +112,62 @@ def fetch_polymarket_politics():
 
     poly_titles = build_text(poly_events)
     subset = []
-    for title in poly_titles:
-        #title = m.get("title")
-        subset.append({
-            "title": title,
-            "norm": normalize(title),
-        })
-
+    for text_dict in poly_titles:
+        title = text_dict["title"]
+        if "sports" in title and "nba" in title:
+            subset.append({
+                "title": title,
+                "norm": normalize(title),
+                "category": text_dict["category"],
+                "series_name": text_dict["series_name"],
+                "event_name": text_dict["event_name"]
+            })
     return subset
 
 # ============================================================
-# LLM scoring
+# LLM scoring (Groq)
 # ============================================================
 
-LLM_API_URL = "https://api.openai.com/v1/chat/completions"
+#LLM_API_URL = "https://api.groq.com/openai/v1/chat/completions"
 
-# Load API key from file
-with open("OpenAI.key", "r") as f:
+# Load API key
+with open("GROQ.key", "r") as f:
     LLM_API_KEY = f.read().strip()
 
+# ----------------------------
+# Rate Limiter (30 req/min)
+# ----------------------------
+class RateLimiter:
+    def __init__(self, max_requests_per_minute):
+        self.interval = 60.0 / max_requests_per_minute
+        self.last_call = 0.0
+
+    def wait(self):
+        now = time.time()
+        elapsed = now - self.last_call
+        if elapsed < self.interval:
+            time.sleep(self.interval - elapsed)
+        self.last_call = time.time()
+
+rate_limiter = RateLimiter(30)  # 30 requests per minute
+groq_client = Groq(
+    api_key=LLM_API_KEY,
+)
+
 def score_pair_llm(k_title: str, p_title: str, max_retries: int = 3) -> float:
-    """Score a pair with exponential backoff for rate limit handling."""
+    """Score a pair using Groq with rate limiting + retries."""
+
     prompt = f"""
-You are matching prediction markets across two exchanges.
+    You are matching prediction markets across two exchanges.
 
-Market A: "{k_title}"
-Market B: "{p_title}"
+    Market A: "{k_title}"
+    Market B: "{p_title}"
 
-Do these two markets represent the SAME underlying real-world event?
+    Do these two markets represent the SAME underlying real-world event?
 
-Respond ONLY with JSON:
-{{"same_event_probability": <number between 0 and 1>}}
-"""
+    Respond ONLY with JSON:
+   <number between 0 and 1>
+    """
 
     headers = {
         "Authorization": f"Bearer {LLM_API_KEY}",
@@ -140,7 +175,7 @@ Respond ONLY with JSON:
     }
 
     body = {
-        "model": "gpt-4o-mini",
+        "model": "llama-3.3-70b-versatile",  # Groq model
         "messages": [
             {"role": "system", "content": "You are a precise market-matching assistant."},
             {"role": "user", "content": prompt},
@@ -150,33 +185,48 @@ Respond ONLY with JSON:
 
     for attempt in range(max_retries):
         try:
-            resp = requests.post(LLM_API_URL, headers=headers, data=json.dumps(body), timeout=20)
+            # 🔒 Rate limit BEFORE request
+            rate_limiter.wait()
+            print(f"Attempt {attempt}: Market A: {k_title} | Market B: {p_title}")
             
+            resp = groq_client.chat.completions.create(
+                model= "llama-3.3-70b-versatile",  # Groq model
+                messages=[
+                    {"role": "system", "content": "You are a precise market-matching assistant."},
+                    {"role": "user", "content": f"{prompt}"},
+                ],
+                temperature=0.0
+            )
+            #print(resp)
+            print(resp.choices[0].message.content)
+            #resp = resp.choices[0].message.content
+            """
             if resp.status_code == 429:
-                # Respect Retry-After header if provided
                 retry_after = int(resp.headers.get("Retry-After", 2 ** attempt))
-                print(f"Rate limited. Retrying after {retry_after}s (attempt {attempt + 1}/{max_retries})")
+                print(f"Rate limited. Retrying after {retry_after}s")
                 time.sleep(retry_after)
                 continue
-            
-            resp.raise_for_status()
-            content = resp.json()["choices"][0]["message"]["content"]
+            """
+            #resp.raise_for_status()
+            content = resp.choices[0].message.content
 
             try:
-                obj = json.loads(content)
-                return float(obj.get("same_event_probability", 0.0))
-            except Exception:
+                #obj = json.loads(content)
+                #print(obj)
+                return float(content.strip('```\n').strip('\n```'))
+            except Exception as e:
+                print(f"Error parsing LLM response: {e}")
                 return 0.0
-                
+
         except requests.exceptions.RequestException as e:
             if attempt < max_retries - 1:
                 wait_time = 2 ** attempt
                 print(f"Request failed: {e}. Retrying in {wait_time}s...")
                 time.sleep(wait_time)
             else:
-                print(f"Max retries reached. Returning 0.0")
+                print("Max retries reached. Returning 0.0")
                 return 0.0
-    
+
     return 0.0
 
 
@@ -184,7 +234,7 @@ Respond ONLY with JSON:
 # Correlate
 # ============================================================
 
-def correlate_small(kalshi, poly, cheap_threshold=0.45, llm_threshold=0.75):
+def correlate_small(kalshi, poly, cheap_threshold=0.45, llm_threshold=0.9):
     candidates = []
 
     for k in kalshi:
@@ -198,10 +248,30 @@ def correlate_small(kalshi, poly, cheap_threshold=0.45, llm_threshold=0.75):
         llm_score = score_pair_llm(k["title"], p["title"])
         if llm_score >= llm_threshold:
             results.append((llm_score, cheap_score, k, p))
+            continue
         time.sleep(0.5)  # Increased from 0.2s to 0.5s between calls
 
+    print(results)
     results.sort(key=lambda x: -x[0])
     return results
+
+def save_cross_exchange_mappings(matches, output_path="statics/cross_exchange_statics.json"):
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+
+    payload = {
+        "POLYMARKET_KALSHI_MAPPING": {
+            "Moneyline_Events": [
+                {
+                    "polymarket_event": p["event_name"],
+                    "kalshi_event": k["event_name"],
+                }
+                for _, _, k, p in matches
+            ]
+        }
+    }
+
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(payload, f, indent=2)
 
 if __name__ == "__main__":
     print("Fetching Kalshi politics markets...")
@@ -218,10 +288,13 @@ if __name__ == "__main__":
     print("=== High-confidence matches (POC) ===\n")
     for llm_score, cheap_score, k, p in matches:
         print(f"LLM score: {llm_score:.2f} | cheap: {cheap_score:.2f}")
-        print(f"  Kalshi:     {k['ticker']} — {k['title']}")
-        print(f"  Polymarket: {p['id']} — {p['title']}")
+        print(f"  Kalshi:     {k['title']}")
+        print(f"  Polymarket: {p['title']}")
         print()
     
+    ## `save_cross_exchange_mappings` function
+    save_cross_exchange_mappings(matches)
+
 
     """"
     mappings = match_events(kalshi_events, poly_events, threshold=0.5)

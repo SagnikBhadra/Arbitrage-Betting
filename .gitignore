@@ -23,5 +23,11 @@ Polymarket.key
 # OpenAI Private Files
 OpenAI.key
 
+# Groq Private Files
+GROQ.key
+
 #snapshots
 snapshots/
+
+#logging
+logging/
