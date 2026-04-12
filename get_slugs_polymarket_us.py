@@ -14,7 +14,7 @@ BASE_URL = "https://gateway.polymarket.us"
 EVENTS_FILE = "statics/all_polymarket_us_events.json"
 EVENT_MARKET_MAPPING_FILE = "statics/polymarket_us_event_to_market_mapping.json"
 
-PAGE_LIMIT = 200
+PAGE_LIMIT = 1000
 MAX_RETRIES = 5
 INITIAL_BACKOFF = 1
 

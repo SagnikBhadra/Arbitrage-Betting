@@ -10,24 +10,22 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 
-def build_text(categories):
+def build_text(events_dict, category):
     """
     Combine all useful fields into one text blob
     """
     texts = []
-    for category in categories:
-        for series_name, series in categories[category].items():
-            for event_name, event in series.items():
-                print(event_name)
-                title = event.get("title", "")
-                subtitle = event.get("subtitle", "")
-                text_dict = {
-                    "title": f"{title} {subtitle} {category} {series_name} {event_name}".lower(),
-                    "category": category,
-                    "series_name": series_name,
-                    "event_name": event_name
-                }
-                texts.append(text_dict)
+    for series_name, series in events_dict[category].items():
+        for event_name, event in series.items():
+            title = event.get("title", "")
+            subtitle = event.get("subtitle", "")
+            text_dict = {
+                "title": f"{title} {subtitle} {category} {series_name} {event_name}".lower(),
+                "category": category,
+                "series_name": series_name,
+                "event_name": event_name
+            }
+            texts.append(text_dict)
     return texts
 
 
@@ -82,22 +80,18 @@ def cheap_similarity(a: str, b: str) -> float:
 # Fetch Kalshi Politics Markets (guaranteed non-zero)
 # ============================================================
 
-def fetch_kalshi_politics():
-    with open("statics/kalshi_event_to_market_mapping.json", "r") as f:
-        kalshi_events = json.load(f)
-
-    kalshi_titles = build_text(kalshi_events)
+def fetch_kalshi_politics(kalshi_events, category):
+    kalshi_titles = build_text(kalshi_events, category)
     subset = []
     for text_dict in kalshi_titles:
         title = text_dict["title"]
-        if "sports" in title and "nba" in title:
-            subset.append({
-                "title": title,
-                "category": text_dict["category"],
-                "series_name": text_dict["series_name"],
-                "event_name": text_dict["event_name"],
-                "norm": normalize(title),
-            })
+        subset.append({
+            "title": title,
+            "category": text_dict["category"],
+            "series_name": text_dict["series_name"],
+            "event_name": text_dict["event_name"],
+            "norm": normalize(title),
+        })
 
     return subset
 
@@ -106,22 +100,18 @@ def fetch_kalshi_politics():
 # Fetch Polymarket Politics Markets (guaranteed non-zero)
 # ============================================================
 
-def fetch_polymarket_politics():
-    with open("statics/polymarket_us_event_to_market_mapping.json", "r") as f:
-        poly_events = json.load(f)
-
-    poly_titles = build_text(poly_events)
+def fetch_polymarket_politics(poly_events, category):
+    poly_titles = build_text(poly_events, category)
     subset = []
     for text_dict in poly_titles:
         title = text_dict["title"]
-        if "sports" in title and "nba" in title:
-            subset.append({
-                "title": title,
-                "norm": normalize(title),
-                "category": text_dict["category"],
-                "series_name": text_dict["series_name"],
-                "event_name": text_dict["event_name"]
-            })
+        subset.append({
+            "title": title,
+            "norm": normalize(title),
+            "category": text_dict["category"],
+            "series_name": text_dict["series_name"],
+            "event_name": text_dict["event_name"]
+        })
     return subset
 
 # ============================================================
@@ -236,20 +226,22 @@ def score_pair_llm(k_title: str, p_title: str, max_retries: int = 3) -> float:
 
 def correlate_small(kalshi, poly, cheap_threshold=0.45, llm_threshold=0.9):
     candidates = []
+    try:
+        for k in kalshi:
+            for p in poly:
+                s = cheap_similarity(k["norm"], p["norm"])
+                if s >= cheap_threshold:
+                    candidates.append((s, k, p))
 
-    for k in kalshi:
-        for p in poly:
-            s = cheap_similarity(k["norm"], p["norm"])
-            if s >= cheap_threshold:
-                candidates.append((s, k, p))
-
-    results = []
-    for cheap_score, k, p in candidates:
-        llm_score = score_pair_llm(k["title"], p["title"])
-        if llm_score >= llm_threshold:
-            results.append((llm_score, cheap_score, k, p))
-            continue
-        time.sleep(0.5)  # Increased from 0.2s to 0.5s between calls
+        results = []
+        for cheap_score, k, p in candidates:
+            llm_score = score_pair_llm(k["title"], p["title"])
+            if llm_score >= llm_threshold:
+                results.append((llm_score, cheap_score, k, p))
+                continue
+            time.sleep(0.5)  # Increased from 0.2s to 0.5s between calls
+    except Exception as e:
+        print(f"Error during correlation: {e}")
 
     print(results)
     results.sort(key=lambda x: -x[0])
@@ -274,17 +266,39 @@ def save_cross_exchange_mappings(matches, output_path="statics/cross_exchange_st
         json.dump(payload, f, indent=2)
 
 if __name__ == "__main__":
-    print("Fetching Kalshi politics markets...")
-    kalshi = fetch_kalshi_politics()
-    print(f"Kalshi politics markets: {len(kalshi)}")
+    # Fetch events from all exchanges
+    with open("statics/polymarket_us_event_to_market_mapping.json", "r") as f:
+        poly_events = json.load(f)
+        
+    with open("statics/kalshi_event_to_market_mapping.json", "r") as f:
+        kalshi_events = json.load(f)
+    
+    # Find common categories (e.g. politics, sports, etc.)
+    kalshi_categories = set(kalshi_events.keys())
+    poly_categories = set(poly_events.keys())
+    print(f"Kalshi categories: {kalshi_categories}")
+    print(f"Polymarket categories: {poly_categories}")
+    common_categories = set(k.lower() for k in kalshi_categories) & set(p.lower() for p in poly_categories)
+    print(f"Common categories: {common_categories}")
+    
+    matches = []
+    
+    # For each common category, build texts and correlate
+    for common_category in common_categories:
+        print(f"\n=== Processing category: {common_category} ===")
+        
+        print("Fetching Kalshi markets...")
+        kalshi = fetch_kalshi_politics(kalshi_events, common_category.capitalize())
+        print(f"Kalshi markets: {len(kalshi)}")
 
-    print("Fetching Polymarket politics markets...")
-    poly = fetch_polymarket_politics()
-    print(f"Polymarket politics markets: {len(poly)}")
+        print("Fetching Polymarket markets...")
+        poly = fetch_polymarket_politics(poly_events, common_category)
+        print(f"Polymarket markets: {len(poly)}")
 
-    print("\nCorrelating...\n")
-    matches = correlate_small(kalshi, poly)
+        print("\nCorrelating...\n")
+        matches.extend(correlate_small(kalshi, poly))
 
+    print(f"\nTotal candidate matches: {len(matches)}")
     print("=== High-confidence matches (POC) ===\n")
     for llm_score, cheap_score, k, p in matches:
         print(f"LLM score: {llm_score:.2f} | cheap: {cheap_score:.2f}")
@@ -296,11 +310,113 @@ if __name__ == "__main__":
     save_cross_exchange_mappings(matches)
 
 
-    """"
-    mappings = match_events(kalshi_events, poly_events, threshold=0.5)
 
-    with open("statics/event_mappings.json", "w") as f:
-        json.dump(mappings, f, indent=4)
+    
+"""
+def fetch_kalshi_by_series():
+    #Returns dict: series_name -> list of events
+    with open("statics/kalshi_event_to_market_mapping.json", "r") as f:
+        kalshi_events = json.load(f)
 
-    print(f"Saved {len(mappings)} mappings to statics/event_mappings.json")
-    """
+    kalshi_by_series = defaultdict(list)
+    
+    for category, series_dict in kalshi_events.items():
+        for series_name, events_dict in series_dict.items():
+            for event_name, event in events_dict.items():
+                title = event.get("title", "")
+                subtitle = event.get("subtitle", "")
+                
+                kalshi_by_series[series_name].append({
+                    "title": f"{title} {subtitle}".lower(),
+                    "category": category,
+                    "series_name": series_name,
+                    "event_name": event_name,
+                    "norm": normalize(f"{title} {subtitle}"),
+                })
+    
+    return kalshi_by_series
+
+
+def fetch_polymarket_by_series():
+    #Returns dict: series_name -> list of events
+    with open("statics/polymarket_us_event_to_market_mapping.json", "r") as f:
+        poly_events = json.load(f)
+
+    poly_by_series = defaultdict(list)
+    
+    for category, series_dict in poly_events.items():
+        for series_name, events_dict in series_dict.items():
+            for event_name, event in events_dict.items():
+                title = event.get("title", "")
+                subtitle = event.get("subtitle", "")
+                
+                poly_by_series[series_name].append({
+                    "title": f"{title} {subtitle}".lower(),
+                    "category": category,
+                    "series_name": series_name,
+                    "event_name": event_name,
+                    "norm": normalize(f"{title} {subtitle}"),
+                })
+    
+    return poly_by_series
+
+
+def correlate_per_series(kalshi_by_series, poly_by_series, cheap_threshold=0.45, llm_threshold=0.9):
+    #Process each series independently
+    all_matches = {}
+    
+    # Find common series between both exchanges
+    common_series = set(kalshi_by_series.keys()) & set(poly_by_series.keys())
+    print(f"Found {len(common_series)} common series: {common_series}")
+    
+    for series_name in common_series:
+        print(f"\n--- Processing series: {series_name} ---")
+        kalshi_events = kalshi_by_series[series_name]
+        poly_events = poly_by_series[series_name]
+        
+        matches = correlate_small(kalshi_events, poly_events, cheap_threshold, llm_threshold)
+        all_matches[series_name] = matches
+    
+    return all_matches
+
+
+def save_cross_exchange_mappings_per_series(all_matches, output_dir="statics/cross_exchange_statics"):
+    #Save mappings, one file per series
+    os.makedirs(output_dir, exist_ok=True)
+
+    for series_name, matches in all_matches.items():
+        payload = {
+            "POLYMARKET_KALSHI_MAPPING": {
+                "Moneyline_Events": [
+                    {
+                        "polymarket_event": p["event_name"],
+                        "kalshi_event": k["event_name"],
+                    }
+                    for _, _, k, p in matches
+                ]
+            }
+        }
+        
+        filename = f"{series_name}_mapping.json"
+        filepath = os.path.join(output_dir, filename)
+        
+        with open(filepath, "w", encoding="utf-8") as f:
+            json.dump(payload, f, indent=2)
+        
+        print(f"Saved {len(matches)} matches to {filepath}")
+
+if __name__ == "__main__":
+    print("Fetching Kalshi markets by series...")
+    kalshi_by_series = fetch_kalshi_by_series()
+    print(f"Kalshi series: {len(kalshi_by_series)}")
+
+    print("Fetching Polymarket markets by series...")
+    poly_by_series = fetch_polymarket_by_series()
+    print(f"Polymarket series: {len(poly_by_series)}")
+
+    print("\nCorrelating per series...\n")
+    all_matches = correlate_per_series(kalshi_by_series, poly_by_series)
+
+    print("\nSaving mappings per series...")
+    save_cross_exchange_mappings_per_series(all_matches)
+"""
