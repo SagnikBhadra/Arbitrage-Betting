@@ -10,6 +10,13 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 
+PREFIX_PROMPT = f"""
+You are matching prediction markets across two exchanges.
+Do these two markets represent the SAME underlying real-world event?
+Respond ONLY with a number between 0 and 1.
+"""
+
+
 def build_text(events_dict, category):
     """
     Combine all useful fields into one text blob
@@ -146,17 +153,9 @@ groq_client = Groq(
 
 def score_pair_llm(k_title: str, p_title: str, max_retries: int = 3) -> float:
     """Score a pair using Groq with rate limiting + retries."""
-
     prompt = f"""
-    You are matching prediction markets across two exchanges.
-
     Market A: "{k_title}"
     Market B: "{p_title}"
-
-    Do these two markets represent the SAME underlying real-world event?
-
-    Respond ONLY with JSON:
-   <number between 0 and 1>
     """
 
     headers = {
@@ -177,18 +176,19 @@ def score_pair_llm(k_title: str, p_title: str, max_retries: int = 3) -> float:
         try:
             # 🔒 Rate limit BEFORE request
             rate_limiter.wait()
-            print(f"Attempt {attempt}: Market A: {k_title} | Market B: {p_title}")
+            #print(f"Attempt {attempt}: Market A: {k_title} | Market B: {p_title}")
             
             resp = groq_client.chat.completions.create(
                 model= "llama-3.3-70b-versatile",  # Groq model
+                #model="llama-3.1-8b-instant",  # Cheaper, faster Groq model for testing
                 messages=[
                     {"role": "system", "content": "You are a precise market-matching assistant."},
-                    {"role": "user", "content": f"{prompt}"},
+                    {"role": "user", "content": PREFIX_PROMPT + prompt},
                 ],
                 temperature=0.0
             )
             #print(resp)
-            print(resp.choices[0].message.content)
+            #print(resp.choices[0].message.content)
             #resp = resp.choices[0].message.content
             """
             if resp.status_code == 429:
@@ -237,6 +237,7 @@ def correlate_small(kalshi, poly, cheap_threshold=0.45, llm_threshold=0.9):
         for cheap_score, k, p in candidates:
             llm_score = score_pair_llm(k["title"], p["title"])
             if llm_score >= llm_threshold:
+                print(f"Cheap score: {cheap_score:.2f} | LLM score: {llm_score:.2f} | Kalshi: {k['title']} | Polymarket: {p['title']}")
                 results.append((llm_score, cheap_score, k, p))
                 continue
             time.sleep(0.5)  # Increased from 0.2s to 0.5s between calls
@@ -247,20 +248,22 @@ def correlate_small(kalshi, poly, cheap_threshold=0.45, llm_threshold=0.9):
     results.sort(key=lambda x: -x[0])
     return results
 
-def save_cross_exchange_mappings(matches, output_path="statics/cross_exchange_statics.json"):
+def save_cross_exchange_mappings(matches, kalshi_events, poly_events, output_path="statics/cross_exchange_statics.json"):
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
-
-    payload = {
-        "POLYMARKET_KALSHI_MAPPING": {
-            "Moneyline_Events": [
-                {
-                    "polymarket_event": p["event_name"],
-                    "kalshi_event": k["event_name"],
-                }
-                for _, _, k, p in matches
-            ]
-        }
-    }
+    payload = {"POLYMARKET_KALSHI_MAPPING": {"Moneyline_Events": {}}}
+    for category, match_list in matches.items():
+        category_matches = []
+        for _, _, k, p in match_list:
+            kalshi_ticker = kalshi_events[k["category"]][k["series_name"]][k["event_name"]]["market_slugs"][0]
+            polymarket_ticker = poly_events[p["category"]][p["series_name"]][p["event_name"]]["market_slugs"][0]
+            other_kalshi_ticker = kalshi_events[k["category"]][k["series_name"]][k["event_name"]]["market_slugs"][1] if len(kalshi_events[k["category"]][k["series_name"]][k["event_name"]]["market_slugs"]) > 1 else ""
+            category_matches.append({
+                "polymarket_ticker": polymarket_ticker,
+                "kalshi_ticker": kalshi_ticker,
+                "other_polymarket_ticker": f"{polymarket_ticker}-inverse",
+                "other_kalshi_ticker": other_kalshi_ticker
+            })
+        payload["POLYMARKET_KALSHI_MAPPING"]["Moneyline_Events"][category] = category_matches
 
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(payload, f, indent=2)
@@ -281,7 +284,7 @@ if __name__ == "__main__":
     common_categories = set(k.lower() for k in kalshi_categories) & set(p.lower() for p in poly_categories)
     print(f"Common categories: {common_categories}")
     
-    matches = []
+    matches = defaultdict(list)
     
     # For each common category, build texts and correlate
     for common_category in common_categories:
@@ -296,18 +299,18 @@ if __name__ == "__main__":
         print(f"Polymarket markets: {len(poly)}")
 
         print("\nCorrelating...\n")
-        matches.extend(correlate_small(kalshi, poly))
+        matches[common_category] = correlate_small(kalshi, poly)
 
-    print(f"\nTotal candidate matches: {len(matches)}")
-    print("=== High-confidence matches (POC) ===\n")
-    for llm_score, cheap_score, k, p in matches:
-        print(f"LLM score: {llm_score:.2f} | cheap: {cheap_score:.2f}")
-        print(f"  Kalshi:     {k['title']}")
-        print(f"  Polymarket: {p['title']}")
-        print()
+        print(f"\nTotal candidate matches: {len(matches[common_category])}")
+        print("=== High-confidence matches (POC) ===\n")
+        for llm_score, cheap_score, k, p in matches[common_category]:
+            print(f"LLM score: {llm_score:.2f} | cheap: {cheap_score:.2f}")
+            print(f"  Kalshi:     {k['title']}")
+            print(f"  Polymarket: {p['title']}")
+            print()
     
     ## `save_cross_exchange_mappings` function
-    save_cross_exchange_mappings(matches)
+    save_cross_exchange_mappings(matches, kalshi_events, poly_events)
 
 
 

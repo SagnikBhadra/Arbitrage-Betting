@@ -1,5 +1,8 @@
 {
   "POLYMARKET_KALSHI_MAPPING": {
-    "Moneyline_Events": []
+    "Moneyline_Events": {
+      "politics": [],
+      "sports": []
+    }
   }
 }
