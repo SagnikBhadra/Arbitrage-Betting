@@ -149,6 +149,10 @@ def build_event_to_market_mapping():
         market_slugs = []
 
         for market in event.get("markets", []):
+            # We only care about moneyline markets for now
+            if market.get("marketType") != "moneyline":
+                continue
+            
             slug = market.get("slug")
             if slug:
                 market_slugs.append(slug)
