@@ -7,6 +7,7 @@ from polymarket_us_feed import PolymarketUSWebSocket
 from polymarket_us_http_gateway import PolymarketUSHTTPGateway
 from kalshi_feed import KalshiWebSocket
 from kalshi_http_gateway import KalshiHTTPGateway, load_private_key
+from position_manager import PositionManager
 from utils import get_maker_fees_kalshi, get_taker_fees_kalshi, get_taker_fees_polymarket_us, get_maker_rebate_polymarket_us
 from collections import defaultdict
 class CrossExchangeArbitrage:
@@ -19,7 +20,7 @@ class CrossExchangeArbitrage:
         orderbook.get_best_ask() -> (price, size) or (None, None)
     """
 
-    def __init__(self, polymarket_client: PolymarketUSWebSocket, kalshi_client: KalshiWebSocket, polymarket_us_gateway: PolymarketUSHTTPGateway, kalshi_gateway: KalshiHTTPGateway, mapping: dict, min_edge=0.0):
+    def __init__(self, polymarket_client: PolymarketUSWebSocket, kalshi_client: KalshiWebSocket, polymarket_us_gateway: PolymarketUSHTTPGateway, kalshi_gateway: KalshiHTTPGateway, position_manager: PositionManager, mapping: dict, min_edge=0.0):
         # Market data clients
         self.polymarket_client = polymarket_client
         self.kalshi_client = kalshi_client
@@ -28,6 +29,9 @@ class CrossExchangeArbitrage:
         self.polymarket_gateway = polymarket_us_gateway
         self.kalshi_gateway = kalshi_gateway
         
+        # Position manager for tracking open positions and PnL
+        self.position_manager = position_manager
+        
         #Temporary balance tracking
         self.polymarket_us_balance = Decimal(self.polymarket_gateway.get_balance())
         self.kalshi_balance = Decimal(self.kalshi_gateway.get_balance())
@@ -35,6 +39,27 @@ class CrossExchangeArbitrage:
         self.mapping = mapping
         self.min_edge = Decimal(min_edge)  # buffer for fees/slippage
         self.logger = logging.getLogger("cross_exchange_strategy")
+        
+        # Cached balance to avoid API calls on every order (in dollars)
+        self.cached_balance = Decimal(Decimal(kalshi_gateway.get_balance()) / Decimal(100.0))
+        self.cached_balance = 5000
+        
+    def check_and_update_balance(self, required_amount: Decimal):
+        """Check if we have sufficient balance for the trade.
+
+        Args:
+            required_amount: Amount needed in dollars
+
+        Returns:
+            bool: True if sufficient balance, False otherwise
+        """
+        try:
+            #balance_response = self.kalshi_gateway.get_balance()
+            #self.cached_balance = balance_response / 100.0 if balance_response != 0 else 0  # Convert dollars to cents
+            return self.cached_balance >= required_amount
+        except Exception as e:
+            self.logger.error(f"Error fetching balance: {e}")
+            return False
 
     def _get_books(self, poly_id, kalshi_ticker):
         poly_ob = self.polymarket_client.orderbooks.get(poly_id)
@@ -264,18 +289,20 @@ class CrossExchangeArbitrage:
         pass
 
     def find_opportunities(self):
+        # Category: [dicts]
+        for category, mapping_dicts in self.mapping.items():
+            for m in mapping_dicts:
+                polymarket_ticker = m["polymarket_ticker"]
+                kalshi_ticker = m["kalshi_ticker"]
+                other_poly_id = m["other_poly_id"]
+                other_kalshi_ticker = m["other_kalshi_ticker"]
 
-        for poly_id, m in self.mapping.items():
-            kalshi_ticker = m["kalshi_ticker"]
-            other_poly_id = m["other_poly_id"]
-            other_kalshi_ticker = m["other_kalshi_ticker"]
-
-            poly_A, kalshi_A = self._get_books(poly_id, kalshi_ticker)
+            poly_A, kalshi_A = self._get_books(polymarket_ticker, kalshi_ticker)
             poly_B, kalshi_B = self._get_books(other_poly_id, other_kalshi_ticker)
 
             if not (poly_A and kalshi_A and poly_B and kalshi_B):
                 self.logger.warning(
-                    f"Orderbook missing for {poly_id} or {kalshi_ticker} "
+                    f"Orderbook missing for {polymarket_ticker} or {kalshi_ticker} "
                     f"or {other_poly_id} or {other_kalshi_ticker}. Skipping."
                 )
                 continue
@@ -291,7 +318,7 @@ class CrossExchangeArbitrage:
             # ---- SAME SIDE ARBS (A + B independently) ----
             # Stragies 1, 2, 3, 4
             self._same_side_arb(
-                poly_id, kalshi_ticker,
+                polymarket_ticker, kalshi_ticker,
                 poly_bid_A, poly_bid_A_size, poly_ask_A, poly_ask_A_size,
                 kalshi_bid_A, kalshi_bid_A_size, kalshi_ask_A, kalshi_ask_A_size
             )
@@ -309,7 +336,7 @@ class CrossExchangeArbitrage:
                     order_A = {
                         "ask_price": poly_ask_A,
                         "ask_size": poly_ask_A_size,
-                        "ask_market": f"Polymarket: {poly_id}"
+                        "ask_market": f"Polymarket: {polymarket_ticker}"
                     }
                 else:
                     order_A = {
@@ -318,7 +345,7 @@ class CrossExchangeArbitrage:
                         "ask_market": f"Kalshi: {kalshi_ticker}"
                     }
             else:
-                # self.logger.warning(f"Missing ask price for {poly_id} or {kalshi_ticker}. Skipping double buy arb.")
+                # self.logger.warning(f"Missing ask price for {polymarket_ticker} or {kalshi_ticker}. Skipping double buy arb.")
                 continue
             if poly_ask_B and kalshi_ask_B:
                 if poly_ask_B <= kalshi_ask_B:

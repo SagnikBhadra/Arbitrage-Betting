@@ -63,8 +63,8 @@ POLYMARKET_US_PRIVATE_KEY_FILE_PATH = "polymarket.key"
 POLYMARKET_US_BASE_URL = "https://api.polymarket.us"
 POLYMARKET_US_WS_URL_BASE = "wss://api.polymarket.us"
 
-def get_static_mapping(static_name: str):
-    with open('statics/statics.json', 'r') as f:
+def get_static_mapping(filename: str, static_name: str):
+    with open(filename, 'r') as f:
         statics = json.load(f)
     return statics[static_name]
 
@@ -100,9 +100,10 @@ def wide_spreads():
 
 async def scan_inefficiencies(polymarket_client, kalshi_client, kalshi_gateway, polymarket_us_gateway):
     # Cross exchange mapping between Polymarket and Kalshi markets
-    polymarket_kalshi_mapping = get_static_mapping("POLYMARKET_KALSHI_MAPPING")
+    polymarket_kalshi_mapping = get_static_mapping("statics/cross_exchange_statics.json", "POLYMARKET_KALSHI_MAPPING")
+    moneyline_events = polymarket_kalshi_mapping["Moneyline_Events"]
     # Intra Kalshi correlated markets mapping
-    correlated_market_mapping = get_static_mapping("CORRELATED_MARKET_MAPPING")
+    correlated_market_mapping = get_static_mapping("statics/statics.json", "CORRELATED_MARKET_MAPPING")
     
     # Wait until feeds are subscribed
     while not kalshi_client.subscribed:
@@ -117,7 +118,7 @@ async def scan_inefficiencies(polymarket_client, kalshi_client, kalshi_gateway, 
     # Intra Kalshi
     strategies.append(intra_kalshi_arbitrage(kalshi_client, kalshi_gateway, position_manager, correlated_market_mapping, profit_threshold=0.01))
     # Cross exchange
-    #strategies.append(crossed_markets(polymarket_client, kalshi_client, kalshi_gateway, polymarket_us_gateway, polymarket_kalshi_mapping))
+    strategies.append(crossed_markets(polymarket_client, kalshi_client, kalshi_gateway, polymarket_us_gateway, position_manager, moneyline_events))
 
     # Call find_opportunities() every second and log any opportunities above profit_threshold
     while True:
