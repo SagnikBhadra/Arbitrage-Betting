@@ -81,13 +81,14 @@ def intra_kalshi_arbitrage(kalshi_client, kalshi_gateway, position_manager, corr
     
     return intra_kalshi_arb_strategy
 
-def crossed_markets(polymarket_client, kalshi_client, kalshi_gateway, polymarket_us_gateway, polymarket_kalshi_mapping):
+def crossed_markets(polymarket_client, kalshi_client, kalshi_gateway, polymarket_us_gateway, position_manager, polymarket_kalshi_mapping):
 
     cross_exchange_arb_strategy = CrossExchangeArbitrage(
         polymarket_client,
         kalshi_client,
         polymarket_us_gateway,
         kalshi_gateway,
+        position_manager,
         polymarket_kalshi_mapping,
         min_edge=0.01
     )
@@ -116,7 +117,7 @@ async def scan_inefficiencies(polymarket_client, kalshi_client, kalshi_gateway, 
     # Create strategy objects
     strategies = []
     # Intra Kalshi
-    strategies.append(intra_kalshi_arbitrage(kalshi_client, kalshi_gateway, position_manager, correlated_market_mapping, profit_threshold=0.01))
+    #strategies.append(intra_kalshi_arbitrage(kalshi_client, kalshi_gateway, position_manager, correlated_market_mapping, profit_threshold=0.01))
     # Cross exchange
     strategies.append(crossed_markets(polymarket_client, kalshi_client, kalshi_gateway, polymarket_us_gateway, position_manager, moneyline_events))
 
@@ -144,7 +145,7 @@ async def main():
     kalshi_client = KalshiWebSocket(KEY_ID, PRIVATE_KEY_PATH, get_asset_ids("Kalshi"), WS_URL)
     
     await asyncio.gather(
-        #polymarket_us_client.run(),
+        polymarket_us_client.run(),
         kalshi_client.orderbook_websocket(),
         scan_inefficiencies(polymarket_us_client, kalshi_client, kalshi_gateway, polymarket_us_gateway)
     )

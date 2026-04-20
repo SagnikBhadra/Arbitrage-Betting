@@ -1,5 +1,6 @@
 import json
 import logging
+import math
 import uuid
 from decimal import Decimal
 
@@ -35,6 +36,10 @@ class CrossExchangeArbitrage:
         #Temporary balance tracking
         self.polymarket_us_balance = Decimal(self.polymarket_gateway.get_balance())
         self.kalshi_balance = Decimal(self.kalshi_gateway.get_balance())
+        
+        # Tracking overall performance
+        self.overall_order_count = Decimal(0)
+        self.overall_profit = Decimal(0.0)
 
         self.mapping = mapping
         self.min_edge = Decimal(min_edge)  # buffer for fees/slippage
@@ -83,12 +88,31 @@ class CrossExchangeArbitrage:
         # Ask on Kalshi < Bid on Polymarket (1, 2, 3, 4)
         # Buy Kalshi, Sell Polymarket
         if poly_bid and kalshi_ask:
-            # Add maker/taker fee adjustments to edge calculation
-            kalshi_fee = get_taker_fees_kalshi(kalshi_ask, Decimal(1))
-            polymarket_us_fee = get_taker_fees_polymarket_us(poly_bid, Decimal(1))
-            fees = kalshi_fee + polymarket_us_fee
-            if (poly_bid - kalshi_ask - fees) > self.min_edge:
-                size = int(min(poly_bid_size, kalshi_ask_size, self._get_max_size(self.kalshi_balance, kalshi_ask), self._get_max_size(self.polymarket_us_balance, poly_bid)))  # TODO: Add balance checks to size calculation
+            # Calculate order size
+            #print(f"Best Ask: {best_ask_size}, Correlated Best Ask: {correlated_best_ask_size}")
+            order_size = int(min(float(poly_bid_size), float(kalshi_ask_size)))
+            
+            # Calculate required balance (cost of both orders)
+            cost_of_single_share = Decimal(kalshi_ask + poly_bid)
+            required_balance = Decimal(cost_of_single_share * order_size)
+            
+            # Check balance before placing orders
+            if self.cached_balance < 0:
+                self.logger.warning(f"Negative balance detected: ${self.cached_balance:.2f}. Skipping trade.")
+                return
+            if not self.cached_balance > required_balance:
+                #self.logger.warning(f"Insufficient balance. Required: ${required_balance:.2f}, Available: ${self.cached_balance:.2f}")
+                order_size = math.floor(Decimal(str(self.cached_balance)) / cost_of_single_share)
+                
+            # Track profit
+            self.overall_order_count += order_size
+            self.overall_profit += max((Decimal("1.0") - cost_of_single_share) * order_size , 0)
+            
+            # Calculate cost of trade (including fees) and potential profit
+            fees = Decimal(get_taker_fees_kalshi(Decimal(kalshi_ask), order_size) + get_taker_fees_polymarket_us(Decimal(poly_bid), order_size))
+            combined_price = Decimal(poly_bid * order_size) - Decimal(kalshi_ask * order_size) - fees
+
+            if combined_price > self.min_edge:
                 self.logger.info({
                     "type": "same_side",
                     "direction": "buy_kalshi_sell_poly",
@@ -97,7 +121,7 @@ class CrossExchangeArbitrage:
                     "buy_price": kalshi_ask,
                     "sell_price": poly_bid,
                     "edge": poly_bid - kalshi_ask - fees,
-                    "size": int(size)
+                    "size": int(order_size)
                 })
                 # Send orders to gateway for execution
                 # Kalshi
@@ -105,7 +129,7 @@ class CrossExchangeArbitrage:
                     "ticker": kalshi_ticker,
                     "action": "buy",
                     "side": "yes",
-                    "count": int(size),
+                    "count": int(order_size),
                     "client_order_id": str(uuid.uuid4()),
                     "yes_price": int(float(kalshi_ask) * 100),
                     "type": "limit",
@@ -126,24 +150,44 @@ class CrossExchangeArbitrage:
                     response = self.polymarket_gateway.create_order(
                         market_slug=poly_id,
                         price=float(Decimal(1.0) - poly_bid),
-                        quantity=int(size),
+                        quantity=int(order_size),
                         side=side,
                         tif="FILL_OR_KILL",
                         order_type="LIMIT",
                     )
                     if response and getattr(response, "status_code", None) == 201:
-                        self.polymarket_us_balance -= Decimal(Decimal(1.0) - poly_bid) * Decimal(size)  # Update balance tracking
+                        self.polymarket_us_balance -= Decimal(Decimal(1.0) - poly_bid) * Decimal(order_size)  # Update balance tracking
                 except Exception as e:
                     self.logger.error(f"Failed to place order B: {e}")
 
         # Ask on Polymarket < Bid on Kalshi
         # Buy Polymarket, Sell Kalshi
         if kalshi_bid and poly_ask:
-            # Add maker/taker fee adjustments to edge calculation
-            kalshi_fee = get_taker_fees_kalshi(kalshi_bid, Decimal(1))
-            polymarket_us_fee = get_taker_fees_polymarket_us(poly_ask, Decimal(1))
-            fees = kalshi_fee + polymarket_us_fee
-            if (kalshi_bid - poly_ask - fees) > self.min_edge:
+            # Calculate order size
+            #print(f"Best Ask: {best_ask_size}, Correlated Best Ask: {correlated_best_ask_size}")
+            order_size = int(min(float(poly_ask_size), float(kalshi_bid_size)))
+            
+            # Calculate required balance (cost of both orders)
+            cost_of_single_share = Decimal(kalshi_bid + poly_ask)
+            required_balance = Decimal(cost_of_single_share * order_size)
+                        
+            # Check balance before placing orders
+            if self.cached_balance < 0:
+                self.logger.warning(f"Negative balance detected: ${self.cached_balance:.2f}. Skipping trade.")
+                return
+            if not self.cached_balance > required_balance:
+                #self.logger.warning(f"Insufficient balance. Required: ${required_balance:.2f}, Available: ${self.cached_balance:.2f}")
+                order_size = math.floor(Decimal(str(self.cached_balance)) / cost_of_single_share)
+            
+            # Track profit
+            self.overall_order_count += order_size
+            self.overall_profit += max((Decimal("1.0") - cost_of_single_share) * order_size , 0)
+            
+            # Calculate cost of trade (including fees) and potential profit
+            fees = Decimal(get_taker_fees_kalshi(Decimal(kalshi_bid), order_size) + get_taker_fees_polymarket_us(Decimal(poly_ask), order_size))
+            combined_price = Decimal(kalshi_bid * order_size) - Decimal(poly_ask * order_size) - fees
+            
+            if combined_price > self.min_edge:
                 size = min(kalshi_bid_size, poly_ask_size, self._get_max_size(self.kalshi_balance, kalshi_bid), self._get_max_size(self.polymarket_us_balance, poly_ask))
                 self.logger.info({
                     "type": "same_side",
@@ -194,26 +238,44 @@ class CrossExchangeArbitrage:
         # If asks for Team 1 + Team 2 < $1
         # Stategies 5, 6, 9, 10
         if order_A["ask_price"] and order_B["ask_price"]:
-            # Calculate fees:
+            # Calculate order size
+            #print(f"Best Ask: {best_ask_size}, Correlated Best Ask: {correlated_best_ask_size}")
+            order_size = int(min(float(order_A["ask_size"]), float(order_B["ask_size"])))
+            
+            # Calculate required balance (cost of both orders)
+            cost_of_single_share = Decimal(order_A["ask_price"]) + Decimal(order_B["ask_price"])
+            required_balance = Decimal(cost_of_single_share * order_size)
+            
+            # Check balance before placing orders
+            if self.cached_balance < 0:
+                self.logger.warning(f"Negative balance detected: ${self.cached_balance:.2f}. Skipping trade.")
+                return
+            if not self.cached_balance > required_balance:
+                #self.logger.warning(f"Insufficient balance. Required: ${required_balance:.2f}, Available: ${self.cached_balance:.2f}")
+                order_size = math.floor(Decimal(str(self.cached_balance)) / cost_of_single_share)
+            
+            # Track profit
+            self.overall_order_count += order_size
+            self.overall_profit += max((Decimal("1.0") - cost_of_single_share) * order_size , 0)
+                        
+            # Calculate cost of trade (including fees) and potential profit
             for order in [order_A, order_B]:
                 if "Polymarket" in order["ask_market"]:
-                    fee = get_taker_fees_polymarket_us(order["ask_price"], Decimal(1))
-                    size = self._get_max_size(self.polymarket_us_balance, order["ask_price"])
+                    fee = get_taker_fees_polymarket_us(order["ask_price"], order_size)
                 elif "Kalshi" in order["ask_market"]:
-                    fee = get_taker_fees_kalshi(order["ask_price"], Decimal(1))
-                    size = self._get_max_size(self.kalshi_balance, order["ask_price"])
+                    fee = get_taker_fees_kalshi(order["ask_price"], order_size)
                 else:
                     print(f"Unknown market in order: {order['ask_market']}. Cannot calculate fees.")
                     return
                 order["fee"] = fee
-                order["max_size"] = size
-            total_cost = Decimal(order_A["ask_price"]) + Decimal(order_B["ask_price"]) + Decimal(order_A["fee"]) + Decimal(order_B["fee"])
-            profit = Decimal(Decimal(1) - total_cost)
+                
+            fees = Decimal(order_A["fee"] + order_B["fee"])
+            combined_price = Decimal(order_A["ask_price"]) + Decimal(order_B["ask_price"]) + fees
+            profit = Decimal(Decimal(1) - combined_price)
             if profit > self.min_edge:
-                size = min(order_A["ask_size"], order_B["ask_size"], order_A["max_size"], order_B["max_size"])
                 self.logger.info({
                     "type": "double_buy",
-                    "total_cost": total_cost,
+                    "total_cost": combined_price,
                     "profit": profit,
                     "market_A": order_A["ask_market"],
                     "ask_price": order_A["ask_price"],
@@ -230,26 +292,26 @@ class CrossExchangeArbitrage:
                             response =self.polymarket_gateway.create_order(
                                 market_slug=order["ask_market"].split(": ")[1],
                                 price=float(order["ask_price"]),
-                                quantity=int(order["max_size"]),
+                                quantity=order_size,
                                 side=side,
                                 tif="FILL_OR_KILL",
                                 order_type="LIMIT",
                             )
                             if response and getattr(response, "status_code", None) == 201:
-                                self.polymarket_us_balance -= Decimal(order["ask_price"]) * Decimal(order["max_size"])  # Update balance tracking
+                                self.polymarket_us_balance -= Decimal(order["ask_price"]) * order_size  # Update balance tracking
                         elif "Kalshi" in order["ask_market"]:
                             response = self.kalshi_gateway.create_order({
                                 "ticker": order["ask_market"].split(": ")[1],
                                 "action": "buy",
                                 "side": "yes",
-                                "count": int(order["max_size"]),
+                                "count": order_size,
                                 "client_order_id": str(uuid.uuid4()),
                                 "yes_price": int(float(order["ask_price"]) * 100),
                                 "type": "limit",
                                 "time_in_force": "fill_or_kill"
                             })
                             if response and getattr(response, "status_code", None) == 201:
-                                self.kalshi_balance -= Decimal(Decimal(1.0) - Decimal(order["ask_price"])) * Decimal(order["max_size"])  # Update balance tracking
+                                self.kalshi_balance -= Decimal(Decimal(1.0) - Decimal(order["ask_price"])) * order_size  # Update balance tracking
                     except Exception as e:
                         self.logger.error(f"Failed to place order: {e}")
 
@@ -260,22 +322,44 @@ class CrossExchangeArbitrage:
         # Strategies 7, 8
 
         if order_A["bid_price"] and order_B["bid_price"]:
+            # Calculate order size
+            #print(f"Best Ask: {best_ask_size}, Correlated Best Ask: {correlated_best_ask_size}")
+            order_size = int(min(float(order_A["bid_size"]), float(order_B["bid_size"])))
+            
+            # Calculate required balance (cost of both orders)
+            cost_of_single_share = Decimal(order_A["bid_price"]) + Decimal(order_B["bid_price"])
+            required_balance = Decimal(cost_of_single_share * order_size)
+            
+            # Check balance before placing orders
+            if self.cached_balance < 0:
+                self.logger.warning(f"Negative balance detected: ${self.cached_balance:.2f}. Skipping trade.")
+                return
+            if not self.cached_balance > required_balance:
+                #self.logger.warning(f"Insufficient balance. Required: ${required_balance:.2f}, Available: ${self.cached_balance:.2f}")
+                order_size = math.floor(Decimal(str(self.cached_balance)) / cost_of_single_share)
+            
+            # Track profit
+            self.overall_order_count += order_size
+            self.overall_profit += max((Decimal("1.0") - cost_of_single_share) * order_size , 0)
+            
             # Calculate fees:
             for order in [order_A, order_B]:
-                if "Polymarket" in order["ask_market"]:
-                    fee = get_taker_fees_polymarket_us(order["ask_price"], Decimal(1))
-                elif "Kalshi" in order["ask_market"]:
-                    fee = get_taker_fees_kalshi(order["ask_price"], Decimal(1))
+                if "Polymarket" in order["bid_market"]:
+                    fee = get_taker_fees_polymarket_us(order["bid_price"], Decimal(1))
+                elif "Kalshi" in order["bid_market"]:
+                    fee = get_taker_fees_kalshi(order["bid_price"], Decimal(1))
                 else:
-                    print(f"Unknown market in order: {order['ask_market']}. Cannot calculate fees.")
+                    print(f"Unknown market in order: {order['bid_market']}. Cannot calculate fees.")
                     return
                 order["fee"] = fee
-            total_sale = Decimal(order_A["bid_price"]) + Decimal(order_B["bid_price"]) - (order_A["fee"] + order_B["fee"])
-            profit = Decimal(total_sale - Decimal(1))
+                
+            fees = Decimal(order_A["fee"] + order_B["fee"])
+            combined_price = Decimal(order_A["bid_price"]) + Decimal(order_B["bid_price"]) - fees
+            profit = Decimal(combined_price - Decimal(1))
             if profit > self.min_edge:
                 self.logger.info({
                     "type": "double_sell",
-                    "total_sale": total_sale,
+                    "total_sale": combined_price,
                     "profit": profit,
                     "market_A": order_A["bid_market"],
                     "bid_A_price": order_A["bid_price"],
@@ -285,25 +369,28 @@ class CrossExchangeArbitrage:
                     "bid_B_size": order_B["bid_size"]
                 })
                 
+            # TODO: Need to add logic to send orders
+                
     def _sell_out_of_position_arb(self):
         pass
-
-    def find_opportunities(self):
+    
+    # TODO: Why have book_snapshots as an argument when we can access self.kalshi_client.orderbooks directly? To avoid contention on the event loop by snapshotting orderbooks once and passing to all strategies, instead of each strategy accessing orderbooks which may be updated by WS messages during processing
+    def find_opportunities(self, book_snapshots: dict | None = None): 
         # Category: [dicts]
         for category, mapping_dicts in self.mapping.items():
             for m in mapping_dicts:
                 polymarket_ticker = m["polymarket_ticker"]
                 kalshi_ticker = m["kalshi_ticker"]
-                other_poly_id = m["other_poly_id"]
+                other_polymarket_ticker = m["other_polymarket_ticker"]
                 other_kalshi_ticker = m["other_kalshi_ticker"]
 
             poly_A, kalshi_A = self._get_books(polymarket_ticker, kalshi_ticker)
-            poly_B, kalshi_B = self._get_books(other_poly_id, other_kalshi_ticker)
+            poly_B, kalshi_B = self._get_books(other_polymarket_ticker, other_kalshi_ticker)
 
             if not (poly_A and kalshi_A and poly_B and kalshi_B):
                 self.logger.warning(
                     f"Orderbook missing for {polymarket_ticker} or {kalshi_ticker} "
-                    f"or {other_poly_id} or {other_kalshi_ticker}. Skipping."
+                    f"or {other_polymarket_ticker} or {other_kalshi_ticker}. Skipping."
                 )
                 continue
 
@@ -324,7 +411,7 @@ class CrossExchangeArbitrage:
             )
 
             self._same_side_arb(
-                other_poly_id, other_kalshi_ticker,
+                other_polymarket_ticker, other_kalshi_ticker,
                 poly_bid_B, poly_bid_B_size, poly_ask_B, poly_ask_B_size,
                 kalshi_bid_B, kalshi_bid_B_size, kalshi_ask_B, kalshi_ask_B_size
             )
@@ -352,7 +439,7 @@ class CrossExchangeArbitrage:
                     order_B = {
                         "ask_price": poly_ask_B,
                         "ask_size": poly_ask_B_size,
-                        "ask_market": f"Polymarket: {other_poly_id}"
+                        "ask_market": f"Polymarket: {other_polymarket_ticker}"
                     }
                 else:
                     order_B = {
@@ -361,7 +448,7 @@ class CrossExchangeArbitrage:
                         "ask_market": f"Kalshi: {other_kalshi_ticker}"
                     }
             else:
-                # self.logger.warning(f"Missing ask price for {other_poly_id} or {other_kalshi_ticker}. Skipping double buy arb.")
+                # self.logger.warning(f"Missing ask price for {other_polymarket_ticker} or {other_kalshi_ticker}. Skipping double buy arb.")
                 continue
 
             self._double_buy_arb(order_A, order_B)

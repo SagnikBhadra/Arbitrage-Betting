@@ -61,7 +61,7 @@ class IntraKalshiArbitrage:
         if ticker_position > 0 and correlated_ticker_position > 0:
             position_size = int(min(ticker_position, correlated_ticker_position))
         elif ticker_position < 0 and correlated_ticker_position < 0:
-            position_size = int(max(ticker_position, correlated_ticker_position))
+            position_size = int(abs(max(ticker_position, correlated_ticker_position)))
         else:
             return
         

@@ -5,6 +5,7 @@ import re
 import json
 import time
 from collections import defaultdict
+from difflib import SequenceMatcher
 from groq import Groq
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
@@ -224,21 +225,58 @@ def score_pair_llm(k_title: str, p_title: str, max_retries: int = 3) -> float:
 # Correlate
 # ============================================================
 
+def extract_event_date(event_name):
+    """
+    Extract date from event_name in either Polymarket or Kalshi format.
+    
+    Polymarket: ufc-seddum-jacmcv-2026-04-25 -> 2026-04-25
+    Kalshi:     KXNBAGAME-26APR26SASPOR -> 26APR26
+    
+    Returns date object or None if no date found.
+    """
+    from datetime import datetime
+    
+    # Polymarket format: YYYY-MM-DD
+    m = re.search(r"(\d{4})-(\d{2})-(\d{2})", event_name)
+    if m:
+        try:
+            return datetime.strptime(m.group(1) + m.group(2) + m.group(3), "%Y%m%d").date()
+        except ValueError:
+            pass
+    
+    # Kalshi format: YYMMMDD (e.g., 26APR26)
+    m = re.search(r"(\d{1,2})([A-Z]{3})(\d{2})", event_name)
+    if m:
+        try:
+            return datetime.strptime(m.group(1) + m.group(2) + m.group(3), "%y%b%d").date()
+        except ValueError:
+            pass
+    
+    return None
+
 def correlate_small(kalshi, poly, cheap_threshold=0.45, llm_threshold=0.9):
     candidates = []
     try:
         for k in kalshi:
             for p in poly:
+                # Only consider pairs that have the same date for sports category
+                if p["category"].lower() == 'sports':
+                    k_date = extract_event_date(k["event_name"])
+                    p_date = extract_event_date(p["event_name"])
+                    if k_date and p_date and k_date != p_date:
+                        continue
                 s = cheap_similarity(k["norm"], p["norm"])
                 if s >= cheap_threshold:
                     candidates.append((s, k, p))
-
+        
         results = []
         for cheap_score, k, p in candidates:
             llm_score = score_pair_llm(k["title"], p["title"])
             if llm_score >= llm_threshold:
                 print(f"Cheap score: {cheap_score:.2f} | LLM score: {llm_score:.2f} | Kalshi: {k['title']} | Polymarket: {p['title']}")
                 results.append((llm_score, cheap_score, k, p))
+                if len(results) >= 10:  # Limit to top 10 matches for testing
+                    break
                 continue
             time.sleep(0.5)  # Increased from 0.2s to 0.5s between calls
     except Exception as e:
@@ -248,22 +286,79 @@ def correlate_small(kalshi, poly, cheap_threshold=0.45, llm_threshold=0.9):
     results.sort(key=lambda x: -x[0])
     return results
 
+# ============================================================
+# Save Mappings
+# ============================================================
+
+def similar(a, b):
+    return SequenceMatcher(None, a, b).ratio()
+
+def build_mapping(ticker_data):
+    polymarket_ticker = ticker_data["polymarket_ticker"]
+    kalshi_ticker_1 = ticker_data["kalshi_ticker_1"]
+    kalshi_ticker_2 = ticker_data["kalshi_ticker_2"]
+
+    month_map = {
+        "01":"JAN","02":"FEB","03":"MAR","04":"APR","05":"MAY","06":"JUN",
+        "07":"JUL","08":"AUG","09":"SEP","10":"OCT","11":"NOV","12":"DEC"
+    }
+
+    mapping = {}
+
+    parts = polymarket_ticker.split("-")
+
+    team1 = parts[2].upper()
+    team2 = parts[3].upper()
+    date = '-'.join(parts[4:])
+
+    year, month, day = date.split("-")
+    kalshi_date = year[2:] + month_map[month] + day
+
+    # -------------------------------
+    # STEP 2: Assign correct sides
+    # -------------------------------
+
+    suffix1 = kalshi_ticker_1.split("-")[-1]
+    suffix2 = kalshi_ticker_2.split("-")[-1]
+
+    score1_t1 = similar(team1, suffix1)
+    score1_t2 = similar(team1, suffix2)
+
+    if score1_t1 >= score1_t2:
+        kalshi_ticker = kalshi_ticker_1
+        other_kalshi_ticker = kalshi_ticker_2
+    else:
+        kalshi_ticker = kalshi_ticker_2
+        other_kalshi_ticker = kalshi_ticker_1
+
+    mapping = {
+        "polymarket_ticker": polymarket_ticker,
+        "kalshi_ticker": kalshi_ticker,
+        "other_poly_id": f"{polymarket_ticker}-inverse",
+        "other_kalshi_ticker": other_kalshi_ticker
+    }
+
+    return mapping
+
 def save_cross_exchange_mappings(matches, kalshi_events, poly_events, output_path="statics/cross_exchange_statics.json"):
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     payload = {"POLYMARKET_KALSHI_MAPPING": {"Moneyline_Events": {}}}
     for category, match_list in matches.items():
         category_matches = []
         for _, _, k, p in match_list:
-            kalshi_ticker = kalshi_events[k["category"]][k["series_name"]][k["event_name"]]["market_slugs"][0]
+            kalshi_ticker_1 = kalshi_events[k["category"]][k["series_name"]][k["event_name"]]["market_slugs"][0]
             polymarket_ticker = poly_events[p["category"]][p["series_name"]][p["event_name"]]["market_slugs"][0]
-            other_kalshi_ticker = kalshi_events[k["category"]][k["series_name"]][k["event_name"]]["market_slugs"][1] if len(kalshi_events[k["category"]][k["series_name"]][k["event_name"]]["market_slugs"]) > 1 else ""
-            category_matches.append({
+            kalshi_ticker_2 = kalshi_events[k["category"]][k["series_name"]][k["event_name"]]["market_slugs"][1] if len(kalshi_events[k["category"]][k["series_name"]][k["event_name"]]["market_slugs"]) > 1 else ""
+            mapping = build_mapping({
                 "polymarket_ticker": polymarket_ticker,
-                "kalshi_ticker": kalshi_ticker,
-                "other_polymarket_ticker": f"{polymarket_ticker}-inverse",
-                "other_kalshi_ticker": other_kalshi_ticker
+                "kalshi_ticker_1": kalshi_ticker_1,
+                "kalshi_ticker_2": kalshi_ticker_2
             })
+
+            category_matches.append(mapping)
         payload["POLYMARKET_KALSHI_MAPPING"]["Moneyline_Events"][category] = category_matches
+        
+    print(payload)
 
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(payload, f, indent=2)
@@ -311,115 +406,3 @@ if __name__ == "__main__":
     
     ## `save_cross_exchange_mappings` function
     save_cross_exchange_mappings(matches, kalshi_events, poly_events)
-
-
-
-    
-"""
-def fetch_kalshi_by_series():
-    #Returns dict: series_name -> list of events
-    with open("statics/kalshi_event_to_market_mapping.json", "r") as f:
-        kalshi_events = json.load(f)
-
-    kalshi_by_series = defaultdict(list)
-    
-    for category, series_dict in kalshi_events.items():
-        for series_name, events_dict in series_dict.items():
-            for event_name, event in events_dict.items():
-                title = event.get("title", "")
-                subtitle = event.get("subtitle", "")
-                
-                kalshi_by_series[series_name].append({
-                    "title": f"{title} {subtitle}".lower(),
-                    "category": category,
-                    "series_name": series_name,
-                    "event_name": event_name,
-                    "norm": normalize(f"{title} {subtitle}"),
-                })
-    
-    return kalshi_by_series
-
-
-def fetch_polymarket_by_series():
-    #Returns dict: series_name -> list of events
-    with open("statics/polymarket_us_event_to_market_mapping.json", "r") as f:
-        poly_events = json.load(f)
-
-    poly_by_series = defaultdict(list)
-    
-    for category, series_dict in poly_events.items():
-        for series_name, events_dict in series_dict.items():
-            for event_name, event in events_dict.items():
-                title = event.get("title", "")
-                subtitle = event.get("subtitle", "")
-                
-                poly_by_series[series_name].append({
-                    "title": f"{title} {subtitle}".lower(),
-                    "category": category,
-                    "series_name": series_name,
-                    "event_name": event_name,
-                    "norm": normalize(f"{title} {subtitle}"),
-                })
-    
-    return poly_by_series
-
-
-def correlate_per_series(kalshi_by_series, poly_by_series, cheap_threshold=0.45, llm_threshold=0.9):
-    #Process each series independently
-    all_matches = {}
-    
-    # Find common series between both exchanges
-    common_series = set(kalshi_by_series.keys()) & set(poly_by_series.keys())
-    print(f"Found {len(common_series)} common series: {common_series}")
-    
-    for series_name in common_series:
-        print(f"\n--- Processing series: {series_name} ---")
-        kalshi_events = kalshi_by_series[series_name]
-        poly_events = poly_by_series[series_name]
-        
-        matches = correlate_small(kalshi_events, poly_events, cheap_threshold, llm_threshold)
-        all_matches[series_name] = matches
-    
-    return all_matches
-
-
-def save_cross_exchange_mappings_per_series(all_matches, output_dir="statics/cross_exchange_statics"):
-    #Save mappings, one file per series
-    os.makedirs(output_dir, exist_ok=True)
-
-    for series_name, matches in all_matches.items():
-        payload = {
-            "POLYMARKET_KALSHI_MAPPING": {
-                "Moneyline_Events": [
-                    {
-                        "polymarket_event": p["event_name"],
-                        "kalshi_event": k["event_name"],
-                    }
-                    for _, _, k, p in matches
-                ]
-            }
-        }
-        
-        filename = f"{series_name}_mapping.json"
-        filepath = os.path.join(output_dir, filename)
-        
-        with open(filepath, "w", encoding="utf-8") as f:
-            json.dump(payload, f, indent=2)
-        
-        print(f"Saved {len(matches)} matches to {filepath}")
-
-if __name__ == "__main__":
-    print("Fetching Kalshi markets by series...")
-    kalshi_by_series = fetch_kalshi_by_series()
-    print(f"Kalshi series: {len(kalshi_by_series)}")
-
-    print("Fetching Polymarket markets by series...")
-    poly_by_series = fetch_polymarket_by_series()
-    print(f"Polymarket series: {len(poly_by_series)}")
-
-    print("\nCorrelating per series...\n")
-    all_matches = correlate_per_series(kalshi_by_series, poly_by_series)
-
-    print("\nSaving mappings per series...")
-    save_cross_exchange_mappings_per_series(all_matches)
-"""

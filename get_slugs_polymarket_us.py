@@ -12,6 +12,7 @@ from cryptography.hazmat.primitives.asymmetric import ed25519
 
 BASE_URL = "https://gateway.polymarket.us"
 EVENTS_FILE = "statics/all_polymarket_us_events.json"
+STATICS_FILE = "statics/statics.json"
 EVENT_MARKET_MAPPING_FILE = "statics/polymarket_us_event_to_market_mapping.json"
 
 PAGE_LIMIT = 1000
@@ -129,7 +130,11 @@ def build_event_to_market_mapping():
     """
     category -> series -> event -> metadata
     """
+    polymarket_us_statics = {}
     mapping = defaultdict(lambda: defaultdict(dict))
+    
+    with open(STATICS_FILE, "r") as f:
+        statics = json.load(f)
 
     with open(EVENTS_FILE, "r") as f:
         events = json.load(f)
@@ -163,6 +168,12 @@ def build_event_to_market_mapping():
                 "subtitle": subtitle,
                 "market_slugs": market_slugs
             }
+        
+        polymarket_us_statics[event_slug] = event_slug
+            
+    statics["ASSET_ID_MAPPING"]["Polymarket_US"] = polymarket_us_statics
+    with open(STATICS_FILE, "w") as f:
+        json.dump(statics, f, indent=4)
 
     with open(EVENT_MARKET_MAPPING_FILE, "w") as f:
         json.dump(mapping, f, indent=4)
