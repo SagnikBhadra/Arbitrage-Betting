@@ -254,7 +254,7 @@ def extract_event_date(event_name):
     
     return None
 
-def correlate_small(kalshi, poly, cheap_threshold=0.45, llm_threshold=0.9):
+def correlate_small(kalshi, poly, cheap_threshold=0.45, llm_threshold=0.95):
     candidates = []
     try:
         for k in kalshi:
@@ -275,8 +275,8 @@ def correlate_small(kalshi, poly, cheap_threshold=0.45, llm_threshold=0.9):
             if llm_score >= llm_threshold:
                 print(f"Cheap score: {cheap_score:.2f} | LLM score: {llm_score:.2f} | Kalshi: {k['title']} | Polymarket: {p['title']}")
                 results.append((llm_score, cheap_score, k, p))
-                if len(results) >= 10:  # Limit to top 10 matches for testing
-                    break
+                #if len(results) >= 10:  # Limit to top 10 matches for testing
+                #    break
                 continue
             time.sleep(0.5)  # Increased from 0.2s to 0.5s between calls
     except Exception as e:

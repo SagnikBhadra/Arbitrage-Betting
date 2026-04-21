@@ -71,6 +71,7 @@ class PolymarketUSWebSocket:
         while True:
             try:
                 self.logger.info(f"Connecting to {self.url}")
+                print(f"Connecting to {self.url}")
 
                 headers = self._build_auth_headers()
                 
@@ -85,10 +86,12 @@ class PolymarketUSWebSocket:
                 await self.send_subscribe()
                 self.connected.set()
 
+                print(f"Connected to {self.url}")
                 self.logger.info(f"Connected to {self.url}")
                 return
 
             except Exception as e:
+                print(f"Connection failed: {e}. Retrying in 2 seconds...")
                 self.logger.error(f"Connection failed: {e}")
                 await asyncio.sleep(2)
 
@@ -96,7 +99,7 @@ class PolymarketUSWebSocket:
         subscribe_payload = {
             "subscribe": {
                 "requestId": "md-sub-1",
-                "subscriptionType": "SUBSCRIPTION_TYPE_MARKET_DATA",
+                "subscriptionType": "SUBSCRIPTION_TYPE_MARKET_DATA", # MARKET_DATA
                 "marketSlugs": self.slugs
             }
         }
@@ -111,6 +114,7 @@ class PolymarketUSWebSocket:
         while True:
             try:
                 msg = await self.ws.recv()
+                print(msg)
 
                 if msg == "PONG":
                     continue
@@ -146,7 +150,8 @@ class PolymarketUSWebSocket:
     #
 
     async def handle_message(self, msg):
-        #self.logger.info(f"Received message: {msg}")
+        self.logger.info(f"Received message: {msg}")
+        print(f"Received message: {msg}")
         subscription_type = msg.get("subscriptionType")
 
         if subscription_type == "SUBSCRIPTION_TYPE_MARKET_DATA":
@@ -221,7 +226,7 @@ if __name__ == "__main__":
     polymarket_client = PolymarketUSWebSocket(
         WS_URL_BASE,
         CHANNEL_TYPE,
-        ["aec-cbb-oregst-sea-2026-02-15"],
+        ["mlb-hou-cle-2026-04-21"],
         api_key_id,
         key_file_path
     )
