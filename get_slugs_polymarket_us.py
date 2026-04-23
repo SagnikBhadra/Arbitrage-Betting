@@ -159,6 +159,7 @@ def build_event_to_market_mapping():
                 continue
             
             slug = market.get("slug")
+            polymarket_us_statics[slug] = slug
             if slug:
                 market_slugs.append(slug)
 
@@ -169,7 +170,6 @@ def build_event_to_market_mapping():
                 "market_slugs": market_slugs
             }
         
-        polymarket_us_statics[event_slug] = event_slug
             
     statics["ASSET_ID_MAPPING"]["Polymarket_US"] = polymarket_us_statics
     with open(STATICS_FILE, "w") as f:
