@@ -182,6 +182,9 @@ class IntraKalshiArbitrage:
                                 #self.logger.warning(f"Insufficient balance. Required: ${required_balance:.2f}, Available: ${self.cached_balance:.2f}")
                                 order_size = math.floor(Decimal(str(self.cached_balance)) / cost_of_single_share)
                                 
+                            # TODO: Skip if order size is 0 after balance check
+                                
+                                
                             # Track profit
                             self.overall_order_count += order_size
                             self.overall_profit += max((Decimal("1.0") - cost_of_single_share) * order_size , 0)
