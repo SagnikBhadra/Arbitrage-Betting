@@ -1,162 +1,6 @@
 {
     "sports": {
-        "nba-2025": {
-            "nba-bos-phi-2026-04-24": {
-                "title": "boston vs. philadelphia 2026-04-24",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-nba-bos-phi-2026-04-24"
-                ]
-            },
-            "nba-lal-hou-2026-04-24": {
-                "title": "los angeles l vs. houston 2026-04-24",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-nba-lal-hou-2026-04-24"
-                ]
-            },
-            "nba-sa-por-2026-04-24": {
-                "title": "san antonio vs. portland 2026-04-24",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-nba-sa-por-2026-04-24"
-                ]
-            },
-            "nba-ny-atl-2026-04-25": {
-                "title": "new york vs. atlanta 2026-04-25",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-nba-ny-atl-2026-04-25"
-                ]
-            },
-            "nba-den-min-2026-04-25": {
-                "title": "denver vs. minnesota 2026-04-25",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-nba-den-min-2026-04-25"
-                ]
-            },
-            "nba-det-orl-2026-04-25": {
-                "title": "detroit vs. orlando 2026-04-25",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-nba-det-orl-2026-04-25"
-                ]
-            },
-            "nba-okc-pho-2026-04-25": {
-                "title": "oklahoma city vs. phoenix 2026-04-25",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-nba-okc-pho-2026-04-25"
-                ]
-            },
-            "nba-cle-tor-2026-04-26": {
-                "title": "cleveland vs. toronto 2026-04-26",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-nba-cle-tor-2026-04-26"
-                ]
-            },
-            "nba-sa-por-2026-04-26": {
-                "title": "san antonio vs. portland 2026-04-26",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-nba-sa-por-2026-04-26"
-                ]
-            },
-            "nba-bos-phi-2026-04-26": {
-                "title": "boston vs. philadelphia 2026-04-26",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-nba-bos-phi-2026-04-26"
-                ]
-            },
-            "nba-lal-hou-2026-04-26": {
-                "title": "los angeles l vs. houston 2026-04-26",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-nba-lal-hou-2026-04-26"
-                ]
-            },
-            "nba-det-orl-2026-04-27": {
-                "title": "detroit vs. orlando 2026-04-27",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-nba-det-orl-2026-04-27"
-                ]
-            },
-            "nba-min-den-2026-04-27": {
-                "title": "minnesota vs. denver 2026-04-27",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-nba-min-den-2026-04-27"
-                ]
-            },
-            "nba-okc-pho-2026-04-27": {
-                "title": "oklahoma city vs. phoenix 2026-04-27",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-nba-okc-pho-2026-04-27"
-                ]
-            },
-            "nba-phi-bos-2026-04-28": {
-                "title": "philadelphia vs. boston 2026-04-28",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-nba-phi-bos-2026-04-28"
-                ]
-            },
-            "nba-atl-ny-2026-04-28": {
-                "title": "atlanta vs. new york 2026-04-28",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-nba-atl-ny-2026-04-28"
-                ]
-            },
-            "nba-por-sa-2026-04-28": {
-                "title": "portland vs. san antonio 2026-04-28",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-nba-por-sa-2026-04-28"
-                ]
-            },
-            "nba-hou-lal-2026-04-29": {
-                "title": "houston vs. los angeles l 2026-04-29",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-nba-hou-lal-2026-04-29"
-                ]
-            },
-            "nba-tor-cle-2026-04-29": {
-                "title": "toronto vs. cleveland 2026-04-29",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-nba-tor-cle-2026-04-29"
-                ]
-            }
-        },
         "nhl-2025": {
-            "nhl-tb-mon-2026-04-24": {
-                "title": "tb lightning vs. mon canadiens 2026-04-24",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-nhl-tb-mon-2026-04-24"
-                ]
-            },
-            "nhl-veg-uta-2026-04-24": {
-                "title": "veg golden knights vs. uta mammoth 2026-04-24",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-nhl-veg-uta-2026-04-24"
-                ]
-            },
-            "nhl-edm-ana-2026-04-24": {
-                "title": "edm oilers vs. ana ducks 2026-04-24",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-nhl-edm-ana-2026-04-24"
-                ]
-            },
             "nhl-car-ott-2026-04-25": {
                 "title": "car hurricanes vs. ott senators 2026-04-25",
                 "subtitle": "",
@@ -298,65 +142,237 @@
                 "market_slugs": [
                     "aec-ufc-jaffil-coddur-2026-04-25"
                 ]
+            },
+            "ufc-timell-steerc-2026-05-02": {
+                "title": "tim elliott vs. steve erceg 2026-05-02",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-ufc-timell-steerc-2026-05-02"
+                ]
+            },
+            "ufc-robbry-camrow-2026-05-02": {
+                "title": "robert bryczek vs. cam rowston 2026-05-02",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-ufc-robbry-camrow-2026-05-02"
+                ]
+            },
+            "ufc-germee-jacmal-2026-05-02": {
+                "title": "gerald meerschaert vs. jacob malkoun 2026-05-02",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-ufc-germee-jacmal-2026-05-02"
+                ]
+            },
+            "ufc-thegor-jonmic-2026-05-02": {
+                "title": "themba gorimbo vs. jonathan micallef 2026-05-02",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-ufc-thegor-jonmic-2026-05-02"
+                ]
+            },
+            "ufc-juntaf-kevchr-2026-05-02": {
+                "title": "junior tafa vs. kevin christian 2026-05-02",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-ufc-juntaf-kevchr-2026-05-02"
+                ]
+            },
+            "ufc-shagaz-braper-2026-05-02": {
+                "title": "shamil gaziev vs. brando pericic 2026-05-02",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-ufc-shagaz-braper-2026-05-02"
+                ]
+            },
+            "ufc-carpra-jacdel-2026-05-02": {
+                "title": "carlos prates vs. jack della maddalena 2026-05-02",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-ufc-carpra-jacdel-2026-05-02"
+                ]
+            },
+            "ufc-bendar-quisal-2026-05-02": {
+                "title": "beneil dariush vs. quillan salkilld 2026-05-02",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-ufc-bendar-quisal-2026-05-02"
+                ]
+            },
+            "ufc-dommar-kodste-2026-05-02": {
+                "title": "dom mar fan vs. kody steele 2026-05-02",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-ufc-dommar-kodste-2026-05-02"
+                ]
+            },
+            "ufc-vinmor-colthi-2026-05-02": {
+                "title": "vince morales vs. colby thicknesse 2026-05-02",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-ufc-vinmor-colthi-2026-05-02"
+                ]
+            },
+            "ufc-taitui-lousut-2026-05-02": {
+                "title": "tai tuivasa vs. louie sutherland 2026-05-02",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-ufc-taitui-lousut-2026-05-02"
+                ]
+            }
+        },
+        "nba-2025": {
+            "nba-ny-atl-2026-04-25": {
+                "title": "new york vs. atlanta 2026-04-25",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-nba-ny-atl-2026-04-25"
+                ]
+            },
+            "nba-den-min-2026-04-25": {
+                "title": "denver vs. minnesota 2026-04-25",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-nba-den-min-2026-04-25"
+                ]
+            },
+            "nba-det-orl-2026-04-25": {
+                "title": "detroit vs. orlando 2026-04-25",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-nba-det-orl-2026-04-25"
+                ]
+            },
+            "nba-okc-pho-2026-04-25": {
+                "title": "oklahoma city vs. phoenix 2026-04-25",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-nba-okc-pho-2026-04-25"
+                ]
+            },
+            "nba-cle-tor-2026-04-26": {
+                "title": "cleveland vs. toronto 2026-04-26",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-nba-cle-tor-2026-04-26"
+                ]
+            },
+            "nba-sa-por-2026-04-26": {
+                "title": "san antonio vs. portland 2026-04-26",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-nba-sa-por-2026-04-26"
+                ]
+            },
+            "nba-bos-phi-2026-04-26": {
+                "title": "boston vs. philadelphia 2026-04-26",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-nba-bos-phi-2026-04-26"
+                ]
+            },
+            "nba-lal-hou-2026-04-26": {
+                "title": "los angeles l vs. houston 2026-04-26",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-nba-lal-hou-2026-04-26"
+                ]
+            },
+            "nba-det-orl-2026-04-27": {
+                "title": "detroit vs. orlando 2026-04-27",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-nba-det-orl-2026-04-27"
+                ]
+            },
+            "nba-min-den-2026-04-27": {
+                "title": "minnesota vs. denver 2026-04-27",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-nba-min-den-2026-04-27"
+                ]
+            },
+            "nba-okc-pho-2026-04-27": {
+                "title": "oklahoma city vs. phoenix 2026-04-27",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-nba-okc-pho-2026-04-27"
+                ]
+            },
+            "nba-phi-bos-2026-04-28": {
+                "title": "philadelphia vs. boston 2026-04-28",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-nba-phi-bos-2026-04-28"
+                ]
+            },
+            "nba-atl-ny-2026-04-28": {
+                "title": "atlanta vs. new york 2026-04-28",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-nba-atl-ny-2026-04-28"
+                ]
+            },
+            "nba-por-sa-2026-04-28": {
+                "title": "portland vs. san antonio 2026-04-28",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-nba-por-sa-2026-04-28"
+                ]
+            },
+            "nba-hou-lal-2026-04-29": {
+                "title": "houston vs. los angeles l 2026-04-29",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-nba-hou-lal-2026-04-29"
+                ]
+            },
+            "nba-tor-cle-2026-04-29": {
+                "title": "toronto vs. cleveland 2026-04-29",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-nba-tor-cle-2026-04-29"
+                ]
+            }
+        },
+        "ipl-2026": {
+            "ipl-dcap-pbks-2026-04-25": {
+                "title": "delhi capitals vs. punjab kings",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-ipl-dcap-pbks-2026-04-25"
+                ]
+            },
+            "ipl-raj-srh-2026-04-25": {
+                "title": "rajasthan royals vs. sunrisers hyderabad",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-ipl-raj-srh-2026-04-25"
+                ]
+            },
+            "ipl-csk-guj-2026-04-26": {
+                "title": "chennai super kings vs. gujarat titans",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-ipl-csk-guj-2026-04-26"
+                ]
+            },
+            "ipl-lsg-kkr-2026-04-26": {
+                "title": "lucknow super giants vs. kolkata knight riders",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-ipl-lsg-kkr-2026-04-26"
+                ]
+            },
+            "ipl-dcap-rcb-2026-04-27": {
+                "title": "delhi capitals vs. royal challengers bengaluru",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-ipl-dcap-rcb-2026-04-27"
+                ]
             }
         },
         "league-of-legends": {
-            "lol-hle-krx-2026-04-24": {
-                "title": "hanwha life esports vs. kiwoom drx",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-lol-hle-krx-2026-04-24"
-                ]
-            },
-            "lol-jdg-ig-2026-04-24": {
-                "title": "jd gaming vs. invictus gaming",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-lol-jdg-ig-2026-04-24"
-                ]
-            },
-            "lol-shft-fnc-2026-04-24": {
-                "title": "shifters vs. fnatic",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-lol-shft-fnc-2026-04-24"
-                ]
-            },
-            "lol-navi-kc-2026-04-24": {
-                "title": "natus vincere vs. karmine corp",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-lol-navi-kc-2026-04-24"
-                ]
-            },
-            "lol-tes-nip-2026-04-25": {
-                "title": "top esports vs. ninjas in pyjamas",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-lol-tes-nip-2026-04-25"
-                ]
-            },
-            "lol-t1-bro-2026-04-25": {
-                "title": "t1 vs. hanjin brion",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-lol-t1-bro-2026-04-25"
-                ]
-            },
-            "lol-we-jdg-2026-04-25": {
-                "title": "team we vs. jd gaming",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-lol-we-jdg-2026-04-25"
-                ]
-            },
-            "lol-dk-dns-2026-04-25": {
-                "title": "dplus kia vs. dn soopers",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-lol-dk-dns-2026-04-25"
-                ]
-            },
             "lol-wb-al-2026-04-25": {
                 "title": "weibo gaming vs. anyone's legend",
                 "subtitle": "",
@@ -475,144 +491,23 @@
                 "market_slugs": [
                     "aec-lol-tl-sen-2026-04-26"
                 ]
-            }
-        },
-        "ipl-2026": {
-            "ipl-rcb-guj-2026-04-24": {
-                "title": "royal challengers bengaluru vs. gujarat titans",
+            },
+            "lol-ig-al-2026-04-28": {
+                "title": "invictus gaming vs. anyone's legend",
                 "subtitle": "",
                 "market_slugs": [
-                    "aec-ipl-rcb-guj-2026-04-24"
+                    "aec-lol-ig-al-2026-04-28"
                 ]
             },
-            "ipl-dcap-pbks-2026-04-25": {
-                "title": "delhi capitals vs. punjab kings",
+            "lol-wb-tes-2026-04-28": {
+                "title": "weibo gaming vs. top esports",
                 "subtitle": "",
                 "market_slugs": [
-                    "aec-ipl-dcap-pbks-2026-04-25"
-                ]
-            },
-            "ipl-raj-srh-2026-04-25": {
-                "title": "rajasthan royals vs. sunrisers hyderabad",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-ipl-raj-srh-2026-04-25"
-                ]
-            },
-            "ipl-csk-guj-2026-04-26": {
-                "title": "chennai super kings vs. gujarat titans",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-ipl-csk-guj-2026-04-26"
-                ]
-            },
-            "ipl-lsg-kkr-2026-04-26": {
-                "title": "lucknow super giants vs. kolkata knight riders",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-ipl-lsg-kkr-2026-04-26"
+                    "aec-lol-wb-tes-2026-04-28"
                 ]
             }
         },
         "atp-2026": {
-            "atp-andrub-vitkop-2026-04-23": {
-                "title": "andrey rublev vs. vit kopriva 2026-04-23",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-atp-andrub-vitkop-2026-04-23"
-                ]
-            },
-            "atp-eminav-valvac-2026-04-23": {
-                "title": "emilio nava vs. valentin vacherot 2026-04-23",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-atp-eminav-valvac-2026-04-23"
-                ]
-            },
-            "atp-joafon-marcil-2026-04-23": {
-                "title": "joao fonseca vs. marin cilic 2026-04-23",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-atp-joafon-marcil-2026-04-23"
-                ]
-            },
-            "atp-artfil-ignbus-2026-04-23": {
-                "title": "arthur fils vs. ignacio buse 2026-04-23",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-atp-artfil-ignbus-2026-04-23"
-                ]
-            },
-            "atp-benshe-dinpri-2026-04-23": {
-                "title": "ben shelton vs. dino prizmic 2026-04-23",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-atp-benshe-dinpri-2026-04-23"
-                ]
-            },
-            "atp-thitir-tompau-2026-04-23": {
-                "title": "thiago agustin tirante vs. tommy paul 2026-04-23",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-atp-thitir-tompau-2026-04-23"
-                ]
-            },
-            "atp-sebofn-tometc-2026-04-23": {
-                "title": "sebastian ofner vs. tomas etcheverry 2026-04-23",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-atp-sebofn-tometc-2026-04-23"
-                ]
-            },
-            "atp-elmmoe-gabdia-2026-04-23": {
-                "title": "elmer moeller vs. gabriel diallo 2026-04-23",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-atp-elmmoe-gabdia-2026-04-23"
-                ]
-            },
-            "atp-jansin-benbon-2026-04-23": {
-                "title": "jannik sinner vs. benjamin bonzi 2026-04-23",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-atp-jansin-benbon-2026-04-23"
-                ]
-            },
-            "atp-camnor-tommac-2026-04-23": {
-                "title": "cameron norrie vs. tomas machac 2026-04-23",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-atp-camnor-tommac-2026-04-23"
-                ]
-            },
-            "atp-nichar-jacken-2026-04-23": {
-                "title": "nick hardt vs. jack kennedy 2026-04-23",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-atp-nichar-jacken-2026-04-23"
-                ]
-            },
-            "atp-jirleh-aletab-2026-04-23": {
-                "title": "jiri lehecka vs. alejandro tabilo 2026-04-23",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-atp-jirleh-aletab-2026-04-23"
-                ]
-            },
-            "atp-rafjod-alemin-2026-04-24": {
-                "title": "rafael jodar vs. alex de minaur 2026-04-24",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-atp-rafjod-alemin-2026-04-24"
-                ]
-            },
-            "atp-kilfel-cletab-2026-04-24": {
-                "title": "kilian feldbausch vs. clement tabur 2026-04-24",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-atp-kilfel-cletab-2026-04-24"
-                ]
-            },
             "atp-ugohum-teratm-2026-04-24": {
                 "title": "ugo humbert vs. terence atmane 2026-04-24",
                 "subtitle": "",
@@ -625,34 +520,6 @@
                 "subtitle": "",
                 "market_slugs": [
                     "aec-atp-branak-aleblo-2026-04-24"
-                ]
-            },
-            "atp-fracer-yanhan-2026-04-24": {
-                "title": "francisco cerundolo vs. yannick hanfmann 2026-04-24",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-atp-fracer-yanhan-2026-04-24"
-                ]
-            },
-            "atp-alefok-pabbus-2026-04-24": {
-                "title": "alejandro davidovich fokina vs. pablo carreno busta 2026-04-24",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-atp-alefok-pabbus-2026-04-24"
-                ]
-            },
-            "atp-andvav-poltif-2026-04-24": {
-                "title": "andrea vavassori vs. pol martin tiffon 2026-04-24",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-atp-andvav-poltif-2026-04-24"
-                ]
-            },
-            "atp-jaumun-casruu-2026-04-24": {
-                "title": "jaume munar vs. casper ruud 2026-04-24",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-atp-jaumun-casruu-2026-04-24"
                 ]
             },
             "atp-danmed-fabmar-2026-04-24": {
@@ -669,25 +536,11 @@
                     "aec-atp-marnav-alezve-2026-04-24"
                 ]
             },
-            "atp-mardam-jakmen-2026-04-24": {
-                "title": "martin damm vs. jakub mensik 2026-04-24",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-atp-mardam-jakmen-2026-04-24"
-                ]
-            },
             "atp-leatie-adoval-2026-04-24": {
                 "title": "learner tien vs. adolfo vallejo 2026-04-24",
                 "subtitle": "",
                 "market_slugs": [
                     "aec-atp-leatie-adoval-2026-04-24"
-                ]
-            },
-            "atp-filjia-andgue-2026-04-24": {
-                "title": "filip jianu vs. andrea guerrieri 2026-04-24",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-atp-filjia-andgue-2026-04-24"
                 ]
             },
             "atp-vilgau-felaug-2026-04-24": {
@@ -704,25 +557,11 @@
                     "aec-atp-alebub-stetsi-2026-04-24"
                 ]
             },
-            "atp-juacer-lucdar-2026-04-24": {
-                "title": "juan manuel cerundolo vs. luciano darderi 2026-04-24",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-atp-juacer-lucdar-2026-04-24"
-                ]
-            },
             "atp-camcar-flacob-2026-04-24": {
                 "title": "camilo ugo carabelli vs. flavio cobolli 2026-04-24",
                 "subtitle": "",
                 "market_slugs": [
                     "aec-atp-camcar-flacob-2026-04-24"
-                ]
-            },
-            "atp-karkha-adawal-2026-04-24": {
-                "title": "karen khachanov vs. adam walton 2026-04-24",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-atp-karkha-adawal-2026-04-24"
                 ]
             },
             "atp-danagu-cormou-2026-04-24": {
@@ -732,20 +571,6 @@
                     "aec-atp-danagu-cormou-2026-04-24"
                 ]
             },
-            "atp-maxcha-karben-2026-04-24": {
-                "title": "maxime chazal vs. karim bennani 2026-04-24",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-atp-maxcha-karben-2026-04-24"
-                ]
-            },
-            "atp-andand-nisbas-2026-04-24": {
-                "title": "andres andrade vs. nishesh basavareddy 2026-04-24",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-atp-andand-nisbas-2026-04-24"
-                ]
-            },
             "atp-nickja-densha-2026-04-24": {
                 "title": "nicolai budkov kjaer vs. denis shapovalov 2026-04-24",
                 "subtitle": "",
@@ -753,162 +578,113 @@
                     "aec-atp-nickja-densha-2026-04-24"
                 ]
             },
-            "atp-flobax-calhem-2026-04-24": {
-                "title": "florent bax vs. calvin hemery 2026-04-24",
+            "atp-talgri-lormus-2026-04-26": {
+                "title": "tallon griekspoor vs. lorenzo musetti 2026-04-26",
                 "subtitle": "",
                 "market_slugs": [
-                    "aec-atp-flobax-calhem-2026-04-24"
+                    "aec-atp-talgri-lormus-2026-04-26"
                 ]
             },
-            "atp-gauonc-meralk-2026-04-24": {
-                "title": "gauthier onclin vs. mert alkaya 2026-04-24",
+            "atp-dalsvr-jacvas-2026-04-25": {
+                "title": "dalibor svrcina vs. jacopo vasami 2026-04-25",
                 "subtitle": "",
                 "market_slugs": [
-                    "aec-atp-gauonc-meralk-2026-04-24"
+                    "aec-atp-dalsvr-jacvas-2026-04-25"
                 ]
             },
-            "atp-yanere-hamste-2026-04-24": {
-                "title": "yanki erel vs. hamish stewart 2026-04-24",
+            "atp-jirleh-alemic-2026-04-25": {
+                "title": "jiri lehecka vs. alex michelsen 2026-04-25",
                 "subtitle": "",
                 "market_slugs": [
-                    "aec-atp-yanere-hamste-2026-04-24"
+                    "aec-atp-jirleh-alemic-2026-04-25"
                 ]
             },
-            "atp-mitkru-dangal-2026-04-24": {
-                "title": "mitchell krueger vs. daniel galan 2026-04-24",
+            "atp-artfil-eminav-2026-04-25": {
+                "title": "arthur fils vs. emilio nava 2026-04-25",
                 "subtitle": "",
                 "market_slugs": [
-                    "aec-atp-mitkru-dangal-2026-04-24"
+                    "aec-atp-artfil-eminav-2026-04-25"
                 ]
             },
-            "atp-aughol-learie-2026-04-24": {
-                "title": "august holmgren vs. leandro riedi 2026-04-24",
+            "atp-dinpri-tometc-2026-04-25": {
+                "title": "dino prizmic vs. tomas etcheverry 2026-04-25",
                 "subtitle": "",
                 "market_slugs": [
-                    "aec-atp-aughol-learie-2026-04-24"
+                    "aec-atp-dinpri-tometc-2026-04-25"
                 ]
             },
-            "atp-sookwo-yuhhsu-2026-04-24": {
-                "title": "soon-woo kwon vs. yu-hsiou hsu 2026-04-24",
+            "atp-jansin-elmmoe-2026-04-25": {
+                "title": "jannik sinner vs. elmer moeller 2026-04-25",
                 "subtitle": "",
                 "market_slugs": [
-                    "aec-atp-sookwo-yuhhsu-2026-04-24"
+                    "aec-atp-jansin-elmmoe-2026-04-25"
+                ]
+            },
+            "atp-andgue-poltif-2026-04-25": {
+                "title": "andrea guerrieri vs. pol martin tiffon 2026-04-25",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-atp-andgue-poltif-2026-04-25"
+                ]
+            },
+            "atp-vitkop-artrin-2026-04-25": {
+                "title": "vit kopriva vs. arthur rinderknech 2026-04-25",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-atp-vitkop-artrin-2026-04-25"
+                ]
+            },
+            "atp-joafon-rafjod-2026-04-25": {
+                "title": "joao fonseca vs. rafael jodar 2026-04-25",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-atp-joafon-rafjod-2026-04-25"
+                ]
+            },
+            "atp-gauonc-calhem-2026-04-25": {
+                "title": "gauthier onclin vs. calvin hemery 2026-04-25",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-atp-gauonc-calhem-2026-04-25"
+                ]
+            },
+            "atp-maxcha-hamste-2026-04-25": {
+                "title": "maxime chazal vs. hamish stewart 2026-04-25",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-atp-maxcha-hamste-2026-04-25"
+                ]
+            },
+            "atp-kilfel-jacken-2026-04-25": {
+                "title": "kilian feldbausch vs. jack kennedy 2026-04-25",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-atp-kilfel-jacken-2026-04-25"
+                ]
+            },
+            "atp-camnor-thitir-2026-04-26": {
+                "title": "cameron norrie vs. thiago agustin tirante 2026-04-26",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-atp-camnor-thitir-2026-04-26"
+                ]
+            },
+            "atp-dangal-nisbas-2026-04-25": {
+                "title": "daniel galan vs. nishesh basavareddy 2026-04-25",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-atp-dangal-nisbas-2026-04-25"
+                ]
+            },
+            "atp-aughol-sookwo-2026-04-25": {
+                "title": "august holmgren vs. soon-woo kwon 2026-04-25",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-atp-aughol-sookwo-2026-04-25"
                 ]
             }
         },
         "wta-2026": {
-            "wta-zeyson-cribuc-2026-04-23": {
-                "title": "zeynep sonmez vs. cristina bucsa 2026-04-23",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-wta-zeyson-cribuc-2026-04-23"
-                ]
-            },
-            "wta-gabrus-eleryb-2026-04-23": {
-                "title": "gabriela ruse vs. elena rybakina 2026-04-23",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-wta-gabrus-eleryb-2026-04-23"
-                ]
-            },
-            "wta-elimer-aleeal-2026-04-23": {
-                "title": "elise mertens vs. alexandra eala 2026-04-23",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-wta-elimer-aleeal-2026-04-23"
-                ]
-            },
-            "wta-linnos-emiara-2026-04-23": {
-                "title": "linda noskova vs. emiliana arango 2026-04-23",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-wta-linnos-emiara-2026-04-23"
-                ]
-            },
-            "wta-jantje-liusam-2026-04-23": {
-                "title": "janice tjen vs. liudmila samsonova 2026-04-23",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-wta-jantje-liusam-2026-04-23"
-                ]
-            },
-            "wta-yulput-markos-2026-04-23": {
-                "title": "yulia putintseva vs. marta kostyuk 2026-04-23",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-wta-yulput-markos-2026-04-23"
-                ]
-            },
-            "wta-simwal-jelost-2026-04-23": {
-                "title": "simona waltert vs. jelena ostapenko 2026-04-23",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-wta-simwal-jelost-2026-04-23"
-                ]
-            },
-            "wta-leojea-cocgau-2026-04-23": {
-                "title": "leolia jeanjean vs. coco gauff 2026-04-23",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-wta-leojea-cocgau-2026-04-23"
-                ]
-            },
-            "wta-polkud-lucbro-2026-04-23": {
-                "title": "polina kudermetova vs. lucia bronzetti 2026-04-23",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-wta-polkud-lucbro-2026-04-23"
-                ]
-            },
-            "wta-jespeg-katbou-2026-04-23": {
-                "title": "jessica pegula vs. katie boulter 2026-04-23",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-wta-jespeg-katbou-2026-04-23"
-                ]
-            },
-            "wta-catmcn-vicmbo-2026-04-23": {
-                "title": "caty mcnally vs. victoria mboko 2026-04-23",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-wta-catmcn-vicmbo-2026-04-23"
-                ]
-            },
-            "wta-sorcir-tyrgra-2026-04-23": {
-                "title": "sorana cirstea vs. tyra caterina grant 2026-04-23",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-wta-sorcir-tyrgra-2026-04-23"
-                ]
-            },
-            "wta-clatau-katsin-2026-04-24": {
-                "title": "clara tauson vs. katerina siniakova 2026-04-24",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-wta-clatau-katsin-2026-04-24"
-                ]
-            },
-            "wta-lausam-annbon-2026-04-24": {
-                "title": "laura samson vs. anna bondar 2026-04-24",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-wta-lausam-annbon-2026-04-24"
-                ]
-            },
-            "wta-belben-diashn-2026-04-24": {
-                "title": "belinda bencic vs. diana shnaider 2026-04-24",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-wta-belben-diashn-2026-04-24"
-                ]
-            },
-            "wta-linkli-yueyua-2026-04-24": {
-                "title": "linda klimovicova vs. yue yuan 2026-04-24",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-wta-linkli-yueyua-2026-04-24"
-                ]
-            },
             "wta-arysab-jaqcri-2026-04-24": {
                 "title": "aryna sabalenka vs. jaqueline cristian 2026-04-24",
                 "subtitle": "",
@@ -937,13 +713,6 @@
                     "aec-wta-leyfer-ivajov-2026-04-24"
                 ]
             },
-            "wta-elepri-fiofer-2026-04-24": {
-                "title": "elena pridankina vs. fiona ferro 2026-04-24",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-wta-elepri-fiofer-2026-04-24"
-                ]
-            },
             "wta-haibap-jaspao-2026-04-24": {
                 "title": "hailey baptiste vs. jasmine paolini 2026-04-24",
                 "subtitle": "",
@@ -957,107 +726,72 @@
                 "market_slugs": [
                     "aec-wta-mirand-dalgal-2026-04-24"
                 ]
+            },
+            "wta-elimer-karpli-2026-04-25": {
+                "title": "elise mertens vs. karolina pliskova 2026-04-25",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-wta-elimer-karpli-2026-04-25"
+                ]
+            },
+            "wta-solsie-zeyson-2026-04-25": {
+                "title": "solana sierra vs. zeynep sonmez 2026-04-25",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-wta-solsie-zeyson-2026-04-25"
+                ]
+            },
+            "wta-anapot-jelost-2026-04-25": {
+                "title": "anastasia potapova vs. jelena ostapenko 2026-04-25",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-wta-anapot-jelost-2026-04-25"
+                ]
+            },
+            "wta-qinzhe-eleryb-2026-04-25": {
+                "title": "qinwen zheng vs. elena rybakina 2026-04-25",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-wta-qinzhe-eleryb-2026-04-25"
+                ]
+            },
+            "wta-linnos-liusam-2026-04-25": {
+                "title": "linda noskova vs. liudmila samsonova 2026-04-25",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-wta-linnos-liusam-2026-04-25"
+                ]
+            },
+            "wta-sorcir-cocgau-2026-04-25": {
+                "title": "sorana cirstea vs. coco gauff 2026-04-25",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-wta-sorcir-cocgau-2026-04-25"
+                ]
+            },
+            "wta-fiofer-linkli-2026-04-25": {
+                "title": "fiona ferro vs. linda klimovicova 2026-04-25",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-wta-fiofer-linkli-2026-04-25"
+                ]
+            },
+            "wta-katsin-catmcn-2026-04-25": {
+                "title": "katerina siniakova vs. caty mcnally 2026-04-25",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-wta-katsin-catmcn-2026-04-25"
+                ]
+            },
+            "wta-jespeg-markos-2026-04-25": {
+                "title": "jessica pegula vs. marta kostyuk 2026-04-25",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-wta-jespeg-markos-2026-04-25"
+                ]
             }
         },
         "mlb-2026": {
-            "mlb-det-cin-2026-04-24": {
-                "title": "detroit tigers vs. cincinnati reds 2026-04-24",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-mlb-det-cin-2026-04-24"
-                ]
-            },
-            "mlb-phi-atl-2026-04-24": {
-                "title": "philadelphia phillies vs. atlanta braves 2026-04-24",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-mlb-phi-atl-2026-04-24"
-                ]
-            },
-            "mlb-min-tb-2026-04-24": {
-                "title": "minnesota twins vs. tampa bay rays 2026-04-24",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-mlb-min-tb-2026-04-24"
-                ]
-            },
-            "mlb-bos-bal-2026-04-24": {
-                "title": "boston red sox vs. baltimore orioles 2026-04-24",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-mlb-bos-bal-2026-04-24"
-                ]
-            },
-            "mlb-col-nym-2026-04-24": {
-                "title": "colorado rockies vs. new york mets 2026-04-24",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-mlb-col-nym-2026-04-24"
-                ]
-            },
-            "mlb-cle-tor-2026-04-24": {
-                "title": "cleveland guardians vs. toronto blue jays 2026-04-24",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-mlb-cle-tor-2026-04-24"
-                ]
-            },
-            "mlb-laa-kc-2026-04-24": {
-                "title": "los angeles angels vs. kansas city royals 2026-04-24",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-mlb-laa-kc-2026-04-24"
-                ]
-            },
-            "mlb-pit-mil-2026-04-24": {
-                "title": "pittsburgh pirates vs. milwaukee brewers 2026-04-24",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-mlb-pit-mil-2026-04-24"
-                ]
-            },
-            "mlb-wsh-cws-2026-04-24": {
-                "title": "washington nationals vs. chicago white sox 2026-04-24",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-mlb-wsh-cws-2026-04-24"
-                ]
-            },
-            "mlb-sea-stl-2026-04-24": {
-                "title": "seattle mariners vs. st. louis cardinals 2026-04-24",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-mlb-sea-stl-2026-04-24"
-                ]
-            },
-            "mlb-nyy-hou-2026-04-24": {
-                "title": "new york yankees vs. houston astros 2026-04-24",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-mlb-nyy-hou-2026-04-24"
-                ]
-            },
-            "mlb-ath-tex-2026-04-24": {
-                "title": "athletics vs. texas rangers 2026-04-24",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-mlb-ath-tex-2026-04-24"
-                ]
-            },
-            "mlb-mia-sf-2026-04-24": {
-                "title": "miami marlins vs. san francisco giants 2026-04-24",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-mlb-mia-sf-2026-04-24"
-                ]
-            },
-            "mlb-chc-lad-2026-04-24": {
-                "title": "chicago cubs vs. los angeles dodgers 2026-04-24",
-                "subtitle": "",
-                "market_slugs": [
-                    "aec-mlb-chc-lad-2026-04-24"
-                ]
-            },
             "mlb-sea-stl-2026-04-25": {
                 "title": "seattle mariners vs. st. louis cardinals 2026-04-25",
                 "subtitle": "",
@@ -1161,6 +895,111 @@
                 "subtitle": "",
                 "market_slugs": [
                     "aec-mlb-nyy-hou-2026-04-25"
+                ]
+            },
+            "mlb-bos-bal-2026-04-26": {
+                "title": "boston red sox vs. baltimore orioles 2026-04-26",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-mlb-bos-bal-2026-04-26"
+                ]
+            },
+            "mlb-det-cin-2026-04-26": {
+                "title": "detroit tigers vs. cincinnati reds 2026-04-26",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-mlb-det-cin-2026-04-26"
+                ]
+            },
+            "mlb-min-tb-2026-04-26": {
+                "title": "minnesota twins vs. tampa bay rays 2026-04-26",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-mlb-min-tb-2026-04-26"
+                ]
+            },
+            "mlb-phi-atl-2026-04-26": {
+                "title": "philadelphia phillies vs. atlanta braves 2026-04-26",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-mlb-phi-atl-2026-04-26"
+                ]
+            },
+            "mlb-cle-tor-2026-04-26": {
+                "title": "cleveland guardians vs. toronto blue jays 2026-04-26",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-mlb-cle-tor-2026-04-26"
+                ]
+            },
+            "mlb-col-nym-2026-04-26": {
+                "title": "colorado rockies vs. new york mets 2026-04-26",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-mlb-col-nym-2026-04-26"
+                ]
+            },
+            "mlb-nyy-hou-2026-04-26": {
+                "title": "new york yankees vs. houston astros 2026-04-26",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-mlb-nyy-hou-2026-04-26"
+                ]
+            },
+            "mlb-wsh-cws-2026-04-26": {
+                "title": "washington nationals vs. chicago white sox 2026-04-26",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-mlb-wsh-cws-2026-04-26"
+                ]
+            },
+            "mlb-pit-mil-2026-04-26": {
+                "title": "pittsburgh pirates vs. milwaukee brewers 2026-04-26",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-mlb-pit-mil-2026-04-26"
+                ]
+            },
+            "mlb-sea-stl-2026-04-26": {
+                "title": "seattle mariners vs. st. louis cardinals 2026-04-26",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-mlb-sea-stl-2026-04-26"
+                ]
+            },
+            "mlb-ath-tex-2026-04-26": {
+                "title": "athletics vs. texas rangers 2026-04-26",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-mlb-ath-tex-2026-04-26"
+                ]
+            },
+            "mlb-chc-lad-2026-04-26": {
+                "title": "chicago cubs vs. los angeles dodgers 2026-04-26",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-mlb-chc-lad-2026-04-26"
+                ]
+            },
+            "mlb-sd-az-2026-04-26": {
+                "title": "san diego padres vs. arizona diamondbacks 2026-04-26",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-mlb-sd-az-2026-04-26"
+                ]
+            },
+            "mlb-mia-sf-2026-04-26": {
+                "title": "miami marlins vs. san francisco giants 2026-04-26",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-mlb-mia-sf-2026-04-26"
+                ]
+            },
+            "mlb-laa-kc-2026-04-26": {
+                "title": "los angeles angels vs. kansas city royals 2026-04-26",
+                "subtitle": "",
+                "market_slugs": [
+                    "aec-mlb-laa-kc-2026-04-26"
                 ]
             }
         }
