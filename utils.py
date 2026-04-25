@@ -1,5 +1,5 @@
 import json
-from decimal import Decimal, ROUND_CEILING
+from decimal import ROUND_HALF_UP, Decimal, ROUND_CEILING
 
 def get_asset_ids(market):
     with open("statics/statics.json", "r") as json_file:
@@ -57,12 +57,12 @@ def get_taker_fees_polymarket_us(price, size):
     Returns:
         Taker fees (float)
     """
-    taker_fee_rate = Decimal("0.001")
+    taker_fee_rate = Decimal("0.05")
     price = Decimal(str(price))
     size = Decimal(str(size))
-    fee = taker_fee_rate * size * price
+    fee = taker_fee_rate * size * price * (Decimal("1.0") - price)
     # Round up to 3 decimal places
-    fee_ceiling = fee.quantize(Decimal("0.001"), rounding=ROUND_CEILING)
+    fee_ceiling = fee.quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
     return fee_ceiling
 
 def get_maker_rebate_polymarket_us(price, size):
@@ -73,10 +73,10 @@ def get_maker_rebate_polymarket_us(price, size):
         price: Price of the asset (float)
         size: Size of the order (float)
     """
-    maker_fee_rate = Decimal("0.001")
+    maker_fee_rate = Decimal("0.0125")
     price = Decimal(str(price))
     size = Decimal(str(size))
-    fee = maker_fee_rate * size * price
+    fee = maker_fee_rate * size * price * (Decimal("1.0") - price)
     # Round up to 3 decimal places
-    fee_ceiling = fee.quantize(Decimal("0.001"), rounding=ROUND_CEILING)
+    fee_ceiling = fee.quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
     return fee_ceiling

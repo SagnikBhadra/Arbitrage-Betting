@@ -133,7 +133,7 @@ class PolymarketUSHTTPGateway:
 
         self.logger.info(f"Placing order: {order}")
 
-        #return self._request("POST", "/v1/orders", order)
+        return self._request("POST", "/v1/orders", order)
 
     def cancel_order(self, order_id: str, market_slug: str = None):
         body = {

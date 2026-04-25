@@ -334,9 +334,9 @@
         },
         {
           "polymarket_ticker": "aec-lol-kc-shft-2026-04-25",
-          "kalshi_ticker": "KXLOLMAP-26APR251230SHFTKC-2-KC",
+          "kalshi_ticker": "KXLOLGAME-26APR251230SHFTKC-KC",
           "other_poly_id": "aec-lol-kc-shft-2026-04-25-inverse",
-          "other_kalshi_ticker": "KXLOLMAP-26APR251230SHFTKC-2-SHFT"
+          "other_kalshi_ticker": "KXLOLGAME-26APR251230SHFTKC-SHFT"
         },
         {
           "polymarket_ticker": "aec-lol-ns-gen-2026-04-26",
@@ -370,9 +370,9 @@
         },
         {
           "polymarket_ticker": "aec-nba-cle-tor-2026-04-26",
-          "kalshi_ticker": "KXMLBGAME-26APR261337CLETOR-CLE",
+          "kalshi_ticker": "KXNBAGAME-26APR26CLETOR-CLE",
           "other_poly_id": "aec-nba-cle-tor-2026-04-26-inverse",
-          "other_kalshi_ticker": "KXMLBGAME-26APR261337CLETOR-TOR"
+          "other_kalshi_ticker": "KXNBAGAME-26APR26CLETOR-TOR"
         },
         {
           "polymarket_ticker": "aec-mlb-phi-atl-2026-04-25",
@@ -405,30 +405,6 @@
           "other_kalshi_ticker": "KXWTAMATCH-26APR23SONBUC-BUC"
         },
         {
-          "polymarket_ticker": "aec-atp-rafjod-alemin-2026-04-24",
-          "kalshi_ticker": "KXATPSETWINNER-26APR24JODDE-1-JOD",
-          "other_poly_id": "aec-atp-rafjod-alemin-2026-04-24-inverse",
-          "other_kalshi_ticker": "KXATPSETWINNER-26APR24JODDE-1-DE"
-        },
-        {
-          "polymarket_ticker": "aec-atp-leatie-adoval-2026-04-24",
-          "kalshi_ticker": "KXATPSETWINNER-26APR24TIEVAL-1-TIE",
-          "other_poly_id": "aec-atp-leatie-adoval-2026-04-24-inverse",
-          "other_kalshi_ticker": "KXATPSETWINNER-26APR24TIEVAL-1-VAL"
-        },
-        {
-          "polymarket_ticker": "aec-atp-branak-aleblo-2026-04-24",
-          "kalshi_ticker": "KXATPSETWINNER-26APR24NAKBLO-1-NAK",
-          "other_poly_id": "aec-atp-branak-aleblo-2026-04-24-inverse",
-          "other_kalshi_ticker": "KXATPSETWINNER-26APR24NAKBLO-1-BLO"
-        },
-        {
-          "polymarket_ticker": "aec-atp-alebub-stetsi-2026-04-24",
-          "kalshi_ticker": "KXATPSETWINNER-26APR24BUBTSI-1-BUB",
-          "other_poly_id": "aec-atp-alebub-stetsi-2026-04-24-inverse",
-          "other_kalshi_ticker": "KXATPSETWINNER-26APR24BUBTSI-1-TSI"
-        },
-        {
           "polymarket_ticker": "aec-atp-mardam-jakmen-2026-04-24",
           "kalshi_ticker": "KXATPMATCH-26APR24DAMMEN-DAM",
           "other_poly_id": "aec-atp-mardam-jakmen-2026-04-24-inverse",
@@ -459,12 +435,6 @@
           "other_kalshi_ticker": "KXWTACHALLENGERMATCH-26APR24PRIFER-FER"
         },
         {
-          "polymarket_ticker": "aec-nba-lal-hou-2026-04-26",
-          "kalshi_ticker": "KXNBASERIES-26HOULALR1-LAL",
-          "other_poly_id": "aec-nba-lal-hou-2026-04-26-inverse",
-          "other_kalshi_ticker": "KXNBASERIES-26HOULALR1-HOU"
-        },
-        {
           "polymarket_ticker": "aec-nba-bos-phi-2026-04-26",
           "kalshi_ticker": "KXNBAGAME-26APR26BOSPHI-BOS",
           "other_poly_id": "aec-nba-bos-phi-2026-04-26-inverse",
@@ -484,9 +454,9 @@
         },
         {
           "polymarket_ticker": "aec-mlb-nyy-hou-2026-04-25",
-          "kalshi_ticker": "KXMLBGAME-26APR251905ATHTEX-ATH",
+          "kalshi_ticker": "KXMLBGAME-26APR251910NYYHOU-NYY",
           "other_poly_id": "aec-mlb-nyy-hou-2026-04-25-inverse",
-          "other_kalshi_ticker": "KXMLBGAME-26APR251905ATHTEX-TEX"
+          "other_kalshi_ticker": "KXMLBGAME-26APR251910NYYHOU-HOU"
         },
         {
           "polymarket_ticker": "aec-ufc-jaffil-coddur-2026-04-25",
@@ -499,66 +469,6 @@
           "kalshi_ticker": "KXUFCFIGHT-26APR25BUEMON-BUE",
           "other_poly_id": "aec-ufc-maybue-micmon-2026-04-25-inverse",
           "other_kalshi_ticker": "KXUFCFIGHT-26APR25BUEMON-MON"
-        },
-        {
-          "polymarket_ticker": "aec-atp-leatie-adoval-2026-04-24",
-          "kalshi_ticker": "KXATPSETWINNER-26APR24TIEVAL-2-TIE",
-          "other_poly_id": "aec-atp-leatie-adoval-2026-04-24-inverse",
-          "other_kalshi_ticker": "KXATPSETWINNER-26APR24TIEVAL-2-VAL"
-        },
-        {
-          "polymarket_ticker": "aec-atp-marnav-alezve-2026-04-24",
-          "kalshi_ticker": "KXATPSETWINNER-26APR24NAVZVE-1-NAV",
-          "other_poly_id": "aec-atp-marnav-alezve-2026-04-24-inverse",
-          "other_kalshi_ticker": "KXATPSETWINNER-26APR24NAVZVE-1-ZVE"
-        },
-        {
-          "polymarket_ticker": "aec-atp-jaumun-casruu-2026-04-24",
-          "kalshi_ticker": "KXATPSETWINNER-26APR24MUNRUU-1-MUN",
-          "other_poly_id": "aec-atp-jaumun-casruu-2026-04-24-inverse",
-          "other_kalshi_ticker": "KXATPSETWINNER-26APR24MUNRUU-1-RUU"
-        },
-        {
-          "polymarket_ticker": "aec-atp-danmed-fabmar-2026-04-24",
-          "kalshi_ticker": "KXATPSETWINNER-26APR24MEDMAR-1-MED",
-          "other_poly_id": "aec-atp-danmed-fabmar-2026-04-24-inverse",
-          "other_kalshi_ticker": "KXATPSETWINNER-26APR24MEDMAR-1-MAR"
-        },
-        {
-          "polymarket_ticker": "aec-atp-ugohum-teratm-2026-04-24",
-          "kalshi_ticker": "KXATPSETWINNER-26APR24HUMATM-1-HUM",
-          "other_poly_id": "aec-atp-ugohum-teratm-2026-04-24-inverse",
-          "other_kalshi_ticker": "KXATPSETWINNER-26APR24HUMATM-1-ATM"
-        },
-        {
-          "polymarket_ticker": "aec-atp-vilgau-felaug-2026-04-24",
-          "kalshi_ticker": "KXATPSETWINNER-26APR24GAUAUG-1-GAU",
-          "other_poly_id": "aec-atp-vilgau-felaug-2026-04-24-inverse",
-          "other_kalshi_ticker": "KXATPSETWINNER-26APR24GAUAUG-1-AUG"
-        },
-        {
-          "polymarket_ticker": "aec-atp-alefok-pabbus-2026-04-24",
-          "kalshi_ticker": "KXATPSETWINNER-26APR24DAVCAR-1-DAV",
-          "other_poly_id": "aec-atp-alefok-pabbus-2026-04-24-inverse",
-          "other_kalshi_ticker": "KXATPSETWINNER-26APR24DAVCAR-1-CAR"
-        },
-        {
-          "polymarket_ticker": "aec-atp-mardam-jakmen-2026-04-24",
-          "kalshi_ticker": "KXATPSETWINNER-26APR24DAMMEN-2-DAM",
-          "other_poly_id": "aec-atp-mardam-jakmen-2026-04-24-inverse",
-          "other_kalshi_ticker": "KXATPSETWINNER-26APR24DAMMEN-2-MEN"
-        },
-        {
-          "polymarket_ticker": "aec-atp-mardam-jakmen-2026-04-24",
-          "kalshi_ticker": "KXATPSETWINNER-26APR24DAMMEN-1-DAM",
-          "other_poly_id": "aec-atp-mardam-jakmen-2026-04-24-inverse",
-          "other_kalshi_ticker": "KXATPSETWINNER-26APR24DAMMEN-1-MEN"
-        },
-        {
-          "polymarket_ticker": "aec-atp-fracer-yanhan-2026-04-24",
-          "kalshi_ticker": "KXATPSETWINNER-26APR24CERHAN-1-CER",
-          "other_poly_id": "aec-atp-fracer-yanhan-2026-04-24-inverse",
-          "other_kalshi_ticker": "KXATPSETWINNER-26APR24CERHAN-1-HAN"
         },
         {
           "polymarket_ticker": "aec-atp-leatie-adoval-2026-04-24",
