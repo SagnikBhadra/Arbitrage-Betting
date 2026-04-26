@@ -120,23 +120,23 @@ class IntraKalshiArbitrage:
         
         
 
-    def find_opportunities(self, book_snapshots: dict | None = None):
+    def find_opportunities(self, kalshi_book_snapshots: dict | None = None, polymarket_us_book_snapshots: dict | None = None):
         """Identify intra-market arbitrage opportunities within Kalshi markets.
 
         Args:
-            book_snapshots: {ticker: (best_bid_price, best_bid_size, best_ask_price, best_ask_size)}
+            kalshi_book_snapshots: {ticker: (best_bid_price, best_bid_size, best_ask_price, best_ask_size)}
                             Immutable snapshot taken on the event loop.  When *None*
                             the method falls back to reading live orderbooks (legacy path).
         """
 
-        if book_snapshots is None:
+        if kalshi_book_snapshots is None:
             # Legacy / fallback: read live (only safe when called on the event loop)
-            book_snapshots = {
+            kalshi_book_snapshots = {
                 t: ob.snapshot_top()
                 for t, ob in self.kalshi_client.orderbooks.items()
             }
 
-        for ticker, (best_bid, best_bid_size, best_ask, best_ask_size) in book_snapshots.items():
+        for ticker, (best_bid, best_bid_size, best_ask, best_ask_size) in kalshi_book_snapshots.items():
             
             # Get correlated markets
             correlated_tickers = self.correlated_market_mapping.get(ticker, [])
@@ -148,7 +148,7 @@ class IntraKalshiArbitrage:
             # Does not work for more than 2 correlated markets yet
             if correlated_tickers:
                 for correlated_ticker in correlated_tickers:
-                    correlated_snap = book_snapshots.get(correlated_ticker)
+                    correlated_snap = kalshi_book_snapshots.get(correlated_ticker)
                     if correlated_snap:
                         correlated_best_bid, correlated_best_bid_size, correlated_best_ask, correlated_best_ask_size = correlated_snap
                         
@@ -320,4 +320,4 @@ class IntraKalshiArbitrage:
 
                     #self.logger.info(f"Overall Orders Placed: {self.overall_order_count}, Overall Potential Profit: ${self.overall_profit:.2f}, Balance: ${self.cached_balance:.2f}")
                         
-                    
+            

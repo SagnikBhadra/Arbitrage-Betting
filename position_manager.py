@@ -2,11 +2,12 @@ import threading
 from collections import defaultdict
 
 class PositionManager:
-    def __init__(self, positions:defaultdict):
+    def __init__(self, positions:defaultdict, open_orders: defaultdict(defaultdict) = {}):
         self.positions = positions
+        self.open_orders = open_orders
         self.lock = threading.Lock()
         
-        # ---------------------------------------------------------
+    # ---------------------------------------------------------
     # Local Update From Trade Fill
     # ---------------------------------------------------------
     def update_from_fill(self, ticker, side, quantity):
@@ -48,3 +49,21 @@ class PositionManager:
     def get_all_positions(self):
         with self.lock:
             return dict(self.positions)
+
+    # ---------------------------------------------------------
+    # Update Open Orders
+    # ---------------------------------------------------------
+    def add_open_orders(self, ticker, order):
+        with self.lock():
+            self.open_orders[ticker][order["client_order_id"]] = order
+
+    def remove_open_order(self, ticker, order):
+        with self.lock:
+            self.open_orders[ticker].pop(order["client_order_id"])
+
+    # ---------------------------------------------------------
+    # Retrieve Open Orders
+    # ---------------------------------------------------------
+    def get_open_orders_for_ticker(self, ticker):
+        with self.lock:
+            return self.open_orders[ticker]

@@ -21,7 +21,7 @@ class CrossExchangeArbitrage:
         orderbook.get_best_ask() -> (price, size) or (None, None)
     """
 
-    def __init__(self, polymarket_client: PolymarketUSWebSocket, kalshi_client: KalshiWebSocket, polymarket_us_gateway: PolymarketUSHTTPGateway, kalshi_gateway: KalshiHTTPGateway, position_manager: PositionManager, mapping: dict, min_edge=0.0):
+    def __init__(self, polymarket_client: PolymarketUSWebSocket, kalshi_client: KalshiWebSocket, polymarket_us_gateway: PolymarketUSHTTPGateway, kalshi_gateway: KalshiHTTPGateway, position_manager: PositionManager, mapping: dict, min_edge=0.01):
         # Market data clients
         self.polymarket_client = polymarket_client
         self.kalshi_client = kalshi_client
@@ -385,7 +385,7 @@ class CrossExchangeArbitrage:
         pass
     
     # TODO: Why have book_snapshots as an argument when we can access self.kalshi_client.orderbooks directly? To avoid contention on the event loop by snapshotting orderbooks once and passing to all strategies, instead of each strategy accessing orderbooks which may be updated by WS messages during processing
-    def find_opportunities(self, book_snapshots: dict | None = None): 
+    def find_opportunities(self, kalshi_book_snapshots: dict | None = None, polymarket_us_book_snapshots: dict | None = None): 
         # Category: [dicts]
         for category, mapping_dicts in self.mapping.items():
             for m in mapping_dicts:
@@ -394,6 +394,8 @@ class CrossExchangeArbitrage:
                 other_poly_id = m["other_poly_id"]
                 other_kalshi_ticker = m["other_kalshi_ticker"]
 
+                # Legacy orderbook retrival
+                """
                 poly_A, kalshi_A = self._get_books(polymarket_ticker, kalshi_ticker)
                 poly_B, kalshi_B = self._get_books(other_poly_id, other_kalshi_ticker)
 
@@ -409,6 +411,14 @@ class CrossExchangeArbitrage:
                 
                 poly_bid_B, poly_bid_B_size, poly_ask_B, poly_ask_B_size = self._best_prices(poly_B)
                 kalshi_bid_B, kalshi_bid_B_size, kalshi_ask_B, kalshi_ask_B_size = self._best_prices(kalshi_B)
+                """
+
+                poly_bid_A, poly_bid_A_size, poly_ask_A, poly_ask_A_size = polymarket_us_book_snapshots[polymarket_ticker]
+                kalshi_bid_A, kalshi_bid_A_size, kalshi_ask_A, kalshi_ask_A_size = kalshi_book_snapshots[kalshi_ticker]
+                
+                poly_bid_B, poly_bid_B_size, poly_ask_B, poly_ask_B_size = polymarket_us_book_snapshots[other_poly_id]
+                kalshi_bid_B, kalshi_bid_B_size, kalshi_ask_B, kalshi_ask_B_size = kalshi_book_snapshots[other_kalshi_ticker]
+
                 
                 poly_ask_A, poly_bid_A, poly_ask_B, poly_bid_B, kalshi_ask_A, kalshi_bid_A, kalshi_ask_B, kalshi_bid_B = map(lambda x: Decimal(x) if x else None, [poly_ask_A, poly_bid_A, poly_ask_B, poly_bid_B, kalshi_ask_A, kalshi_bid_A, kalshi_ask_B, kalshi_bid_B])
 

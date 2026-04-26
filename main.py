@@ -124,12 +124,13 @@ async def scan_inefficiencies(polymarket_client, kalshi_client, kalshi_gateway, 
     # Call find_opportunities() every second and log any opportunities above profit_threshold
     while True:
         # Snapshot on the event loop (no contention, single-threaded)
-        book_snapshots = kalshi_client.snapshot_all_books()
+        kalshi_book_snapshots = kalshi_client.snapshot_all_books()
+        polymarket_us_book_snapshots = polymarket_client.snapshot_all_books()
 
         for strategy in strategies:
             # Run strategy in a worker thread so the event loop stays
             # free to process incoming WS messages (no sync-over-async)
-            await asyncio.to_thread(strategy.find_opportunities, book_snapshots)
+            await asyncio.to_thread(strategy.find_opportunities, kalshi_book_snapshots, polymarket_us_book_snapshots)
         await asyncio.sleep(1)
 
 async def main():

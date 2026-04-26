@@ -62,6 +62,9 @@ def setup_logging():
     # Intra Kalshi strategy log
     setup_logger("intra_kalshi_strategy", "intra_kalshi_strategy")
 
+    # Wide Spread strategy log
+    setup_logger("wide_spread_strategy", "wide_spread_strategy")
+
     # === 2️⃣ Feed log files ===
     # Kalshi feed log
     setup_logger("kalshi_feed", "kalshi_feed")

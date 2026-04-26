@@ -195,6 +195,9 @@ class PolymarketUSWebSocket:
             self.ping_loop(),
         )
 
+    def snapshot_all_books(self):
+        return {ticker: ob.snapshot_top() for ticker, ob in self.orderbooks.items()}
+
     def get_best_bid(self, asset_id):
         orderbook = self.orderbooks.get(asset_id)
         if orderbook:

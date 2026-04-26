@@ -170,10 +170,21 @@ class KalshiHTTPGateway:
         #return self._request("POST", "/portfolio/orders", json_body=order_data)
         return 
 
+    def batch_create_orders(self, orders: dict) -> dict:
+        response = ""
+        #response = self._request("POST", f"portfolio/orders/batched", json_body=orders)
+        self.logger.info("Placing batched orders")
+        return response
+
     def cancel_order(self, order_id: str) -> dict:
         """Cancel an open order by order_id."""
         self.logger.info(f"Cancelling order {order_id}")
         return self._request("DELETE", f"/portfolio/orders/{order_id}")
+
+    def batch_cancel_orders(self, orders: dict) -> dict:
+        """Batch cancel open orders"""
+        self.logger.info(f"Batch cancelling orders")
+        return self._request("DELETE", f"/portfolio/orders/batched", json_body=orders)
 
     def get_market(self, ticker: str) -> dict:
         """Get details for a specific market."""
