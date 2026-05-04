@@ -2,7 +2,7 @@ import threading
 from collections import defaultdict
 
 class PositionManager:
-    def __init__(self, positions:defaultdict, open_orders: defaultdict(defaultdict) = {}):
+    def __init__(self, positions:defaultdict, open_orders: defaultdict(defaultdict) = defaultdict(defaultdict)):
         self.positions = positions
         self.open_orders = open_orders
         self.lock = threading.Lock()
@@ -54,7 +54,7 @@ class PositionManager:
     # Update Open Orders
     # ---------------------------------------------------------
     def add_open_orders(self, ticker, order):
-        with self.lock():
+        with self.lock:
             self.open_orders[ticker][order["client_order_id"]] = order
 
     def remove_open_order(self, ticker, order):

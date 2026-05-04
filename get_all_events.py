@@ -1,3 +1,4 @@
+from collections import defaultdict
 import json
 import time
 import asyncio
@@ -226,6 +227,9 @@ if __name__ == "__main__":
     print(f"Events with exactly 2 markets: {len(two_market_events)}")
     print(f"{'='*50}\n")
     
+    # Get volume data for two-market events (Ticker -> 24 hour volume)
+    volume_per_market = defaultdict(int)
+    
     for event_data in two_market_events:
         event = event_data.get("event", {})
         event_ticker = event.get("event_ticker", "N/A")
@@ -238,6 +242,7 @@ if __name__ == "__main__":
             subtitle = market.get("subtitle", "N/A")
             yes_bid = market.get("yes_bid", "N/A")
             yes_ask = market.get("yes_ask", "N/A")
+            volume_per_market[ticker] = market.get("volume_24h_fp", 0)
             print(f"  - {ticker}: {subtitle} (Bid: {yes_bid}, Ask: {yes_ask})")
         print()
     
@@ -259,6 +264,12 @@ if __name__ == "__main__":
         json.dump(two_market_events, f, indent=4)
     print(f"Saved two-market events to {two_market_output_path}")
     
+    # Save volume data
+    volume_output_path = "statics/kalshi_volume_per_market.json"
+    with open(volume_output_path, "w") as f:
+        json.dump(volume_per_market, f, indent=4)
+    print(f"Saved volume data to {volume_output_path}")
+
     elapsed = time.time() - start_time
     print(f"\n{'='*50}")
     print(f"Total time: {elapsed:.2f} seconds")

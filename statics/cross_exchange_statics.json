@@ -3,412 +3,988 @@
     "Moneyline_Events": {
       "sports": [
         {
-          "polymarket_ticker": "aec-ipl-pbks-raj-2026-04-28",
-          "kalshi_ticker": "KXIPLGAME-26APR28RRPBKS-PBKS",
-          "other_poly_id": "aec-ipl-pbks-raj-2026-04-28-inverse",
-          "other_kalshi_ticker": "KXIPLGAME-26APR28RRPBKS-RR"
+          "polymarket_ticker": "aec-nhl-veg-ana-2026-05-10",
+          "kalshi_ticker": "KXNHLGAME-26MAY10VGKANA-VGK",
+          "other_poly_id": "aec-nhl-veg-ana-2026-05-10-inverse",
+          "other_kalshi_ticker": "KXNHLGAME-26MAY10VGKANA-ANA"
         },
         {
-          "polymarket_ticker": "aec-ipl-dcap-rcb-2026-04-27",
-          "kalshi_ticker": "KXIPLGAME-26APR27RCBDC-DC",
-          "other_poly_id": "aec-ipl-dcap-rcb-2026-04-27-inverse",
-          "other_kalshi_ticker": "KXIPLGAME-26APR27RCBDC-RCB"
+          "polymarket_ticker": "aec-nhl-veg-ana-2026-05-08",
+          "kalshi_ticker": "KXNHLGAME-26MAY08VGKANA-VGK",
+          "other_poly_id": "aec-nhl-veg-ana-2026-05-08-inverse",
+          "other_kalshi_ticker": "KXNHLGAME-26MAY08VGKANA-ANA"
         },
         {
-          "polymarket_ticker": "aec-ipl-lsg-kkr-2026-04-26",
-          "kalshi_ticker": "KXIPLGAME-26APR26KKRLSG-LSG",
-          "other_poly_id": "aec-ipl-lsg-kkr-2026-04-26-inverse",
-          "other_kalshi_ticker": "KXIPLGAME-26APR26KKRLSG-KKR"
+          "polymarket_ticker": "aec-ipl-srh-pbks-2026-05-06",
+          "kalshi_ticker": "KXIPLGAME-26MAY06PBKSSRH-SRH",
+          "other_poly_id": "aec-ipl-srh-pbks-2026-05-06-inverse",
+          "other_kalshi_ticker": "KXIPLGAME-26MAY06PBKSSRH-PBKS"
         },
         {
-          "polymarket_ticker": "aec-ipl-csk-guj-2026-04-26",
-          "kalshi_ticker": "KXIPLGAME-26APR26CSKGT-CSK",
-          "other_poly_id": "aec-ipl-csk-guj-2026-04-26-inverse",
-          "other_kalshi_ticker": "KXIPLGAME-26APR26CSKGT-GT"
+          "polymarket_ticker": "aec-ipl-dcap-csk-2026-05-05",
+          "kalshi_ticker": "KXIPLGAME-26MAY05CSKDC-DC",
+          "other_poly_id": "aec-ipl-dcap-csk-2026-05-05-inverse",
+          "other_kalshi_ticker": "KXIPLGAME-26MAY05CSKDC-CSK"
         },
         {
-          "polymarket_ticker": "aec-ufc-germee-jacmal-2026-05-02",
-          "kalshi_ticker": "KXUFCFIGHT-26MAY02MALMEE-MEE",
-          "other_poly_id": "aec-ufc-germee-jacmal-2026-05-02-inverse",
-          "other_kalshi_ticker": "KXUFCFIGHT-26MAY02MALMEE-MAL"
+          "polymarket_ticker": "aec-ipl-mui-lsg-2026-05-04",
+          "kalshi_ticker": "KXIPLGAME-26MAY04LSGMI-MI",
+          "other_poly_id": "aec-ipl-mui-lsg-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXIPLGAME-26MAY04LSGMI-LSG"
         },
         {
-          "polymarket_ticker": "aec-lol-ns-t1-2026-04-29",
-          "kalshi_ticker": "KXLOLGAME-26APR290400T1NS-NS",
-          "other_poly_id": "aec-lol-ns-t1-2026-04-29-inverse",
-          "other_kalshi_ticker": "KXLOLGAME-26APR290400T1NS-T1"
+          "polymarket_ticker": "aec-mlb-atl-sea-2026-05-04",
+          "kalshi_ticker": "KXMLBGAME-26MAY042140ATLSEA-ATL",
+          "other_poly_id": "aec-mlb-atl-sea-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXMLBGAME-26MAY042140ATLSEA-SEA"
         },
         {
-          "polymarket_ticker": "aec-mlb-mia-lad-2026-04-27",
-          "kalshi_ticker": "KXMLBGAME-26APR272210MIALAD-MIA",
-          "other_poly_id": "aec-mlb-mia-lad-2026-04-27-inverse",
-          "other_kalshi_ticker": "KXMLBGAME-26APR272210MIALAD-LAD"
+          "polymarket_ticker": "aec-mlb-cws-laa-2026-05-04",
+          "kalshi_ticker": "KXMLBGAME-26MAY042138CWSLAA-CWS",
+          "other_poly_id": "aec-mlb-cws-laa-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXMLBGAME-26MAY042138CWSLAA-LAA"
         },
         {
-          "polymarket_ticker": "aec-mlb-chc-sd-2026-04-27",
-          "kalshi_ticker": "KXMLBGAME-26APR272140CHCSD-CHC",
-          "other_poly_id": "aec-mlb-chc-sd-2026-04-27-inverse",
-          "other_kalshi_ticker": "KXMLBGAME-26APR272140CHCSD-SD"
+          "polymarket_ticker": "aec-mlb-nym-col-2026-05-04",
+          "kalshi_ticker": "KXMLBGAME-26MAY042040NYMCOL-NYM",
+          "other_poly_id": "aec-mlb-nym-col-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXMLBGAME-26MAY042040NYMCOL-COL"
         },
         {
-          "polymarket_ticker": "aec-mlb-nyy-tex-2026-04-27",
-          "kalshi_ticker": "KXMLBGAME-26APR272005NYYTEX-NYY",
-          "other_poly_id": "aec-mlb-nyy-tex-2026-04-27-inverse",
-          "other_kalshi_ticker": "KXMLBGAME-26APR272005NYYTEX-TEX"
+          "polymarket_ticker": "aec-mlb-lad-hou-2026-05-04",
+          "kalshi_ticker": "KXMLBGAME-26MAY042010LADHOU-LAD",
+          "other_poly_id": "aec-mlb-lad-hou-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXMLBGAME-26MAY042010LADHOU-HOU"
         },
         {
-          "polymarket_ticker": "aec-mlb-sea-min-2026-04-27",
-          "kalshi_ticker": "KXMLBGAME-26APR271940SEAMIN-SEA",
-          "other_poly_id": "aec-mlb-sea-min-2026-04-27-inverse",
-          "other_kalshi_ticker": "KXMLBGAME-26APR271940SEAMIN-MIN"
+          "polymarket_ticker": "aec-mlb-mil-stl-2026-05-04",
+          "kalshi_ticker": "KXMLBGAME-26MAY041945MILSTL-MIL",
+          "other_poly_id": "aec-mlb-mil-stl-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXMLBGAME-26MAY041945MILSTL-STL"
         },
         {
-          "polymarket_ticker": "aec-mlb-laa-cws-2026-04-27",
-          "kalshi_ticker": "KXMLBGAME-26APR271940LAACWS-LAA",
-          "other_poly_id": "aec-mlb-laa-cws-2026-04-27-inverse",
-          "other_kalshi_ticker": "KXMLBGAME-26APR271940LAACWS-CWS"
+          "polymarket_ticker": "aec-mlb-cle-kc-2026-05-04",
+          "kalshi_ticker": "KXMLBGAME-26MAY041940CLEKC-CLE",
+          "other_poly_id": "aec-mlb-cle-kc-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXMLBGAME-26MAY041940CLEKC-KC"
         },
         {
-          "polymarket_ticker": "aec-mlb-bos-tor-2026-04-27",
-          "kalshi_ticker": "KXMLBGAME-26APR271907BOSTOR-BOS",
-          "other_poly_id": "aec-mlb-bos-tor-2026-04-27-inverse",
-          "other_kalshi_ticker": "KXMLBGAME-26APR271907BOSTOR-TOR"
+          "polymarket_ticker": "aec-mlb-cin-chc-2026-05-04",
+          "kalshi_ticker": "KXMLBGAME-26MAY041940CINCHC-CIN",
+          "other_poly_id": "aec-mlb-cin-chc-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXMLBGAME-26MAY041940CINCHC-CHC"
         },
         {
-          "polymarket_ticker": "aec-mlb-stl-pit-2026-04-27",
-          "kalshi_ticker": "KXMLBGAME-26APR271840STLPIT-STL",
-          "other_poly_id": "aec-mlb-stl-pit-2026-04-27-inverse",
-          "other_kalshi_ticker": "KXMLBGAME-26APR271840STLPIT-PIT"
+          "polymarket_ticker": "aec-mlb-bal-nyy-2026-05-04",
+          "kalshi_ticker": "KXMLBGAME-26MAY041905BALNYY-BAL",
+          "other_poly_id": "aec-mlb-bal-nyy-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXMLBGAME-26MAY041905BALNYY-NYY"
         },
         {
-          "polymarket_ticker": "aec-mlb-tb-cle-2026-04-27",
-          "kalshi_ticker": "KXMLBGAME-26APR271810TBCLE-TB",
-          "other_poly_id": "aec-mlb-tb-cle-2026-04-27-inverse",
-          "other_kalshi_ticker": "KXMLBGAME-26APR271810TBCLE-CLE"
+          "polymarket_ticker": "aec-mlb-tor-tb-2026-05-04",
+          "kalshi_ticker": "KXMLBGAME-26MAY041840TORTB-TOR",
+          "other_poly_id": "aec-mlb-tor-tb-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXMLBGAME-26MAY041840TORTB-TB"
         },
         {
-          "polymarket_ticker": "aec-mlb-laa-kc-2026-04-26",
-          "kalshi_ticker": "KXMLBGAME-26APR261920LAAKC-LAA",
-          "other_poly_id": "aec-mlb-laa-kc-2026-04-26-inverse",
-          "other_kalshi_ticker": "KXMLBGAME-26APR261920LAAKC-KC"
+          "polymarket_ticker": "aec-mlb-phi-mia-2026-05-04",
+          "kalshi_ticker": "KXMLBGAME-26MAY041840PHIMIA-PHI",
+          "other_poly_id": "aec-mlb-phi-mia-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXMLBGAME-26MAY041840PHIMIA-MIA"
         },
         {
-          "polymarket_ticker": "aec-mlb-chc-lad-2026-04-26",
-          "kalshi_ticker": "KXMLBGAME-26APR261610CHCLAD-CHC",
-          "other_poly_id": "aec-mlb-chc-lad-2026-04-26-inverse",
-          "other_kalshi_ticker": "KXMLBGAME-26APR261610CHCLAD-LAD"
+          "polymarket_ticker": "aec-mlb-kc-sea-2026-05-03",
+          "kalshi_ticker": "KXMLBGAME-26MAY031610KCSEA-KC",
+          "other_poly_id": "aec-mlb-kc-sea-2026-05-03-inverse",
+          "other_kalshi_ticker": "KXMLBGAME-26MAY031610KCSEA-SEA"
         },
         {
-          "polymarket_ticker": "aec-mlb-sd-az-2026-04-26",
-          "kalshi_ticker": "KXMLBGAME-26APR261605SDAZ-SD",
-          "other_poly_id": "aec-mlb-sd-az-2026-04-26-inverse",
-          "other_kalshi_ticker": "KXMLBGAME-26APR261605SDAZ-AZ"
+          "polymarket_ticker": "aec-mlb-cws-sd-2026-05-03",
+          "kalshi_ticker": "KXMLBGAME-26MAY031610CWSSD-CWS",
+          "other_poly_id": "aec-mlb-cws-sd-2026-05-03-inverse",
+          "other_kalshi_ticker": "KXMLBGAME-26MAY031610CWSSD-SD"
         },
         {
-          "polymarket_ticker": "aec-mlb-mia-sf-2026-04-26",
-          "kalshi_ticker": "KXMLBGAME-26APR261605MIASF-MIA",
-          "other_poly_id": "aec-mlb-mia-sf-2026-04-26-inverse",
-          "other_kalshi_ticker": "KXMLBGAME-26APR261605MIASF-SF"
+          "polymarket_ticker": "aec-mlb-nym-laa-2026-05-03",
+          "kalshi_ticker": "KXMLBGAME-26MAY031607NYMLAA-NYM",
+          "other_poly_id": "aec-mlb-nym-laa-2026-05-03-inverse",
+          "other_kalshi_ticker": "KXMLBGAME-26MAY031607NYMLAA-LAA"
         },
         {
-          "polymarket_ticker": "aec-mlb-sea-stl-2026-04-26",
-          "kalshi_ticker": "KXMLBGAME-26APR261415SEASTL-SEA",
-          "other_poly_id": "aec-mlb-sea-stl-2026-04-26-inverse",
-          "other_kalshi_ticker": "KXMLBGAME-26APR261415SEASTL-STL"
+          "polymarket_ticker": "aec-mlb-atl-col-2026-05-03",
+          "kalshi_ticker": "KXMLBGAME-26MAY031510ATLCOL-ATL",
+          "other_poly_id": "aec-mlb-atl-col-2026-05-03-inverse",
+          "other_kalshi_ticker": "KXMLBGAME-26MAY031510ATLCOL-COL"
         },
         {
-          "polymarket_ticker": "aec-mlb-wsh-cws-2026-04-26",
-          "kalshi_ticker": "KXMLBGAME-26APR261410WSHCWS-WSH",
-          "other_poly_id": "aec-mlb-wsh-cws-2026-04-26-inverse",
-          "other_kalshi_ticker": "KXMLBGAME-26APR261410WSHCWS-CWS"
+          "polymarket_ticker": "aec-mlb-az-chc-2026-05-03",
+          "kalshi_ticker": "KXMLBGAME-26MAY031420AZCHC-AZ",
+          "other_poly_id": "aec-mlb-az-chc-2026-05-03-inverse",
+          "other_kalshi_ticker": "KXMLBGAME-26MAY031420AZCHC-CHC"
         },
         {
-          "polymarket_ticker": "aec-mlb-pit-mil-2026-04-26",
-          "kalshi_ticker": "KXMLBGAME-26APR261410PITMIL-PIT",
-          "other_poly_id": "aec-mlb-pit-mil-2026-04-26-inverse",
-          "other_kalshi_ticker": "KXMLBGAME-26APR261410PITMIL-MIL"
+          "polymarket_ticker": "aec-mlb-lad-stl-2026-05-03",
+          "kalshi_ticker": "KXMLBGAME-26MAY031415LADSTL-LAD",
+          "other_poly_id": "aec-mlb-lad-stl-2026-05-03-inverse",
+          "other_kalshi_ticker": "KXMLBGAME-26MAY031415LADSTL-STL"
         },
         {
-          "polymarket_ticker": "aec-mlb-nyy-hou-2026-04-26",
-          "kalshi_ticker": "KXMLBGAME-26APR261410NYYHOU-NYY",
-          "other_poly_id": "aec-mlb-nyy-hou-2026-04-26-inverse",
-          "other_kalshi_ticker": "KXMLBGAME-26APR261410NYYHOU-HOU"
+          "polymarket_ticker": "aec-mlb-sf-tb-2026-05-03",
+          "kalshi_ticker": "KXMLBGAME-26MAY031340SFTB-SF",
+          "other_poly_id": "aec-mlb-sf-tb-2026-05-03-inverse",
+          "other_kalshi_ticker": "KXMLBGAME-26MAY031340SFTB-TB"
         },
         {
-          "polymarket_ticker": "aec-mlb-min-tb-2026-04-26",
-          "kalshi_ticker": "KXMLBGAME-26APR261340MINTB-MIN",
-          "other_poly_id": "aec-mlb-min-tb-2026-04-26-inverse",
-          "other_kalshi_ticker": "KXMLBGAME-26APR261340MINTB-TB"
+          "polymarket_ticker": "aec-mlb-phi-mia-2026-05-03",
+          "kalshi_ticker": "KXMLBGAME-26MAY031340PHIMIA-PHI",
+          "other_poly_id": "aec-mlb-phi-mia-2026-05-03-inverse",
+          "other_kalshi_ticker": "KXMLBGAME-26MAY031340PHIMIA-MIA"
         },
         {
-          "polymarket_ticker": "aec-mlb-det-cin-2026-04-26",
-          "kalshi_ticker": "KXMLBGAME-26APR261340DETCIN-DET",
-          "other_poly_id": "aec-mlb-det-cin-2026-04-26-inverse",
-          "other_kalshi_ticker": "KXMLBGAME-26APR261340DETCIN-CIN"
+          "polymarket_ticker": "aec-mlb-hou-bos-2026-05-03",
+          "kalshi_ticker": "KXMLBGAME-26MAY031335HOUBOS-HOU",
+          "other_poly_id": "aec-mlb-hou-bos-2026-05-03-inverse",
+          "other_kalshi_ticker": "KXMLBGAME-26MAY031335HOUBOS-BOS"
         },
         {
-          "polymarket_ticker": "aec-mlb-col-nym-2026-04-26",
-          "kalshi_ticker": "KXMLBGAME-26APR261340COLNYM-COL",
-          "other_poly_id": "aec-mlb-col-nym-2026-04-26-inverse",
-          "other_kalshi_ticker": "KXMLBGAME-26APR261340COLNYM-NYM"
+          "polymarket_ticker": "aec-mlb-bal-nyy-2026-05-03",
+          "kalshi_ticker": "KXMLBGAME-26MAY031335BALNYY-BAL",
+          "other_poly_id": "aec-mlb-bal-nyy-2026-05-03-inverse",
+          "other_kalshi_ticker": "KXMLBGAME-26MAY031335BALNYY-NYY"
         },
         {
-          "polymarket_ticker": "aec-mlb-cle-tor-2026-04-26",
-          "kalshi_ticker": "KXMLBGAME-26APR261337CLETOR-CLE",
-          "other_poly_id": "aec-mlb-cle-tor-2026-04-26-inverse",
-          "other_kalshi_ticker": "KXMLBGAME-26APR261337CLETOR-TOR"
+          "polymarket_ticker": "aec-cs2-navi-vit-2026-05-03",
+          "kalshi_ticker": "KXCS2GAME-26MAY031330VITNAVI-NAVI",
+          "other_poly_id": "aec-cs2-navi-vit-2026-05-03-inverse",
+          "other_kalshi_ticker": "KXCS2GAME-26MAY031330VITNAVI-VIT"
         },
         {
-          "polymarket_ticker": "aec-mlb-phi-atl-2026-04-26",
-          "kalshi_ticker": "KXMLBGAME-26APR261335PHIATL-PHI",
-          "other_poly_id": "aec-mlb-phi-atl-2026-04-26-inverse",
-          "other_kalshi_ticker": "KXMLBGAME-26APR261335PHIATL-ATL"
+          "polymarket_ticker": "aec-wta-alisas-julgra-2026-05-04",
+          "kalshi_ticker": "KXWTAMATCH-26MAY04SASGRA-SAS",
+          "other_poly_id": "aec-wta-alisas-julgra-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXWTAMATCH-26MAY04SASGRA-GRA"
         },
         {
-          "polymarket_ticker": "aec-mlb-bos-bal-2026-04-26",
-          "kalshi_ticker": "KXMLBGAME-26APR261335BOSBAL-BOS",
-          "other_poly_id": "aec-mlb-bos-bal-2026-04-26-inverse",
-          "other_kalshi_ticker": "KXMLBGAME-26APR261335BOSBAL-BAL"
+          "polymarket_ticker": "aec-wta-gabrus-ocedod-2026-05-04",
+          "kalshi_ticker": "KXWTAMATCH-26MAY04RUSDOD-RUS",
+          "other_poly_id": "aec-wta-gabrus-ocedod-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXWTAMATCH-26MAY04RUSDOD-DOD"
         },
         {
-          "polymarket_ticker": "aec-mlb-col-nym-2026-04-25",
-          "kalshi_ticker": "KXMLBGAME-26APR251610COLNYM-COL",
-          "other_poly_id": "aec-mlb-col-nym-2026-04-25-inverse",
-          "other_kalshi_ticker": "KXMLBGAME-26APR251610COLNYM-NYM"
+          "polymarket_ticker": "aec-wta-anapot-iribeg-2026-05-04",
+          "kalshi_ticker": "KXWTAMATCH-26MAY04POTBEG-POT",
+          "other_poly_id": "aec-wta-anapot-iribeg-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXWTAMATCH-26MAY04POTBEG-BEG"
         },
         {
-          "polymarket_ticker": "aec-nba-por-sa-2026-04-28",
-          "kalshi_ticker": "KXNBAGAME-26APR28PORSAS-POR",
-          "other_poly_id": "aec-nba-por-sa-2026-04-28-inverse",
-          "other_kalshi_ticker": "KXNBAGAME-26APR28PORSAS-SAS"
+          "polymarket_ticker": "aec-wta-anapav-vererj-2026-05-04",
+          "kalshi_ticker": "KXWTAMATCH-26MAY04PAVERJ-PAV",
+          "other_poly_id": "aec-wta-anapav-vererj-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXWTAMATCH-26MAY04PAVERJ-ERJ"
         },
         {
-          "polymarket_ticker": "aec-nba-min-den-2026-04-27",
-          "kalshi_ticker": "KXNBAGAME-26APR27MINDEN-MIN",
-          "other_poly_id": "aec-nba-min-den-2026-04-27-inverse",
-          "other_kalshi_ticker": "KXNBAGAME-26APR27MINDEN-DEN"
+          "polymarket_ticker": "aec-wta-alypar-dalgal-2026-05-04",
+          "kalshi_ticker": "KXWTAMATCH-26MAY04PARGAL-PAR",
+          "other_poly_id": "aec-wta-alypar-dalgal-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXWTAMATCH-26MAY04PARGAL-GAL"
         },
         {
-          "polymarket_ticker": "aec-nba-okc-pho-2026-04-27",
-          "kalshi_ticker": "KXNBAGAME-26APR27OKCPHX-OKC",
-          "other_poly_id": "aec-nba-okc-pho-2026-04-27-inverse",
-          "other_kalshi_ticker": "KXNBAGAME-26APR27OKCPHX-PHX"
+          "polymarket_ticker": "aec-wta-camoso-anhkal-2026-05-04",
+          "kalshi_ticker": "KXWTAMATCH-26MAY04OSOKAL-OSO",
+          "other_poly_id": "aec-wta-camoso-anhkal-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXWTAMATCH-26MAY04OSOKAL-KAL"
         },
         {
-          "polymarket_ticker": "aec-nba-det-orl-2026-04-27",
-          "kalshi_ticker": "KXNBAGAME-26APR27DETORL-DET",
-          "other_poly_id": "aec-nba-det-orl-2026-04-27-inverse",
-          "other_kalshi_ticker": "KXNBAGAME-26APR27DETORL-ORL"
+          "polymarket_ticker": "aec-wta-rebmas-moyuch-2026-05-04",
+          "kalshi_ticker": "KXWTAMATCH-26MAY04MASUCH-MAS",
+          "other_poly_id": "aec-wta-rebmas-moyuch-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXWTAMATCH-26MAY04MASUCH-UCH"
         },
         {
-          "polymarket_ticker": "aec-nba-sa-por-2026-04-26",
-          "kalshi_ticker": "KXNBAGAME-26APR26SASPOR-SAS",
-          "other_poly_id": "aec-nba-sa-por-2026-04-26-inverse",
-          "other_kalshi_ticker": "KXNBAGAME-26APR26SASPOR-POR"
+          "polymarket_ticker": "aec-wta-ashkru-nikbar-2026-05-04",
+          "kalshi_ticker": "KXWTAMATCH-26MAY04KRUBAR-KRU",
+          "other_poly_id": "aec-wta-ashkru-nikbar-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXWTAMATCH-26MAY04KRUBAR-BAR"
         },
         {
-          "polymarket_ticker": "aec-nba-cle-tor-2026-04-26",
-          "kalshi_ticker": "KXNBAGAME-26APR26CLETOR-CLE",
-          "other_poly_id": "aec-nba-cle-tor-2026-04-26-inverse",
-          "other_kalshi_ticker": "KXNBAGAME-26APR26CLETOR-TOR"
+          "polymarket_ticker": "aec-wta-alikor-ellsei-2026-05-04",
+          "kalshi_ticker": "KXWTAMATCH-26MAY04KORSEI-KOR",
+          "other_poly_id": "aec-wta-alikor-ellsei-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXWTAMATCH-26MAY04KORSEI-SEI"
         },
         {
-          "polymarket_ticker": "aec-wta-arysab-naoosa-2026-04-27",
-          "kalshi_ticker": "KXWTAMATCH-26APR27SABOSA-SAB",
-          "other_poly_id": "aec-wta-arysab-naoosa-2026-04-27-inverse",
-          "other_kalshi_ticker": "KXWTAMATCH-26APR27SABOSA-OSA"
+          "polymarket_ticker": "aec-wta-kimbir-yueyua-2026-05-04",
+          "kalshi_ticker": "KXWTAMATCH-26MAY04BIRYUA-BIR",
+          "other_poly_id": "aec-wta-kimbir-yueyua-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXWTAMATCH-26MAY04BIRYUA-YUA"
         },
         {
-          "polymarket_ticker": "aec-wta-anapot-jelost-2026-04-25",
-          "kalshi_ticker": "KXWTAMATCH-26APR25POTOST-POT",
-          "other_poly_id": "aec-wta-anapot-jelost-2026-04-25-inverse",
-          "other_kalshi_ticker": "KXWTAMATCH-26APR25POTOST-OST"
+          "polymarket_ticker": "aec-atp-pedmar-jesjon-2026-05-04",
+          "kalshi_ticker": "KXATPSETWINNER-26MAY04MARDEJ-1-MAR",
+          "other_poly_id": "aec-atp-pedmar-jesjon-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPSETWINNER-26MAY04MARDEJ-1-DEJ"
         },
         {
-          "polymarket_ticker": "aec-wta-elimer-karpli-2026-04-25",
-          "kalshi_ticker": "KXWTAMATCH-26APR25MERPLI-MER",
-          "other_poly_id": "aec-wta-elimer-karpli-2026-04-25-inverse",
-          "other_kalshi_ticker": "KXWTAMATCH-26APR25MERPLI-PLI"
+          "polymarket_ticker": "aec-atp-stetra-stawaw-2026-05-04",
+          "kalshi_ticker": "KXATPMATCH-26MAY04TRAWAW-TRA",
+          "other_poly_id": "aec-atp-stetra-stawaw-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPMATCH-26MAY04TRAWAW-WAW"
         },
         {
-          "polymarket_ticker": "aec-atp-stetsi-danagu-2026-04-27",
-          "kalshi_ticker": "KXATPMATCH-26APR27TSIMER-TSI",
-          "other_poly_id": "aec-atp-stetsi-danagu-2026-04-27-inverse",
-          "other_kalshi_ticker": "KXATPMATCH-26APR27TSIMER-MER"
+          "polymarket_ticker": "aec-atp-duslaj-jancho-2026-05-04",
+          "kalshi_ticker": "KXATPMATCH-26MAY04LAJCHO-LAJ",
+          "other_poly_id": "aec-atp-duslaj-jancho-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPMATCH-26MAY04LAJCHO-CHO"
         },
         {
-          "polymarket_ticker": "aec-atp-camnor-thitir-2026-04-26",
-          "kalshi_ticker": "KXATPMATCH-26APR26NORTIR-NOR",
-          "other_poly_id": "aec-atp-camnor-thitir-2026-04-26-inverse",
-          "other_kalshi_ticker": "KXATPMATCH-26APR26NORTIR-TIR"
+          "polymarket_ticker": "aec-atp-alekov-lorcar-2026-05-04",
+          "kalshi_ticker": "KXATPMATCH-26MAY04KOVCAR-KOV",
+          "other_poly_id": "aec-atp-alekov-lorcar-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPMATCH-26MAY04KOVCAR-CAR"
         },
         {
-          "polymarket_ticker": "aec-atp-karkha-jakmen-2026-04-26",
-          "kalshi_ticker": "KXATPMATCH-26APR26KHAMEN-KHA",
-          "other_poly_id": "aec-atp-karkha-jakmen-2026-04-26-inverse",
-          "other_kalshi_ticker": "KXATPMATCH-26APR26KHAMEN-MEN"
+          "polymarket_ticker": "aec-atp-crigar-moeech-2026-05-04",
+          "kalshi_ticker": "KXATPMATCH-26MAY04GARECH-GAR",
+          "other_poly_id": "aec-atp-crigar-moeech-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPMATCH-26MAY04GARECH-ECH"
         },
         {
-          "polymarket_ticker": "aec-atp-talgri-lormus-2026-04-26",
-          "kalshi_ticker": "KXATPMATCH-26APR26GRIMUS-GRI",
-          "other_poly_id": "aec-atp-talgri-lormus-2026-04-26-inverse",
-          "other_kalshi_ticker": "KXATPMATCH-26APR26GRIMUS-MUS"
+          "polymarket_ticker": "aec-atp-pabbus-mardam-2026-05-04",
+          "kalshi_ticker": "KXATPMATCH-26MAY04CARDAM-CAR",
+          "other_poly_id": "aec-atp-pabbus-mardam-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPMATCH-26MAY04CARDAM-DAM"
         },
         {
-          "polymarket_ticker": "aec-atp-alefok-casruu-2026-04-26",
-          "kalshi_ticker": "KXATPMATCH-26APR26DAVRUU-DAV",
-          "other_poly_id": "aec-atp-alefok-casruu-2026-04-26-inverse",
-          "other_kalshi_ticker": "KXATPMATCH-26APR26DAVRUU-RUU"
+          "polymarket_ticker": "aec-ufc-seastr-khachi-2026-05-09",
+          "kalshi_ticker": "KXUFCFIGHT-26MAY09CHISTR-STR",
+          "other_poly_id": "aec-ufc-seastr-khachi-2026-05-09-inverse",
+          "other_kalshi_ticker": "KXUFCFIGHT-26MAY09CHISTR-CHI"
         },
         {
-          "polymarket_ticker": "aec-atp-fracer-lucdar-2026-04-26",
-          "kalshi_ticker": "KXATPMATCH-26APR26CERDAR-CER",
-          "other_poly_id": "aec-atp-fracer-lucdar-2026-04-26-inverse",
-          "other_kalshi_ticker": "KXATPMATCH-26APR26CERDAR-DAR"
+          "polymarket_ticker": "aec-ufc-clacar-josoch-2026-05-09",
+          "kalshi_ticker": "KXUFCFIGHT-26MAY09CAROCH-CAR",
+          "other_poly_id": "aec-ufc-clacar-josoch-2026-05-09-inverse",
+          "other_kalshi_ticker": "KXUFCFIGHT-26MAY09CAROCH-OCH"
         },
         {
-          "polymarket_ticker": "aec-atp-jacken-nisbas-2026-04-26",
-          "kalshi_ticker": "KXATPCHALLENGERMATCH-26APR26KENBAS-KEN",
-          "other_poly_id": "aec-atp-jacken-nisbas-2026-04-26-inverse",
-          "other_kalshi_ticker": "KXATPCHALLENGERMATCH-26APR26KENBAS-BAS"
+          "polymarket_ticker": "aec-ufc-patsab-wilgom-2026-05-09",
+          "kalshi_ticker": "KXUFCFIGHT-26MAY09SABGOM-SAB",
+          "other_poly_id": "aec-ufc-patsab-wilgom-2026-05-09-inverse",
+          "other_kalshi_ticker": "KXUFCFIGHT-26MAY09SABGOM-GOM"
         },
         {
-          "polymarket_ticker": "aec-ufc-timell-steerc-2026-05-02",
-          "kalshi_ticker": "KXUFCFIGHT-26MAY02ELLERC-ELL",
-          "other_poly_id": "aec-ufc-timell-steerc-2026-05-02-inverse",
-          "other_kalshi_ticker": "KXUFCFIGHT-26MAY02ELLERC-ERC"
+          "polymarket_ticker": "aec-nba-sa-min-2026-05-10",
+          "kalshi_ticker": "KXNBAGAME-26MAY10SASMIN-SAS",
+          "other_poly_id": "aec-nba-sa-min-2026-05-10-inverse",
+          "other_kalshi_ticker": "KXNBAGAME-26MAY10SASMIN-MIN"
         },
         {
-          "polymarket_ticker": "aec-lol-ns-t1-2026-04-29",
-          "kalshi_ticker": "KXLOLMAP-26APR290400T1NS-2-NS",
-          "other_poly_id": "aec-lol-ns-t1-2026-04-29-inverse",
-          "other_kalshi_ticker": "KXLOLMAP-26APR290400T1NS-2-T1"
+          "polymarket_ticker": "aec-nba-okc-lal-2026-05-09",
+          "kalshi_ticker": "KXNBAGAME-26MAY09OKCLAL-OKC",
+          "other_poly_id": "aec-nba-okc-lal-2026-05-09-inverse",
+          "other_kalshi_ticker": "KXNBAGAME-26MAY09OKCLAL-LAL"
         },
         {
-          "polymarket_ticker": "aec-lol-ns-t1-2026-04-29",
-          "kalshi_ticker": "KXLOLMAP-26APR290400T1NS-1-NS",
-          "other_poly_id": "aec-lol-ns-t1-2026-04-29-inverse",
-          "other_kalshi_ticker": "KXLOLMAP-26APR290400T1NS-1-T1"
+          "polymarket_ticker": "aec-nba-sa-min-2026-05-08",
+          "kalshi_ticker": "KXNBAGAME-26MAY08SASMIN-SAS",
+          "other_poly_id": "aec-nba-sa-min-2026-05-08-inverse",
+          "other_kalshi_ticker": "KXNBAGAME-26MAY08SASMIN-MIN"
         },
         {
-          "polymarket_ticker": "aec-lol-kt-hle-2026-04-29",
-          "kalshi_ticker": "KXLOLGAME-26APR290600HLEKT-KT",
-          "other_poly_id": "aec-lol-kt-hle-2026-04-29-inverse",
-          "other_kalshi_ticker": "KXLOLGAME-26APR290600HLEKT-HLE"
+          "polymarket_ticker": "aec-nba-lal-okc-2026-05-07",
+          "kalshi_ticker": "KXNBAGAME-26MAY07LALOKC-LAL",
+          "other_poly_id": "aec-nba-lal-okc-2026-05-07-inverse",
+          "other_kalshi_ticker": "KXNBAGAME-26MAY07LALOKC-OKC"
         },
         {
-          "polymarket_ticker": "aec-lol-nip-jdg-2026-04-29",
-          "kalshi_ticker": "KXLOLGAME-26APR290500JDGNIP-NIP",
-          "other_poly_id": "aec-lol-nip-jdg-2026-04-29-inverse",
-          "other_kalshi_ticker": "KXLOLGAME-26APR290500JDGNIP-JDG"
+          "polymarket_ticker": "aec-nba-phi-ny-2026-05-06",
+          "kalshi_ticker": "KXNBAGAME-26MAY06PHINYK-PHI",
+          "other_poly_id": "aec-nba-phi-ny-2026-05-06-inverse",
+          "other_kalshi_ticker": "KXNBAGAME-26MAY06PHINYK-NYK"
         },
         {
-          "polymarket_ticker": "aec-lol-ig-al-2026-04-28",
-          "kalshi_ticker": "KXLOLGAME-26APR280500ALIG-IG",
-          "other_poly_id": "aec-lol-ig-al-2026-04-28-inverse",
-          "other_kalshi_ticker": "KXLOLGAME-26APR280500ALIG-AL"
+          "polymarket_ticker": "aec-nba-min-sa-2026-05-06",
+          "kalshi_ticker": "KXNBAGAME-26MAY06MINSAS-MIN",
+          "other_poly_id": "aec-nba-min-sa-2026-05-06-inverse",
+          "other_kalshi_ticker": "KXNBAGAME-26MAY06MINSAS-SAS"
         },
         {
-          "polymarket_ticker": "aec-mlb-ath-tex-2026-04-26",
-          "kalshi_ticker": "KXMLBGAME-26APR261435ATHTEX-ATH",
-          "other_poly_id": "aec-mlb-ath-tex-2026-04-26-inverse",
-          "other_kalshi_ticker": "KXMLBGAME-26APR261435ATHTEX-TEX"
+          "polymarket_ticker": "aec-nba-lal-okc-2026-05-05",
+          "kalshi_ticker": "KXNBAGAME-26MAY05LALOKC-LAL",
+          "other_poly_id": "aec-nba-lal-okc-2026-05-05-inverse",
+          "other_kalshi_ticker": "KXNBAGAME-26MAY05LALOKC-OKC"
         },
         {
-          "polymarket_ticker": "aec-nba-cle-tor-2026-04-26",
-          "kalshi_ticker": "KXMLBGAME-26APR261337CLETOR-CLE",
-          "other_poly_id": "aec-nba-cle-tor-2026-04-26-inverse",
-          "other_kalshi_ticker": "KXMLBGAME-26APR261337CLETOR-TOR"
+          "polymarket_ticker": "aec-nba-phi-ny-2026-05-04",
+          "kalshi_ticker": "KXNBAGAME-26MAY04PHINYK-PHI",
+          "other_poly_id": "aec-nba-phi-ny-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXNBAGAME-26MAY04PHINYK-NYK"
         },
         {
-          "polymarket_ticker": "aec-nba-lal-hou-2026-04-26",
-          "kalshi_ticker": "KXNBAGAME-26APR26LALHOU-LAL",
-          "other_poly_id": "aec-nba-lal-hou-2026-04-26-inverse",
-          "other_kalshi_ticker": "KXNBAGAME-26APR26LALHOU-HOU"
+          "polymarket_ticker": "aec-nba-min-sa-2026-05-04",
+          "kalshi_ticker": "KXNBAGAME-26MAY04MINSAS-MIN",
+          "other_poly_id": "aec-nba-min-sa-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXNBAGAME-26MAY04MINSAS-SAS"
         },
         {
-          "polymarket_ticker": "aec-atp-dalsvr-andgue-2026-04-26",
-          "kalshi_ticker": "KXATPCHALLENGERMATCH-26APR26SVRGUE-SVR",
-          "other_poly_id": "aec-atp-dalsvr-andgue-2026-04-26-inverse",
-          "other_kalshi_ticker": "KXATPCHALLENGERMATCH-26APR26SVRGUE-GUE"
+          "polymarket_ticker": "aec-nhl-car-phi-2026-05-09",
+          "kalshi_ticker": "KXNHLGAME-26MAY09CARPHI-CAR",
+          "other_poly_id": "aec-nhl-car-phi-2026-05-09-inverse",
+          "other_kalshi_ticker": "KXNHLGAME-26MAY09CARPHI-PHI"
         },
         {
-          "polymarket_ticker": "aec-nba-lal-hou-2026-04-26",
-          "kalshi_ticker": "KXNBASERIES-26HOULALR1-LAL",
-          "other_poly_id": "aec-nba-lal-hou-2026-04-26-inverse",
-          "other_kalshi_ticker": "KXNBASERIES-26HOULALR1-HOU"
+          "polymarket_ticker": "aec-nhl-car-phi-2026-05-07",
+          "kalshi_ticker": "KXNHLGAME-26MAY07CARPHI-CAR",
+          "other_poly_id": "aec-nhl-car-phi-2026-05-07-inverse",
+          "other_kalshi_ticker": "KXNHLGAME-26MAY07CARPHI-PHI"
         },
         {
-          "polymarket_ticker": "aec-ufc-bendar-quisal-2026-05-02",
-          "kalshi_ticker": "KXUFCFIGHT-26MAY02DARSAL-DAR",
-          "other_poly_id": "aec-ufc-bendar-quisal-2026-05-02-inverse",
-          "other_kalshi_ticker": "KXUFCFIGHT-26MAY02DARSAL-SAL"
+          "polymarket_ticker": "aec-nhl-ana-veg-2026-05-06",
+          "kalshi_ticker": "KXNHLGAME-26MAY06ANAVGK-ANA",
+          "other_poly_id": "aec-nhl-ana-veg-2026-05-06-inverse",
+          "other_kalshi_ticker": "KXNHLGAME-26MAY06ANAVGK-VGK"
         },
         {
-          "polymarket_ticker": "aec-ufc-shagaz-braper-2026-05-02",
-          "kalshi_ticker": "KXUFCFIGHT-26MAY02GAZPER-GAZ",
-          "other_poly_id": "aec-ufc-shagaz-braper-2026-05-02-inverse",
-          "other_kalshi_ticker": "KXUFCFIGHT-26MAY02GAZPER-PER"
+          "polymarket_ticker": "aec-nhl-min-col-2026-05-05",
+          "kalshi_ticker": "KXNHLGAME-26MAY05MINCOL-MIN",
+          "other_poly_id": "aec-nhl-min-col-2026-05-05-inverse",
+          "other_kalshi_ticker": "KXNHLGAME-26MAY05MINCOL-COL"
         },
         {
-          "polymarket_ticker": "aec-nba-atl-ny-2026-04-28",
-          "kalshi_ticker": "KXNBAGAME-26APR28ATLNYK-ATL",
-          "other_poly_id": "aec-nba-atl-ny-2026-04-28-inverse",
-          "other_kalshi_ticker": "KXNBAGAME-26APR28ATLNYK-NYK"
+          "polymarket_ticker": "aec-nhl-ana-veg-2026-05-04",
+          "kalshi_ticker": "KXNHLGAME-26MAY04ANAVGK-ANA",
+          "other_poly_id": "aec-nhl-ana-veg-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXNHLGAME-26MAY04ANAVGK-VGK"
         },
         {
-          "polymarket_ticker": "aec-nba-phi-bos-2026-04-28",
-          "kalshi_ticker": "KXNBAGAME-26APR28PHIBOS-PHI",
-          "other_poly_id": "aec-nba-phi-bos-2026-04-28-inverse",
-          "other_kalshi_ticker": "KXNBAGAME-26APR28PHIBOS-BOS"
+          "polymarket_ticker": "aec-nhl-phi-car-2026-05-04",
+          "kalshi_ticker": "KXNHLGAME-26MAY04PHICAR-PHI",
+          "other_poly_id": "aec-nhl-phi-car-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXNHLGAME-26MAY04PHICAR-CAR"
         },
         {
-          "polymarket_ticker": "aec-nba-bos-phi-2026-04-26",
-          "kalshi_ticker": "KXNBAGAME-26APR26BOSPHI-BOS",
-          "other_poly_id": "aec-nba-bos-phi-2026-04-26-inverse",
-          "other_kalshi_ticker": "KXNBAGAME-26APR26BOSPHI-PHI"
+          "polymarket_ticker": "aec-nhl-min-col-2026-05-03",
+          "kalshi_ticker": "KXNHLGAME-26MAY03MINCOL-MIN",
+          "other_poly_id": "aec-nhl-min-col-2026-05-03-inverse",
+          "other_kalshi_ticker": "KXNHLGAME-26MAY03MINCOL-COL"
         },
         {
-          "polymarket_ticker": "aec-mlb-cle-tor-2026-04-26",
-          "kalshi_ticker": "KXNBAGAME-26APR26CLETOR-CLE",
-          "other_poly_id": "aec-mlb-cle-tor-2026-04-26-inverse",
-          "other_kalshi_ticker": "KXNBAGAME-26APR26CLETOR-TOR"
+          "polymarket_ticker": "aec-lol-tes-jdg-2026-05-06",
+          "kalshi_ticker": "KXLOLGAME-26MAY060700JDGTES-TES",
+          "other_poly_id": "aec-lol-tes-jdg-2026-05-06-inverse",
+          "other_kalshi_ticker": "KXLOLGAME-26MAY060700JDGTES-JDG"
         },
         {
-          "polymarket_ticker": "aec-atp-stetsi-danagu-2026-04-27",
-          "kalshi_ticker": "KXATPSETWINNER-26APR27TSIMER-2-TSI",
-          "other_poly_id": "aec-atp-stetsi-danagu-2026-04-27-inverse",
-          "other_kalshi_ticker": "KXATPSETWINNER-26APR27TSIMER-2-MER"
+          "polymarket_ticker": "aec-lol-we-ig-2026-05-06",
+          "kalshi_ticker": "KXLOLGAME-26MAY060500IGWE-WE",
+          "other_poly_id": "aec-lol-we-ig-2026-05-06-inverse",
+          "other_kalshi_ticker": "KXLOLGAME-26MAY060500IGWE-IG"
         },
         {
-          "polymarket_ticker": "aec-atp-stetsi-danagu-2026-04-27",
-          "kalshi_ticker": "KXATPSETWINNER-26APR27TSIMER-1-TSI",
-          "other_poly_id": "aec-atp-stetsi-danagu-2026-04-27-inverse",
-          "other_kalshi_ticker": "KXATPSETWINNER-26APR27TSIMER-1-MER"
+          "polymarket_ticker": "aec-lol-kt-bfx-2026-05-05",
+          "kalshi_ticker": "KXLOLGAME-26MAY050400FOXKT-KT",
+          "other_poly_id": "aec-lol-kt-bfx-2026-05-05-inverse",
+          "other_kalshi_ticker": "KXLOLGAME-26MAY050400FOXKT-FOX"
         },
         {
-          "polymarket_ticker": "aec-atp-camnor-thitir-2026-04-26",
-          "kalshi_ticker": "KXATPSETWINNER-26APR26NORTIR-1-NOR",
-          "other_poly_id": "aec-atp-camnor-thitir-2026-04-26-inverse",
-          "other_kalshi_ticker": "KXATPSETWINNER-26APR26NORTIR-1-TIR"
+          "polymarket_ticker": "aec-lol-dk-ns-2026-05-04",
+          "kalshi_ticker": "KXLOLGAME-26MAY040700NSDK-DK",
+          "other_poly_id": "aec-lol-dk-ns-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXLOLGAME-26MAY040700NSDK-NS"
         },
         {
-          "polymarket_ticker": "aec-atp-karkha-jakmen-2026-04-26",
-          "kalshi_ticker": "KXATPSETWINNER-26APR26KHAMEN-2-KHA",
-          "other_poly_id": "aec-atp-karkha-jakmen-2026-04-26-inverse",
-          "other_kalshi_ticker": "KXATPSETWINNER-26APR26KHAMEN-2-MEN"
+          "polymarket_ticker": "aec-mlb-sd-sf-2026-05-04",
+          "kalshi_ticker": "KXMLBGAME-26MAY042145SDSF-SD",
+          "other_poly_id": "aec-mlb-sd-sf-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXMLBGAME-26MAY042145SDSF-SF"
         },
         {
-          "polymarket_ticker": "aec-atp-karkha-jakmen-2026-04-26",
-          "kalshi_ticker": "KXATPSETWINNER-26APR26KHAMEN-1-KHA",
-          "other_poly_id": "aec-atp-karkha-jakmen-2026-04-26-inverse",
-          "other_kalshi_ticker": "KXATPSETWINNER-26APR26KHAMEN-1-MEN"
+          "polymarket_ticker": "aec-mlb-bos-det-2026-05-04",
+          "kalshi_ticker": "KXMLBGAME-26MAY041840BOSDET-BOS",
+          "other_poly_id": "aec-mlb-bos-det-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXMLBGAME-26MAY041840BOSDET-DET"
         },
         {
-          "polymarket_ticker": "aec-atp-fracer-lucdar-2026-04-26",
-          "kalshi_ticker": "KXATPSETWINNER-26APR26CERDAR-1-CER",
-          "other_poly_id": "aec-atp-fracer-lucdar-2026-04-26-inverse",
-          "other_kalshi_ticker": "KXATPSETWINNER-26APR26CERDAR-1-DAR"
+          "polymarket_ticker": "aec-mlb-tex-det-2026-05-03",
+          "kalshi_ticker": "KXMLBGAME-26MAY031920TEXDET-TEX",
+          "other_poly_id": "aec-mlb-tex-det-2026-05-03-inverse",
+          "other_kalshi_ticker": "KXMLBGAME-26MAY031920TEXDET-DET"
+        },
+        {
+          "polymarket_ticker": "aec-mlb-cle-ath-2026-05-03",
+          "kalshi_ticker": "KXMLBGAME-26MAY031605CLEATH-CLE",
+          "other_poly_id": "aec-mlb-cle-ath-2026-05-03-inverse",
+          "other_kalshi_ticker": "KXMLBGAME-26MAY031605CLEATH-ATH"
+        },
+        {
+          "polymarket_ticker": "aec-cs2-navi-vit-2026-05-03",
+          "kalshi_ticker": "KXCS2MAP-26MAY031330VITNAVI-3-NAVI",
+          "other_poly_id": "aec-cs2-navi-vit-2026-05-03-inverse",
+          "other_kalshi_ticker": "KXCS2MAP-26MAY031330VITNAVI-3-VIT"
+        },
+        {
+          "polymarket_ticker": "aec-wta-taytow-rebsra-2026-05-04",
+          "kalshi_ticker": "KXWTASETWINNER-26MAY04TOWSRA-1-TOW",
+          "other_poly_id": "aec-wta-taytow-rebsra-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXWTASETWINNER-26MAY04TOWSRA-1-SRA"
+        },
+        {
+          "polymarket_ticker": "aec-wta-liltag-suzlam-2026-05-04",
+          "kalshi_ticker": "KXWTASETWINNER-26MAY04TAGLAM-1-TAG",
+          "other_poly_id": "aec-wta-liltag-suzlam-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXWTASETWINNER-26MAY04TAGLAM-1-LAM"
+        },
+        {
+          "polymarket_ticker": "aec-wta-darsem-katvol-2026-05-04",
+          "kalshi_ticker": "KXWTASETWINNER-26MAY04SEMVOL-2-SEM",
+          "other_poly_id": "aec-wta-darsem-katvol-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXWTASETWINNER-26MAY04SEMVOL-2-VOL"
+        },
+        {
+          "polymarket_ticker": "aec-wta-darsem-katvol-2026-05-04",
+          "kalshi_ticker": "KXWTASETWINNER-26MAY04SEMVOL-1-SEM",
+          "other_poly_id": "aec-wta-darsem-katvol-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXWTASETWINNER-26MAY04SEMVOL-1-VOL"
+        },
+        {
+          "polymarket_ticker": "aec-wta-domsal-sinkra-2026-05-04",
+          "kalshi_ticker": "KXWTASETWINNER-26MAY04SALKRA-1-SAL",
+          "other_poly_id": "aec-wta-domsal-sinkra-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXWTASETWINNER-26MAY04SALKRA-1-KRA"
+        },
+        {
+          "polymarket_ticker": "aec-wta-gabrus-ocedod-2026-05-04",
+          "kalshi_ticker": "KXWTASETWINNER-26MAY04RUSDOD-1-RUS",
+          "other_poly_id": "aec-wta-gabrus-ocedod-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXWTASETWINNER-26MAY04RUSDOD-1-DOD"
+        },
+        {
+          "polymarket_ticker": "aec-wta-anapot-iribeg-2026-05-04",
+          "kalshi_ticker": "KXWTASETWINNER-26MAY04POTBEG-1-POT",
+          "other_poly_id": "aec-wta-anapot-iribeg-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXWTASETWINNER-26MAY04POTBEG-1-BEG"
+        },
+        {
+          "polymarket_ticker": "aec-wta-anapav-vererj-2026-05-04",
+          "kalshi_ticker": "KXWTASETWINNER-26MAY04PAVERJ-1-PAV",
+          "other_poly_id": "aec-wta-anapav-vererj-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXWTASETWINNER-26MAY04PAVERJ-1-ERJ"
+        },
+        {
+          "polymarket_ticker": "aec-wta-alypar-dalgal-2026-05-04",
+          "kalshi_ticker": "KXWTASETWINNER-26MAY04PARGAL-1-PAR",
+          "other_poly_id": "aec-wta-alypar-dalgal-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXWTASETWINNER-26MAY04PARGAL-1-GAL"
+        },
+        {
+          "polymarket_ticker": "aec-wta-ashkru-nikbar-2026-05-04",
+          "kalshi_ticker": "KXWTASETWINNER-26MAY04KRUBAR-1-KRU",
+          "other_poly_id": "aec-wta-ashkru-nikbar-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXWTASETWINNER-26MAY04KRUBAR-1-BAR"
+        },
+        {
+          "polymarket_ticker": "aec-wta-vickas-lulsun-2026-05-04",
+          "kalshi_ticker": "KXWTASETWINNER-26MAY04JIMSUN-1-JIM",
+          "other_poly_id": "aec-wta-vickas-lulsun-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXWTASETWINNER-26MAY04JIMSUN-1-SUN"
+        },
+        {
+          "polymarket_ticker": "aec-wta-leojea-diapar-2026-05-04",
+          "kalshi_ticker": "KXWTASETWINNER-26MAY04JEAPAR-1-JEA",
+          "other_poly_id": "aec-wta-leojea-diapar-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXWTASETWINNER-26MAY04JEAPAR-1-PAR"
+        },
+        {
+          "polymarket_ticker": "aec-wta-kimbir-yueyua-2026-05-04",
+          "kalshi_ticker": "KXWTASETWINNER-26MAY04BIRYUA-1-BIR",
+          "other_poly_id": "aec-wta-kimbir-yueyua-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXWTASETWINNER-26MAY04BIRYUA-1-YUA"
+        },
+        {
+          "polymarket_ticker": "aec-wta-emiara-noebas-2026-05-04",
+          "kalshi_ticker": "KXWTASETWINNER-26MAY04ARABAS-1-ARA",
+          "other_poly_id": "aec-wta-emiara-noebas-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXWTASETWINNER-26MAY04ARABAS-1-BAS"
+        },
+        {
+          "polymarket_ticker": "aec-wta-taytow-rebsra-2026-05-04",
+          "kalshi_ticker": "KXWTAMATCH-26MAY04TOWSRA-TOW",
+          "other_poly_id": "aec-wta-taytow-rebsra-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXWTAMATCH-26MAY04TOWSRA-SRA"
+        },
+        {
+          "polymarket_ticker": "aec-wta-darsem-katvol-2026-05-04",
+          "kalshi_ticker": "KXWTAMATCH-26MAY04SEMVOL-SEM",
+          "other_poly_id": "aec-wta-darsem-katvol-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXWTAMATCH-26MAY04SEMVOL-VOL"
+        },
+        {
+          "polymarket_ticker": "aec-wta-vickas-lulsun-2026-05-04",
+          "kalshi_ticker": "KXWTAMATCH-26MAY04JIMSUN-JIM",
+          "other_poly_id": "aec-wta-vickas-lulsun-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXWTAMATCH-26MAY04JIMSUN-SUN"
+        },
+        {
+          "polymarket_ticker": "aec-wta-annbli-mayshe-2026-05-04",
+          "kalshi_ticker": "KXWTAMATCH-26MAY04BLISHE-BLI",
+          "other_poly_id": "aec-wta-annbli-mayshe-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXWTAMATCH-26MAY04BLISHE-SHE"
+        },
+        {
+          "polymarket_ticker": "aec-atp-lucass-hugdel-2026-05-04",
+          "kalshi_ticker": "KXATPSETWINNER-26MAY04VANDEL-1-VAN",
+          "other_poly_id": "aec-atp-lucass-hugdel-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPSETWINNER-26MAY04VANDEL-1-DEL"
+        },
+        {
+          "polymarket_ticker": "aec-atp-adoval-jaifar-2026-05-04",
+          "kalshi_ticker": "KXATPSETWINNER-26MAY04VALFAR-1-VAL",
+          "other_poly_id": "aec-atp-adoval-jaifar-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPSETWINNER-26MAY04VALFAR-1-FAR"
+        },
+        {
+          "polymarket_ticker": "aec-atp-learie-vilgau-2026-05-04",
+          "kalshi_ticker": "KXATPSETWINNER-26MAY04RIEGAU-1-RIE",
+          "other_poly_id": "aec-atp-learie-vilgau-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPSETWINNER-26MAY04RIEGAU-1-GAU"
+        },
+        {
+          "polymarket_ticker": "aec-atp-dinpri-chrrod-2026-05-04",
+          "kalshi_ticker": "KXATPSETWINNER-26MAY04PRIROD-2-PRI",
+          "other_poly_id": "aec-atp-dinpri-chrrod-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPSETWINNER-26MAY04PRIROD-2-ROD"
+        },
+        {
+          "polymarket_ticker": "aec-atp-dinpri-chrrod-2026-05-04",
+          "kalshi_ticker": "KXATPSETWINNER-26MAY04PRIROD-1-PRI",
+          "other_poly_id": "aec-atp-dinpri-chrrod-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPSETWINNER-26MAY04PRIROD-1-ROD"
+        },
+        {
+          "polymarket_ticker": "aec-atp-zsopir-henroc-2026-05-04",
+          "kalshi_ticker": "KXATPSETWINNER-26MAY04PIRROC-1-PIR",
+          "other_poly_id": "aec-atp-zsopir-henroc-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPSETWINNER-26MAY04PIRROC-1-ROC"
+        },
+        {
+          "polymarket_ticker": "aec-atp-andpel-huggas-2026-05-04",
+          "kalshi_ticker": "KXATPSETWINNER-26MAY04PELGAS-1-PEL",
+          "other_poly_id": "aec-atp-andpel-huggas-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPSETWINNER-26MAY04PELGAS-1-GAS"
+        },
+        {
+          "polymarket_ticker": "aec-atp-danagu-macmcd-2026-05-04",
+          "kalshi_ticker": "KXATPSETWINNER-26MAY04MERMCD-1-MCD",
+          "other_poly_id": "aec-atp-danagu-macmcd-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPSETWINNER-26MAY04MERMCD-1-MER"
+        },
+        {
+          "polymarket_ticker": "aec-atp-marlan-chroco-2026-05-04",
+          "kalshi_ticker": "KXATPSETWINNER-26MAY04LANOCO-1-LAN",
+          "other_poly_id": "aec-atp-marlan-chroco-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPSETWINNER-26MAY04LANOCO-1-OCO"
+        },
+        {
+          "polymarket_ticker": "aec-atp-rinhij-piebas-2026-05-04",
+          "kalshi_ticker": "KXATPSETWINNER-26MAY04HIJBAS-1-HIJ",
+          "other_poly_id": "aec-atp-rinhij-piebas-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPSETWINNER-26MAY04HIJBAS-1-BAS"
+        },
+        {
+          "polymarket_ticker": "aec-atp-fracom-bilhar-2026-05-04",
+          "kalshi_ticker": "KXATPSETWINNER-26MAY04COMHAR-1-COM",
+          "other_poly_id": "aec-atp-fracom-bilhar-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPSETWINNER-26MAY04COMHAR-1-HAR"
+        },
+        {
+          "polymarket_ticker": "aec-atp-pabbus-mardam-2026-05-04",
+          "kalshi_ticker": "KXATPSETWINNER-26MAY04CARDAM-1-CAR",
+          "other_poly_id": "aec-atp-pabbus-mardam-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPSETWINNER-26MAY04CARDAM-1-DAM"
+        },
+        {
+          "polymarket_ticker": "aec-atp-nickja-ottvir-2026-05-04",
+          "kalshi_ticker": "KXATPSETWINNER-26MAY04BUDVIR-1-VIR",
+          "other_poly_id": "aec-atp-nickja-ottvir-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPSETWINNER-26MAY04BUDVIR-1-BUD"
+        },
+        {
+          "polymarket_ticker": "aec-atp-fedbon-eminav-2026-05-04",
+          "kalshi_ticker": "KXATPSETWINNER-26MAY04BONNAV-1-BON",
+          "other_poly_id": "aec-atp-fedbon-eminav-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPSETWINNER-26MAY04BONNAV-1-NAV"
+        },
+        {
+          "polymarket_ticker": "aec-atp-adoval-jaifar-2026-05-04",
+          "kalshi_ticker": "KXATPMATCH-26MAY04VALFAR-VAL",
+          "other_poly_id": "aec-atp-adoval-jaifar-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPMATCH-26MAY04VALFAR-FAR"
+        },
+        {
+          "polymarket_ticker": "aec-atp-learie-vilgau-2026-05-04",
+          "kalshi_ticker": "KXATPMATCH-26MAY04RIEGAU-RIE",
+          "other_poly_id": "aec-atp-learie-vilgau-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPMATCH-26MAY04RIEGAU-GAU"
+        },
+        {
+          "polymarket_ticker": "aec-atp-pedmar-jesjon-2026-05-04",
+          "kalshi_ticker": "KXATPMATCH-26MAY04MARDEJ-MAR",
+          "other_poly_id": "aec-atp-pedmar-jesjon-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPMATCH-26MAY04MARDEJ-DEJ"
+        },
+        {
+          "polymarket_ticker": "aec-atp-marlan-chroco-2026-05-04",
+          "kalshi_ticker": "KXATPMATCH-26MAY04LANOCO-LAN",
+          "other_poly_id": "aec-atp-marlan-chroco-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPMATCH-26MAY04LANOCO-OCO"
+        },
+        {
+          "polymarket_ticker": "aec-atp-patkyp-jacjon-2026-05-04",
+          "kalshi_ticker": "KXATPMATCH-26MAY04KYPPIN-KYP",
+          "other_poly_id": "aec-atp-patkyp-jacjon-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPMATCH-26MAY04KYPPIN-PIN"
+        },
+        {
+          "polymarket_ticker": "aec-atp-fracom-bilhar-2026-05-04",
+          "kalshi_ticker": "KXATPMATCH-26MAY04COMHAR-COM",
+          "other_poly_id": "aec-atp-fracom-bilhar-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPMATCH-26MAY04COMHAR-HAR"
+        },
+        {
+          "polymarket_ticker": "aec-atp-nickja-ottvir-2026-05-04",
+          "kalshi_ticker": "KXATPMATCH-26MAY04BUDVIR-VIR",
+          "other_poly_id": "aec-atp-nickja-ottvir-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPMATCH-26MAY04BUDVIR-BUD"
+        },
+        {
+          "polymarket_ticker": "aec-atp-benbon-dalsvr-2026-05-04",
+          "kalshi_ticker": "KXATPMATCH-26MAY04BONSVR-BON",
+          "other_poly_id": "aec-atp-benbon-dalsvr-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPMATCH-26MAY04BONSVR-SVR"
+        },
+        {
+          "polymarket_ticker": "aec-atp-fedbon-eminav-2026-05-04",
+          "kalshi_ticker": "KXATPMATCH-26MAY04BONNAV-BON",
+          "other_poly_id": "aec-atp-fedbon-eminav-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPMATCH-26MAY04BONNAV-NAV"
+        },
+        {
+          "polymarket_ticker": "aec-ufc-alexvol-walcor-2026-05-09",
+          "kalshi_ticker": "KXUFCFIGHT-26MAY09VOLCOR-VOL",
+          "other_poly_id": "aec-ufc-alexvol-walcor-2026-05-09-inverse",
+          "other_kalshi_ticker": "KXUFCFIGHT-26MAY09VOLCOR-COR"
+        },
+        {
+          "polymarket_ticker": "aec-ufc-jerste-kingre-2026-05-09",
+          "kalshi_ticker": "KXUFCFIGHT-26MAY09GRESTE-STE",
+          "other_poly_id": "aec-ufc-jerste-kingre-2026-05-09-inverse",
+          "other_kalshi_ticker": "KXUFCFIGHT-26MAY09GRESTE-GRE"
+        },
+        {
+          "polymarket_ticker": "aec-ufc-jimmil-jargor-2026-05-09",
+          "kalshi_ticker": "KXUFCFIGHT-26MAY09MILGOR-MIL",
+          "other_poly_id": "aec-ufc-jimmil-jargor-2026-05-09-inverse",
+          "other_kalshi_ticker": "KXUFCFIGHT-26MAY09MILGOR-GOR"
+        },
+        {
+          "polymarket_ticker": "aec-ufc-gradaw-matreb-2026-05-09",
+          "kalshi_ticker": "KXUFCFIGHT-26MAY09DAWREB-DAW",
+          "other_poly_id": "aec-ufc-gradaw-matreb-2026-05-09-inverse",
+          "other_kalshi_ticker": "KXUFCFIGHT-26MAY09DAWREB-REB"
+        },
+        {
+          "polymarket_ticker": "aec-ufc-romkop-martul-2026-05-09",
+          "kalshi_ticker": "KXUFCFIGHT-26MAY09KOPTUL-KOP",
+          "other_poly_id": "aec-ufc-romkop-martul-2026-05-09-inverse",
+          "other_kalshi_ticker": "KXUFCFIGHT-26MAY09KOPTUL-TUL"
+        },
+        {
+          "polymarket_ticker": "aec-nba-ny-phi-2026-05-10",
+          "kalshi_ticker": "KXNBAGAME-26MAY10NYKPHI-NYK",
+          "other_poly_id": "aec-nba-ny-phi-2026-05-10-inverse",
+          "other_kalshi_ticker": "KXNBAGAME-26MAY10NYKPHI-PHI"
+        },
+        {
+          "polymarket_ticker": "aec-nba-ny-phi-2026-05-08",
+          "kalshi_ticker": "KXNBAGAME-26MAY08NYKPHI-NYK",
+          "other_poly_id": "aec-nba-ny-phi-2026-05-08-inverse",
+          "other_kalshi_ticker": "KXNBAGAME-26MAY08NYKPHI-PHI"
+        },
+        {
+          "polymarket_ticker": "aec-nhl-col-min-2026-05-09",
+          "kalshi_ticker": "KXNHLGAME-26MAY09COLMIN-COL",
+          "other_poly_id": "aec-nhl-col-min-2026-05-09-inverse",
+          "other_kalshi_ticker": "KXNHLGAME-26MAY09COLMIN-MIN"
+        },
+        {
+          "polymarket_ticker": "aec-lol-krx-dns-2026-05-04",
+          "kalshi_ticker": "KXLOLGAME-26MAY040300DNFDRX-DRX",
+          "other_poly_id": "aec-lol-krx-dns-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXLOLGAME-26MAY040300DNFDRX-DNF"
+        },
+        {
+          "polymarket_ticker": "aec-atp-yasuch-alagra-2026-05-03",
+          "kalshi_ticker": "KXITFMATCH-26MAY03TAKKIM-TAK",
+          "other_poly_id": "aec-atp-yasuch-alagra-2026-05-03-inverse",
+          "other_kalshi_ticker": "KXITFMATCH-26MAY03TAKKIM-KIM"
+        },
+        {
+          "polymarket_ticker": "aec-wta-hanvan-jiltei-2026-05-04",
+          "kalshi_ticker": "KXWTASETWINNER-26MAY04VANTEI-1-VAN",
+          "other_poly_id": "aec-wta-hanvan-jiltei-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXWTASETWINNER-26MAY04VANTEI-1-TEI"
+        },
+        {
+          "polymarket_ticker": "aec-wta-liltag-suzlam-2026-05-04",
+          "kalshi_ticker": "KXWTASETWINNER-26MAY04TAGLAM-2-TAG",
+          "other_poly_id": "aec-wta-liltag-suzlam-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXWTASETWINNER-26MAY04TAGLAM-2-LAM"
+        },
+        {
+          "polymarket_ticker": "aec-wta-domsal-sinkra-2026-05-04",
+          "kalshi_ticker": "KXWTASETWINNER-26MAY04SALKRA-2-SAL",
+          "other_poly_id": "aec-wta-domsal-sinkra-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXWTASETWINNER-26MAY04SALKRA-2-KRA"
+        },
+        {
+          "polymarket_ticker": "aec-wta-gabrus-ocedod-2026-05-04",
+          "kalshi_ticker": "KXWTASETWINNER-26MAY04RUSDOD-2-RUS",
+          "other_poly_id": "aec-wta-gabrus-ocedod-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXWTASETWINNER-26MAY04RUSDOD-2-DOD"
+        },
+        {
+          "polymarket_ticker": "aec-wta-alypar-dalgal-2026-05-04",
+          "kalshi_ticker": "KXWTASETWINNER-26MAY04PARGAL-2-PAR",
+          "other_poly_id": "aec-wta-alypar-dalgal-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXWTASETWINNER-26MAY04PARGAL-2-GAL"
+        },
+        {
+          "polymarket_ticker": "aec-wta-rebmas-moyuch-2026-05-04",
+          "kalshi_ticker": "KXWTASETWINNER-26MAY04MASUCH-1-MAS",
+          "other_poly_id": "aec-wta-rebmas-moyuch-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXWTASETWINNER-26MAY04MASUCH-1-UCH"
+        },
+        {
+          "polymarket_ticker": "aec-wta-alikor-ellsei-2026-05-04",
+          "kalshi_ticker": "KXWTASETWINNER-26MAY04KORSEI-1-KOR",
+          "other_poly_id": "aec-wta-alikor-ellsei-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXWTASETWINNER-26MAY04KORSEI-1-SEI"
+        },
+        {
+          "polymarket_ticker": "aec-wta-kimbir-yueyua-2026-05-04",
+          "kalshi_ticker": "KXWTASETWINNER-26MAY04BIRYUA-2-BIR",
+          "other_poly_id": "aec-wta-kimbir-yueyua-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXWTASETWINNER-26MAY04BIRYUA-2-YUA"
+        },
+        {
+          "polymarket_ticker": "aec-wta-emiara-noebas-2026-05-04",
+          "kalshi_ticker": "KXWTASETWINNER-26MAY04ARABAS-2-ARA",
+          "other_poly_id": "aec-wta-emiara-noebas-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXWTASETWINNER-26MAY04ARABAS-2-BAS"
+        },
+        {
+          "polymarket_ticker": "aec-wta-hanvan-jiltei-2026-05-04",
+          "kalshi_ticker": "KXWTAMATCH-26MAY04VANTEI-VAN",
+          "other_poly_id": "aec-wta-hanvan-jiltei-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXWTAMATCH-26MAY04VANTEI-TEI"
+        },
+        {
+          "polymarket_ticker": "aec-wta-domsal-sinkra-2026-05-04",
+          "kalshi_ticker": "KXWTAMATCH-26MAY04SALKRA-SAL",
+          "other_poly_id": "aec-wta-domsal-sinkra-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXWTAMATCH-26MAY04SALKRA-KRA"
+        },
+        {
+          "polymarket_ticker": "aec-wta-leojea-diapar-2026-05-04",
+          "kalshi_ticker": "KXWTAMATCH-26MAY04JEAPAR-JEA",
+          "other_poly_id": "aec-wta-leojea-diapar-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXWTAMATCH-26MAY04JEAPAR-PAR"
+        },
+        {
+          "polymarket_ticker": "aec-wta-emiara-noebas-2026-05-04",
+          "kalshi_ticker": "KXWTAMATCH-26MAY04ARABAS-ARA",
+          "other_poly_id": "aec-wta-emiara-noebas-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXWTAMATCH-26MAY04ARABAS-BAS"
+        },
+        {
+          "polymarket_ticker": "aec-atp-jacvas-tombar-2026-05-04",
+          "kalshi_ticker": "KXATPSETWINNER-26MAY04VASBAR-2-VAS",
+          "other_poly_id": "aec-atp-jacvas-tombar-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPSETWINNER-26MAY04VASBAR-2-BAR"
+        },
+        {
+          "polymarket_ticker": "aec-atp-jacvas-tombar-2026-05-04",
+          "kalshi_ticker": "KXATPSETWINNER-26MAY04VASBAR-1-VAS",
+          "other_poly_id": "aec-atp-jacvas-tombar-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPSETWINNER-26MAY04VASBAR-1-BAR"
+        },
+        {
+          "polymarket_ticker": "aec-atp-adoval-jaifar-2026-05-04",
+          "kalshi_ticker": "KXATPSETWINNER-26MAY04VALFAR-2-VAL",
+          "other_poly_id": "aec-atp-adoval-jaifar-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPSETWINNER-26MAY04VALFAR-2-FAR"
+        },
+        {
+          "polymarket_ticker": "aec-atp-stetra-stawaw-2026-05-04",
+          "kalshi_ticker": "KXATPSETWINNER-26MAY04TRAWAW-1-TRA",
+          "other_poly_id": "aec-atp-stetra-stawaw-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPSETWINNER-26MAY04TRAWAW-1-WAW"
+        },
+        {
+          "polymarket_ticker": "aec-atp-learie-vilgau-2026-05-04",
+          "kalshi_ticker": "KXATPSETWINNER-26MAY04RIEGAU-2-RIE",
+          "other_poly_id": "aec-atp-learie-vilgau-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPSETWINNER-26MAY04RIEGAU-2-GAU"
+        },
+        {
+          "polymarket_ticker": "aec-atp-andpel-huggas-2026-05-04",
+          "kalshi_ticker": "KXATPSETWINNER-26MAY04PELGAS-2-PEL",
+          "other_poly_id": "aec-atp-andpel-huggas-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPSETWINNER-26MAY04PELGAS-2-GAS"
+        },
+        {
+          "polymarket_ticker": "aec-atp-elmmoe-nikbas-2026-05-04",
+          "kalshi_ticker": "KXATPSETWINNER-26MAY04MOLBAS-2-MOL",
+          "other_poly_id": "aec-atp-elmmoe-nikbas-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPSETWINNER-26MAY04MOLBAS-2-BAS"
+        },
+        {
+          "polymarket_ticker": "aec-atp-elmmoe-nikbas-2026-05-04",
+          "kalshi_ticker": "KXATPSETWINNER-26MAY04MOLBAS-1-MOL",
+          "other_poly_id": "aec-atp-elmmoe-nikbas-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPSETWINNER-26MAY04MOLBAS-1-BAS"
+        },
+        {
+          "polymarket_ticker": "aec-atp-danagu-macmcd-2026-05-04",
+          "kalshi_ticker": "KXATPSETWINNER-26MAY04MERMCD-2-MCD",
+          "other_poly_id": "aec-atp-danagu-macmcd-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPSETWINNER-26MAY04MERMCD-2-MER"
+        },
+        {
+          "polymarket_ticker": "aec-atp-pedmar-jesjon-2026-05-04",
+          "kalshi_ticker": "KXATPSETWINNER-26MAY04MARDEJ-2-MAR",
+          "other_poly_id": "aec-atp-pedmar-jesjon-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPSETWINNER-26MAY04MARDEJ-2-DEJ"
+        },
+        {
+          "polymarket_ticker": "aec-atp-marlan-chroco-2026-05-04",
+          "kalshi_ticker": "KXATPSETWINNER-26MAY04LANOCO-2-LAN",
+          "other_poly_id": "aec-atp-marlan-chroco-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPSETWINNER-26MAY04LANOCO-2-OCO"
+        },
+        {
+          "polymarket_ticker": "aec-atp-duslaj-jancho-2026-05-04",
+          "kalshi_ticker": "KXATPSETWINNER-26MAY04LAJCHO-1-LAJ",
+          "other_poly_id": "aec-atp-duslaj-jancho-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPSETWINNER-26MAY04LAJCHO-1-CHO"
+        },
+        {
+          "polymarket_ticker": "aec-atp-patkyp-jacjon-2026-05-04",
+          "kalshi_ticker": "KXATPSETWINNER-26MAY04KYPPIN-1-KYP",
+          "other_poly_id": "aec-atp-patkyp-jacjon-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPSETWINNER-26MAY04KYPPIN-1-PIN"
+        },
+        {
+          "polymarket_ticker": "aec-atp-alekov-lorcar-2026-05-04",
+          "kalshi_ticker": "KXATPSETWINNER-26MAY04KOVCAR-1-KOV",
+          "other_poly_id": "aec-atp-alekov-lorcar-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPSETWINNER-26MAY04KOVCAR-1-CAR"
+        },
+        {
+          "polymarket_ticker": "aec-atp-crigar-moeech-2026-05-04",
+          "kalshi_ticker": "KXATPSETWINNER-26MAY04GARECH-1-GAR",
+          "other_poly_id": "aec-atp-crigar-moeech-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPSETWINNER-26MAY04GARECH-1-ECH"
+        },
+        {
+          "polymarket_ticker": "aec-atp-fracom-bilhar-2026-05-04",
+          "kalshi_ticker": "KXATPSETWINNER-26MAY04COMHAR-2-COM",
+          "other_poly_id": "aec-atp-fracom-bilhar-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPSETWINNER-26MAY04COMHAR-2-HAR"
+        },
+        {
+          "polymarket_ticker": "aec-atp-pabbus-mardam-2026-05-04",
+          "kalshi_ticker": "KXATPSETWINNER-26MAY04CARDAM-2-CAR",
+          "other_poly_id": "aec-atp-pabbus-mardam-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPSETWINNER-26MAY04CARDAM-2-DAM"
+        },
+        {
+          "polymarket_ticker": "aec-atp-benbon-dalsvr-2026-05-04",
+          "kalshi_ticker": "KXATPSETWINNER-26MAY04BONSVR-1-BON",
+          "other_poly_id": "aec-atp-benbon-dalsvr-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPSETWINNER-26MAY04BONSVR-1-SVR"
+        },
+        {
+          "polymarket_ticker": "aec-atp-fedbon-eminav-2026-05-04",
+          "kalshi_ticker": "KXATPSETWINNER-26MAY04BONNAV-2-BON",
+          "other_poly_id": "aec-atp-fedbon-eminav-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPSETWINNER-26MAY04BONNAV-2-NAV"
+        },
+        {
+          "polymarket_ticker": "aec-atp-lucass-hugdel-2026-05-04",
+          "kalshi_ticker": "KXATPMATCH-26MAY04VANDEL-VAN",
+          "other_poly_id": "aec-atp-lucass-hugdel-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPMATCH-26MAY04VANDEL-DEL"
+        },
+        {
+          "polymarket_ticker": "aec-atp-dinpri-chrrod-2026-05-04",
+          "kalshi_ticker": "KXATPMATCH-26MAY04PRIROD-PRI",
+          "other_poly_id": "aec-atp-dinpri-chrrod-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPMATCH-26MAY04PRIROD-ROD"
+        },
+        {
+          "polymarket_ticker": "aec-atp-zsopir-henroc-2026-05-04",
+          "kalshi_ticker": "KXATPMATCH-26MAY04PIRROC-PIR",
+          "other_poly_id": "aec-atp-zsopir-henroc-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPMATCH-26MAY04PIRROC-ROC"
+        },
+        {
+          "polymarket_ticker": "aec-atp-andpel-huggas-2026-05-04",
+          "kalshi_ticker": "KXATPMATCH-26MAY04PELGAS-PEL",
+          "other_poly_id": "aec-atp-andpel-huggas-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPMATCH-26MAY04PELGAS-GAS"
+        },
+        {
+          "polymarket_ticker": "aec-atp-elmmoe-nikbas-2026-05-04",
+          "kalshi_ticker": "KXATPMATCH-26MAY04MOLBAS-MOL",
+          "other_poly_id": "aec-atp-elmmoe-nikbas-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPMATCH-26MAY04MOLBAS-BAS"
+        },
+        {
+          "polymarket_ticker": "aec-atp-rinhij-piebas-2026-05-04",
+          "kalshi_ticker": "KXATPMATCH-26MAY04HIJBAS-HIJ",
+          "other_poly_id": "aec-atp-rinhij-piebas-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPMATCH-26MAY04HIJBAS-BAS"
+        },
+        {
+          "polymarket_ticker": "aec-wta-zonli-wuszhe-2026-05-04",
+          "kalshi_ticker": "KXWTACHALLENGERMATCH-26MAY04ZONZHE-ZON",
+          "other_poly_id": "aec-wta-zonli-wuszhe-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXWTACHALLENGERMATCH-26MAY04ZONZHE-ZHE"
+        },
+        {
+          "polymarket_ticker": "aec-wta-codwon-xinyao-2026-05-04",
+          "kalshi_ticker": "KXWTACHALLENGERMATCH-26MAY04WONYAO-WON",
+          "other_poly_id": "aec-wta-codwon-xinyao-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXWTACHALLENGERMATCH-26MAY04WONYAO-YAO"
+        },
+        {
+          "polymarket_ticker": "aec-wta-enslia-yufren-2026-05-04",
+          "kalshi_ticker": "KXWTACHALLENGERMATCH-26MAY04LIAREN-LIA",
+          "other_poly_id": "aec-wta-enslia-yufren-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXWTACHALLENGERMATCH-26MAY04LIAREN-REN"
+        },
+        {
+          "polymarket_ticker": "aec-atp-zsopir-henroc-2026-05-04",
+          "kalshi_ticker": "KXATPSETWINNER-26MAY04PIRROC-2-PIR",
+          "other_poly_id": "aec-atp-zsopir-henroc-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPSETWINNER-26MAY04PIRROC-2-ROC"
+        },
+        {
+          "polymarket_ticker": "aec-atp-juamar-titdro-2026-05-04",
+          "kalshi_ticker": "KXATPSETWINNER-26MAY04MARDRO-1-MAR",
+          "other_poly_id": "aec-atp-juamar-titdro-2026-05-04-inverse",
+          "other_kalshi_ticker": "KXATPSETWINNER-26MAY04MARDRO-1-DRO"
         }
       ]
     }

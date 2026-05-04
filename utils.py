@@ -1,6 +1,11 @@
 import json
 from decimal import ROUND_HALF_UP, Decimal, ROUND_CEILING
 
+def read_file_data(file_path):
+    with open(file_path, "r") as f:
+        data = json.load(f)
+    return data
+
 def get_asset_ids(market):
     with open("statics/statics.json", "r") as json_file:
         data = json.load(json_file)

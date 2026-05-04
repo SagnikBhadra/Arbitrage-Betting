@@ -15,6 +15,7 @@ from position_manager import PositionManager
 # Strategy modules
 from intra_kalshi_arbitrage import IntraKalshiArbitrage
 from cross_exchange_arbitrage import CrossExchangeArbitrage
+from wide_spread_arbitrage import WideSpreadArbitrage
 
 # Market data modules
 from polymarket_us_feed import PolymarketUSWebSocket
@@ -96,8 +97,17 @@ def crossed_markets(polymarket_client, kalshi_client, kalshi_gateway, polymarket
     return cross_exchange_arb_strategy
 
 
-def wide_spreads():
-    pass
+def wide_spreads(polymarket_client, kalshi_client, polymarket_us_gateway, kalshi_gateway, position_manager, spread_threshold=Decimal("0.05"), min_edge=Decimal("0.01")):
+    wide_spread_arb_strategy = WideSpreadArbitrage(
+        polymarket_client,
+        kalshi_client,
+        polymarket_us_gateway,
+        kalshi_gateway,
+        position_manager,
+        spread_threshold=spread_threshold,
+        min_edge=min_edge
+    )
+    return wide_spread_arb_strategy
 
 async def scan_inefficiencies(polymarket_client, kalshi_client, kalshi_gateway, polymarket_us_gateway):
     # Cross exchange mapping between Polymarket and Kalshi markets
@@ -119,7 +129,9 @@ async def scan_inefficiencies(polymarket_client, kalshi_client, kalshi_gateway, 
     # Intra Kalshi
     #strategies.append(intra_kalshi_arbitrage(kalshi_client, kalshi_gateway, position_manager, correlated_market_mapping, profit_threshold=0.01))
     # Cross exchange
-    strategies.append(crossed_markets(polymarket_client, kalshi_client, kalshi_gateway, polymarket_us_gateway, position_manager, moneyline_events))
+    #strategies.append(crossed_markets(polymarket_client, kalshi_client, kalshi_gateway, polymarket_us_gateway, position_manager, moneyline_events))
+    # Wide spreads
+    strategies.append(wide_spreads(polymarket_client, kalshi_client, polymarket_us_gateway, kalshi_gateway, position_manager))
 
     # Call find_opportunities() every second and log any opportunities above profit_threshold
     while True:
