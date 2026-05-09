@@ -94,6 +94,9 @@ class KalshiWebSocket:
 
         # Async message queue (from WebSocket to workers)
         self.message_queue: asyncio.Queue[str] = asyncio.Queue()
+        
+        # Async queue for processing fills (to avoid doing too much work in WebSocket thread)
+        self.fill_queue: asyncio.Queue[dict] = asyncio.Queue()
 
         # Thread pool for CPU-bound work
         self.executor = ThreadPoolExecutor(max_workers=NUM_CONSUMERS)
@@ -197,6 +200,13 @@ class KalshiWebSocket:
             return
 
         # (Your trade handling logic here, if needed)
+    
+    def handle_user_fill(self, msg):
+        client_order_id = msg.get("client_order_id", "")
+        if client_order_id.startswith("WBRSSS"):
+            # This is a fill for one of our orders for wide spread strategy
+            self.fill_queue.put_nowait(msg)
+        
 
     def _process_single_message(self, message: str):
         data = json.loads(message)
@@ -214,8 +224,6 @@ class KalshiWebSocket:
         
             
         elif msg_type == "orderbook_delta":
-            if "client_order_id" in data.get("data", {}):
-                return
 
             market = msg_content["market_ticker"]
             
@@ -242,8 +250,8 @@ class KalshiWebSocket:
                 best_ask=best_ask,
             )
 
-        elif msg_type == "ticker":
-            pass
+        elif msg_type == "fill":
+            self.handle_user_fill(msg_content)
 
         elif msg_type == "market_state":
             pass
@@ -293,7 +301,7 @@ class KalshiWebSocket:
                         "id": 1,
                         "cmd": "subscribe",
                         "params": {
-                            "channels": ["orderbook_delta"],
+                            "channels": ["orderbook_delta", "fill"],
                             "market_tickers": self.market_tickers,
                         },
                     }
