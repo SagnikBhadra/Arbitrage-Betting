@@ -131,7 +131,11 @@ async def scan_inefficiencies(polymarket_client, kalshi_client, kalshi_gateway, 
     # Cross exchange
     #strategies.append(crossed_markets(polymarket_client, kalshi_client, kalshi_gateway, polymarket_us_gateway, position_manager, moneyline_events))
     # Wide spreads
-    strategies.append(wide_spreads(polymarket_client, kalshi_client, polymarket_us_gateway, kalshi_gateway, position_manager))
+    wide_spread_strategy = wide_spreads(polymarket_client, kalshi_client, polymarket_us_gateway, kalshi_gateway, position_manager, spread_threshold=Decimal("0.05"), min_edge=Decimal("0.01"))
+    strategies.append(wide_spread_strategy)
+    
+    # Start user fill processing loop for wide spread strategy
+    asyncio.create_task(wide_spread_strategy.process_user_fills())
 
     # Call find_opportunities() every second and log any opportunities above profit_threshold
     while True:

@@ -205,7 +205,11 @@ class KalshiWebSocket:
         client_order_id = msg.get("client_order_id", "")
         if client_order_id.startswith("WBRSSS"):
             # This is a fill for one of our orders for wide spread strategy
-            self.fill_queue.put_nowait(msg)
+            try:
+                self.fill_queue.put_nowait(msg)
+            except asyncio.QueueFull:
+                # TODO: If the queue is full, we need to cancel the associated order to avoid being exposed to adverse selection and send mass cancel for wide spread strategy orders.
+                pass
         
 
     def _process_single_message(self, message: str):

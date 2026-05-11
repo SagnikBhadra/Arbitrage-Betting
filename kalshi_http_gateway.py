@@ -167,6 +167,7 @@ class KalshiHTTPGateway:
 
 
         self.logger.info(f"Placing order with data: {order_data}")
+        # TODO: Add try except block to resend order if 409 Conflict on client_order_id
         #return self._request("POST", "/portfolio/orders", json_body=order_data)
         return 
 
