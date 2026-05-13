@@ -1,0 +1,361 @@
+{
+    "sports": {
+        "nhl-2025": {
+            "nhl-ana-veg-2026-05-12": {
+                "title": "anaheim ducks vs. vegas golden knights",
+                "subtitle": "",
+                "market_slugs": [
+                    "asc-nhl-ana-veg-2026-05-12-pos-2pt5",
+                    "asc-nhl-ana-veg-2026-05-12-pos-1pt5",
+                    "asc-nhl-ana-veg-2026-05-12-neg-1pt5",
+                    "asc-nhl-ana-veg-2026-05-12-neg-2pt5",
+                    "asc-nhl-ana-veg-2026-05-12-neg-3pt5",
+                    "asc-nhl-ana-veg-2026-05-12-pos-3pt5",
+                    "asc-nhl-ana-veg-2026-05-12-pos-4pt5"
+                ]
+            },
+            "nhl-buf-mon-2026-05-12": {
+                "title": "buffalo sabres vs. montreal canadiens",
+                "subtitle": "",
+                "market_slugs": [
+                    "asc-nhl-buf-mon-2026-05-12-pos-2pt5",
+                    "asc-nhl-buf-mon-2026-05-12-pos-1pt5",
+                    "asc-nhl-buf-mon-2026-05-12-neg-1pt5",
+                    "asc-nhl-buf-mon-2026-05-12-neg-2pt5",
+                    "asc-nhl-buf-mon-2026-05-12-neg-3pt5",
+                    "asc-nhl-buf-mon-2026-05-12-pos-3pt5",
+                    "asc-nhl-buf-mon-2026-05-12-pos-4pt5"
+                ]
+            },
+            "nhl-min-col-2026-05-13": {
+                "title": "minnesota wild vs. colorado avalanche",
+                "subtitle": "",
+                "market_slugs": [
+                    "asc-nhl-min-col-2026-05-13-neg-1pt5",
+                    "asc-nhl-min-col-2026-05-13-neg-2pt5",
+                    "asc-nhl-min-col-2026-05-13-neg-3pt5",
+                    "asc-nhl-min-col-2026-05-13-pos-1pt5",
+                    "asc-nhl-min-col-2026-05-13-pos-2pt5",
+                    "asc-nhl-min-col-2026-05-13-pos-3pt5",
+                    "asc-nhl-min-col-2026-05-13-pos-4pt5"
+                ]
+            }
+        },
+        "mlb-2026": {
+            "mlb-laa-cle-2026-05-12": {
+                "title": "los angeles angels vs. cleveland guardians",
+                "subtitle": "",
+                "market_slugs": [
+                    "asc-mlb-laa-cle-2026-05-12-pos-4pt5",
+                    "asc-mlb-laa-cle-2026-05-12-pos-3pt5",
+                    "asc-mlb-laa-cle-2026-05-12-pos-2pt5",
+                    "asc-mlb-laa-cle-2026-05-12-pos-1pt5",
+                    "asc-mlb-laa-cle-2026-05-12-neg-1pt5",
+                    "asc-mlb-laa-cle-2026-05-12-neg-2pt5",
+                    "asc-mlb-laa-cle-2026-05-12-neg-3pt5"
+                ]
+            },
+            "mlb-col-pit-2026-05-12": {
+                "title": "colorado rockies vs. pittsburgh pirates",
+                "subtitle": "",
+                "market_slugs": [
+                    "asc-mlb-col-pit-2026-05-12-pos-4pt5",
+                    "asc-mlb-col-pit-2026-05-12-pos-3pt5",
+                    "asc-mlb-col-pit-2026-05-12-pos-2pt5",
+                    "asc-mlb-col-pit-2026-05-12-pos-1pt5",
+                    "asc-mlb-col-pit-2026-05-12-neg-1pt5",
+                    "asc-mlb-col-pit-2026-05-12-neg-2pt5",
+                    "asc-mlb-col-pit-2026-05-12-neg-3pt5"
+                ]
+            },
+            "mlb-wsh-cin-2026-05-12": {
+                "title": "washington nationals vs. cincinnati reds",
+                "subtitle": "",
+                "market_slugs": [
+                    "asc-mlb-wsh-cin-2026-05-12-pos-3pt5",
+                    "asc-mlb-wsh-cin-2026-05-12-pos-2pt5",
+                    "asc-mlb-wsh-cin-2026-05-12-pos-1pt5",
+                    "asc-mlb-wsh-cin-2026-05-12-neg-1pt5",
+                    "asc-mlb-wsh-cin-2026-05-12-neg-2pt5",
+                    "asc-mlb-wsh-cin-2026-05-12-neg-3pt5",
+                    "asc-mlb-wsh-cin-2026-05-12-pos-4pt5"
+                ]
+            },
+            "mlb-nyy-bal-2026-05-12": {
+                "title": "new york yankees vs. baltimore orioles",
+                "subtitle": "",
+                "market_slugs": [
+                    "asc-mlb-nyy-bal-2026-05-12-pos-1pt5",
+                    "asc-mlb-nyy-bal-2026-05-12-neg-1pt5",
+                    "asc-mlb-nyy-bal-2026-05-12-neg-2pt5",
+                    "asc-mlb-nyy-bal-2026-05-12-neg-3pt5",
+                    "asc-mlb-nyy-bal-2026-05-12-neg-4pt5",
+                    "asc-mlb-nyy-bal-2026-05-12-pos-2pt5",
+                    "asc-mlb-nyy-bal-2026-05-12-pos-3pt5"
+                ]
+            },
+            "mlb-phi-bos-2026-05-12": {
+                "title": "philadelphia phillies vs. boston red sox",
+                "subtitle": "",
+                "market_slugs": [
+                    "asc-mlb-phi-bos-2026-05-12-pos-2pt5",
+                    "asc-mlb-phi-bos-2026-05-12-pos-1pt5",
+                    "asc-mlb-phi-bos-2026-05-12-neg-1pt5",
+                    "asc-mlb-phi-bos-2026-05-12-neg-2pt5",
+                    "asc-mlb-phi-bos-2026-05-12-neg-3pt5",
+                    "asc-mlb-phi-bos-2026-05-12-neg-4pt5",
+                    "asc-mlb-phi-bos-2026-05-12-pos-3pt5"
+                ]
+            },
+            "mlb-chc-atl-2026-05-12": {
+                "title": "chicago cubs vs. atlanta braves",
+                "subtitle": "",
+                "market_slugs": [
+                    "asc-mlb-chc-atl-2026-05-12-pos-3pt5",
+                    "asc-mlb-chc-atl-2026-05-12-pos-2pt5",
+                    "asc-mlb-chc-atl-2026-05-12-pos-1pt5",
+                    "asc-mlb-chc-atl-2026-05-12-neg-1pt5",
+                    "asc-mlb-chc-atl-2026-05-12-neg-2pt5",
+                    "asc-mlb-chc-atl-2026-05-12-neg-3pt5",
+                    "asc-mlb-chc-atl-2026-05-12-neg-4pt5"
+                ]
+            },
+            "mlb-det-nym-2026-05-12": {
+                "title": "detroit tigers vs. new york mets",
+                "subtitle": "",
+                "market_slugs": [
+                    "asc-mlb-det-nym-2026-05-12-pos-4pt5",
+                    "asc-mlb-det-nym-2026-05-12-pos-3pt5",
+                    "asc-mlb-det-nym-2026-05-12-pos-2pt5",
+                    "asc-mlb-det-nym-2026-05-12-pos-1pt5",
+                    "asc-mlb-det-nym-2026-05-12-neg-1pt5",
+                    "asc-mlb-det-nym-2026-05-12-neg-2pt5",
+                    "asc-mlb-det-nym-2026-05-12-neg-3pt5"
+                ]
+            },
+            "mlb-tb-tor-2026-05-12": {
+                "title": "tampa bay rays vs. toronto blue jays",
+                "subtitle": "",
+                "market_slugs": [
+                    "asc-mlb-tb-tor-2026-05-12-pos-3pt5",
+                    "asc-mlb-tb-tor-2026-05-12-pos-2pt5",
+                    "asc-mlb-tb-tor-2026-05-12-pos-1pt5",
+                    "asc-mlb-tb-tor-2026-05-12-neg-1pt5",
+                    "asc-mlb-tb-tor-2026-05-12-neg-2pt5",
+                    "asc-mlb-tb-tor-2026-05-12-neg-3pt5",
+                    "asc-mlb-tb-tor-2026-05-12-neg-4pt5"
+                ]
+            },
+            "mlb-kc-cws-2026-05-12": {
+                "title": "kansas city royals vs. chicago white sox",
+                "subtitle": "",
+                "market_slugs": [
+                    "asc-mlb-kc-cws-2026-05-12-pos-3pt5",
+                    "asc-mlb-kc-cws-2026-05-12-pos-2pt5",
+                    "asc-mlb-kc-cws-2026-05-12-pos-1pt5",
+                    "asc-mlb-kc-cws-2026-05-12-neg-1pt5",
+                    "asc-mlb-kc-cws-2026-05-12-neg-2pt5",
+                    "asc-mlb-kc-cws-2026-05-12-neg-3pt5",
+                    "asc-mlb-kc-cws-2026-05-12-neg-4pt5"
+                ]
+            },
+            "mlb-mia-min-2026-05-12": {
+                "title": "miami marlins vs. minnesota twins",
+                "subtitle": "",
+                "market_slugs": [
+                    "asc-mlb-mia-min-2026-05-12-pos-3pt5",
+                    "asc-mlb-mia-min-2026-05-12-pos-2pt5",
+                    "asc-mlb-mia-min-2026-05-12-pos-1pt5",
+                    "asc-mlb-mia-min-2026-05-12-neg-1pt5",
+                    "asc-mlb-mia-min-2026-05-12-neg-3pt5",
+                    "asc-mlb-mia-min-2026-05-12-neg-2pt5",
+                    "asc-mlb-mia-min-2026-05-12-neg-4pt5"
+                ]
+            },
+            "mlb-sd-mil-2026-05-12": {
+                "title": "san diego padres vs. milwaukee brewers",
+                "subtitle": "",
+                "market_slugs": [
+                    "asc-mlb-sd-mil-2026-05-12-pos-4pt5",
+                    "asc-mlb-sd-mil-2026-05-12-pos-3pt5",
+                    "asc-mlb-sd-mil-2026-05-12-pos-2pt5",
+                    "asc-mlb-sd-mil-2026-05-12-pos-1pt5",
+                    "asc-mlb-sd-mil-2026-05-12-neg-1pt5",
+                    "asc-mlb-sd-mil-2026-05-12-neg-2pt5",
+                    "asc-mlb-sd-mil-2026-05-12-neg-3pt5"
+                ]
+            },
+            "mlb-sea-hou-2026-05-12": {
+                "title": "seattle mariners vs. houston astros",
+                "subtitle": "",
+                "market_slugs": [
+                    "asc-mlb-sea-hou-2026-05-12-pos-3pt5",
+                    "asc-mlb-sea-hou-2026-05-12-pos-2pt5",
+                    "asc-mlb-sea-hou-2026-05-12-pos-1pt5",
+                    "asc-mlb-sea-hou-2026-05-12-neg-1pt5",
+                    "asc-mlb-sea-hou-2026-05-12-neg-2pt5",
+                    "asc-mlb-sea-hou-2026-05-12-neg-3pt5",
+                    "asc-mlb-sea-hou-2026-05-12-neg-4pt5"
+                ]
+            },
+            "mlb-az-tex-2026-05-12": {
+                "title": "arizona diamondbacks vs. texas rangers",
+                "subtitle": "",
+                "market_slugs": [
+                    "asc-mlb-az-tex-2026-05-12-pos-4pt5",
+                    "asc-mlb-az-tex-2026-05-12-pos-3pt5",
+                    "asc-mlb-az-tex-2026-05-12-pos-2pt5",
+                    "asc-mlb-az-tex-2026-05-12-pos-1pt5",
+                    "asc-mlb-az-tex-2026-05-12-neg-1pt5",
+                    "asc-mlb-az-tex-2026-05-12-neg-2pt5",
+                    "asc-mlb-az-tex-2026-05-12-neg-3pt5"
+                ]
+            },
+            "mlb-stl-ath-2026-05-12": {
+                "title": "st. louis cardinals vs. athletics",
+                "subtitle": "",
+                "market_slugs": [
+                    "asc-mlb-stl-ath-2026-05-12-pos-4pt5",
+                    "asc-mlb-stl-ath-2026-05-12-pos-3pt5",
+                    "asc-mlb-stl-ath-2026-05-12-pos-2pt5",
+                    "asc-mlb-stl-ath-2026-05-12-pos-1pt5",
+                    "asc-mlb-stl-ath-2026-05-12-neg-1pt5",
+                    "asc-mlb-stl-ath-2026-05-12-neg-2pt5",
+                    "asc-mlb-stl-ath-2026-05-12-neg-3pt5"
+                ]
+            },
+            "mlb-sf-lad-2026-05-12": {
+                "title": "san francisco giants vs. los angeles dodgers",
+                "subtitle": "",
+                "market_slugs": [
+                    "asc-mlb-sf-lad-2026-05-12-pos-4pt5",
+                    "asc-mlb-sf-lad-2026-05-12-pos-3pt5",
+                    "asc-mlb-sf-lad-2026-05-12-pos-2pt5",
+                    "asc-mlb-sf-lad-2026-05-12-pos-1pt5",
+                    "asc-mlb-sf-lad-2026-05-12-neg-1pt5",
+                    "asc-mlb-sf-lad-2026-05-12-neg-2pt5",
+                    "asc-mlb-sf-lad-2026-05-12-neg-3pt5"
+                ]
+            },
+            "mlb-laa-cle-2026-05-13": {
+                "title": "los angeles angels vs. cleveland guardians",
+                "subtitle": "",
+                "market_slugs": [
+                    "asc-mlb-laa-cle-2026-05-13-pos-1pt5",
+                    "asc-mlb-laa-cle-2026-05-13-neg-1pt5",
+                    "asc-mlb-laa-cle-2026-05-13-neg-2pt5",
+                    "asc-mlb-laa-cle-2026-05-13-neg-3pt5",
+                    "asc-mlb-laa-cle-2026-05-13-pos-2pt5",
+                    "asc-mlb-laa-cle-2026-05-13-pos-3pt5",
+                    "asc-mlb-laa-cle-2026-05-13-pos-4pt5"
+                ]
+            },
+            "mlb-col-pit-2026-05-13": {
+                "title": "colorado rockies vs. pittsburgh pirates",
+                "subtitle": "",
+                "market_slugs": [
+                    "asc-mlb-col-pit-2026-05-13-pos-3pt5",
+                    "asc-mlb-col-pit-2026-05-13-pos-2pt5",
+                    "asc-mlb-col-pit-2026-05-13-pos-1pt5",
+                    "asc-mlb-col-pit-2026-05-13-neg-1pt5",
+                    "asc-mlb-col-pit-2026-05-13-neg-2pt5",
+                    "asc-mlb-col-pit-2026-05-13-neg-3pt5",
+                    "asc-mlb-col-pit-2026-05-13-pos-4pt5"
+                ]
+            },
+            "mlb-phi-bos-2026-05-13": {
+                "title": "philadelphia phillies vs. boston red sox",
+                "subtitle": "",
+                "market_slugs": [
+                    "asc-mlb-phi-bos-2026-05-13-pos-2pt5",
+                    "asc-mlb-phi-bos-2026-05-13-pos-1pt5",
+                    "asc-mlb-phi-bos-2026-05-13-neg-1pt5",
+                    "asc-mlb-phi-bos-2026-05-13-neg-2pt5",
+                    "asc-mlb-phi-bos-2026-05-13-neg-3pt5",
+                    "asc-mlb-phi-bos-2026-05-13-pos-3pt5",
+                    "asc-mlb-phi-bos-2026-05-13-pos-4pt5"
+                ]
+            },
+            "mlb-wsh-cin-2026-05-13": {
+                "title": "washington nationals vs. cincinnati reds",
+                "subtitle": "",
+                "market_slugs": [
+                    "asc-mlb-wsh-cin-2026-05-13-pos-2pt5",
+                    "asc-mlb-wsh-cin-2026-05-13-neg-1pt5",
+                    "asc-mlb-wsh-cin-2026-05-13-neg-2pt5",
+                    "asc-mlb-wsh-cin-2026-05-13-neg-3pt5",
+                    "asc-mlb-wsh-cin-2026-05-13-pos-1pt5",
+                    "asc-mlb-wsh-cin-2026-05-13-pos-3pt5",
+                    "asc-mlb-wsh-cin-2026-05-13-pos-4pt5"
+                ]
+            },
+            "mlb-det-nym-2026-05-13": {
+                "title": "detroit tigers vs. new york mets",
+                "subtitle": "",
+                "market_slugs": [
+                    "asc-mlb-det-nym-2026-05-13-neg-1pt5",
+                    "asc-mlb-det-nym-2026-05-13-neg-2pt5",
+                    "asc-mlb-det-nym-2026-05-13-neg-3pt5",
+                    "asc-mlb-det-nym-2026-05-13-neg-4pt5",
+                    "asc-mlb-det-nym-2026-05-13-pos-1pt5",
+                    "asc-mlb-det-nym-2026-05-13-pos-2pt5",
+                    "asc-mlb-det-nym-2026-05-13-pos-3pt5"
+                ]
+            },
+            "mlb-kc-cws-2026-05-13": {
+                "title": "kansas city royals vs. chicago white sox",
+                "subtitle": "",
+                "market_slugs": [
+                    "asc-mlb-kc-cws-2026-05-13-neg-1pt5",
+                    "asc-mlb-kc-cws-2026-05-13-neg-2pt5",
+                    "asc-mlb-kc-cws-2026-05-13-neg-3pt5",
+                    "asc-mlb-kc-cws-2026-05-13-neg-4pt5",
+                    "asc-mlb-kc-cws-2026-05-13-pos-1pt5",
+                    "asc-mlb-kc-cws-2026-05-13-pos-2pt5",
+                    "asc-mlb-kc-cws-2026-05-13-pos-3pt5"
+                ]
+            },
+            "mlb-mia-min-2026-05-13": {
+                "title": "miami marlins vs. minnesota twins",
+                "subtitle": "",
+                "market_slugs": [
+                    "asc-mlb-mia-min-2026-05-13-neg-1pt5",
+                    "asc-mlb-mia-min-2026-05-13-neg-2pt5",
+                    "asc-mlb-mia-min-2026-05-13-neg-3pt5",
+                    "asc-mlb-mia-min-2026-05-13-neg-4pt5",
+                    "asc-mlb-mia-min-2026-05-13-pos-1pt5",
+                    "asc-mlb-mia-min-2026-05-13-pos-2pt5",
+                    "asc-mlb-mia-min-2026-05-13-pos-3pt5"
+                ]
+            }
+        },
+        "nba-2025": {
+            "nba-min-sa-2026-05-12": {
+                "title": "minnesota vs. san antonio",
+                "subtitle": "",
+                "market_slugs": [
+                    "asc-nba-min-sa-2026-05-12-pos-20pt5",
+                    "asc-nba-min-sa-2026-05-12-pos-17pt5",
+                    "asc-nba-min-sa-2026-05-12-pos-14pt5",
+                    "asc-nba-min-sa-2026-05-12-pos-11pt5",
+                    "asc-nba-min-sa-2026-05-12-pos-8pt5",
+                    "asc-nba-min-sa-2026-05-12-pos-5pt5",
+                    "asc-nba-min-sa-2026-05-12-pos-2pt5"
+                ]
+            },
+            "nba-cle-det-2026-05-13": {
+                "title": "cleveland vs. detroit",
+                "subtitle": "",
+                "market_slugs": [
+                    "asc-nba-cle-det-2026-05-13-neg-3pt5",
+                    "asc-nba-cle-det-2026-05-13-neg-6pt5",
+                    "asc-nba-cle-det-2026-05-13-pos-11pt5",
+                    "asc-nba-cle-det-2026-05-13-pos-14pt5",
+                    "asc-nba-cle-det-2026-05-13-pos-2pt5",
+                    "asc-nba-cle-det-2026-05-13-pos-5pt5",
+                    "asc-nba-cle-det-2026-05-13-pos-8pt5"
+                ]
+            }
+        }
+    }
+}
