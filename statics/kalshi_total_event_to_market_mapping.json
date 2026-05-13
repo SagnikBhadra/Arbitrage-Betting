@@ -1,0 +1,3894 @@
+{
+    "Sports": {
+        "KXEPLTOTAL": {
+            "KXEPLTOTAL-26MAY24WHULEE": {
+                "title": "west ham vs leeds united: total goals",
+                "subtitle": "whu vs lee (may 24)",
+                "market_slugs": [
+                    "KXEPLTOTAL-26MAY24WHULEE-1",
+                    "KXEPLTOTAL-26MAY24WHULEE-2",
+                    "KXEPLTOTAL-26MAY24WHULEE-3",
+                    "KXEPLTOTAL-26MAY24WHULEE-4"
+                ]
+            },
+            "KXEPLTOTAL-26MAY24TOTEVE": {
+                "title": "tottenham vs everton: total goals",
+                "subtitle": "tot vs eve (may 24)",
+                "market_slugs": [
+                    "KXEPLTOTAL-26MAY24TOTEVE-1",
+                    "KXEPLTOTAL-26MAY24TOTEVE-2",
+                    "KXEPLTOTAL-26MAY24TOTEVE-3",
+                    "KXEPLTOTAL-26MAY24TOTEVE-4"
+                ]
+            },
+            "KXEPLTOTAL-26MAY24SUNCFC": {
+                "title": "sunderland vs chelsea: total goals",
+                "subtitle": "sun vs cfc (may 24)",
+                "market_slugs": [
+                    "KXEPLTOTAL-26MAY24SUNCFC-1",
+                    "KXEPLTOTAL-26MAY24SUNCFC-2",
+                    "KXEPLTOTAL-26MAY24SUNCFC-3",
+                    "KXEPLTOTAL-26MAY24SUNCFC-4"
+                ]
+            },
+            "KXEPLTOTAL-26MAY24NFOBOU": {
+                "title": "nottingham vs bournemouth: total goals",
+                "subtitle": "nfo vs bou (may 24)",
+                "market_slugs": [
+                    "KXEPLTOTAL-26MAY24NFOBOU-1",
+                    "KXEPLTOTAL-26MAY24NFOBOU-2",
+                    "KXEPLTOTAL-26MAY24NFOBOU-3",
+                    "KXEPLTOTAL-26MAY24NFOBOU-4"
+                ]
+            },
+            "KXEPLTOTAL-26MAY24MCIAVL": {
+                "title": "manchester city vs aston villa: total goals",
+                "subtitle": "mci vs avl (may 24)",
+                "market_slugs": [
+                    "KXEPLTOTAL-26MAY24MCIAVL-1",
+                    "KXEPLTOTAL-26MAY24MCIAVL-2",
+                    "KXEPLTOTAL-26MAY24MCIAVL-3",
+                    "KXEPLTOTAL-26MAY24MCIAVL-4"
+                ]
+            },
+            "KXEPLTOTAL-26MAY24LFCBRE": {
+                "title": "liverpool vs brentford: total goals",
+                "subtitle": "lfc vs bre (may 24)",
+                "market_slugs": [
+                    "KXEPLTOTAL-26MAY24LFCBRE-1",
+                    "KXEPLTOTAL-26MAY24LFCBRE-2",
+                    "KXEPLTOTAL-26MAY24LFCBRE-3",
+                    "KXEPLTOTAL-26MAY24LFCBRE-4"
+                ]
+            },
+            "KXEPLTOTAL-26MAY24FULNEW": {
+                "title": "fulham vs newcastle: total goals",
+                "subtitle": "ful vs new (may 24)",
+                "market_slugs": [
+                    "KXEPLTOTAL-26MAY24FULNEW-1",
+                    "KXEPLTOTAL-26MAY24FULNEW-2",
+                    "KXEPLTOTAL-26MAY24FULNEW-3",
+                    "KXEPLTOTAL-26MAY24FULNEW-4"
+                ]
+            },
+            "KXEPLTOTAL-26MAY24CRYARS": {
+                "title": "crystal palace vs arsenal: total goals",
+                "subtitle": "cry vs ars (may 24)",
+                "market_slugs": [
+                    "KXEPLTOTAL-26MAY24CRYARS-1",
+                    "KXEPLTOTAL-26MAY24CRYARS-2",
+                    "KXEPLTOTAL-26MAY24CRYARS-3",
+                    "KXEPLTOTAL-26MAY24CRYARS-4"
+                ]
+            },
+            "KXEPLTOTAL-26MAY24BURWOL": {
+                "title": "burnley vs wolverhampton: total goals",
+                "subtitle": "bur vs wol (may 24)",
+                "market_slugs": [
+                    "KXEPLTOTAL-26MAY24BURWOL-1",
+                    "KXEPLTOTAL-26MAY24BURWOL-2",
+                    "KXEPLTOTAL-26MAY24BURWOL-3",
+                    "KXEPLTOTAL-26MAY24BURWOL-4"
+                ]
+            },
+            "KXEPLTOTAL-26MAY24BRIMUN": {
+                "title": "brighton vs manchester united: total goals",
+                "subtitle": "bri vs mun (may 24)",
+                "market_slugs": [
+                    "KXEPLTOTAL-26MAY24BRIMUN-1",
+                    "KXEPLTOTAL-26MAY24BRIMUN-2",
+                    "KXEPLTOTAL-26MAY24BRIMUN-3",
+                    "KXEPLTOTAL-26MAY24BRIMUN-4"
+                ]
+            },
+            "KXEPLTOTAL-26MAY19CFCTOT": {
+                "title": "tottenham at chelsea: totals",
+                "subtitle": "cfc vs tot (may 19)",
+                "market_slugs": [
+                    "KXEPLTOTAL-26MAY19CFCTOT-1",
+                    "KXEPLTOTAL-26MAY19CFCTOT-2",
+                    "KXEPLTOTAL-26MAY19CFCTOT-3",
+                    "KXEPLTOTAL-26MAY19CFCTOT-4"
+                ]
+            },
+            "KXEPLTOTAL-26MAY19BOUMCI": {
+                "title": "manchester city at bournemouth: totals",
+                "subtitle": "bou vs mci (may 19)",
+                "market_slugs": [
+                    "KXEPLTOTAL-26MAY19BOUMCI-1",
+                    "KXEPLTOTAL-26MAY19BOUMCI-2",
+                    "KXEPLTOTAL-26MAY19BOUMCI-3",
+                    "KXEPLTOTAL-26MAY19BOUMCI-4"
+                ]
+            },
+            "KXEPLTOTAL-26MAY18ARSBUR": {
+                "title": "burnley at arsenal: totals",
+                "subtitle": "ars vs bur (may 18)",
+                "market_slugs": [
+                    "KXEPLTOTAL-26MAY18ARSBUR-1",
+                    "KXEPLTOTAL-26MAY18ARSBUR-2",
+                    "KXEPLTOTAL-26MAY18ARSBUR-3",
+                    "KXEPLTOTAL-26MAY18ARSBUR-4"
+                ]
+            },
+            "KXEPLTOTAL-26MAY17NEWWHU": {
+                "title": "west ham at newcastle: totals",
+                "subtitle": "new vs whu (may 17)",
+                "market_slugs": [
+                    "KXEPLTOTAL-26MAY17NEWWHU-1",
+                    "KXEPLTOTAL-26MAY17NEWWHU-2",
+                    "KXEPLTOTAL-26MAY17NEWWHU-3",
+                    "KXEPLTOTAL-26MAY17NEWWHU-4"
+                ]
+            },
+            "KXEPLTOTAL-26MAY17WOLFUL": {
+                "title": "fulham at wolverhampton: totals",
+                "subtitle": "wol vs ful (may 17)",
+                "market_slugs": [
+                    "KXEPLTOTAL-26MAY17WOLFUL-1",
+                    "KXEPLTOTAL-26MAY17WOLFUL-2",
+                    "KXEPLTOTAL-26MAY17WOLFUL-3",
+                    "KXEPLTOTAL-26MAY17WOLFUL-4"
+                ]
+            },
+            "KXEPLTOTAL-26MAY17LEEBRI": {
+                "title": "brighton at leeds united: totals",
+                "subtitle": "lee vs bri (may 17)",
+                "market_slugs": [
+                    "KXEPLTOTAL-26MAY17LEEBRI-1",
+                    "KXEPLTOTAL-26MAY17LEEBRI-2",
+                    "KXEPLTOTAL-26MAY17LEEBRI-3",
+                    "KXEPLTOTAL-26MAY17LEEBRI-4"
+                ]
+            },
+            "KXEPLTOTAL-26MAY17EVESUN": {
+                "title": "sunderland at everton: totals",
+                "subtitle": "eve vs sun (may 17)",
+                "market_slugs": [
+                    "KXEPLTOTAL-26MAY17EVESUN-1",
+                    "KXEPLTOTAL-26MAY17EVESUN-2",
+                    "KXEPLTOTAL-26MAY17EVESUN-3",
+                    "KXEPLTOTAL-26MAY17EVESUN-4"
+                ]
+            },
+            "KXEPLTOTAL-26MAY17BRECRY": {
+                "title": "crystal palace at brentford: totals",
+                "subtitle": "bre vs cry (may 17)",
+                "market_slugs": [
+                    "KXEPLTOTAL-26MAY17BRECRY-1",
+                    "KXEPLTOTAL-26MAY17BRECRY-2",
+                    "KXEPLTOTAL-26MAY17BRECRY-3",
+                    "KXEPLTOTAL-26MAY17BRECRY-4"
+                ]
+            },
+            "KXEPLTOTAL-26MAY17MUNNFO": {
+                "title": "nottingham at manchester united: totals",
+                "subtitle": "mun vs nfo (may 17)",
+                "market_slugs": [
+                    "KXEPLTOTAL-26MAY17MUNNFO-1",
+                    "KXEPLTOTAL-26MAY17MUNNFO-2",
+                    "KXEPLTOTAL-26MAY17MUNNFO-3",
+                    "KXEPLTOTAL-26MAY17MUNNFO-4"
+                ]
+            },
+            "KXEPLTOTAL-26MAY17AVLLFC": {
+                "title": "liverpool at aston villa: totals",
+                "subtitle": "avl vs lfc (may 17)",
+                "market_slugs": [
+                    "KXEPLTOTAL-26MAY17AVLLFC-1",
+                    "KXEPLTOTAL-26MAY17AVLLFC-2",
+                    "KXEPLTOTAL-26MAY17AVLLFC-3",
+                    "KXEPLTOTAL-26MAY17AVLLFC-4"
+                ]
+            },
+            "KXEPLTOTAL-26MAY13MCICRY": {
+                "title": "crystal palace at manchester city: totals",
+                "subtitle": "mci vs cry (may 13)",
+                "market_slugs": [
+                    "KXEPLTOTAL-26MAY13MCICRY-1",
+                    "KXEPLTOTAL-26MAY13MCICRY-2",
+                    "KXEPLTOTAL-26MAY13MCICRY-3",
+                    "KXEPLTOTAL-26MAY13MCICRY-4"
+                ]
+            }
+        },
+        "KXNHLSERIESGAMES": {
+            "KXNHLSERIESGAMES-26MTLBUFR2": {
+                "title": "series total games: montreal canadiens vs buffalo sabres",
+                "subtitle": "mtl vs buf (r2 - 2026)",
+                "market_slugs": [
+                    "KXNHLSERIESGAMES-26MTLBUFR2-5",
+                    "KXNHLSERIESGAMES-26MTLBUFR2-6",
+                    "KXNHLSERIESGAMES-26MTLBUFR2-7"
+                ]
+            },
+            "KXNHLSERIESGAMES-26VGKANAR2": {
+                "title": "series total games: vegas golden knights vs anaheim ducks",
+                "subtitle": "vgk vs ana (r2 - 2026)",
+                "market_slugs": [
+                    "KXNHLSERIESGAMES-26VGKANAR2-5",
+                    "KXNHLSERIESGAMES-26VGKANAR2-6",
+                    "KXNHLSERIESGAMES-26VGKANAR2-7"
+                ]
+            },
+            "KXNHLSERIESGAMES-26MINCOLR2": {
+                "title": "series total games: minnesota wild vs colorado avalanche",
+                "subtitle": "min vs col (r2 - 2026)",
+                "market_slugs": [
+                    "KXNHLSERIESGAMES-26MINCOLR2-5",
+                    "KXNHLSERIESGAMES-26MINCOLR2-6",
+                    "KXNHLSERIESGAMES-26MINCOLR2-7"
+                ]
+            }
+        },
+        "KXNBASERIESGAMES": {
+            "KXNBASERIESGAMES-26CLEDETR2": {
+                "title": "series total games: cleveland (4) vs detroit (1)",
+                "subtitle": "cle vs det (r2 - 2026)",
+                "market_slugs": [
+                    "KXNBASERIESGAMES-26CLEDETR2-5",
+                    "KXNBASERIESGAMES-26CLEDETR2-6",
+                    "KXNBASERIESGAMES-26CLEDETR2-7"
+                ]
+            },
+            "KXNBASERIESGAMES-26MINSASR2": {
+                "title": "series total games: minnesota (6) vs san antonio (2)",
+                "subtitle": "min vs sas (r2 - 2026)",
+                "market_slugs": [
+                    "KXNBASERIESGAMES-26MINSASR2-5",
+                    "KXNBASERIESGAMES-26MINSASR2-6",
+                    "KXNBASERIESGAMES-26MINSASR2-7"
+                ]
+            }
+        },
+        "KXMLSTOTAL": {
+            "KXMLSTOTAL-26MAY17NSHLAFC": {
+                "title": "nashville vs los angeles f: total goals",
+                "subtitle": "nsh vs lafc (may 17)",
+                "market_slugs": [
+                    "KXMLSTOTAL-26MAY17NSHLAFC-1",
+                    "KXMLSTOTAL-26MAY17NSHLAFC-2",
+                    "KXMLSTOTAL-26MAY17NSHLAFC-3",
+                    "KXMLSTOTAL-26MAY17NSHLAFC-4"
+                ]
+            },
+            "KXMLSTOTAL-26MAY17MIAPOR": {
+                "title": "miami vs portland: total goals",
+                "subtitle": "mia vs por (may 17)",
+                "market_slugs": [
+                    "KXMLSTOTAL-26MAY17MIAPOR-1",
+                    "KXMLSTOTAL-26MAY17MIAPOR-2",
+                    "KXMLSTOTAL-26MAY17MIAPOR-3",
+                    "KXMLSTOTAL-26MAY17MIAPOR-4"
+                ]
+            },
+            "KXMLSTOTAL-26MAY16SJDAL": {
+                "title": "san jose vs dallas: total goals",
+                "subtitle": "sj vs dal (may 16)",
+                "market_slugs": [
+                    "KXMLSTOTAL-26MAY16SJDAL-1",
+                    "KXMLSTOTAL-26MAY16SJDAL-2",
+                    "KXMLSTOTAL-26MAY16SJDAL-3",
+                    "KXMLSTOTAL-26MAY16SJDAL-4"
+                ]
+            },
+            "KXMLSTOTAL-26MAY16SDCIN": {
+                "title": "san diego fc vs cincinnati: total goals",
+                "subtitle": "sd vs cin (may 16)",
+                "market_slugs": [
+                    "KXMLSTOTAL-26MAY16SDCIN-1",
+                    "KXMLSTOTAL-26MAY16SDCIN-2",
+                    "KXMLSTOTAL-26MAY16SDCIN-3",
+                    "KXMLSTOTAL-26MAY16SDCIN-4"
+                ]
+            },
+            "KXMLSTOTAL-26MAY16RSLCOL": {
+                "title": "salt lake vs colorado: total goals",
+                "subtitle": "rsl vs col (may 16)",
+                "market_slugs": [
+                    "KXMLSTOTAL-26MAY16RSLCOL-1",
+                    "KXMLSTOTAL-26MAY16RSLCOL-2",
+                    "KXMLSTOTAL-26MAY16RSLCOL-3",
+                    "KXMLSTOTAL-26MAY16RSLCOL-4"
+                ]
+            },
+            "KXMLSTOTAL-26MAY16SEALAG": {
+                "title": "seattle vs los angeles g: total goals",
+                "subtitle": "sea vs lag (may 16)",
+                "market_slugs": [
+                    "KXMLSTOTAL-26MAY16SEALAG-1",
+                    "KXMLSTOTAL-26MAY16SEALAG-2",
+                    "KXMLSTOTAL-26MAY16SEALAG-3",
+                    "KXMLSTOTAL-26MAY16SEALAG-4"
+                ]
+            },
+            "KXMLSTOTAL-26MAY16HOUVAN": {
+                "title": "houston vs vancouver: total goals",
+                "subtitle": "hou vs van (may 16)",
+                "market_slugs": [
+                    "KXMLSTOTAL-26MAY16HOUVAN-1",
+                    "KXMLSTOTAL-26MAY16HOUVAN-2",
+                    "KXMLSTOTAL-26MAY16HOUVAN-3",
+                    "KXMLSTOTAL-26MAY16HOUVAN-4"
+                ]
+            },
+            "KXMLSTOTAL-26MAY16ATXSKC": {
+                "title": "austin vs kansas city: total goals",
+                "subtitle": "atx vs skc (may 16)",
+                "market_slugs": [
+                    "KXMLSTOTAL-26MAY16ATXSKC-1",
+                    "KXMLSTOTAL-26MAY16ATXSKC-2",
+                    "KXMLSTOTAL-26MAY16ATXSKC-3",
+                    "KXMLSTOTAL-26MAY16ATXSKC-4"
+                ]
+            },
+            "KXMLSTOTAL-26MAY16PHICLB": {
+                "title": "philadelphia vs columbus: total goals",
+                "subtitle": "phi vs clb (may 16)",
+                "market_slugs": [
+                    "KXMLSTOTAL-26MAY16PHICLB-1",
+                    "KXMLSTOTAL-26MAY16PHICLB-2",
+                    "KXMLSTOTAL-26MAY16PHICLB-3",
+                    "KXMLSTOTAL-26MAY16PHICLB-4"
+                ]
+            },
+            "KXMLSTOTAL-26MAY16ORLATL": {
+                "title": "orlando vs atlanta: total goals",
+                "subtitle": "orl vs atl (may 16)",
+                "market_slugs": [
+                    "KXMLSTOTAL-26MAY16ORLATL-1",
+                    "KXMLSTOTAL-26MAY16ORLATL-2",
+                    "KXMLSTOTAL-26MAY16ORLATL-3",
+                    "KXMLSTOTAL-26MAY16ORLATL-4"
+                ]
+            },
+            "KXMLSTOTAL-26MAY16NYRBNYC": {
+                "title": "new york rb vs new york city: total goals",
+                "subtitle": "nyrb vs nyc (may 16)",
+                "market_slugs": [
+                    "KXMLSTOTAL-26MAY16NYRBNYC-1",
+                    "KXMLSTOTAL-26MAY16NYRBNYC-2",
+                    "KXMLSTOTAL-26MAY16NYRBNYC-3",
+                    "KXMLSTOTAL-26MAY16NYRBNYC-4"
+                ]
+            },
+            "KXMLSTOTAL-26MAY16NEMIN": {
+                "title": "new england vs minnesota: total goals",
+                "subtitle": "ne vs min (may 16)",
+                "market_slugs": [
+                    "KXMLSTOTAL-26MAY16NEMIN-1",
+                    "KXMLSTOTAL-26MAY16NEMIN-2",
+                    "KXMLSTOTAL-26MAY16NEMIN-3",
+                    "KXMLSTOTAL-26MAY16NEMIN-4"
+                ]
+            },
+            "KXMLSTOTAL-26MAY16DCUSTL": {
+                "title": "dc united vs saint louis: total goals",
+                "subtitle": "dcu vs stl (may 16)",
+                "market_slugs": [
+                    "KXMLSTOTAL-26MAY16DCUSTL-1",
+                    "KXMLSTOTAL-26MAY16DCUSTL-2",
+                    "KXMLSTOTAL-26MAY16DCUSTL-3",
+                    "KXMLSTOTAL-26MAY16DCUSTL-4"
+                ]
+            },
+            "KXMLSTOTAL-26MAY16CLTTOR": {
+                "title": "charlotte vs toronto: total goals",
+                "subtitle": "clt vs tor (may 16)",
+                "market_slugs": [
+                    "KXMLSTOTAL-26MAY16CLTTOR-1",
+                    "KXMLSTOTAL-26MAY16CLTTOR-2",
+                    "KXMLSTOTAL-26MAY16CLTTOR-3",
+                    "KXMLSTOTAL-26MAY16CLTTOR-4"
+                ]
+            },
+            "KXMLSTOTAL-26MAY16MTLCHI": {
+                "title": "montreal vs chicago fire: total goals",
+                "subtitle": "mtl vs chi (may 16)",
+                "market_slugs": [
+                    "KXMLSTOTAL-26MAY16MTLCHI-1",
+                    "KXMLSTOTAL-26MAY16MTLCHI-2",
+                    "KXMLSTOTAL-26MAY16MTLCHI-3",
+                    "KXMLSTOTAL-26MAY16MTLCHI-4"
+                ]
+            },
+            "KXMLSTOTAL-26MAY13SEASJ": {
+                "title": "seattle vs san jose: total goals",
+                "subtitle": "sea vs sj (may 13)",
+                "market_slugs": [
+                    "KXMLSTOTAL-26MAY13SEASJ-1",
+                    "KXMLSTOTAL-26MAY13SEASJ-2",
+                    "KXMLSTOTAL-26MAY13SEASJ-3",
+                    "KXMLSTOTAL-26MAY13SEASJ-4"
+                ]
+            },
+            "KXMLSTOTAL-26MAY13SDATX": {
+                "title": "san diego fc vs austin: total goals",
+                "subtitle": "sd vs atx (may 13)",
+                "market_slugs": [
+                    "KXMLSTOTAL-26MAY13SDATX-1",
+                    "KXMLSTOTAL-26MAY13SDATX-2",
+                    "KXMLSTOTAL-26MAY13SDATX-3",
+                    "KXMLSTOTAL-26MAY13SDATX-4"
+                ]
+            },
+            "KXMLSTOTAL-26MAY13RSLHOU": {
+                "title": "salt lake vs houston: total goals",
+                "subtitle": "rsl vs hou (may 13)",
+                "market_slugs": [
+                    "KXMLSTOTAL-26MAY13RSLHOU-1",
+                    "KXMLSTOTAL-26MAY13RSLHOU-2",
+                    "KXMLSTOTAL-26MAY13RSLHOU-3",
+                    "KXMLSTOTAL-26MAY13RSLHOU-4"
+                ]
+            },
+            "KXMLSTOTAL-26MAY13STLLAFC": {
+                "title": "saint louis vs los angeles f: total goals",
+                "subtitle": "stl vs lafc (may 13)",
+                "market_slugs": [
+                    "KXMLSTOTAL-26MAY13STLLAFC-1",
+                    "KXMLSTOTAL-26MAY13STLLAFC-2",
+                    "KXMLSTOTAL-26MAY13STLLAFC-3",
+                    "KXMLSTOTAL-26MAY13STLLAFC-4"
+                ]
+            },
+            "KXMLSTOTAL-26MAY13SKCLAG": {
+                "title": "kansas city vs los angeles g: total goals",
+                "subtitle": "skc vs lag (may 13)",
+                "market_slugs": [
+                    "KXMLSTOTAL-26MAY13SKCLAG-1",
+                    "KXMLSTOTAL-26MAY13SKCLAG-2",
+                    "KXMLSTOTAL-26MAY13SKCLAG-3",
+                    "KXMLSTOTAL-26MAY13SKCLAG-4"
+                ]
+            },
+            "KXMLSTOTAL-26MAY13MINCOL": {
+                "title": "minnesota vs colorado: total goals",
+                "subtitle": "min vs col (may 13)",
+                "market_slugs": [
+                    "KXMLSTOTAL-26MAY13MINCOL-1",
+                    "KXMLSTOTAL-26MAY13MINCOL-2",
+                    "KXMLSTOTAL-26MAY13MINCOL-3",
+                    "KXMLSTOTAL-26MAY13MINCOL-4"
+                ]
+            },
+            "KXMLSTOTAL-26MAY13DALVAN": {
+                "title": "dallas vs vancouver: total goals",
+                "subtitle": "dal vs van (may 13)",
+                "market_slugs": [
+                    "KXMLSTOTAL-26MAY13DALVAN-1",
+                    "KXMLSTOTAL-26MAY13DALVAN-2",
+                    "KXMLSTOTAL-26MAY13DALVAN-3",
+                    "KXMLSTOTAL-26MAY13DALVAN-4"
+                ]
+            },
+            "KXMLSTOTAL-26MAY13ORLPHI": {
+                "title": "orlando vs philadelphia: total goals",
+                "subtitle": "orl vs phi (may 13)",
+                "market_slugs": [
+                    "KXMLSTOTAL-26MAY13ORLPHI-1",
+                    "KXMLSTOTAL-26MAY13ORLPHI-2",
+                    "KXMLSTOTAL-26MAY13ORLPHI-3",
+                    "KXMLSTOTAL-26MAY13ORLPHI-4"
+                ]
+            },
+            "KXMLSTOTAL-26MAY13NYRBCLB": {
+                "title": "new york rb vs columbus: total goals",
+                "subtitle": "nyrb vs clb (may 13)",
+                "market_slugs": [
+                    "KXMLSTOTAL-26MAY13NYRBCLB-1",
+                    "KXMLSTOTAL-26MAY13NYRBCLB-2",
+                    "KXMLSTOTAL-26MAY13NYRBCLB-3",
+                    "KXMLSTOTAL-26MAY13NYRBCLB-4"
+                ]
+            },
+            "KXMLSTOTAL-26MAY13NENSH": {
+                "title": "new england vs nashville: total goals",
+                "subtitle": "ne vs nsh (may 13)",
+                "market_slugs": [
+                    "KXMLSTOTAL-26MAY13NENSH-1",
+                    "KXMLSTOTAL-26MAY13NENSH-2",
+                    "KXMLSTOTAL-26MAY13NENSH-3",
+                    "KXMLSTOTAL-26MAY13NENSH-4"
+                ]
+            },
+            "KXMLSTOTAL-26MAY13MTLPOR": {
+                "title": "montreal vs portland: total goals",
+                "subtitle": "mtl vs por (may 13)",
+                "market_slugs": [
+                    "KXMLSTOTAL-26MAY13MTLPOR-1",
+                    "KXMLSTOTAL-26MAY13MTLPOR-2",
+                    "KXMLSTOTAL-26MAY13MTLPOR-3",
+                    "KXMLSTOTAL-26MAY13MTLPOR-4"
+                ]
+            },
+            "KXMLSTOTAL-26MAY13DCUCHI": {
+                "title": "dc united vs chicago fire: total goals",
+                "subtitle": "dcu vs chi (may 13)",
+                "market_slugs": [
+                    "KXMLSTOTAL-26MAY13DCUCHI-1",
+                    "KXMLSTOTAL-26MAY13DCUCHI-2",
+                    "KXMLSTOTAL-26MAY13DCUCHI-3",
+                    "KXMLSTOTAL-26MAY13DCUCHI-4"
+                ]
+            },
+            "KXMLSTOTAL-26MAY13CINMIA": {
+                "title": "cincinnati vs miami: total goals",
+                "subtitle": "cin vs mia (may 13)",
+                "market_slugs": [
+                    "KXMLSTOTAL-26MAY13CINMIA-1",
+                    "KXMLSTOTAL-26MAY13CINMIA-2",
+                    "KXMLSTOTAL-26MAY13CINMIA-3",
+                    "KXMLSTOTAL-26MAY13CINMIA-4"
+                ]
+            },
+            "KXMLSTOTAL-26MAY13CLTNYC": {
+                "title": "charlotte vs new york city: total goals",
+                "subtitle": "clt vs nyc (may 13)",
+                "market_slugs": [
+                    "KXMLSTOTAL-26MAY13CLTNYC-1",
+                    "KXMLSTOTAL-26MAY13CLTNYC-2",
+                    "KXMLSTOTAL-26MAY13CLTNYC-3",
+                    "KXMLSTOTAL-26MAY13CLTNYC-4"
+                ]
+            }
+        },
+        "KXBRASILEIROTOTAL": {
+            "KXBRASILEIROTOTAL-26MAY17CAPFLA": {
+                "title": "paranaense vs flamengo: total goals",
+                "subtitle": "cap vs fla (may 17)",
+                "market_slugs": [
+                    "KXBRASILEIROTOTAL-26MAY17CAPFLA-1",
+                    "KXBRASILEIROTOTAL-26MAY17CAPFLA-2",
+                    "KXBRASILEIROTOTAL-26MAY17CAPFLA-3",
+                    "KXBRASILEIROTOTAL-26MAY17CAPFLA-4"
+                ]
+            },
+            "KXBRASILEIROTOTAL-26MAY17RBBVIT": {
+                "title": "bragantino vs vitoria: total goals",
+                "subtitle": "rbb vs vit (may 17)",
+                "market_slugs": [
+                    "KXBRASILEIROTOTAL-26MAY17RBBVIT-1",
+                    "KXBRASILEIROTOTAL-26MAY17RBBVIT-2",
+                    "KXBRASILEIROTOTAL-26MAY17RBBVIT-3",
+                    "KXBRASILEIROTOTAL-26MAY17RBBVIT-4"
+                ]
+            },
+            "KXBRASILEIROTOTAL-26MAY17CHACR": {
+                "title": "chapecoense vs remo: total goals",
+                "subtitle": "cha vs cr (may 17)",
+                "market_slugs": [
+                    "KXBRASILEIROTOTAL-26MAY17CHACR-1",
+                    "KXBRASILEIROTOTAL-26MAY17CHACR-2",
+                    "KXBRASILEIROTOTAL-26MAY17CHACR-3",
+                    "KXBRASILEIROTOTAL-26MAY17CHACR-4"
+                ]
+            },
+            "KXBRASILEIROTOTAL-26MAY17BOTCOR": {
+                "title": "botafogo vs corinthians: total goals",
+                "subtitle": "bot vs cor (may 17)",
+                "market_slugs": [
+                    "KXBRASILEIROTOTAL-26MAY17BOTCOR-1",
+                    "KXBRASILEIROTOTAL-26MAY17BOTCOR-2",
+                    "KXBRASILEIROTOTAL-26MAY17BOTCOR-3",
+                    "KXBRASILEIROTOTAL-26MAY17BOTCOR-4"
+                ]
+            },
+            "KXBRASILEIROTOTAL-26MAY17BAHGPA": {
+                "title": "bahia vs gremio: total goals",
+                "subtitle": "bah vs gpa (may 17)",
+                "market_slugs": [
+                    "KXBRASILEIROTOTAL-26MAY17BAHGPA-1",
+                    "KXBRASILEIROTOTAL-26MAY17BAHGPA-2",
+                    "KXBRASILEIROTOTAL-26MAY17BAHGPA-3",
+                    "KXBRASILEIROTOTAL-26MAY17BAHGPA-4"
+                ]
+            },
+            "KXBRASILEIROTOTAL-26MAY17SANCFC": {
+                "title": "santos vs coritiba: total goals",
+                "subtitle": "san vs cfc (may 17)",
+                "market_slugs": [
+                    "KXBRASILEIROTOTAL-26MAY17SANCFC-1",
+                    "KXBRASILEIROTOTAL-26MAY17SANCFC-2",
+                    "KXBRASILEIROTOTAL-26MAY17SANCFC-3",
+                    "KXBRASILEIROTOTAL-26MAY17SANCFC-4"
+                ]
+            },
+            "KXBRASILEIROTOTAL-26MAY16PALCRU": {
+                "title": "palmeiras vs cruzeiro: total goals",
+                "subtitle": "pal vs cru (may 16)",
+                "market_slugs": [
+                    "KXBRASILEIROTOTAL-26MAY16PALCRU-1",
+                    "KXBRASILEIROTOTAL-26MAY16PALCRU-2",
+                    "KXBRASILEIROTOTAL-26MAY16PALCRU-3",
+                    "KXBRASILEIROTOTAL-26MAY16PALCRU-4"
+                ]
+            },
+            "KXBRASILEIROTOTAL-26MAY16FLUSPA": {
+                "title": "fluminense vs sao paulo: total goals",
+                "subtitle": "flu vs spa (may 16)",
+                "market_slugs": [
+                    "KXBRASILEIROTOTAL-26MAY16FLUSPA-1",
+                    "KXBRASILEIROTOTAL-26MAY16FLUSPA-2",
+                    "KXBRASILEIROTOTAL-26MAY16FLUSPA-3",
+                    "KXBRASILEIROTOTAL-26MAY16FLUSPA-4"
+                ]
+            },
+            "KXBRASILEIROTOTAL-26MAY16INTVDG": {
+                "title": "internacional vs vasco da gama: total goals",
+                "subtitle": "int vs vdg (may 16)",
+                "market_slugs": [
+                    "KXBRASILEIROTOTAL-26MAY16INTVDG-1",
+                    "KXBRASILEIROTOTAL-26MAY16INTVDG-2",
+                    "KXBRASILEIROTOTAL-26MAY16INTVDG-3",
+                    "KXBRASILEIROTOTAL-26MAY16INTVDG-4"
+                ]
+            },
+            "KXBRASILEIROTOTAL-26MAY16ATLMIR": {
+                "title": "atletico mineiro vs mirassol: total goals",
+                "subtitle": "atl vs mir (may 16)",
+                "market_slugs": [
+                    "KXBRASILEIROTOTAL-26MAY16ATLMIR-1",
+                    "KXBRASILEIROTOTAL-26MAY16ATLMIR-2",
+                    "KXBRASILEIROTOTAL-26MAY16ATLMIR-3",
+                    "KXBRASILEIROTOTAL-26MAY16ATLMIR-4"
+                ]
+            }
+        },
+        "KXLIGUE1TOTAL": {
+            "KXLIGUE1TOTAL-26MAY17STBANG": {
+                "title": "stade brest vs angers: total goals",
+                "subtitle": "stb vs ang (may 17)",
+                "market_slugs": [
+                    "KXLIGUE1TOTAL-26MAY17STBANG-1",
+                    "KXLIGUE1TOTAL-26MAY17STBANG-2",
+                    "KXLIGUE1TOTAL-26MAY17STBANG-3",
+                    "KXLIGUE1TOTAL-26MAY17STBANG-4"
+                ]
+            },
+            "KXLIGUE1TOTAL-26MAY17RCSASM": {
+                "title": "strasbourg alsace vs monaco: total goals",
+                "subtitle": "rcs vs asm (may 17)",
+                "market_slugs": [
+                    "KXLIGUE1TOTAL-26MAY17RCSASM-1",
+                    "KXLIGUE1TOTAL-26MAY17RCSASM-2",
+                    "KXLIGUE1TOTAL-26MAY17RCSASM-3",
+                    "KXLIGUE1TOTAL-26MAY17RCSASM-4"
+                ]
+            },
+            "KXLIGUE1TOTAL-26MAY17PARPSG": {
+                "title": "paris vs psg: total goals",
+                "subtitle": "par vs psg (may 17)",
+                "market_slugs": [
+                    "KXLIGUE1TOTAL-26MAY17PARPSG-1",
+                    "KXLIGUE1TOTAL-26MAY17PARPSG-2",
+                    "KXLIGUE1TOTAL-26MAY17PARPSG-3",
+                    "KXLIGUE1TOTAL-26MAY17PARPSG-4"
+                ]
+            },
+            "KXLIGUE1TOTAL-26MAY17OMREN": {
+                "title": "marseille vs stade rennais: total goals",
+                "subtitle": "om vs ren (may 17)",
+                "market_slugs": [
+                    "KXLIGUE1TOTAL-26MAY17OMREN-1",
+                    "KXLIGUE1TOTAL-26MAY17OMREN-2",
+                    "KXLIGUE1TOTAL-26MAY17OMREN-3",
+                    "KXLIGUE1TOTAL-26MAY17OMREN-4"
+                ]
+            },
+            "KXLIGUE1TOTAL-26MAY17OLRCL": {
+                "title": "lyon vs lens: total goals",
+                "subtitle": "ol vs rcl (may 17)",
+                "market_slugs": [
+                    "KXLIGUE1TOTAL-26MAY17OLRCL-1",
+                    "KXLIGUE1TOTAL-26MAY17OLRCL-2",
+                    "KXLIGUE1TOTAL-26MAY17OLRCL-3",
+                    "KXLIGUE1TOTAL-26MAY17OLRCL-4"
+                ]
+            },
+            "KXLIGUE1TOTAL-26MAY17NICFCM": {
+                "title": "nice vs metz: total goals",
+                "subtitle": "nic vs fcm (may 17)",
+                "market_slugs": [
+                    "KXLIGUE1TOTAL-26MAY17NICFCM-1",
+                    "KXLIGUE1TOTAL-26MAY17NICFCM-2",
+                    "KXLIGUE1TOTAL-26MAY17NICFCM-3",
+                    "KXLIGUE1TOTAL-26MAY17NICFCM-4"
+                ]
+            },
+            "KXLIGUE1TOTAL-26MAY17LILAUX": {
+                "title": "lille vs auxerre: total goals",
+                "subtitle": "lil vs aux (may 17)",
+                "market_slugs": [
+                    "KXLIGUE1TOTAL-26MAY17LILAUX-1",
+                    "KXLIGUE1TOTAL-26MAY17LILAUX-2",
+                    "KXLIGUE1TOTAL-26MAY17LILAUX-3",
+                    "KXLIGUE1TOTAL-26MAY17LILAUX-4"
+                ]
+            },
+            "KXLIGUE1TOTAL-26MAY17FCNTFC": {
+                "title": "nantes vs toulouse: total goals",
+                "subtitle": "fcn vs tfc (may 17)",
+                "market_slugs": [
+                    "KXLIGUE1TOTAL-26MAY17FCNTFC-1",
+                    "KXLIGUE1TOTAL-26MAY17FCNTFC-2",
+                    "KXLIGUE1TOTAL-26MAY17FCNTFC-3",
+                    "KXLIGUE1TOTAL-26MAY17FCNTFC-4"
+                ]
+            },
+            "KXLIGUE1TOTAL-26MAY17FCLHAC": {
+                "title": "lorient vs le havre: total goals",
+                "subtitle": "fcl vs hac (may 17)",
+                "market_slugs": [
+                    "KXLIGUE1TOTAL-26MAY17FCLHAC-1",
+                    "KXLIGUE1TOTAL-26MAY17FCLHAC-2",
+                    "KXLIGUE1TOTAL-26MAY17FCLHAC-3",
+                    "KXLIGUE1TOTAL-26MAY17FCLHAC-4"
+                ]
+            },
+            "KXLIGUE1TOTAL-26MAY13RCLPSG": {
+                "title": "lens vs psg: total goals",
+                "subtitle": "rcl vs psg (may 13)",
+                "market_slugs": [
+                    "KXLIGUE1TOTAL-26MAY13RCLPSG-1",
+                    "KXLIGUE1TOTAL-26MAY13RCLPSG-2",
+                    "KXLIGUE1TOTAL-26MAY13RCLPSG-3",
+                    "KXLIGUE1TOTAL-26MAY13RCLPSG-4"
+                ]
+            },
+            "KXLIGUE1TOTAL-26MAY13STBRCS": {
+                "title": "stade brest vs strasbourg alsace: total goals",
+                "subtitle": "stb vs rcs (may 13)",
+                "market_slugs": [
+                    "KXLIGUE1TOTAL-26MAY13STBRCS-1",
+                    "KXLIGUE1TOTAL-26MAY13STBRCS-2",
+                    "KXLIGUE1TOTAL-26MAY13STBRCS-3",
+                    "KXLIGUE1TOTAL-26MAY13STBRCS-4"
+                ]
+            }
+        },
+        "KXLALIGATOTAL": {
+            "KXLALIGATOTAL-26MAY17SEVRMA": {
+                "title": "sevilla vs real madrid: total goals",
+                "subtitle": "sev vs rma (may 17)",
+                "market_slugs": [
+                    "KXLALIGATOTAL-26MAY17SEVRMA-1",
+                    "KXLALIGATOTAL-26MAY17SEVRMA-2",
+                    "KXLALIGATOTAL-26MAY17SEVRMA-3",
+                    "KXLALIGATOTAL-26MAY17SEVRMA-4"
+                ]
+            },
+            "KXLALIGATOTAL-26MAY17RVCVIL": {
+                "title": "vallecano vs villarreal: total goals",
+                "subtitle": "rvc vs vil (may 17)",
+                "market_slugs": [
+                    "KXLALIGATOTAL-26MAY17RVCVIL-1",
+                    "KXLALIGATOTAL-26MAY17RVCVIL-2",
+                    "KXLALIGATOTAL-26MAY17RVCVIL-3",
+                    "KXLALIGATOTAL-26MAY17RVCVIL-4"
+                ]
+            },
+            "KXLALIGATOTAL-26MAY17RSOVCF": {
+                "title": "real sociedad vs valencia: total goals",
+                "subtitle": "rso vs vcf (may 17)",
+                "market_slugs": [
+                    "KXLALIGATOTAL-26MAY17RSOVCF-1",
+                    "KXLALIGATOTAL-26MAY17RSOVCF-2",
+                    "KXLALIGATOTAL-26MAY17RSOVCF-3",
+                    "KXLALIGATOTAL-26MAY17RSOVCF-4"
+                ]
+            },
+            "KXLALIGATOTAL-26MAY17OVIALA": {
+                "title": "oviedo vs alaves: total goals",
+                "subtitle": "ovi vs ala (may 17)",
+                "market_slugs": [
+                    "KXLALIGATOTAL-26MAY17OVIALA-1",
+                    "KXLALIGATOTAL-26MAY17OVIALA-2",
+                    "KXLALIGATOTAL-26MAY17OVIALA-3",
+                    "KXLALIGATOTAL-26MAY17OVIALA-4"
+                ]
+            },
+            "KXLALIGATOTAL-26MAY17OSAESP": {
+                "title": "osasuna vs espanyol: total goals",
+                "subtitle": "osa vs esp (may 17)",
+                "market_slugs": [
+                    "KXLALIGATOTAL-26MAY17OSAESP-1",
+                    "KXLALIGATOTAL-26MAY17OSAESP-2",
+                    "KXLALIGATOTAL-26MAY17OSAESP-3",
+                    "KXLALIGATOTAL-26MAY17OSAESP-4"
+                ]
+            },
+            "KXLALIGATOTAL-26MAY17LEVMAL": {
+                "title": "levante vs mallorca: total goals",
+                "subtitle": "lev vs mal (may 17)",
+                "market_slugs": [
+                    "KXLALIGATOTAL-26MAY17LEVMAL-1",
+                    "KXLALIGATOTAL-26MAY17LEVMAL-2",
+                    "KXLALIGATOTAL-26MAY17LEVMAL-3",
+                    "KXLALIGATOTAL-26MAY17LEVMAL-4"
+                ]
+            },
+            "KXLALIGATOTAL-26MAY17ELCGET": {
+                "title": "elche vs getafe: total goals",
+                "subtitle": "elc vs get (may 17)",
+                "market_slugs": [
+                    "KXLALIGATOTAL-26MAY17ELCGET-1",
+                    "KXLALIGATOTAL-26MAY17ELCGET-2",
+                    "KXLALIGATOTAL-26MAY17ELCGET-3",
+                    "KXLALIGATOTAL-26MAY17ELCGET-4"
+                ]
+            },
+            "KXLALIGATOTAL-26MAY17BARRBB": {
+                "title": "barcelona vs real betis: total goals",
+                "subtitle": "bar vs rbb (may 17)",
+                "market_slugs": [
+                    "KXLALIGATOTAL-26MAY17BARRBB-1",
+                    "KXLALIGATOTAL-26MAY17BARRBB-2",
+                    "KXLALIGATOTAL-26MAY17BARRBB-3",
+                    "KXLALIGATOTAL-26MAY17BARRBB-4"
+                ]
+            },
+            "KXLALIGATOTAL-26MAY17ATMGIR": {
+                "title": "atletico vs girona: total goals",
+                "subtitle": "atm vs gir (may 17)",
+                "market_slugs": [
+                    "KXLALIGATOTAL-26MAY17ATMGIR-1",
+                    "KXLALIGATOTAL-26MAY17ATMGIR-2",
+                    "KXLALIGATOTAL-26MAY17ATMGIR-3",
+                    "KXLALIGATOTAL-26MAY17ATMGIR-4"
+                ]
+            },
+            "KXLALIGATOTAL-26MAY17ATHRCC": {
+                "title": "bilbao vs celta vigo: total goals",
+                "subtitle": "ath vs rcc (may 17)",
+                "market_slugs": [
+                    "KXLALIGATOTAL-26MAY17ATHRCC-1",
+                    "KXLALIGATOTAL-26MAY17ATHRCC-2",
+                    "KXLALIGATOTAL-26MAY17ATHRCC-3",
+                    "KXLALIGATOTAL-26MAY17ATHRCC-4"
+                ]
+            },
+            "KXLALIGATOTAL-26MAY14RMAOVI": {
+                "title": "real madrid vs oviedo: total goals",
+                "subtitle": "rma vs ovi (may 14)",
+                "market_slugs": [
+                    "KXLALIGATOTAL-26MAY14RMAOVI-1",
+                    "KXLALIGATOTAL-26MAY14RMAOVI-2",
+                    "KXLALIGATOTAL-26MAY14RMAOVI-3",
+                    "KXLALIGATOTAL-26MAY14RMAOVI-4"
+                ]
+            },
+            "KXLALIGATOTAL-26MAY14GIRRSO": {
+                "title": "girona vs real sociedad: total goals",
+                "subtitle": "gir vs rso (may 14)",
+                "market_slugs": [
+                    "KXLALIGATOTAL-26MAY14GIRRSO-1",
+                    "KXLALIGATOTAL-26MAY14GIRRSO-2",
+                    "KXLALIGATOTAL-26MAY14GIRRSO-3",
+                    "KXLALIGATOTAL-26MAY14GIRRSO-4"
+                ]
+            },
+            "KXLALIGATOTAL-26MAY14VCFRVC": {
+                "title": "valencia vs vallecano: total goals",
+                "subtitle": "vcf vs rvc (may 14)",
+                "market_slugs": [
+                    "KXLALIGATOTAL-26MAY14VCFRVC-1",
+                    "KXLALIGATOTAL-26MAY14VCFRVC-2",
+                    "KXLALIGATOTAL-26MAY14VCFRVC-3",
+                    "KXLALIGATOTAL-26MAY14VCFRVC-4"
+                ]
+            },
+            "KXLALIGATOTAL-26MAY13GETMAL": {
+                "title": "getafe vs mallorca: total goals",
+                "subtitle": "get vs mal (may 13)",
+                "market_slugs": [
+                    "KXLALIGATOTAL-26MAY13GETMAL-1",
+                    "KXLALIGATOTAL-26MAY13GETMAL-2",
+                    "KXLALIGATOTAL-26MAY13GETMAL-3",
+                    "KXLALIGATOTAL-26MAY13GETMAL-4"
+                ]
+            },
+            "KXLALIGATOTAL-26MAY13ALABAR": {
+                "title": "alaves vs barcelona: total goals",
+                "subtitle": "ala vs bar (may 13)",
+                "market_slugs": [
+                    "KXLALIGATOTAL-26MAY13ALABAR-1",
+                    "KXLALIGATOTAL-26MAY13ALABAR-2",
+                    "KXLALIGATOTAL-26MAY13ALABAR-3",
+                    "KXLALIGATOTAL-26MAY13ALABAR-4"
+                ]
+            },
+            "KXLALIGATOTAL-26MAY13VILSEV": {
+                "title": "villarreal vs sevilla: total goals",
+                "subtitle": "vil vs sev (may 13)",
+                "market_slugs": [
+                    "KXLALIGATOTAL-26MAY13VILSEV-1",
+                    "KXLALIGATOTAL-26MAY13VILSEV-2",
+                    "KXLALIGATOTAL-26MAY13VILSEV-3",
+                    "KXLALIGATOTAL-26MAY13VILSEV-4"
+                ]
+            },
+            "KXLALIGATOTAL-26MAY13ESPATH": {
+                "title": "espanyol vs bilbao: total goals",
+                "subtitle": "esp vs ath (may 13)",
+                "market_slugs": [
+                    "KXLALIGATOTAL-26MAY13ESPATH-1",
+                    "KXLALIGATOTAL-26MAY13ESPATH-2",
+                    "KXLALIGATOTAL-26MAY13ESPATH-3",
+                    "KXLALIGATOTAL-26MAY13ESPATH-4"
+                ]
+            }
+        },
+        "KXUFLTOTAL": {
+            "KXUFLTOTAL-26MAY17CLBBHM": {
+                "title": "columbus aviators vs birmingham stallions: total points",
+                "subtitle": "clb vs bhm (may 17)",
+                "market_slugs": [
+                    "KXUFLTOTAL-26MAY17CLBBHM-32",
+                    "KXUFLTOTAL-26MAY17CLBBHM-39",
+                    "KXUFLTOTAL-26MAY17CLBBHM-46",
+                    "KXUFLTOTAL-26MAY17CLBBHM-53",
+                    "KXUFLTOTAL-26MAY17CLBBHM-60"
+                ]
+            },
+            "KXUFLTOTAL-26MAY16HOUSTL": {
+                "title": "houston gamblers vs st. louis battlehawks: total points",
+                "subtitle": "hou vs stl (may 16)",
+                "market_slugs": [
+                    "KXUFLTOTAL-26MAY16HOUSTL-30",
+                    "KXUFLTOTAL-26MAY16HOUSTL-37",
+                    "KXUFLTOTAL-26MAY16HOUSTL-44",
+                    "KXUFLTOTAL-26MAY16HOUSTL-51",
+                    "KXUFLTOTAL-26MAY16HOUSTL-58"
+                ]
+            },
+            "KXUFLTOTAL-26MAY16DCLOU": {
+                "title": "dc defenders vs louisville kings: total points",
+                "subtitle": "dc vs lou (may 16)",
+                "market_slugs": [
+                    "KXUFLTOTAL-26MAY16DCLOU-32",
+                    "KXUFLTOTAL-26MAY16DCLOU-39",
+                    "KXUFLTOTAL-26MAY16DCLOU-46",
+                    "KXUFLTOTAL-26MAY16DCLOU-53",
+                    "KXUFLTOTAL-26MAY16DCLOU-60"
+                ]
+            },
+            "KXUFLTOTAL-26MAY15ORLDAL": {
+                "title": "orlando storm vs dallas renegades: total points",
+                "subtitle": "orl vs dal (may 15)",
+                "market_slugs": [
+                    "KXUFLTOTAL-26MAY15ORLDAL-32",
+                    "KXUFLTOTAL-26MAY15ORLDAL-39",
+                    "KXUFLTOTAL-26MAY15ORLDAL-46",
+                    "KXUFLTOTAL-26MAY15ORLDAL-53",
+                    "KXUFLTOTAL-26MAY15ORLDAL-60"
+                ]
+            }
+        },
+        "KXSERIEATOTAL": {
+            "KXSERIEATOTAL-26MAY17UDICRE": {
+                "title": "udinese vs cremonese: total goals",
+                "subtitle": "udi vs cre (may 17)",
+                "market_slugs": [
+                    "KXSERIEATOTAL-26MAY17UDICRE-1",
+                    "KXSERIEATOTAL-26MAY17UDICRE-2",
+                    "KXSERIEATOTAL-26MAY17UDICRE-3",
+                    "KXSERIEATOTAL-26MAY17UDICRE-4"
+                ]
+            },
+            "KXSERIEATOTAL-26MAY17SASLEC": {
+                "title": "sassuolo vs lecce: total goals",
+                "subtitle": "sas vs lec (may 17)",
+                "market_slugs": [
+                    "KXSERIEATOTAL-26MAY17SASLEC-1",
+                    "KXSERIEATOTAL-26MAY17SASLEC-2",
+                    "KXSERIEATOTAL-26MAY17SASLEC-3",
+                    "KXSERIEATOTAL-26MAY17SASLEC-4"
+                ]
+            },
+            "KXSERIEATOTAL-26MAY17ROMLAZ": {
+                "title": "roma vs lazio: total goals",
+                "subtitle": "rom vs laz (may 17)",
+                "market_slugs": [
+                    "KXSERIEATOTAL-26MAY17ROMLAZ-1",
+                    "KXSERIEATOTAL-26MAY17ROMLAZ-2",
+                    "KXSERIEATOTAL-26MAY17ROMLAZ-3",
+                    "KXSERIEATOTAL-26MAY17ROMLAZ-4"
+                ]
+            },
+            "KXSERIEATOTAL-26MAY17PISNAP": {
+                "title": "pisa vs napoli: total goals",
+                "subtitle": "pis vs nap (may 17)",
+                "market_slugs": [
+                    "KXSERIEATOTAL-26MAY17PISNAP-1",
+                    "KXSERIEATOTAL-26MAY17PISNAP-2",
+                    "KXSERIEATOTAL-26MAY17PISNAP-3",
+                    "KXSERIEATOTAL-26MAY17PISNAP-4"
+                ]
+            },
+            "KXSERIEATOTAL-26MAY17JUVFIO": {
+                "title": "juventus vs fiorentina: total goals",
+                "subtitle": "juv vs fio (may 17)",
+                "market_slugs": [
+                    "KXSERIEATOTAL-26MAY17JUVFIO-1",
+                    "KXSERIEATOTAL-26MAY17JUVFIO-2",
+                    "KXSERIEATOTAL-26MAY17JUVFIO-3",
+                    "KXSERIEATOTAL-26MAY17JUVFIO-4"
+                ]
+            },
+            "KXSERIEATOTAL-26MAY17INTVER": {
+                "title": "inter vs hellas verona: total goals",
+                "subtitle": "int vs ver (may 17)",
+                "market_slugs": [
+                    "KXSERIEATOTAL-26MAY17INTVER-1",
+                    "KXSERIEATOTAL-26MAY17INTVER-2",
+                    "KXSERIEATOTAL-26MAY17INTVER-3",
+                    "KXSERIEATOTAL-26MAY17INTVER-4"
+                ]
+            },
+            "KXSERIEATOTAL-26MAY17GENACM": {
+                "title": "genoa vs milan: total goals",
+                "subtitle": "gen vs acm (may 17)",
+                "market_slugs": [
+                    "KXSERIEATOTAL-26MAY17GENACM-1",
+                    "KXSERIEATOTAL-26MAY17GENACM-2",
+                    "KXSERIEATOTAL-26MAY17GENACM-3",
+                    "KXSERIEATOTAL-26MAY17GENACM-4"
+                ]
+            },
+            "KXSERIEATOTAL-26MAY17COMPAR": {
+                "title": "como vs parma calcio: total goals",
+                "subtitle": "com vs par (may 17)",
+                "market_slugs": [
+                    "KXSERIEATOTAL-26MAY17COMPAR-1",
+                    "KXSERIEATOTAL-26MAY17COMPAR-2",
+                    "KXSERIEATOTAL-26MAY17COMPAR-3",
+                    "KXSERIEATOTAL-26MAY17COMPAR-4"
+                ]
+            },
+            "KXSERIEATOTAL-26MAY17CAGTOR": {
+                "title": "cagliari vs torino: total goals",
+                "subtitle": "cag vs tor (may 17)",
+                "market_slugs": [
+                    "KXSERIEATOTAL-26MAY17CAGTOR-1",
+                    "KXSERIEATOTAL-26MAY17CAGTOR-2",
+                    "KXSERIEATOTAL-26MAY17CAGTOR-3",
+                    "KXSERIEATOTAL-26MAY17CAGTOR-4"
+                ]
+            },
+            "KXSERIEATOTAL-26MAY17ATABFC": {
+                "title": "atalanta vs bologna: total goals",
+                "subtitle": "ata vs bfc (may 17)",
+                "market_slugs": [
+                    "KXSERIEATOTAL-26MAY17ATABFC-1",
+                    "KXSERIEATOTAL-26MAY17ATABFC-2",
+                    "KXSERIEATOTAL-26MAY17ATABFC-3",
+                    "KXSERIEATOTAL-26MAY17ATABFC-4"
+                ]
+            }
+        },
+        "KXIPLTEAMTOTAL": {
+            "KXIPLTEAMTOTAL-26MAY17RRDC": {
+                "title": "rajasthan royals vs delhi capitals: team total runs",
+                "subtitle": "rr vs dc (may 17)",
+                "market_slugs": [
+                    "KXIPLTEAMTOTAL-26MAY17RRDC-RR161",
+                    "KXIPLTEAMTOTAL-26MAY17RRDC-RR191",
+                    "KXIPLTEAMTOTAL-26MAY17RRDC-RR221",
+                    "KXIPLTEAMTOTAL-26MAY17RRDC-DC155",
+                    "KXIPLTEAMTOTAL-26MAY17RRDC-DC185",
+                    "KXIPLTEAMTOTAL-26MAY17RRDC-DC215"
+                ]
+            },
+            "KXIPLTEAMTOTAL-26MAY15CSKLSG": {
+                "title": "chennai super kings vs lucknow super giants: team total runs",
+                "subtitle": "csk vs lsg (may 15)",
+                "market_slugs": [
+                    "KXIPLTEAMTOTAL-26MAY15CSKLSG-CSK148",
+                    "KXIPLTEAMTOTAL-26MAY15CSKLSG-CSK178",
+                    "KXIPLTEAMTOTAL-26MAY15CSKLSG-CSK208",
+                    "KXIPLTEAMTOTAL-26MAY15CSKLSG-LSG145",
+                    "KXIPLTEAMTOTAL-26MAY15CSKLSG-LSG175",
+                    "KXIPLTEAMTOTAL-26MAY15CSKLSG-LSG205"
+                ]
+            },
+            "KXIPLTEAMTOTAL-26MAY14MIPBKS": {
+                "title": "mumbai indians vs punjab kings: team total runs",
+                "subtitle": "mi vs pbks (may 14)",
+                "market_slugs": [
+                    "KXIPLTEAMTOTAL-26MAY14MIPBKS-MI164",
+                    "KXIPLTEAMTOTAL-26MAY14MIPBKS-MI194",
+                    "KXIPLTEAMTOTAL-26MAY14MIPBKS-MI224",
+                    "KXIPLTEAMTOTAL-26MAY14MIPBKS-PBKS166",
+                    "KXIPLTEAMTOTAL-26MAY14MIPBKS-PBKS196",
+                    "KXIPLTEAMTOTAL-26MAY14MIPBKS-PBKS226"
+                ]
+            }
+        },
+        "KXBUNDESLIGATOTAL": {
+            "KXBUNDESLIGATOTAL-26MAY16UNIFCA": {
+                "title": "union berlin vs augsburg: total goals",
+                "subtitle": "uni vs fca (may 16)",
+                "market_slugs": [
+                    "KXBUNDESLIGATOTAL-26MAY16UNIFCA-1",
+                    "KXBUNDESLIGATOTAL-26MAY16UNIFCA-2",
+                    "KXBUNDESLIGATOTAL-26MAY16UNIFCA-3",
+                    "KXBUNDESLIGATOTAL-26MAY16UNIFCA-4"
+                ]
+            },
+            "KXBUNDESLIGATOTAL-26MAY16SVWBVB": {
+                "title": "bremen vs dortmund: total goals",
+                "subtitle": "svw vs bvb (may 16)",
+                "market_slugs": [
+                    "KXBUNDESLIGATOTAL-26MAY16SVWBVB-1",
+                    "KXBUNDESLIGATOTAL-26MAY16SVWBVB-2",
+                    "KXBUNDESLIGATOTAL-26MAY16SVWBVB-3",
+                    "KXBUNDESLIGATOTAL-26MAY16SVWBVB-4"
+                ]
+            },
+            "KXBUNDESLIGATOTAL-26MAY16STPWOB": {
+                "title": "st. pauli vs wolfsburg: total goals",
+                "subtitle": "stp vs wob (may 16)",
+                "market_slugs": [
+                    "KXBUNDESLIGATOTAL-26MAY16STPWOB-1",
+                    "KXBUNDESLIGATOTAL-26MAY16STPWOB-2",
+                    "KXBUNDESLIGATOTAL-26MAY16STPWOB-3",
+                    "KXBUNDESLIGATOTAL-26MAY16STPWOB-4"
+                ]
+            },
+            "KXBUNDESLIGATOTAL-26MAY16SGEVFB": {
+                "title": "frankfurt vs stuttgart: total goals",
+                "subtitle": "sge vs vfb (may 16)",
+                "market_slugs": [
+                    "KXBUNDESLIGATOTAL-26MAY16SGEVFB-1",
+                    "KXBUNDESLIGATOTAL-26MAY16SGEVFB-2",
+                    "KXBUNDESLIGATOTAL-26MAY16SGEVFB-3",
+                    "KXBUNDESLIGATOTAL-26MAY16SGEVFB-4"
+                ]
+            },
+            "KXBUNDESLIGATOTAL-26MAY16SCFRBL": {
+                "title": "freiburg vs leipzig: total goals",
+                "subtitle": "scf vs rbl (may 16)",
+                "market_slugs": [
+                    "KXBUNDESLIGATOTAL-26MAY16SCFRBL-1",
+                    "KXBUNDESLIGATOTAL-26MAY16SCFRBL-2",
+                    "KXBUNDESLIGATOTAL-26MAY16SCFRBL-3",
+                    "KXBUNDESLIGATOTAL-26MAY16SCFRBL-4"
+                ]
+            },
+            "KXBUNDESLIGATOTAL-26MAY16LEVHSV": {
+                "title": "leverkusen vs hamburg: total goals",
+                "subtitle": "lev vs hsv (may 16)",
+                "market_slugs": [
+                    "KXBUNDESLIGATOTAL-26MAY16LEVHSV-1",
+                    "KXBUNDESLIGATOTAL-26MAY16LEVHSV-2",
+                    "KXBUNDESLIGATOTAL-26MAY16LEVHSV-3",
+                    "KXBUNDESLIGATOTAL-26MAY16LEVHSV-4"
+                ]
+            },
+            "KXBUNDESLIGATOTAL-26MAY16FCHM05": {
+                "title": "heidenheim vs mainz: total goals",
+                "subtitle": "fch vs m05 (may 16)",
+                "market_slugs": [
+                    "KXBUNDESLIGATOTAL-26MAY16FCHM05-1",
+                    "KXBUNDESLIGATOTAL-26MAY16FCHM05-2",
+                    "KXBUNDESLIGATOTAL-26MAY16FCHM05-3",
+                    "KXBUNDESLIGATOTAL-26MAY16FCHM05-4"
+                ]
+            },
+            "KXBUNDESLIGATOTAL-26MAY16BMUKOE": {
+                "title": "bayern munich vs fc k\u00f6ln: total goals",
+                "subtitle": "bmu vs koe (may 16)",
+                "market_slugs": [
+                    "KXBUNDESLIGATOTAL-26MAY16BMUKOE-1",
+                    "KXBUNDESLIGATOTAL-26MAY16BMUKOE-2",
+                    "KXBUNDESLIGATOTAL-26MAY16BMUKOE-3",
+                    "KXBUNDESLIGATOTAL-26MAY16BMUKOE-4"
+                ]
+            },
+            "KXBUNDESLIGATOTAL-26MAY16BMGTSG": {
+                "title": "m\u00b4gladbach vs hoffenheim: total goals",
+                "subtitle": "bmg vs tsg (may 16)",
+                "market_slugs": [
+                    "KXBUNDESLIGATOTAL-26MAY16BMGTSG-1",
+                    "KXBUNDESLIGATOTAL-26MAY16BMGTSG-2",
+                    "KXBUNDESLIGATOTAL-26MAY16BMGTSG-3",
+                    "KXBUNDESLIGATOTAL-26MAY16BMGTSG-4"
+                ]
+            }
+        },
+        "KXCODTOTALMAPS": {
+            "KXCODTOTALMAPS-26MAY151500ROCFAZ": {
+                "title": "roc esports vs. faze vegas: total maps",
+                "subtitle": "total maps: roc vs. faz (may 15)",
+                "market_slugs": [
+                    "KXCODTOTALMAPS-26MAY151500ROCFAZ-4",
+                    "KXCODTOTALMAPS-26MAY151500ROCFAZ-5"
+                ]
+            },
+            "KXCODTOTALMAPS-26MAY151500PNLAT": {
+                "title": "project notorious vs. los angeles thieves: total maps",
+                "subtitle": "total maps: pn vs. lat (may 15)",
+                "market_slugs": [
+                    "KXCODTOTALMAPS-26MAY151500PNLAT-4",
+                    "KXCODTOTALMAPS-26MAY151500PNLAT-5"
+                ]
+            },
+            "KXCODTOTALMAPS-26MAY151500C9NYRIYF": {
+                "title": "cloud9 new york vs. riyadh falcons: total maps",
+                "subtitle": "total maps: c9ny vs. riyf (may 15)",
+                "market_slugs": [
+                    "KXCODTOTALMAPS-26MAY151500C9NYRIYF-4",
+                    "KXCODTOTALMAPS-26MAY151500C9NYRIYF-5"
+                ]
+            },
+            "KXCODTOTALMAPS-26MAY151500BOSPAR": {
+                "title": "boston breach vs. paris gentle mates: total maps",
+                "subtitle": "total maps: bos vs. par (may 15)",
+                "market_slugs": [
+                    "KXCODTOTALMAPS-26MAY151500BOSPAR-4",
+                    "KXCODTOTALMAPS-26MAY151500BOSPAR-5"
+                ]
+            },
+            "KXCODTOTALMAPS-26MAY151330VANG2M": {
+                "title": "vancouver surge vs. g2 minnesota: total maps",
+                "subtitle": "total maps: van vs. g2m (may 15)",
+                "market_slugs": [
+                    "KXCODTOTALMAPS-26MAY151330VANG2M-4",
+                    "KXCODTOTALMAPS-26MAY151330VANG2M-5"
+                ]
+            },
+            "KXCODTOTALMAPS-26MAY151330OMITTEX": {
+                "title": "omit vs. optic texas: total maps",
+                "subtitle": "total maps: omit vs. tex (may 15)",
+                "market_slugs": [
+                    "KXCODTOTALMAPS-26MAY151330OMITTEX-4",
+                    "KXCODTOTALMAPS-26MAY151330OMITTEX-5"
+                ]
+            },
+            "KXCODTOTALMAPS-26MAY151330MHCRR": {
+                "title": "miami heretics vs. carolina royal ravens: total maps",
+                "subtitle": "total maps: mh vs. crr (may 15)",
+                "market_slugs": [
+                    "KXCODTOTALMAPS-26MAY151330MHCRR-4",
+                    "KXCODTOTALMAPS-26MAY151330MHCRR-5"
+                ]
+            },
+            "KXCODTOTALMAPS-26MAY151330HUNTOR": {
+                "title": "huntsmen vs. toronto koi: total maps",
+                "subtitle": "total maps: hun vs. tor (may 15)",
+                "market_slugs": [
+                    "KXCODTOTALMAPS-26MAY151330HUNTOR-4",
+                    "KXCODTOTALMAPS-26MAY151330HUNTOR-5"
+                ]
+            }
+        },
+        "KXSAUDIPLTOTAL": {
+            "KXSAUDIPLTOTAL-26MAY15ALTRIY": {
+                "title": "al-taawoun vs al-riyadh: total goals",
+                "subtitle": "alt vs riy (may 15)",
+                "market_slugs": [
+                    "KXSAUDIPLTOTAL-26MAY15ALTRIY-1",
+                    "KXSAUDIPLTOTAL-26MAY15ALTRIY-2",
+                    "KXSAUDIPLTOTAL-26MAY15ALTRIY-3",
+                    "KXSAUDIPLTOTAL-26MAY15ALTRIY-4"
+                ]
+            },
+            "KXSAUDIPLTOTAL-26MAY15DAMFAY": {
+                "title": "damac vs al-fayha: total goals",
+                "subtitle": "dam vs fay (may 15)",
+                "market_slugs": [
+                    "KXSAUDIPLTOTAL-26MAY15DAMFAY-1",
+                    "KXSAUDIPLTOTAL-26MAY15DAMFAY-2",
+                    "KXSAUDIPLTOTAL-26MAY15DAMFAY-3",
+                    "KXSAUDIPLTOTAL-26MAY15DAMFAY-4"
+                ]
+            },
+            "KXSAUDIPLTOTAL-26MAY14QADHAZ": {
+                "title": "al qadsiah vs al-hazm: total goals",
+                "subtitle": "qad vs haz (may 14)",
+                "market_slugs": [
+                    "KXSAUDIPLTOTAL-26MAY14QADHAZ-1",
+                    "KXSAUDIPLTOTAL-26MAY14QADHAZ-2",
+                    "KXSAUDIPLTOTAL-26MAY14QADHAZ-3",
+                    "KXSAUDIPLTOTAL-26MAY14QADHAZ-4"
+                ]
+            },
+            "KXSAUDIPLTOTAL-26MAY14ITTITJ": {
+                "title": "al-ittifaq vs al-ittihad: total goals",
+                "subtitle": "itt vs itj (may 14)",
+                "market_slugs": [
+                    "KXSAUDIPLTOTAL-26MAY14ITTITJ-1",
+                    "KXSAUDIPLTOTAL-26MAY14ITTITJ-2",
+                    "KXSAUDIPLTOTAL-26MAY14ITTITJ-3",
+                    "KXSAUDIPLTOTAL-26MAY14ITTITJ-4"
+                ]
+            },
+            "KXSAUDIPLTOTAL-26MAY14FATNAJ": {
+                "title": "al-fateh vs al-najma: total goals",
+                "subtitle": "fat vs naj (may 14)",
+                "market_slugs": [
+                    "KXSAUDIPLTOTAL-26MAY14FATNAJ-1",
+                    "KXSAUDIPLTOTAL-26MAY14FATNAJ-2",
+                    "KXSAUDIPLTOTAL-26MAY14FATNAJ-3",
+                    "KXSAUDIPLTOTAL-26MAY14FATNAJ-4"
+                ]
+            }
+        },
+        "KXLOLTOTALMAPS": {
+            "KXLOLTOTALMAPS-26MAY150700BLGTES": {
+                "title": "bilibili gaming vs. top esports: total maps",
+                "subtitle": "total maps: blg vs. tes (may 15)",
+                "market_slugs": [
+                    "KXLOLTOTALMAPS-26MAY150700BLGTES-3"
+                ]
+            },
+            "KXLOLTOTALMAPS-26MAY150600DNFBRO": {
+                "title": "dn soopers vs. oksavingsbank brion: total maps",
+                "subtitle": "total maps: dnf vs. bro (may 15)",
+                "market_slugs": [
+                    "KXLOLTOTALMAPS-26MAY150600DNFBRO-3"
+                ]
+            },
+            "KXLOLTOTALMAPS-26MAY150500OMGUP": {
+                "title": "oh my god vs. ultra prime: total maps",
+                "subtitle": "total maps: omg vs. up (may 15)",
+                "market_slugs": [
+                    "KXLOLTOTALMAPS-26MAY150500OMGUP-3"
+                ]
+            },
+            "KXLOLTOTALMAPS-26MAY150400DKHLE": {
+                "title": "dplus kia vs. hanwha life esports: total maps",
+                "subtitle": "total maps: dk vs. hle (may 15)",
+                "market_slugs": [
+                    "KXLOLTOTALMAPS-26MAY150400DKHLE-3"
+                ]
+            },
+            "KXLOLTOTALMAPS-26MAY150100NSEAHLE": {
+                "title": "nongshim esports academy vs. hanwha life esports challengers: total maps",
+                "subtitle": "total maps: nsea vs. hle (may 15)",
+                "market_slugs": [
+                    "KXLOLTOTALMAPS-26MAY150100NSEAHLE-3"
+                ]
+            },
+            "KXLOLTOTALMAPS-26MAY150100GENGADRXC": {
+                "title": "gen.g global academy vs. drx challengers: total maps",
+                "subtitle": "total maps: genga vs. drxc (may 15)",
+                "market_slugs": [
+                    "KXLOLTOTALMAPS-26MAY150100GENGADRXC-3"
+                ]
+            },
+            "KXLOLTOTALMAPS-26MAY141400ZNTOUAT": {
+                "title": "zennit vs. once upon a team: total maps",
+                "subtitle": "total maps: znt vs. ouat (may 14)",
+                "market_slugs": [
+                    "KXLOLTOTALMAPS-26MAY141400ZNTOUAT-3"
+                ]
+            },
+            "KXLOLTOTALMAPS-26MAY141400SLYGX": {
+                "title": "solary vs. giantx: total maps",
+                "subtitle": "total maps: sly vs. gx (may 14)",
+                "market_slugs": [
+                    "KXLOLTOTALMAPS-26MAY141400SLYGX-3"
+                ]
+            },
+            "KXLOLTOTALMAPS-26MAY141400SHFTGAL": {
+                "title": "shifters vs. galions: total maps",
+                "subtitle": "total maps: shft vs. gal (may 14)",
+                "market_slugs": [
+                    "KXLOLTOTALMAPS-26MAY141400SHFTGAL-3"
+                ]
+            },
+            "KXLOLTOTALMAPS-26MAY141400GXPKOIA": {
+                "title": "giantx pride vs. movistar koi f\u00e9nix: total maps",
+                "subtitle": "total maps: gxp vs. koia (may 14)",
+                "market_slugs": [
+                    "KXLOLTOTALMAPS-26MAY141400GXPKOIA-3"
+                ]
+            },
+            "KXLOLTOTALMAPS-26MAY141300BANMYTH": {
+                "title": "the bandits vs. myth esports: total maps",
+                "subtitle": "total maps: ban vs. myth (may 14)",
+                "market_slugs": [
+                    "KXLOLTOTALMAPS-26MAY141300BANMYTH-3"
+                ]
+            },
+            "KXLOLTOTALMAPS-26MAY141200GMBEKO": {
+                "title": "gmblers esports vs. eko esports: total maps",
+                "subtitle": "total maps: gmb vs. eko (may 14)",
+                "market_slugs": [
+                    "KXLOLTOTALMAPS-26MAY141200GMBEKO-4",
+                    "KXLOLTOTALMAPS-26MAY141200GMBEKO-5"
+                ]
+            },
+            "KXLOLTOTALMAPS-26MAY141100NAVIG2": {
+                "title": "natus vincere vs. g2 esports: total maps",
+                "subtitle": "total maps: navi vs. g2 (may 14)",
+                "market_slugs": [
+                    "KXLOLTOTALMAPS-26MAY141100NAVIG2-3"
+                ]
+            },
+            "KXLOLTOTALMAPS-26MAY141100MKOIKC": {
+                "title": "movistar koi vs. karmine corp: total maps",
+                "subtitle": "total maps: mkoi vs. kc (may 14)",
+                "market_slugs": [
+                    "KXLOLTOTALMAPS-26MAY141100MKOIKC-3"
+                ]
+            },
+            "KXLOLTOTALMAPS-26MAY141100LUAUCAM": {
+                "title": "lua gaming vs. ucam esports club: total maps",
+                "subtitle": "total maps: lua vs. ucam (may 14)",
+                "market_slugs": [
+                    "KXLOLTOTALMAPS-26MAY141100LUAUCAM-3"
+                ]
+            },
+            "KXLOLTOTALMAPS-26MAY140700JDGWB": {
+                "title": "jd gaming vs. weibo gaming: total maps",
+                "subtitle": "total maps: jdg vs. wb (may 14)",
+                "market_slugs": [
+                    "KXLOLTOTALMAPS-26MAY140700JDGWB-3"
+                ]
+            },
+            "KXLOLTOTALMAPS-26MAY140600KTDRX": {
+                "title": "kt rolster vs. drx: total maps",
+                "subtitle": "total maps: kt vs. drx (may 14)",
+                "market_slugs": [
+                    "KXLOLTOTALMAPS-26MAY140600KTDRX-3"
+                ]
+            },
+            "KXLOLTOTALMAPS-26MAY140500SHGTSW": {
+                "title": "fukuoka softbank hawks gaming vs. team secret whales: total maps",
+                "subtitle": "total maps: shg vs. tsw (may 14)",
+                "market_slugs": [
+                    "KXLOLTOTALMAPS-26MAY140500SHGTSW-3"
+                ]
+            },
+            "KXLOLTOTALMAPS-26MAY140500LGDLNG": {
+                "title": "lgd gaming vs. lng esports: total maps",
+                "subtitle": "total maps: lgd vs. lng (may 14)",
+                "market_slugs": [
+                    "KXLOLTOTALMAPS-26MAY140500LGDLNG-3"
+                ]
+            },
+            "KXLOLTOTALMAPS-26MAY140400GENFOX": {
+                "title": "gen.g vs. bnk fearx: total maps",
+                "subtitle": "total maps: gen vs. fox (may 14)",
+                "market_slugs": [
+                    "KXLOLTOTALMAPS-26MAY140400GENFOX-3"
+                ]
+            },
+            "KXLOLTOTALMAPS-26MAY140100FOXYDKC": {
+                "title": "bnk fearx youth vs. dplus kia challengers: total maps",
+                "subtitle": "total maps: foxy vs. dkc (may 14)",
+                "market_slugs": [
+                    "KXLOLTOTALMAPS-26MAY140100FOXYDKC-3"
+                ]
+            },
+            "KXLOLTOTALMAPS-26MAY140100DNSCT1A": {
+                "title": "dn soopers challengers vs. t1 academy: total maps",
+                "subtitle": "total maps: dnsc vs. t1a (may 14)",
+                "market_slugs": [
+                    "KXLOLTOTALMAPS-26MAY140100DNSCT1A-3"
+                ]
+            },
+            "KXLOLTOTALMAPS-26MAY140100BROKTC": {
+                "title": "oksavingsbank brion challengers vs. kt rolster challengers: total maps",
+                "subtitle": "total maps: bro vs. ktc (may 14)",
+                "market_slugs": [
+                    "KXLOLTOTALMAPS-26MAY140100BROKTC-3"
+                ]
+            },
+            "KXLOLTOTALMAPS-26MAY131400ZYBVITB": {
+                "title": "zyb esport vs. vitality.bee: total maps",
+                "subtitle": "total maps: zyb vs. vitb (may 13)",
+                "market_slugs": [
+                    "KXLOLTOTALMAPS-26MAY131400ZYBVITB-3"
+                ]
+            },
+            "KXLOLTOTALMAPS-26MAY131400UBHRTS": {
+                "title": "ub alma mater vs. los heretics: total maps",
+                "subtitle": "total maps: ub vs. hrts (may 13)",
+                "market_slugs": [
+                    "KXLOLTOTALMAPS-26MAY131400UBHRTS-3"
+                ]
+            },
+            "KXLOLTOTALMAPS-26MAY131200ESIJC": {
+                "title": "esprit sh\u014dnen vs. ici japon corp. esport: total maps",
+                "subtitle": "total maps: es vs. ijc (may 13)",
+                "market_slugs": [
+                    "KXLOLTOTALMAPS-26MAY131200ESIJC-3"
+                ]
+            },
+            "KXLOLTOTALMAPS-26MAY131100FLKBAR": {
+                "title": "falke esports vs. bar\u00e7a esports: total maps",
+                "subtitle": "total maps: flk vs. bar (may 13)",
+                "market_slugs": [
+                    "KXLOLTOTALMAPS-26MAY131100FLKBAR-3"
+                ]
+            },
+            "KXLOLTOTALMAPS-26MAY130700ALWE": {
+                "title": "anyone's legend vs. team we: total maps",
+                "subtitle": "total maps: al vs. we (may 13)",
+                "market_slugs": [
+                    "KXLOLTOTALMAPS-26MAY130700ALWE-3"
+                ]
+            },
+            "KXLOLTOTALMAPS-26MAY130600DKDNF": {
+                "title": "dplus kia vs. dn soopers: total maps",
+                "subtitle": "total maps: dk vs. dnf (may 13)",
+                "market_slugs": [
+                    "KXLOLTOTALMAPS-26MAY130600DKDNF-3"
+                ]
+            },
+            "KXLOLTOTALMAPS-26MAY130500MVKGAM": {
+                "title": "mvk esports vs. gam esports: total maps",
+                "subtitle": "total maps: mvk vs. gam (may 13)",
+                "market_slugs": [
+                    "KXLOLTOTALMAPS-26MAY130500MVKGAM-3"
+                ]
+            },
+            "KXLOLTOTALMAPS-26MAY130500EDGOMG": {
+                "title": "edward gaming vs. oh my god: total maps",
+                "subtitle": "total maps: edg vs. omg (may 13)",
+                "market_slugs": [
+                    "KXLOLTOTALMAPS-26MAY130500EDGOMG-3"
+                ]
+            },
+            "KXLOLTOTALMAPS-26MAY130500DCGCFO": {
+                "title": "deep cross gaming vs. ctbc flying oyster: total maps",
+                "subtitle": "total maps: dcg vs. cfo (may 13)",
+                "market_slugs": [
+                    "KXLOLTOTALMAPS-26MAY130500DCGCFO-3"
+                ]
+            },
+            "KXLOLTOTALMAPS-26MAY130400NST1": {
+                "title": "nongshim red force vs. t1: total maps",
+                "subtitle": "total maps: ns vs. t1 (may 13)",
+                "market_slugs": [
+                    "KXLOLTOTALMAPS-26MAY130400NST1-3"
+                ]
+            }
+        },
+        "KXALEAGUETOTAL": {
+            "KXALEAGUETOTAL-26MAY15ADUAUC": {
+                "title": "adelaide vs auckland: total goals",
+                "subtitle": "adu vs auc (may 15)",
+                "market_slugs": [
+                    "KXALEAGUETOTAL-26MAY15ADUAUC-1",
+                    "KXALEAGUETOTAL-26MAY15ADUAUC-2",
+                    "KXALEAGUETOTAL-26MAY15ADUAUC-3",
+                    "KXALEAGUETOTAL-26MAY15ADUAUC-4"
+                ]
+            }
+        },
+        "KXKBOTOTAL": {
+            "KXKBOTOTAL-26MAY150530LOTDOO": {
+                "title": "lotte giants vs doosan bears: total runs",
+                "subtitle": "lot vs doo (may 15)",
+                "market_slugs": [
+                    "KXKBOTOTAL-26MAY150530LOTDOO-6",
+                    "KXKBOTOTAL-26MAY150530LOTDOO-8",
+                    "KXKBOTOTAL-26MAY150530LOTDOO-10",
+                    "KXKBOTOTAL-26MAY150530LOTDOO-12"
+                ]
+            },
+            "KXKBOTOTAL-26MAY150530LGSSG": {
+                "title": "lg twins vs ssg landers: total runs",
+                "subtitle": "lg vs ssg (may 15)",
+                "market_slugs": [
+                    "KXKBOTOTAL-26MAY150530LGSSG-6",
+                    "KXKBOTOTAL-26MAY150530LGSSG-8",
+                    "KXKBOTOTAL-26MAY150530LGSSG-10",
+                    "KXKBOTOTAL-26MAY150530LGSSG-12"
+                ]
+            },
+            "KXKBOTOTAL-26MAY150530KIWNCD": {
+                "title": "kiwoom heroes vs nc dinos: total runs",
+                "subtitle": "kiw vs ncd (may 15)",
+                "market_slugs": [
+                    "KXKBOTOTAL-26MAY150530KIWNCD-6",
+                    "KXKBOTOTAL-26MAY150530KIWNCD-8",
+                    "KXKBOTOTAL-26MAY150530KIWNCD-10",
+                    "KXKBOTOTAL-26MAY150530KIWNCD-12"
+                ]
+            },
+            "KXKBOTOTAL-26MAY150530KIASAM": {
+                "title": "kia tigers vs samsung lions: total runs",
+                "subtitle": "kia vs sam (may 15)",
+                "market_slugs": [
+                    "KXKBOTOTAL-26MAY150530KIASAM-6",
+                    "KXKBOTOTAL-26MAY150530KIASAM-8",
+                    "KXKBOTOTAL-26MAY150530KIASAM-10",
+                    "KXKBOTOTAL-26MAY150530KIASAM-12"
+                ]
+            },
+            "KXKBOTOTAL-26MAY150530HANKTW": {
+                "title": "hanwha eagles vs kt wiz: total runs",
+                "subtitle": "han vs ktw (may 15)",
+                "market_slugs": [
+                    "KXKBOTOTAL-26MAY150530HANKTW-6",
+                    "KXKBOTOTAL-26MAY150530HANKTW-8",
+                    "KXKBOTOTAL-26MAY150530HANKTW-10",
+                    "KXKBOTOTAL-26MAY150530HANKTW-12"
+                ]
+            },
+            "KXKBOTOTAL-26MAY140530SSGKTW": {
+                "title": "ssg landers vs kt wiz: total runs",
+                "subtitle": "ssg vs ktw (may 14)",
+                "market_slugs": [
+                    "KXKBOTOTAL-26MAY140530SSGKTW-6",
+                    "KXKBOTOTAL-26MAY140530SSGKTW-8",
+                    "KXKBOTOTAL-26MAY140530SSGKTW-10",
+                    "KXKBOTOTAL-26MAY140530SSGKTW-12"
+                ]
+            },
+            "KXKBOTOTAL-26MAY140530SAMLG": {
+                "title": "samsung lions vs lg twins: total runs",
+                "subtitle": "sam vs lg (may 14)",
+                "market_slugs": [
+                    "KXKBOTOTAL-26MAY140530SAMLG-6",
+                    "KXKBOTOTAL-26MAY140530SAMLG-8",
+                    "KXKBOTOTAL-26MAY140530SAMLG-10",
+                    "KXKBOTOTAL-26MAY140530SAMLG-12"
+                ]
+            },
+            "KXKBOTOTAL-26MAY140530NCDLOT": {
+                "title": "nc dinos vs lotte giants: total runs",
+                "subtitle": "ncd vs lot (may 14)",
+                "market_slugs": [
+                    "KXKBOTOTAL-26MAY140530NCDLOT-6",
+                    "KXKBOTOTAL-26MAY140530NCDLOT-8",
+                    "KXKBOTOTAL-26MAY140530NCDLOT-10",
+                    "KXKBOTOTAL-26MAY140530NCDLOT-12"
+                ]
+            },
+            "KXKBOTOTAL-26MAY140530HANKIW": {
+                "title": "hanwha eagles vs kiwoom heroes: total runs",
+                "subtitle": "han vs kiw (may 14)",
+                "market_slugs": [
+                    "KXKBOTOTAL-26MAY140530HANKIW-6",
+                    "KXKBOTOTAL-26MAY140530HANKIW-8",
+                    "KXKBOTOTAL-26MAY140530HANKIW-10",
+                    "KXKBOTOTAL-26MAY140530HANKIW-12"
+                ]
+            },
+            "KXKBOTOTAL-26MAY140530DOOKIA": {
+                "title": "doosan bears vs kia tigers: total runs",
+                "subtitle": "doo vs kia (may 14)",
+                "market_slugs": [
+                    "KXKBOTOTAL-26MAY140530DOOKIA-6",
+                    "KXKBOTOTAL-26MAY140530DOOKIA-8",
+                    "KXKBOTOTAL-26MAY140530DOOKIA-10",
+                    "KXKBOTOTAL-26MAY140530DOOKIA-12"
+                ]
+            },
+            "KXKBOTOTAL-26MAY130530SSGKTW": {
+                "title": "ssg landers vs kt wiz: total runs",
+                "subtitle": "ssg vs ktw (may 13)",
+                "market_slugs": [
+                    "KXKBOTOTAL-26MAY130530SSGKTW-6",
+                    "KXKBOTOTAL-26MAY130530SSGKTW-8",
+                    "KXKBOTOTAL-26MAY130530SSGKTW-10",
+                    "KXKBOTOTAL-26MAY130530SSGKTW-12"
+                ]
+            },
+            "KXKBOTOTAL-26MAY130530SAMLG": {
+                "title": "samsung lions vs lg twins: total runs",
+                "subtitle": "sam vs lg (may 13)",
+                "market_slugs": [
+                    "KXKBOTOTAL-26MAY130530SAMLG-6",
+                    "KXKBOTOTAL-26MAY130530SAMLG-8",
+                    "KXKBOTOTAL-26MAY130530SAMLG-10",
+                    "KXKBOTOTAL-26MAY130530SAMLG-12"
+                ]
+            },
+            "KXKBOTOTAL-26MAY130530NCDLOT": {
+                "title": "nc dinos vs lotte giants: total runs",
+                "subtitle": "ncd vs lot (may 13)",
+                "market_slugs": [
+                    "KXKBOTOTAL-26MAY130530NCDLOT-6",
+                    "KXKBOTOTAL-26MAY130530NCDLOT-8",
+                    "KXKBOTOTAL-26MAY130530NCDLOT-10",
+                    "KXKBOTOTAL-26MAY130530NCDLOT-12"
+                ]
+            },
+            "KXKBOTOTAL-26MAY130530HANKIW": {
+                "title": "hanwha eagles vs kiwoom heroes: total runs",
+                "subtitle": "han vs kiw (may 13)",
+                "market_slugs": [
+                    "KXKBOTOTAL-26MAY130530HANKIW-6",
+                    "KXKBOTOTAL-26MAY130530HANKIW-8",
+                    "KXKBOTOTAL-26MAY130530HANKIW-10",
+                    "KXKBOTOTAL-26MAY130530HANKIW-12"
+                ]
+            },
+            "KXKBOTOTAL-26MAY130530DOOKIA": {
+                "title": "doosan bears vs kia tigers: total runs",
+                "subtitle": "doo vs kia (may 13)",
+                "market_slugs": [
+                    "KXKBOTOTAL-26MAY130530DOOKIA-6",
+                    "KXKBOTOTAL-26MAY130530DOOKIA-8",
+                    "KXKBOTOTAL-26MAY130530DOOKIA-10",
+                    "KXKBOTOTAL-26MAY130530DOOKIA-12"
+                ]
+            }
+        },
+        "KXLIGAMXTOTAL": {
+            "KXLIGAMXTOTAL-26MAY14PACPUM": {
+                "title": "pachuca vs pumas unam: total goals",
+                "subtitle": "pac vs pum (may 14)",
+                "market_slugs": [
+                    "KXLIGAMXTOTAL-26MAY14PACPUM-1",
+                    "KXLIGAMXTOTAL-26MAY14PACPUM-2",
+                    "KXLIGAMXTOTAL-26MAY14PACPUM-3",
+                    "KXLIGAMXTOTAL-26MAY14PACPUM-4"
+                ]
+            },
+            "KXLIGAMXTOTAL-26MAY13CRACDG": {
+                "title": "cruz azul vs guadalajara: total goals",
+                "subtitle": "cra vs cdg (may 13)",
+                "market_slugs": [
+                    "KXLIGAMXTOTAL-26MAY13CRACDG-1",
+                    "KXLIGAMXTOTAL-26MAY13CRACDG-2",
+                    "KXLIGAMXTOTAL-26MAY13CRACDG-3",
+                    "KXLIGAMXTOTAL-26MAY13CRACDG-4"
+                ]
+            }
+        },
+        "KXNHLTOTAL": {
+            "KXNHLTOTAL-26MAY14VGKANA": {
+                "title": "game 6: vegas at anaheim: total points",
+                "subtitle": "vgk at ana (may 14)",
+                "market_slugs": [
+                    "KXNHLTOTAL-26MAY14VGKANA-2",
+                    "KXNHLTOTAL-26MAY14VGKANA-3",
+                    "KXNHLTOTAL-26MAY14VGKANA-4",
+                    "KXNHLTOTAL-26MAY14VGKANA-5",
+                    "KXNHLTOTAL-26MAY14VGKANA-6",
+                    "KXNHLTOTAL-26MAY14VGKANA-7",
+                    "KXNHLTOTAL-26MAY14VGKANA-8",
+                    "KXNHLTOTAL-26MAY14VGKANA-9"
+                ]
+            },
+            "KXNHLTOTAL-26MAY14MTLBUF": {
+                "title": "game 5: montreal at buffalo: total points",
+                "subtitle": "mtl at buf (may 14)",
+                "market_slugs": [
+                    "KXNHLTOTAL-26MAY14MTLBUF-2",
+                    "KXNHLTOTAL-26MAY14MTLBUF-3",
+                    "KXNHLTOTAL-26MAY14MTLBUF-4",
+                    "KXNHLTOTAL-26MAY14MTLBUF-5",
+                    "KXNHLTOTAL-26MAY14MTLBUF-6",
+                    "KXNHLTOTAL-26MAY14MTLBUF-7",
+                    "KXNHLTOTAL-26MAY14MTLBUF-8",
+                    "KXNHLTOTAL-26MAY14MTLBUF-9"
+                ]
+            },
+            "KXNHLTOTAL-26MAY13MINCOL": {
+                "title": "game 5: minnesota at colorado: total points",
+                "subtitle": "min at col (may 13)",
+                "market_slugs": [
+                    "KXNHLTOTAL-26MAY13MINCOL-2",
+                    "KXNHLTOTAL-26MAY13MINCOL-3",
+                    "KXNHLTOTAL-26MAY13MINCOL-4",
+                    "KXNHLTOTAL-26MAY13MINCOL-5",
+                    "KXNHLTOTAL-26MAY13MINCOL-6",
+                    "KXNHLTOTAL-26MAY13MINCOL-7",
+                    "KXNHLTOTAL-26MAY13MINCOL-8",
+                    "KXNHLTOTAL-26MAY13MINCOL-9"
+                ]
+            },
+            "KXNHLTOTAL-26MAY12ANAVGK": {
+                "title": "game 5: anaheim at vegas: total points",
+                "subtitle": "ana at vgk (may 12)",
+                "market_slugs": [
+                    "KXNHLTOTAL-26MAY12ANAVGK-2",
+                    "KXNHLTOTAL-26MAY12ANAVGK-3",
+                    "KXNHLTOTAL-26MAY12ANAVGK-4",
+                    "KXNHLTOTAL-26MAY12ANAVGK-5",
+                    "KXNHLTOTAL-26MAY12ANAVGK-6",
+                    "KXNHLTOTAL-26MAY12ANAVGK-7",
+                    "KXNHLTOTAL-26MAY12ANAVGK-8",
+                    "KXNHLTOTAL-26MAY12ANAVGK-9"
+                ]
+            },
+            "KXNHLTOTAL-26MAY12BUFMTL": {
+                "title": "game 4: buffalo at montreal: total points",
+                "subtitle": "buf at mtl (may 12)",
+                "market_slugs": [
+                    "KXNHLTOTAL-26MAY12BUFMTL-2",
+                    "KXNHLTOTAL-26MAY12BUFMTL-3",
+                    "KXNHLTOTAL-26MAY12BUFMTL-4",
+                    "KXNHLTOTAL-26MAY12BUFMTL-5",
+                    "KXNHLTOTAL-26MAY12BUFMTL-6",
+                    "KXNHLTOTAL-26MAY12BUFMTL-7",
+                    "KXNHLTOTAL-26MAY12BUFMTL-8",
+                    "KXNHLTOTAL-26MAY12BUFMTL-9"
+                ]
+            }
+        },
+        "KXCOPADOBRASILTOTAL": {
+            "KXCOPADOBRASILTOTAL-26MAY14VITFLA": {
+                "title": "vitoria vs flamengo: total goals",
+                "subtitle": "vit vs fla (may 14)",
+                "market_slugs": [
+                    "KXCOPADOBRASILTOTAL-26MAY14VITFLA-1",
+                    "KXCOPADOBRASILTOTAL-26MAY14VITFLA-2",
+                    "KXCOPADOBRASILTOTAL-26MAY14VITFLA-3",
+                    "KXCOPADOBRASILTOTAL-26MAY14VITFLA-4"
+                ]
+            },
+            "KXCOPADOBRASILTOTAL-26MAY14BRAFOR": {
+                "title": "cr brasil vs fortaleza: total goals",
+                "subtitle": "bra vs for (may 14)",
+                "market_slugs": [
+                    "KXCOPADOBRASILTOTAL-26MAY14BRAFOR-1",
+                    "KXCOPADOBRASILTOTAL-26MAY14BRAFOR-2",
+                    "KXCOPADOBRASILTOTAL-26MAY14BRAFOR-3",
+                    "KXCOPADOBRASILTOTAL-26MAY14BRAFOR-4"
+                ]
+            },
+            "KXCOPADOBRASILTOTAL-26MAY14CORBRR": {
+                "title": "corinthians vs barra fc: total goals",
+                "subtitle": "cor vs brr (may 14)",
+                "market_slugs": [
+                    "KXCOPADOBRASILTOTAL-26MAY14CORBRR-1",
+                    "KXCOPADOBRASILTOTAL-26MAY14CORBRR-2",
+                    "KXCOPADOBRASILTOTAL-26MAY14CORBRR-3",
+                    "KXCOPADOBRASILTOTAL-26MAY14CORBRR-4"
+                ]
+            },
+            "KXCOPADOBRASILTOTAL-26MAY14GOICAP": {
+                "title": "ac goianiense vs paranaense: total goals",
+                "subtitle": "goi vs cap (may 14)",
+                "market_slugs": [
+                    "KXCOPADOBRASILTOTAL-26MAY14GOICAP-1",
+                    "KXCOPADOBRASILTOTAL-26MAY14GOICAP-2",
+                    "KXCOPADOBRASILTOTAL-26MAY14GOICAP-3",
+                    "KXCOPADOBRASILTOTAL-26MAY14GOICAP-4"
+                ]
+            },
+            "KXCOPADOBRASILTOTAL-26MAY14CONGPA": {
+                "title": "confianca vs gremio: total goals",
+                "subtitle": "con vs gpa (may 14)",
+                "market_slugs": [
+                    "KXCOPADOBRASILTOTAL-26MAY14CONGPA-1",
+                    "KXCOPADOBRASILTOTAL-26MAY14CONGPA-2",
+                    "KXCOPADOBRASILTOTAL-26MAY14CONGPA-3",
+                    "KXCOPADOBRASILTOTAL-26MAY14CONGPA-4"
+                ]
+            },
+            "KXCOPADOBRASILTOTAL-26MAY14CHABOT": {
+                "title": "chapecoense vs botafogo: total goals",
+                "subtitle": "cha vs bot (may 14)",
+                "market_slugs": [
+                    "KXCOPADOBRASILTOTAL-26MAY14CHABOT-1",
+                    "KXCOPADOBRASILTOTAL-26MAY14CHABOT-2",
+                    "KXCOPADOBRASILTOTAL-26MAY14CHABOT-3",
+                    "KXCOPADOBRASILTOTAL-26MAY14CHABOT-4"
+                ]
+            },
+            "KXCOPADOBRASILTOTAL-26MAY13JACPAL": {
+                "title": "jacuipense vs palmeiras: total goals",
+                "subtitle": "jac vs pal (may 13)",
+                "market_slugs": [
+                    "KXCOPADOBRASILTOTAL-26MAY13JACPAL-1",
+                    "KXCOPADOBRASILTOTAL-26MAY13JACPAL-2",
+                    "KXCOPADOBRASILTOTAL-26MAY13JACPAL-3",
+                    "KXCOPADOBRASILTOTAL-26MAY13JACPAL-4"
+                ]
+            },
+            "KXCOPADOBRASILTOTAL-26MAY13CRBAH": {
+                "title": "remo vs bahia: total goals",
+                "subtitle": "cr vs bah (may 13)",
+                "market_slugs": [
+                    "KXCOPADOBRASILTOTAL-26MAY13CRBAH-1",
+                    "KXCOPADOBRASILTOTAL-26MAY13CRBAH-2",
+                    "KXCOPADOBRASILTOTAL-26MAY13CRBAH-3",
+                    "KXCOPADOBRASILTOTAL-26MAY13CRBAH-4"
+                ]
+            },
+            "KXCOPADOBRASILTOTAL-26MAY13CEAATL": {
+                "title": "ceara vs atletico mineiro: total goals",
+                "subtitle": "cea vs atl (may 13)",
+                "market_slugs": [
+                    "KXCOPADOBRASILTOTAL-26MAY13CEAATL-1",
+                    "KXCOPADOBRASILTOTAL-26MAY13CEAATL-2",
+                    "KXCOPADOBRASILTOTAL-26MAY13CEAATL-3",
+                    "KXCOPADOBRASILTOTAL-26MAY13CEAATL-4"
+                ]
+            },
+            "KXCOPADOBRASILTOTAL-26MAY13MIRRBB": {
+                "title": "mirassol vs bragantino: total goals",
+                "subtitle": "mir vs rbb (may 13)",
+                "market_slugs": [
+                    "KXCOPADOBRASILTOTAL-26MAY13MIRRBB-1",
+                    "KXCOPADOBRASILTOTAL-26MAY13MIRRBB-2",
+                    "KXCOPADOBRASILTOTAL-26MAY13MIRRBB-3",
+                    "KXCOPADOBRASILTOTAL-26MAY13MIRRBB-4"
+                ]
+            },
+            "KXCOPADOBRASILTOTAL-26MAY13CFCSAN": {
+                "title": "coritiba vs santos: total goals",
+                "subtitle": "cfc vs san (may 13)",
+                "market_slugs": [
+                    "KXCOPADOBRASILTOTAL-26MAY13CFCSAN-1",
+                    "KXCOPADOBRASILTOTAL-26MAY13CFCSAN-2",
+                    "KXCOPADOBRASILTOTAL-26MAY13CFCSAN-3",
+                    "KXCOPADOBRASILTOTAL-26MAY13CFCSAN-4"
+                ]
+            },
+            "KXCOPADOBRASILTOTAL-26MAY13VDGPSC": {
+                "title": "vasco da gama vs paysandu: total goals",
+                "subtitle": "vdg vs psc (may 13)",
+                "market_slugs": [
+                    "KXCOPADOBRASILTOTAL-26MAY13VDGPSC-1",
+                    "KXCOPADOBRASILTOTAL-26MAY13VDGPSC-2",
+                    "KXCOPADOBRASILTOTAL-26MAY13VDGPSC-3",
+                    "KXCOPADOBRASILTOTAL-26MAY13VDGPSC-4"
+                ]
+            },
+            "KXCOPADOBRASILTOTAL-26MAY13JUVSPA": {
+                "title": "juventude rs vs sao paulo: total goals",
+                "subtitle": "juv vs spa (may 13)",
+                "market_slugs": [
+                    "KXCOPADOBRASILTOTAL-26MAY13JUVSPA-1",
+                    "KXCOPADOBRASILTOTAL-26MAY13JUVSPA-2",
+                    "KXCOPADOBRASILTOTAL-26MAY13JUVSPA-3",
+                    "KXCOPADOBRASILTOTAL-26MAY13JUVSPA-4"
+                ]
+            },
+            "KXCOPADOBRASILTOTAL-26MAY12FLUFER": {
+                "title": "fluminense vs ferroviario: total goals",
+                "subtitle": "flu vs fer (may 12)",
+                "market_slugs": [
+                    "KXCOPADOBRASILTOTAL-26MAY12FLUFER-1",
+                    "KXCOPADOBRASILTOTAL-26MAY12FLUFER-2",
+                    "KXCOPADOBRASILTOTAL-26MAY12FLUFER-3",
+                    "KXCOPADOBRASILTOTAL-26MAY12FLUFER-4"
+                ]
+            },
+            "KXCOPADOBRASILTOTAL-26MAY12CRUGGO": {
+                "title": "cruzeiro vs goias: total goals",
+                "subtitle": "cru vs ggo (may 12)",
+                "market_slugs": [
+                    "KXCOPADOBRASILTOTAL-26MAY12CRUGGO-1",
+                    "KXCOPADOBRASILTOTAL-26MAY12CRUGGO-2",
+                    "KXCOPADOBRASILTOTAL-26MAY12CRUGGO-3",
+                    "KXCOPADOBRASILTOTAL-26MAY12CRUGGO-4"
+                ]
+            },
+            "KXCOPADOBRASILTOTAL-26MAY12INTATH": {
+                "title": "internacional vs athletic club sjdr: total goals",
+                "subtitle": "int vs ath (may 12)",
+                "market_slugs": [
+                    "KXCOPADOBRASILTOTAL-26MAY12INTATH-1",
+                    "KXCOPADOBRASILTOTAL-26MAY12INTATH-2",
+                    "KXCOPADOBRASILTOTAL-26MAY12INTATH-3",
+                    "KXCOPADOBRASILTOTAL-26MAY12INTATH-4"
+                ]
+            }
+        },
+        "KXWNBATOTAL": {
+            "KXWNBATOTAL-26MAY13INDLA": {
+                "title": "indiana vs los angeles",
+                "subtitle": "ind vs la (may 13)",
+                "market_slugs": [
+                    "KXWNBATOTAL-26MAY13INDLA-176",
+                    "KXWNBATOTAL-26MAY13INDLA-184",
+                    "KXWNBATOTAL-26MAY13INDLA-192"
+                ]
+            },
+            "KXWNBATOTAL-26MAY13CHIGS": {
+                "title": "chicago vs golden state",
+                "subtitle": "chi vs gs (may 13)",
+                "market_slugs": [
+                    "KXWNBATOTAL-26MAY13CHIGS-156",
+                    "KXWNBATOTAL-26MAY13CHIGS-164",
+                    "KXWNBATOTAL-26MAY13CHIGS-172"
+                ]
+            },
+            "KXWNBATOTAL-26MAY13LVCONN": {
+                "title": "las vegas vs connecticut",
+                "subtitle": "lv vs conn (may 13)",
+                "market_slugs": [
+                    "KXWNBATOTAL-26MAY13LVCONN-164",
+                    "KXWNBATOTAL-26MAY13LVCONN-172",
+                    "KXWNBATOTAL-26MAY13LVCONN-180"
+                ]
+            },
+            "KXWNBATOTAL-26MAY13SEATOR": {
+                "title": "seattle vs toronto",
+                "subtitle": "sea vs tor (may 13)",
+                "market_slugs": [
+                    "KXWNBATOTAL-26MAY13SEATOR-156",
+                    "KXWNBATOTAL-26MAY13SEATOR-164",
+                    "KXWNBATOTAL-26MAY13SEATOR-172"
+                ]
+            },
+            "KXWNBATOTAL-26MAY12NYPDX": {
+                "title": "new york vs portland",
+                "subtitle": "ny vs pdx (may 12)",
+                "market_slugs": [
+                    "KXWNBATOTAL-26MAY12NYPDX-161",
+                    "KXWNBATOTAL-26MAY12NYPDX-169",
+                    "KXWNBATOTAL-26MAY12NYPDX-177"
+                ]
+            },
+            "KXWNBATOTAL-26MAY12MINPHX": {
+                "title": "minnesota vs phoenix",
+                "subtitle": "min vs phx (may 12)",
+                "market_slugs": [
+                    "KXWNBATOTAL-26MAY12MINPHX-160",
+                    "KXWNBATOTAL-26MAY12MINPHX-168",
+                    "KXWNBATOTAL-26MAY12MINPHX-176"
+                ]
+            },
+            "KXWNBATOTAL-26MAY12ATLDAL": {
+                "title": "atlanta vs dallas",
+                "subtitle": "atl vs dal (may 12)",
+                "market_slugs": [
+                    "KXWNBATOTAL-26MAY12ATLDAL-170",
+                    "KXWNBATOTAL-26MAY12ATLDAL-178",
+                    "KXWNBATOTAL-26MAY12ATLDAL-186"
+                ]
+            }
+        },
+        "KXMLBTOTAL": {
+            "KXMLBTOTAL-26MAY132210SFLAD": {
+                "title": "san francisco vs los angeles d: total runs",
+                "subtitle": "sf vs lad (may 13)",
+                "market_slugs": [
+                    "KXMLBTOTAL-26MAY132210SFLAD-3",
+                    "KXMLBTOTAL-26MAY132210SFLAD-4",
+                    "KXMLBTOTAL-26MAY132210SFLAD-5",
+                    "KXMLBTOTAL-26MAY132210SFLAD-6",
+                    "KXMLBTOTAL-26MAY132210SFLAD-7",
+                    "KXMLBTOTAL-26MAY132210SFLAD-8",
+                    "KXMLBTOTAL-26MAY132210SFLAD-9",
+                    "KXMLBTOTAL-26MAY132210SFLAD-10",
+                    "KXMLBTOTAL-26MAY132210SFLAD-11",
+                    "KXMLBTOTAL-26MAY132210SFLAD-12",
+                    "KXMLBTOTAL-26MAY132210SFLAD-13"
+                ]
+            },
+            "KXMLBTOTAL-26MAY132140STLATH": {
+                "title": "st. louis vs a's: total runs",
+                "subtitle": "stl vs ath (may 13)",
+                "market_slugs": [
+                    "KXMLBTOTAL-26MAY132140STLATH-5",
+                    "KXMLBTOTAL-26MAY132140STLATH-6",
+                    "KXMLBTOTAL-26MAY132140STLATH-7",
+                    "KXMLBTOTAL-26MAY132140STLATH-8",
+                    "KXMLBTOTAL-26MAY132140STLATH-9",
+                    "KXMLBTOTAL-26MAY132140STLATH-10",
+                    "KXMLBTOTAL-26MAY132140STLATH-11",
+                    "KXMLBTOTAL-26MAY132140STLATH-12",
+                    "KXMLBTOTAL-26MAY132140STLATH-13",
+                    "KXMLBTOTAL-26MAY132140STLATH-14",
+                    "KXMLBTOTAL-26MAY132140STLATH-15"
+                ]
+            },
+            "KXMLBTOTAL-26MAY132010SEAHOU": {
+                "title": "seattle vs houston: total runs",
+                "subtitle": "sea vs hou (may 13)",
+                "market_slugs": [
+                    "KXMLBTOTAL-26MAY132010SEAHOU-4",
+                    "KXMLBTOTAL-26MAY132010SEAHOU-5",
+                    "KXMLBTOTAL-26MAY132010SEAHOU-6",
+                    "KXMLBTOTAL-26MAY132010SEAHOU-7",
+                    "KXMLBTOTAL-26MAY132010SEAHOU-8",
+                    "KXMLBTOTAL-26MAY132010SEAHOU-9",
+                    "KXMLBTOTAL-26MAY132010SEAHOU-10",
+                    "KXMLBTOTAL-26MAY132010SEAHOU-11",
+                    "KXMLBTOTAL-26MAY132010SEAHOU-12",
+                    "KXMLBTOTAL-26MAY132010SEAHOU-13",
+                    "KXMLBTOTAL-26MAY132010SEAHOU-14"
+                ]
+            },
+            "KXMLBTOTAL-26MAY132005AZTEX": {
+                "title": "arizona vs texas: total runs",
+                "subtitle": "az vs tex (may 13)",
+                "market_slugs": [
+                    "KXMLBTOTAL-26MAY132005AZTEX-3",
+                    "KXMLBTOTAL-26MAY132005AZTEX-4",
+                    "KXMLBTOTAL-26MAY132005AZTEX-5",
+                    "KXMLBTOTAL-26MAY132005AZTEX-6",
+                    "KXMLBTOTAL-26MAY132005AZTEX-7",
+                    "KXMLBTOTAL-26MAY132005AZTEX-8",
+                    "KXMLBTOTAL-26MAY132005AZTEX-9",
+                    "KXMLBTOTAL-26MAY132005AZTEX-10",
+                    "KXMLBTOTAL-26MAY132005AZTEX-11",
+                    "KXMLBTOTAL-26MAY132005AZTEX-12",
+                    "KXMLBTOTAL-26MAY132005AZTEX-13"
+                ]
+            },
+            "KXMLBTOTAL-26MAY131940SDMIL": {
+                "title": "san diego vs milwaukee: total runs",
+                "subtitle": "sd vs mil (may 13)",
+                "market_slugs": [
+                    "KXMLBTOTAL-26MAY131940SDMIL-2",
+                    "KXMLBTOTAL-26MAY131940SDMIL-3",
+                    "KXMLBTOTAL-26MAY131940SDMIL-4",
+                    "KXMLBTOTAL-26MAY131940SDMIL-5",
+                    "KXMLBTOTAL-26MAY131940SDMIL-6",
+                    "KXMLBTOTAL-26MAY131940SDMIL-7",
+                    "KXMLBTOTAL-26MAY131940SDMIL-8",
+                    "KXMLBTOTAL-26MAY131940SDMIL-9",
+                    "KXMLBTOTAL-26MAY131940SDMIL-10",
+                    "KXMLBTOTAL-26MAY131940SDMIL-11",
+                    "KXMLBTOTAL-26MAY131940SDMIL-12"
+                ]
+            },
+            "KXMLBTOTAL-26MAY131940MIAMIN": {
+                "title": "miami vs minnesota: total runs",
+                "subtitle": "mia vs min (may 13)",
+                "market_slugs": [
+                    "KXMLBTOTAL-26MAY131940MIAMIN-4",
+                    "KXMLBTOTAL-26MAY131940MIAMIN-5",
+                    "KXMLBTOTAL-26MAY131940MIAMIN-6",
+                    "KXMLBTOTAL-26MAY131940MIAMIN-7",
+                    "KXMLBTOTAL-26MAY131940MIAMIN-8",
+                    "KXMLBTOTAL-26MAY131940MIAMIN-9",
+                    "KXMLBTOTAL-26MAY131940MIAMIN-10",
+                    "KXMLBTOTAL-26MAY131940MIAMIN-11",
+                    "KXMLBTOTAL-26MAY131940MIAMIN-12",
+                    "KXMLBTOTAL-26MAY131940MIAMIN-13",
+                    "KXMLBTOTAL-26MAY131940MIAMIN-14"
+                ]
+            },
+            "KXMLBTOTAL-26MAY131940KCCWS": {
+                "title": "kansas city vs chicago ws: total runs",
+                "subtitle": "kc vs cws (may 13)",
+                "market_slugs": [
+                    "KXMLBTOTAL-26MAY131940KCCWS-3",
+                    "KXMLBTOTAL-26MAY131940KCCWS-4",
+                    "KXMLBTOTAL-26MAY131940KCCWS-5",
+                    "KXMLBTOTAL-26MAY131940KCCWS-6",
+                    "KXMLBTOTAL-26MAY131940KCCWS-7",
+                    "KXMLBTOTAL-26MAY131940KCCWS-8",
+                    "KXMLBTOTAL-26MAY131940KCCWS-9",
+                    "KXMLBTOTAL-26MAY131940KCCWS-10",
+                    "KXMLBTOTAL-26MAY131940KCCWS-11",
+                    "KXMLBTOTAL-26MAY131940KCCWS-12",
+                    "KXMLBTOTAL-26MAY131940KCCWS-13"
+                ]
+            },
+            "KXMLBTOTAL-26MAY131915CHCATL": {
+                "title": "chicago c vs atlanta: total runs",
+                "subtitle": "chc vs atl (may 13)",
+                "market_slugs": [
+                    "KXMLBTOTAL-26MAY131915CHCATL-3",
+                    "KXMLBTOTAL-26MAY131915CHCATL-4",
+                    "KXMLBTOTAL-26MAY131915CHCATL-5",
+                    "KXMLBTOTAL-26MAY131915CHCATL-6",
+                    "KXMLBTOTAL-26MAY131915CHCATL-7",
+                    "KXMLBTOTAL-26MAY131915CHCATL-8",
+                    "KXMLBTOTAL-26MAY131915CHCATL-9",
+                    "KXMLBTOTAL-26MAY131915CHCATL-10",
+                    "KXMLBTOTAL-26MAY131915CHCATL-11",
+                    "KXMLBTOTAL-26MAY131915CHCATL-12",
+                    "KXMLBTOTAL-26MAY131915CHCATL-13"
+                ]
+            },
+            "KXMLBTOTAL-26MAY131907TBTOR": {
+                "title": "tampa bay vs toronto: total runs",
+                "subtitle": "tb vs tor (may 13)",
+                "market_slugs": [
+                    "KXMLBTOTAL-26MAY131907TBTOR-3",
+                    "KXMLBTOTAL-26MAY131907TBTOR-4",
+                    "KXMLBTOTAL-26MAY131907TBTOR-5",
+                    "KXMLBTOTAL-26MAY131907TBTOR-6",
+                    "KXMLBTOTAL-26MAY131907TBTOR-7",
+                    "KXMLBTOTAL-26MAY131907TBTOR-8",
+                    "KXMLBTOTAL-26MAY131907TBTOR-9",
+                    "KXMLBTOTAL-26MAY131907TBTOR-10",
+                    "KXMLBTOTAL-26MAY131907TBTOR-11",
+                    "KXMLBTOTAL-26MAY131907TBTOR-12",
+                    "KXMLBTOTAL-26MAY131907TBTOR-13"
+                ]
+            },
+            "KXMLBTOTAL-26MAY131845PHIBOS": {
+                "title": "philadelphia vs boston: total runs",
+                "subtitle": "phi vs bos (may 13)",
+                "market_slugs": [
+                    "KXMLBTOTAL-26MAY131845PHIBOS-4",
+                    "KXMLBTOTAL-26MAY131845PHIBOS-5",
+                    "KXMLBTOTAL-26MAY131845PHIBOS-6",
+                    "KXMLBTOTAL-26MAY131845PHIBOS-7",
+                    "KXMLBTOTAL-26MAY131845PHIBOS-8",
+                    "KXMLBTOTAL-26MAY131845PHIBOS-9",
+                    "KXMLBTOTAL-26MAY131845PHIBOS-10",
+                    "KXMLBTOTAL-26MAY131845PHIBOS-11",
+                    "KXMLBTOTAL-26MAY131845PHIBOS-12",
+                    "KXMLBTOTAL-26MAY131845PHIBOS-13",
+                    "KXMLBTOTAL-26MAY131845PHIBOS-14"
+                ]
+            },
+            "KXMLBTOTAL-26MAY131840WSHCIN": {
+                "title": "washington vs cincinnati: total runs",
+                "subtitle": "wsh vs cin (may 13)",
+                "market_slugs": [
+                    "KXMLBTOTAL-26MAY131840WSHCIN-4",
+                    "KXMLBTOTAL-26MAY131840WSHCIN-5",
+                    "KXMLBTOTAL-26MAY131840WSHCIN-6",
+                    "KXMLBTOTAL-26MAY131840WSHCIN-7",
+                    "KXMLBTOTAL-26MAY131840WSHCIN-8",
+                    "KXMLBTOTAL-26MAY131840WSHCIN-9",
+                    "KXMLBTOTAL-26MAY131840WSHCIN-10",
+                    "KXMLBTOTAL-26MAY131840WSHCIN-11",
+                    "KXMLBTOTAL-26MAY131840WSHCIN-12",
+                    "KXMLBTOTAL-26MAY131840WSHCIN-13",
+                    "KXMLBTOTAL-26MAY131840WSHCIN-14"
+                ]
+            },
+            "KXMLBTOTAL-26MAY131840COLPIT": {
+                "title": "colorado vs pittsburgh: total runs",
+                "subtitle": "col vs pit (may 13)",
+                "market_slugs": [
+                    "KXMLBTOTAL-26MAY131840COLPIT-3",
+                    "KXMLBTOTAL-26MAY131840COLPIT-4",
+                    "KXMLBTOTAL-26MAY131840COLPIT-5",
+                    "KXMLBTOTAL-26MAY131840COLPIT-6",
+                    "KXMLBTOTAL-26MAY131840COLPIT-7",
+                    "KXMLBTOTAL-26MAY131840COLPIT-8",
+                    "KXMLBTOTAL-26MAY131840COLPIT-9",
+                    "KXMLBTOTAL-26MAY131840COLPIT-10",
+                    "KXMLBTOTAL-26MAY131840COLPIT-11",
+                    "KXMLBTOTAL-26MAY131840COLPIT-12",
+                    "KXMLBTOTAL-26MAY131840COLPIT-13"
+                ]
+            },
+            "KXMLBTOTAL-26MAY131310LAACLE": {
+                "title": "los angeles a vs cleveland: total runs",
+                "subtitle": "laa vs cle (may 13)",
+                "market_slugs": [
+                    "KXMLBTOTAL-26MAY131310LAACLE-2",
+                    "KXMLBTOTAL-26MAY131310LAACLE-3",
+                    "KXMLBTOTAL-26MAY131310LAACLE-4",
+                    "KXMLBTOTAL-26MAY131310LAACLE-5",
+                    "KXMLBTOTAL-26MAY131310LAACLE-6",
+                    "KXMLBTOTAL-26MAY131310LAACLE-7",
+                    "KXMLBTOTAL-26MAY131310LAACLE-8",
+                    "KXMLBTOTAL-26MAY131310LAACLE-9",
+                    "KXMLBTOTAL-26MAY131310LAACLE-10",
+                    "KXMLBTOTAL-26MAY131310LAACLE-11",
+                    "KXMLBTOTAL-26MAY131310LAACLE-12"
+                ]
+            },
+            "KXMLBTOTAL-26MAY122210SFLAD": {
+                "title": "san francisco vs los angeles d: total runs",
+                "subtitle": "sf vs lad (may 12)",
+                "market_slugs": [
+                    "KXMLBTOTAL-26MAY122210SFLAD-4",
+                    "KXMLBTOTAL-26MAY122210SFLAD-5",
+                    "KXMLBTOTAL-26MAY122210SFLAD-6",
+                    "KXMLBTOTAL-26MAY122210SFLAD-7",
+                    "KXMLBTOTAL-26MAY122210SFLAD-8",
+                    "KXMLBTOTAL-26MAY122210SFLAD-9",
+                    "KXMLBTOTAL-26MAY122210SFLAD-10",
+                    "KXMLBTOTAL-26MAY122210SFLAD-11",
+                    "KXMLBTOTAL-26MAY122210SFLAD-12",
+                    "KXMLBTOTAL-26MAY122210SFLAD-13",
+                    "KXMLBTOTAL-26MAY122210SFLAD-14"
+                ]
+            },
+            "KXMLBTOTAL-26MAY122140STLATH": {
+                "title": "st. louis vs a's: total runs",
+                "subtitle": "stl vs ath (may 12)",
+                "market_slugs": [
+                    "KXMLBTOTAL-26MAY122140STLATH-5",
+                    "KXMLBTOTAL-26MAY122140STLATH-6",
+                    "KXMLBTOTAL-26MAY122140STLATH-7",
+                    "KXMLBTOTAL-26MAY122140STLATH-8",
+                    "KXMLBTOTAL-26MAY122140STLATH-9",
+                    "KXMLBTOTAL-26MAY122140STLATH-10",
+                    "KXMLBTOTAL-26MAY122140STLATH-11",
+                    "KXMLBTOTAL-26MAY122140STLATH-12",
+                    "KXMLBTOTAL-26MAY122140STLATH-13",
+                    "KXMLBTOTAL-26MAY122140STLATH-14",
+                    "KXMLBTOTAL-26MAY122140STLATH-15"
+                ]
+            },
+            "KXMLBTOTAL-26MAY122010SEAHOU": {
+                "title": "seattle vs houston: total runs",
+                "subtitle": "sea vs hou (may 12)",
+                "market_slugs": [
+                    "KXMLBTOTAL-26MAY122010SEAHOU-3",
+                    "KXMLBTOTAL-26MAY122010SEAHOU-4",
+                    "KXMLBTOTAL-26MAY122010SEAHOU-5",
+                    "KXMLBTOTAL-26MAY122010SEAHOU-6",
+                    "KXMLBTOTAL-26MAY122010SEAHOU-7",
+                    "KXMLBTOTAL-26MAY122010SEAHOU-8",
+                    "KXMLBTOTAL-26MAY122010SEAHOU-9",
+                    "KXMLBTOTAL-26MAY122010SEAHOU-10",
+                    "KXMLBTOTAL-26MAY122010SEAHOU-11",
+                    "KXMLBTOTAL-26MAY122010SEAHOU-12",
+                    "KXMLBTOTAL-26MAY122010SEAHOU-13"
+                ]
+            },
+            "KXMLBTOTAL-26MAY122005AZTEX": {
+                "title": "arizona vs texas: total runs",
+                "subtitle": "az vs tex (may 12)",
+                "market_slugs": [
+                    "KXMLBTOTAL-26MAY122005AZTEX-3",
+                    "KXMLBTOTAL-26MAY122005AZTEX-4",
+                    "KXMLBTOTAL-26MAY122005AZTEX-5",
+                    "KXMLBTOTAL-26MAY122005AZTEX-6",
+                    "KXMLBTOTAL-26MAY122005AZTEX-7",
+                    "KXMLBTOTAL-26MAY122005AZTEX-8",
+                    "KXMLBTOTAL-26MAY122005AZTEX-9",
+                    "KXMLBTOTAL-26MAY122005AZTEX-10",
+                    "KXMLBTOTAL-26MAY122005AZTEX-11",
+                    "KXMLBTOTAL-26MAY122005AZTEX-12",
+                    "KXMLBTOTAL-26MAY122005AZTEX-13"
+                ]
+            },
+            "KXMLBTOTAL-26MAY121940SDMIL": {
+                "title": "san diego vs milwaukee: total runs",
+                "subtitle": "sd vs mil (may 12)",
+                "market_slugs": [
+                    "KXMLBTOTAL-26MAY121940SDMIL-3",
+                    "KXMLBTOTAL-26MAY121940SDMIL-4",
+                    "KXMLBTOTAL-26MAY121940SDMIL-5",
+                    "KXMLBTOTAL-26MAY121940SDMIL-6",
+                    "KXMLBTOTAL-26MAY121940SDMIL-7",
+                    "KXMLBTOTAL-26MAY121940SDMIL-8",
+                    "KXMLBTOTAL-26MAY121940SDMIL-9",
+                    "KXMLBTOTAL-26MAY121940SDMIL-10",
+                    "KXMLBTOTAL-26MAY121940SDMIL-11",
+                    "KXMLBTOTAL-26MAY121940SDMIL-12",
+                    "KXMLBTOTAL-26MAY121940SDMIL-13"
+                ]
+            },
+            "KXMLBTOTAL-26MAY121940MIAMIN": {
+                "title": "miami vs minnesota: total runs",
+                "subtitle": "mia vs min (may 12)",
+                "market_slugs": [
+                    "KXMLBTOTAL-26MAY121940MIAMIN-4",
+                    "KXMLBTOTAL-26MAY121940MIAMIN-5",
+                    "KXMLBTOTAL-26MAY121940MIAMIN-6",
+                    "KXMLBTOTAL-26MAY121940MIAMIN-7",
+                    "KXMLBTOTAL-26MAY121940MIAMIN-8",
+                    "KXMLBTOTAL-26MAY121940MIAMIN-9",
+                    "KXMLBTOTAL-26MAY121940MIAMIN-10",
+                    "KXMLBTOTAL-26MAY121940MIAMIN-11",
+                    "KXMLBTOTAL-26MAY121940MIAMIN-12",
+                    "KXMLBTOTAL-26MAY121940MIAMIN-13",
+                    "KXMLBTOTAL-26MAY121940MIAMIN-14"
+                ]
+            },
+            "KXMLBTOTAL-26MAY121940KCCWS": {
+                "title": "kansas city vs chicago ws: total runs",
+                "subtitle": "kc vs cws (may 12)",
+                "market_slugs": [
+                    "KXMLBTOTAL-26MAY121940KCCWS-4",
+                    "KXMLBTOTAL-26MAY121940KCCWS-5",
+                    "KXMLBTOTAL-26MAY121940KCCWS-6",
+                    "KXMLBTOTAL-26MAY121940KCCWS-7",
+                    "KXMLBTOTAL-26MAY121940KCCWS-8",
+                    "KXMLBTOTAL-26MAY121940KCCWS-9",
+                    "KXMLBTOTAL-26MAY121940KCCWS-10",
+                    "KXMLBTOTAL-26MAY121940KCCWS-11",
+                    "KXMLBTOTAL-26MAY121940KCCWS-12",
+                    "KXMLBTOTAL-26MAY121940KCCWS-13",
+                    "KXMLBTOTAL-26MAY121940KCCWS-14"
+                ]
+            },
+            "KXMLBTOTAL-26MAY121915CHCATL": {
+                "title": "chicago c vs atlanta: total runs",
+                "subtitle": "chc vs atl (may 12)",
+                "market_slugs": [
+                    "KXMLBTOTAL-26MAY121915CHCATL-4",
+                    "KXMLBTOTAL-26MAY121915CHCATL-5",
+                    "KXMLBTOTAL-26MAY121915CHCATL-6",
+                    "KXMLBTOTAL-26MAY121915CHCATL-7",
+                    "KXMLBTOTAL-26MAY121915CHCATL-8",
+                    "KXMLBTOTAL-26MAY121915CHCATL-9",
+                    "KXMLBTOTAL-26MAY121915CHCATL-10",
+                    "KXMLBTOTAL-26MAY121915CHCATL-11",
+                    "KXMLBTOTAL-26MAY121915CHCATL-12",
+                    "KXMLBTOTAL-26MAY121915CHCATL-13",
+                    "KXMLBTOTAL-26MAY121915CHCATL-14"
+                ]
+            },
+            "KXMLBTOTAL-26MAY121910DETNYM": {
+                "title": "detroit vs new york m: total runs",
+                "subtitle": "det vs nym (may 12)",
+                "market_slugs": [
+                    "KXMLBTOTAL-26MAY121910DETNYM-2",
+                    "KXMLBTOTAL-26MAY121910DETNYM-3",
+                    "KXMLBTOTAL-26MAY121910DETNYM-4",
+                    "KXMLBTOTAL-26MAY121910DETNYM-5",
+                    "KXMLBTOTAL-26MAY121910DETNYM-6",
+                    "KXMLBTOTAL-26MAY121910DETNYM-7",
+                    "KXMLBTOTAL-26MAY121910DETNYM-8",
+                    "KXMLBTOTAL-26MAY121910DETNYM-9",
+                    "KXMLBTOTAL-26MAY121910DETNYM-10",
+                    "KXMLBTOTAL-26MAY121910DETNYM-11",
+                    "KXMLBTOTAL-26MAY121910DETNYM-12"
+                ]
+            },
+            "KXMLBTOTAL-26MAY121907TBTOR": {
+                "title": "tampa bay vs toronto: total runs",
+                "subtitle": "tb vs tor (may 12)",
+                "market_slugs": [
+                    "KXMLBTOTAL-26MAY121907TBTOR-3",
+                    "KXMLBTOTAL-26MAY121907TBTOR-4",
+                    "KXMLBTOTAL-26MAY121907TBTOR-5",
+                    "KXMLBTOTAL-26MAY121907TBTOR-6",
+                    "KXMLBTOTAL-26MAY121907TBTOR-7",
+                    "KXMLBTOTAL-26MAY121907TBTOR-8",
+                    "KXMLBTOTAL-26MAY121907TBTOR-9",
+                    "KXMLBTOTAL-26MAY121907TBTOR-10",
+                    "KXMLBTOTAL-26MAY121907TBTOR-11",
+                    "KXMLBTOTAL-26MAY121907TBTOR-12",
+                    "KXMLBTOTAL-26MAY121907TBTOR-13"
+                ]
+            },
+            "KXMLBTOTAL-26MAY121845PHIBOS": {
+                "title": "philadelphia vs boston: total runs",
+                "subtitle": "phi vs bos (may 12)",
+                "market_slugs": [
+                    "KXMLBTOTAL-26MAY121845PHIBOS-3",
+                    "KXMLBTOTAL-26MAY121845PHIBOS-4",
+                    "KXMLBTOTAL-26MAY121845PHIBOS-5",
+                    "KXMLBTOTAL-26MAY121845PHIBOS-6",
+                    "KXMLBTOTAL-26MAY121845PHIBOS-7",
+                    "KXMLBTOTAL-26MAY121845PHIBOS-8",
+                    "KXMLBTOTAL-26MAY121845PHIBOS-9",
+                    "KXMLBTOTAL-26MAY121845PHIBOS-10",
+                    "KXMLBTOTAL-26MAY121845PHIBOS-11",
+                    "KXMLBTOTAL-26MAY121845PHIBOS-12",
+                    "KXMLBTOTAL-26MAY121845PHIBOS-13"
+                ]
+            },
+            "KXMLBTOTAL-26MAY121840WSHCIN": {
+                "title": "washington vs cincinnati: total runs",
+                "subtitle": "wsh vs cin (may 12)",
+                "market_slugs": [
+                    "KXMLBTOTAL-26MAY121840WSHCIN-4",
+                    "KXMLBTOTAL-26MAY121840WSHCIN-5",
+                    "KXMLBTOTAL-26MAY121840WSHCIN-6",
+                    "KXMLBTOTAL-26MAY121840WSHCIN-7",
+                    "KXMLBTOTAL-26MAY121840WSHCIN-8",
+                    "KXMLBTOTAL-26MAY121840WSHCIN-9",
+                    "KXMLBTOTAL-26MAY121840WSHCIN-10",
+                    "KXMLBTOTAL-26MAY121840WSHCIN-11",
+                    "KXMLBTOTAL-26MAY121840WSHCIN-12",
+                    "KXMLBTOTAL-26MAY121840WSHCIN-13",
+                    "KXMLBTOTAL-26MAY121840WSHCIN-14"
+                ]
+            },
+            "KXMLBTOTAL-26MAY121840COLPIT": {
+                "title": "colorado vs pittsburgh: total runs",
+                "subtitle": "col vs pit (may 12)",
+                "market_slugs": [
+                    "KXMLBTOTAL-26MAY121840COLPIT-2",
+                    "KXMLBTOTAL-26MAY121840COLPIT-3",
+                    "KXMLBTOTAL-26MAY121840COLPIT-4",
+                    "KXMLBTOTAL-26MAY121840COLPIT-5",
+                    "KXMLBTOTAL-26MAY121840COLPIT-6",
+                    "KXMLBTOTAL-26MAY121840COLPIT-7",
+                    "KXMLBTOTAL-26MAY121840COLPIT-8",
+                    "KXMLBTOTAL-26MAY121840COLPIT-9",
+                    "KXMLBTOTAL-26MAY121840COLPIT-10",
+                    "KXMLBTOTAL-26MAY121840COLPIT-11",
+                    "KXMLBTOTAL-26MAY121840COLPIT-12"
+                ]
+            },
+            "KXMLBTOTAL-26MAY121835NYYBAL": {
+                "title": "new york y vs baltimore: total runs",
+                "subtitle": "nyy vs bal (may 12)",
+                "market_slugs": [
+                    "KXMLBTOTAL-26MAY121835NYYBAL-4",
+                    "KXMLBTOTAL-26MAY121835NYYBAL-5",
+                    "KXMLBTOTAL-26MAY121835NYYBAL-6",
+                    "KXMLBTOTAL-26MAY121835NYYBAL-7",
+                    "KXMLBTOTAL-26MAY121835NYYBAL-8",
+                    "KXMLBTOTAL-26MAY121835NYYBAL-9",
+                    "KXMLBTOTAL-26MAY121835NYYBAL-10",
+                    "KXMLBTOTAL-26MAY121835NYYBAL-11",
+                    "KXMLBTOTAL-26MAY121835NYYBAL-12",
+                    "KXMLBTOTAL-26MAY121835NYYBAL-13",
+                    "KXMLBTOTAL-26MAY121835NYYBAL-14"
+                ]
+            },
+            "KXMLBTOTAL-26MAY121810LAACLE": {
+                "title": "los angeles a vs cleveland: total runs",
+                "subtitle": "laa vs cle (may 12)",
+                "market_slugs": [
+                    "KXMLBTOTAL-26MAY121810LAACLE-3",
+                    "KXMLBTOTAL-26MAY121810LAACLE-4",
+                    "KXMLBTOTAL-26MAY121810LAACLE-5",
+                    "KXMLBTOTAL-26MAY121810LAACLE-6",
+                    "KXMLBTOTAL-26MAY121810LAACLE-7",
+                    "KXMLBTOTAL-26MAY121810LAACLE-8",
+                    "KXMLBTOTAL-26MAY121810LAACLE-9",
+                    "KXMLBTOTAL-26MAY121810LAACLE-10",
+                    "KXMLBTOTAL-26MAY121810LAACLE-11",
+                    "KXMLBTOTAL-26MAY121810LAACLE-12",
+                    "KXMLBTOTAL-26MAY121810LAACLE-13"
+                ]
+            }
+        },
+        "KXMLBTEAMTOTAL": {
+            "KXMLBTEAMTOTAL-26MAY132210SFLAD": {
+                "title": "san francisco vs los angeles d: team total",
+                "subtitle": "sf vs lad (may 13)",
+                "market_slugs": [
+                    "KXMLBTEAMTOTAL-26MAY132210SFLAD-LAD2",
+                    "KXMLBTEAMTOTAL-26MAY132210SFLAD-LAD3",
+                    "KXMLBTEAMTOTAL-26MAY132210SFLAD-LAD4",
+                    "KXMLBTEAMTOTAL-26MAY132210SFLAD-LAD5",
+                    "KXMLBTEAMTOTAL-26MAY132210SFLAD-LAD6",
+                    "KXMLBTEAMTOTAL-26MAY132210SFLAD-LAD7",
+                    "KXMLBTEAMTOTAL-26MAY132210SFLAD-LAD8",
+                    "KXMLBTEAMTOTAL-26MAY132210SFLAD-SF2",
+                    "KXMLBTEAMTOTAL-26MAY132210SFLAD-SF3",
+                    "KXMLBTEAMTOTAL-26MAY132210SFLAD-SF4",
+                    "KXMLBTEAMTOTAL-26MAY132210SFLAD-SF5",
+                    "KXMLBTEAMTOTAL-26MAY132210SFLAD-SF6",
+                    "KXMLBTEAMTOTAL-26MAY132210SFLAD-SF7",
+                    "KXMLBTEAMTOTAL-26MAY132210SFLAD-SF8"
+                ]
+            },
+            "KXMLBTEAMTOTAL-26MAY132140STLATH": {
+                "title": "st. louis vs a's: team total",
+                "subtitle": "stl vs ath (may 13)",
+                "market_slugs": [
+                    "KXMLBTEAMTOTAL-26MAY132140STLATH-ATH2",
+                    "KXMLBTEAMTOTAL-26MAY132140STLATH-ATH3",
+                    "KXMLBTEAMTOTAL-26MAY132140STLATH-ATH4",
+                    "KXMLBTEAMTOTAL-26MAY132140STLATH-ATH5",
+                    "KXMLBTEAMTOTAL-26MAY132140STLATH-ATH6",
+                    "KXMLBTEAMTOTAL-26MAY132140STLATH-ATH7",
+                    "KXMLBTEAMTOTAL-26MAY132140STLATH-ATH8",
+                    "KXMLBTEAMTOTAL-26MAY132140STLATH-STL2",
+                    "KXMLBTEAMTOTAL-26MAY132140STLATH-STL3",
+                    "KXMLBTEAMTOTAL-26MAY132140STLATH-STL4",
+                    "KXMLBTEAMTOTAL-26MAY132140STLATH-STL5",
+                    "KXMLBTEAMTOTAL-26MAY132140STLATH-STL6",
+                    "KXMLBTEAMTOTAL-26MAY132140STLATH-STL7",
+                    "KXMLBTEAMTOTAL-26MAY132140STLATH-STL8"
+                ]
+            },
+            "KXMLBTEAMTOTAL-26MAY132010SEAHOU": {
+                "title": "seattle vs houston: team total",
+                "subtitle": "sea vs hou (may 13)",
+                "market_slugs": [
+                    "KXMLBTEAMTOTAL-26MAY132010SEAHOU-HOU2",
+                    "KXMLBTEAMTOTAL-26MAY132010SEAHOU-HOU3",
+                    "KXMLBTEAMTOTAL-26MAY132010SEAHOU-HOU4",
+                    "KXMLBTEAMTOTAL-26MAY132010SEAHOU-HOU5",
+                    "KXMLBTEAMTOTAL-26MAY132010SEAHOU-HOU6",
+                    "KXMLBTEAMTOTAL-26MAY132010SEAHOU-HOU7",
+                    "KXMLBTEAMTOTAL-26MAY132010SEAHOU-HOU8",
+                    "KXMLBTEAMTOTAL-26MAY132010SEAHOU-SEA2",
+                    "KXMLBTEAMTOTAL-26MAY132010SEAHOU-SEA3",
+                    "KXMLBTEAMTOTAL-26MAY132010SEAHOU-SEA4",
+                    "KXMLBTEAMTOTAL-26MAY132010SEAHOU-SEA5",
+                    "KXMLBTEAMTOTAL-26MAY132010SEAHOU-SEA6",
+                    "KXMLBTEAMTOTAL-26MAY132010SEAHOU-SEA7",
+                    "KXMLBTEAMTOTAL-26MAY132010SEAHOU-SEA8"
+                ]
+            },
+            "KXMLBTEAMTOTAL-26MAY132005AZTEX": {
+                "title": "arizona vs texas: team total",
+                "subtitle": "az vs tex (may 13)",
+                "market_slugs": [
+                    "KXMLBTEAMTOTAL-26MAY132005AZTEX-TEX2",
+                    "KXMLBTEAMTOTAL-26MAY132005AZTEX-TEX3",
+                    "KXMLBTEAMTOTAL-26MAY132005AZTEX-TEX4",
+                    "KXMLBTEAMTOTAL-26MAY132005AZTEX-TEX5",
+                    "KXMLBTEAMTOTAL-26MAY132005AZTEX-TEX6",
+                    "KXMLBTEAMTOTAL-26MAY132005AZTEX-TEX7",
+                    "KXMLBTEAMTOTAL-26MAY132005AZTEX-TEX8",
+                    "KXMLBTEAMTOTAL-26MAY132005AZTEX-AZ2",
+                    "KXMLBTEAMTOTAL-26MAY132005AZTEX-AZ3",
+                    "KXMLBTEAMTOTAL-26MAY132005AZTEX-AZ4",
+                    "KXMLBTEAMTOTAL-26MAY132005AZTEX-AZ5",
+                    "KXMLBTEAMTOTAL-26MAY132005AZTEX-AZ6",
+                    "KXMLBTEAMTOTAL-26MAY132005AZTEX-AZ7",
+                    "KXMLBTEAMTOTAL-26MAY132005AZTEX-AZ8"
+                ]
+            },
+            "KXMLBTEAMTOTAL-26MAY131940SDMIL": {
+                "title": "san diego vs milwaukee: team total",
+                "subtitle": "sd vs mil (may 13)",
+                "market_slugs": [
+                    "KXMLBTEAMTOTAL-26MAY131940SDMIL-MIL2",
+                    "KXMLBTEAMTOTAL-26MAY131940SDMIL-MIL3",
+                    "KXMLBTEAMTOTAL-26MAY131940SDMIL-MIL4",
+                    "KXMLBTEAMTOTAL-26MAY131940SDMIL-MIL5",
+                    "KXMLBTEAMTOTAL-26MAY131940SDMIL-MIL6",
+                    "KXMLBTEAMTOTAL-26MAY131940SDMIL-MIL7",
+                    "KXMLBTEAMTOTAL-26MAY131940SDMIL-MIL8",
+                    "KXMLBTEAMTOTAL-26MAY131940SDMIL-SD2",
+                    "KXMLBTEAMTOTAL-26MAY131940SDMIL-SD3",
+                    "KXMLBTEAMTOTAL-26MAY131940SDMIL-SD4",
+                    "KXMLBTEAMTOTAL-26MAY131940SDMIL-SD5",
+                    "KXMLBTEAMTOTAL-26MAY131940SDMIL-SD6",
+                    "KXMLBTEAMTOTAL-26MAY131940SDMIL-SD7",
+                    "KXMLBTEAMTOTAL-26MAY131940SDMIL-SD8"
+                ]
+            },
+            "KXMLBTEAMTOTAL-26MAY131940MIAMIN": {
+                "title": "miami vs minnesota: team total",
+                "subtitle": "mia vs min (may 13)",
+                "market_slugs": [
+                    "KXMLBTEAMTOTAL-26MAY131940MIAMIN-MIN2",
+                    "KXMLBTEAMTOTAL-26MAY131940MIAMIN-MIN3",
+                    "KXMLBTEAMTOTAL-26MAY131940MIAMIN-MIN4",
+                    "KXMLBTEAMTOTAL-26MAY131940MIAMIN-MIN5",
+                    "KXMLBTEAMTOTAL-26MAY131940MIAMIN-MIN6",
+                    "KXMLBTEAMTOTAL-26MAY131940MIAMIN-MIN7",
+                    "KXMLBTEAMTOTAL-26MAY131940MIAMIN-MIN8",
+                    "KXMLBTEAMTOTAL-26MAY131940MIAMIN-MIA2",
+                    "KXMLBTEAMTOTAL-26MAY131940MIAMIN-MIA3",
+                    "KXMLBTEAMTOTAL-26MAY131940MIAMIN-MIA4",
+                    "KXMLBTEAMTOTAL-26MAY131940MIAMIN-MIA5",
+                    "KXMLBTEAMTOTAL-26MAY131940MIAMIN-MIA6",
+                    "KXMLBTEAMTOTAL-26MAY131940MIAMIN-MIA7",
+                    "KXMLBTEAMTOTAL-26MAY131940MIAMIN-MIA8"
+                ]
+            },
+            "KXMLBTEAMTOTAL-26MAY131940KCCWS": {
+                "title": "kansas city vs chicago ws: team total",
+                "subtitle": "kc vs cws (may 13)",
+                "market_slugs": [
+                    "KXMLBTEAMTOTAL-26MAY131940KCCWS-CWS2",
+                    "KXMLBTEAMTOTAL-26MAY131940KCCWS-CWS3",
+                    "KXMLBTEAMTOTAL-26MAY131940KCCWS-CWS4",
+                    "KXMLBTEAMTOTAL-26MAY131940KCCWS-CWS5",
+                    "KXMLBTEAMTOTAL-26MAY131940KCCWS-CWS6",
+                    "KXMLBTEAMTOTAL-26MAY131940KCCWS-CWS7",
+                    "KXMLBTEAMTOTAL-26MAY131940KCCWS-CWS8",
+                    "KXMLBTEAMTOTAL-26MAY131940KCCWS-KC2",
+                    "KXMLBTEAMTOTAL-26MAY131940KCCWS-KC3",
+                    "KXMLBTEAMTOTAL-26MAY131940KCCWS-KC4",
+                    "KXMLBTEAMTOTAL-26MAY131940KCCWS-KC5",
+                    "KXMLBTEAMTOTAL-26MAY131940KCCWS-KC6",
+                    "KXMLBTEAMTOTAL-26MAY131940KCCWS-KC7",
+                    "KXMLBTEAMTOTAL-26MAY131940KCCWS-KC8"
+                ]
+            },
+            "KXMLBTEAMTOTAL-26MAY131915CHCATL": {
+                "title": "chicago c vs atlanta: team total",
+                "subtitle": "chc vs atl (may 13)",
+                "market_slugs": [
+                    "KXMLBTEAMTOTAL-26MAY131915CHCATL-ATL2",
+                    "KXMLBTEAMTOTAL-26MAY131915CHCATL-ATL3",
+                    "KXMLBTEAMTOTAL-26MAY131915CHCATL-ATL4",
+                    "KXMLBTEAMTOTAL-26MAY131915CHCATL-ATL5",
+                    "KXMLBTEAMTOTAL-26MAY131915CHCATL-ATL6",
+                    "KXMLBTEAMTOTAL-26MAY131915CHCATL-ATL7",
+                    "KXMLBTEAMTOTAL-26MAY131915CHCATL-ATL8",
+                    "KXMLBTEAMTOTAL-26MAY131915CHCATL-CHC2",
+                    "KXMLBTEAMTOTAL-26MAY131915CHCATL-CHC3",
+                    "KXMLBTEAMTOTAL-26MAY131915CHCATL-CHC4",
+                    "KXMLBTEAMTOTAL-26MAY131915CHCATL-CHC5",
+                    "KXMLBTEAMTOTAL-26MAY131915CHCATL-CHC6",
+                    "KXMLBTEAMTOTAL-26MAY131915CHCATL-CHC7",
+                    "KXMLBTEAMTOTAL-26MAY131915CHCATL-CHC8"
+                ]
+            },
+            "KXMLBTEAMTOTAL-26MAY131907TBTOR": {
+                "title": "tampa bay vs toronto: team total",
+                "subtitle": "tb vs tor (may 13)",
+                "market_slugs": [
+                    "KXMLBTEAMTOTAL-26MAY131907TBTOR-TOR2",
+                    "KXMLBTEAMTOTAL-26MAY131907TBTOR-TOR3",
+                    "KXMLBTEAMTOTAL-26MAY131907TBTOR-TOR4",
+                    "KXMLBTEAMTOTAL-26MAY131907TBTOR-TOR5",
+                    "KXMLBTEAMTOTAL-26MAY131907TBTOR-TOR6",
+                    "KXMLBTEAMTOTAL-26MAY131907TBTOR-TOR7",
+                    "KXMLBTEAMTOTAL-26MAY131907TBTOR-TOR8",
+                    "KXMLBTEAMTOTAL-26MAY131907TBTOR-TB2",
+                    "KXMLBTEAMTOTAL-26MAY131907TBTOR-TB3",
+                    "KXMLBTEAMTOTAL-26MAY131907TBTOR-TB4",
+                    "KXMLBTEAMTOTAL-26MAY131907TBTOR-TB5",
+                    "KXMLBTEAMTOTAL-26MAY131907TBTOR-TB6",
+                    "KXMLBTEAMTOTAL-26MAY131907TBTOR-TB7",
+                    "KXMLBTEAMTOTAL-26MAY131907TBTOR-TB8"
+                ]
+            },
+            "KXMLBTEAMTOTAL-26MAY131845PHIBOS": {
+                "title": "philadelphia vs boston: team total",
+                "subtitle": "phi vs bos (may 13)",
+                "market_slugs": [
+                    "KXMLBTEAMTOTAL-26MAY131845PHIBOS-BOS2",
+                    "KXMLBTEAMTOTAL-26MAY131845PHIBOS-BOS3",
+                    "KXMLBTEAMTOTAL-26MAY131845PHIBOS-BOS4",
+                    "KXMLBTEAMTOTAL-26MAY131845PHIBOS-BOS5",
+                    "KXMLBTEAMTOTAL-26MAY131845PHIBOS-BOS6",
+                    "KXMLBTEAMTOTAL-26MAY131845PHIBOS-BOS7",
+                    "KXMLBTEAMTOTAL-26MAY131845PHIBOS-BOS8",
+                    "KXMLBTEAMTOTAL-26MAY131845PHIBOS-PHI2",
+                    "KXMLBTEAMTOTAL-26MAY131845PHIBOS-PHI3",
+                    "KXMLBTEAMTOTAL-26MAY131845PHIBOS-PHI4",
+                    "KXMLBTEAMTOTAL-26MAY131845PHIBOS-PHI5",
+                    "KXMLBTEAMTOTAL-26MAY131845PHIBOS-PHI6",
+                    "KXMLBTEAMTOTAL-26MAY131845PHIBOS-PHI7",
+                    "KXMLBTEAMTOTAL-26MAY131845PHIBOS-PHI8"
+                ]
+            },
+            "KXMLBTEAMTOTAL-26MAY131840WSHCIN": {
+                "title": "washington vs cincinnati: team total",
+                "subtitle": "wsh vs cin (may 13)",
+                "market_slugs": [
+                    "KXMLBTEAMTOTAL-26MAY131840WSHCIN-CIN2",
+                    "KXMLBTEAMTOTAL-26MAY131840WSHCIN-CIN3",
+                    "KXMLBTEAMTOTAL-26MAY131840WSHCIN-CIN4",
+                    "KXMLBTEAMTOTAL-26MAY131840WSHCIN-CIN5",
+                    "KXMLBTEAMTOTAL-26MAY131840WSHCIN-CIN6",
+                    "KXMLBTEAMTOTAL-26MAY131840WSHCIN-CIN7",
+                    "KXMLBTEAMTOTAL-26MAY131840WSHCIN-CIN8",
+                    "KXMLBTEAMTOTAL-26MAY131840WSHCIN-WSH2",
+                    "KXMLBTEAMTOTAL-26MAY131840WSHCIN-WSH3",
+                    "KXMLBTEAMTOTAL-26MAY131840WSHCIN-WSH4",
+                    "KXMLBTEAMTOTAL-26MAY131840WSHCIN-WSH5",
+                    "KXMLBTEAMTOTAL-26MAY131840WSHCIN-WSH6",
+                    "KXMLBTEAMTOTAL-26MAY131840WSHCIN-WSH7",
+                    "KXMLBTEAMTOTAL-26MAY131840WSHCIN-WSH8"
+                ]
+            },
+            "KXMLBTEAMTOTAL-26MAY131840COLPIT": {
+                "title": "colorado vs pittsburgh: team total",
+                "subtitle": "col vs pit (may 13)",
+                "market_slugs": [
+                    "KXMLBTEAMTOTAL-26MAY131840COLPIT-PIT2",
+                    "KXMLBTEAMTOTAL-26MAY131840COLPIT-PIT3",
+                    "KXMLBTEAMTOTAL-26MAY131840COLPIT-PIT4",
+                    "KXMLBTEAMTOTAL-26MAY131840COLPIT-PIT5",
+                    "KXMLBTEAMTOTAL-26MAY131840COLPIT-PIT6",
+                    "KXMLBTEAMTOTAL-26MAY131840COLPIT-PIT7",
+                    "KXMLBTEAMTOTAL-26MAY131840COLPIT-PIT8",
+                    "KXMLBTEAMTOTAL-26MAY131840COLPIT-COL2",
+                    "KXMLBTEAMTOTAL-26MAY131840COLPIT-COL3",
+                    "KXMLBTEAMTOTAL-26MAY131840COLPIT-COL4",
+                    "KXMLBTEAMTOTAL-26MAY131840COLPIT-COL5",
+                    "KXMLBTEAMTOTAL-26MAY131840COLPIT-COL6",
+                    "KXMLBTEAMTOTAL-26MAY131840COLPIT-COL7",
+                    "KXMLBTEAMTOTAL-26MAY131840COLPIT-COL8"
+                ]
+            },
+            "KXMLBTEAMTOTAL-26MAY131310LAACLE": {
+                "title": "los angeles a vs cleveland: team total",
+                "subtitle": "laa vs cle (may 13)",
+                "market_slugs": [
+                    "KXMLBTEAMTOTAL-26MAY131310LAACLE-CLE2",
+                    "KXMLBTEAMTOTAL-26MAY131310LAACLE-CLE3",
+                    "KXMLBTEAMTOTAL-26MAY131310LAACLE-CLE4",
+                    "KXMLBTEAMTOTAL-26MAY131310LAACLE-CLE5",
+                    "KXMLBTEAMTOTAL-26MAY131310LAACLE-CLE6",
+                    "KXMLBTEAMTOTAL-26MAY131310LAACLE-CLE7",
+                    "KXMLBTEAMTOTAL-26MAY131310LAACLE-CLE8",
+                    "KXMLBTEAMTOTAL-26MAY131310LAACLE-LAA2",
+                    "KXMLBTEAMTOTAL-26MAY131310LAACLE-LAA3",
+                    "KXMLBTEAMTOTAL-26MAY131310LAACLE-LAA4",
+                    "KXMLBTEAMTOTAL-26MAY131310LAACLE-LAA5",
+                    "KXMLBTEAMTOTAL-26MAY131310LAACLE-LAA6",
+                    "KXMLBTEAMTOTAL-26MAY131310LAACLE-LAA7",
+                    "KXMLBTEAMTOTAL-26MAY131310LAACLE-LAA8"
+                ]
+            },
+            "KXMLBTEAMTOTAL-26MAY122210SFLAD": {
+                "title": "san francisco vs los angeles d: team total",
+                "subtitle": "sf vs lad (may 12)",
+                "market_slugs": [
+                    "KXMLBTEAMTOTAL-26MAY122210SFLAD-LAD2",
+                    "KXMLBTEAMTOTAL-26MAY122210SFLAD-LAD3",
+                    "KXMLBTEAMTOTAL-26MAY122210SFLAD-LAD4",
+                    "KXMLBTEAMTOTAL-26MAY122210SFLAD-LAD5",
+                    "KXMLBTEAMTOTAL-26MAY122210SFLAD-LAD6",
+                    "KXMLBTEAMTOTAL-26MAY122210SFLAD-LAD7",
+                    "KXMLBTEAMTOTAL-26MAY122210SFLAD-LAD8",
+                    "KXMLBTEAMTOTAL-26MAY122210SFLAD-SF2",
+                    "KXMLBTEAMTOTAL-26MAY122210SFLAD-SF3",
+                    "KXMLBTEAMTOTAL-26MAY122210SFLAD-SF4",
+                    "KXMLBTEAMTOTAL-26MAY122210SFLAD-SF5",
+                    "KXMLBTEAMTOTAL-26MAY122210SFLAD-SF6",
+                    "KXMLBTEAMTOTAL-26MAY122210SFLAD-SF7",
+                    "KXMLBTEAMTOTAL-26MAY122210SFLAD-SF8"
+                ]
+            },
+            "KXMLBTEAMTOTAL-26MAY122140STLATH": {
+                "title": "st. louis vs a's: team total",
+                "subtitle": "stl vs ath (may 12)",
+                "market_slugs": [
+                    "KXMLBTEAMTOTAL-26MAY122140STLATH-ATH2",
+                    "KXMLBTEAMTOTAL-26MAY122140STLATH-ATH3",
+                    "KXMLBTEAMTOTAL-26MAY122140STLATH-ATH4",
+                    "KXMLBTEAMTOTAL-26MAY122140STLATH-ATH5",
+                    "KXMLBTEAMTOTAL-26MAY122140STLATH-ATH6",
+                    "KXMLBTEAMTOTAL-26MAY122140STLATH-ATH7",
+                    "KXMLBTEAMTOTAL-26MAY122140STLATH-ATH8",
+                    "KXMLBTEAMTOTAL-26MAY122140STLATH-STL2",
+                    "KXMLBTEAMTOTAL-26MAY122140STLATH-STL3",
+                    "KXMLBTEAMTOTAL-26MAY122140STLATH-STL4",
+                    "KXMLBTEAMTOTAL-26MAY122140STLATH-STL5",
+                    "KXMLBTEAMTOTAL-26MAY122140STLATH-STL6",
+                    "KXMLBTEAMTOTAL-26MAY122140STLATH-STL7",
+                    "KXMLBTEAMTOTAL-26MAY122140STLATH-STL8"
+                ]
+            },
+            "KXMLBTEAMTOTAL-26MAY122010SEAHOU": {
+                "title": "seattle vs houston: team total",
+                "subtitle": "sea vs hou (may 12)",
+                "market_slugs": [
+                    "KXMLBTEAMTOTAL-26MAY122010SEAHOU-HOU2",
+                    "KXMLBTEAMTOTAL-26MAY122010SEAHOU-HOU3",
+                    "KXMLBTEAMTOTAL-26MAY122010SEAHOU-HOU4",
+                    "KXMLBTEAMTOTAL-26MAY122010SEAHOU-HOU5",
+                    "KXMLBTEAMTOTAL-26MAY122010SEAHOU-HOU6",
+                    "KXMLBTEAMTOTAL-26MAY122010SEAHOU-HOU7",
+                    "KXMLBTEAMTOTAL-26MAY122010SEAHOU-HOU8",
+                    "KXMLBTEAMTOTAL-26MAY122010SEAHOU-SEA2",
+                    "KXMLBTEAMTOTAL-26MAY122010SEAHOU-SEA3",
+                    "KXMLBTEAMTOTAL-26MAY122010SEAHOU-SEA4",
+                    "KXMLBTEAMTOTAL-26MAY122010SEAHOU-SEA5",
+                    "KXMLBTEAMTOTAL-26MAY122010SEAHOU-SEA6",
+                    "KXMLBTEAMTOTAL-26MAY122010SEAHOU-SEA7",
+                    "KXMLBTEAMTOTAL-26MAY122010SEAHOU-SEA8"
+                ]
+            },
+            "KXMLBTEAMTOTAL-26MAY122005AZTEX": {
+                "title": "arizona vs texas: team total",
+                "subtitle": "az vs tex (may 12)",
+                "market_slugs": [
+                    "KXMLBTEAMTOTAL-26MAY122005AZTEX-TEX2",
+                    "KXMLBTEAMTOTAL-26MAY122005AZTEX-TEX3",
+                    "KXMLBTEAMTOTAL-26MAY122005AZTEX-TEX4",
+                    "KXMLBTEAMTOTAL-26MAY122005AZTEX-TEX5",
+                    "KXMLBTEAMTOTAL-26MAY122005AZTEX-TEX6",
+                    "KXMLBTEAMTOTAL-26MAY122005AZTEX-TEX7",
+                    "KXMLBTEAMTOTAL-26MAY122005AZTEX-TEX8",
+                    "KXMLBTEAMTOTAL-26MAY122005AZTEX-AZ2",
+                    "KXMLBTEAMTOTAL-26MAY122005AZTEX-AZ3",
+                    "KXMLBTEAMTOTAL-26MAY122005AZTEX-AZ4",
+                    "KXMLBTEAMTOTAL-26MAY122005AZTEX-AZ5",
+                    "KXMLBTEAMTOTAL-26MAY122005AZTEX-AZ6",
+                    "KXMLBTEAMTOTAL-26MAY122005AZTEX-AZ7",
+                    "KXMLBTEAMTOTAL-26MAY122005AZTEX-AZ8"
+                ]
+            },
+            "KXMLBTEAMTOTAL-26MAY121940SDMIL": {
+                "title": "san diego vs milwaukee: team total",
+                "subtitle": "sd vs mil (may 12)",
+                "market_slugs": [
+                    "KXMLBTEAMTOTAL-26MAY121940SDMIL-MIL2",
+                    "KXMLBTEAMTOTAL-26MAY121940SDMIL-MIL3",
+                    "KXMLBTEAMTOTAL-26MAY121940SDMIL-MIL4",
+                    "KXMLBTEAMTOTAL-26MAY121940SDMIL-MIL5",
+                    "KXMLBTEAMTOTAL-26MAY121940SDMIL-MIL6",
+                    "KXMLBTEAMTOTAL-26MAY121940SDMIL-MIL7",
+                    "KXMLBTEAMTOTAL-26MAY121940SDMIL-MIL8",
+                    "KXMLBTEAMTOTAL-26MAY121940SDMIL-SD2",
+                    "KXMLBTEAMTOTAL-26MAY121940SDMIL-SD3",
+                    "KXMLBTEAMTOTAL-26MAY121940SDMIL-SD4",
+                    "KXMLBTEAMTOTAL-26MAY121940SDMIL-SD5",
+                    "KXMLBTEAMTOTAL-26MAY121940SDMIL-SD6",
+                    "KXMLBTEAMTOTAL-26MAY121940SDMIL-SD7",
+                    "KXMLBTEAMTOTAL-26MAY121940SDMIL-SD8"
+                ]
+            },
+            "KXMLBTEAMTOTAL-26MAY121940MIAMIN": {
+                "title": "miami vs minnesota: team total",
+                "subtitle": "mia vs min (may 12)",
+                "market_slugs": [
+                    "KXMLBTEAMTOTAL-26MAY121940MIAMIN-MIN2",
+                    "KXMLBTEAMTOTAL-26MAY121940MIAMIN-MIN3",
+                    "KXMLBTEAMTOTAL-26MAY121940MIAMIN-MIN4",
+                    "KXMLBTEAMTOTAL-26MAY121940MIAMIN-MIN5",
+                    "KXMLBTEAMTOTAL-26MAY121940MIAMIN-MIN6",
+                    "KXMLBTEAMTOTAL-26MAY121940MIAMIN-MIN7",
+                    "KXMLBTEAMTOTAL-26MAY121940MIAMIN-MIN8",
+                    "KXMLBTEAMTOTAL-26MAY121940MIAMIN-MIA2",
+                    "KXMLBTEAMTOTAL-26MAY121940MIAMIN-MIA3",
+                    "KXMLBTEAMTOTAL-26MAY121940MIAMIN-MIA4",
+                    "KXMLBTEAMTOTAL-26MAY121940MIAMIN-MIA5",
+                    "KXMLBTEAMTOTAL-26MAY121940MIAMIN-MIA6",
+                    "KXMLBTEAMTOTAL-26MAY121940MIAMIN-MIA7",
+                    "KXMLBTEAMTOTAL-26MAY121940MIAMIN-MIA8"
+                ]
+            },
+            "KXMLBTEAMTOTAL-26MAY121940KCCWS": {
+                "title": "kansas city vs chicago ws: team total",
+                "subtitle": "kc vs cws (may 12)",
+                "market_slugs": [
+                    "KXMLBTEAMTOTAL-26MAY121940KCCWS-CWS2",
+                    "KXMLBTEAMTOTAL-26MAY121940KCCWS-CWS3",
+                    "KXMLBTEAMTOTAL-26MAY121940KCCWS-CWS4",
+                    "KXMLBTEAMTOTAL-26MAY121940KCCWS-CWS5",
+                    "KXMLBTEAMTOTAL-26MAY121940KCCWS-CWS6",
+                    "KXMLBTEAMTOTAL-26MAY121940KCCWS-CWS7",
+                    "KXMLBTEAMTOTAL-26MAY121940KCCWS-CWS8",
+                    "KXMLBTEAMTOTAL-26MAY121940KCCWS-KC2",
+                    "KXMLBTEAMTOTAL-26MAY121940KCCWS-KC3",
+                    "KXMLBTEAMTOTAL-26MAY121940KCCWS-KC4",
+                    "KXMLBTEAMTOTAL-26MAY121940KCCWS-KC5",
+                    "KXMLBTEAMTOTAL-26MAY121940KCCWS-KC6",
+                    "KXMLBTEAMTOTAL-26MAY121940KCCWS-KC7",
+                    "KXMLBTEAMTOTAL-26MAY121940KCCWS-KC8"
+                ]
+            },
+            "KXMLBTEAMTOTAL-26MAY121915CHCATL": {
+                "title": "chicago c vs atlanta: team total",
+                "subtitle": "chc vs atl (may 12)",
+                "market_slugs": [
+                    "KXMLBTEAMTOTAL-26MAY121915CHCATL-ATL2",
+                    "KXMLBTEAMTOTAL-26MAY121915CHCATL-ATL3",
+                    "KXMLBTEAMTOTAL-26MAY121915CHCATL-ATL4",
+                    "KXMLBTEAMTOTAL-26MAY121915CHCATL-ATL5",
+                    "KXMLBTEAMTOTAL-26MAY121915CHCATL-ATL6",
+                    "KXMLBTEAMTOTAL-26MAY121915CHCATL-ATL7",
+                    "KXMLBTEAMTOTAL-26MAY121915CHCATL-ATL8",
+                    "KXMLBTEAMTOTAL-26MAY121915CHCATL-CHC2",
+                    "KXMLBTEAMTOTAL-26MAY121915CHCATL-CHC3",
+                    "KXMLBTEAMTOTAL-26MAY121915CHCATL-CHC4",
+                    "KXMLBTEAMTOTAL-26MAY121915CHCATL-CHC5",
+                    "KXMLBTEAMTOTAL-26MAY121915CHCATL-CHC6",
+                    "KXMLBTEAMTOTAL-26MAY121915CHCATL-CHC7",
+                    "KXMLBTEAMTOTAL-26MAY121915CHCATL-CHC8"
+                ]
+            },
+            "KXMLBTEAMTOTAL-26MAY121910DETNYM": {
+                "title": "detroit vs new york m: team total",
+                "subtitle": "det vs nym (may 12)",
+                "market_slugs": [
+                    "KXMLBTEAMTOTAL-26MAY121910DETNYM-NYM2",
+                    "KXMLBTEAMTOTAL-26MAY121910DETNYM-NYM3",
+                    "KXMLBTEAMTOTAL-26MAY121910DETNYM-NYM4",
+                    "KXMLBTEAMTOTAL-26MAY121910DETNYM-NYM5",
+                    "KXMLBTEAMTOTAL-26MAY121910DETNYM-NYM6",
+                    "KXMLBTEAMTOTAL-26MAY121910DETNYM-NYM7",
+                    "KXMLBTEAMTOTAL-26MAY121910DETNYM-NYM8",
+                    "KXMLBTEAMTOTAL-26MAY121910DETNYM-DET2",
+                    "KXMLBTEAMTOTAL-26MAY121910DETNYM-DET3",
+                    "KXMLBTEAMTOTAL-26MAY121910DETNYM-DET4",
+                    "KXMLBTEAMTOTAL-26MAY121910DETNYM-DET5",
+                    "KXMLBTEAMTOTAL-26MAY121910DETNYM-DET6",
+                    "KXMLBTEAMTOTAL-26MAY121910DETNYM-DET7",
+                    "KXMLBTEAMTOTAL-26MAY121910DETNYM-DET8"
+                ]
+            },
+            "KXMLBTEAMTOTAL-26MAY121907TBTOR": {
+                "title": "tampa bay vs toronto: team total",
+                "subtitle": "tb vs tor (may 12)",
+                "market_slugs": [
+                    "KXMLBTEAMTOTAL-26MAY121907TBTOR-TOR2",
+                    "KXMLBTEAMTOTAL-26MAY121907TBTOR-TOR3",
+                    "KXMLBTEAMTOTAL-26MAY121907TBTOR-TOR4",
+                    "KXMLBTEAMTOTAL-26MAY121907TBTOR-TOR5",
+                    "KXMLBTEAMTOTAL-26MAY121907TBTOR-TOR6",
+                    "KXMLBTEAMTOTAL-26MAY121907TBTOR-TOR7",
+                    "KXMLBTEAMTOTAL-26MAY121907TBTOR-TOR8",
+                    "KXMLBTEAMTOTAL-26MAY121907TBTOR-TB2",
+                    "KXMLBTEAMTOTAL-26MAY121907TBTOR-TB3",
+                    "KXMLBTEAMTOTAL-26MAY121907TBTOR-TB4",
+                    "KXMLBTEAMTOTAL-26MAY121907TBTOR-TB5",
+                    "KXMLBTEAMTOTAL-26MAY121907TBTOR-TB6",
+                    "KXMLBTEAMTOTAL-26MAY121907TBTOR-TB7",
+                    "KXMLBTEAMTOTAL-26MAY121907TBTOR-TB8"
+                ]
+            },
+            "KXMLBTEAMTOTAL-26MAY121845PHIBOS": {
+                "title": "philadelphia vs boston: team total",
+                "subtitle": "phi vs bos (may 12)",
+                "market_slugs": [
+                    "KXMLBTEAMTOTAL-26MAY121845PHIBOS-BOS2",
+                    "KXMLBTEAMTOTAL-26MAY121845PHIBOS-BOS3",
+                    "KXMLBTEAMTOTAL-26MAY121845PHIBOS-BOS4",
+                    "KXMLBTEAMTOTAL-26MAY121845PHIBOS-BOS5",
+                    "KXMLBTEAMTOTAL-26MAY121845PHIBOS-BOS6",
+                    "KXMLBTEAMTOTAL-26MAY121845PHIBOS-BOS7",
+                    "KXMLBTEAMTOTAL-26MAY121845PHIBOS-BOS8",
+                    "KXMLBTEAMTOTAL-26MAY121845PHIBOS-PHI2",
+                    "KXMLBTEAMTOTAL-26MAY121845PHIBOS-PHI3",
+                    "KXMLBTEAMTOTAL-26MAY121845PHIBOS-PHI4",
+                    "KXMLBTEAMTOTAL-26MAY121845PHIBOS-PHI5",
+                    "KXMLBTEAMTOTAL-26MAY121845PHIBOS-PHI6",
+                    "KXMLBTEAMTOTAL-26MAY121845PHIBOS-PHI7",
+                    "KXMLBTEAMTOTAL-26MAY121845PHIBOS-PHI8"
+                ]
+            },
+            "KXMLBTEAMTOTAL-26MAY121840WSHCIN": {
+                "title": "washington vs cincinnati: team total",
+                "subtitle": "wsh vs cin (may 12)",
+                "market_slugs": [
+                    "KXMLBTEAMTOTAL-26MAY121840WSHCIN-CIN2",
+                    "KXMLBTEAMTOTAL-26MAY121840WSHCIN-CIN3",
+                    "KXMLBTEAMTOTAL-26MAY121840WSHCIN-CIN4",
+                    "KXMLBTEAMTOTAL-26MAY121840WSHCIN-CIN5",
+                    "KXMLBTEAMTOTAL-26MAY121840WSHCIN-CIN6",
+                    "KXMLBTEAMTOTAL-26MAY121840WSHCIN-CIN7",
+                    "KXMLBTEAMTOTAL-26MAY121840WSHCIN-CIN8",
+                    "KXMLBTEAMTOTAL-26MAY121840WSHCIN-WSH2",
+                    "KXMLBTEAMTOTAL-26MAY121840WSHCIN-WSH3",
+                    "KXMLBTEAMTOTAL-26MAY121840WSHCIN-WSH4",
+                    "KXMLBTEAMTOTAL-26MAY121840WSHCIN-WSH5",
+                    "KXMLBTEAMTOTAL-26MAY121840WSHCIN-WSH6",
+                    "KXMLBTEAMTOTAL-26MAY121840WSHCIN-WSH7",
+                    "KXMLBTEAMTOTAL-26MAY121840WSHCIN-WSH8"
+                ]
+            },
+            "KXMLBTEAMTOTAL-26MAY121840COLPIT": {
+                "title": "colorado vs pittsburgh: team total",
+                "subtitle": "col vs pit (may 12)",
+                "market_slugs": [
+                    "KXMLBTEAMTOTAL-26MAY121840COLPIT-PIT2",
+                    "KXMLBTEAMTOTAL-26MAY121840COLPIT-PIT3",
+                    "KXMLBTEAMTOTAL-26MAY121840COLPIT-PIT4",
+                    "KXMLBTEAMTOTAL-26MAY121840COLPIT-PIT5",
+                    "KXMLBTEAMTOTAL-26MAY121840COLPIT-PIT6",
+                    "KXMLBTEAMTOTAL-26MAY121840COLPIT-PIT7",
+                    "KXMLBTEAMTOTAL-26MAY121840COLPIT-PIT8",
+                    "KXMLBTEAMTOTAL-26MAY121840COLPIT-COL2",
+                    "KXMLBTEAMTOTAL-26MAY121840COLPIT-COL3",
+                    "KXMLBTEAMTOTAL-26MAY121840COLPIT-COL4",
+                    "KXMLBTEAMTOTAL-26MAY121840COLPIT-COL5",
+                    "KXMLBTEAMTOTAL-26MAY121840COLPIT-COL6",
+                    "KXMLBTEAMTOTAL-26MAY121840COLPIT-COL7",
+                    "KXMLBTEAMTOTAL-26MAY121840COLPIT-COL8"
+                ]
+            },
+            "KXMLBTEAMTOTAL-26MAY121835NYYBAL": {
+                "title": "new york y vs baltimore: team total",
+                "subtitle": "nyy vs bal (may 12)",
+                "market_slugs": [
+                    "KXMLBTEAMTOTAL-26MAY121835NYYBAL-BAL2",
+                    "KXMLBTEAMTOTAL-26MAY121835NYYBAL-BAL3",
+                    "KXMLBTEAMTOTAL-26MAY121835NYYBAL-BAL4",
+                    "KXMLBTEAMTOTAL-26MAY121835NYYBAL-BAL5",
+                    "KXMLBTEAMTOTAL-26MAY121835NYYBAL-BAL6",
+                    "KXMLBTEAMTOTAL-26MAY121835NYYBAL-BAL7",
+                    "KXMLBTEAMTOTAL-26MAY121835NYYBAL-BAL8",
+                    "KXMLBTEAMTOTAL-26MAY121835NYYBAL-NYY2",
+                    "KXMLBTEAMTOTAL-26MAY121835NYYBAL-NYY3",
+                    "KXMLBTEAMTOTAL-26MAY121835NYYBAL-NYY4",
+                    "KXMLBTEAMTOTAL-26MAY121835NYYBAL-NYY5",
+                    "KXMLBTEAMTOTAL-26MAY121835NYYBAL-NYY6",
+                    "KXMLBTEAMTOTAL-26MAY121835NYYBAL-NYY7",
+                    "KXMLBTEAMTOTAL-26MAY121835NYYBAL-NYY8"
+                ]
+            },
+            "KXMLBTEAMTOTAL-26MAY121810LAACLE": {
+                "title": "los angeles a vs cleveland: team total",
+                "subtitle": "laa vs cle (may 12)",
+                "market_slugs": [
+                    "KXMLBTEAMTOTAL-26MAY121810LAACLE-CLE2",
+                    "KXMLBTEAMTOTAL-26MAY121810LAACLE-CLE3",
+                    "KXMLBTEAMTOTAL-26MAY121810LAACLE-CLE4",
+                    "KXMLBTEAMTOTAL-26MAY121810LAACLE-CLE5",
+                    "KXMLBTEAMTOTAL-26MAY121810LAACLE-CLE6",
+                    "KXMLBTEAMTOTAL-26MAY121810LAACLE-CLE7",
+                    "KXMLBTEAMTOTAL-26MAY121810LAACLE-CLE8",
+                    "KXMLBTEAMTOTAL-26MAY121810LAACLE-LAA2",
+                    "KXMLBTEAMTOTAL-26MAY121810LAACLE-LAA3",
+                    "KXMLBTEAMTOTAL-26MAY121810LAACLE-LAA4",
+                    "KXMLBTEAMTOTAL-26MAY121810LAACLE-LAA5",
+                    "KXMLBTEAMTOTAL-26MAY121810LAACLE-LAA6",
+                    "KXMLBTEAMTOTAL-26MAY121810LAACLE-LAA7",
+                    "KXMLBTEAMTOTAL-26MAY121810LAACLE-LAA8"
+                ]
+            }
+        },
+        "KXMLBF5TOTAL": {
+            "KXMLBF5TOTAL-26MAY132210SFLAD": {
+                "title": "san francisco vs los angeles d: first 5 innings total",
+                "subtitle": "sf vs lad (may 13)",
+                "market_slugs": [
+                    "KXMLBF5TOTAL-26MAY132210SFLAD-1",
+                    "KXMLBF5TOTAL-26MAY132210SFLAD-2",
+                    "KXMLBF5TOTAL-26MAY132210SFLAD-3",
+                    "KXMLBF5TOTAL-26MAY132210SFLAD-4",
+                    "KXMLBF5TOTAL-26MAY132210SFLAD-5",
+                    "KXMLBF5TOTAL-26MAY132210SFLAD-6",
+                    "KXMLBF5TOTAL-26MAY132210SFLAD-7"
+                ]
+            },
+            "KXMLBF5TOTAL-26MAY132140STLATH": {
+                "title": "st. louis vs a's: first 5 innings total",
+                "subtitle": "stl vs ath (may 13)",
+                "market_slugs": [
+                    "KXMLBF5TOTAL-26MAY132140STLATH-1",
+                    "KXMLBF5TOTAL-26MAY132140STLATH-2",
+                    "KXMLBF5TOTAL-26MAY132140STLATH-3",
+                    "KXMLBF5TOTAL-26MAY132140STLATH-4",
+                    "KXMLBF5TOTAL-26MAY132140STLATH-5",
+                    "KXMLBF5TOTAL-26MAY132140STLATH-6",
+                    "KXMLBF5TOTAL-26MAY132140STLATH-7"
+                ]
+            },
+            "KXMLBF5TOTAL-26MAY132010SEAHOU": {
+                "title": "seattle vs houston: first 5 innings total",
+                "subtitle": "sea vs hou (may 13)",
+                "market_slugs": [
+                    "KXMLBF5TOTAL-26MAY132010SEAHOU-1",
+                    "KXMLBF5TOTAL-26MAY132010SEAHOU-2",
+                    "KXMLBF5TOTAL-26MAY132010SEAHOU-3",
+                    "KXMLBF5TOTAL-26MAY132010SEAHOU-4",
+                    "KXMLBF5TOTAL-26MAY132010SEAHOU-5",
+                    "KXMLBF5TOTAL-26MAY132010SEAHOU-6",
+                    "KXMLBF5TOTAL-26MAY132010SEAHOU-7"
+                ]
+            },
+            "KXMLBF5TOTAL-26MAY132005AZTEX": {
+                "title": "arizona vs texas: first 5 innings total",
+                "subtitle": "az vs tex (may 13)",
+                "market_slugs": [
+                    "KXMLBF5TOTAL-26MAY132005AZTEX-1",
+                    "KXMLBF5TOTAL-26MAY132005AZTEX-2",
+                    "KXMLBF5TOTAL-26MAY132005AZTEX-3",
+                    "KXMLBF5TOTAL-26MAY132005AZTEX-4",
+                    "KXMLBF5TOTAL-26MAY132005AZTEX-5",
+                    "KXMLBF5TOTAL-26MAY132005AZTEX-6",
+                    "KXMLBF5TOTAL-26MAY132005AZTEX-7"
+                ]
+            },
+            "KXMLBF5TOTAL-26MAY131940SDMIL": {
+                "title": "san diego vs milwaukee: first 5 innings total",
+                "subtitle": "sd vs mil (may 13)",
+                "market_slugs": [
+                    "KXMLBF5TOTAL-26MAY131940SDMIL-1",
+                    "KXMLBF5TOTAL-26MAY131940SDMIL-2",
+                    "KXMLBF5TOTAL-26MAY131940SDMIL-3",
+                    "KXMLBF5TOTAL-26MAY131940SDMIL-4",
+                    "KXMLBF5TOTAL-26MAY131940SDMIL-5",
+                    "KXMLBF5TOTAL-26MAY131940SDMIL-6",
+                    "KXMLBF5TOTAL-26MAY131940SDMIL-7"
+                ]
+            },
+            "KXMLBF5TOTAL-26MAY131940MIAMIN": {
+                "title": "miami vs minnesota: first 5 innings total",
+                "subtitle": "mia vs min (may 13)",
+                "market_slugs": [
+                    "KXMLBF5TOTAL-26MAY131940MIAMIN-1",
+                    "KXMLBF5TOTAL-26MAY131940MIAMIN-2",
+                    "KXMLBF5TOTAL-26MAY131940MIAMIN-3",
+                    "KXMLBF5TOTAL-26MAY131940MIAMIN-4",
+                    "KXMLBF5TOTAL-26MAY131940MIAMIN-5",
+                    "KXMLBF5TOTAL-26MAY131940MIAMIN-6",
+                    "KXMLBF5TOTAL-26MAY131940MIAMIN-7"
+                ]
+            },
+            "KXMLBF5TOTAL-26MAY131940KCCWS": {
+                "title": "kansas city vs chicago ws: first 5 innings total",
+                "subtitle": "kc vs cws (may 13)",
+                "market_slugs": [
+                    "KXMLBF5TOTAL-26MAY131940KCCWS-1",
+                    "KXMLBF5TOTAL-26MAY131940KCCWS-2",
+                    "KXMLBF5TOTAL-26MAY131940KCCWS-3",
+                    "KXMLBF5TOTAL-26MAY131940KCCWS-4",
+                    "KXMLBF5TOTAL-26MAY131940KCCWS-5",
+                    "KXMLBF5TOTAL-26MAY131940KCCWS-6",
+                    "KXMLBF5TOTAL-26MAY131940KCCWS-7"
+                ]
+            },
+            "KXMLBF5TOTAL-26MAY131915CHCATL": {
+                "title": "chicago c vs atlanta: first 5 innings total",
+                "subtitle": "chc vs atl (may 13)",
+                "market_slugs": [
+                    "KXMLBF5TOTAL-26MAY131915CHCATL-1",
+                    "KXMLBF5TOTAL-26MAY131915CHCATL-2",
+                    "KXMLBF5TOTAL-26MAY131915CHCATL-3",
+                    "KXMLBF5TOTAL-26MAY131915CHCATL-4",
+                    "KXMLBF5TOTAL-26MAY131915CHCATL-5",
+                    "KXMLBF5TOTAL-26MAY131915CHCATL-6",
+                    "KXMLBF5TOTAL-26MAY131915CHCATL-7"
+                ]
+            },
+            "KXMLBF5TOTAL-26MAY131907TBTOR": {
+                "title": "tampa bay vs toronto: first 5 innings total",
+                "subtitle": "tb vs tor (may 13)",
+                "market_slugs": [
+                    "KXMLBF5TOTAL-26MAY131907TBTOR-1",
+                    "KXMLBF5TOTAL-26MAY131907TBTOR-2",
+                    "KXMLBF5TOTAL-26MAY131907TBTOR-3",
+                    "KXMLBF5TOTAL-26MAY131907TBTOR-4",
+                    "KXMLBF5TOTAL-26MAY131907TBTOR-5",
+                    "KXMLBF5TOTAL-26MAY131907TBTOR-6",
+                    "KXMLBF5TOTAL-26MAY131907TBTOR-7"
+                ]
+            },
+            "KXMLBF5TOTAL-26MAY131845PHIBOS": {
+                "title": "philadelphia vs boston: first 5 innings total",
+                "subtitle": "phi vs bos (may 13)",
+                "market_slugs": [
+                    "KXMLBF5TOTAL-26MAY131845PHIBOS-1",
+                    "KXMLBF5TOTAL-26MAY131845PHIBOS-2",
+                    "KXMLBF5TOTAL-26MAY131845PHIBOS-3",
+                    "KXMLBF5TOTAL-26MAY131845PHIBOS-4",
+                    "KXMLBF5TOTAL-26MAY131845PHIBOS-5",
+                    "KXMLBF5TOTAL-26MAY131845PHIBOS-6",
+                    "KXMLBF5TOTAL-26MAY131845PHIBOS-7"
+                ]
+            },
+            "KXMLBF5TOTAL-26MAY131840WSHCIN": {
+                "title": "washington vs cincinnati: first 5 innings total",
+                "subtitle": "wsh vs cin (may 13)",
+                "market_slugs": [
+                    "KXMLBF5TOTAL-26MAY131840WSHCIN-1",
+                    "KXMLBF5TOTAL-26MAY131840WSHCIN-2",
+                    "KXMLBF5TOTAL-26MAY131840WSHCIN-3",
+                    "KXMLBF5TOTAL-26MAY131840WSHCIN-4",
+                    "KXMLBF5TOTAL-26MAY131840WSHCIN-5",
+                    "KXMLBF5TOTAL-26MAY131840WSHCIN-6",
+                    "KXMLBF5TOTAL-26MAY131840WSHCIN-7"
+                ]
+            },
+            "KXMLBF5TOTAL-26MAY131840COLPIT": {
+                "title": "colorado vs pittsburgh: first 5 innings total",
+                "subtitle": "col vs pit (may 13)",
+                "market_slugs": [
+                    "KXMLBF5TOTAL-26MAY131840COLPIT-1",
+                    "KXMLBF5TOTAL-26MAY131840COLPIT-2",
+                    "KXMLBF5TOTAL-26MAY131840COLPIT-3",
+                    "KXMLBF5TOTAL-26MAY131840COLPIT-4",
+                    "KXMLBF5TOTAL-26MAY131840COLPIT-5",
+                    "KXMLBF5TOTAL-26MAY131840COLPIT-6",
+                    "KXMLBF5TOTAL-26MAY131840COLPIT-7"
+                ]
+            },
+            "KXMLBF5TOTAL-26MAY131310LAACLE": {
+                "title": "los angeles a vs cleveland: first 5 innings total",
+                "subtitle": "laa vs cle (may 13)",
+                "market_slugs": [
+                    "KXMLBF5TOTAL-26MAY131310LAACLE-1",
+                    "KXMLBF5TOTAL-26MAY131310LAACLE-2",
+                    "KXMLBF5TOTAL-26MAY131310LAACLE-3",
+                    "KXMLBF5TOTAL-26MAY131310LAACLE-4",
+                    "KXMLBF5TOTAL-26MAY131310LAACLE-5",
+                    "KXMLBF5TOTAL-26MAY131310LAACLE-6",
+                    "KXMLBF5TOTAL-26MAY131310LAACLE-7"
+                ]
+            },
+            "KXMLBF5TOTAL-26MAY122210SFLAD": {
+                "title": "san francisco vs los angeles d: first 5 innings total",
+                "subtitle": "sf vs lad (may 12)",
+                "market_slugs": [
+                    "KXMLBF5TOTAL-26MAY122210SFLAD-1",
+                    "KXMLBF5TOTAL-26MAY122210SFLAD-2",
+                    "KXMLBF5TOTAL-26MAY122210SFLAD-3",
+                    "KXMLBF5TOTAL-26MAY122210SFLAD-4",
+                    "KXMLBF5TOTAL-26MAY122210SFLAD-5",
+                    "KXMLBF5TOTAL-26MAY122210SFLAD-6",
+                    "KXMLBF5TOTAL-26MAY122210SFLAD-7"
+                ]
+            },
+            "KXMLBF5TOTAL-26MAY122140STLATH": {
+                "title": "st. louis vs a's: first 5 innings total",
+                "subtitle": "stl vs ath (may 12)",
+                "market_slugs": [
+                    "KXMLBF5TOTAL-26MAY122140STLATH-1",
+                    "KXMLBF5TOTAL-26MAY122140STLATH-2",
+                    "KXMLBF5TOTAL-26MAY122140STLATH-3",
+                    "KXMLBF5TOTAL-26MAY122140STLATH-4",
+                    "KXMLBF5TOTAL-26MAY122140STLATH-5",
+                    "KXMLBF5TOTAL-26MAY122140STLATH-6",
+                    "KXMLBF5TOTAL-26MAY122140STLATH-7"
+                ]
+            },
+            "KXMLBF5TOTAL-26MAY122010SEAHOU": {
+                "title": "seattle vs houston: first 5 innings total",
+                "subtitle": "sea vs hou (may 12)",
+                "market_slugs": [
+                    "KXMLBF5TOTAL-26MAY122010SEAHOU-1",
+                    "KXMLBF5TOTAL-26MAY122010SEAHOU-2",
+                    "KXMLBF5TOTAL-26MAY122010SEAHOU-3",
+                    "KXMLBF5TOTAL-26MAY122010SEAHOU-4",
+                    "KXMLBF5TOTAL-26MAY122010SEAHOU-5",
+                    "KXMLBF5TOTAL-26MAY122010SEAHOU-6",
+                    "KXMLBF5TOTAL-26MAY122010SEAHOU-7"
+                ]
+            },
+            "KXMLBF5TOTAL-26MAY122005AZTEX": {
+                "title": "arizona vs texas: first 5 innings total",
+                "subtitle": "az vs tex (may 12)",
+                "market_slugs": [
+                    "KXMLBF5TOTAL-26MAY122005AZTEX-1",
+                    "KXMLBF5TOTAL-26MAY122005AZTEX-2",
+                    "KXMLBF5TOTAL-26MAY122005AZTEX-3",
+                    "KXMLBF5TOTAL-26MAY122005AZTEX-4",
+                    "KXMLBF5TOTAL-26MAY122005AZTEX-5",
+                    "KXMLBF5TOTAL-26MAY122005AZTEX-6",
+                    "KXMLBF5TOTAL-26MAY122005AZTEX-7"
+                ]
+            },
+            "KXMLBF5TOTAL-26MAY121940SDMIL": {
+                "title": "san diego vs milwaukee: first 5 innings total",
+                "subtitle": "sd vs mil (may 12)",
+                "market_slugs": [
+                    "KXMLBF5TOTAL-26MAY121940SDMIL-1",
+                    "KXMLBF5TOTAL-26MAY121940SDMIL-2",
+                    "KXMLBF5TOTAL-26MAY121940SDMIL-3",
+                    "KXMLBF5TOTAL-26MAY121940SDMIL-4",
+                    "KXMLBF5TOTAL-26MAY121940SDMIL-5",
+                    "KXMLBF5TOTAL-26MAY121940SDMIL-6",
+                    "KXMLBF5TOTAL-26MAY121940SDMIL-7"
+                ]
+            },
+            "KXMLBF5TOTAL-26MAY121940MIAMIN": {
+                "title": "miami vs minnesota: first 5 innings total",
+                "subtitle": "mia vs min (may 12)",
+                "market_slugs": [
+                    "KXMLBF5TOTAL-26MAY121940MIAMIN-1",
+                    "KXMLBF5TOTAL-26MAY121940MIAMIN-2",
+                    "KXMLBF5TOTAL-26MAY121940MIAMIN-3",
+                    "KXMLBF5TOTAL-26MAY121940MIAMIN-4",
+                    "KXMLBF5TOTAL-26MAY121940MIAMIN-5",
+                    "KXMLBF5TOTAL-26MAY121940MIAMIN-6",
+                    "KXMLBF5TOTAL-26MAY121940MIAMIN-7"
+                ]
+            },
+            "KXMLBF5TOTAL-26MAY121940KCCWS": {
+                "title": "kansas city vs chicago ws: first 5 innings total",
+                "subtitle": "kc vs cws (may 12)",
+                "market_slugs": [
+                    "KXMLBF5TOTAL-26MAY121940KCCWS-1",
+                    "KXMLBF5TOTAL-26MAY121940KCCWS-2",
+                    "KXMLBF5TOTAL-26MAY121940KCCWS-3",
+                    "KXMLBF5TOTAL-26MAY121940KCCWS-4",
+                    "KXMLBF5TOTAL-26MAY121940KCCWS-5",
+                    "KXMLBF5TOTAL-26MAY121940KCCWS-6",
+                    "KXMLBF5TOTAL-26MAY121940KCCWS-7"
+                ]
+            },
+            "KXMLBF5TOTAL-26MAY121915CHCATL": {
+                "title": "chicago c vs atlanta: first 5 innings total",
+                "subtitle": "chc vs atl (may 12)",
+                "market_slugs": [
+                    "KXMLBF5TOTAL-26MAY121915CHCATL-1",
+                    "KXMLBF5TOTAL-26MAY121915CHCATL-2",
+                    "KXMLBF5TOTAL-26MAY121915CHCATL-3",
+                    "KXMLBF5TOTAL-26MAY121915CHCATL-4",
+                    "KXMLBF5TOTAL-26MAY121915CHCATL-5",
+                    "KXMLBF5TOTAL-26MAY121915CHCATL-6",
+                    "KXMLBF5TOTAL-26MAY121915CHCATL-7"
+                ]
+            },
+            "KXMLBF5TOTAL-26MAY121910DETNYM": {
+                "title": "detroit vs new york m: first 5 innings total",
+                "subtitle": "det vs nym (may 12)",
+                "market_slugs": [
+                    "KXMLBF5TOTAL-26MAY121910DETNYM-1",
+                    "KXMLBF5TOTAL-26MAY121910DETNYM-2",
+                    "KXMLBF5TOTAL-26MAY121910DETNYM-3",
+                    "KXMLBF5TOTAL-26MAY121910DETNYM-4",
+                    "KXMLBF5TOTAL-26MAY121910DETNYM-5",
+                    "KXMLBF5TOTAL-26MAY121910DETNYM-6",
+                    "KXMLBF5TOTAL-26MAY121910DETNYM-7"
+                ]
+            },
+            "KXMLBF5TOTAL-26MAY121907TBTOR": {
+                "title": "tampa bay vs toronto: first 5 innings total",
+                "subtitle": "tb vs tor (may 12)",
+                "market_slugs": [
+                    "KXMLBF5TOTAL-26MAY121907TBTOR-1",
+                    "KXMLBF5TOTAL-26MAY121907TBTOR-2",
+                    "KXMLBF5TOTAL-26MAY121907TBTOR-3",
+                    "KXMLBF5TOTAL-26MAY121907TBTOR-4",
+                    "KXMLBF5TOTAL-26MAY121907TBTOR-5",
+                    "KXMLBF5TOTAL-26MAY121907TBTOR-6",
+                    "KXMLBF5TOTAL-26MAY121907TBTOR-7"
+                ]
+            },
+            "KXMLBF5TOTAL-26MAY121845PHIBOS": {
+                "title": "philadelphia vs boston: first 5 innings total",
+                "subtitle": "phi vs bos (may 12)",
+                "market_slugs": [
+                    "KXMLBF5TOTAL-26MAY121845PHIBOS-1",
+                    "KXMLBF5TOTAL-26MAY121845PHIBOS-2",
+                    "KXMLBF5TOTAL-26MAY121845PHIBOS-3",
+                    "KXMLBF5TOTAL-26MAY121845PHIBOS-4",
+                    "KXMLBF5TOTAL-26MAY121845PHIBOS-5",
+                    "KXMLBF5TOTAL-26MAY121845PHIBOS-6",
+                    "KXMLBF5TOTAL-26MAY121845PHIBOS-7"
+                ]
+            },
+            "KXMLBF5TOTAL-26MAY121840WSHCIN": {
+                "title": "washington vs cincinnati: first 5 innings total",
+                "subtitle": "wsh vs cin (may 12)",
+                "market_slugs": [
+                    "KXMLBF5TOTAL-26MAY121840WSHCIN-1",
+                    "KXMLBF5TOTAL-26MAY121840WSHCIN-2",
+                    "KXMLBF5TOTAL-26MAY121840WSHCIN-3",
+                    "KXMLBF5TOTAL-26MAY121840WSHCIN-4",
+                    "KXMLBF5TOTAL-26MAY121840WSHCIN-5",
+                    "KXMLBF5TOTAL-26MAY121840WSHCIN-6",
+                    "KXMLBF5TOTAL-26MAY121840WSHCIN-7"
+                ]
+            },
+            "KXMLBF5TOTAL-26MAY121840COLPIT": {
+                "title": "colorado vs pittsburgh: first 5 innings total",
+                "subtitle": "col vs pit (may 12)",
+                "market_slugs": [
+                    "KXMLBF5TOTAL-26MAY121840COLPIT-1",
+                    "KXMLBF5TOTAL-26MAY121840COLPIT-2",
+                    "KXMLBF5TOTAL-26MAY121840COLPIT-3",
+                    "KXMLBF5TOTAL-26MAY121840COLPIT-4",
+                    "KXMLBF5TOTAL-26MAY121840COLPIT-5",
+                    "KXMLBF5TOTAL-26MAY121840COLPIT-6",
+                    "KXMLBF5TOTAL-26MAY121840COLPIT-7"
+                ]
+            },
+            "KXMLBF5TOTAL-26MAY121835NYYBAL": {
+                "title": "new york y vs baltimore: first 5 innings total",
+                "subtitle": "nyy vs bal (may 12)",
+                "market_slugs": [
+                    "KXMLBF5TOTAL-26MAY121835NYYBAL-1",
+                    "KXMLBF5TOTAL-26MAY121835NYYBAL-2",
+                    "KXMLBF5TOTAL-26MAY121835NYYBAL-3",
+                    "KXMLBF5TOTAL-26MAY121835NYYBAL-4",
+                    "KXMLBF5TOTAL-26MAY121835NYYBAL-5",
+                    "KXMLBF5TOTAL-26MAY121835NYYBAL-6",
+                    "KXMLBF5TOTAL-26MAY121835NYYBAL-7"
+                ]
+            },
+            "KXMLBF5TOTAL-26MAY121810LAACLE": {
+                "title": "los angeles a vs cleveland: first 5 innings total",
+                "subtitle": "laa vs cle (may 12)",
+                "market_slugs": [
+                    "KXMLBF5TOTAL-26MAY121810LAACLE-1",
+                    "KXMLBF5TOTAL-26MAY121810LAACLE-2",
+                    "KXMLBF5TOTAL-26MAY121810LAACLE-3",
+                    "KXMLBF5TOTAL-26MAY121810LAACLE-4",
+                    "KXMLBF5TOTAL-26MAY121810LAACLE-5",
+                    "KXMLBF5TOTAL-26MAY121810LAACLE-6",
+                    "KXMLBF5TOTAL-26MAY121810LAACLE-7"
+                ]
+            }
+        },
+        "KXARGPREMDIVTOTAL": {
+            "KXARGPREMDIVTOTAL-26MAY13RIVGLP": {
+                "title": "river plate vs gimnasia la plata: total goals",
+                "subtitle": "riv vs glp (may 13)",
+                "market_slugs": [
+                    "KXARGPREMDIVTOTAL-26MAY13RIVGLP-1",
+                    "KXARGPREMDIVTOTAL-26MAY13RIVGLP-2",
+                    "KXARGPREMDIVTOTAL-26MAY13RIVGLP-3",
+                    "KXARGPREMDIVTOTAL-26MAY13RIVGLP-4"
+                ]
+            },
+            "KXARGPREMDIVTOTAL-26MAY13CARCRAC": {
+                "title": "rosario vs racing avellaneda: total goals",
+                "subtitle": "carc vs rac (may 13)",
+                "market_slugs": [
+                    "KXARGPREMDIVTOTAL-26MAY13CARCRAC-1",
+                    "KXARGPREMDIVTOTAL-26MAY13CARCRAC-2",
+                    "KXARGPREMDIVTOTAL-26MAY13CARCRAC-3",
+                    "KXARGPREMDIVTOTAL-26MAY13CARCRAC-4"
+                ]
+            },
+            "KXARGPREMDIVTOTAL-26MAY12ARGHUR": {
+                "title": "argentinos juniors vs huracan: total goals",
+                "subtitle": "arg vs hur (may 12)",
+                "market_slugs": [
+                    "KXARGPREMDIVTOTAL-26MAY12ARGHUR-1",
+                    "KXARGPREMDIVTOTAL-26MAY12ARGHUR-2",
+                    "KXARGPREMDIVTOTAL-26MAY12ARGHUR-3",
+                    "KXARGPREMDIVTOTAL-26MAY12ARGHUR-4"
+                ]
+            },
+            "KXARGPREMDIVTOTAL-26MAY12CABUNI": {
+                "title": "belgrano de cordoba vs union santa fe: total goals",
+                "subtitle": "cab vs uni (may 12)",
+                "market_slugs": [
+                    "KXARGPREMDIVTOTAL-26MAY12CABUNI-1",
+                    "KXARGPREMDIVTOTAL-26MAY12CABUNI-2",
+                    "KXARGPREMDIVTOTAL-26MAY12CABUNI-3",
+                    "KXARGPREMDIVTOTAL-26MAY12CABUNI-4"
+                ]
+            }
+        },
+        "KXNBA1HTOTAL": {
+            "KXNBA1HTOTAL-26MAY13CLEDET": {
+                "title": "cleveland vs detroit: first half total",
+                "subtitle": "cle vs det (may 13)",
+                "market_slugs": [
+                    "KXNBA1HTOTAL-26MAY13CLEDET-92",
+                    "KXNBA1HTOTAL-26MAY13CLEDET-95",
+                    "KXNBA1HTOTAL-26MAY13CLEDET-98",
+                    "KXNBA1HTOTAL-26MAY13CLEDET-101",
+                    "KXNBA1HTOTAL-26MAY13CLEDET-104",
+                    "KXNBA1HTOTAL-26MAY13CLEDET-107",
+                    "KXNBA1HTOTAL-26MAY13CLEDET-110",
+                    "KXNBA1HTOTAL-26MAY13CLEDET-113",
+                    "KXNBA1HTOTAL-26MAY13CLEDET-116"
+                ]
+            },
+            "KXNBA1HTOTAL-26MAY12MINSAS": {
+                "title": "minnesota vs san antonio: first half total",
+                "subtitle": "min vs sas (may 12)",
+                "market_slugs": [
+                    "KXNBA1HTOTAL-26MAY12MINSAS-94",
+                    "KXNBA1HTOTAL-26MAY12MINSAS-97",
+                    "KXNBA1HTOTAL-26MAY12MINSAS-100",
+                    "KXNBA1HTOTAL-26MAY12MINSAS-103",
+                    "KXNBA1HTOTAL-26MAY12MINSAS-106",
+                    "KXNBA1HTOTAL-26MAY12MINSAS-109",
+                    "KXNBA1HTOTAL-26MAY12MINSAS-112",
+                    "KXNBA1HTOTAL-26MAY12MINSAS-115",
+                    "KXNBA1HTOTAL-26MAY12MINSAS-118"
+                ]
+            }
+        },
+        "KXCS2TOTALMAPS": {
+            "KXCS2TOTALMAPS-26MAY131800PLSPAINA": {
+                "title": "players vs. pain academy: total maps",
+                "subtitle": "total maps: pls vs. paina (may 13)",
+                "market_slugs": [
+                    "KXCS2TOTALMAPS-26MAY131800PLSPAINA-3"
+                ]
+            },
+            "KXCS2TOTALMAPS-26MAY131500MIBRACRA": {
+                "title": "mibr academy vs. crashers: total maps",
+                "subtitle": "total maps: mibra vs. cra (may 13)",
+                "market_slugs": [
+                    "KXCS2TOTALMAPS-26MAY131500MIBRACRA-3"
+                ]
+            },
+            "KXCS2TOTALMAPS-26MAY131300TNCAPOGEE": {
+                "title": "tnc vs. apogee esports: total maps",
+                "subtitle": "total maps: tnc vs. apogee (may 13)",
+                "market_slugs": [
+                    "KXCS2TOTALMAPS-26MAY131300TNCAPOGEE-3"
+                ]
+            },
+            "KXCS2TOTALMAPS-26MAY131200REDVSC": {
+                "title": "red feet vs. vasco esports: total maps",
+                "subtitle": "total maps: red vs. vsc (may 13)",
+                "market_slugs": [
+                    "KXCS2TOTALMAPS-26MAY131200REDVSC-3"
+                ]
+            },
+            "KXCS2TOTALMAPS-26MAY131000TDKKOL": {
+                "title": "tdk vs. kolesie: total maps",
+                "subtitle": "total maps: tdk vs. kol (may 13)",
+                "market_slugs": [
+                    "KXCS2TOTALMAPS-26MAY131000TDKKOL-3"
+                ]
+            },
+            "KXCS2TOTALMAPS-26MAY130900VEXMW": {
+                "title": "vexa vs. metanoia wolves: total maps",
+                "subtitle": "total maps: vex vs. mw (may 13)",
+                "market_slugs": [
+                    "KXCS2TOTALMAPS-26MAY130900VEXMW-3"
+                ]
+            },
+            "KXCS2TOTALMAPS-26MAY130700LAV100T": {
+                "title": "lavked vs. 100 thieves: total maps",
+                "subtitle": "total maps: lav vs. 100t (may 13)",
+                "market_slugs": [
+                    "KXCS2TOTALMAPS-26MAY130700LAV100T-3"
+                ]
+            },
+            "KXCS2TOTALMAPS-26MAY130700AURMGLZ": {
+                "title": "aurora gaming vs. the mongolz: total maps",
+                "subtitle": "total maps: aur vs. mglz (may 13)",
+                "market_slugs": [
+                    "KXCS2TOTALMAPS-26MAY130700AURMGLZ-3"
+                ]
+            },
+            "KXCS2TOTALMAPS-26MAY130400G2MNTE": {
+                "title": "g2 vs. monte: total maps",
+                "subtitle": "total maps: g2 vs. mnte (may 13)",
+                "market_slugs": [
+                    "KXCS2TOTALMAPS-26MAY130400G2MNTE-3"
+                ]
+            },
+            "KXCS2TOTALMAPS-26MAY130400EXRNEMI": {
+                "title": "ex-ruby vs. nemiga: total maps",
+                "subtitle": "total maps: exr vs. nemi (may 13)",
+                "market_slugs": [
+                    "KXCS2TOTALMAPS-26MAY130400EXRNEMI-3"
+                ]
+            },
+            "KXCS2TOTALMAPS-26MAY130100MGCM8": {
+                "title": "magic vs. gentle mates: total maps",
+                "subtitle": "total maps: mgc vs. m8 (may 13)",
+                "market_slugs": [
+                    "KXCS2TOTALMAPS-26MAY130100MGCM8-3"
+                ]
+            },
+            "KXCS2TOTALMAPS-26MAY121900M80TL": {
+                "title": "m80 vs. liquid: total maps",
+                "subtitle": "total maps: m80 vs. tl (may 12)",
+                "market_slugs": [
+                    "KXCS2TOTALMAPS-26MAY121900M80TL-3"
+                ]
+            },
+            "KXCS2TOTALMAPS-26MAY121900LGCAST": {
+                "title": "legacy vs. astralis: total maps",
+                "subtitle": "total maps: lgc vs. ast (may 12)",
+                "market_slugs": [
+                    "KXCS2TOTALMAPS-26MAY121900LGCAST-3"
+                ]
+            },
+            "KXCS2TOTALMAPS-26MAY121800BKR2": {
+                "title": "blitzkrieg vs. r2 esports club: total maps",
+                "subtitle": "total maps: bk vs. r2 (may 12)",
+                "market_slugs": [
+                    "KXCS2TOTALMAPS-26MAY121800BKR2-3"
+                ]
+            },
+            "KXCS2TOTALMAPS-26MAY121630SINPSSNUA": {
+                "title": "sinners vs. passion ua: total maps",
+                "subtitle": "total maps: sin vs. pssnua (may 12)",
+                "market_slugs": [
+                    "KXCS2TOTALMAPS-26MAY121630SINPSSNUA-3"
+                ]
+            },
+            "KXCS2TOTALMAPS-26MAY121630GLNAVI": {
+                "title": "gamerlegion vs. natus vincere: total maps",
+                "subtitle": "total maps: gl vs. navi (may 12)",
+                "market_slugs": [
+                    "KXCS2TOTALMAPS-26MAY121630GLNAVI-3"
+                ]
+            },
+            "KXCS2TOTALMAPS-26MAY111000HAVUFAV": {
+                "title": "havu vs. favbet: total maps",
+                "subtitle": "total maps: havu vs. fav (may 11)",
+                "market_slugs": [
+                    "KXCS2TOTALMAPS-26MAY111000HAVUFAV-3"
+                ]
+            },
+            "KXCS2TOTALMAPS-26MAY050400BBPMOUZN": {
+                "title": "bebop vs. mouz nxt: total maps",
+                "subtitle": "total maps: bbp vs. mouzn (may 5)",
+                "market_slugs": [
+                    "KXCS2TOTALMAPS-26MAY050400BBPMOUZN-3"
+                ]
+            },
+            "KXCS2TOTALMAPS-26MAY040400BBPFAV": {
+                "title": "bebop vs. favbet: total maps",
+                "subtitle": "total maps: bbp vs. fav (may 4)",
+                "market_slugs": [
+                    "KXCS2TOTALMAPS-26MAY040400BBPFAV-3"
+                ]
+            },
+            "KXCS2TOTALMAPS-26MAY031630ZOMBM80": {
+                "title": "zomblers vs. m80: total maps",
+                "subtitle": "total maps: zomb vs. m80 (may 3)",
+                "market_slugs": [
+                    "KXCS2TOTALMAPS-26MAY031630ZOMBM80-3"
+                ]
+            },
+            "KXCS2TOTALMAPS-26MAY031630TAWC": {
+                "title": "team aether vs. wildcard: total maps",
+                "subtitle": "total maps: ta vs. wc (may 3)",
+                "market_slugs": [
+                    "KXCS2TOTALMAPS-26MAY031630TAWC-3"
+                ]
+            },
+            "KXCS2TOTALMAPS-26MAY031500UNOYAW": {
+                "title": "uno mille vs. yawara esports: total maps",
+                "subtitle": "total maps: uno vs. yaw (may 3)",
+                "market_slugs": [
+                    "KXCS2TOTALMAPS-26MAY031500UNOYAW-3"
+                ]
+            },
+            "KXCS2TOTALMAPS-26MAY031000G1OXUJI": {
+                "title": "genone vs. oxuji esports: total maps",
+                "subtitle": "total maps: g1 vs. oxuji (may 3)",
+                "market_slugs": [
+                    "KXCS2TOTALMAPS-26MAY031000G1OXUJI-3"
+                ]
+            },
+            "KXCS2TOTALMAPS-26MAY030900CRAR2": {
+                "title": "crashers vs. r2 esports club: total maps",
+                "subtitle": "total maps: cra vs. r2 (may 3)",
+                "market_slugs": [
+                    "KXCS2TOTALMAPS-26MAY030900CRAR2-3"
+                ]
+            },
+            "KXCS2TOTALMAPS-26MAY022030INCM80": {
+                "title": "incognito vs. m80: total maps",
+                "subtitle": "total maps: inc vs. m80 (may 2)",
+                "market_slugs": [
+                    "KXCS2TOTALMAPS-26MAY022030INCM80-3"
+                ]
+            },
+            "KXCS2TOTALMAPS-26MAY020900GHDAM": {
+                "title": "game hunters vs. damajuana: total maps",
+                "subtitle": "total maps: gh vs. dam (may 2)",
+                "market_slugs": [
+                    "KXCS2TOTALMAPS-26MAY020900GHDAM-3"
+                ]
+            },
+            "KXCS2TOTALMAPS-26MAY011730FARWC": {
+                "title": "farmville vs. wildcard: total maps",
+                "subtitle": "total maps: far vs. wc (may 1)",
+                "market_slugs": [
+                    "KXCS2TOTALMAPS-26MAY011730FARWC-3"
+                ]
+            },
+            "KXCS2TOTALMAPS-26MAY011300SPARTANEM": {
+                "title": "sparta vs. team nemesis: total maps",
+                "subtitle": "total maps: sparta vs. nem (may 1)",
+                "market_slugs": [
+                    "KXCS2TOTALMAPS-26MAY011300SPARTANEM-3"
+                ]
+            }
+        },
+        "KXCOPPAITALIATOTAL": {
+            "KXCOPPAITALIATOTAL-26MAY13LAZINT": {
+                "title": "lazio vs inter: total goals",
+                "subtitle": "laz vs int (may 13)",
+                "market_slugs": [
+                    "KXCOPPAITALIATOTAL-26MAY13LAZINT-1",
+                    "KXCOPPAITALIATOTAL-26MAY13LAZINT-2",
+                    "KXCOPPAITALIATOTAL-26MAY13LAZINT-3",
+                    "KXCOPPAITALIATOTAL-26MAY13LAZINT-4"
+                ]
+            }
+        },
+        "KXNBATOTAL": {
+            "KXNBATOTAL-26MAY13CLEDET": {
+                "title": "game 5: cleveland at detroit: total points",
+                "subtitle": "cle at det (may 13)",
+                "market_slugs": [
+                    "KXNBATOTAL-26MAY13CLEDET-197",
+                    "KXNBATOTAL-26MAY13CLEDET-200",
+                    "KXNBATOTAL-26MAY13CLEDET-203",
+                    "KXNBATOTAL-26MAY13CLEDET-206",
+                    "KXNBATOTAL-26MAY13CLEDET-209",
+                    "KXNBATOTAL-26MAY13CLEDET-212",
+                    "KXNBATOTAL-26MAY13CLEDET-215",
+                    "KXNBATOTAL-26MAY13CLEDET-218",
+                    "KXNBATOTAL-26MAY13CLEDET-221",
+                    "KXNBATOTAL-26MAY13CLEDET-224",
+                    "KXNBATOTAL-26MAY13CLEDET-227"
+                ]
+            },
+            "KXNBATOTAL-26MAY12MINSAS": {
+                "title": "game 5: minnesota at san antonio: total points",
+                "subtitle": "min at sas (may 12)",
+                "market_slugs": [
+                    "KXNBATOTAL-26MAY12MINSAS-201",
+                    "KXNBATOTAL-26MAY12MINSAS-204",
+                    "KXNBATOTAL-26MAY12MINSAS-207",
+                    "KXNBATOTAL-26MAY12MINSAS-210",
+                    "KXNBATOTAL-26MAY12MINSAS-213",
+                    "KXNBATOTAL-26MAY12MINSAS-216",
+                    "KXNBATOTAL-26MAY12MINSAS-219",
+                    "KXNBATOTAL-26MAY12MINSAS-222",
+                    "KXNBATOTAL-26MAY12MINSAS-225",
+                    "KXNBATOTAL-26MAY12MINSAS-228",
+                    "KXNBATOTAL-26MAY12MINSAS-231"
+                ]
+            }
+        },
+        "KXNBATEAMTOTAL": {
+            "KXNBATEAMTOTAL-26MAY13CLEDET": {
+                "title": "game 5: cleveland at detroit: team totals",
+                "subtitle": "cle vs det (may 13)",
+                "market_slugs": [
+                    "KXNBATEAMTOTAL-26MAY13CLEDET-DET96",
+                    "KXNBATEAMTOTAL-26MAY13CLEDET-DET99",
+                    "KXNBATEAMTOTAL-26MAY13CLEDET-DET102",
+                    "KXNBATEAMTOTAL-26MAY13CLEDET-DET105",
+                    "KXNBATEAMTOTAL-26MAY13CLEDET-DET108",
+                    "KXNBATEAMTOTAL-26MAY13CLEDET-DET111",
+                    "KXNBATEAMTOTAL-26MAY13CLEDET-DET114",
+                    "KXNBATEAMTOTAL-26MAY13CLEDET-DET117",
+                    "KXNBATEAMTOTAL-26MAY13CLEDET-DET120",
+                    "KXNBATEAMTOTAL-26MAY13CLEDET-CLE93",
+                    "KXNBATEAMTOTAL-26MAY13CLEDET-CLE96",
+                    "KXNBATEAMTOTAL-26MAY13CLEDET-CLE99",
+                    "KXNBATEAMTOTAL-26MAY13CLEDET-CLE102",
+                    "KXNBATEAMTOTAL-26MAY13CLEDET-CLE105",
+                    "KXNBATEAMTOTAL-26MAY13CLEDET-CLE108",
+                    "KXNBATEAMTOTAL-26MAY13CLEDET-CLE111",
+                    "KXNBATEAMTOTAL-26MAY13CLEDET-CLE114",
+                    "KXNBATEAMTOTAL-26MAY13CLEDET-CLE117"
+                ]
+            },
+            "KXNBATEAMTOTAL-26MAY12MINSAS": {
+                "title": "game 5: minnesota at san antonio: team totals",
+                "subtitle": "min vs sas (may 12)",
+                "market_slugs": [
+                    "KXNBATEAMTOTAL-26MAY12MINSAS-SAS102",
+                    "KXNBATEAMTOTAL-26MAY12MINSAS-SAS105",
+                    "KXNBATEAMTOTAL-26MAY12MINSAS-SAS108",
+                    "KXNBATEAMTOTAL-26MAY12MINSAS-SAS111",
+                    "KXNBATEAMTOTAL-26MAY12MINSAS-SAS114",
+                    "KXNBATEAMTOTAL-26MAY12MINSAS-SAS117",
+                    "KXNBATEAMTOTAL-26MAY12MINSAS-SAS120",
+                    "KXNBATEAMTOTAL-26MAY12MINSAS-SAS123",
+                    "KXNBATEAMTOTAL-26MAY12MINSAS-SAS126",
+                    "KXNBATEAMTOTAL-26MAY12MINSAS-MIN90",
+                    "KXNBATEAMTOTAL-26MAY12MINSAS-MIN93",
+                    "KXNBATEAMTOTAL-26MAY12MINSAS-MIN96",
+                    "KXNBATEAMTOTAL-26MAY12MINSAS-MIN99",
+                    "KXNBATEAMTOTAL-26MAY12MINSAS-MIN102",
+                    "KXNBATEAMTOTAL-26MAY12MINSAS-MIN105",
+                    "KXNBATEAMTOTAL-26MAY12MINSAS-MIN108",
+                    "KXNBATEAMTOTAL-26MAY12MINSAS-MIN111",
+                    "KXNBATEAMTOTAL-26MAY12MINSAS-MIN114"
+                ]
+            }
+        },
+        "KXATPGTOTAL": {
+            "KXATPGTOTAL-26MAY13RUUKHA": {
+                "title": "casper ruud vs karen khachanov: total games",
+                "subtitle": "casper ruud vs karen khachanov (may 13)",
+                "market_slugs": [
+                    "KXATPGTOTAL-26MAY13RUUKHA-18",
+                    "KXATPGTOTAL-26MAY13RUUKHA-23",
+                    "KXATPGTOTAL-26MAY13RUUKHA-28"
+                ]
+            },
+            "KXATPGTOTAL-26MAY13JODDAR": {
+                "title": "rafael jodar vs luciano darderi: total games",
+                "subtitle": "rafael jodar vs luciano darderi (may 13)",
+                "market_slugs": [
+                    "KXATPGTOTAL-26MAY13JODDAR-17",
+                    "KXATPGTOTAL-26MAY13JODDAR-22",
+                    "KXATPGTOTAL-26MAY13JODDAR-27"
+                ]
+            }
+        },
+        "KXWNBA1HTOTAL": {
+            "KXWNBA1HTOTAL-26MAY12NYPDX": {
+                "title": "new york vs portland: first half total",
+                "subtitle": "ny vs pdx (may 12)",
+                "market_slugs": [
+                    "KXWNBA1HTOTAL-26MAY12NYPDX-88"
+                ]
+            },
+            "KXWNBA1HTOTAL-26MAY12MINPHX": {
+                "title": "minnesota vs phoenix: first half total",
+                "subtitle": "min vs phx (may 12)",
+                "market_slugs": [
+                    "KXWNBA1HTOTAL-26MAY12MINPHX-86"
+                ]
+            },
+            "KXWNBA1HTOTAL-26MAY12ATLDAL": {
+                "title": "atlanta vs dallas: first half total",
+                "subtitle": "atl vs dal (may 12)",
+                "market_slugs": [
+                    "KXWNBA1HTOTAL-26MAY12ATLDAL-93"
+                ]
+            }
+        },
+        "KXNBA2HTOTAL": {
+            "KXNBA2HTOTAL-26MAY12MINSAS": {
+                "title": "minnesota vs san antonio: second half total",
+                "subtitle": "min vs sas (may 12)",
+                "market_slugs": [
+                    "KXNBA2HTOTAL-26MAY12MINSAS-100",
+                    "KXNBA2HTOTAL-26MAY12MINSAS-103",
+                    "KXNBA2HTOTAL-26MAY12MINSAS-106",
+                    "KXNBA2HTOTAL-26MAY12MINSAS-109",
+                    "KXNBA2HTOTAL-26MAY12MINSAS-112",
+                    "KXNBA2HTOTAL-26MAY12MINSAS-115",
+                    "KXNBA2HTOTAL-26MAY12MINSAS-118",
+                    "KXNBA2HTOTAL-26MAY12MINSAS-121",
+                    "KXNBA2HTOTAL-26MAY12MINSAS-124"
+                ]
+            }
+        }
+    }
+}

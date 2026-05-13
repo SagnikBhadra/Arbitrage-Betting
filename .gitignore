@@ -31,3 +31,6 @@ snapshots/
 
 #logging
 logging/
+
+#cpp/build
+cpp/build/

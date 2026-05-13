@@ -54,6 +54,10 @@ target_link_libraries(intra_kalshi_arbitrage PRIVATE
   nlohmann_json::nlohmann_json
 )
 
+if(WIN32)
+  target_link_libraries(intra_kalshi_arbitrage PRIVATE ws2_32 mswsock)
+endif()
+
 if(MSVC)
   target_compile_options(intra_kalshi_arbitrage PRIVATE /W4 /bigobj)
 else()

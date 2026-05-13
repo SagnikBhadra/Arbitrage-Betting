@@ -44,7 +44,11 @@ std::string timestamp_string() {
 }  // namespace
 
 Logger::Logger(std::string name) : name_(std::move(name)) {
-    ::mkdir("logging", 0755);  // no-op if it already exists
+#ifdef _WIN32
+    ::mkdir("logging");
+#else
+    ::mkdir("logging", 0755);
+#endif
     const std::string path = "logging/" + name_ + "_" + today_string() + ".log";
     file_.open(path, std::ios::app);
 }
