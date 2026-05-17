@@ -62,6 +62,9 @@ def setup_logging():
     # Intra Kalshi strategy log
     setup_logger("intra_kalshi_strategy", "intra_kalshi_strategy")
 
+    # Intra Kalshi spread/total strategy log
+    setup_logger("intra_kalshi_spread_total_strategy", "intra_kalshi_spread_total_strategy")
+
     # Wide Spread strategy log
     setup_logger("wide_spread_strategy", "wide_spread_strategy")
 

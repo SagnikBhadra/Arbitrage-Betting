@@ -14,6 +14,7 @@ from position_manager import PositionManager
 
 # Strategy modules
 from intra_kalshi_arbitrage import IntraKalshiArbitrage
+from intra_kalshi_spread_total_arbitrage import IntraKalshiSpreadTotalArbitrage
 from cross_exchange_arbitrage import CrossExchangeArbitrage
 from wide_spread_arbitrage import WideSpreadArbitrage
 
@@ -109,33 +110,43 @@ def wide_spreads(polymarket_client, kalshi_client, polymarket_us_gateway, kalshi
     )
     return wide_spread_arb_strategy
 
+def intra_kalshi_spread_total(kalshi_client, kalshi_gateway, position_manager, profit_threshold=0.01):
+    spread_mapping = get_static_mapping("statics/statics.json", "CORRELATED_SPREAD_MARKET_MAPPING")
+    total_mapping = get_static_mapping("statics/statics.json", "CORRELATED_TOTAL_MARKET_MAPPING")
+    return IntraKalshiSpreadTotalArbitrage(
+        kalshi_client,
+        kalshi_gateway,
+        position_manager,
+        spread_mapping,
+        total_mapping,
+        profit_threshold,
+    )
+
 async def scan_inefficiencies(polymarket_client, kalshi_client, kalshi_gateway, polymarket_us_gateway):
-    # Cross exchange mapping between Polymarket and Kalshi markets
-    polymarket_kalshi_mapping = get_static_mapping("statics/cross_exchange_statics.json", "POLYMARKET_KALSHI_MAPPING")
-    moneyline_events = polymarket_kalshi_mapping["Moneyline_Events"]
-    # Intra Kalshi correlated markets mapping
-    correlated_market_mapping = get_static_mapping("statics/statics.json", "CORRELATED_MARKET_MAPPING")
-    
     # Wait until feeds are subscribed
     while not kalshi_client.subscribed:
         await asyncio.sleep(2)
-    
+
     # Load positions
     positions = kalshi_gateway.get_positions()
     position_manager = PositionManager(positions)
-    
+
     # Create strategy objects
     strategies = []
-    # Intra Kalshi
+    # Intra Kalshi moneyline
+    #correlated_market_mapping = get_static_mapping("statics/statics.json", "CORRELATED_MARKET_MAPPING")
     #strategies.append(intra_kalshi_arbitrage(kalshi_client, kalshi_gateway, position_manager, correlated_market_mapping, profit_threshold=0.01))
     # Cross exchange
-    #strategies.append(crossed_markets(polymarket_client, kalshi_client, kalshi_gateway, polymarket_us_gateway, position_manager, moneyline_events))
+    #polymarket_kalshi_mapping = get_static_mapping("statics/cross_exchange_statics.json", "POLYMARKET_KALSHI_MAPPING")
+    #strategies.append(crossed_markets(polymarket_client, kalshi_client, kalshi_gateway, polymarket_us_gateway, position_manager, polymarket_kalshi_mapping["Moneyline_Events"]))
     # Wide spreads
-    wide_spread_strategy = wide_spreads(polymarket_client, kalshi_client, polymarket_us_gateway, kalshi_gateway, position_manager, spread_threshold=Decimal("0.05"), min_edge=Decimal("0.01"))
-    strategies.append(wide_spread_strategy)
-    
+    #wide_spread_strategy = wide_spreads(polymarket_client, kalshi_client, polymarket_us_gateway, kalshi_gateway, position_manager, spread_threshold=Decimal("0.05"), min_edge=Decimal("0.01"))
+    #strategies.append(wide_spread_strategy)
+    # Intra Kalshi spread/total
+    strategies.append(intra_kalshi_spread_total(kalshi_client, kalshi_gateway, position_manager, profit_threshold=0.01))
+
     # Start user fill processing loop for wide spread strategy
-    asyncio.create_task(wide_spread_strategy.process_user_fills())
+    #asyncio.create_task(wide_spread_strategy.process_user_fills())
 
     # Call find_opportunities() every second and log any opportunities above profit_threshold
     while True:
@@ -159,7 +170,12 @@ async def main():
     polymarket_us_gateway = PolymarketUSHTTPGateway(POLYMARKET_US_API_KEY, POLYMARKET_US_PRIVATE_KEY_FILE_PATH, POLYMARKET_US_BASE_URL)
 
     polymarket_us_client = PolymarketUSWebSocket(POLYMARKET_US_WS_URL_BASE, POLYMARKET_US_CHANNEL_TYPE, get_asset_ids("Polymarket_US"), POLYMARKET_US_API_KEY, POLYMARKET_US_PRIVATE_KEY_FILE_PATH)
-    kalshi_client = KalshiWebSocket(KEY_ID, PRIVATE_KEY_PATH, get_asset_ids("Kalshi"), WS_URL)
+    kalshi_tickers = (
+        get_asset_ids("Kalshi")
+        + get_asset_ids("Kalshi_Spread")
+        + get_asset_ids("Kalshi_Total")
+    )
+    kalshi_client = KalshiWebSocket(KEY_ID, PRIVATE_KEY_PATH, kalshi_tickers, WS_URL)
     
     await asyncio.gather(
         polymarket_us_client.run(),
