@@ -1,6 +1,16 @@
 {
     "Sports": {
         "KXNBASERIESSPREAD": {
+            "KXNBASERIESSPREAD-26CLENYKECF": {
+                "title": "series game spread: cleveland (4) vs new york (3)",
+                "subtitle": "cle vs nyk (ecf - 2026)",
+                "market_slugs": [
+                    "KXNBASERIESSPREAD-26CLENYKECF-NYK3",
+                    "KXNBASERIESSPREAD-26CLENYKECF-NYK2",
+                    "KXNBASERIESSPREAD-26CLENYKECF-CLE2",
+                    "KXNBASERIESSPREAD-26CLENYKECF-CLE3"
+                ]
+            },
             "KXNBASERIESSPREAD-26SASOKCWCF": {
                 "title": "series game spread: san antonio (2) vs oklahoma city (1)",
                 "subtitle": "sas vs okc (wcf - 2026)",
@@ -35,6 +45,16 @@
             }
         },
         "KXBRASILEIROSPREAD": {
+            "KXBRASILEIROSPREAD-26MAY25CFCBAH": {
+                "title": "coritiba vs bahia: spread",
+                "subtitle": "cfc vs bah (may 25)",
+                "market_slugs": [
+                    "KXBRASILEIROSPREAD-26MAY25CFCBAH-CFC2",
+                    "KXBRASILEIROSPREAD-26MAY25CFCBAH-CFC1",
+                    "KXBRASILEIROSPREAD-26MAY25CFCBAH-BAH1",
+                    "KXBRASILEIROSPREAD-26MAY25CFCBAH-BAH2"
+                ]
+            },
             "KXBRASILEIROSPREAD-26MAY24VDGRBB": {
                 "title": "vasco da gama vs bragantino: spread",
                 "subtitle": "vdg vs rbb (may 24)",
@@ -124,101 +144,59 @@
                     "KXBRASILEIROSPREAD-26MAY23SPABOT-BOT1",
                     "KXBRASILEIROSPREAD-26MAY23SPABOT-BOT2"
                 ]
-            },
-            "KXBRASILEIROSPREAD-26MAY17CAPFLA": {
-                "title": "paranaense vs flamengo: spread",
-                "subtitle": "cap vs fla (may 17)",
+            }
+        },
+        "KXBUNDESLIGASPREAD": {
+            "KXBUNDESLIGASPREAD-26MAY25PADWOB": {
+                "title": "paderborn vs wolfsburg: spread",
+                "subtitle": "pad vs wob (may 25)",
                 "market_slugs": [
-                    "KXBRASILEIROSPREAD-26MAY17CAPFLA-CAP2",
-                    "KXBRASILEIROSPREAD-26MAY17CAPFLA-CAP1",
-                    "KXBRASILEIROSPREAD-26MAY17CAPFLA-FLA1",
-                    "KXBRASILEIROSPREAD-26MAY17CAPFLA-FLA2"
+                    "KXBUNDESLIGASPREAD-26MAY25PADWOB-PAD2",
+                    "KXBUNDESLIGASPREAD-26MAY25PADWOB-PAD1",
+                    "KXBUNDESLIGASPREAD-26MAY25PADWOB-WOB1",
+                    "KXBUNDESLIGASPREAD-26MAY25PADWOB-WOB2"
                 ]
             },
-            "KXBRASILEIROSPREAD-26MAY17RBBVIT": {
-                "title": "bragantino vs vitoria: spread",
-                "subtitle": "rbb vs vit (may 17)",
+            "KXBUNDESLIGASPREAD-26MAY21WOBPAD": {
+                "title": "wolfsburg vs paderborn: spread",
+                "subtitle": "wob vs pad (may 21)",
                 "market_slugs": [
-                    "KXBRASILEIROSPREAD-26MAY17RBBVIT-RBB2",
-                    "KXBRASILEIROSPREAD-26MAY17RBBVIT-RBB1",
-                    "KXBRASILEIROSPREAD-26MAY17RBBVIT-VIT1",
-                    "KXBRASILEIROSPREAD-26MAY17RBBVIT-VIT2"
-                ]
-            },
-            "KXBRASILEIROSPREAD-26MAY17CHACR": {
-                "title": "chapecoense vs remo: spread",
-                "subtitle": "cha vs cr (may 17)",
-                "market_slugs": [
-                    "KXBRASILEIROSPREAD-26MAY17CHACR-CHA2",
-                    "KXBRASILEIROSPREAD-26MAY17CHACR-CHA1",
-                    "KXBRASILEIROSPREAD-26MAY17CHACR-CR1",
-                    "KXBRASILEIROSPREAD-26MAY17CHACR-CR2"
-                ]
-            },
-            "KXBRASILEIROSPREAD-26MAY17BOTCOR": {
-                "title": "botafogo vs corinthians: spread",
-                "subtitle": "bot vs cor (may 17)",
-                "market_slugs": [
-                    "KXBRASILEIROSPREAD-26MAY17BOTCOR-BOT2",
-                    "KXBRASILEIROSPREAD-26MAY17BOTCOR-BOT1",
-                    "KXBRASILEIROSPREAD-26MAY17BOTCOR-COR1",
-                    "KXBRASILEIROSPREAD-26MAY17BOTCOR-COR2"
-                ]
-            },
-            "KXBRASILEIROSPREAD-26MAY17BAHGPA": {
-                "title": "bahia vs gremio: spread",
-                "subtitle": "bah vs gpa (may 17)",
-                "market_slugs": [
-                    "KXBRASILEIROSPREAD-26MAY17BAHGPA-BAH2",
-                    "KXBRASILEIROSPREAD-26MAY17BAHGPA-BAH1",
-                    "KXBRASILEIROSPREAD-26MAY17BAHGPA-GPA1",
-                    "KXBRASILEIROSPREAD-26MAY17BAHGPA-GPA2"
+                    "KXBUNDESLIGASPREAD-26MAY21WOBPAD-WOB2",
+                    "KXBUNDESLIGASPREAD-26MAY21WOBPAD-WOB1",
+                    "KXBUNDESLIGASPREAD-26MAY21WOBPAD-PAD1",
+                    "KXBUNDESLIGASPREAD-26MAY21WOBPAD-PAD2"
                 ]
             }
         },
-        "KXNHLSPREAD": {
-            "KXNHLSPREAD-26MAY24COLVGK": {
-                "title": "game 3: colorado at vegas: spread",
-                "subtitle": "col at vgk (may 24)",
+        "KXBUNDESLIGA1HSPREAD": {
+            "KXBUNDESLIGA1HSPREAD-26MAY25PADWOB": {
+                "title": "paderborn vs wolfsburg: first half spread",
+                "subtitle": "pad vs wob (may 25)",
                 "market_slugs": [
-                    "KXNHLSPREAD-26MAY24COLVGK-VGK2",
-                    "KXNHLSPREAD-26MAY24COLVGK-VGK1",
-                    "KXNHLSPREAD-26MAY24COLVGK-COL1",
-                    "KXNHLSPREAD-26MAY24COLVGK-COL2"
+                    "KXBUNDESLIGA1HSPREAD-26MAY25PADWOB-PAD1",
+                    "KXBUNDESLIGA1HSPREAD-26MAY25PADWOB-WOB1"
                 ]
             },
-            "KXNHLSPREAD-26MAY22VGKCOL": {
-                "title": "game 2: vegas at colorado: spread",
-                "subtitle": "vgk at col (may 22)",
+            "KXBUNDESLIGA1HSPREAD-26MAY21WOBPAD": {
+                "title": "wolfsburg vs paderborn: first half spread",
+                "subtitle": "wob vs pad (may 21)",
                 "market_slugs": [
-                    "KXNHLSPREAD-26MAY22VGKCOL-COL2",
-                    "KXNHLSPREAD-26MAY22VGKCOL-COL1",
-                    "KXNHLSPREAD-26MAY22VGKCOL-VGK1",
-                    "KXNHLSPREAD-26MAY22VGKCOL-VGK2"
-                ]
-            },
-            "KXNHLSPREAD-26MAY20VGKCOL": {
-                "title": "game 1: vegas at colorado: spread",
-                "subtitle": "vgk at col (may 20)",
-                "market_slugs": [
-                    "KXNHLSPREAD-26MAY20VGKCOL-COL2",
-                    "KXNHLSPREAD-26MAY20VGKCOL-COL1",
-                    "KXNHLSPREAD-26MAY20VGKCOL-VGK1",
-                    "KXNHLSPREAD-26MAY20VGKCOL-VGK2"
-                ]
-            },
-            "KXNHLSPREAD-26MAY18MTLBUF": {
-                "title": "game 7: montreal at buffalo: spread",
-                "subtitle": "mtl at buf (may 18)",
-                "market_slugs": [
-                    "KXNHLSPREAD-26MAY18MTLBUF-BUF2",
-                    "KXNHLSPREAD-26MAY18MTLBUF-BUF1",
-                    "KXNHLSPREAD-26MAY18MTLBUF-MTL1",
-                    "KXNHLSPREAD-26MAY18MTLBUF-MTL2"
+                    "KXBUNDESLIGA1HSPREAD-26MAY21WOBPAD-WOB1",
+                    "KXBUNDESLIGA1HSPREAD-26MAY21WOBPAD-PAD1"
                 ]
             }
         },
         "KXMLSSPREAD": {
+            "KXMLSSPREAD-26MAY24LAFCSEA": {
+                "title": "los angeles f vs seattle: spread",
+                "subtitle": "lafc vs sea (may 24)",
+                "market_slugs": [
+                    "KXMLSSPREAD-26MAY24LAFCSEA-LAFC2",
+                    "KXMLSSPREAD-26MAY24LAFCSEA-LAFC1",
+                    "KXMLSSPREAD-26MAY24LAFCSEA-SEA1",
+                    "KXMLSSPREAD-26MAY24LAFCSEA-SEA2"
+                ]
+            },
             "KXMLSSPREAD-26MAY24MIAPHI": {
                 "title": "miami vs philadelphia: spread",
                 "subtitle": "mia vs phi (may 24)",
@@ -358,25 +336,113 @@
                     "KXMLSSPREAD-26MAY23STLATX-ATX1",
                     "KXMLSSPREAD-26MAY23STLATX-ATX2"
                 ]
-            },
-            "KXMLSSPREAD-26MAY17NSHLAFC": {
-                "title": "nashville vs los angeles f: spread",
-                "subtitle": "nsh vs lafc (may 17)",
+            }
+        },
+        "KXNHLSPREAD": {
+            "KXNHLSPREAD-26MAY24COLVGK": {
+                "title": "game 3: colorado at vegas: spread",
+                "subtitle": "col at vgk (may 24)",
                 "market_slugs": [
-                    "KXMLSSPREAD-26MAY17NSHLAFC-NSH2",
-                    "KXMLSSPREAD-26MAY17NSHLAFC-NSH1",
-                    "KXMLSSPREAD-26MAY17NSHLAFC-LAFC1",
-                    "KXMLSSPREAD-26MAY17NSHLAFC-LAFC2"
+                    "KXNHLSPREAD-26MAY24COLVGK-VGK2",
+                    "KXNHLSPREAD-26MAY24COLVGK-VGK1",
+                    "KXNHLSPREAD-26MAY24COLVGK-COL1",
+                    "KXNHLSPREAD-26MAY24COLVGK-COL2"
                 ]
             },
-            "KXMLSSPREAD-26MAY17MIAPOR": {
-                "title": "miami vs portland: spread",
-                "subtitle": "mia vs por (may 17)",
+            "KXNHLSPREAD-26MAY22VGKCOL": {
+                "title": "game 2: vegas at colorado: spread",
+                "subtitle": "vgk at col (may 22)",
                 "market_slugs": [
-                    "KXMLSSPREAD-26MAY17MIAPOR-MIA2",
-                    "KXMLSSPREAD-26MAY17MIAPOR-MIA1",
-                    "KXMLSSPREAD-26MAY17MIAPOR-POR1",
-                    "KXMLSSPREAD-26MAY17MIAPOR-POR2"
+                    "KXNHLSPREAD-26MAY22VGKCOL-COL2",
+                    "KXNHLSPREAD-26MAY22VGKCOL-COL1",
+                    "KXNHLSPREAD-26MAY22VGKCOL-VGK1",
+                    "KXNHLSPREAD-26MAY22VGKCOL-VGK2"
+                ]
+            },
+            "KXNHLSPREAD-26MAY20VGKCOL": {
+                "title": "game 1: vegas at colorado: spread",
+                "subtitle": "vgk at col (may 20)",
+                "market_slugs": [
+                    "KXNHLSPREAD-26MAY20VGKCOL-COL2",
+                    "KXNHLSPREAD-26MAY20VGKCOL-COL1",
+                    "KXNHLSPREAD-26MAY20VGKCOL-VGK1",
+                    "KXNHLSPREAD-26MAY20VGKCOL-VGK2"
+                ]
+            },
+            "KXNHLSPREAD-26MAY18MTLBUF": {
+                "title": "game 7: montreal at buffalo: spread",
+                "subtitle": "mtl at buf (may 18)",
+                "market_slugs": [
+                    "KXNHLSPREAD-26MAY18MTLBUF-BUF2",
+                    "KXNHLSPREAD-26MAY18MTLBUF-BUF1",
+                    "KXNHLSPREAD-26MAY18MTLBUF-MTL1",
+                    "KXNHLSPREAD-26MAY18MTLBUF-MTL2"
+                ]
+            }
+        },
+        "KXUFLSPREAD": {
+            "KXUFLSPREAD-26MAY24STLHOU": {
+                "title": "st. louis battlehawks vs houston gamblers: spread",
+                "subtitle": "stl vs hou (may 24)",
+                "market_slugs": [
+                    "KXUFLSPREAD-26MAY24STLHOU-STL21",
+                    "KXUFLSPREAD-26MAY24STLHOU-STL14",
+                    "KXUFLSPREAD-26MAY24STLHOU-STL8",
+                    "KXUFLSPREAD-26MAY24STLHOU-STL7",
+                    "KXUFLSPREAD-26MAY24STLHOU-STL4",
+                    "KXUFLSPREAD-26MAY24STLHOU-HOU4",
+                    "KXUFLSPREAD-26MAY24STLHOU-HOU7",
+                    "KXUFLSPREAD-26MAY24STLHOU-HOU8",
+                    "KXUFLSPREAD-26MAY24STLHOU-HOU14",
+                    "KXUFLSPREAD-26MAY24STLHOU-HOU21"
+                ]
+            },
+            "KXUFLSPREAD-26MAY24DALLOU": {
+                "title": "dallas renegades vs louisville kings: spread",
+                "subtitle": "dal vs lou (may 24)",
+                "market_slugs": [
+                    "KXUFLSPREAD-26MAY24DALLOU-DAL21",
+                    "KXUFLSPREAD-26MAY24DALLOU-DAL14",
+                    "KXUFLSPREAD-26MAY24DALLOU-DAL8",
+                    "KXUFLSPREAD-26MAY24DALLOU-DAL7",
+                    "KXUFLSPREAD-26MAY24DALLOU-DAL4",
+                    "KXUFLSPREAD-26MAY24DALLOU-LOU4",
+                    "KXUFLSPREAD-26MAY24DALLOU-LOU7",
+                    "KXUFLSPREAD-26MAY24DALLOU-LOU8",
+                    "KXUFLSPREAD-26MAY24DALLOU-LOU14",
+                    "KXUFLSPREAD-26MAY24DALLOU-LOU21"
+                ]
+            },
+            "KXUFLSPREAD-26MAY23BHMCLB": {
+                "title": "birmingham stallions vs columbus aviators: spread",
+                "subtitle": "bhm vs clb (may 23)",
+                "market_slugs": [
+                    "KXUFLSPREAD-26MAY23BHMCLB-BHM21",
+                    "KXUFLSPREAD-26MAY23BHMCLB-BHM14",
+                    "KXUFLSPREAD-26MAY23BHMCLB-BHM8",
+                    "KXUFLSPREAD-26MAY23BHMCLB-BHM7",
+                    "KXUFLSPREAD-26MAY23BHMCLB-BHM4",
+                    "KXUFLSPREAD-26MAY23BHMCLB-CLB4",
+                    "KXUFLSPREAD-26MAY23BHMCLB-CLB7",
+                    "KXUFLSPREAD-26MAY23BHMCLB-CLB8",
+                    "KXUFLSPREAD-26MAY23BHMCLB-CLB14",
+                    "KXUFLSPREAD-26MAY23BHMCLB-CLB21"
+                ]
+            },
+            "KXUFLSPREAD-26MAY22DCORL": {
+                "title": "dc defenders vs orlando storm: spread",
+                "subtitle": "dc vs orl (may 22)",
+                "market_slugs": [
+                    "KXUFLSPREAD-26MAY22DCORL-DC21",
+                    "KXUFLSPREAD-26MAY22DCORL-DC14",
+                    "KXUFLSPREAD-26MAY22DCORL-DC8",
+                    "KXUFLSPREAD-26MAY22DCORL-DC7",
+                    "KXUFLSPREAD-26MAY22DCORL-DC4",
+                    "KXUFLSPREAD-26MAY22DCORL-ORL4",
+                    "KXUFLSPREAD-26MAY22DCORL-ORL7",
+                    "KXUFLSPREAD-26MAY22DCORL-ORL8",
+                    "KXUFLSPREAD-26MAY22DCORL-ORL14",
+                    "KXUFLSPREAD-26MAY22DCORL-ORL21"
                 ]
             }
         },
@@ -480,106 +546,6 @@
                     "KXLALIGASPREAD-26MAY23ALARVC-RVC1",
                     "KXLALIGASPREAD-26MAY23ALARVC-RVC2"
                 ]
-            },
-            "KXLALIGASPREAD-26MAY17SEVRMA": {
-                "title": "sevilla vs real madrid: spread",
-                "subtitle": "sev vs rma (may 17)",
-                "market_slugs": [
-                    "KXLALIGASPREAD-26MAY17SEVRMA-SEV2",
-                    "KXLALIGASPREAD-26MAY17SEVRMA-SEV1",
-                    "KXLALIGASPREAD-26MAY17SEVRMA-RMA1",
-                    "KXLALIGASPREAD-26MAY17SEVRMA-RMA2"
-                ]
-            },
-            "KXLALIGASPREAD-26MAY17RVCVIL": {
-                "title": "vallecano vs villarreal: spread",
-                "subtitle": "rvc vs vil (may 17)",
-                "market_slugs": [
-                    "KXLALIGASPREAD-26MAY17RVCVIL-RVC2",
-                    "KXLALIGASPREAD-26MAY17RVCVIL-RVC1",
-                    "KXLALIGASPREAD-26MAY17RVCVIL-VIL1",
-                    "KXLALIGASPREAD-26MAY17RVCVIL-VIL2"
-                ]
-            },
-            "KXLALIGASPREAD-26MAY17RSOVCF": {
-                "title": "real sociedad vs valencia: spread",
-                "subtitle": "rso vs vcf (may 17)",
-                "market_slugs": [
-                    "KXLALIGASPREAD-26MAY17RSOVCF-RSO2",
-                    "KXLALIGASPREAD-26MAY17RSOVCF-RSO1",
-                    "KXLALIGASPREAD-26MAY17RSOVCF-VCF1",
-                    "KXLALIGASPREAD-26MAY17RSOVCF-VCF2"
-                ]
-            },
-            "KXLALIGASPREAD-26MAY17OVIALA": {
-                "title": "oviedo vs alaves: spread",
-                "subtitle": "ovi vs ala (may 17)",
-                "market_slugs": [
-                    "KXLALIGASPREAD-26MAY17OVIALA-OVI2",
-                    "KXLALIGASPREAD-26MAY17OVIALA-OVI1",
-                    "KXLALIGASPREAD-26MAY17OVIALA-ALA1",
-                    "KXLALIGASPREAD-26MAY17OVIALA-ALA2"
-                ]
-            },
-            "KXLALIGASPREAD-26MAY17OSAESP": {
-                "title": "osasuna vs espanyol: spread",
-                "subtitle": "osa vs esp (may 17)",
-                "market_slugs": [
-                    "KXLALIGASPREAD-26MAY17OSAESP-OSA2",
-                    "KXLALIGASPREAD-26MAY17OSAESP-OSA1",
-                    "KXLALIGASPREAD-26MAY17OSAESP-ESP1",
-                    "KXLALIGASPREAD-26MAY17OSAESP-ESP2"
-                ]
-            },
-            "KXLALIGASPREAD-26MAY17LEVMAL": {
-                "title": "levante vs mallorca: spread",
-                "subtitle": "lev vs mal (may 17)",
-                "market_slugs": [
-                    "KXLALIGASPREAD-26MAY17LEVMAL-LEV2",
-                    "KXLALIGASPREAD-26MAY17LEVMAL-LEV1",
-                    "KXLALIGASPREAD-26MAY17LEVMAL-MAL1",
-                    "KXLALIGASPREAD-26MAY17LEVMAL-MAL2"
-                ]
-            },
-            "KXLALIGASPREAD-26MAY17ELCGET": {
-                "title": "elche vs getafe: spread",
-                "subtitle": "elc vs get (may 17)",
-                "market_slugs": [
-                    "KXLALIGASPREAD-26MAY17ELCGET-ELC2",
-                    "KXLALIGASPREAD-26MAY17ELCGET-ELC1",
-                    "KXLALIGASPREAD-26MAY17ELCGET-GET1",
-                    "KXLALIGASPREAD-26MAY17ELCGET-GET2"
-                ]
-            },
-            "KXLALIGASPREAD-26MAY17BARRBB": {
-                "title": "barcelona vs real betis: spread",
-                "subtitle": "bar vs rbb (may 17)",
-                "market_slugs": [
-                    "KXLALIGASPREAD-26MAY17BARRBB-BAR2",
-                    "KXLALIGASPREAD-26MAY17BARRBB-BAR1",
-                    "KXLALIGASPREAD-26MAY17BARRBB-RBB1",
-                    "KXLALIGASPREAD-26MAY17BARRBB-RBB2"
-                ]
-            },
-            "KXLALIGASPREAD-26MAY17ATMGIR": {
-                "title": "atletico vs girona: spread",
-                "subtitle": "atm vs gir (may 17)",
-                "market_slugs": [
-                    "KXLALIGASPREAD-26MAY17ATMGIR-ATM2",
-                    "KXLALIGASPREAD-26MAY17ATMGIR-ATM1",
-                    "KXLALIGASPREAD-26MAY17ATMGIR-GIR1",
-                    "KXLALIGASPREAD-26MAY17ATMGIR-GIR2"
-                ]
-            },
-            "KXLALIGASPREAD-26MAY17ATHRCC": {
-                "title": "bilbao vs celta vigo: spread",
-                "subtitle": "ath vs rcc (may 17)",
-                "market_slugs": [
-                    "KXLALIGASPREAD-26MAY17ATHRCC-ATH2",
-                    "KXLALIGASPREAD-26MAY17ATHRCC-ATH1",
-                    "KXLALIGASPREAD-26MAY17ATHRCC-RCC1",
-                    "KXLALIGASPREAD-26MAY17ATHRCC-RCC2"
-                ]
             }
         },
         "KXLALIGA1HSPREAD": {
@@ -661,86 +627,6 @@
                 "market_slugs": [
                     "KXLALIGA1HSPREAD-26MAY23ALARVC-ALA1",
                     "KXLALIGA1HSPREAD-26MAY23ALARVC-RVC1"
-                ]
-            },
-            "KXLALIGA1HSPREAD-26MAY17BARRBB": {
-                "title": "barcelona vs real betis: first half spread",
-                "subtitle": "bar vs rbb (may 17)",
-                "market_slugs": [
-                    "KXLALIGA1HSPREAD-26MAY17BARRBB-BAR1",
-                    "KXLALIGA1HSPREAD-26MAY17BARRBB-RBB1"
-                ]
-            },
-            "KXLALIGA1HSPREAD-26MAY17SEVRMA": {
-                "title": "sevilla vs real madrid: first half spread",
-                "subtitle": "sev vs rma (may 17)",
-                "market_slugs": [
-                    "KXLALIGA1HSPREAD-26MAY17SEVRMA-SEV1",
-                    "KXLALIGA1HSPREAD-26MAY17SEVRMA-RMA1"
-                ]
-            },
-            "KXLALIGA1HSPREAD-26MAY17RVCVIL": {
-                "title": "vallecano vs villarreal: first half spread",
-                "subtitle": "rvc vs vil (may 17)",
-                "market_slugs": [
-                    "KXLALIGA1HSPREAD-26MAY17RVCVIL-RVC1",
-                    "KXLALIGA1HSPREAD-26MAY17RVCVIL-VIL1"
-                ]
-            },
-            "KXLALIGA1HSPREAD-26MAY17RSOVCF": {
-                "title": "real sociedad vs valencia: first half spread",
-                "subtitle": "rso vs vcf (may 17)",
-                "market_slugs": [
-                    "KXLALIGA1HSPREAD-26MAY17RSOVCF-RSO1",
-                    "KXLALIGA1HSPREAD-26MAY17RSOVCF-VCF1"
-                ]
-            },
-            "KXLALIGA1HSPREAD-26MAY17OVIALA": {
-                "title": "oviedo vs alaves: first half spread",
-                "subtitle": "ovi vs ala (may 17)",
-                "market_slugs": [
-                    "KXLALIGA1HSPREAD-26MAY17OVIALA-OVI1",
-                    "KXLALIGA1HSPREAD-26MAY17OVIALA-ALA1"
-                ]
-            },
-            "KXLALIGA1HSPREAD-26MAY17OSAESP": {
-                "title": "osasuna vs espanyol: first half spread",
-                "subtitle": "osa vs esp (may 17)",
-                "market_slugs": [
-                    "KXLALIGA1HSPREAD-26MAY17OSAESP-OSA1",
-                    "KXLALIGA1HSPREAD-26MAY17OSAESP-ESP1"
-                ]
-            },
-            "KXLALIGA1HSPREAD-26MAY17LEVMAL": {
-                "title": "levante vs mallorca: first half spread",
-                "subtitle": "lev vs mal (may 17)",
-                "market_slugs": [
-                    "KXLALIGA1HSPREAD-26MAY17LEVMAL-LEV1",
-                    "KXLALIGA1HSPREAD-26MAY17LEVMAL-MAL1"
-                ]
-            },
-            "KXLALIGA1HSPREAD-26MAY17ELCGET": {
-                "title": "elche vs getafe: first half spread",
-                "subtitle": "elc vs get (may 17)",
-                "market_slugs": [
-                    "KXLALIGA1HSPREAD-26MAY17ELCGET-ELC1",
-                    "KXLALIGA1HSPREAD-26MAY17ELCGET-GET1"
-                ]
-            },
-            "KXLALIGA1HSPREAD-26MAY17ATMGIR": {
-                "title": "atletico vs girona: first half spread",
-                "subtitle": "atm vs gir (may 17)",
-                "market_slugs": [
-                    "KXLALIGA1HSPREAD-26MAY17ATMGIR-ATM1",
-                    "KXLALIGA1HSPREAD-26MAY17ATMGIR-GIR1"
-                ]
-            },
-            "KXLALIGA1HSPREAD-26MAY17ATHRCC": {
-                "title": "bilbao vs celta vigo: first half spread",
-                "subtitle": "ath vs rcc (may 17)",
-                "market_slugs": [
-                    "KXLALIGA1HSPREAD-26MAY17ATHRCC-ATH1",
-                    "KXLALIGA1HSPREAD-26MAY17ATHRCC-RCC1"
                 ]
             }
         },
@@ -864,26 +750,6 @@
                     "KXEPLSPREAD-26MAY19BOUMCI-MCI1",
                     "KXEPLSPREAD-26MAY19BOUMCI-MCI2"
                 ]
-            },
-            "KXEPLSPREAD-26MAY18ARSBUR": {
-                "title": "burnley at arsenal: spreads",
-                "subtitle": "ars vs bur (may 18)",
-                "market_slugs": [
-                    "KXEPLSPREAD-26MAY18ARSBUR-ARS2",
-                    "KXEPLSPREAD-26MAY18ARSBUR-ARS1",
-                    "KXEPLSPREAD-26MAY18ARSBUR-BUR1",
-                    "KXEPLSPREAD-26MAY18ARSBUR-BUR2"
-                ]
-            },
-            "KXEPLSPREAD-26MAY17NEWWHU": {
-                "title": "west ham at newcastle: spreads",
-                "subtitle": "new vs whu (may 17)",
-                "market_slugs": [
-                    "KXEPLSPREAD-26MAY17NEWWHU-NEW2",
-                    "KXEPLSPREAD-26MAY17NEWWHU-NEW1",
-                    "KXEPLSPREAD-26MAY17NEWWHU-WHU1",
-                    "KXEPLSPREAD-26MAY17NEWWHU-WHU2"
-                ]
             }
         },
         "KXEPL1HSPREAD": {
@@ -981,22 +847,6 @@
                 "market_slugs": [
                     "KXEPL1HSPREAD-26MAY19BOUMCI-BOU1",
                     "KXEPL1HSPREAD-26MAY19BOUMCI-MCI1"
-                ]
-            },
-            "KXEPL1HSPREAD-26MAY18ARSBUR": {
-                "title": "arsenal vs burnley: first half spread",
-                "subtitle": "ars vs bur (may 18)",
-                "market_slugs": [
-                    "KXEPL1HSPREAD-26MAY18ARSBUR-ARS1",
-                    "KXEPL1HSPREAD-26MAY18ARSBUR-BUR1"
-                ]
-            },
-            "KXEPL1HSPREAD-26MAY17NEWWHU": {
-                "title": "newcastle vs west ham: first half spread",
-                "subtitle": "new vs whu (may 17)",
-                "market_slugs": [
-                    "KXEPL1HSPREAD-26MAY17NEWWHU-NEW1",
-                    "KXEPL1HSPREAD-26MAY17NEWWHU-WHU1"
                 ]
             }
         },
@@ -1100,46 +950,6 @@
                     "KXSERIEASPREAD-26MAY24ACMCAG-CAG1",
                     "KXSERIEASPREAD-26MAY24ACMCAG-CAG2"
                 ]
-            },
-            "KXSERIEASPREAD-26MAY17UDICRE": {
-                "title": "udinese vs cremonese: spread",
-                "subtitle": "udi vs cre (may 17)",
-                "market_slugs": [
-                    "KXSERIEASPREAD-26MAY17UDICRE-UDI2",
-                    "KXSERIEASPREAD-26MAY17UDICRE-UDI1",
-                    "KXSERIEASPREAD-26MAY17UDICRE-CRE1",
-                    "KXSERIEASPREAD-26MAY17UDICRE-CRE2"
-                ]
-            },
-            "KXSERIEASPREAD-26MAY17SASLEC": {
-                "title": "sassuolo vs lecce: spread",
-                "subtitle": "sas vs lec (may 17)",
-                "market_slugs": [
-                    "KXSERIEASPREAD-26MAY17SASLEC-SAS2",
-                    "KXSERIEASPREAD-26MAY17SASLEC-SAS1",
-                    "KXSERIEASPREAD-26MAY17SASLEC-LEC1",
-                    "KXSERIEASPREAD-26MAY17SASLEC-LEC2"
-                ]
-            },
-            "KXSERIEASPREAD-26MAY17CAGTOR": {
-                "title": "cagliari vs torino: spread",
-                "subtitle": "cag vs tor (may 17)",
-                "market_slugs": [
-                    "KXSERIEASPREAD-26MAY17CAGTOR-CAG2",
-                    "KXSERIEASPREAD-26MAY17CAGTOR-CAG1",
-                    "KXSERIEASPREAD-26MAY17CAGTOR-TOR1",
-                    "KXSERIEASPREAD-26MAY17CAGTOR-TOR2"
-                ]
-            },
-            "KXSERIEASPREAD-26MAY17ATABFC": {
-                "title": "atalanta vs bologna: spread",
-                "subtitle": "ata vs bfc (may 17)",
-                "market_slugs": [
-                    "KXSERIEASPREAD-26MAY17ATABFC-ATA2",
-                    "KXSERIEASPREAD-26MAY17ATABFC-ATA1",
-                    "KXSERIEASPREAD-26MAY17ATABFC-BFC1",
-                    "KXSERIEASPREAD-26MAY17ATABFC-BFC2"
-                ]
             }
         },
         "KXSERIEA1HSPREAD": {
@@ -1222,103 +1032,101 @@
                     "KXSERIEA1HSPREAD-26MAY24ACMCAG-ACM1",
                     "KXSERIEA1HSPREAD-26MAY24ACMCAG-CAG1"
                 ]
-            },
-            "KXSERIEA1HSPREAD-26MAY17UDICRE": {
-                "title": "udinese vs cremonese: first half spread",
-                "subtitle": "udi vs cre (may 17)",
-                "market_slugs": [
-                    "KXSERIEA1HSPREAD-26MAY17UDICRE-UDI1",
-                    "KXSERIEA1HSPREAD-26MAY17UDICRE-CRE1"
-                ]
-            },
-            "KXSERIEA1HSPREAD-26MAY17SASLEC": {
-                "title": "sassuolo vs lecce: first half spread",
-                "subtitle": "sas vs lec (may 17)",
-                "market_slugs": [
-                    "KXSERIEA1HSPREAD-26MAY17SASLEC-SAS1",
-                    "KXSERIEA1HSPREAD-26MAY17SASLEC-LEC1"
-                ]
-            },
-            "KXSERIEA1HSPREAD-26MAY17CAGTOR": {
-                "title": "cagliari vs torino: first half spread",
-                "subtitle": "cag vs tor (may 17)",
-                "market_slugs": [
-                    "KXSERIEA1HSPREAD-26MAY17CAGTOR-CAG1",
-                    "KXSERIEA1HSPREAD-26MAY17CAGTOR-TOR1"
-                ]
-            },
-            "KXSERIEA1HSPREAD-26MAY17ATABFC": {
-                "title": "atalanta vs bologna: first half spread",
-                "subtitle": "ata vs bfc (may 17)",
-                "market_slugs": [
-                    "KXSERIEA1HSPREAD-26MAY17ATABFC-ATA1",
-                    "KXSERIEA1HSPREAD-26MAY17ATABFC-BFC1"
-                ]
             }
         },
-        "KXUFLSPREAD": {
-            "KXUFLSPREAD-26MAY23BHMCLB": {
-                "title": "birmingham stallions vs columbus aviators: spread",
-                "subtitle": "bhm vs clb (may 23)",
+        "KXEREDIVISIESPREAD": {
+            "KXEREDIVISIESPREAD-26MAY21FCUHEE": {
+                "title": "utrecht vs heerenveen: spread",
+                "subtitle": "fcu vs hee (may 21)",
                 "market_slugs": [
-                    "KXUFLSPREAD-26MAY23BHMCLB-BHM21",
-                    "KXUFLSPREAD-26MAY23BHMCLB-BHM14",
-                    "KXUFLSPREAD-26MAY23BHMCLB-BHM8",
-                    "KXUFLSPREAD-26MAY23BHMCLB-BHM7",
-                    "KXUFLSPREAD-26MAY23BHMCLB-BHM4",
-                    "KXUFLSPREAD-26MAY23BHMCLB-CLB4",
-                    "KXUFLSPREAD-26MAY23BHMCLB-CLB7",
-                    "KXUFLSPREAD-26MAY23BHMCLB-CLB8",
-                    "KXUFLSPREAD-26MAY23BHMCLB-CLB14",
-                    "KXUFLSPREAD-26MAY23BHMCLB-CLB21"
+                    "KXEREDIVISIESPREAD-26MAY21FCUHEE-FCU2",
+                    "KXEREDIVISIESPREAD-26MAY21FCUHEE-FCU1",
+                    "KXEREDIVISIESPREAD-26MAY21FCUHEE-HEE1",
+                    "KXEREDIVISIESPREAD-26MAY21FCUHEE-HEE2"
                 ]
             },
-            "KXUFLSPREAD-26MAY22DCORL": {
-                "title": "dc defenders vs orlando storm: spread",
-                "subtitle": "dc vs orl (may 22)",
+            "KXEREDIVISIESPREAD-26MAY21AJAGRO": {
+                "title": "ajax vs groningen: spread",
+                "subtitle": "aja vs gro (may 21)",
                 "market_slugs": [
-                    "KXUFLSPREAD-26MAY22DCORL-DC21",
-                    "KXUFLSPREAD-26MAY22DCORL-DC14",
-                    "KXUFLSPREAD-26MAY22DCORL-DC8",
-                    "KXUFLSPREAD-26MAY22DCORL-DC7",
-                    "KXUFLSPREAD-26MAY22DCORL-DC4",
-                    "KXUFLSPREAD-26MAY22DCORL-ORL4",
-                    "KXUFLSPREAD-26MAY22DCORL-ORL7",
-                    "KXUFLSPREAD-26MAY22DCORL-ORL8",
-                    "KXUFLSPREAD-26MAY22DCORL-ORL14",
-                    "KXUFLSPREAD-26MAY22DCORL-ORL21"
-                ]
-            },
-            "KXUFLSPREAD-26MAY17CLBBHM": {
-                "title": "columbus aviators vs birmingham stallions: spread",
-                "subtitle": "clb vs bhm (may 17)",
-                "market_slugs": [
-                    "KXUFLSPREAD-26MAY17CLBBHM-CLB21",
-                    "KXUFLSPREAD-26MAY17CLBBHM-CLB14",
-                    "KXUFLSPREAD-26MAY17CLBBHM-CLB8",
-                    "KXUFLSPREAD-26MAY17CLBBHM-CLB7",
-                    "KXUFLSPREAD-26MAY17CLBBHM-CLB4",
-                    "KXUFLSPREAD-26MAY17CLBBHM-BHM4",
-                    "KXUFLSPREAD-26MAY17CLBBHM-BHM7",
-                    "KXUFLSPREAD-26MAY17CLBBHM-BHM8",
-                    "KXUFLSPREAD-26MAY17CLBBHM-BHM14",
-                    "KXUFLSPREAD-26MAY17CLBBHM-BHM21"
-                ]
-            }
-        },
-        "KXUELSPREAD": {
-            "KXUELSPREAD-26MAY20SCFAVL": {
-                "title": "freiburg vs aston villa: spread",
-                "subtitle": "scf vs avl (may 20)",
-                "market_slugs": [
-                    "KXUELSPREAD-26MAY20SCFAVL-SCF2",
-                    "KXUELSPREAD-26MAY20SCFAVL-SCF1",
-                    "KXUELSPREAD-26MAY20SCFAVL-AVL1",
-                    "KXUELSPREAD-26MAY20SCFAVL-AVL2"
+                    "KXEREDIVISIESPREAD-26MAY21AJAGRO-AJA2",
+                    "KXEREDIVISIESPREAD-26MAY21AJAGRO-AJA1",
+                    "KXEREDIVISIESPREAD-26MAY21AJAGRO-GRO1",
+                    "KXEREDIVISIESPREAD-26MAY21AJAGRO-GRO2"
                 ]
             }
         },
         "KXSAUDIPLSPREAD": {
+            "KXSAUDIPLSPREAD-26MAY21RIYAKHC": {
+                "title": "al-riyadh vs al-akhdoud: spread",
+                "subtitle": "riy vs akhc (may 21)",
+                "market_slugs": [
+                    "KXSAUDIPLSPREAD-26MAY21RIYAKHC-RIY2",
+                    "KXSAUDIPLSPREAD-26MAY21RIYAKHC-RIY1",
+                    "KXSAUDIPLSPREAD-26MAY21RIYAKHC-AKHC1",
+                    "KXSAUDIPLSPREAD-26MAY21RIYAKHC-AKHC2"
+                ]
+            },
+            "KXSAUDIPLSPREAD-26MAY21NEOITT": {
+                "title": "al suqoor vs al-ittifaq: spread",
+                "subtitle": "neo vs itt (may 21)",
+                "market_slugs": [
+                    "KXSAUDIPLSPREAD-26MAY21NEOITT-NEO2",
+                    "KXSAUDIPLSPREAD-26MAY21NEOITT-NEO1",
+                    "KXSAUDIPLSPREAD-26MAY21NEOITT-ITT1",
+                    "KXSAUDIPLSPREAD-26MAY21NEOITT-ITT2"
+                ]
+            },
+            "KXSAUDIPLSPREAD-26MAY21ITJQAD": {
+                "title": "al-ittihad vs al qadsiah: spread",
+                "subtitle": "itj vs qad (may 21)",
+                "market_slugs": [
+                    "KXSAUDIPLSPREAD-26MAY21ITJQAD-ITJ2",
+                    "KXSAUDIPLSPREAD-26MAY21ITJQAD-ITJ1",
+                    "KXSAUDIPLSPREAD-26MAY21ITJQAD-QAD1",
+                    "KXSAUDIPLSPREAD-26MAY21ITJQAD-QAD2"
+                ]
+            },
+            "KXSAUDIPLSPREAD-26MAY21HAZALT": {
+                "title": "al-hazm vs al-taawoun: spread",
+                "subtitle": "haz vs alt (may 21)",
+                "market_slugs": [
+                    "KXSAUDIPLSPREAD-26MAY21HAZALT-HAZ2",
+                    "KXSAUDIPLSPREAD-26MAY21HAZALT-HAZ1",
+                    "KXSAUDIPLSPREAD-26MAY21HAZALT-ALT1",
+                    "KXSAUDIPLSPREAD-26MAY21HAZALT-ALT2"
+                ]
+            },
+            "KXSAUDIPLSPREAD-26MAY21FAYHIL": {
+                "title": "al-fayha vs al hilal: spread",
+                "subtitle": "fay vs hil (may 21)",
+                "market_slugs": [
+                    "KXSAUDIPLSPREAD-26MAY21FAYHIL-FAY2",
+                    "KXSAUDIPLSPREAD-26MAY21FAYHIL-FAY1",
+                    "KXSAUDIPLSPREAD-26MAY21FAYHIL-HIL1",
+                    "KXSAUDIPLSPREAD-26MAY21FAYHIL-HIL2"
+                ]
+            },
+            "KXSAUDIPLSPREAD-26MAY21ALNDAM": {
+                "title": "al nassr vs damac: spread",
+                "subtitle": "aln vs dam (may 21)",
+                "market_slugs": [
+                    "KXSAUDIPLSPREAD-26MAY21ALNDAM-ALN2",
+                    "KXSAUDIPLSPREAD-26MAY21ALNDAM-ALN1",
+                    "KXSAUDIPLSPREAD-26MAY21ALNDAM-DAM1",
+                    "KXSAUDIPLSPREAD-26MAY21ALNDAM-DAM2"
+                ]
+            },
+            "KXSAUDIPLSPREAD-26MAY21AKHFAT": {
+                "title": "al-kholood vs al-fateh: spread",
+                "subtitle": "akh vs fat (may 21)",
+                "market_slugs": [
+                    "KXSAUDIPLSPREAD-26MAY21AKHFAT-AKH2",
+                    "KXSAUDIPLSPREAD-26MAY21AKHFAT-AKH1",
+                    "KXSAUDIPLSPREAD-26MAY21AKHFAT-FAT1",
+                    "KXSAUDIPLSPREAD-26MAY21AKHFAT-FAT2"
+                ]
+            },
             "KXSAUDIPLSPREAD-26MAY20NAJSHA": {
                 "title": "al-najma vs al-shabab: spread",
                 "subtitle": "naj vs sha (may 20)",
@@ -1338,272 +1146,478 @@
                     "KXSAUDIPLSPREAD-26MAY20KHAAAS-AAS1",
                     "KXSAUDIPLSPREAD-26MAY20KHAAAS-AAS2"
                 ]
-            },
-            "KXSAUDIPLSPREAD-26MAY17SHAITJ": {
-                "title": "al-shabab vs al-ittihad: spread",
-                "subtitle": "sha vs itj (may 17)",
-                "market_slugs": [
-                    "KXSAUDIPLSPREAD-26MAY17SHAITJ-SHA2",
-                    "KXSAUDIPLSPREAD-26MAY17SHAITJ-SHA1",
-                    "KXSAUDIPLSPREAD-26MAY17SHAITJ-ITJ1",
-                    "KXSAUDIPLSPREAD-26MAY17SHAITJ-ITJ2"
-                ]
             }
         },
-        "KXWNBASPREAD": {
-            "KXWNBASPREAD-26MAY18CONNPDX": {
-                "title": "connecticut vs portland",
-                "subtitle": "conn vs pdx (may 18)",
+        "KXUELSPREAD": {
+            "KXUELSPREAD-26MAY20SCFAVL": {
+                "title": "freiburg vs aston villa: spread",
+                "subtitle": "scf vs avl (may 20)",
                 "market_slugs": [
-                    "KXWNBASPREAD-26MAY18CONNPDX-PDX14",
-                    "KXWNBASPREAD-26MAY18CONNPDX-PDX10",
-                    "KXWNBASPREAD-26MAY18CONNPDX-PDX6",
-                    "KXWNBASPREAD-26MAY18CONNPDX-PDX2",
-                    "KXWNBASPREAD-26MAY18CONNPDX-CONN2",
-                    "KXWNBASPREAD-26MAY18CONNPDX-CONN6",
-                    "KXWNBASPREAD-26MAY18CONNPDX-CONN10"
-                ]
-            },
-            "KXWNBASPREAD-26MAY18WSHDAL": {
-                "title": "washington vs dallas",
-                "subtitle": "wsh vs dal (may 18)",
-                "market_slugs": [
-                    "KXWNBASPREAD-26MAY18WSHDAL-DAL16",
-                    "KXWNBASPREAD-26MAY18WSHDAL-DAL12",
-                    "KXWNBASPREAD-26MAY18WSHDAL-DAL8",
-                    "KXWNBASPREAD-26MAY18WSHDAL-DAL4",
-                    "KXWNBASPREAD-26MAY18WSHDAL-WSH2",
-                    "KXWNBASPREAD-26MAY18WSHDAL-WSH6",
-                    "KXWNBASPREAD-26MAY18WSHDAL-WSH10"
-                ]
-            },
-            "KXWNBASPREAD-26MAY17TORLA": {
-                "title": "toronto vs los angeles",
-                "subtitle": "tor vs la (may 17)",
-                "market_slugs": [
-                    "KXWNBASPREAD-26MAY17TORLA-LA19",
-                    "KXWNBASPREAD-26MAY17TORLA-LA15",
-                    "KXWNBASPREAD-26MAY17TORLA-LA11",
-                    "KXWNBASPREAD-26MAY17TORLA-LA7",
-                    "KXWNBASPREAD-26MAY17TORLA-TOR2",
-                    "KXWNBASPREAD-26MAY17TORLA-TOR6",
-                    "KXWNBASPREAD-26MAY17TORLA-TOR10"
-                ]
-            },
-            "KXWNBASPREAD-26MAY17CHIMIN": {
-                "title": "chicago vs minnesota",
-                "subtitle": "chi vs min (may 17)",
-                "market_slugs": [
-                    "KXWNBASPREAD-26MAY17CHIMIN-MIN15",
-                    "KXWNBASPREAD-26MAY17CHIMIN-MIN11",
-                    "KXWNBASPREAD-26MAY17CHIMIN-MIN7",
-                    "KXWNBASPREAD-26MAY17CHIMIN-MIN3",
-                    "KXWNBASPREAD-26MAY17CHIMIN-CHI2",
-                    "KXWNBASPREAD-26MAY17CHIMIN-CHI6",
-                    "KXWNBASPREAD-26MAY17CHIMIN-CHI10"
-                ]
-            },
-            "KXWNBASPREAD-26MAY17SEAIND": {
-                "title": "seattle vs indiana",
-                "subtitle": "sea vs ind (may 17)",
-                "market_slugs": [
-                    "KXWNBASPREAD-26MAY17SEAIND-IND23",
-                    "KXWNBASPREAD-26MAY17SEAIND-IND19",
-                    "KXWNBASPREAD-26MAY17SEAIND-IND15",
-                    "KXWNBASPREAD-26MAY17SEAIND-IND11",
-                    "KXWNBASPREAD-26MAY17SEAIND-SEA2",
-                    "KXWNBASPREAD-26MAY17SEAIND-SEA6",
-                    "KXWNBASPREAD-26MAY17SEAIND-SEA10"
-                ]
-            },
-            "KXWNBASPREAD-26MAY17LVATL": {
-                "title": "las vegas vs atlanta",
-                "subtitle": "lv vs atl (may 17)",
-                "market_slugs": [
-                    "KXWNBASPREAD-26MAY17LVATL-LV16",
-                    "KXWNBASPREAD-26MAY17LVATL-LV12",
-                    "KXWNBASPREAD-26MAY17LVATL-LV8",
-                    "KXWNBASPREAD-26MAY17LVATL-LV4",
-                    "KXWNBASPREAD-26MAY17LVATL-ATL2",
-                    "KXWNBASPREAD-26MAY17LVATL-ATL6",
-                    "KXWNBASPREAD-26MAY17LVATL-ATL10"
-                ]
-            }
-        },
-        "KXNBASPREAD": {
-            "KXNBASPREAD-26MAY18SASOKC": {
-                "title": "game 1: san antonio at oklahoma city: spread",
-                "subtitle": "sas at okc (may 18)",
-                "market_slugs": [
-                    "KXNBASPREAD-26MAY18SASOKC-OKC28",
-                    "KXNBASPREAD-26MAY18SASOKC-OKC25",
-                    "KXNBASPREAD-26MAY18SASOKC-OKC22",
-                    "KXNBASPREAD-26MAY18SASOKC-OKC19",
-                    "KXNBASPREAD-26MAY18SASOKC-OKC16",
-                    "KXNBASPREAD-26MAY18SASOKC-OKC13",
-                    "KXNBASPREAD-26MAY18SASOKC-OKC12",
-                    "KXNBASPREAD-26MAY18SASOKC-OKC11",
-                    "KXNBASPREAD-26MAY18SASOKC-OKC10",
-                    "KXNBASPREAD-26MAY18SASOKC-OKC9",
-                    "KXNBASPREAD-26MAY18SASOKC-OKC8",
-                    "KXNBASPREAD-26MAY18SASOKC-OKC7",
-                    "KXNBASPREAD-26MAY18SASOKC-OKC6",
-                    "KXNBASPREAD-26MAY18SASOKC-OKC5",
-                    "KXNBASPREAD-26MAY18SASOKC-OKC4",
-                    "KXNBASPREAD-26MAY18SASOKC-OKC3",
-                    "KXNBASPREAD-26MAY18SASOKC-OKC2",
-                    "KXNBASPREAD-26MAY18SASOKC-OKC1",
-                    "KXNBASPREAD-26MAY18SASOKC-SAS2",
-                    "KXNBASPREAD-26MAY18SASOKC-SAS5",
-                    "KXNBASPREAD-26MAY18SASOKC-SAS8",
-                    "KXNBASPREAD-26MAY18SASOKC-SAS11",
-                    "KXNBASPREAD-26MAY18SASOKC-SAS14"
-                ]
-            },
-            "KXNBASPREAD-26MAY17CLEDET": {
-                "title": "game 7: cleveland at detroit: spread",
-                "subtitle": "cle at det (may 17)",
-                "market_slugs": [
-                    "KXNBASPREAD-26MAY17CLEDET-DET25",
-                    "KXNBASPREAD-26MAY17CLEDET-DET22",
-                    "KXNBASPREAD-26MAY17CLEDET-DET19",
-                    "KXNBASPREAD-26MAY17CLEDET-DET18",
-                    "KXNBASPREAD-26MAY17CLEDET-DET16",
-                    "KXNBASPREAD-26MAY17CLEDET-DET15",
-                    "KXNBASPREAD-26MAY17CLEDET-DET13",
-                    "KXNBASPREAD-26MAY17CLEDET-DET12",
-                    "KXNBASPREAD-26MAY17CLEDET-DET10",
-                    "KXNBASPREAD-26MAY17CLEDET-DET9",
-                    "KXNBASPREAD-26MAY17CLEDET-DET7",
-                    "KXNBASPREAD-26MAY17CLEDET-DET6",
-                    "KXNBASPREAD-26MAY17CLEDET-DET4",
-                    "KXNBASPREAD-26MAY17CLEDET-DET3",
-                    "KXNBASPREAD-26MAY17CLEDET-DET2",
-                    "KXNBASPREAD-26MAY17CLEDET-DET1",
-                    "KXNBASPREAD-26MAY17CLEDET-CLE1",
-                    "KXNBASPREAD-26MAY17CLEDET-CLE2",
-                    "KXNBASPREAD-26MAY17CLEDET-CLE3",
-                    "KXNBASPREAD-26MAY17CLEDET-CLE4",
-                    "KXNBASPREAD-26MAY17CLEDET-CLE5",
-                    "KXNBASPREAD-26MAY17CLEDET-CLE6",
-                    "KXNBASPREAD-26MAY17CLEDET-CLE7",
-                    "KXNBASPREAD-26MAY17CLEDET-CLE8",
-                    "KXNBASPREAD-26MAY17CLEDET-CLE9",
-                    "KXNBASPREAD-26MAY17CLEDET-CLE11",
-                    "KXNBASPREAD-26MAY17CLEDET-CLE12",
-                    "KXNBASPREAD-26MAY17CLEDET-CLE14",
-                    "KXNBASPREAD-26MAY17CLEDET-CLE15",
-                    "KXNBASPREAD-26MAY17CLEDET-CLE17",
-                    "KXNBASPREAD-26MAY17CLEDET-CLE18",
-                    "KXNBASPREAD-26MAY17CLEDET-CLE21",
-                    "KXNBASPREAD-26MAY17CLEDET-CLE24"
-                ]
-            }
-        },
-        "KXNBA2HSPREAD": {
-            "KXNBA2HSPREAD-26MAY18SASOKC": {
-                "title": "san antonio vs oklahoma city: second half spread",
-                "subtitle": "sas at okc (may 18)",
-                "market_slugs": [
-                    "KXNBA2HSPREAD-26MAY18SASOKC-OKC18",
-                    "KXNBA2HSPREAD-26MAY18SASOKC-OKC15",
-                    "KXNBA2HSPREAD-26MAY18SASOKC-OKC12",
-                    "KXNBA2HSPREAD-26MAY18SASOKC-OKC9",
-                    "KXNBA2HSPREAD-26MAY18SASOKC-OKC6",
-                    "KXNBA2HSPREAD-26MAY18SASOKC-OKC3",
-                    "KXNBA2HSPREAD-26MAY18SASOKC-SAS3",
-                    "KXNBA2HSPREAD-26MAY18SASOKC-SAS6",
-                    "KXNBA2HSPREAD-26MAY18SASOKC-SAS9",
-                    "KXNBA2HSPREAD-26MAY18SASOKC-SAS12"
-                ]
-            },
-            "KXNBA2HSPREAD-26MAY17CLEDET": {
-                "title": "cleveland vs detroit: second half spread",
-                "subtitle": "cle at det (may 17)",
-                "market_slugs": [
-                    "KXNBA2HSPREAD-26MAY17CLEDET-CLE12",
-                    "KXNBA2HSPREAD-26MAY17CLEDET-CLE9",
-                    "KXNBA2HSPREAD-26MAY17CLEDET-CLE6",
-                    "KXNBA2HSPREAD-26MAY17CLEDET-CLE3",
-                    "KXNBA2HSPREAD-26MAY17CLEDET-DET3",
-                    "KXNBA2HSPREAD-26MAY17CLEDET-DET6",
-                    "KXNBA2HSPREAD-26MAY17CLEDET-DET9",
-                    "KXNBA2HSPREAD-26MAY17CLEDET-DET12",
-                    "KXNBA2HSPREAD-26MAY17CLEDET-DET15",
-                    "KXNBA2HSPREAD-26MAY17CLEDET-DET18"
-                ]
-            }
-        },
-        "KXNBA1HSPREAD": {
-            "KXNBA1HSPREAD-26MAY18SASOKC": {
-                "title": "san antonio vs oklahoma city: first half spread",
-                "subtitle": "sas at okc (may 18)",
-                "market_slugs": [
-                    "KXNBA1HSPREAD-26MAY18SASOKC-OKC27",
-                    "KXNBA1HSPREAD-26MAY18SASOKC-OKC24",
-                    "KXNBA1HSPREAD-26MAY18SASOKC-OKC21",
-                    "KXNBA1HSPREAD-26MAY18SASOKC-OKC18",
-                    "KXNBA1HSPREAD-26MAY18SASOKC-OKC15",
-                    "KXNBA1HSPREAD-26MAY18SASOKC-OKC12",
-                    "KXNBA1HSPREAD-26MAY18SASOKC-OKC9",
-                    "KXNBA1HSPREAD-26MAY18SASOKC-OKC6",
-                    "KXNBA1HSPREAD-26MAY18SASOKC-OKC3",
-                    "KXNBA1HSPREAD-26MAY18SASOKC-SAS3",
-                    "KXNBA1HSPREAD-26MAY18SASOKC-SAS6",
-                    "KXNBA1HSPREAD-26MAY18SASOKC-SAS9",
-                    "KXNBA1HSPREAD-26MAY18SASOKC-SAS12",
-                    "KXNBA1HSPREAD-26MAY18SASOKC-SAS15",
-                    "KXNBA1HSPREAD-26MAY18SASOKC-SAS18"
-                ]
-            },
-            "KXNBA1HSPREAD-26MAY17CLEDET": {
-                "title": "cleveland vs detroit: first half spread",
-                "subtitle": "cle at det (may 17)",
-                "market_slugs": [
-                    "KXNBA1HSPREAD-26MAY17CLEDET-DET23",
-                    "KXNBA1HSPREAD-26MAY17CLEDET-DET20",
-                    "KXNBA1HSPREAD-26MAY17CLEDET-DET17",
-                    "KXNBA1HSPREAD-26MAY17CLEDET-DET14",
-                    "KXNBA1HSPREAD-26MAY17CLEDET-DET11",
-                    "KXNBA1HSPREAD-26MAY17CLEDET-DET8",
-                    "KXNBA1HSPREAD-26MAY17CLEDET-DET5",
-                    "KXNBA1HSPREAD-26MAY17CLEDET-DET2",
-                    "KXNBA1HSPREAD-26MAY17CLEDET-CLE1",
-                    "KXNBA1HSPREAD-26MAY17CLEDET-CLE4",
-                    "KXNBA1HSPREAD-26MAY17CLEDET-CLE7",
-                    "KXNBA1HSPREAD-26MAY17CLEDET-CLE10",
-                    "KXNBA1HSPREAD-26MAY17CLEDET-CLE13",
-                    "KXNBA1HSPREAD-26MAY17CLEDET-CLE16",
-                    "KXNBA1HSPREAD-26MAY17CLEDET-CLE19"
+                    "KXUELSPREAD-26MAY20SCFAVL-SCF2",
+                    "KXUELSPREAD-26MAY20SCFAVL-SCF1",
+                    "KXUELSPREAD-26MAY20SCFAVL-AVL1",
+                    "KXUELSPREAD-26MAY20SCFAVL-AVL2"
                 ]
             }
         },
         "KXATPGSPREAD": {
-            "KXATPGSPREAD-26MAY17MENSTR": {
-                "title": "jakub mensik vs jan-lennard struff: game spread",
-                "subtitle": "jakub mensik vs jan-lennard struff (may 18)",
+            "KXATPGSPREAD-26MAY19UGOTIA": {
+                "title": "camilo ugo carabelli vs frances tiafoe: game spread",
+                "subtitle": "camilo ugo carabelli vs frances tiafoe (may 20)",
                 "market_slugs": [
-                    "KXATPGSPREAD-26MAY17MENSTR-MEN7",
-                    "KXATPGSPREAD-26MAY17MENSTR-MEN4",
-                    "KXATPGSPREAD-26MAY17MENSTR-STR2"
+                    "KXATPGSPREAD-26MAY19UGOTIA-TIA5",
+                    "KXATPGSPREAD-26MAY19UGOTIA-TIA2",
+                    "KXATPGSPREAD-26MAY19UGOTIA-UGO2"
                 ]
             },
-            "KXATPGSPREAD-26MAY17MAJUGO": {
-                "title": "kamil majchrzak vs camilo ugo carabelli: game spread",
-                "subtitle": "kamil majchrzak vs camilo ugo carabelli (may 18)",
+            "KXATPGSPREAD-26MAY19DAVDE": {
+                "title": "alejandro davidovich fokina vs alex de minaur: game spread",
+                "subtitle": "alejandro davidovich fokina vs alex de minaur (may 20)",
                 "market_slugs": [
-                    "KXATPGSPREAD-26MAY17MAJUGO-UGO6",
-                    "KXATPGSPREAD-26MAY17MAJUGO-UGO3",
-                    "KXATPGSPREAD-26MAY17MAJUGO-MAJ2"
+                    "KXATPGSPREAD-26MAY19DAVDE-DE6",
+                    "KXATPGSPREAD-26MAY19DAVDE-DE3",
+                    "KXATPGSPREAD-26MAY19DAVDE-DAV2"
                 ]
             },
-            "KXATPGSPREAD-26MAY17KECKHA": {
-                "title": "miomir kecmanovic vs karen khachanov: game spread",
-                "subtitle": "miomir kecmanovic vs karen khachanov (may 18)",
+            "KXATPGSPREAD-26MAY19TSITIE": {
+                "title": "stefanos tsitsipas vs learner tien: game spread",
+                "subtitle": "stefanos tsitsipas vs learner tien (may 20)",
                 "market_slugs": [
-                    "KXATPGSPREAD-26MAY17KECKHA-KHA5",
-                    "KXATPGSPREAD-26MAY17KECKHA-KHA2",
-                    "KXATPGSPREAD-26MAY17KECKHA-KEC2"
+                    "KXATPGSPREAD-26MAY19TSITIE-TSI6",
+                    "KXATPGSPREAD-26MAY19TSITIE-TSI3",
+                    "KXATPGSPREAD-26MAY19TSITIE-TIE2"
+                ]
+            },
+            "KXATPGSPREAD-26MAY20SVRGOM": {
+                "title": "dalibor svrcina vs federico agustin gomez: game spread",
+                "subtitle": "dalibor svrcina vs federico agustin gomez (may 20)",
+                "market_slugs": [
+                    "KXATPGSPREAD-26MAY20SVRGOM-SVR8",
+                    "KXATPGSPREAD-26MAY20SVRGOM-SVR5",
+                    "KXATPGSPREAD-26MAY20SVRGOM-SVR2"
+                ]
+            },
+            "KXATPGSPREAD-26MAY20GLIPRA": {
+                "title": "daniil glinka vs juan carlos prado angelo: game spread",
+                "subtitle": "daniil glinka vs juan carlos prado angelo (may 20)",
+                "market_slugs": [
+                    "KXATPGSPREAD-26MAY20GLIPRA-PRA8",
+                    "KXATPGSPREAD-26MAY20GLIPRA-PRA5",
+                    "KXATPGSPREAD-26MAY20GLIPRA-PRA2"
+                ]
+            },
+            "KXATPGSPREAD-26MAY19ZHETRA": {
+                "title": "michael zheng vs stefano travaglia: game spread",
+                "subtitle": "michael zheng vs stefano travaglia (may 20)",
+                "market_slugs": [
+                    "KXATPGSPREAD-26MAY19ZHETRA-TRA7",
+                    "KXATPGSPREAD-26MAY19ZHETRA-TRA4",
+                    "KXATPGSPREAD-26MAY19ZHETRA-ZHE2"
+                ]
+            },
+            "KXATPGSPREAD-26MAY19SAMGOF": {
+                "title": "toby samuel vs david goffin: game spread",
+                "subtitle": "toby samuel vs david goffin (may 20)",
+                "market_slugs": [
+                    "KXATPGSPREAD-26MAY19SAMGOF-SAM6",
+                    "KXATPGSPREAD-26MAY19SAMGOF-SAM3",
+                    "KXATPGSPREAD-26MAY19SAMGOF-GOF2"
+                ]
+            },
+            "KXATPGSPREAD-26MAY19SAKCEC": {
+                "title": "stefanos sakellaridis vs marco cecchinato: game spread",
+                "subtitle": "stefanos sakellaridis vs marco cecchinato (may 20)",
+                "market_slugs": [
+                    "KXATPGSPREAD-26MAY19SAKCEC-CEC5",
+                    "KXATPGSPREAD-26MAY19SAKCEC-CEC2",
+                    "KXATPGSPREAD-26MAY19SAKCEC-SAK2"
+                ]
+            },
+            "KXATPGSPREAD-26MAY19PELHAR": {
+                "title": "andrea pellegrino vs lloyd harris: game spread",
+                "subtitle": "andrea pellegrino vs lloyd harris (may 20)",
+                "market_slugs": [
+                    "KXATPGSPREAD-26MAY19PELHAR-PEL6",
+                    "KXATPGSPREAD-26MAY19PELHAR-PEL3",
+                    "KXATPGSPREAD-26MAY19PELHAR-HAR2"
+                ]
+            },
+            "KXATPGSPREAD-26MAY19HOLJAD": {
+                "title": "august holmgren vs daniel jade: game spread",
+                "subtitle": "august holmgren vs daniel jade (may 20)",
+                "market_slugs": [
+                    "KXATPGSPREAD-26MAY19HOLJAD-HOL8",
+                    "KXATPGSPREAD-26MAY19HOLJAD-HOL5",
+                    "KXATPGSPREAD-26MAY19HOLJAD-HOL2"
+                ]
+            },
+            "KXATPGSPREAD-26MAY19FAUCLA": {
+                "title": "thomas faurel vs jay clarke: game spread",
+                "subtitle": "thomas faurel vs jay clarke (may 20)",
+                "market_slugs": [
+                    "KXATPGSPREAD-26MAY19FAUCLA-CLA8",
+                    "KXATPGSPREAD-26MAY19FAUCLA-CLA5",
+                    "KXATPGSPREAD-26MAY19FAUCLA-CLA2"
+                ]
+            },
+            "KXATPGSPREAD-26MAY19DIABER": {
+                "title": "facundo diaz acosta vs remy bertola: game spread",
+                "subtitle": "facundo diaz acosta vs remy bertola (may 20)",
+                "market_slugs": [
+                    "KXATPGSPREAD-26MAY19DIABER-DIA8",
+                    "KXATPGSPREAD-26MAY19DIABER-DIA5",
+                    "KXATPGSPREAD-26MAY19DIABER-DIA2"
+                ]
+            },
+            "KXATPGSPREAD-26MAY19DEJDRA": {
+                "title": "jesper de jong vs liam draxl: game spread",
+                "subtitle": "jesper de jong vs liam draxl (may 20)",
+                "market_slugs": [
+                    "KXATPGSPREAD-26MAY19DEJDRA-DEJ8",
+                    "KXATPGSPREAD-26MAY19DEJDRA-DEJ5",
+                    "KXATPGSPREAD-26MAY19DEJDRA-DEJ2"
+                ]
+            },
+            "KXATPGSPREAD-26MAY19BOSGAL": {
+                "title": "pedro boscardin dias vs alexis galarneau: game spread",
+                "subtitle": "pedro boscardin dias vs alexis galarneau (may 20)",
+                "market_slugs": [
+                    "KXATPGSPREAD-26MAY19BOSGAL-BOS5",
+                    "KXATPGSPREAD-26MAY19BOSGAL-BOS2",
+                    "KXATPGSPREAD-26MAY19BOSGAL-GAL2"
+                ]
+            },
+            "KXATPGSPREAD-26MAY19ALTSHE": {
+                "title": "daniel altmaier vs ben shelton: game spread",
+                "subtitle": "daniel altmaier vs ben shelton (may 19)",
+                "market_slugs": [
+                    "KXATPGSPREAD-26MAY19ALTSHE-SHE8",
+                    "KXATPGSPREAD-26MAY19ALTSHE-SHE5",
+                    "KXATPGSPREAD-26MAY19ALTSHE-SHE2"
+                ]
+            },
+            "KXATPGSPREAD-26MAY19PAUETC": {
+                "title": "tommy paul vs tomas martin etcheverry: game spread",
+                "subtitle": "tommy paul vs tomas martin etcheverry (may 19)",
+                "market_slugs": [
+                    "KXATPGSPREAD-26MAY19PAUETC-PAU6",
+                    "KXATPGSPREAD-26MAY19PAUETC-PAU3",
+                    "KXATPGSPREAD-26MAY19PAUETC-ETC2"
+                ]
+            },
+            "KXATPGSPREAD-26MAY19GASKHA": {
+                "title": "hugo gaston vs karen khachanov: game spread",
+                "subtitle": "hugo gaston vs karen khachanov (may 19)",
+                "market_slugs": [
+                    "KXATPGSPREAD-26MAY19GASKHA-KHA8",
+                    "KXATPGSPREAD-26MAY19GASKHA-KHA5",
+                    "KXATPGSPREAD-26MAY19GASKHA-KHA2"
+                ]
+            },
+            "KXATPGSPREAD-26MAY19KOVGEA": {
+                "title": "aleksandar kovacevic vs arthur gea: game spread",
+                "subtitle": "aleksandar kovacevic vs arthur gea (may 19)",
+                "market_slugs": [
+                    "KXATPGSPREAD-26MAY19KOVGEA-GEA5",
+                    "KXATPGSPREAD-26MAY19KOVGEA-GEA2",
+                    "KXATPGSPREAD-26MAY19KOVGEA-KOV2"
+                ]
+            },
+            "KXATPGSPREAD-26MAY18COBBUS": {
+                "title": "flavio cobolli vs ignacio buse: game spread",
+                "subtitle": "flavio cobolli vs ignacio buse (may 19)",
+                "market_slugs": [
+                    "KXATPGSPREAD-26MAY18COBBUS-COB6",
+                    "KXATPGSPREAD-26MAY18COBBUS-COB3",
+                    "KXATPGSPREAD-26MAY18COBBUS-BUS2"
+                ]
+            },
+            "KXATPGSPREAD-26MAY19NORNAV": {
+                "title": "cameron norrie vs mariano navone: game spread",
+                "subtitle": "cameron norrie vs mariano navone (may 19)",
+                "market_slugs": [
+                    "KXATPGSPREAD-26MAY19NORNAV-NAV5",
+                    "KXATPGSPREAD-26MAY19NORNAV-NAV2",
+                    "KXATPGSPREAD-26MAY19NORNAV-NOR2"
+                ]
+            },
+            "KXATPGSPREAD-26MAY18POPTAB": {
+                "title": "alexei popyrin vs clement tabur: game spread",
+                "subtitle": "alexei popyrin vs clement tabur (may 19)",
+                "market_slugs": [
+                    "KXATPGSPREAD-26MAY18POPTAB-POP7",
+                    "KXATPGSPREAD-26MAY18POPTAB-POP4",
+                    "KXATPGSPREAD-26MAY18POPTAB-TAB2"
+                ]
+            },
+            "KXATPGSPREAD-26MAY18BASMUN": {
+                "title": "nishesh basavareddy vs jaume munar: game spread",
+                "subtitle": "nishesh basavareddy vs jaume munar (may 19)",
+                "market_slugs": [
+                    "KXATPGSPREAD-26MAY18BASMUN-MUN7",
+                    "KXATPGSPREAD-26MAY18BASMUN-MUN4",
+                    "KXATPGSPREAD-26MAY18BASMUN-BAS2"
+                ]
+            },
+            "KXATPGSPREAD-26MAY18YMEFER": {
+                "title": "elias ymer vs arthur fery: game spread",
+                "subtitle": "elias ymer vs arthur fery (may 19)",
+                "market_slugs": [
+                    "KXATPGSPREAD-26MAY18YMEFER-FER7",
+                    "KXATPGSPREAD-26MAY18YMEFER-FER4",
+                    "KXATPGSPREAD-26MAY18YMEFER-YME2"
+                ]
+            },
+            "KXATPGSPREAD-26MAY18SMIGUI": {
+                "title": "colton smith vs alvaro guillen meza: game spread",
+                "subtitle": "colton smith vs alvaro guillen meza (may 19)",
+                "market_slugs": [
+                    "KXATPGSPREAD-26MAY18SMIGUI-SMI5",
+                    "KXATPGSPREAD-26MAY18SMIGUI-SMI2",
+                    "KXATPGSPREAD-26MAY18SMIGUI-GUI2"
+                ]
+            },
+            "KXATPGSPREAD-26MAY18SEYHSU": {
+                "title": "thiago seyboth wild vs yu hsiou hsu: game spread",
+                "subtitle": "thiago seyboth wild vs yu hsiou hsu (may 19)",
+                "market_slugs": [
+                    "KXATPGSPREAD-26MAY18SEYHSU-SEY8",
+                    "KXATPGSPREAD-26MAY18SEYHSU-SEY5",
+                    "KXATPGSPREAD-26MAY18SEYHSU-SEY2"
+                ]
+            },
+            "KXATPGSPREAD-26MAY18SCHCOP": {
+                "title": "tristan schoolkate vs kimmer coppejans: game spread",
+                "subtitle": "tristan schoolkate vs kimmer coppejans (may 19)",
+                "market_slugs": [
+                    "KXATPGSPREAD-26MAY18SCHCOP-COP7",
+                    "KXATPGSPREAD-26MAY18SCHCOP-COP4",
+                    "KXATPGSPREAD-26MAY18SCHCOP-SCH2"
+                ]
+            },
+            "KXATPGSPREAD-26MAY18SAKMAR": {
+                "title": "rei sakamoto vs pedro martinez: game spread",
+                "subtitle": "rei sakamoto vs pedro martinez (may 19)",
+                "market_slugs": [
+                    "KXATPGSPREAD-26MAY18SAKMAR-SAK6",
+                    "KXATPGSPREAD-26MAY18SAKMAR-SAK3",
+                    "KXATPGSPREAD-26MAY18SAKMAR-MAR2"
+                ]
+            },
+            "KXATPGSPREAD-26MAY18RODRIE": {
+                "title": "chris rodesch vs leandro riedi: game spread",
+                "subtitle": "chris rodesch vs leandro riedi (may 19)",
+                "market_slugs": [
+                    "KXATPGSPREAD-26MAY18RODRIE-ROD5",
+                    "KXATPGSPREAD-26MAY18RODRIE-ROD2",
+                    "KXATPGSPREAD-26MAY18RODRIE-RIE2"
+                ]
+            },
+            "KXATPGSPREAD-26MAY18RODLAJ": {
+                "title": "jurij rodionov vs dusan lajovic: game spread",
+                "subtitle": "jurij rodionov vs dusan lajovic (may 19)",
+                "market_slugs": [
+                    "KXATPGSPREAD-26MAY18RODLAJ-LAJ7",
+                    "KXATPGSPREAD-26MAY18RODLAJ-LAJ4",
+                    "KXATPGSPREAD-26MAY18RODLAJ-ROD2"
+                ]
+            },
+            "KXATPGSPREAD-26MAY18ROCPIR": {
+                "title": "henrique rocha vs zsombor piros: game spread",
+                "subtitle": "henrique rocha vs zsombor piros (may 19)",
+                "market_slugs": [
+                    "KXATPGSPREAD-26MAY18ROCPIR-ROC5",
+                    "KXATPGSPREAD-26MAY18ROCPIR-ROC2",
+                    "KXATPGSPREAD-26MAY18ROCPIR-PIR2"
+                ]
+            },
+            "KXATPGSPREAD-26MAY18PAVWEN": {
+                "title": "luka pavlovic vs harry wendelken: game spread",
+                "subtitle": "luka pavlovic vs harry wendelken (may 19)",
+                "market_slugs": [
+                    "KXATPGSPREAD-26MAY18PAVWEN-PAV5",
+                    "KXATPGSPREAD-26MAY18PAVWEN-PAV2",
+                    "KXATPGSPREAD-26MAY18PAVWEN-WEN2"
+                ]
+            },
+            "KXATPGSPREAD-26MAY18NAVYUN": {
+                "title": "emilio nava vs yunchaokete bu: game spread",
+                "subtitle": "emilio nava vs yunchaokete bu (may 19)",
+                "market_slugs": [
+                    "KXATPGSPREAD-26MAY18NAVYUN-NAV7",
+                    "KXATPGSPREAD-26MAY18NAVYUN-NAV4",
+                    "KXATPGSPREAD-26MAY18NAVYUN-YUN2"
+                ]
+            },
+            "KXATPGSPREAD-26MAY18MOLSKA": {
+                "title": "elmer moller vs timofey skatov: game spread",
+                "subtitle": "elmer moller vs timofey skatov (may 19)",
+                "market_slugs": [
+                    "KXATPGSPREAD-26MAY18MOLSKA-MOL6",
+                    "KXATPGSPREAD-26MAY18MOLSKA-MOL3",
+                    "KXATPGSPREAD-26MAY18MOLSKA-SKA2"
+                ]
+            },
+            "KXATPGSPREAD-26MAY18MOLCRA": {
+                "title": "alex molcan vs oliver crawford: game spread",
+                "subtitle": "alex molcan vs oliver crawford (may 19)",
+                "market_slugs": [
+                    "KXATPGSPREAD-26MAY18MOLCRA-MOL10",
+                    "KXATPGSPREAD-26MAY18MOLCRA-MOL7",
+                    "KXATPGSPREAD-26MAY18MOLCRA-MOL4"
+                ]
+            },
+            "KXATPGSPREAD-26MAY18MIDCAR": {
+                "title": "lautaro midon vs roberto carballes baena: game spread",
+                "subtitle": "lautaro midon vs roberto carballes baena (may 19)",
+                "market_slugs": [
+                    "KXATPGSPREAD-26MAY18MIDCAR-CAR7",
+                    "KXATPGSPREAD-26MAY18MIDCAR-CAR4",
+                    "KXATPGSPREAD-26MAY18MIDCAR-MID2"
+                ]
+            },
+            "KXATPGSPREAD-26MAY18MCCKOL": {
+                "title": "james mccabe vs zdenek kolar: game spread",
+                "subtitle": "james mccabe vs zdenek kolar (may 19)",
+                "market_slugs": [
+                    "KXATPGSPREAD-26MAY18MCCKOL-KOL9",
+                    "KXATPGSPREAD-26MAY18MCCKOL-KOL6",
+                    "KXATPGSPREAD-26MAY18MCCKOL-KOL3"
+                ]
+            },
+            "KXATPGSPREAD-26MAY18MAENOG": {
+                "title": "francesco maestrelli vs rio noguchi: game spread",
+                "subtitle": "francesco maestrelli vs rio noguchi (may 19)",
+                "market_slugs": [
+                    "KXATPGSPREAD-26MAY18MAENOG-MAE9",
+                    "KXATPGSPREAD-26MAY18MAENOG-MAE6",
+                    "KXATPGSPREAD-26MAY18MAENOG-MAE3"
+                ]
+            },
+            "KXATPGSPREAD-26MAY18LAJSAF": {
+                "title": "mark lajal vs roman safiullin: game spread",
+                "subtitle": "mark lajal vs roman safiullin (may 19)",
+                "market_slugs": [
+                    "KXATPGSPREAD-26MAY18LAJSAF-SAF9",
+                    "KXATPGSPREAD-26MAY18LAJSAF-SAF6",
+                    "KXATPGSPREAD-26MAY18LAJSAF-SAF3"
+                ]
+            },
+            "KXATPGSPREAD-26MAY18KYMGEN": {
+                "title": "jerome kym vs tom gentzsch: game spread",
+                "subtitle": "jerome kym vs tom gentzsch (may 19)",
+                "market_slugs": [
+                    "KXATPGSPREAD-26MAY18KYMGEN-GEN5",
+                    "KXATPGSPREAD-26MAY18KYMGEN-GEN2",
+                    "KXATPGSPREAD-26MAY18KYMGEN-KYM2"
+                ]
+            },
+            "KXATPGSPREAD-26MAY18HERUCH": {
+                "title": "pierre-hugues herbert vs kaichi uchida: game spread",
+                "subtitle": "pierre-hugues herbert vs kaichi uchida (may 19)",
+                "market_slugs": [
+                    "KXATPGSPREAD-26MAY18HERUCH-HER9",
+                    "KXATPGSPREAD-26MAY18HERUCH-HER6",
+                    "KXATPGSPREAD-26MAY18HERUCH-HER3"
+                ]
+            },
+            "KXATPGSPREAD-26MAY18HEIADD": {
+                "title": "gustavo heide vs dan added: game spread",
+                "subtitle": "gustavo heide vs dan added (may 19)",
+                "market_slugs": [
+                    "KXATPGSPREAD-26MAY18HEIADD-HEI9",
+                    "KXATPGSPREAD-26MAY18HEIADD-HEI6",
+                    "KXATPGSPREAD-26MAY18HEIADD-HEI3"
+                ]
+            },
+            "KXATPGSPREAD-26MAY18GOJGUE": {
+                "title": "borna gojo vs sascha gueymard wayenburg: game spread",
+                "subtitle": "borna gojo vs sascha gueymard wayenburg (may 19)",
+                "market_slugs": [
+                    "KXATPGSPREAD-26MAY18GOJGUE-GOJ7",
+                    "KXATPGSPREAD-26MAY18GOJGUE-GOJ4",
+                    "KXATPGSPREAD-26MAY18GOJGUE-GUE2"
+                ]
+            },
+            "KXATPGSPREAD-26MAY18GIUJAC": {
+                "title": "lorenzo giustino vs kyrian jacquet: game spread",
+                "subtitle": "lorenzo giustino vs kyrian jacquet (may 19)",
+                "market_slugs": [
+                    "KXATPGSPREAD-26MAY18GIUJAC-JAC7",
+                    "KXATPGSPREAD-26MAY18GIUJAC-JAC4",
+                    "KXATPGSPREAD-26MAY18GIUJAC-GIU2"
+                ]
+            },
+            "KXATPGSPREAD-26MAY18FATMIK": {
+                "title": "nerman fatic vs luka mikrut: game spread",
+                "subtitle": "nerman fatic vs luka mikrut (may 19)",
+                "market_slugs": [
+                    "KXATPGSPREAD-26MAY18FATMIK-MIK5",
+                    "KXATPGSPREAD-26MAY18FATMIK-MIK2",
+                    "KXATPGSPREAD-26MAY18FATMIK-FAT2"
+                ]
+            },
+            "KXATPGSPREAD-26MAY18FARDIM": {
+                "title": "jaime faria vs grigor dimitrov: game spread",
+                "subtitle": "jaime faria vs grigor dimitrov (may 19)",
+                "market_slugs": [
+                    "KXATPGSPREAD-26MAY18FARDIM-DIM5",
+                    "KXATPGSPREAD-26MAY18FARDIM-DIM2",
+                    "KXATPGSPREAD-26MAY18FARDIM-FAR2"
+                ]
+            },
+            "KXATPGSPREAD-26MAY18DOUGIL": {
+                "title": "aziz dougaz vs felix gill: game spread",
+                "subtitle": "aziz dougaz vs felix gill (may 19)",
+                "market_slugs": [
+                    "KXATPGSPREAD-26MAY18DOUGIL-GIL8",
+                    "KXATPGSPREAD-26MAY18DOUGIL-GIL5",
+                    "KXATPGSPREAD-26MAY18DOUGIL-GIL2"
+                ]
+            },
+            "KXATPGSPREAD-26MAY18DODZHO": {
+                "title": "matej dodig vs yi zhou: game spread",
+                "subtitle": "matej dodig vs yi zhou (may 19)",
+                "market_slugs": [
+                    "KXATPGSPREAD-26MAY18DODZHO-DOD9",
+                    "KXATPGSPREAD-26MAY18DODZHO-DOD6",
+                    "KXATPGSPREAD-26MAY18DODZHO-DOD3"
+                ]
+            },
+            "KXATPGSPREAD-26MAY18CUEDEL": {
+                "title": "sean cuenin vs hugo dellien: game spread",
+                "subtitle": "sean cuenin vs hugo dellien (may 19)",
+                "market_slugs": [
+                    "KXATPGSPREAD-26MAY18CUEDEL-DEL8",
+                    "KXATPGSPREAD-26MAY18CUEDEL-DEL5",
+                    "KXATPGSPREAD-26MAY18CUEDEL-DEL2"
+                ]
+            },
+            "KXATPGSPREAD-26MAY18CHOAND": {
+                "title": "jan choinski vs andres andrade: game spread",
+                "subtitle": "jan choinski vs andres andrade (may 19)",
+                "market_slugs": [
+                    "KXATPGSPREAD-26MAY18CHOAND-CHO7",
+                    "KXATPGSPREAD-26MAY18CHOAND-CHO4",
+                    "KXATPGSPREAD-26MAY18CHOAND-AND2"
+                ]
+            },
+            "KXATPGSPREAD-26MAY18BUDARN": {
+                "title": "nicolai budkov kjaer vs gilles arnaud bailly: game spread",
+                "subtitle": "nicolai budkov kjaer vs gilles arnaud bailly (may 19)",
+                "market_slugs": [
+                    "KXATPGSPREAD-26MAY18BUDARN-BUD8",
+                    "KXATPGSPREAD-26MAY18BUDARN-BUD5",
+                    "KXATPGSPREAD-26MAY18BUDARN-BUD2"
+                ]
+            },
+            "KXATPGSPREAD-26MAY18BROCAD": {
+                "title": "liam broady vs gianluca cadenasso: game spread",
+                "subtitle": "liam broady vs gianluca cadenasso (may 19)",
+                "market_slugs": [
+                    "KXATPGSPREAD-26MAY18BROCAD-CAD7",
+                    "KXATPGSPREAD-26MAY18BROCAD-CAD4",
+                    "KXATPGSPREAD-26MAY18BROCAD-BRO2"
                 ]
             },
             "KXATPGSPREAD-26MAY17ENGHUM": {
@@ -1615,15 +1629,6 @@
                     "KXATPGSPREAD-26MAY17ENGHUM-HUM2"
                 ]
             },
-            "KXATPGSPREAD-26MAY17DAVMOU": {
-                "title": "alejandro davidovich fokina vs corentin moutet: game spread",
-                "subtitle": "alejandro davidovich fokina vs corentin moutet (may 18)",
-                "market_slugs": [
-                    "KXATPGSPREAD-26MAY17DAVMOU-DAV7",
-                    "KXATPGSPREAD-26MAY17DAVMOU-DAV4",
-                    "KXATPGSPREAD-26MAY17DAVMOU-MOU2"
-                ]
-            },
             "KXATPGSPREAD-26MAY17DARBUR": {
                 "title": "luciano darderi vs roman andres burruchaga: game spread",
                 "subtitle": "luciano darderi vs roman andres burruchaga (may 18)",
@@ -1633,15 +1638,6 @@
                     "KXATPGSPREAD-26MAY17DARBUR-BUR2"
                 ]
             },
-            "KXATPGSPREAD-26MAY17CERDE": {
-                "title": "francisco cerundolo vs alex de minaur: game spread",
-                "subtitle": "francisco cerundolo vs alex de minaur (may 18)",
-                "market_slugs": [
-                    "KXATPGSPREAD-26MAY17CERDE-CER6",
-                    "KXATPGSPREAD-26MAY17CERDE-CER3",
-                    "KXATPGSPREAD-26MAY17CERDE-DE2"
-                ]
-            },
             "KXATPGSPREAD-26MAY17AUGKOP": {
                 "title": "felix auger-aliassime vs vit kopriva: game spread",
                 "subtitle": "felix auger-aliassime vs vit kopriva (may 18)",
@@ -1649,42 +1645,6 @@
                     "KXATPGSPREAD-26MAY17AUGKOP-AUG7",
                     "KXATPGSPREAD-26MAY17AUGKOP-AUG4",
                     "KXATPGSPREAD-26MAY17AUGKOP-KOP2"
-                ]
-            },
-            "KXATPGSPREAD-26MAY17ATMETC": {
-                "title": "terence atmane vs tomas martin etcheverry: game spread",
-                "subtitle": "terence atmane vs tomas martin etcheverry (may 18)",
-                "market_slugs": [
-                    "KXATPGSPREAD-26MAY17ATMETC-ETC7",
-                    "KXATPGSPREAD-26MAY17ATMETC-ETC4",
-                    "KXATPGSPREAD-26MAY17ATMETC-ATM2"
-                ]
-            },
-            "KXATPGSPREAD-26ROME": {
-                "title": "jannik sinner vs casper ruud: game spread",
-                "subtitle": "jannik sinner vs casper ruud (may 17)",
-                "market_slugs": [
-                    "KXATPGSPREAD-26ROME-SIN9",
-                    "KXATPGSPREAD-26ROME-SIN6",
-                    "KXATPGSPREAD-26ROME-SIN3"
-                ]
-            },
-            "KXATPGSPREAD-26MAY16TSIMPE": {
-                "title": "stefanos tsitsipas vs giovanni mpetshi perricard: game spread",
-                "subtitle": "stefanos tsitsipas vs giovanni mpetshi perricard (may 17)",
-                "market_slugs": [
-                    "KXATPGSPREAD-26MAY16TSIMPE-TSI6",
-                    "KXATPGSPREAD-26MAY16TSIMPE-TSI3",
-                    "KXATPGSPREAD-26MAY16TSIMPE-MPE2"
-                ]
-            },
-            "KXATPGSPREAD-26MAY16RINTIR": {
-                "title": "arthur rinderknech vs thiago agustin tirante: game spread",
-                "subtitle": "arthur rinderknech vs thiago agustin tirante (may 17)",
-                "market_slugs": [
-                    "KXATPGSPREAD-26MAY16RINTIR-TIR6",
-                    "KXATPGSPREAD-26MAY16RINTIR-TIR3",
-                    "KXATPGSPREAD-26MAY16RINTIR-RIN2"
                 ]
             },
             "KXATPGSPREAD-26MAY16MANCOL": {
@@ -1713,484 +1673,811 @@
                     "KXATPGSPREAD-26MAY16BRORUU-RUU7",
                     "KXATPGSPREAD-26MAY16BRORUU-RUU4"
                 ]
-            },
-            "KXATPGSPREAD-26MAY16BAEMIC": {
-                "title": "sebastian baez vs alex michelsen: game spread",
-                "subtitle": "sebastian baez vs alex michelsen (may 17)",
-                "market_slugs": [
-                    "KXATPGSPREAD-26MAY16BAEMIC-BAE5",
-                    "KXATPGSPREAD-26MAY16BAEMIC-BAE2",
-                    "KXATPGSPREAD-26MAY16BAEMIC-MIC2"
-                ]
             }
         },
-        "KXLIGAMXSPREAD": {
-            "KXLIGAMXSPREAD-26MAY17PUMPAC": {
-                "title": "pumas unam vs pachuca: spread",
-                "subtitle": "pum vs pac (may 17)",
+        "KXWNBASPREAD": {
+            "KXWNBASPREAD-26MAY19TORPHX": {
+                "title": "toronto vs phoenix",
+                "subtitle": "tor vs phx (may 19)",
                 "market_slugs": [
-                    "KXLIGAMXSPREAD-26MAY17PUMPAC-PUM2",
-                    "KXLIGAMXSPREAD-26MAY17PUMPAC-PUM1",
-                    "KXLIGAMXSPREAD-26MAY17PUMPAC-PAC1",
-                    "KXLIGAMXSPREAD-26MAY17PUMPAC-PAC2"
+                    "KXWNBASPREAD-26MAY19TORPHX-PHX19",
+                    "KXWNBASPREAD-26MAY19TORPHX-PHX15",
+                    "KXWNBASPREAD-26MAY19TORPHX-PHX11",
+                    "KXWNBASPREAD-26MAY19TORPHX-PHX7",
+                    "KXWNBASPREAD-26MAY19TORPHX-TOR2",
+                    "KXWNBASPREAD-26MAY19TORPHX-TOR6",
+                    "KXWNBASPREAD-26MAY19TORPHX-TOR10"
+                ]
+            },
+            "KXWNBASPREAD-26MAY18CONNPDX": {
+                "title": "connecticut vs portland",
+                "subtitle": "conn vs pdx (may 18)",
+                "market_slugs": [
+                    "KXWNBASPREAD-26MAY18CONNPDX-PDX14",
+                    "KXWNBASPREAD-26MAY18CONNPDX-PDX10",
+                    "KXWNBASPREAD-26MAY18CONNPDX-PDX6",
+                    "KXWNBASPREAD-26MAY18CONNPDX-PDX2",
+                    "KXWNBASPREAD-26MAY18CONNPDX-CONN2",
+                    "KXWNBASPREAD-26MAY18CONNPDX-CONN6",
+                    "KXWNBASPREAD-26MAY18CONNPDX-CONN10"
+                ]
+            },
+            "KXWNBASPREAD-26MAY18WSHDAL": {
+                "title": "washington vs dallas",
+                "subtitle": "wsh vs dal (may 18)",
+                "market_slugs": [
+                    "KXWNBASPREAD-26MAY18WSHDAL-DAL16",
+                    "KXWNBASPREAD-26MAY18WSHDAL-DAL12",
+                    "KXWNBASPREAD-26MAY18WSHDAL-DAL8",
+                    "KXWNBASPREAD-26MAY18WSHDAL-DAL4",
+                    "KXWNBASPREAD-26MAY18WSHDAL-WSH2",
+                    "KXWNBASPREAD-26MAY18WSHDAL-WSH6",
+                    "KXWNBASPREAD-26MAY18WSHDAL-WSH10"
                 ]
             }
         },
         "KXMLBSPREAD": {
-            "KXMLBSPREAD-26MAY171920SDSEA": {
-                "title": "san diego vs seattle: spread",
-                "subtitle": "sd vs sea (may 17)",
+            "KXMLBSPREAD-26MAY192140SFAZ": {
+                "title": "san francisco vs arizona: spread",
+                "subtitle": "sf vs az (may 19)",
                 "market_slugs": [
-                    "KXMLBSPREAD-26MAY171920SDSEA-SEA4",
-                    "KXMLBSPREAD-26MAY171920SDSEA-SEA3",
-                    "KXMLBSPREAD-26MAY171920SDSEA-SEA2",
-                    "KXMLBSPREAD-26MAY171920SDSEA-SD2",
-                    "KXMLBSPREAD-26MAY171920SDSEA-SD3",
-                    "KXMLBSPREAD-26MAY171920SDSEA-SD4"
+                    "KXMLBSPREAD-26MAY192140SFAZ-AZ4",
+                    "KXMLBSPREAD-26MAY192140SFAZ-AZ3",
+                    "KXMLBSPREAD-26MAY192140SFAZ-AZ2",
+                    "KXMLBSPREAD-26MAY192140SFAZ-SF2",
+                    "KXMLBSPREAD-26MAY192140SFAZ-SF3",
+                    "KXMLBSPREAD-26MAY192140SFAZ-SF4"
                 ]
             },
-            "KXMLBSPREAD-26MAY171607LADLAA": {
-                "title": "los angeles d vs los angeles a: spread",
-                "subtitle": "lad vs laa (may 17)",
+            "KXMLBSPREAD-26MAY192140LADSD": {
+                "title": "los angeles d vs san diego: spread",
+                "subtitle": "lad vs sd (may 19)",
                 "market_slugs": [
-                    "KXMLBSPREAD-26MAY171607LADLAA-LAA4",
-                    "KXMLBSPREAD-26MAY171607LADLAA-LAA3",
-                    "KXMLBSPREAD-26MAY171607LADLAA-LAA2",
-                    "KXMLBSPREAD-26MAY171607LADLAA-LAD2",
-                    "KXMLBSPREAD-26MAY171607LADLAA-LAD3",
-                    "KXMLBSPREAD-26MAY171607LADLAA-LAD4"
+                    "KXMLBSPREAD-26MAY192140LADSD-SD4",
+                    "KXMLBSPREAD-26MAY192140LADSD-SD3",
+                    "KXMLBSPREAD-26MAY192140LADSD-SD2",
+                    "KXMLBSPREAD-26MAY192140LADSD-LAD2",
+                    "KXMLBSPREAD-26MAY192140LADSD-LAD3",
+                    "KXMLBSPREAD-26MAY192140LADSD-LAD4"
                 ]
             },
-            "KXMLBSPREAD-26MAY171605SFATH": {
-                "title": "san francisco vs a's: spread",
-                "subtitle": "sf vs ath (may 17)",
+            "KXMLBSPREAD-26MAY192138ATHLAA": {
+                "title": "a's vs los angeles a: spread",
+                "subtitle": "ath vs laa (may 19)",
                 "market_slugs": [
-                    "KXMLBSPREAD-26MAY171605SFATH-ATH4",
-                    "KXMLBSPREAD-26MAY171605SFATH-ATH3",
-                    "KXMLBSPREAD-26MAY171605SFATH-ATH2",
-                    "KXMLBSPREAD-26MAY171605SFATH-SF2",
-                    "KXMLBSPREAD-26MAY171605SFATH-SF3",
-                    "KXMLBSPREAD-26MAY171605SFATH-SF4"
+                    "KXMLBSPREAD-26MAY192138ATHLAA-LAA4",
+                    "KXMLBSPREAD-26MAY192138ATHLAA-LAA3",
+                    "KXMLBSPREAD-26MAY192138ATHLAA-LAA2",
+                    "KXMLBSPREAD-26MAY192138ATHLAA-ATH2",
+                    "KXMLBSPREAD-26MAY192138ATHLAA-ATH3",
+                    "KXMLBSPREAD-26MAY192138ATHLAA-ATH4"
                 ]
             },
-            "KXMLBSPREAD-26MAY171510AZCOL": {
-                "title": "arizona vs colorado: spread",
-                "subtitle": "az vs col (may 17)",
+            "KXMLBSPREAD-26MAY191945PITSTL": {
+                "title": "pittsburgh vs st. louis: spread",
+                "subtitle": "pit vs stl (may 19)",
                 "market_slugs": [
-                    "KXMLBSPREAD-26MAY171510AZCOL-COL4",
-                    "KXMLBSPREAD-26MAY171510AZCOL-COL3",
-                    "KXMLBSPREAD-26MAY171510AZCOL-COL2",
-                    "KXMLBSPREAD-26MAY171510AZCOL-AZ2",
-                    "KXMLBSPREAD-26MAY171510AZCOL-AZ3",
-                    "KXMLBSPREAD-26MAY171510AZCOL-AZ4"
+                    "KXMLBSPREAD-26MAY191945PITSTL-STL4",
+                    "KXMLBSPREAD-26MAY191945PITSTL-STL3",
+                    "KXMLBSPREAD-26MAY191945PITSTL-STL2",
+                    "KXMLBSPREAD-26MAY191945PITSTL-PIT2",
+                    "KXMLBSPREAD-26MAY191945PITSTL-PIT3",
+                    "KXMLBSPREAD-26MAY191945PITSTL-PIT4"
                 ]
             },
-            "KXMLBSPREAD-26MAY171415KCSTL": {
-                "title": "kansas city vs st. louis: spread",
-                "subtitle": "kc vs stl (may 17)",
+            "KXMLBSPREAD-26MAY191940HOUMIN": {
+                "title": "houston vs minnesota: spread",
+                "subtitle": "hou vs min (may 19)",
                 "market_slugs": [
-                    "KXMLBSPREAD-26MAY171415KCSTL-STL4",
-                    "KXMLBSPREAD-26MAY171415KCSTL-STL3",
-                    "KXMLBSPREAD-26MAY171415KCSTL-STL2",
-                    "KXMLBSPREAD-26MAY171415KCSTL-KC2",
-                    "KXMLBSPREAD-26MAY171415KCSTL-KC3",
-                    "KXMLBSPREAD-26MAY171415KCSTL-KC4"
+                    "KXMLBSPREAD-26MAY191940HOUMIN-MIN4",
+                    "KXMLBSPREAD-26MAY191940HOUMIN-MIN3",
+                    "KXMLBSPREAD-26MAY191940HOUMIN-MIN2",
+                    "KXMLBSPREAD-26MAY191940HOUMIN-HOU2",
+                    "KXMLBSPREAD-26MAY191940HOUMIN-HOU3",
+                    "KXMLBSPREAD-26MAY191940HOUMIN-HOU4"
                 ]
             },
-            "KXMLBSPREAD-26MAY171410TEXHOU": {
-                "title": "texas vs houston: spread",
-                "subtitle": "tex vs hou (may 17)",
+            "KXMLBSPREAD-26MAY191940BOSKC": {
+                "title": "boston vs kansas city: spread",
+                "subtitle": "bos vs kc (may 19)",
                 "market_slugs": [
-                    "KXMLBSPREAD-26MAY171410TEXHOU-HOU4",
-                    "KXMLBSPREAD-26MAY171410TEXHOU-HOU3",
-                    "KXMLBSPREAD-26MAY171410TEXHOU-HOU2",
-                    "KXMLBSPREAD-26MAY171410TEXHOU-TEX2",
-                    "KXMLBSPREAD-26MAY171410TEXHOU-TEX3",
-                    "KXMLBSPREAD-26MAY171410TEXHOU-TEX4"
+                    "KXMLBSPREAD-26MAY191940BOSKC-KC4",
+                    "KXMLBSPREAD-26MAY191940BOSKC-KC3",
+                    "KXMLBSPREAD-26MAY191940BOSKC-KC2",
+                    "KXMLBSPREAD-26MAY191940BOSKC-BOS2",
+                    "KXMLBSPREAD-26MAY191940BOSKC-BOS3",
+                    "KXMLBSPREAD-26MAY191940BOSKC-BOS4"
                 ]
             },
-            "KXMLBSPREAD-26MAY171410MILMIN": {
-                "title": "milwaukee vs minnesota: spread",
-                "subtitle": "mil vs min (may 17)",
+            "KXMLBSPREAD-26MAY191905TORNYY": {
+                "title": "toronto vs new york y: spread",
+                "subtitle": "tor vs nyy (may 19)",
                 "market_slugs": [
-                    "KXMLBSPREAD-26MAY171410MILMIN-MIN4",
-                    "KXMLBSPREAD-26MAY171410MILMIN-MIN3",
-                    "KXMLBSPREAD-26MAY171410MILMIN-MIN2",
-                    "KXMLBSPREAD-26MAY171410MILMIN-MIL2",
-                    "KXMLBSPREAD-26MAY171410MILMIN-MIL3",
-                    "KXMLBSPREAD-26MAY171410MILMIN-MIL4"
+                    "KXMLBSPREAD-26MAY191905TORNYY-NYY4",
+                    "KXMLBSPREAD-26MAY191905TORNYY-NYY3",
+                    "KXMLBSPREAD-26MAY191905TORNYY-NYY2",
+                    "KXMLBSPREAD-26MAY191905TORNYY-TOR2",
+                    "KXMLBSPREAD-26MAY191905TORNYY-TOR3",
+                    "KXMLBSPREAD-26MAY191905TORNYY-TOR4"
                 ]
             },
-            "KXMLBSPREAD-26MAY171410CHCCWS": {
-                "title": "chicago c vs chicago ws: spread",
-                "subtitle": "chc vs cws (may 17)",
+            "KXMLBSPREAD-26MAY191845NYMWSH": {
+                "title": "new york m vs washington: spread",
+                "subtitle": "nym vs wsh (may 19)",
                 "market_slugs": [
-                    "KXMLBSPREAD-26MAY171410CHCCWS-CWS4",
-                    "KXMLBSPREAD-26MAY171410CHCCWS-CWS3",
-                    "KXMLBSPREAD-26MAY171410CHCCWS-CWS2",
-                    "KXMLBSPREAD-26MAY171410CHCCWS-CHC2",
-                    "KXMLBSPREAD-26MAY171410CHCCWS-CHC3",
-                    "KXMLBSPREAD-26MAY171410CHCCWS-CHC4"
+                    "KXMLBSPREAD-26MAY191845NYMWSH-WSH4",
+                    "KXMLBSPREAD-26MAY191845NYMWSH-WSH3",
+                    "KXMLBSPREAD-26MAY191845NYMWSH-WSH2",
+                    "KXMLBSPREAD-26MAY191845NYMWSH-NYM2",
+                    "KXMLBSPREAD-26MAY191845NYMWSH-NYM3",
+                    "KXMLBSPREAD-26MAY191845NYMWSH-NYM4"
                 ]
             },
-            "KXMLBSPREAD-26MAY171340TORDET": {
-                "title": "toronto vs detroit: spread",
-                "subtitle": "tor vs det (may 17)",
+            "KXMLBSPREAD-26MAY191840CLEDET": {
+                "title": "cleveland vs detroit: spread",
+                "subtitle": "cle vs det (may 19)",
                 "market_slugs": [
-                    "KXMLBSPREAD-26MAY171340TORDET-DET4",
-                    "KXMLBSPREAD-26MAY171340TORDET-DET3",
-                    "KXMLBSPREAD-26MAY171340TORDET-DET2",
-                    "KXMLBSPREAD-26MAY171340TORDET-TOR2",
-                    "KXMLBSPREAD-26MAY171340TORDET-TOR3",
-                    "KXMLBSPREAD-26MAY171340TORDET-TOR4"
+                    "KXMLBSPREAD-26MAY191840CLEDET-DET4",
+                    "KXMLBSPREAD-26MAY191840CLEDET-DET3",
+                    "KXMLBSPREAD-26MAY191840CLEDET-DET2",
+                    "KXMLBSPREAD-26MAY191840CLEDET-CLE2",
+                    "KXMLBSPREAD-26MAY191840CLEDET-CLE3",
+                    "KXMLBSPREAD-26MAY191840CLEDET-CLE4"
                 ]
             },
-            "KXMLBSPREAD-26MAY171340NYYNYM": {
-                "title": "new york y vs new york m: spread",
-                "subtitle": "nyy vs nym (may 17)",
+            "KXMLBSPREAD-26MAY191840CINPHI": {
+                "title": "cincinnati vs philadelphia: spread",
+                "subtitle": "cin vs phi (may 19)",
                 "market_slugs": [
-                    "KXMLBSPREAD-26MAY171340NYYNYM-NYM4",
-                    "KXMLBSPREAD-26MAY171340NYYNYM-NYM3",
-                    "KXMLBSPREAD-26MAY171340NYYNYM-NYM2",
-                    "KXMLBSPREAD-26MAY171340NYYNYM-NYY2",
-                    "KXMLBSPREAD-26MAY171340NYYNYM-NYY3",
-                    "KXMLBSPREAD-26MAY171340NYYNYM-NYY4"
+                    "KXMLBSPREAD-26MAY191840CINPHI-PHI4",
+                    "KXMLBSPREAD-26MAY191840CINPHI-PHI3",
+                    "KXMLBSPREAD-26MAY191840CINPHI-PHI2",
+                    "KXMLBSPREAD-26MAY191840CINPHI-CIN2",
+                    "KXMLBSPREAD-26MAY191840CINPHI-CIN3",
+                    "KXMLBSPREAD-26MAY191840CINPHI-CIN4"
                 ]
             },
-            "KXMLBSPREAD-26MAY171340CINCLE": {
-                "title": "cincinnati vs cleveland: spread",
-                "subtitle": "cin vs cle (may 17)",
+            "KXMLBSPREAD-26MAY191840BALTB": {
+                "title": "baltimore vs tampa bay: spread",
+                "subtitle": "bal vs tb (may 19)",
                 "market_slugs": [
-                    "KXMLBSPREAD-26MAY171340CINCLE-CLE4",
-                    "KXMLBSPREAD-26MAY171340CINCLE-CLE3",
-                    "KXMLBSPREAD-26MAY171340CINCLE-CLE2",
-                    "KXMLBSPREAD-26MAY171340CINCLE-CIN2",
-                    "KXMLBSPREAD-26MAY171340CINCLE-CIN3",
-                    "KXMLBSPREAD-26MAY171340CINCLE-CIN4"
+                    "KXMLBSPREAD-26MAY191840BALTB-TB4",
+                    "KXMLBSPREAD-26MAY191840BALTB-TB3",
+                    "KXMLBSPREAD-26MAY191840BALTB-TB2",
+                    "KXMLBSPREAD-26MAY191840BALTB-BAL2",
+                    "KXMLBSPREAD-26MAY191840BALTB-BAL3",
+                    "KXMLBSPREAD-26MAY191840BALTB-BAL4"
                 ]
             },
-            "KXMLBSPREAD-26MAY171335PHIPIT": {
-                "title": "philadelphia vs pittsburgh: spread",
-                "subtitle": "phi vs pit (may 17)",
+            "KXMLBSPREAD-26MAY191610ATLMIA": {
+                "title": "atlanta vs miami: spread",
+                "subtitle": "atl vs mia (may 19)",
                 "market_slugs": [
-                    "KXMLBSPREAD-26MAY171335PHIPIT-PIT4",
-                    "KXMLBSPREAD-26MAY171335PHIPIT-PIT3",
-                    "KXMLBSPREAD-26MAY171335PHIPIT-PIT2",
-                    "KXMLBSPREAD-26MAY171335PHIPIT-PHI2",
-                    "KXMLBSPREAD-26MAY171335PHIPIT-PHI3",
-                    "KXMLBSPREAD-26MAY171335PHIPIT-PHI4"
+                    "KXMLBSPREAD-26MAY191610ATLMIA-MIA4",
+                    "KXMLBSPREAD-26MAY191610ATLMIA-MIA3",
+                    "KXMLBSPREAD-26MAY191610ATLMIA-MIA2",
+                    "KXMLBSPREAD-26MAY191610ATLMIA-ATL2",
+                    "KXMLBSPREAD-26MAY191610ATLMIA-ATL3",
+                    "KXMLBSPREAD-26MAY191610ATLMIA-ATL4"
                 ]
             },
-            "KXMLBSPREAD-26MAY171335BOSATL": {
-                "title": "boston vs atlanta: spread",
-                "subtitle": "bos vs atl (may 17)",
+            "KXMLBSPREAD-26MAY182140SFAZ": {
+                "title": "san francisco vs arizona: spread",
+                "subtitle": "sf vs az (may 18)",
                 "market_slugs": [
-                    "KXMLBSPREAD-26MAY171335BOSATL-ATL4",
-                    "KXMLBSPREAD-26MAY171335BOSATL-ATL3",
-                    "KXMLBSPREAD-26MAY171335BOSATL-ATL2",
-                    "KXMLBSPREAD-26MAY171335BOSATL-BOS2",
-                    "KXMLBSPREAD-26MAY171335BOSATL-BOS3",
-                    "KXMLBSPREAD-26MAY171335BOSATL-BOS4"
+                    "KXMLBSPREAD-26MAY182140SFAZ-AZ4",
+                    "KXMLBSPREAD-26MAY182140SFAZ-AZ3",
+                    "KXMLBSPREAD-26MAY182140SFAZ-AZ2",
+                    "KXMLBSPREAD-26MAY182140SFAZ-SF2",
+                    "KXMLBSPREAD-26MAY182140SFAZ-SF3",
+                    "KXMLBSPREAD-26MAY182140SFAZ-SF4"
                 ]
             },
-            "KXMLBSPREAD-26MAY171335BALWSH": {
-                "title": "baltimore vs washington: spread",
-                "subtitle": "bal vs wsh (may 17)",
+            "KXMLBSPREAD-26MAY182140LADSD": {
+                "title": "los angeles d vs san diego: spread",
+                "subtitle": "lad vs sd (may 18)",
                 "market_slugs": [
-                    "KXMLBSPREAD-26MAY171335BALWSH-WSH4",
-                    "KXMLBSPREAD-26MAY171335BALWSH-WSH3",
-                    "KXMLBSPREAD-26MAY171335BALWSH-WSH2",
-                    "KXMLBSPREAD-26MAY171335BALWSH-BAL2",
-                    "KXMLBSPREAD-26MAY171335BALWSH-BAL3",
-                    "KXMLBSPREAD-26MAY171335BALWSH-BAL4"
+                    "KXMLBSPREAD-26MAY182140LADSD-SD4",
+                    "KXMLBSPREAD-26MAY182140LADSD-SD3",
+                    "KXMLBSPREAD-26MAY182140LADSD-SD2",
+                    "KXMLBSPREAD-26MAY182140LADSD-LAD2",
+                    "KXMLBSPREAD-26MAY182140LADSD-LAD3",
+                    "KXMLBSPREAD-26MAY182140LADSD-LAD4"
                 ]
             },
-            "KXMLBSPREAD-26MAY171215MIATB": {
-                "title": "miami vs tampa bay: spread",
-                "subtitle": "mia vs tb (may 17)",
+            "KXMLBSPREAD-26MAY182140CWSSEA": {
+                "title": "chicago ws vs seattle: spread",
+                "subtitle": "cws vs sea (may 18)",
                 "market_slugs": [
-                    "KXMLBSPREAD-26MAY171215MIATB-TB4",
-                    "KXMLBSPREAD-26MAY171215MIATB-TB3",
-                    "KXMLBSPREAD-26MAY171215MIATB-TB2",
-                    "KXMLBSPREAD-26MAY171215MIATB-MIA2",
-                    "KXMLBSPREAD-26MAY171215MIATB-MIA3",
-                    "KXMLBSPREAD-26MAY171215MIATB-MIA4"
+                    "KXMLBSPREAD-26MAY182140CWSSEA-SEA4",
+                    "KXMLBSPREAD-26MAY182140CWSSEA-SEA3",
+                    "KXMLBSPREAD-26MAY182140CWSSEA-SEA2",
+                    "KXMLBSPREAD-26MAY182140CWSSEA-CWS2",
+                    "KXMLBSPREAD-26MAY182140CWSSEA-CWS3",
+                    "KXMLBSPREAD-26MAY182140CWSSEA-CWS4"
+                ]
+            },
+            "KXMLBSPREAD-26MAY182138ATHLAA": {
+                "title": "a's vs los angeles a: spread",
+                "subtitle": "ath vs laa (may 18)",
+                "market_slugs": [
+                    "KXMLBSPREAD-26MAY182138ATHLAA-LAA4",
+                    "KXMLBSPREAD-26MAY182138ATHLAA-LAA3",
+                    "KXMLBSPREAD-26MAY182138ATHLAA-LAA2",
+                    "KXMLBSPREAD-26MAY182138ATHLAA-ATH2",
+                    "KXMLBSPREAD-26MAY182138ATHLAA-ATH3",
+                    "KXMLBSPREAD-26MAY182138ATHLAA-ATH4"
+                ]
+            },
+            "KXMLBSPREAD-26MAY182040TEXCOL": {
+                "title": "texas vs colorado: spread",
+                "subtitle": "tex vs col (may 18)",
+                "market_slugs": [
+                    "KXMLBSPREAD-26MAY182040TEXCOL-COL4",
+                    "KXMLBSPREAD-26MAY182040TEXCOL-COL3",
+                    "KXMLBSPREAD-26MAY182040TEXCOL-COL2",
+                    "KXMLBSPREAD-26MAY182040TEXCOL-TEX2",
+                    "KXMLBSPREAD-26MAY182040TEXCOL-TEX3",
+                    "KXMLBSPREAD-26MAY182040TEXCOL-TEX4"
+                ]
+            },
+            "KXMLBSPREAD-26MAY181940MILCHC": {
+                "title": "milwaukee vs chicago c: spread",
+                "subtitle": "mil vs chc (may 18)",
+                "market_slugs": [
+                    "KXMLBSPREAD-26MAY181940MILCHC-CHC4",
+                    "KXMLBSPREAD-26MAY181940MILCHC-CHC3",
+                    "KXMLBSPREAD-26MAY181940MILCHC-CHC2",
+                    "KXMLBSPREAD-26MAY181940MILCHC-MIL2",
+                    "KXMLBSPREAD-26MAY181940MILCHC-MIL3",
+                    "KXMLBSPREAD-26MAY181940MILCHC-MIL4"
+                ]
+            },
+            "KXMLBSPREAD-26MAY181940HOUMIN": {
+                "title": "houston vs minnesota: spread",
+                "subtitle": "hou vs min (may 18)",
+                "market_slugs": [
+                    "KXMLBSPREAD-26MAY181940HOUMIN-MIN4",
+                    "KXMLBSPREAD-26MAY181940HOUMIN-MIN3",
+                    "KXMLBSPREAD-26MAY181940HOUMIN-MIN2",
+                    "KXMLBSPREAD-26MAY181940HOUMIN-HOU2",
+                    "KXMLBSPREAD-26MAY181940HOUMIN-HOU3",
+                    "KXMLBSPREAD-26MAY181940HOUMIN-HOU4"
+                ]
+            },
+            "KXMLBSPREAD-26MAY181940BOSKC": {
+                "title": "boston vs kansas city: spread",
+                "subtitle": "bos vs kc (may 18)",
+                "market_slugs": [
+                    "KXMLBSPREAD-26MAY181940BOSKC-KC4",
+                    "KXMLBSPREAD-26MAY181940BOSKC-KC3",
+                    "KXMLBSPREAD-26MAY181940BOSKC-KC2",
+                    "KXMLBSPREAD-26MAY181940BOSKC-BOS2",
+                    "KXMLBSPREAD-26MAY181940BOSKC-BOS3",
+                    "KXMLBSPREAD-26MAY181940BOSKC-BOS4"
+                ]
+            },
+            "KXMLBSPREAD-26MAY181905TORNYY": {
+                "title": "toronto vs new york y: spread",
+                "subtitle": "tor vs nyy (may 18)",
+                "market_slugs": [
+                    "KXMLBSPREAD-26MAY181905TORNYY-NYY4",
+                    "KXMLBSPREAD-26MAY181905TORNYY-NYY3",
+                    "KXMLBSPREAD-26MAY181905TORNYY-NYY2",
+                    "KXMLBSPREAD-26MAY181905TORNYY-TOR2",
+                    "KXMLBSPREAD-26MAY181905TORNYY-TOR3",
+                    "KXMLBSPREAD-26MAY181905TORNYY-TOR4"
+                ]
+            },
+            "KXMLBSPREAD-26MAY181845NYMWSH": {
+                "title": "new york m vs washington: spread",
+                "subtitle": "nym vs wsh (may 18)",
+                "market_slugs": [
+                    "KXMLBSPREAD-26MAY181845NYMWSH-WSH4",
+                    "KXMLBSPREAD-26MAY181845NYMWSH-WSH3",
+                    "KXMLBSPREAD-26MAY181845NYMWSH-WSH2",
+                    "KXMLBSPREAD-26MAY181845NYMWSH-NYM2",
+                    "KXMLBSPREAD-26MAY181845NYMWSH-NYM3",
+                    "KXMLBSPREAD-26MAY181845NYMWSH-NYM4"
+                ]
+            },
+            "KXMLBSPREAD-26MAY181840CLEDET": {
+                "title": "cleveland vs detroit: spread",
+                "subtitle": "cle vs det (may 18)",
+                "market_slugs": [
+                    "KXMLBSPREAD-26MAY181840CLEDET-DET4",
+                    "KXMLBSPREAD-26MAY181840CLEDET-DET3",
+                    "KXMLBSPREAD-26MAY181840CLEDET-DET2",
+                    "KXMLBSPREAD-26MAY181840CLEDET-CLE2",
+                    "KXMLBSPREAD-26MAY181840CLEDET-CLE3",
+                    "KXMLBSPREAD-26MAY181840CLEDET-CLE4"
+                ]
+            },
+            "KXMLBSPREAD-26MAY181840CINPHI": {
+                "title": "cincinnati vs philadelphia: spread",
+                "subtitle": "cin vs phi (may 18)",
+                "market_slugs": [
+                    "KXMLBSPREAD-26MAY181840CINPHI-PHI5",
+                    "KXMLBSPREAD-26MAY181840CINPHI-PHI4",
+                    "KXMLBSPREAD-26MAY181840CINPHI-PHI3",
+                    "KXMLBSPREAD-26MAY181840CINPHI-PHI2",
+                    "KXMLBSPREAD-26MAY181840CINPHI-CIN2",
+                    "KXMLBSPREAD-26MAY181840CINPHI-CIN3",
+                    "KXMLBSPREAD-26MAY181840CINPHI-CIN4"
+                ]
+            },
+            "KXMLBSPREAD-26MAY181840BALTB": {
+                "title": "baltimore vs tampa bay: spread",
+                "subtitle": "bal vs tb (may 18)",
+                "market_slugs": [
+                    "KXMLBSPREAD-26MAY181840BALTB-TB9",
+                    "KXMLBSPREAD-26MAY181840BALTB-TB8",
+                    "KXMLBSPREAD-26MAY181840BALTB-TB7",
+                    "KXMLBSPREAD-26MAY181840BALTB-TB6",
+                    "KXMLBSPREAD-26MAY181840BALTB-TB5",
+                    "KXMLBSPREAD-26MAY181840BALTB-TB4",
+                    "KXMLBSPREAD-26MAY181840BALTB-TB3",
+                    "KXMLBSPREAD-26MAY181840BALTB-TB2",
+                    "KXMLBSPREAD-26MAY181840BALTB-BAL2",
+                    "KXMLBSPREAD-26MAY181840BALTB-BAL3",
+                    "KXMLBSPREAD-26MAY181840BALTB-BAL4"
+                ]
+            },
+            "KXMLBSPREAD-26MAY181840ATLMIA": {
+                "title": "atlanta vs miami: spread",
+                "subtitle": "atl vs mia (may 18)",
+                "market_slugs": [
+                    "KXMLBSPREAD-26MAY181840ATLMIA-MIA4",
+                    "KXMLBSPREAD-26MAY181840ATLMIA-MIA3",
+                    "KXMLBSPREAD-26MAY181840ATLMIA-MIA2",
+                    "KXMLBSPREAD-26MAY181840ATLMIA-ATL2",
+                    "KXMLBSPREAD-26MAY181840ATLMIA-ATL3",
+                    "KXMLBSPREAD-26MAY181840ATLMIA-ATL4"
                 ]
             }
         },
         "KXMLBF5SPREAD": {
-            "KXMLBF5SPREAD-26MAY171920SDSEA": {
-                "title": "san diego vs seattle: first 5 spread",
-                "subtitle": "sd vs sea (may 17)",
+            "KXMLBF5SPREAD-26MAY192140SFAZ": {
+                "title": "san francisco vs arizona: first 5 spread",
+                "subtitle": "sf vs az (may 19)",
                 "market_slugs": [
-                    "KXMLBF5SPREAD-26MAY171920SDSEA-SEA3",
-                    "KXMLBF5SPREAD-26MAY171920SDSEA-SEA2",
-                    "KXMLBF5SPREAD-26MAY171920SDSEA-SD2",
-                    "KXMLBF5SPREAD-26MAY171920SDSEA-SD3"
+                    "KXMLBF5SPREAD-26MAY192140SFAZ-AZ3",
+                    "KXMLBF5SPREAD-26MAY192140SFAZ-AZ2",
+                    "KXMLBF5SPREAD-26MAY192140SFAZ-SF2",
+                    "KXMLBF5SPREAD-26MAY192140SFAZ-SF3"
                 ]
             },
-            "KXMLBF5SPREAD-26MAY171607LADLAA": {
-                "title": "los angeles d vs los angeles a: first 5 spread",
-                "subtitle": "lad vs laa (may 17)",
+            "KXMLBF5SPREAD-26MAY192140LADSD": {
+                "title": "los angeles d vs san diego: first 5 spread",
+                "subtitle": "lad vs sd (may 19)",
                 "market_slugs": [
-                    "KXMLBF5SPREAD-26MAY171607LADLAA-LAA3",
-                    "KXMLBF5SPREAD-26MAY171607LADLAA-LAA2",
-                    "KXMLBF5SPREAD-26MAY171607LADLAA-LAD2",
-                    "KXMLBF5SPREAD-26MAY171607LADLAA-LAD3"
+                    "KXMLBF5SPREAD-26MAY192140LADSD-SD3",
+                    "KXMLBF5SPREAD-26MAY192140LADSD-SD2",
+                    "KXMLBF5SPREAD-26MAY192140LADSD-LAD2",
+                    "KXMLBF5SPREAD-26MAY192140LADSD-LAD3"
                 ]
             },
-            "KXMLBF5SPREAD-26MAY171605SFATH": {
-                "title": "san francisco vs a's: first 5 spread",
-                "subtitle": "sf vs ath (may 17)",
+            "KXMLBF5SPREAD-26MAY192138ATHLAA": {
+                "title": "a's vs los angeles a: first 5 spread",
+                "subtitle": "ath vs laa (may 19)",
                 "market_slugs": [
-                    "KXMLBF5SPREAD-26MAY171605SFATH-ATH3",
-                    "KXMLBF5SPREAD-26MAY171605SFATH-ATH2",
-                    "KXMLBF5SPREAD-26MAY171605SFATH-SF2",
-                    "KXMLBF5SPREAD-26MAY171605SFATH-SF3"
+                    "KXMLBF5SPREAD-26MAY192138ATHLAA-LAA3",
+                    "KXMLBF5SPREAD-26MAY192138ATHLAA-LAA2",
+                    "KXMLBF5SPREAD-26MAY192138ATHLAA-ATH2",
+                    "KXMLBF5SPREAD-26MAY192138ATHLAA-ATH3"
                 ]
             },
-            "KXMLBF5SPREAD-26MAY171510AZCOL": {
-                "title": "arizona vs colorado: first 5 spread",
-                "subtitle": "az vs col (may 17)",
+            "KXMLBF5SPREAD-26MAY191945PITSTL": {
+                "title": "pittsburgh vs st. louis: first 5 spread",
+                "subtitle": "pit vs stl (may 19)",
                 "market_slugs": [
-                    "KXMLBF5SPREAD-26MAY171510AZCOL-COL3",
-                    "KXMLBF5SPREAD-26MAY171510AZCOL-COL2",
-                    "KXMLBF5SPREAD-26MAY171510AZCOL-AZ2",
-                    "KXMLBF5SPREAD-26MAY171510AZCOL-AZ3"
+                    "KXMLBF5SPREAD-26MAY191945PITSTL-STL3",
+                    "KXMLBF5SPREAD-26MAY191945PITSTL-STL2",
+                    "KXMLBF5SPREAD-26MAY191945PITSTL-PIT2",
+                    "KXMLBF5SPREAD-26MAY191945PITSTL-PIT3"
                 ]
             },
-            "KXMLBF5SPREAD-26MAY171415KCSTL": {
-                "title": "kansas city vs st. louis: first 5 spread",
-                "subtitle": "kc vs stl (may 17)",
+            "KXMLBF5SPREAD-26MAY191940HOUMIN": {
+                "title": "houston vs minnesota: first 5 spread",
+                "subtitle": "hou vs min (may 19)",
                 "market_slugs": [
-                    "KXMLBF5SPREAD-26MAY171415KCSTL-STL3",
-                    "KXMLBF5SPREAD-26MAY171415KCSTL-STL2",
-                    "KXMLBF5SPREAD-26MAY171415KCSTL-KC2",
-                    "KXMLBF5SPREAD-26MAY171415KCSTL-KC3"
+                    "KXMLBF5SPREAD-26MAY191940HOUMIN-MIN3",
+                    "KXMLBF5SPREAD-26MAY191940HOUMIN-MIN2",
+                    "KXMLBF5SPREAD-26MAY191940HOUMIN-HOU2",
+                    "KXMLBF5SPREAD-26MAY191940HOUMIN-HOU3"
                 ]
             },
-            "KXMLBF5SPREAD-26MAY171410TEXHOU": {
-                "title": "texas vs houston: first 5 spread",
-                "subtitle": "tex vs hou (may 17)",
+            "KXMLBF5SPREAD-26MAY191940BOSKC": {
+                "title": "boston vs kansas city: first 5 spread",
+                "subtitle": "bos vs kc (may 19)",
                 "market_slugs": [
-                    "KXMLBF5SPREAD-26MAY171410TEXHOU-HOU3",
-                    "KXMLBF5SPREAD-26MAY171410TEXHOU-HOU2",
-                    "KXMLBF5SPREAD-26MAY171410TEXHOU-TEX2",
-                    "KXMLBF5SPREAD-26MAY171410TEXHOU-TEX3"
+                    "KXMLBF5SPREAD-26MAY191940BOSKC-KC3",
+                    "KXMLBF5SPREAD-26MAY191940BOSKC-KC2",
+                    "KXMLBF5SPREAD-26MAY191940BOSKC-BOS2",
+                    "KXMLBF5SPREAD-26MAY191940BOSKC-BOS3"
                 ]
             },
-            "KXMLBF5SPREAD-26MAY171410MILMIN": {
-                "title": "milwaukee vs minnesota: first 5 spread",
-                "subtitle": "mil vs min (may 17)",
+            "KXMLBF5SPREAD-26MAY191905TORNYY": {
+                "title": "toronto vs new york y: first 5 spread",
+                "subtitle": "tor vs nyy (may 19)",
                 "market_slugs": [
-                    "KXMLBF5SPREAD-26MAY171410MILMIN-MIN3",
-                    "KXMLBF5SPREAD-26MAY171410MILMIN-MIN2",
-                    "KXMLBF5SPREAD-26MAY171410MILMIN-MIL2",
-                    "KXMLBF5SPREAD-26MAY171410MILMIN-MIL3"
+                    "KXMLBF5SPREAD-26MAY191905TORNYY-NYY3",
+                    "KXMLBF5SPREAD-26MAY191905TORNYY-NYY2",
+                    "KXMLBF5SPREAD-26MAY191905TORNYY-TOR2",
+                    "KXMLBF5SPREAD-26MAY191905TORNYY-TOR3"
                 ]
             },
-            "KXMLBF5SPREAD-26MAY171410CHCCWS": {
-                "title": "chicago c vs chicago ws: first 5 spread",
-                "subtitle": "chc vs cws (may 17)",
+            "KXMLBF5SPREAD-26MAY191845NYMWSH": {
+                "title": "new york m vs washington: first 5 spread",
+                "subtitle": "nym vs wsh (may 19)",
                 "market_slugs": [
-                    "KXMLBF5SPREAD-26MAY171410CHCCWS-CWS3",
-                    "KXMLBF5SPREAD-26MAY171410CHCCWS-CWS2",
-                    "KXMLBF5SPREAD-26MAY171410CHCCWS-CHC2",
-                    "KXMLBF5SPREAD-26MAY171410CHCCWS-CHC3"
+                    "KXMLBF5SPREAD-26MAY191845NYMWSH-WSH3",
+                    "KXMLBF5SPREAD-26MAY191845NYMWSH-WSH2",
+                    "KXMLBF5SPREAD-26MAY191845NYMWSH-NYM2",
+                    "KXMLBF5SPREAD-26MAY191845NYMWSH-NYM3"
                 ]
             },
-            "KXMLBF5SPREAD-26MAY171340TORDET": {
-                "title": "toronto vs detroit: first 5 spread",
-                "subtitle": "tor vs det (may 17)",
+            "KXMLBF5SPREAD-26MAY191840CLEDET": {
+                "title": "cleveland vs detroit: first 5 spread",
+                "subtitle": "cle vs det (may 19)",
                 "market_slugs": [
-                    "KXMLBF5SPREAD-26MAY171340TORDET-DET3",
-                    "KXMLBF5SPREAD-26MAY171340TORDET-DET2",
-                    "KXMLBF5SPREAD-26MAY171340TORDET-TOR2",
-                    "KXMLBF5SPREAD-26MAY171340TORDET-TOR3"
+                    "KXMLBF5SPREAD-26MAY191840CLEDET-DET3",
+                    "KXMLBF5SPREAD-26MAY191840CLEDET-DET2",
+                    "KXMLBF5SPREAD-26MAY191840CLEDET-CLE2",
+                    "KXMLBF5SPREAD-26MAY191840CLEDET-CLE3"
                 ]
             },
-            "KXMLBF5SPREAD-26MAY171340NYYNYM": {
-                "title": "new york y vs new york m: first 5 spread",
-                "subtitle": "nyy vs nym (may 17)",
+            "KXMLBF5SPREAD-26MAY191840CINPHI": {
+                "title": "cincinnati vs philadelphia: first 5 spread",
+                "subtitle": "cin vs phi (may 19)",
                 "market_slugs": [
-                    "KXMLBF5SPREAD-26MAY171340NYYNYM-NYM3",
-                    "KXMLBF5SPREAD-26MAY171340NYYNYM-NYM2",
-                    "KXMLBF5SPREAD-26MAY171340NYYNYM-NYY2",
-                    "KXMLBF5SPREAD-26MAY171340NYYNYM-NYY3"
+                    "KXMLBF5SPREAD-26MAY191840CINPHI-PHI3",
+                    "KXMLBF5SPREAD-26MAY191840CINPHI-PHI2",
+                    "KXMLBF5SPREAD-26MAY191840CINPHI-CIN2",
+                    "KXMLBF5SPREAD-26MAY191840CINPHI-CIN3"
                 ]
             },
-            "KXMLBF5SPREAD-26MAY171340CINCLE": {
-                "title": "cincinnati vs cleveland: first 5 spread",
-                "subtitle": "cin vs cle (may 17)",
+            "KXMLBF5SPREAD-26MAY191840BALTB": {
+                "title": "baltimore vs tampa bay: first 5 spread",
+                "subtitle": "bal vs tb (may 19)",
                 "market_slugs": [
-                    "KXMLBF5SPREAD-26MAY171340CINCLE-CLE3",
-                    "KXMLBF5SPREAD-26MAY171340CINCLE-CLE2",
-                    "KXMLBF5SPREAD-26MAY171340CINCLE-CIN2",
-                    "KXMLBF5SPREAD-26MAY171340CINCLE-CIN3"
+                    "KXMLBF5SPREAD-26MAY191840BALTB-TB3",
+                    "KXMLBF5SPREAD-26MAY191840BALTB-TB2",
+                    "KXMLBF5SPREAD-26MAY191840BALTB-BAL2",
+                    "KXMLBF5SPREAD-26MAY191840BALTB-BAL3"
                 ]
             },
-            "KXMLBF5SPREAD-26MAY171335PHIPIT": {
-                "title": "philadelphia vs pittsburgh: first 5 spread",
-                "subtitle": "phi vs pit (may 17)",
+            "KXMLBF5SPREAD-26MAY191610ATLMIA": {
+                "title": "atlanta vs miami: first 5 spread",
+                "subtitle": "atl vs mia (may 19)",
                 "market_slugs": [
-                    "KXMLBF5SPREAD-26MAY171335PHIPIT-PIT3",
-                    "KXMLBF5SPREAD-26MAY171335PHIPIT-PIT2",
-                    "KXMLBF5SPREAD-26MAY171335PHIPIT-PHI2",
-                    "KXMLBF5SPREAD-26MAY171335PHIPIT-PHI3"
+                    "KXMLBF5SPREAD-26MAY191610ATLMIA-MIA3",
+                    "KXMLBF5SPREAD-26MAY191610ATLMIA-MIA2",
+                    "KXMLBF5SPREAD-26MAY191610ATLMIA-ATL2",
+                    "KXMLBF5SPREAD-26MAY191610ATLMIA-ATL3"
                 ]
             },
-            "KXMLBF5SPREAD-26MAY171335BOSATL": {
-                "title": "boston vs atlanta: first 5 spread",
-                "subtitle": "bos vs atl (may 17)",
+            "KXMLBF5SPREAD-26MAY182140SFAZ": {
+                "title": "san francisco vs arizona: first 5 spread",
+                "subtitle": "sf vs az (may 18)",
                 "market_slugs": [
-                    "KXMLBF5SPREAD-26MAY171335BOSATL-ATL3",
-                    "KXMLBF5SPREAD-26MAY171335BOSATL-ATL2",
-                    "KXMLBF5SPREAD-26MAY171335BOSATL-BOS2",
-                    "KXMLBF5SPREAD-26MAY171335BOSATL-BOS3"
+                    "KXMLBF5SPREAD-26MAY182140SFAZ-AZ3",
+                    "KXMLBF5SPREAD-26MAY182140SFAZ-AZ2",
+                    "KXMLBF5SPREAD-26MAY182140SFAZ-SF2",
+                    "KXMLBF5SPREAD-26MAY182140SFAZ-SF3"
                 ]
             },
-            "KXMLBF5SPREAD-26MAY171335BALWSH": {
-                "title": "baltimore vs washington: first 5 spread",
-                "subtitle": "bal vs wsh (may 17)",
+            "KXMLBF5SPREAD-26MAY182140LADSD": {
+                "title": "los angeles d vs san diego: first 5 spread",
+                "subtitle": "lad vs sd (may 18)",
                 "market_slugs": [
-                    "KXMLBF5SPREAD-26MAY171335BALWSH-WSH3",
-                    "KXMLBF5SPREAD-26MAY171335BALWSH-WSH2",
-                    "KXMLBF5SPREAD-26MAY171335BALWSH-BAL2",
-                    "KXMLBF5SPREAD-26MAY171335BALWSH-BAL3"
+                    "KXMLBF5SPREAD-26MAY182140LADSD-SD3",
+                    "KXMLBF5SPREAD-26MAY182140LADSD-SD2",
+                    "KXMLBF5SPREAD-26MAY182140LADSD-LAD2",
+                    "KXMLBF5SPREAD-26MAY182140LADSD-LAD3"
                 ]
             },
-            "KXMLBF5SPREAD-26MAY171215MIATB": {
-                "title": "miami vs tampa bay: first 5 spread",
-                "subtitle": "mia vs tb (may 17)",
+            "KXMLBF5SPREAD-26MAY182140CWSSEA": {
+                "title": "chicago ws vs seattle: first 5 spread",
+                "subtitle": "cws vs sea (may 18)",
                 "market_slugs": [
-                    "KXMLBF5SPREAD-26MAY171215MIATB-TB3",
-                    "KXMLBF5SPREAD-26MAY171215MIATB-TB2",
-                    "KXMLBF5SPREAD-26MAY171215MIATB-MIA2",
-                    "KXMLBF5SPREAD-26MAY171215MIATB-MIA3"
+                    "KXMLBF5SPREAD-26MAY182140CWSSEA-SEA3",
+                    "KXMLBF5SPREAD-26MAY182140CWSSEA-SEA2",
+                    "KXMLBF5SPREAD-26MAY182140CWSSEA-CWS2",
+                    "KXMLBF5SPREAD-26MAY182140CWSSEA-CWS3"
+                ]
+            },
+            "KXMLBF5SPREAD-26MAY182138ATHLAA": {
+                "title": "a's vs los angeles a: first 5 spread",
+                "subtitle": "ath vs laa (may 18)",
+                "market_slugs": [
+                    "KXMLBF5SPREAD-26MAY182138ATHLAA-LAA3",
+                    "KXMLBF5SPREAD-26MAY182138ATHLAA-LAA2",
+                    "KXMLBF5SPREAD-26MAY182138ATHLAA-ATH2",
+                    "KXMLBF5SPREAD-26MAY182138ATHLAA-ATH3"
+                ]
+            },
+            "KXMLBF5SPREAD-26MAY182040TEXCOL": {
+                "title": "texas vs colorado: first 5 spread",
+                "subtitle": "tex vs col (may 18)",
+                "market_slugs": [
+                    "KXMLBF5SPREAD-26MAY182040TEXCOL-COL3",
+                    "KXMLBF5SPREAD-26MAY182040TEXCOL-COL2",
+                    "KXMLBF5SPREAD-26MAY182040TEXCOL-TEX2",
+                    "KXMLBF5SPREAD-26MAY182040TEXCOL-TEX3"
+                ]
+            },
+            "KXMLBF5SPREAD-26MAY181940MILCHC": {
+                "title": "milwaukee vs chicago c: first 5 spread",
+                "subtitle": "mil vs chc (may 18)",
+                "market_slugs": [
+                    "KXMLBF5SPREAD-26MAY181940MILCHC-CHC3",
+                    "KXMLBF5SPREAD-26MAY181940MILCHC-CHC2",
+                    "KXMLBF5SPREAD-26MAY181940MILCHC-MIL2",
+                    "KXMLBF5SPREAD-26MAY181940MILCHC-MIL3"
+                ]
+            },
+            "KXMLBF5SPREAD-26MAY181940HOUMIN": {
+                "title": "houston vs minnesota: first 5 spread",
+                "subtitle": "hou vs min (may 18)",
+                "market_slugs": [
+                    "KXMLBF5SPREAD-26MAY181940HOUMIN-MIN3",
+                    "KXMLBF5SPREAD-26MAY181940HOUMIN-MIN2",
+                    "KXMLBF5SPREAD-26MAY181940HOUMIN-HOU2",
+                    "KXMLBF5SPREAD-26MAY181940HOUMIN-HOU3"
+                ]
+            },
+            "KXMLBF5SPREAD-26MAY181940BOSKC": {
+                "title": "boston vs kansas city: first 5 spread",
+                "subtitle": "bos vs kc (may 18)",
+                "market_slugs": [
+                    "KXMLBF5SPREAD-26MAY181940BOSKC-KC3",
+                    "KXMLBF5SPREAD-26MAY181940BOSKC-KC2",
+                    "KXMLBF5SPREAD-26MAY181940BOSKC-BOS2",
+                    "KXMLBF5SPREAD-26MAY181940BOSKC-BOS3"
+                ]
+            },
+            "KXMLBF5SPREAD-26MAY181905TORNYY": {
+                "title": "toronto vs new york y: first 5 spread",
+                "subtitle": "tor vs nyy (may 18)",
+                "market_slugs": [
+                    "KXMLBF5SPREAD-26MAY181905TORNYY-NYY3",
+                    "KXMLBF5SPREAD-26MAY181905TORNYY-NYY2",
+                    "KXMLBF5SPREAD-26MAY181905TORNYY-TOR2",
+                    "KXMLBF5SPREAD-26MAY181905TORNYY-TOR3"
+                ]
+            },
+            "KXMLBF5SPREAD-26MAY181845NYMWSH": {
+                "title": "new york m vs washington: first 5 spread",
+                "subtitle": "nym vs wsh (may 18)",
+                "market_slugs": [
+                    "KXMLBF5SPREAD-26MAY181845NYMWSH-WSH3",
+                    "KXMLBF5SPREAD-26MAY181845NYMWSH-WSH2",
+                    "KXMLBF5SPREAD-26MAY181845NYMWSH-NYM2",
+                    "KXMLBF5SPREAD-26MAY181845NYMWSH-NYM3"
+                ]
+            },
+            "KXMLBF5SPREAD-26MAY181840CLEDET": {
+                "title": "cleveland vs detroit: first 5 spread",
+                "subtitle": "cle vs det (may 18)",
+                "market_slugs": [
+                    "KXMLBF5SPREAD-26MAY181840CLEDET-DET3",
+                    "KXMLBF5SPREAD-26MAY181840CLEDET-DET2",
+                    "KXMLBF5SPREAD-26MAY181840CLEDET-CLE2",
+                    "KXMLBF5SPREAD-26MAY181840CLEDET-CLE3"
+                ]
+            },
+            "KXMLBF5SPREAD-26MAY181840CINPHI": {
+                "title": "cincinnati vs philadelphia: first 5 spread",
+                "subtitle": "cin vs phi (may 18)",
+                "market_slugs": [
+                    "KXMLBF5SPREAD-26MAY181840CINPHI-PHI3",
+                    "KXMLBF5SPREAD-26MAY181840CINPHI-PHI2",
+                    "KXMLBF5SPREAD-26MAY181840CINPHI-CIN2",
+                    "KXMLBF5SPREAD-26MAY181840CINPHI-CIN3"
+                ]
+            },
+            "KXMLBF5SPREAD-26MAY181840BALTB": {
+                "title": "baltimore vs tampa bay: first 5 spread",
+                "subtitle": "bal vs tb (may 18)",
+                "market_slugs": [
+                    "KXMLBF5SPREAD-26MAY181840BALTB-TB3",
+                    "KXMLBF5SPREAD-26MAY181840BALTB-TB2",
+                    "KXMLBF5SPREAD-26MAY181840BALTB-BAL2",
+                    "KXMLBF5SPREAD-26MAY181840BALTB-BAL3"
+                ]
+            },
+            "KXMLBF5SPREAD-26MAY181840ATLMIA": {
+                "title": "atlanta vs miami: first 5 spread",
+                "subtitle": "atl vs mia (may 18)",
+                "market_slugs": [
+                    "KXMLBF5SPREAD-26MAY181840ATLMIA-MIA3",
+                    "KXMLBF5SPREAD-26MAY181840ATLMIA-MIA2",
+                    "KXMLBF5SPREAD-26MAY181840ATLMIA-ATL2",
+                    "KXMLBF5SPREAD-26MAY181840ATLMIA-ATL3"
+                ]
+            }
+        },
+        "KXNBASPREAD": {
+            "KXNBASPREAD-26MAY19CLENYK": {
+                "title": "game 1: cleveland at new york: spread",
+                "subtitle": "cle at nyk (may 19)",
+                "market_slugs": [
+                    "KXNBASPREAD-26MAY19CLENYK-NYK29",
+                    "KXNBASPREAD-26MAY19CLENYK-NYK26",
+                    "KXNBASPREAD-26MAY19CLENYK-NYK23",
+                    "KXNBASPREAD-26MAY19CLENYK-NYK20",
+                    "KXNBASPREAD-26MAY19CLENYK-NYK17",
+                    "KXNBASPREAD-26MAY19CLENYK-NYK14",
+                    "KXNBASPREAD-26MAY19CLENYK-NYK13",
+                    "KXNBASPREAD-26MAY19CLENYK-NYK12",
+                    "KXNBASPREAD-26MAY19CLENYK-NYK11",
+                    "KXNBASPREAD-26MAY19CLENYK-NYK10",
+                    "KXNBASPREAD-26MAY19CLENYK-NYK9",
+                    "KXNBASPREAD-26MAY19CLENYK-NYK8",
+                    "KXNBASPREAD-26MAY19CLENYK-NYK7",
+                    "KXNBASPREAD-26MAY19CLENYK-NYK6",
+                    "KXNBASPREAD-26MAY19CLENYK-NYK5",
+                    "KXNBASPREAD-26MAY19CLENYK-NYK4",
+                    "KXNBASPREAD-26MAY19CLENYK-NYK3",
+                    "KXNBASPREAD-26MAY19CLENYK-NYK2",
+                    "KXNBASPREAD-26MAY19CLENYK-CLE1",
+                    "KXNBASPREAD-26MAY19CLENYK-CLE4",
+                    "KXNBASPREAD-26MAY19CLENYK-CLE7",
+                    "KXNBASPREAD-26MAY19CLENYK-CLE10",
+                    "KXNBASPREAD-26MAY19CLENYK-CLE13"
+                ]
+            },
+            "KXNBASPREAD-26MAY18SASOKC": {
+                "title": "game 1: san antonio at oklahoma city: spread",
+                "subtitle": "sas at okc (may 18)",
+                "market_slugs": [
+                    "KXNBASPREAD-26MAY18SASOKC-OKC29",
+                    "KXNBASPREAD-26MAY18SASOKC-OKC28",
+                    "KXNBASPREAD-26MAY18SASOKC-OKC27",
+                    "KXNBASPREAD-26MAY18SASOKC-OKC26",
+                    "KXNBASPREAD-26MAY18SASOKC-OKC25",
+                    "KXNBASPREAD-26MAY18SASOKC-OKC24",
+                    "KXNBASPREAD-26MAY18SASOKC-OKC23",
+                    "KXNBASPREAD-26MAY18SASOKC-OKC22",
+                    "KXNBASPREAD-26MAY18SASOKC-OKC21",
+                    "KXNBASPREAD-26MAY18SASOKC-OKC20",
+                    "KXNBASPREAD-26MAY18SASOKC-OKC19",
+                    "KXNBASPREAD-26MAY18SASOKC-OKC18",
+                    "KXNBASPREAD-26MAY18SASOKC-OKC17",
+                    "KXNBASPREAD-26MAY18SASOKC-OKC16",
+                    "KXNBASPREAD-26MAY18SASOKC-OKC15",
+                    "KXNBASPREAD-26MAY18SASOKC-OKC14",
+                    "KXNBASPREAD-26MAY18SASOKC-OKC13",
+                    "KXNBASPREAD-26MAY18SASOKC-OKC12",
+                    "KXNBASPREAD-26MAY18SASOKC-OKC11",
+                    "KXNBASPREAD-26MAY18SASOKC-OKC10",
+                    "KXNBASPREAD-26MAY18SASOKC-OKC9",
+                    "KXNBASPREAD-26MAY18SASOKC-OKC8",
+                    "KXNBASPREAD-26MAY18SASOKC-OKC7",
+                    "KXNBASPREAD-26MAY18SASOKC-OKC6",
+                    "KXNBASPREAD-26MAY18SASOKC-OKC5",
+                    "KXNBASPREAD-26MAY18SASOKC-OKC4",
+                    "KXNBASPREAD-26MAY18SASOKC-OKC3",
+                    "KXNBASPREAD-26MAY18SASOKC-OKC2",
+                    "KXNBASPREAD-26MAY18SASOKC-OKC1",
+                    "KXNBASPREAD-26MAY18SASOKC-SAS1",
+                    "KXNBASPREAD-26MAY18SASOKC-SAS2",
+                    "KXNBASPREAD-26MAY18SASOKC-SAS3",
+                    "KXNBASPREAD-26MAY18SASOKC-SAS4",
+                    "KXNBASPREAD-26MAY18SASOKC-SAS5",
+                    "KXNBASPREAD-26MAY18SASOKC-SAS6",
+                    "KXNBASPREAD-26MAY18SASOKC-SAS7",
+                    "KXNBASPREAD-26MAY18SASOKC-SAS8",
+                    "KXNBASPREAD-26MAY18SASOKC-SAS9",
+                    "KXNBASPREAD-26MAY18SASOKC-SAS10",
+                    "KXNBASPREAD-26MAY18SASOKC-SAS11",
+                    "KXNBASPREAD-26MAY18SASOKC-SAS12",
+                    "KXNBASPREAD-26MAY18SASOKC-SAS13",
+                    "KXNBASPREAD-26MAY18SASOKC-SAS14",
+                    "KXNBASPREAD-26MAY18SASOKC-SAS15"
+                ]
+            }
+        },
+        "KXNBA2HSPREAD": {
+            "KXNBA2HSPREAD-26MAY19CLENYK": {
+                "title": "cleveland vs new york: second half spread",
+                "subtitle": "cle at nyk (may 19)",
+                "market_slugs": [
+                    "KXNBA2HSPREAD-26MAY19CLENYK-NYK18",
+                    "KXNBA2HSPREAD-26MAY19CLENYK-NYK15",
+                    "KXNBA2HSPREAD-26MAY19CLENYK-NYK12",
+                    "KXNBA2HSPREAD-26MAY19CLENYK-NYK9",
+                    "KXNBA2HSPREAD-26MAY19CLENYK-NYK6",
+                    "KXNBA2HSPREAD-26MAY19CLENYK-NYK3",
+                    "KXNBA2HSPREAD-26MAY19CLENYK-CLE3",
+                    "KXNBA2HSPREAD-26MAY19CLENYK-CLE6",
+                    "KXNBA2HSPREAD-26MAY19CLENYK-CLE9",
+                    "KXNBA2HSPREAD-26MAY19CLENYK-CLE12"
+                ]
+            },
+            "KXNBA2HSPREAD-26MAY18SASOKC": {
+                "title": "san antonio vs oklahoma city: second half spread",
+                "subtitle": "sas at okc (may 18)",
+                "market_slugs": [
+                    "KXNBA2HSPREAD-26MAY18SASOKC-OKC18",
+                    "KXNBA2HSPREAD-26MAY18SASOKC-OKC15",
+                    "KXNBA2HSPREAD-26MAY18SASOKC-OKC12",
+                    "KXNBA2HSPREAD-26MAY18SASOKC-OKC9",
+                    "KXNBA2HSPREAD-26MAY18SASOKC-OKC6",
+                    "KXNBA2HSPREAD-26MAY18SASOKC-OKC3",
+                    "KXNBA2HSPREAD-26MAY18SASOKC-SAS3",
+                    "KXNBA2HSPREAD-26MAY18SASOKC-SAS6",
+                    "KXNBA2HSPREAD-26MAY18SASOKC-SAS9",
+                    "KXNBA2HSPREAD-26MAY18SASOKC-SAS12"
+                ]
+            }
+        },
+        "KXNBA1HSPREAD": {
+            "KXNBA1HSPREAD-26MAY19CLENYK": {
+                "title": "cleveland vs new york: first half spread",
+                "subtitle": "cle at nyk (may 19)",
+                "market_slugs": [
+                    "KXNBA1HSPREAD-26MAY19CLENYK-NYK25",
+                    "KXNBA1HSPREAD-26MAY19CLENYK-NYK22",
+                    "KXNBA1HSPREAD-26MAY19CLENYK-NYK19",
+                    "KXNBA1HSPREAD-26MAY19CLENYK-NYK16",
+                    "KXNBA1HSPREAD-26MAY19CLENYK-NYK13",
+                    "KXNBA1HSPREAD-26MAY19CLENYK-NYK10",
+                    "KXNBA1HSPREAD-26MAY19CLENYK-NYK7",
+                    "KXNBA1HSPREAD-26MAY19CLENYK-NYK4",
+                    "KXNBA1HSPREAD-26MAY19CLENYK-NYK1",
+                    "KXNBA1HSPREAD-26MAY19CLENYK-CLE2",
+                    "KXNBA1HSPREAD-26MAY19CLENYK-CLE5",
+                    "KXNBA1HSPREAD-26MAY19CLENYK-CLE8",
+                    "KXNBA1HSPREAD-26MAY19CLENYK-CLE11",
+                    "KXNBA1HSPREAD-26MAY19CLENYK-CLE14",
+                    "KXNBA1HSPREAD-26MAY19CLENYK-CLE17"
+                ]
+            },
+            "KXNBA1HSPREAD-26MAY18SASOKC": {
+                "title": "san antonio vs oklahoma city: first half spread",
+                "subtitle": "sas at okc (may 18)",
+                "market_slugs": [
+                    "KXNBA1HSPREAD-26MAY18SASOKC-OKC27",
+                    "KXNBA1HSPREAD-26MAY18SASOKC-OKC24",
+                    "KXNBA1HSPREAD-26MAY18SASOKC-OKC21",
+                    "KXNBA1HSPREAD-26MAY18SASOKC-OKC18",
+                    "KXNBA1HSPREAD-26MAY18SASOKC-OKC15",
+                    "KXNBA1HSPREAD-26MAY18SASOKC-OKC12",
+                    "KXNBA1HSPREAD-26MAY18SASOKC-OKC9",
+                    "KXNBA1HSPREAD-26MAY18SASOKC-OKC6",
+                    "KXNBA1HSPREAD-26MAY18SASOKC-OKC3",
+                    "KXNBA1HSPREAD-26MAY18SASOKC-SAS3",
+                    "KXNBA1HSPREAD-26MAY18SASOKC-SAS6",
+                    "KXNBA1HSPREAD-26MAY18SASOKC-SAS9",
+                    "KXNBA1HSPREAD-26MAY18SASOKC-SAS12",
+                    "KXNBA1HSPREAD-26MAY18SASOKC-SAS15",
+                    "KXNBA1HSPREAD-26MAY18SASOKC-SAS18"
                 ]
             }
         },
         "KXWNBA1HSPREAD": {
-            "KXWNBA1HSPREAD-26MAY17TORLA": {
-                "title": "toronto vs los angeles: first half spread",
-                "subtitle": "tor at la (may 17)",
+            "KXWNBA1HSPREAD-26MAY18CONNPDX": {
+                "title": "connecticut vs portland: first half spread",
+                "subtitle": "conn at pdx (may 18)",
                 "market_slugs": [
-                    "KXWNBA1HSPREAD-26MAY17TORLA-LA9",
-                    "KXWNBA1HSPREAD-26MAY17TORLA-LA5",
-                    "KXWNBA1HSPREAD-26MAY17TORLA-TOR2"
+                    "KXWNBA1HSPREAD-26MAY18CONNPDX-PDX7",
+                    "KXWNBA1HSPREAD-26MAY18CONNPDX-PDX3",
+                    "KXWNBA1HSPREAD-26MAY18CONNPDX-CONN2"
                 ]
             },
-            "KXWNBA1HSPREAD-26MAY17CHIMIN": {
-                "title": "chicago vs minnesota: first half spread",
-                "subtitle": "chi at min (may 17)",
+            "KXWNBA1HSPREAD-26MAY18WSHDAL": {
+                "title": "washington vs dallas: first half spread",
+                "subtitle": "wsh at dal (may 18)",
                 "market_slugs": [
-                    "KXWNBA1HSPREAD-26MAY17CHIMIN-MIN7",
-                    "KXWNBA1HSPREAD-26MAY17CHIMIN-MIN3",
-                    "KXWNBA1HSPREAD-26MAY17CHIMIN-CHI2"
-                ]
-            },
-            "KXWNBA1HSPREAD-26MAY17SEAIND": {
-                "title": "seattle vs indiana: first half spread",
-                "subtitle": "sea at ind (may 17)",
-                "market_slugs": [
-                    "KXWNBA1HSPREAD-26MAY17SEAIND-IND11",
-                    "KXWNBA1HSPREAD-26MAY17SEAIND-IND7",
-                    "KXWNBA1HSPREAD-26MAY17SEAIND-SEA2"
-                ]
-            },
-            "KXWNBA1HSPREAD-26MAY17LVATL": {
-                "title": "las vegas vs atlanta: first half spread",
-                "subtitle": "lv at atl (may 17)",
-                "market_slugs": [
-                    "KXWNBA1HSPREAD-26MAY17LVATL-LV6",
-                    "KXWNBA1HSPREAD-26MAY17LVATL-LV2",
-                    "KXWNBA1HSPREAD-26MAY17LVATL-ATL2"
-                ]
-            }
-        },
-        "KXARGPREMDIVSPREAD": {
-            "KXARGPREMDIVSPREAD-26MAY17ARGCAB": {
-                "title": "argentinos juniors vs belgrano de cordoba: spread",
-                "subtitle": "arg vs cab (may 17)",
-                "market_slugs": [
-                    "KXARGPREMDIVSPREAD-26MAY17ARGCAB-ARG2",
-                    "KXARGPREMDIVSPREAD-26MAY17ARGCAB-ARG1",
-                    "KXARGPREMDIVSPREAD-26MAY17ARGCAB-CAB1",
-                    "KXARGPREMDIVSPREAD-26MAY17ARGCAB-CAB2"
+                    "KXWNBA1HSPREAD-26MAY18WSHDAL-DAL7",
+                    "KXWNBA1HSPREAD-26MAY18WSHDAL-DAL3",
+                    "KXWNBA1HSPREAD-26MAY18WSHDAL-WSH2"
                 ]
             }
         },
         "KXLIGUE1SPREAD": {
-            "KXLIGUE1SPREAD-26MAY17STBANG": {
-                "title": "stade brest vs angers: spread",
-                "subtitle": "stb vs ang (may 17)",
-                "market_slugs": [
-                    "KXLIGUE1SPREAD-26MAY17STBANG-STB2",
-                    "KXLIGUE1SPREAD-26MAY17STBANG-STB1",
-                    "KXLIGUE1SPREAD-26MAY17STBANG-ANG1",
-                    "KXLIGUE1SPREAD-26MAY17STBANG-ANG2"
-                ]
-            },
-            "KXLIGUE1SPREAD-26MAY17RCSASM": {
-                "title": "strasbourg alsace vs monaco: spread",
-                "subtitle": "rcs vs asm (may 17)",
-                "market_slugs": [
-                    "KXLIGUE1SPREAD-26MAY17RCSASM-RCS2",
-                    "KXLIGUE1SPREAD-26MAY17RCSASM-RCS1",
-                    "KXLIGUE1SPREAD-26MAY17RCSASM-ASM1",
-                    "KXLIGUE1SPREAD-26MAY17RCSASM-ASM2"
-                ]
-            },
-            "KXLIGUE1SPREAD-26MAY17PARPSG": {
-                "title": "paris vs psg: spread",
-                "subtitle": "par vs psg (may 17)",
-                "market_slugs": [
-                    "KXLIGUE1SPREAD-26MAY17PARPSG-PAR2",
-                    "KXLIGUE1SPREAD-26MAY17PARPSG-PAR1",
-                    "KXLIGUE1SPREAD-26MAY17PARPSG-PSG1",
-                    "KXLIGUE1SPREAD-26MAY17PARPSG-PSG2"
-                ]
-            },
-            "KXLIGUE1SPREAD-26MAY17OMREN": {
-                "title": "marseille vs stade rennais: spread",
-                "subtitle": "om vs ren (may 17)",
-                "market_slugs": [
-                    "KXLIGUE1SPREAD-26MAY17OMREN-OM2",
-                    "KXLIGUE1SPREAD-26MAY17OMREN-OM1",
-                    "KXLIGUE1SPREAD-26MAY17OMREN-REN1",
-                    "KXLIGUE1SPREAD-26MAY17OMREN-REN2"
-                ]
-            },
-            "KXLIGUE1SPREAD-26MAY17OLRCL": {
-                "title": "lyon vs lens: spread",
-                "subtitle": "ol vs rcl (may 17)",
-                "market_slugs": [
-                    "KXLIGUE1SPREAD-26MAY17OLRCL-OL2",
-                    "KXLIGUE1SPREAD-26MAY17OLRCL-OL1",
-                    "KXLIGUE1SPREAD-26MAY17OLRCL-RCL1",
-                    "KXLIGUE1SPREAD-26MAY17OLRCL-RCL2"
-                ]
-            },
-            "KXLIGUE1SPREAD-26MAY17NICFCM": {
-                "title": "nice vs metz: spread",
-                "subtitle": "nic vs fcm (may 17)",
-                "market_slugs": [
-                    "KXLIGUE1SPREAD-26MAY17NICFCM-NIC2",
-                    "KXLIGUE1SPREAD-26MAY17NICFCM-NIC1",
-                    "KXLIGUE1SPREAD-26MAY17NICFCM-FCM1",
-                    "KXLIGUE1SPREAD-26MAY17NICFCM-FCM2"
-                ]
-            },
-            "KXLIGUE1SPREAD-26MAY17LILAUX": {
-                "title": "lille vs auxerre: spread",
-                "subtitle": "lil vs aux (may 17)",
-                "market_slugs": [
-                    "KXLIGUE1SPREAD-26MAY17LILAUX-LIL2",
-                    "KXLIGUE1SPREAD-26MAY17LILAUX-LIL1",
-                    "KXLIGUE1SPREAD-26MAY17LILAUX-AUX1",
-                    "KXLIGUE1SPREAD-26MAY17LILAUX-AUX2"
-                ]
-            },
             "KXLIGUE1SPREAD-26MAY17FCNTFC": {
                 "title": "nantes vs toulouse: spread",
                 "subtitle": "fcn vs tfc (may 17)",
@@ -2200,89 +2487,15 @@
                     "KXLIGUE1SPREAD-26MAY17FCNTFC-TFC1",
                     "KXLIGUE1SPREAD-26MAY17FCNTFC-TFC2"
                 ]
-            },
-            "KXLIGUE1SPREAD-26MAY17FCLHAC": {
-                "title": "lorient vs le havre: spread",
-                "subtitle": "fcl vs hac (may 17)",
-                "market_slugs": [
-                    "KXLIGUE1SPREAD-26MAY17FCLHAC-FCL2",
-                    "KXLIGUE1SPREAD-26MAY17FCLHAC-FCL1",
-                    "KXLIGUE1SPREAD-26MAY17FCLHAC-HAC1",
-                    "KXLIGUE1SPREAD-26MAY17FCLHAC-HAC2"
-                ]
             }
         },
         "KXLIGUE11HSPREAD": {
-            "KXLIGUE11HSPREAD-26MAY17STBANG": {
-                "title": "stade brest vs angers: first half spread",
-                "subtitle": "stb vs ang (may 17)",
-                "market_slugs": [
-                    "KXLIGUE11HSPREAD-26MAY17STBANG-STB1",
-                    "KXLIGUE11HSPREAD-26MAY17STBANG-ANG1"
-                ]
-            },
-            "KXLIGUE11HSPREAD-26MAY17RCSASM": {
-                "title": "strasbourg alsace vs monaco: first half spread",
-                "subtitle": "rcs vs asm (may 17)",
-                "market_slugs": [
-                    "KXLIGUE11HSPREAD-26MAY17RCSASM-RCS1",
-                    "KXLIGUE11HSPREAD-26MAY17RCSASM-ASM1"
-                ]
-            },
-            "KXLIGUE11HSPREAD-26MAY17PARPSG": {
-                "title": "paris vs psg: first half spread",
-                "subtitle": "par vs psg (may 17)",
-                "market_slugs": [
-                    "KXLIGUE11HSPREAD-26MAY17PARPSG-PAR1",
-                    "KXLIGUE11HSPREAD-26MAY17PARPSG-PSG1"
-                ]
-            },
-            "KXLIGUE11HSPREAD-26MAY17OMREN": {
-                "title": "marseille vs stade rennais: first half spread",
-                "subtitle": "om vs ren (may 17)",
-                "market_slugs": [
-                    "KXLIGUE11HSPREAD-26MAY17OMREN-OM1",
-                    "KXLIGUE11HSPREAD-26MAY17OMREN-REN1"
-                ]
-            },
-            "KXLIGUE11HSPREAD-26MAY17OLRCL": {
-                "title": "lyon vs lens: first half spread",
-                "subtitle": "ol vs rcl (may 17)",
-                "market_slugs": [
-                    "KXLIGUE11HSPREAD-26MAY17OLRCL-OL1",
-                    "KXLIGUE11HSPREAD-26MAY17OLRCL-RCL1"
-                ]
-            },
-            "KXLIGUE11HSPREAD-26MAY17NICFCM": {
-                "title": "nice vs metz: first half spread",
-                "subtitle": "nic vs fcm (may 17)",
-                "market_slugs": [
-                    "KXLIGUE11HSPREAD-26MAY17NICFCM-NIC1",
-                    "KXLIGUE11HSPREAD-26MAY17NICFCM-FCM1"
-                ]
-            },
-            "KXLIGUE11HSPREAD-26MAY17LILAUX": {
-                "title": "lille vs auxerre: first half spread",
-                "subtitle": "lil vs aux (may 17)",
-                "market_slugs": [
-                    "KXLIGUE11HSPREAD-26MAY17LILAUX-LIL1",
-                    "KXLIGUE11HSPREAD-26MAY17LILAUX-AUX1"
-                ]
-            },
             "KXLIGUE11HSPREAD-26MAY17FCNTFC": {
                 "title": "nantes vs toulouse: first half spread",
                 "subtitle": "fcn vs tfc (may 17)",
                 "market_slugs": [
                     "KXLIGUE11HSPREAD-26MAY17FCNTFC-FCN1",
                     "KXLIGUE11HSPREAD-26MAY17FCNTFC-TFC1"
-                ]
-            },
-            "KXLIGUE11HSPREAD-26MAY17FCLHAC": {
-                "title": "lorient vs le havre: first half spread",
-                "subtitle": "fcl vs hac (may 17)",
-                "market_slugs": [
-                    "KXLIGUE11HSPREAD-26MAY17FCLHAC-FCL1",
-                    "KXLIGUE11HSPREAD-26MAY17FCLHAC-HAC1"
                 ]
             }
         }

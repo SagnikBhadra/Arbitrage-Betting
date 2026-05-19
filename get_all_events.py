@@ -99,7 +99,7 @@ def fetch_all_events(status="open"):
                 response.raise_for_status()
                 data = response.json()
                 break
-            except (ConnectionError, Timeout) as e:
+            except (ConnectionError, Timeout, HTTPError) as e:
                 retries += 1
                 print(f"Request failed: {e}. Retrying in {backoff}s ({retries}/{MAX_RETRIES})")
                 time.sleep(backoff)
